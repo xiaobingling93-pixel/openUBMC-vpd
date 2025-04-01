@@ -1,0 +1,107 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "Objects": {
+        "FruData_Fru0": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_NetCard",
+            "EepromWp": 0,
+            "BoardPartNumber": "N/A",
+            "BoardSerialNumber": "N/A",
+            "StorageType": "EepromV2"
+        },
+        "Component_ComBMC": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 26,
+            "Name": "BMC",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "BoardId": 0,
+            "Manufacturer": "",
+            "Function": "BMC",
+            "UniqueId": "N/A",
+            "NodeId": ""
+        },
+        "Component_PCIeCard": {
+            "FruId": "<=/Fru_PCIeCard.FruId",
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "Huawei",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber",
+            "NodeId": "<=/PCIeDevice_1.SlotID"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Fru_PCIeCard": {
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_NetCard.HealthStatus",
+            "Type": 8,
+            "FruDataId": "#/FruData_Fru0"
+        },
+        "ThresholdSensor_NicTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 0,
+            "Reading": "<=/Scanner_NicTemp.Value",
+            "ReadingStatus": "<=/Scanner_NicTemp.Status"
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
+        }
+    }
+}

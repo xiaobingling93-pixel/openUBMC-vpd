@@ -1,0 +1,88 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_2",
+                "I2c_4"
+            ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        },
+        "I2c_4": {
+            "Chips": [
+                "Smc_FanBoardSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_FanBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Scanner_PowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469765888,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_PowerGd": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Size": 1,
+            "Offset": 469765888,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_Fan_Presence": {
+            "Chip": "#/Smc_FanBoardSMC",
+            "Offset": "${Slot} |> expr(402656000 + $1)",
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 1,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Value": 0
+        },
+        "Scanner_Fan_RSpeed": {
+            "Chip": "#/Smc_FanBoardSMC",
+            "Offset": "${Slot} |> expr(402657024 + $1)",
+            "Size": 4,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "ThresholdSensor_FanRspeed": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 75
+        }
+    }
+}

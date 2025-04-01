@@ -1,0 +1,87 @@
+{
+  "FormatVersion": "1.11",
+  "DataVersion": "1.11",
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c_2",
+        "I2cMux_Pca9545_i2c7_chip_1"
+      ]
+    },
+    "I2cMux_Pca9545_i2c7_chip_1": {
+      "Connectors": [
+        "Connector_OCP_1"
+      ]
+    }
+  },
+  "Objects": {
+    "PcieAddrInfo_OCP_1": {
+      "Segment": 0,
+      "GroupID": 1,
+      "SlotID": 1,
+      "PortID": 4,
+      "SocketID": 0,
+      "Bus": 8,
+      "Device": 0,
+      "Function": 0,
+      "Location": "EXUBoard${Slot}",
+      "ComponentType": 83,
+      "ControllerIndex": 1,
+      "ControllerType": 0,
+      "ContainerUID": "00000001010302057042",
+      "ContainerUnitType": "FlexIO",
+      "ContainerSlot": 1,
+      "GroupPosition": "PcieAddrInfo_OCP_1_${GroupPosition}"
+    },
+    "BusinessConnector_1": {
+      "Name": "OCP_BizConnector_1",
+      "Direction": "Downstream",
+      "Slot": 1,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "PCIe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_1",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 8
+        }
+      ],
+      "Ports": [],
+      "RefMgmtConnector": "#/Connector_OCP_1",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_OCP_1"
+    },
+    "BusinessConnector_2": {
+      "Name": "Up_1",
+      "Direction": "Upstream",
+      "Slot": 1,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe 5.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 18,
+          "Offset": 0,
+          "Width": 8
+        }
+      ]
+    },
+    "Connector_OCP_1": {
+      "Bom": "14220247",
+      "Slot": 1,
+      "Position": 7,
+      "Presence": 0,
+      "Buses": [
+        "I2c_2",
+        "I2cMux_Pca9545_i2c7_chip_1"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6008",
+      "IdentifyMode": 2
+    }
+  }
+}

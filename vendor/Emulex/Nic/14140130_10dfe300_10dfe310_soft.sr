@@ -1,0 +1,193 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "Objects": {
+        "Component_ComBMC": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 26,
+            "Name": "BMC",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "BoardId": 0,
+            "Manufacturer": "",
+            "Function": "BMC",
+            "UniqueId": "N/A",
+            "NodeId": ""
+        },
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "Emulex",
+            "PartNumber": "",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "",
+            "NodeId": "<=/PCIeDevice_1.SlotID"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
+        },
+        "Event_OM0PowerAlarm": {
+            "Reading": "<=/OpticalModule_0.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_OM1PowerAlarm": {
+            "Reading": "<=/OpticalModule_1.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OM0SpeedMatch": {
+            "Reading": "<=/OpticalModule_0.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_OM1SpeedMatch": {
+            "Reading": "<=/OpticalModule_1.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OM0VAMntr": {
+            "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/OpticalModule_0.SupplyVoltage",
+            "Component": "#/Component_Port1"
+        },
+        "Event_OM1VAMntr": {
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "DescArg4": "#/OpticalModule_1.SupplyVoltage",
+            "Component": "#/Component_Port2"
+        },
+        "Event_Port1LinkDown": {
+            "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port2LinkDown": {
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_PCIeBandWidth": {
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LPE31002-AP)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LPE31002-AP)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        }
+    }
+}

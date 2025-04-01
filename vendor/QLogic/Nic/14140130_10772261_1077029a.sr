@@ -1,0 +1,225 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_9545Chan"
+            ]
+        }
+    },
+    "Objects": {
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (QLE2742-HUA-SP)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "QLE2742-HUA-SP",
+            "BoardName": "QLE2742-HUA-SP",
+            "Description": "QLE2742 Dual Port 32Gb Fibre Channel to PCIe Adapter",
+            "FunctionClass": 2,
+            "VendorID": 4215,
+            "DeviceID": 8801,
+            "SubVendorID": 4215,
+            "SubDeviceID": 666,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "QLogic",
+            "PartNumber": "06030392",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "QLE2742-HUA-SP",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "SerialNumber": "",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "QLE2742-HUA-SP",
+            "Manufacturer": "QLogic",
+            "Description": "2*32Gb",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "QLE2742-HUA-SP",
+            "ModelDescription": "2*32Gb",
+            "ChipVendor": "QLogic",
+            "ChipManufacturer": "QLogic",
+            "NetworkPortCount": 2,
+            "BoardName": "QLE2742-HUA-SP",
+            "VendorID": "0x1077",
+            "DeviceID": "0x2261",
+            "SubsystemVendorID": "0x1077",
+            "SubsystemDeviceID": "0x029a",
+            "ComponentUniqueID": "N/A",
+            "FruId": 255,
+            "SupportedMctp": true,
+            "SupportedLLDP": false,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "ParentCardSlotId": 255,
+            "FaultState": 0,
+            "Health": "<=/Component_PCIeCard.Health"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "QLE2742-HUA-SP",
+            "Manufacturer": "QLogic",
+            "Type": "PCIeCard",
+            "Description": "2*32Gb",
+            "PartNumber": "06030392",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 65535,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": 255
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 2,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "32Gb"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 2,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "32Gb"
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        }
+    }
+}

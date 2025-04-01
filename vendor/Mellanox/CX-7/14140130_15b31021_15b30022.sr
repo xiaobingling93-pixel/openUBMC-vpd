@@ -1,0 +1,366 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.02",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_TempChip",
+                "Eeprom_CX7"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_TempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_IBTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Type": 0,
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 65535,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_IBTemp"
+        },
+        "MidAvg_IBTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM2OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 70,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (MCX755106AS-HEAT)",
+            "FunctionClass": 10,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "MCX755106AS-HEAT",
+            "BoardName": "MCX755106AS-HEAT",
+            "Description": "MT28908 Family [ConnectX-7]",
+            "FunctionClass": 10,
+            "VendorID": 5555,
+            "DeviceID": 4129,
+            "SubVendorID": 5555,
+            "SubDeviceID": 34,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Mellanox",
+            "PartNumber": "99109965",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "CX7",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidthAbility": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "PcbVersion": "",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/FruData_CX7.BoardSerialNumber |> expr(string.gsub($1, '%s+$','') )"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "MCX755106AS-HEAT",
+            "Manufacturer": "Mellanox",
+            "Description": "2*200GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "CX7",
+            "ModelDescription": "2*200GE",
+            "ChipVendor": "Mellanox",
+            "ChipManufacturer": "Mellanox",
+            "NetworkPortCount": 2,
+            "BoardName": "MCX755106AS-HEAT",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x1021",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0022",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "FruId": 255,
+            "SupportedMctp": true,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "LinkWidthCapability": "",
+            "LinkSpeedCapability": "",
+            "LinkWidth": "",
+            "LinkSpeed": "",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "BandwidthThresholdPercent": 100,
+            "ParentCardSlotId": 255,
+            "Health": "<=/Component_PCIeCard.Health"
+        },
+        "Eeprom_CX7": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 160,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "",
+            "Name": "",
+            "Manufacturer": "Mellanox",
+            "Type": "PCIeCard",
+            "Description": "2*200GE",
+            "PartNumber": "",
+            "LogicVersion": "",
+            "SRVersion": "",
+            "BoardID": 65535,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+            "NodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Component_PCIeCard.FruId",
+            "PcbVersion": "<=/PCIeCard_1.PcbVersion"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 32,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200G"
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 32,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200G"
+        },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_OM2VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM2PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM2SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port2BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "CoolingRequirement_1_93": {
+            "RequirementId": "${Slot} |> expr((93 << 8) | $1)",
+            "Description": "CX7网卡调速",
+            "MonitoringStatus": "<=/Scanner_IBTemp.Status",
+            "MonitoringValue": "<=/Scanner_IBTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 100,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_95.MonitoringStatus |> expr($1 == 0 ? true : false)"
+        },
+        "CoolingRequirement_1_94": {
+            "RequirementId": "${Slot} |> expr((94 << 8) | $1)",
+            "Description": "CX7网卡芯片调速（光模块异常）",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/CoolingRequirement_1_95.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_95": {
+            "RequirementId": "${Slot} |> expr((95 << 8) | $1)",
+            "Description": "CX7网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr((($1 == 1 && $3 >= 255) || ($2 == 1 && $4 >= 255)) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius  |> expr($3 >= $4 ? ($1 == 1 ? $3 : $4) : ($2 == 1 ? $4 : $3))",
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence |> expr(($1 == 1 || $2 == 1) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        }
+    }
+}

@@ -1,0 +1,3365 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.03",
+  "Unit": {
+    "Type": "SEU",
+    "Name": "HddBackplane_1"
+  },
+  "Objects": {
+    "DftEeprom_1": {
+      "Id": 12,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_SEU"
+    },
+    "DftEepromWp_1": {
+      "Id": 47,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Write Protect Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_SEU"
+    },
+    "FruData_SEU": {
+      "FruId": 1,
+      "FruDev": "#/Eeprom_SEU",
+      "EepromWp": "#/Accessor_SEUWP.Value",
+      "StorageType": "TianChi"
+    },
+    "Component_HddBackplane": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "Instance": "${Slot}",
+      "Type": 5,
+      "Location": "<=/HddBackplane_1.Position",
+      "Name": "<=/HddBackplane_1.DeviceName",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "GroupId": 1,
+      "UniqueId": "00000001030302023938",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/HddBackplane_1.SerialNumber",
+      "NodeId": "<=/HddBackplane_1.Position;<=/HddBackplane_1.DeviceName |> string.format('%s%s',$1,$2)"
+    },
+    "Component_Drive0": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 2,
+      "Name": "Disk0",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk0",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_1.SerialNumber",
+      "Manufacturer": "<=/Drive_1.Manufacturer"
+    },
+    "Component_Drive1": {
+      "FruId": 255,
+      "Instance": 2,
+      "Type": 2,
+      "Name": "Disk1",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk1",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_2.SerialNumber",
+      "Manufacturer": "<=/Drive_2.Manufacturer"
+    },
+    "Component_Drive2": {
+      "FruId": 255,
+      "Instance": 3,
+      "Type": 2,
+      "Name": "Disk2",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk2",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_3.SerialNumber",
+      "Manufacturer": "<=/Drive_3.Manufacturer"
+    },
+    "Component_Drive3": {
+      "FruId": 255,
+      "Instance": 4,
+      "Type": 2,
+      "Name": "Disk3",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk3",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_4.SerialNumber",
+      "Manufacturer": "<=/Drive_4.Manufacturer"
+    },
+    "Component_Drive4": {
+      "FruId": 255,
+      "Instance": 5,
+      "Type": 2,
+      "Name": "Disk4",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk4",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_5.SerialNumber",
+      "Manufacturer": "<=/Drive_5.Manufacturer"
+    },
+    "Component_Drive5": {
+      "FruId": 255,
+      "Instance": 6,
+      "Type": 2,
+      "Name": "Disk5",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk5",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_6.SerialNumber",
+      "Manufacturer": "<=/Drive_6.Manufacturer"
+    },
+    "Component_Drive6": {
+      "FruId": 255,
+      "Instance": 7,
+      "Type": 2,
+      "Name": "Disk6",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk6",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_7.SerialNumber",
+      "Manufacturer": "<=/Drive_7.Manufacturer"
+    },
+    "Component_Drive7": {
+      "FruId": 255,
+      "Instance": 8,
+      "Type": 2,
+      "Name": "Disk7",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk7",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_8.SerialNumber",
+      "Manufacturer": "<=/Drive_8.Manufacturer"
+    },
+    "Component_Drive8": {
+      "FruId": 255,
+      "Instance": 9,
+      "Type": 2,
+      "Name": "Disk8",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk8",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_9.SerialNumber",
+      "Manufacturer": "<=/Drive_9.Manufacturer"
+    },
+    "Component_Drive9": {
+      "FruId": 255,
+      "Instance": 10,
+      "Type": 2,
+      "Name": "Disk9",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk9",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_10.SerialNumber",
+      "Manufacturer": "<=/Drive_10.Manufacturer"
+    },
+    "Component_Drive10": {
+      "FruId": 255,
+      "Instance": 11,
+      "Type": 2,
+      "Name": "Disk10",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk10",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_11.SerialNumber",
+      "Manufacturer": "<=/Drive_11.Manufacturer"
+    },
+    "Component_Drive11": {
+      "FruId": 255,
+      "Instance": 12,
+      "Type": 2,
+      "Name": "Disk11",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk11",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_12.SerialNumber",
+      "Manufacturer": "<=/Drive_12.Manufacturer"
+    },
+    "Component_Drive12": {
+      "FruId": 255,
+      "Instance": 13,
+      "Type": 2,
+      "Name": "Disk12",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk12",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_13.SerialNumber",
+      "Manufacturer": "<=/Drive_13.Manufacturer"
+    },
+    "Component_Drive13": {
+      "FruId": 255,
+      "Instance": 14,
+      "Type": 2,
+      "Name": "Disk13",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk13",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_14.SerialNumber",
+      "Manufacturer": "<=/Drive_14.Manufacturer"
+    },
+    "Component_Drive14": {
+      "FruId": 255,
+      "Instance": 15,
+      "Type": 2,
+      "Name": "Disk14",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk14",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_15.SerialNumber",
+      "Manufacturer": "<=/Drive_15.Manufacturer"
+    },
+    "Component_Drive15": {
+      "FruId": 255,
+      "Instance": 16,
+      "Type": 2,
+      "Name": "Disk15",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "Disk15",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_16.SerialNumber",
+      "Manufacturer": "<=/Drive_16.Manufacturer"
+    },
+    "Fru_SEU": {
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Health": 0,
+      "EepStatus": 1,
+      "Type": 5,
+      "FruDataId": "#/FruData_SEU",
+      "UniqueId": "00000001030302023938"
+    },
+    "DftVersion_HddBackplanePcbVersion": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "VersionType": 0,
+      "Version": "<=/HddBackplane_1.PcbVersion"
+    },
+    "DftVersion_HddBackplaneCsrVersion": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "VersionType": 25,
+      "Version": "<=/HddBackplane_1.SRVersion"
+    },
+    "DftVersion_HddBackplaneCpldVersion": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "VersionType": 2,
+      "Version": "<=/HddBackplane_1.LogicVersion",
+      "UnitNum": "<=/HddBackplane_1.LogicUnit",
+      "NeedUintNum": 1
+    },
+    "ThresholdSensor_HddBpTemp": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_InnerHddCard.Id",
+      "EntityInstance": "<=/Entity_InnerHddCard.Instance",
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "Disk BP${Slot} Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "Analog": 1,
+      "NominalReading": 25,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_HddBPTemp.Value",
+      "ReadingStatus": "<=/Scanner_HddBPTemp.Status",
+      "SensorNumber": 255
+    },
+    "DiscreteSensor_Disk0": {
+      "EntityId": "<=/Entity_Disk0.Id",
+      "EntityInstance": "<=/Entity_Disk0.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK0",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk1": {
+      "EntityId": "<=/Entity_Disk1.Id",
+      "EntityInstance": "<=/Entity_Disk1.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK1",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk2": {
+      "EntityId": "<=/Entity_Disk2.Id",
+      "EntityInstance": "<=/Entity_Disk2.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK2",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk3": {
+      "EntityId": "<=/Entity_Disk3.Id",
+      "EntityInstance": "<=/Entity_Disk3.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK3",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk4": {
+      "EntityId": "<=/Entity_Disk4.Id",
+      "EntityInstance": "<=/Entity_Disk4.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK4",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk5": {
+      "EntityId": "<=/Entity_Disk5.Id",
+      "EntityInstance": "<=/Entity_Disk5.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK5",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk6": {
+      "EntityId": "<=/Entity_Disk6.Id",
+      "EntityInstance": "<=/Entity_Disk6.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK6",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk7": {
+      "EntityId": "<=/Entity_Disk7.Id",
+      "EntityInstance": "<=/Entity_Disk7.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK7",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk8": {
+      "EntityId": "<=/Entity_Disk8.Id",
+      "EntityInstance": "<=/Entity_Disk8.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK8",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk9": {
+      "EntityId": "<=/Entity_Disk9.Id",
+      "EntityInstance": "<=/Entity_Disk9.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK9",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk10": {
+      "EntityId": "<=/Entity_Disk10.Id",
+      "EntityInstance": "<=/Entity_Disk10.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK10",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk11": {
+      "EntityId": "<=/Entity_Disk11.Id",
+      "EntityInstance": "<=/Entity_Disk11.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK11",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk12": {
+      "EntityId": "<=/Entity_Disk12.Id",
+      "EntityInstance": "<=/Entity_Disk12.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK12",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk13": {
+      "EntityId": "<=/Entity_Disk13.Id",
+      "EntityInstance": "<=/Entity_Disk13.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK13",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk14": {
+      "EntityId": "<=/Entity_Disk14.Id",
+      "EntityInstance": "<=/Entity_Disk14.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK14",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteSensor_Disk15": {
+      "EntityId": "<=/Entity_Disk15.Id",
+      "EntityInstance": "<=/Entity_Disk15.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK15",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Entity_Disk0": {
+      "Id": 4,
+      "Instance": 96,
+      "Name": "Disk0",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk1": {
+      "Id": 4,
+      "Instance": 97,
+      "Name": "Disk1",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk2": {
+      "Id": 4,
+      "Instance": 98,
+      "Name": "Disk2",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk3": {
+      "Id": 4,
+      "Instance": 99,
+      "Name": "Disk3",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk4": {
+      "Id": 4,
+      "Instance": 100,
+      "Name": "Disk4",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk5": {
+      "Id": 4,
+      "Instance": 101,
+      "Name": "Disk5",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk6": {
+      "Id": 4,
+      "Instance": 102,
+      "Name": "Disk6",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk7": {
+      "Id": 4,
+      "Instance": 103,
+      "Name": "Disk7",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk8": {
+      "Id": 4,
+      "Instance": 104,
+      "Name": "Disk8",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk9": {
+      "Id": 4,
+      "Instance": 105,
+      "Name": "Disk9",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk10": {
+      "Id": 4,
+      "Instance": 106,
+      "Name": "Disk10",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk11": {
+      "Id": 4,
+      "Instance": 107,
+      "Name": "Disk11",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk12": {
+      "Id": 4,
+      "Instance": 108,
+      "Name": "Disk12",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk13": {
+      "Id": 4,
+      "Instance": 109,
+      "Name": "Disk13",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk14": {
+      "Id": 4,
+      "Instance": 110,
+      "Name": "Disk14",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk15": {
+      "Id": 4,
+      "Instance": 111,
+      "Name": "Disk15",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_InnerHddCard": {
+      "Id": 11,
+      "Name": "InnerHddCard${Slot}",
+      "PowerState": "#/Accessor_PowerGd.Value",
+      "Presence": 1,
+      "Instance": 112
+    },
+    "DiscreteEvent_Disk0Presence": {
+      "Property": "<=/Drive_1.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk0Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.CapacityError;<=/Drive_1.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk0FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk1Presence": {
+      "Property": "<=/Drive_2.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "DiscreteEvent_Disk1Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.CapacityError;<=/Drive_2.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "DiscreteEvent_Disk1FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "DiscreteEvent_Disk2Presence": {
+      "Property": "<=/Drive_3.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_3.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk2"
+    },
+    "DiscreteEvent_Disk2Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_3.CapacityError;<=/Drive_3.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk2"
+    },
+    "DiscreteEvent_Disk2FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_3.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk2"
+    },
+    "DiscreteEvent_Disk3Presence": {
+      "Property": "<=/Drive_4.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_4.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk3"
+    },
+    "DiscreteEvent_Disk3Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_4.CapacityError;<=/Drive_4.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk3"
+    },
+    "DiscreteEvent_Disk3FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_4.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk3"
+    },
+    "DiscreteEvent_Disk4Presence": {
+      "Property": "<=/Drive_5.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_5.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk4"
+    },
+    "DiscreteEvent_Disk4Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_5.CapacityError;<=/Drive_5.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk4"
+    },
+    "DiscreteEvent_Disk4FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_5.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk4"
+    },
+    "DiscreteEvent_Disk5Presence": {
+      "Property": "<=/Drive_6.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_6.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk5"
+    },
+    "DiscreteEvent_Disk5Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_6.CapacityError;<=/Drive_6.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk5"
+    },
+    "DiscreteEvent_Disk5FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_6.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk5"
+    },
+    "DiscreteEvent_Disk6Presence": {
+      "Property": "<=/Drive_7.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_7.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk6"
+    },
+    "DiscreteEvent_Disk6Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_7.CapacityError;<=/Drive_7.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk6"
+    },
+    "DiscreteEvent_Disk6FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_7.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk6"
+    },
+    "DiscreteEvent_Disk7Presence": {
+      "Property": "<=/Drive_8.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_8.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk7"
+    },
+    "DiscreteEvent_Disk7Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_8.CapacityError;<=/Drive_8.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk7"
+    },
+    "DiscreteEvent_Disk7FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_8.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk7"
+    },
+    "DiscreteEvent_Disk8Presence": {
+      "Property": "<=/Drive_9.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_9.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk8"
+    },
+    "DiscreteEvent_Disk8Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_9.CapacityError;<=/Drive_9.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk8"
+    },
+    "DiscreteEvent_Disk8FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_9.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk8"
+    },
+    "DiscreteEvent_Disk9Presence": {
+      "Property": "<=/Drive_10.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_10.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk9"
+    },
+    "DiscreteEvent_Disk9Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_10.CapacityError;<=/Drive_10.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk9"
+    },
+    "DiscreteEvent_Disk9FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_10.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk9"
+    },
+    "DiscreteEvent_Disk10Presence": {
+      "Property": "<=/Drive_11.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_11.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk10"
+    },
+    "DiscreteEvent_Disk10Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_11.CapacityError;<=/Drive_11.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk10"
+    },
+    "DiscreteEvent_Disk10FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_11.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk10"
+    },
+    "DiscreteEvent_Disk11Presence": {
+      "Property": "<=/Drive_12.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_12.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk11"
+    },
+    "DiscreteEvent_Disk11Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_12.CapacityError;<=/Drive_12.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk11"
+    },
+    "DiscreteEvent_Disk11FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_12.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk11"
+    },
+    "DiscreteEvent_Disk12Presence": {
+      "Property": "<=/Drive_13.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_13.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk12"
+    },
+    "DiscreteEvent_Disk12Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_13.CapacityError;<=/Drive_13.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk12"
+    },
+    "DiscreteEvent_Disk12FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_13.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk12"
+    },
+    "DiscreteEvent_Disk13Presence": {
+      "Property": "<=/Drive_14.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_14.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk13"
+    },
+    "DiscreteEvent_Disk13Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_14.CapacityError;<=/Drive_14.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk13"
+    },
+    "DiscreteEvent_Disk13FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_14.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk13"
+    },
+    "DiscreteEvent_Disk14Presence": {
+      "Property": "<=/Drive_15.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_15.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk14"
+    },
+    "DiscreteEvent_Disk14Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_15.CapacityError;<=/Drive_15.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk14"
+    },
+    "DiscreteEvent_Disk14FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_15.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk14"
+    },
+    "DiscreteEvent_Disk15Presence": {
+      "Property": "<=/Drive_16.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_16.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk15"
+    },
+    "DiscreteEvent_Disk15Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_16.CapacityError;<=/Drive_16.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk15"
+    },
+    "DiscreteEvent_Disk15FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_16.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk15"
+    },
+    "Event_Disk0Missing": {
+      "Reading": "<=/Drive_1.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk0",
+      "Component": "#/Component_Drive0",
+      "ComponentHealth": "#/Component_Drive0.Health"
+    },
+    "Event_Disk1Missing": {
+      "Reading": "<=/Drive_2.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk1",
+      "Component": "#/Component_Drive1",
+      "ComponentHealth": "#/Component_Drive1.Health"
+    },
+    "Event_Disk2Missing": {
+      "Reading": "<=/Drive_3.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk2",
+      "Component": "#/Component_Drive2",
+      "ComponentHealth": "#/Component_Drive2.Health"
+    },
+    "Event_Disk3Missing": {
+      "Reading": "<=/Drive_4.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk3",
+      "Component": "#/Component_Drive3",
+      "ComponentHealth": "#/Component_Drive3.Health"
+    },
+    "Event_Disk4Missing": {
+      "Reading": "<=/Drive_5.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk4",
+      "Component": "#/Component_Drive4",
+      "ComponentHealth": "#/Component_Drive4.Health"
+    },
+    "Event_Disk5Missing": {
+      "Reading": "<=/Drive_6.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk5",
+      "Component": "#/Component_Drive5",
+      "ComponentHealth": "#/Component_Drive5.Health"
+    },
+    "Event_Disk6Missing": {
+      "Reading": "<=/Drive_7.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk6",
+      "Component": "#/Component_Drive6",
+      "ComponentHealth": "#/Component_Drive6.Health"
+    },
+    "Event_Disk7Missing": {
+      "Reading": "<=/Drive_8.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk7",
+      "Component": "#/Component_Drive7",
+      "ComponentHealth": "#/Component_Drive7.Health"
+    },
+    "Event_Disk8Missing": {
+      "Reading": "<=/Drive_9.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk8",
+      "Component": "#/Component_Drive8",
+      "ComponentHealth": "#/Component_Drive8.Health"
+    },
+    "Event_Disk9Missing": {
+      "Reading": "<=/Drive_10.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk9",
+      "Component": "#/Component_Drive9",
+      "ComponentHealth": "#/Component_Drive9.Health"
+    },
+    "Event_Disk10Missing": {
+      "Reading": "<=/Drive_11.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk10",
+      "Component": "#/Component_Drive10",
+      "ComponentHealth": "#/Component_Drive10.Health"
+    },
+    "Event_Disk11Missing": {
+      "Reading": "<=/Drive_12.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk11",
+      "Component": "#/Component_Drive11",
+      "ComponentHealth": "#/Component_Drive11.Health"
+    },
+    "Event_Disk12Missing": {
+      "Reading": "<=/Drive_13.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk12",
+      "Component": "#/Component_Drive12",
+      "ComponentHealth": "#/Component_Drive12.Health"
+    },
+    "Event_Disk13Missing": {
+      "Reading": "<=/Drive_14.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk13",
+      "Component": "#/Component_Drive13",
+      "ComponentHealth": "#/Component_Drive13.Health"
+    },
+    "Event_Disk14Missing": {
+      "Reading": "<=/Drive_15.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk14",
+      "Component": "#/Component_Drive14",
+      "ComponentHealth": "#/Component_Drive14.Health"
+    },
+    "Event_Disk15Missing": {
+      "Reading": "<=/Drive_16.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "Disk15",
+      "Component": "#/Component_Drive15",
+      "ComponentHealth": "#/Component_Drive15.Health"
+    },
+    "Event_Hdd1Insert": {
+      "Reading": "<=/Drive_1.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2Insert": {
+      "Reading": "<=/Drive_2.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Hdd3Insert": {
+      "Reading": "<=/Drive_3.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Hdd4Insert": {
+      "Reading": "<=/Drive_4.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Hdd5Insert": {
+      "Reading": "<=/Drive_5.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Hdd6Insert": {
+      "Reading": "<=/Drive_6.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Hdd7Insert": {
+      "Reading": "<=/Drive_7.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Hdd8Insert": {
+      "Reading": "<=/Drive_8.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Hdd9Insert": {
+      "Reading": "<=/Drive_9.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Hdd10Insert": {
+      "Reading": "<=/Drive_10.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Hdd11Insert": {
+      "Reading": "<=/Drive_11.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Hdd12Insert": {
+      "Reading": "<=/Drive_12.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Hdd13Insert": {
+      "Reading": "<=/Drive_13.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Hdd14Insert": {
+      "Reading": "<=/Drive_14.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Hdd15Insert": {
+      "Reading": "<=/Drive_15.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Hdd16Insert": {
+      "Reading": "<=/Drive_16.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Hdd1Removed": {
+      "Reading": "<=/Drive_1.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2Removed": {
+      "Reading": "<=/Drive_2.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Hdd3Removed": {
+      "Reading": "<=/Drive_3.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Hdd4Removed": {
+      "Reading": "<=/Drive_4.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Hdd5Removed": {
+      "Reading": "<=/Drive_5.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Hdd6Removed": {
+      "Reading": "<=/Drive_6.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Hdd7Removed": {
+      "Reading": "<=/Drive_7.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Hdd8Removed": {
+      "Reading": "<=/Drive_8.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Hdd9Removed": {
+      "Reading": "<=/Drive_9.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Hdd10Removed": {
+      "Reading": "<=/Drive_10.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Hdd11Removed": {
+      "Reading": "<=/Drive_11.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Hdd12Removed": {
+      "Reading": "<=/Drive_12.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Hdd13Removed": {
+      "Reading": "<=/Drive_13.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Hdd14Removed": {
+      "Reading": "<=/Drive_14.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Hdd15Removed": {
+      "Reading": "<=/Drive_15.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Hdd16Removed": {
+      "Reading": "<=/Drive_16.Presence",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Disk1LocatErr": {
+      "Reading": "<=/Drive_1.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2LocatErr": {
+      "Reading": "<=/Drive_2.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3LocatErr": {
+      "Reading": "<=/Drive_3.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4LocatErr": {
+      "Reading": "<=/Drive_4.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5LocatErr": {
+      "Reading": "<=/Drive_5.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6LocatErr": {
+      "Reading": "<=/Drive_6.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7LocatErr": {
+      "Reading": "<=/Drive_7.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8LocatErr": {
+      "Reading": "<=/Drive_8.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9LocatErr": {
+      "Reading": "<=/Drive_9.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10LocatErr": {
+      "Reading": "<=/Drive_10.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11LocatErr": {
+      "Reading": "<=/Drive_11.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12LocatErr": {
+      "Reading": "<=/Drive_12.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13LocatErr": {
+      "Reading": "<=/Drive_13.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14LocatErr": {
+      "Reading": "<=/Drive_14.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15LocatErr": {
+      "Reading": "<=/Drive_15.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16LocatErr": {
+      "Reading": "<=/Drive_16.Missing",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Hdd1FailedArray": {
+      "Reading": "<=/Drive_1.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2FailedArray": {
+      "Reading": "<=/Drive_2.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Hdd3FailedArray": {
+      "Reading": "<=/Drive_3.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Hdd4FailedArray": {
+      "Reading": "<=/Drive_4.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Hdd5FailedArray": {
+      "Reading": "<=/Drive_5.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Hdd6FailedArray": {
+      "Reading": "<=/Drive_6.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Hdd7FailedArray": {
+      "Reading": "<=/Drive_7.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Hdd8FailedArray": {
+      "Reading": "<=/Drive_8.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Hdd9FailedArray": {
+      "Reading": "<=/Drive_9.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Hdd10FailedArray": {
+      "Reading": "<=/Drive_10.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Hdd11FailedArray": {
+      "Reading": "<=/Drive_11.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Hdd12FailedArray": {
+      "Reading": "<=/Drive_12.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Hdd13FailedArray": {
+      "Reading": "<=/Drive_13.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Hdd14FailedArray": {
+      "Reading": "<=/Drive_14.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Hdd15FailedArray": {
+      "Reading": "<=/Drive_15.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Hdd16FailedArray": {
+      "Reading": "<=/Drive_16.InAFailedArray",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Hdd1PredicFail": {
+      "Reading": "<=/Drive_1.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2PredicFail": {
+      "Reading": "<=/Drive_2.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Hdd3PredicFail": {
+      "Reading": "<=/Drive_3.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Hdd4PredicFail": {
+      "Reading": "<=/Drive_4.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Hdd5PredicFail": {
+      "Reading": "<=/Drive_5.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Hdd6PredicFail": {
+      "Reading": "<=/Drive_6.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Hdd7PredicFail": {
+      "Reading": "<=/Drive_7.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Hdd8PredicFail": {
+      "Reading": "<=/Drive_8.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Hdd9PredicFail": {
+      "Reading": "<=/Drive_9.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Hdd10PredicFail": {
+      "Reading": "<=/Drive_10.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Hdd11PredicFail": {
+      "Reading": "<=/Drive_11.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Hdd12PredicFail": {
+      "Reading": "<=/Drive_12.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Hdd13PredicFail": {
+      "Reading": "<=/Drive_13.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Hdd14PredicFail": {
+      "Reading": "<=/Drive_14.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Hdd15PredicFail": {
+      "Reading": "<=/Drive_15.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Hdd16PredicFail": {
+      "Reading": "<=/Drive_16.PredictiveFailure",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Disk1Foreign": {
+      "Reading": "<=/Drive_1.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2Foreign": {
+      "Reading": "<=/Drive_2.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3Foreign": {
+      "Reading": "<=/Drive_3.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4Foreign": {
+      "Reading": "<=/Drive_4.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5Foreign": {
+      "Reading": "<=/Drive_5.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6Foreign": {
+      "Reading": "<=/Drive_6.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7Foreign": {
+      "Reading": "<=/Drive_7.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8Foreign": {
+      "Reading": "<=/Drive_8.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9Foreign": {
+      "Reading": "<=/Drive_9.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10Foreign": {
+      "Reading": "<=/Drive_10.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11Foreign": {
+      "Reading": "<=/Drive_11.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12Foreign": {
+      "Reading": "<=/Drive_12.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13Foreign": {
+      "Reading": "<=/Drive_13.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14Foreign": {
+      "Reading": "<=/Drive_14.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15Foreign": {
+      "Reading": "<=/Drive_15.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16Foreign": {
+      "Reading": "<=/Drive_16.FirmwareStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Hdd1MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Hdd3MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_3.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "DescArg3": "#/Event_Hdd3MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Hdd4MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_4.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "DescArg3": "#/Event_Hdd4MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Hdd5MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_5.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "DescArg3": "#/Event_Hdd5MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Hdd6MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_6.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "DescArg3": "#/Event_Hdd6MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Hdd7MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_7.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "DescArg3": "#/Event_Hdd7MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Hdd8MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_8.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "DescArg3": "#/Event_Hdd8MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Hdd9MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_9.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "DescArg3": "#/Event_Hdd9MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Hdd10MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_10.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "DescArg3": "#/Event_Hdd10MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Hdd11MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_11.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "DescArg3": "#/Event_Hdd11MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Hdd12MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_12.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "DescArg3": "#/Event_Hdd12MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Hdd13MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_13.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "DescArg3": "#/Event_Hdd13MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Hdd14MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_14.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "DescArg3": "#/Event_Hdd14MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Hdd15MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_15.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "DescArg3": "#/Event_Hdd15MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Hdd16MdWroutLow": {
+      "@Default": {
+        "Reading": 255
+      },
+      "Reading": "<=/Drive_16.PredictedMediaLifeLeftPercent",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "DescArg3": "#/Event_Hdd16MdWroutLow.Reading",
+      "DescArg4": "5",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Drive1RebuildStart": {
+      "Reading": "<=/Drive_1.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Drive1RebuildEnd": {
+      "Reading": "<=/Drive_1.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Drive2RebuildStart": {
+      "Reading": "<=/Drive_2.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Drive2RebuildEnd": {
+      "Reading": "<=/Drive_2.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Drive3RebuildStart": {
+      "Reading": "<=/Drive_3.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Drive3RebuildEnd": {
+      "Reading": "<=/Drive_3.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Drive4RebuildStart": {
+      "Reading": "<=/Drive_4.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Drive4RebuildEnd": {
+      "Reading": "<=/Drive_4.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Drive5RebuildStart": {
+      "Reading": "<=/Drive_5.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Drive5RebuildEnd": {
+      "Reading": "<=/Drive_5.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Drive6RebuildStart": {
+      "Reading": "<=/Drive_6.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Drive6RebuildEnd": {
+      "Reading": "<=/Drive_6.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Drive7RebuildStart": {
+      "Reading": "<=/Drive_7.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Drive7RebuildEnd": {
+      "Reading": "<=/Drive_7.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Drive8RebuildStart": {
+      "Reading": "<=/Drive_8.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Drive8RebuildEnd": {
+      "Reading": "<=/Drive_8.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Drive9RebuildStart": {
+      "Reading": "<=/Drive_9.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Drive9RebuildEnd": {
+      "Reading": "<=/Drive_9.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Drive10RebuildStart": {
+      "Reading": "<=/Drive_10.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Drive10RebuildEnd": {
+      "Reading": "<=/Drive_10.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Drive11RebuildStart": {
+      "Reading": "<=/Drive_11.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Drive11RebuildEnd": {
+      "Reading": "<=/Drive_11.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Drive12RebuildStart": {
+      "Reading": "<=/Drive_12.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Drive12RebuildEnd": {
+      "Reading": "<=/Drive_12.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Drive13RebuildStart": {
+      "Reading": "<=/Drive_13.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Drive13RebuildEnd": {
+      "Reading": "<=/Drive_13.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Drive14RebuildStart": {
+      "Reading": "<=/Drive_14.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Drive14RebuildEnd": {
+      "Reading": "<=/Drive_14.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Drive15RebuildStart": {
+      "Reading": "<=/Drive_15.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Drive15RebuildEnd": {
+      "Reading": "<=/Drive_15.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Drive16RebuildStart": {
+      "Reading": "<=/Drive_16.RebuildState",
+      "OperatorId": 7,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Drive16RebuildEnd": {
+      "Reading": "<=/Drive_16.RebuildState",
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Disk1StatErr": {
+      "Reading": "<=/Drive_1.FirmwareStatus;<=/Drive_1.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2StatErr": {
+      "Reading": "<=/Drive_2.FirmwareStatus;<=/Drive_2.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3StatErr": {
+      "Reading": "<=/Drive_3.FirmwareStatus;<=/Drive_3.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4StatErr": {
+      "Reading": "<=/Drive_4.FirmwareStatus;<=/Drive_4.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5StatErr": {
+      "Reading": "<=/Drive_5.FirmwareStatus;<=/Drive_5.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6StatErr": {
+      "Reading": "<=/Drive_6.FirmwareStatus;<=/Drive_6.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7StatErr": {
+      "Reading": "<=/Drive_7.FirmwareStatus;<=/Drive_7.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8StatErr": {
+      "Reading": "<=/Drive_8.FirmwareStatus;<=/Drive_8.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9StatErr": {
+      "Reading": "<=/Drive_9.FirmwareStatus;<=/Drive_9.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10StatErr": {
+      "Reading": "<=/Drive_10.FirmwareStatus;<=/Drive_10.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11StatErr": {
+      "Reading": "<=/Drive_11.FirmwareStatus;<=/Drive_11.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12StatErr": {
+      "Reading": "<=/Drive_12.FirmwareStatus;<=/Drive_12.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13StatErr": {
+      "Reading": "<=/Drive_13.FirmwareStatus;<=/Drive_13.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14StatErr": {
+      "Reading": "<=/Drive_14.FirmwareStatus;<=/Drive_14.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15StatErr": {
+      "Reading": "<=/Drive_15.FirmwareStatus;<=/Drive_15.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16StatErr": {
+      "Reading": "<=/Drive_16.FirmwareStatus;<=/Drive_16.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Disk1Fail": {
+      "Reading": "<=/Drive_1.CapacityError;<=/Drive_1.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2Fail": {
+      "Reading": "<=/Drive_2.CapacityError;<=/Drive_2.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3Fail": {
+      "Reading": "<=/Drive_3.CapacityError;<=/Drive_3.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4Fail": {
+      "Reading": "<=/Drive_4.CapacityError;<=/Drive_4.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5Fail": {
+      "Reading": "<=/Drive_5.CapacityError;<=/Drive_5.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6Fail": {
+      "Reading": "<=/Drive_6.CapacityError;<=/Drive_6.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7Fail": {
+      "Reading": "<=/Drive_7.CapacityError;<=/Drive_7.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8Fail": {
+      "Reading": "<=/Drive_8.CapacityError;<=/Drive_8.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9Fail": {
+      "Reading": "<=/Drive_9.CapacityError;<=/Drive_9.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10Fail": {
+      "Reading": "<=/Drive_10.CapacityError;<=/Drive_10.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11Fail": {
+      "Reading": "<=/Drive_11.CapacityError;<=/Drive_11.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12Fail": {
+      "Reading": "<=/Drive_12.CapacityError;<=/Drive_12.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13Fail": {
+      "Reading": "<=/Drive_13.CapacityError;<=/Drive_13.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14Fail": {
+      "Reading": "<=/Drive_14.CapacityError;<=/Drive_14.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15Fail": {
+      "Reading": "<=/Drive_15.CapacityError;<=/Drive_15.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16Fail": {
+      "Reading": "<=/Drive_16.CapacityError;<=/Drive_16.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_HddBkpReplaceMntr": {
+      "Reading": "<=/Component_HddBackplane.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_HddBackplane.Instance",
+      "DescArg2": "#/Component_HddBackplane.PreviousSN",
+      "DescArg3": "#/Component_HddBackplane.SerialNumber",
+      "Component": "#/Component_HddBackplane"
+    },
+    "Event_Disk1ReplaceMntr": {
+      "Reading": "<=/Component_Drive0.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "DescArg3": "#/Component_Drive0.PreviousSN",
+      "DescArg4": "#/Component_Drive0.SerialNumber",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2ReplaceMntr": {
+      "Reading": "<=/Component_Drive1.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "DescArg3": "#/Component_Drive1.PreviousSN",
+      "DescArg4": "#/Component_Drive1.SerialNumber",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3ReplaceMntr": {
+      "Reading": "<=/Component_Drive2.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "DescArg3": "#/Component_Drive2.PreviousSN",
+      "DescArg4": "#/Component_Drive2.SerialNumber",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4ReplaceMntr": {
+      "Reading": "<=/Component_Drive3.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "DescArg3": "#/Component_Drive3.PreviousSN",
+      "DescArg4": "#/Component_Drive3.SerialNumber",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5ReplaceMntr": {
+      "Reading": "<=/Component_Drive4.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "DescArg3": "#/Component_Drive4.PreviousSN",
+      "DescArg4": "#/Component_Drive4.SerialNumber",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6ReplaceMntr": {
+      "Reading": "<=/Component_Drive5.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "DescArg3": "#/Component_Drive5.PreviousSN",
+      "DescArg4": "#/Component_Drive5.SerialNumber",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7ReplaceMntr": {
+      "Reading": "<=/Component_Drive6.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "DescArg3": "#/Component_Drive6.PreviousSN",
+      "DescArg4": "#/Component_Drive6.SerialNumber",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8ReplaceMntr": {
+      "Reading": "<=/Component_Drive7.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "DescArg3": "#/Component_Drive7.PreviousSN",
+      "DescArg4": "#/Component_Drive7.SerialNumber",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9ReplaceMntr": {
+      "Reading": "<=/Component_Drive8.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "DescArg3": "#/Component_Drive8.PreviousSN",
+      "DescArg4": "#/Component_Drive8.SerialNumber",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10ReplaceMntr": {
+      "Reading": "<=/Component_Drive9.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "DescArg3": "#/Component_Drive9.PreviousSN",
+      "DescArg4": "#/Component_Drive9.SerialNumber",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11ReplaceMntr": {
+      "Reading": "<=/Component_Drive10.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "DescArg3": "#/Component_Drive10.PreviousSN",
+      "DescArg4": "#/Component_Drive10.SerialNumber",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12ReplaceMntr": {
+      "Reading": "<=/Component_Drive11.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "DescArg3": "#/Component_Drive11.PreviousSN",
+      "DescArg4": "#/Component_Drive11.SerialNumber",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13ReplaceMntr": {
+      "Reading": "<=/Component_Drive12.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "DescArg3": "#/Component_Drive12.PreviousSN",
+      "DescArg4": "#/Component_Drive12.SerialNumber",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14ReplaceMntr": {
+      "Reading": "<=/Component_Drive13.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "DescArg3": "#/Component_Drive13.PreviousSN",
+      "DescArg4": "#/Component_Drive13.SerialNumber",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15ReplaceMntr": {
+      "Reading": "<=/Component_Drive14.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "DescArg3": "#/Component_Drive14.PreviousSN",
+      "DescArg4": "#/Component_Drive14.SerialNumber",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16ReplaceMntr": {
+      "Reading": "<=/Component_Drive15.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "DescArg3": "#/Component_Drive15.PreviousSN",
+      "DescArg4": "#/Component_Drive15.SerialNumber",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_DiskBPPwrFaultMntr64": {
+      "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 8) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/HddBackplane_1.Name",
+      "DescArg2": "BP_12V0",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr65": {
+      "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 65) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/HddBackplane_1.Name",
+      "DescArg2": "BP_5V0_1",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr66": {
+      "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 66) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/HddBackplane_1.Name",
+      "DescArg2": "BP_5V0_2",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr67": {
+      "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 67) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/HddBackplane_1.Name",
+      "DescArg2": "BP_5V0_3",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr68": {
+      "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 68) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/HddBackplane_1.Name",
+      "DescArg2": "BP_5V0_4",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr166": {
+      "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 136) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "front",
+      "DescArg2": "BP_12V0",
+      "Component": "#/Component_HddBackplane"
+    },
+    "Event_DiskBPPwrFaultMntr167": {
+      "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 167) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "front",
+      "DescArg2": "BP_5V0_1",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr168": {
+      "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 168) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "front",
+      "DescArg2": "BP_5V0_2",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr169": {
+      "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 169) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "front",
+      "DescArg2": "BP_5V0_3",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_DiskBPPwrFaultMntr170": {
+      "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 170) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "front",
+      "DescArg2": "BP_5V0_4",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "2"
+    },
+    "Event_CpldSelfcheck": {
+      "Reading": "<=/HddBackplane_1.CpldStatus",
+      "OperatorId": 5,
+      "DescArg1": "#/HddBackplane_1.Slot",
+      "DescArg2": "1",
+      "Component": "#/Component_HddBackplane",
+      "AdditionalInfo": "1"
+    },
+    "Event_HardDisk1IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_1.Presence;<=/Drive_1.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_HardDisk2IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_2.Presence;<=/Drive_2.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_HardDisk3IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_3.Presence;<=/Drive_3.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_HardDisk4IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_4.Presence;<=/Drive_4.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_HardDisk5IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_5.Presence;<=/Drive_5.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_HardDisk6IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_6.Presence;<=/Drive_6.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_HardDisk7IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_7.Presence;<=/Drive_7.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_HardDisk8IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_8.Presence;<=/Drive_8.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_HardDisk9IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_9.Presence;<=/Drive_9.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_HardDisk10IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_10.Presence;<=/Drive_10.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_HardDisk11IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_11.Presence;<=/Drive_11.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_HardDisk12IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_12.Presence;<=/Drive_12.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_HardDisk13IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_13.Presence;<=/Drive_13.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_HardDisk14IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_14.Presence;<=/Drive_14.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_HardDisk15IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_15.Presence;<=/Drive_15.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_HardDisk16IOPerformanceDeterioration": {
+      "Reading": "<=/Drive_16.Presence;<=/Drive_16.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_Disk1BlockLow": {
+      "Reading": "<=/Drive_1.SLCSpareBlockPercentage;<=/Drive_1.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2BlockLow": {
+      "Reading": "<=/Drive_2.SLCSpareBlockPercentage;<=/Drive_2.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_Disk3BlockLow": {
+      "Reading": "<=/Drive_3.SLCSpareBlockPercentage;<=/Drive_3.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_Disk4BlockLow": {
+      "Reading": "<=/Drive_4.SLCSpareBlockPercentage;<=/Drive_4.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_Disk5BlockLow": {
+      "Reading": "<=/Drive_5.SLCSpareBlockPercentage;<=/Drive_5.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_Disk6BlockLow": {
+      "Reading": "<=/Drive_6.SLCSpareBlockPercentage;<=/Drive_6.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_Disk7BlockLow": {
+      "Reading": "<=/Drive_7.SLCSpareBlockPercentage;<=/Drive_7.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_Disk8BlockLow": {
+      "Reading": "<=/Drive_8.SLCSpareBlockPercentage;<=/Drive_8.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_Disk9BlockLow": {
+      "Reading": "<=/Drive_9.SLCSpareBlockPercentage;<=/Drive_9.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_Disk10BlockLow": {
+      "Reading": "<=/Drive_10.SLCSpareBlockPercentage;<=/Drive_10.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_Disk11BlockLow": {
+      "Reading": "<=/Drive_11.SLCSpareBlockPercentage;<=/Drive_11.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_Disk12BlockLow": {
+      "Reading": "<=/Drive_12.SLCSpareBlockPercentage;<=/Drive_12.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_Disk13BlockLow": {
+      "Reading": "<=/Drive_13.SLCSpareBlockPercentage;<=/Drive_13.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_Disk14BlockLow": {
+      "Reading": "<=/Drive_14.SLCSpareBlockPercentage;<=/Drive_14.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_Disk15BlockLow": {
+      "Reading": "<=/Drive_15.SLCSpareBlockPercentage;<=/Drive_15.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_Disk16BlockLow": {
+      "Reading": "<=/Drive_16.SLCSpareBlockPercentage;<=/Drive_16.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "OperatorId": 1,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "DescArg3": "70",
+      "Component": "#/Component_Drive15"
+    },
+    "Event_HardDisk1EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_1.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "DescArg3": "<=/Drive_1.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_HardDisk2EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_2.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "DescArg3": "<=/Drive_2.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive1"
+    },
+    "Event_HardDisk3EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_3.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive2.Name",
+      "DescArg3": "<=/Drive_3.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive2"
+    },
+    "Event_HardDisk4EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_4.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive3.Name",
+      "DescArg3": "<=/Drive_4.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive3"
+    },
+    "Event_HardDisk5EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_5.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive4.Name",
+      "DescArg3": "<=/Drive_5.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive4"
+    },
+    "Event_HardDisk6EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_6.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive5.Name",
+      "DescArg3": "<=/Drive_6.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive5"
+    },
+    "Event_HardDisk7EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_7.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive6.Name",
+      "DescArg3": "<=/Drive_7.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive6"
+    },
+    "Event_HardDisk8EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_8.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive7.Name",
+      "DescArg3": "<=/Drive_8.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive7"
+    },
+    "Event_HardDisk9EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_9.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive8.Name",
+      "DescArg3": "<=/Drive_9.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive8"
+    },
+    "Event_HardDisk10EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_10.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive9.Name",
+      "DescArg3": "<=/Drive_10.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive9"
+    },
+    "Event_HardDisk11EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_11.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive10.Name",
+      "DescArg3": "<=/Drive_11.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive10"
+    },
+    "Event_HardDisk12EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_12.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive11.Name",
+      "DescArg3": "<=/Drive_12.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive11"
+    },
+    "Event_HardDisk13EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_13.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive12.Name",
+      "DescArg3": "<=/Drive_13.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive12"
+    },
+    "Event_HardDisk14EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_14.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive13.Name",
+      "DescArg3": "<=/Drive_14.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive13"
+    },
+    "Event_HardDisk15EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_15.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive14.Name",
+      "DescArg3": "<=/Drive_15.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive14"
+    },
+    "Event_HardDisk16EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_16.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive15.Name",
+      "DescArg3": "<=/Drive_16.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive15"
+    }
+  }
+}

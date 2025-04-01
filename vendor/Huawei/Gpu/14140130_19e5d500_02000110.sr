@@ -1,0 +1,511 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_Dmini",
+                "Chip_Dmini_Elabel"
+            ]
+        }
+    },
+    "Objects": {
+        "DftMcu_1": {
+            "Id": 172,
+            "Type": 2,
+            "Slot": "${Slot}",
+            "DeviceNum": 2,
+            "ItemName": "MCU Device Self Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_2": {
+            "Id": 172,
+            "Type": 2,
+            "Slot": "${Slot}",
+            "DeviceNum": 5,
+            "ItemName": "MCU Log Clear Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_3": {
+            "Id": 172,
+            "Type": 1,
+            "Slot": "${Slot}",
+            "DeviceNum": 7,
+            "ItemName": "MCU self interrupt Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "Chip_Dmini": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 216,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 2,
+            "ReadRetryTimes": 0
+        },
+        "Chip_Dmini_Elabel": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 0,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 2,
+            "ReadRetryTimes": 216
+        },
+        "Entity_GPUCard": {
+            "Id": 11,
+            "Name": "PCIe Card",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 101
+        },
+        "PCIeDevice_1": {
+            "Segment": 1,
+            "DeviceName": "PCIe Card $ (Atlas 300I Duo)",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FunctionClass": 9,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Position": "",
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "FruData_NPUCard": {
+            "FruId": 1,
+            "StorageType": "MCU",
+            "FruDev": "#/Chip_Dmini_Elabel"
+        },
+        "Fru_NPUCard": {
+            "PcbVersion": ".A",
+            "FruId": 1,
+            "PowerState": 1,
+            "FruName": "Atlas 300I Duo",
+            "Health": 0,
+            "EepStatus": 1,
+            "Type": 8,
+            "FruDataId": "#/FruData_NPUCard"
+        },
+        "NPUCard_1":{
+            "Name": "Atlas 300I Duo Inference Card",
+            "CardDescription": "Atlas 300I Duo Inference Card PCI-E 1*16x(FHFL)",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "RefChip":"#/Chip_Dmini",
+            "RefEeprom":"#/Chip_Dmini_Elabel",
+            "RefFrudata": "#/FruData_NPUCard",
+            "Model": "Atlas_300I_Duo",
+            "SlotNumber": "${Slot}",
+            "PcbVersion": ".A",
+            "BoardID": 177,
+            "FirmwareVersion": "N/A",
+            "CardPartNumber": "03029WRV"
+        },
+        "PCIeCard_1": {
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Name": "Atlas 300I Duo",
+            "BoardName": "<=/FruData_NPUCard.BoardProductName;<=/FruData_NPUCard.BoardProductName |> string.cmp($1, '') |> expr($1 ? 'IT21PD2E' : $2)",
+            "Description": "Atlas 300I Duo Inference Card PCI-E 1*16x(FHFL)",
+            "FunctionClass": 9,
+            "VendorID": 6629,
+            "DeviceID": 54528,
+            "SubVendorID": 512,
+            "SubDeviceID": 272,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "#/NPUCard_1.FirmwareVersion",
+            "Manufacturer": "Huawei",
+            "PartNumber": "03029WRV",
+            "MaxFrameLen": 32,
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "#/NPUCard_1.PcbVersion",
+            "BoardID": "#/NPUCard_1.BoardID",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "SerialNumber": "",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "ThresholdSensor_GPUOutletTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "NPU${Slot} Outlet Temp",
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 2056,
+            "UpperNoncritical": 90,
+            "PositiveHysteresis": 2,
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NPUCard_1.OutletTemperatureCelsius",
+            "ReadingStatus": "<=/NPUCard_1.OutletTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+            "SensorNumber": 255
+        },
+        "ThresholdSensor_GPUInletTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "NPU${Slot} Inlet Temp",
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 2056,
+            "UpperNoncritical": 90,
+            "PositiveHysteresis": 2,
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NPUCard_1.InletTemperatureCelsius",
+            "ReadingStatus": "<=/NPUCard_1.InletTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)"
+        },
+        "ThresholdSensor_GPUAICore0Temp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "PCIe${Slot} Chip0 Temp",
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 2056,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Linearization": 0,
+            "M": 1,
+            "RBExp": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NPUCard_1.Core0TemperatureCelsius",
+            "ReadingStatus": "<=/NPUCard_1.Core0TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)"
+        },
+        "ThresholdSensor_GPUAICore1Temp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "PCIe${Slot} Chip1 Temp",
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 2056,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Linearization": 0,
+            "M": 1,
+            "RBExp": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NPUCard_1.Core1TemperatureCelsius",
+            "ReadingStatus": "<=/NPUCard_1.Core1TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)"
+        },
+        "ThresholdSensor_GPUPower": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "NPU${Slot} Power",
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Unit": 0,
+            "BaseUnit": 6,
+            "ModifierUnit": 0,
+            "Linearization": 0,
+            "M": 12,
+            "RBExp": 240,
+            "Analog": 1,
+            "NominalReading": 0,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 255,
+            "MinimumReading": 0,
+            "Reading": "<=/NPUCard_1.PowerWatts |> expr($1 // 12)",
+            "ReadingStatus": "<=/NPUCard_1.PowerWatts |> expr($1 >= 16384 ? 1 : 0)"
+        },
+        "CoolingRequirement_1_68": {
+            "RequirementId": 68,
+            "Description": "Atlas 300I Duo Core0 温度调速",
+            "MonitoringStatus": "<=/NPUCard_1.Core0TemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/NPUCard_1.Core0TemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 87,
+            "MaxAllowedTemperatureCelsius": 95,
+            "SensorName": "#/ThresholdSensor_GPUAICore0Temp.SensorName"
+        },
+        "CoolingRequirement_1_69": {
+            "RequirementId": 69,
+            "Description": "Atlas 300I Duo Core1 温度调速",
+            "MonitoringStatus": "<=/NPUCard_1.Core1TemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/NPUCard_1.Core1TemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 87,
+            "MaxAllowedTemperatureCelsius": 95,
+            "SensorName": "#/ThresholdSensor_GPUAICore1Temp.SensorName"
+        },
+        "CoolingRequirement_1_70": {
+            "RequirementId": 70,
+            "Description": "Atlas 300I Duo 出风口温度调速",
+            "MonitoringStatus": "<=/NPUCard_1.OutletTemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/NPUCard_1.OutletTemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 85,
+            "SensorName": "#/ThresholdSensor_GPUOutletTemp.SensorName"
+        },
+        "CoolingRequirement_1_71": {
+            "RequirementId": 71,
+            "Description": "Atlas 300I Duo 入风口温度调速",
+            "MonitoringStatus": "<=/NPUCard_1.InletTemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/NPUCard_1.InletTemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 85,
+            "SensorName": "#/ThresholdSensor_GPUInletTemp.SensorName"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_AiCore0OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "#/ThresholdSensor_GPUAICore0Temp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_GPUAICore0Temp.PositiveHysteresis"
+        },
+        "Event_AiCore1OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "#/ThresholdSensor_GPUAICore1Temp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_GPUAICore1Temp.PositiveHysteresis"
+        },
+        "Event_OutletOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "#/ThresholdSensor_GPUOutletTemp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_GPUOutletTemp.PositiveHysteresis"
+        },
+        "Event_InletOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "#/ThresholdSensor_GPUInletTemp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_GPUInletTemp.PositiveHysteresis"
+        },
+        "Event_AirTempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_FirmwareFailure": {
+            "EventKeyId": "PcieCard.PCIeCardFirmwareFailure",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 8192) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "NPU",
+            "DescArg5": "(SPI Flash)",
+            "DescArg6": "#/NPUCard_1.FaultCode"
+        },
+        "Event_InspectFail": {
+            "EventKeyId": "PcieCard.PCIeCardInspectionFailure",
+            "Reading": "<=/NPUCard_1.FaultState;<=/NPUCard_1.PowerWatts |> expr((($1 & 4) == 0) && (($2 & 32768) == 0) ? 0 : 1)",
+            "Condition": 0,
+            "OperatorId": 6,
+            "AdditionalInfo": "2",
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName"
+        },
+        "Event_VoltFail": {
+            "EventKeyId": "PcieCard.PCIeCardAccessVoltFailure",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 256) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg5": "#/NPUCard_1.FaultCode"
+        },
+        "Event_VoltUpper": {
+            "EventKeyId": "PcieCard.PCIeCardVoltageUpper",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 512) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_VoltLower": {
+            "EventKeyId": "PcieCard.PCIeCardVoltageLower",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 1024) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_HealthFail": {
+            "EventKeyId": "PcieCard.PCIeCardHealthFail",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 2097152) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_MiniFail": {
+            "EventKeyId": "PcieCard.PCIeCardMiniFail",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 4194304) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_PowerUpDown": {
+            "EventKeyId": "PcieCard.PCIeCardPowerUpDown",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 33554432) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_PowerFail": {
+            "EventKeyId": "PcieCard.PCIeCardPowerFail",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 16) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_HardwareFail": {
+            "EventKeyId": "PcieCard.PCIeCardHardwareFail",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 65536) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg1": "#/NPUCard_1.FaultCode",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName"
+        },
+        "Event_PwrFail": {
+            "EventKeyId": "PcieCard.PCIeCardPwrFail",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 128) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_OverCurrent": {
+            "EventKeyId": "PcieCard.PCIeCardOverCurrent",
+            "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 1073741824) == 0 ? 0 : 1)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.FaultCode"
+        }
+    }
+}

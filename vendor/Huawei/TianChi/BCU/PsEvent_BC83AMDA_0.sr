@@ -1,0 +1,296 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_1"
+            ]
+        },
+        "I2c_1": {
+            "Chips": [
+                "Smc_CpuBrdSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_CpuBrdSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Scanner_BCUPwrOnTimeOut": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201329920,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_BCUPwrSigDrop": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201330944,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Event_BCUPwrFaultMntr08": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr09": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr10": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr11": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr16": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr17": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "U10"
+        },
+        "Event_BCUPwrFaultMntr19": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr22": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr23": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr24": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr25": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr27": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr29": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr31": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr33": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr35": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr37": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr39": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr41": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr43": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr45": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr96": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr98": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr100": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr102": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr104": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr106": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC1"
+        },
+        "Event_BCUPwrFaultMntr20": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr26": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr28": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr30": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr32": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr34": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr36": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr38": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr40": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr42": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr44": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr46": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr97": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr99": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr101": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr103": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr105": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "Event_BCUPwrFaultMntr107": {
+            "EventKeyId": "System.SystemPowerOnTmout",
+            "Condition": 1,
+            "LedFaultCode": "UC2"
+        },
+        "PowerEvent_BCUPwrFaultMntr": {
+            "EventKeyId": "System.SystemPowerFailure"
+        },
+        "SmcDfxInfo_BCU": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 7424,
+            "Size": 70,
+            "Period": 400,
+            "SmcVersion": 112,
+            "Config": {
+                "44": {
+                    "pwr_time_out_error_code": 255
+                },
+                "45": {
+                    "pwr_fail_error_code": 255
+                }
+            },
+            "Mapping": {
+                "Scanner_BCUPwrOnTimeOut": {
+                    "Value": "expr($pwr_time_out_error_code)"
+                },
+                "Scanner_BCUPwrSigDrop": {
+                    "Value": "expr($pwr_fail_error_code)"
+                }
+            }
+        }
+    }
+}

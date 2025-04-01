@@ -1,0 +1,478 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "Component_Cable": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 40,
+            "Name": "cable",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1
+        },
+        "Event_A4a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC1.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC1.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A4a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC1.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC1.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A3a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC2.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC2.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A3a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC2.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC2.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A2a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD1.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD1.Port1LinkInfo",
+            "DescArg2": "CPU1 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A2a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD1.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD1.Port1LinkInfo",
+            "DescArg2": "CPU1 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A2c_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD1.Port2Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD1.Port2LinkInfo",
+            "DescArg2": "CPU1 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A2c_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD1.Port2Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD1.Port2LinkInfo",
+            "DescArg2": "CPU1 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A1a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD2.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD2.Port1LinkInfo",
+            "DescArg2": "CPU1 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A1a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD2.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD2.Port1LinkInfo",
+            "DescArg2": "CPU1 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A1c_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD2.Port2Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD2.Port2LinkInfo",
+            "DescArg2": "CPU1 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_A1c_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBCDD2.Port2Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBCDD2.Port2LinkInfo",
+            "DescArg2": "CPU1 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B1a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC1.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC1.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B1a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC1.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC1.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B2a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC2.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC2.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B2a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC2.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC2.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B3a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD1.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD1.Port1LinkInfo",
+            "DescArg2": "CPU2 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B3a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD1.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD1.Port1LinkInfo",
+            "DescArg2": "CPU2 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B3c_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD1.Port2Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD1.Port2LinkInfo",
+            "DescArg2": "CPU2 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B3c_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD1.Port2Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD1.Port2LinkInfo",
+            "DescArg2": "CPU2 UBCDD1",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B4a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD2.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD2.Port1LinkInfo",
+            "DescArg2": "CPU2 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B4a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD2.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD2.Port1LinkInfo",
+            "DescArg2": "CPU2 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B4c_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD2.Port2Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD2.Port2LinkInfo",
+            "DescArg2": "CPU2 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_B4c_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBCDD2.Port2Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBCDD2.Port2LinkInfo",
+            "DescArg2": "CPU2 UBCDD2",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C3a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC7.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC7.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC7",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C3a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC7.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC7.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC7",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C4a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC6.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC6.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC6",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C4a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC6.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC6.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC6",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C5a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC5.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC5.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC5",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C5a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC5.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC5.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC5",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C6a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC4.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC4.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC4",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C6a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC4.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC4.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC4",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C7a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC3.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC3.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C7a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC3.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU1UBC3.Port1LinkInfo",
+            "DescArg2": "CPU1 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D3a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC7.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC7.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC7",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D3a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC7.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC7.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC7",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C7b_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU1UBC3.Port2Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/BusinessConnector_CPU1UBC3.Port2LinkInfo",
+            "DescArg2": "CPU1 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_C7b_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU1UBC3.Port2Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/BusinessConnector_CPU1UBC3.Port2LinkInfo",
+            "DescArg2": "CPU1 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D4a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC3.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC3.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D4a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC3.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC3.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC3",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D5a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC4.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC4.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC4",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D5a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC4.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC4.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC4",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D6a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC5.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC5.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC5",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D6a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC5.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC5.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC5",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D7a_IncorrectConnection": {
+            "Reading": "<=/BusinessConnector_CPU2UBC6.Port1Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC6.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC6",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        },
+        "Event_D7a_UnitNotSupported": {
+            "Reading": "<=/BusinessConnector_CPU2UBC6.Port1Status;<=/Scanner_Dftenabled.Value |> expr($2 == 1 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/BusinessConnector_CPU2UBC6.Port1LinkInfo",
+            "DescArg2": "CPU2 UBC6",
+            "DescArg3": "BCU${Slot}",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_Cable"
+        }
+    }
+}

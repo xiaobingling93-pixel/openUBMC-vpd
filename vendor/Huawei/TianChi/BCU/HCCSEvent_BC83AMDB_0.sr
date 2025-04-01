@@ -1,0 +1,757 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_1"
+            ]
+        },
+        "I2c_1": {
+            "Chips": [
+                "Smc_CpuBrdSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_CpuBrdSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Cont_HCCS": {
+            "Num": 3,
+            "DefaultValue": 0
+        },
+        "Scanner_BCU_ID":{
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 16777215,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Value": 0
+        },
+        "Scanner_HCCS_State_1": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578752,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_2": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578760,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_3": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578768,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_4": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578776,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_5": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578784,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_6": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578792,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_7": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578800,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_8": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578808,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_9": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578816,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_10": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578824,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_11": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578832,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_12": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578840,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_13": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578848,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_14": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578856,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_15": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578864,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_16": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578872,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_17": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578880,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_18": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578888,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_19": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578896,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_20": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578904,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_21": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578912,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_22": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578920,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_23": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578928,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_24": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578936,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_25": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578944,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_26": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578952,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_27": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578960,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_28": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578968,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_29": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578976,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_30": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578984,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_31": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201578992,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Scanner_HCCS_State_32": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201579000,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_HCCS",
+            "Value": 0
+        },
+        "Event_HCCS_State_Failed_1": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_1": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_2": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_2": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_3": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_3": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_4": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_4": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_5": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_5": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_6": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_6": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_7": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_7": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_8": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_8": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_9": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_9": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_10": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_10": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_11": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_11": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_12": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_12": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_13": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_13": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_14": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_14": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_15": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_15": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_16": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_16": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_17": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_17": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_18": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_18": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_19": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_19": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_20": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_20": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_21": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_21": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_22": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_22": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_23": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_23": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_24": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_24": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_25": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_25": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_26": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_26": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_27": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_27": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_28": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_28": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_29": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_29": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_30": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_30": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_31": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_31": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Failed_32": {
+            "EventKeyId": "CPU.HCCSLinkFail",
+            "Condition": 1
+        },
+        "Event_HCCS_State_Degrade_32": {
+            "EventKeyId": "CPU.HCCSDegrade",
+            "Condition": 1
+        },
+        "SmcDfxInfo_BCU": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 7424,
+            "Size": 105,
+            "Period": 400,
+            "SmcVersion": 211,
+            "Config": {
+                "73": {"Cpu_Num":255}, 
+                "74": {"Cpu0_NA_hccslink1":255},
+                "75": {"Cpu0_NA_hccslink2":255},
+                "76": {"Cpu0_NA_hccslink3":255},
+                "77": {"Cpu0_NA_hccslink4":255},
+                "78": {"Cpu0_NB_hccslink1":255},
+                "79": {"Cpu0_NB_hccslink2":255},
+                "80": {"Cpu0_NB_hccslink3":255},
+                "81": {"Cpu0_NB_hccslink4":255},
+                "82": {"Cpu1_NA_hccslink1":255},
+                "83": {"Cpu1_NA_hccslink2":255},
+                "84": {"Cpu1_NA_hccslink3":255},
+                "85": {"Cpu1_NA_hccslink4":255},
+                "86": {"Cpu1_NB_hccslink1":255},
+                "87": {"Cpu1_NB_hccslink2":255},
+                "88": {"Cpu1_NB_hccslink3":255},
+                "89": {"Cpu1_NB_hccslink4":255},
+                "90": {"Cpu2_NA_hccslink1":255},
+                "91": {"Cpu2_NA_hccslink2":255},
+                "92": {"Cpu2_NA_hccslink3":255},
+                "93": {"Cpu2_NA_hccslink4":255},
+                "94": {"Cpu2_NB_hccslink1":255},
+                "95": {"Cpu2_NB_hccslink2":255},
+                "96": {"Cpu2_NB_hccslink3":255},
+                "97": {"Cpu2_NB_hccslink4":255},
+                "98": {"Cpu3_NA_hccslink1":255},
+                "99": {"Cpu3_NA_hccslink2":255},
+                "100": {"Cpu3_NA_hccslink3":255},
+                "101": {"Cpu3_NA_hccslink4":255},
+                "102": {"Cpu3_NB_hccslink1":255},
+                "103": {"Cpu3_NB_hccslink2":255},
+                "104": {"Cpu3_NB_hccslink3":255},
+                "105": {"Cpu3_NB_hccslink4":255}
+            },
+            "Mapping": {
+                "Scanner_BCU_ID": {
+                    "Value": "expr($Cpu_Num)"
+                },
+                "Scanner_HCCS_State_1": {
+                    "Value": "expr($Cpu0_NA_hccslink1)"
+                },
+                "Scanner_HCCS_State_2": {
+                    "Value": "expr($Cpu0_NA_hccslink2)"
+                },
+                "Scanner_HCCS_State_3": {
+                    "Value": "expr($Cpu0_NA_hccslink3)"
+                },
+                "Scanner_HCCS_State_4": {
+                    "Value": "expr($Cpu0_NA_hccslink4)"
+                },
+                "Scanner_HCCS_State_5": {
+                    "Value": "expr($Cpu0_NB_hccslink1)"
+                },
+                "Scanner_HCCS_State_6": {
+                    "Value": "expr($Cpu0_NB_hccslink2)"
+                },
+                "Scanner_HCCS_State_7": {
+                    "Value": "expr($Cpu0_NB_hccslink3)"
+                },
+                "Scanner_HCCS_State_8": {
+                    "Value": "expr($Cpu0_NB_hccslink4)"
+                },
+                "Scanner_HCCS_State_9": {
+                    "Value": "expr($Cpu1_NA_hccslink1)"
+                },
+                "Scanner_HCCS_State_10": {
+                    "Value": "expr($Cpu1_NA_hccslink2)"
+                },
+                "Scanner_HCCS_State_11": {
+                    "Value": "expr($Cpu1_NA_hccslink3)"
+                },
+                "Scanner_HCCS_State_12": {
+                    "Value": "expr($Cpu1_NA_hccslink4)"
+                },
+                "Scanner_HCCS_State_13": {
+                    "Value": "expr($Cpu1_NB_hccslink1)"
+                },
+                "Scanner_HCCS_State_14": {
+                    "Value": "expr($Cpu1_NB_hccslink2)"
+                },
+                "Scanner_HCCS_State_15": {
+                    "Value": "expr($Cpu1_NB_hccslink3)"
+                },
+                "Scanner_HCCS_State_16": {
+                    "Value": "expr($Cpu1_NB_hccslink4)"
+                },
+                "Scanner_HCCS_State_17": {
+                    "Value": "expr($Cpu2_NA_hccslink1)"
+                },
+                "Scanner_HCCS_State_18": {
+                    "Value": "expr($Cpu2_NA_hccslink2)"
+                },
+                "Scanner_HCCS_State_19": {
+                    "Value": "expr($Cpu2_NA_hccslink3)"
+                },
+                "Scanner_HCCS_State_20": {
+                    "Value": "expr($Cpu2_NA_hccslink4)"
+                },
+                "Scanner_HCCS_State_21": {
+                    "Value": "expr($Cpu2_NB_hccslink1)"
+                },
+                "Scanner_HCCS_State_22": {
+                    "Value": "expr($Cpu2_NB_hccslink2)"
+                },
+                "Scanner_HCCS_State_23": {
+                    "Value": "expr($Cpu2_NB_hccslink3)"
+                },
+                "Scanner_HCCS_State_24": {
+                    "Value": "expr($Cpu2_NB_hccslink4)"
+                },
+                "Scanner_HCCS_State_25": {
+                    "Value": "expr($Cpu3_NA_hccslink1)"
+                },
+                "Scanner_HCCS_State_26": {
+                    "Value": "expr($Cpu3_NA_hccslink2)"
+                },
+                "Scanner_HCCS_State_27": {
+                    "Value": "expr($Cpu3_NA_hccslink3)"
+                },
+                "Scanner_HCCS_State_28": {
+                    "Value": "expr($Cpu3_NA_hccslink4)"
+                },
+                "Scanner_HCCS_State_29": {
+                    "Value": "expr($Cpu3_NB_hccslink1)"
+                },
+                "Scanner_HCCS_State_30": {
+                    "Value": "expr($Cpu3_NB_hccslink2)"
+                },
+                "Scanner_HCCS_State_31": {
+                    "Value": "expr($Cpu3_NB_hccslink3)"
+                },
+                "Scanner_HCCS_State_32": {
+                    "Value": "expr($Cpu3_NB_hccslink4)"
+                }
+            }
+        }
+    }
+}

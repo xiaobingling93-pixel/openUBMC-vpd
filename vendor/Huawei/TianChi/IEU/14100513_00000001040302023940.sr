@@ -1,0 +1,314 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.01",
+    "Unit": {
+        "Type": "IEU",
+        "Name": "RiserCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "Hisport_5"
+            ]
+        },
+        "Hisport_5": {
+            "Chips": [
+                "Eeprom_IEU",
+                "Pca9545_IEU"
+            ]
+        },
+        "Pca9545_IEU": {
+            "Buses": [
+                "I2cMux_9545Chan2",
+                "I2cMux_9545Chan3",
+                "I2cMux_9545Chan4"
+            ]
+        },
+        "I2cMux_9545Chan2": {
+            "Connectors": [
+                "Connector_PCIe_1"
+            ]
+        },
+        "I2cMux_9545Chan3": {
+            "Connectors": [
+                "Connector_PCIe_2"
+            ]
+        },
+        "I2cMux_9545Chan4": {
+            "Chips": [
+                "Pca9555_IEU",
+                "Chip_MCU"
+            ]
+        }
+    },
+    "Objects": {
+        "Pca9545_IEU": {
+            "OffsetWidth": 0,
+            "AddrWidth": 1,
+            "Address": 226,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "I2cMux_9545Chan2": {
+            "ChannelId": 1
+        },
+        "I2cMux_9545Chan3": {
+            "ChannelId": 2
+        },
+        "I2cMux_9545Chan4": {
+            "ChannelId": 3
+        },
+        "Pca9555_IEU": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 64,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "DftPca9555_1": {
+            "Type": 1,
+            "Id": 3,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "PCA9555 For IEU${Slot}",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "RefChip": "#/Pca9555_IEU"
+        },
+        "DftPca9545_1": {
+            "Type": 1,
+            "Id": 4,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "PCA9545 For IEU${Slot}",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "RefChip": "#/Pca9545_IEU"
+        },
+        "DftI2c_1": {
+            "Type": 1,
+            "Id": 33,
+            "DeviceNum": 0,
+            "Slot": "${GroupId}",
+            "ItemName": "I2C-${Slot} Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "RefChip": "#/Pca9545_IEU"
+        },
+        "Chip_MCU": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 200,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 2,
+            "ReadRetryTimes": 0,
+            "DrvWriteDelay": "<=/RiserCard_1.MCUVersion |> string.sub($1, 1, 4) |> expr($1 >= '1.12' ? 0 : 1)"
+        },
+        "MCUFirmware_1": {
+            "UID": "00000001040302023940",
+            "RefChip": "#/Chip_MCU",
+            "Address": 200,
+            "SoftwareId": "MCU-BC83PRUI",
+            "BoardType": "IEU"
+        },
+        "RiserCard_1": {
+            "Slot": 1,
+            "UID": "00000001040302023940",
+            "Name": "BC83PRUI",
+            "Manufacturer": "Huawei",
+            "Type": "IEU",
+            "Description": "Riser(X8*2)",
+            "PartNumber": "0302023940",
+            "PcbID": "#/Accessor_PcbID.Value",
+            "PcbVersion": "",
+            "LogicVersion": "N/A",
+            "SRVersion": "${DataVersion}",
+            "MCUVersion": "",
+            "BoardID": 65535,
+            "BoardType": "RiserCard",
+            "Number": 1,
+            "DeviceName": "PCIeRiser${Slot}",
+            "Position": "chassis",
+            "NodeId": "chassisPCIeRiser${Slot}",
+            "FruID": "<=/Fru_IEU.FruId",
+            "RefMCUChip": "#/Chip_MCU"
+        },
+        "Event_Riser3V3Event": {
+            "EventKeyId": "Riser.PowerFailure",
+            "Condition": 0
+        },
+        "Scanner_Riser3V3Event": {
+            "Chip": "#/Pca9555_IEU",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 16,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "#/Cont_num5",
+            "Value": 0
+        },
+        "Cont_num5": {
+            "Num": 5,
+            "DefaultValue": 1
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Pca9555_IEU",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 192,
+            "Type": 0,
+            "Value": 0
+        },
+        "Connector_PCIe_1": {
+            "Bom": "14140130",
+            "Slot": 1,
+            "Position": 1,
+            "Presence": 0,
+            "Id": "",
+            "AuxId": "",
+            "Buses": [
+                "I2cMux_9545Chan2"
+            ],
+            "SystemId": "${SystemId}",
+            "ManagerId": "${ManagerId}",
+            "ChassisId": "${ChassisId}",
+            "SilkText": "RiserCard${Slot}",
+            "IdentifyMode": 2,
+            "Container": "Component_RiserCard",
+            "Type": "PCIe"
+        },
+        "Connector_PCIe_2": {
+            "Bom": "14140130",
+            "Slot": 2,
+            "Position": 2,
+            "Presence": 0,
+            "Id": "",
+            "AuxId": "",
+            "Buses": [
+                "I2cMux_9545Chan3"
+            ],
+            "SystemId": "${SystemId}",
+            "ManagerId": "${ManagerId}",
+            "ChassisId": "${ChassisId}",
+            "SilkText": "RiserCard${Slot}",
+            "IdentifyMode": 2,
+            "Container": "Component_RiserCard",
+            "Type": "PCIe"
+        },
+        "BusinessConnector_1": {
+            "Name": "Up_1",
+            "Direction": "Upstream",
+            "Slot": 1,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBCDD",
+            "Ports": [
+                {
+                    "Name": "Down_1",
+                    "ID": 49,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "Down_2",
+                    "ID": 50,
+                    "Offset": 8,
+                    "Width": 8
+                }
+            ]
+        },
+        "BusinessConnector_2": {
+            "Name": "Down_1",
+            "Direction": "Downstream",
+            "Slot": 1,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+                {
+                    "Name": "Up_1",
+                    "ID": 255,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "RefMgmtConnector": "#/Connector_PCIe_1",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_1"
+        },
+        "PcieAddrInfo_1": {
+            "Location": "RiserCard${Slot}",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001040302023940",
+            "ContainerUnitType": "IEU",
+            "GroupPosition": "PcieAddrInfo_1_${GroupPosition}"
+        },
+        "BusinessConnector_3": {
+            "Name": "Down_2",
+            "Direction": "Downstream",
+            "Slot": 2,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+                {
+                    "Name": "Up_1",
+                    "ID": 255,
+                    "Offset": 8,
+                    "Width": 8
+                }
+            ],
+            "RefMgmtConnector": "#/Connector_PCIe_2",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_2"
+        },
+        "PcieAddrInfo_2": {
+            "Location": "RiserCard${Slot}",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001040302023940",
+            "ContainerUnitType": "IEU",
+            "GroupPosition": "PcieAddrInfo_2_${GroupPosition}"
+        },
+        "Accessor_IEUWP": {
+            "Chip": "#/Pca9555_IEU",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 8,
+            "Type": 0,
+            "Value": 0
+        },
+        "Eeprom_IEU": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 174,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "SRUpgrade_1": {
+            "UID": "00000001040302023940",
+            "Type": "IEU",
+            "Version": "${DataVersion}",
+            "StorageChip": "#/Eeprom_IEU",
+            "SoftwareId": "HWSR-BC83PRUI",
+            "WriteProtect": "#/Accessor_IEUWP.Value"
+        },
+        "Fru_IEU": {
+            "PcbId": "#/Accessor_PcbID.Value",
+            "FruId": 1,
+            "FruName": "PCIe Riser${Slot}",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535,
+            "UniqueId": "00000001040302023940"
+        }
+    }
+}

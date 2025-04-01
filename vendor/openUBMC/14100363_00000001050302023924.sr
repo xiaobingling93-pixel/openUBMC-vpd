@@ -1,0 +1,1110 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.08",
+  "Unit": {
+    "Type": "CLU",
+    "Name": "FanBoard_1"
+  },
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c_2",
+        "I2c_4",
+        "JtagOverLocalBus_1"
+      ]
+    },
+    "I2c_4": {
+      "Chips": [
+        "Smc_FanBoardSMC",
+        "Eeprom_CLU",
+        "Chip_Fan_PWM"
+      ]
+    },
+    "I2c_2": {
+      "Chips": [
+        "Smc_ExpBoardSMC"
+      ],
+      "Connectors": [
+        "Connector_Fan1DualSensor",
+        "Connector_Fan1SingleSensor",
+        "Connector_Fan2DualSensor",
+        "Connector_Fan2SingleSensor",
+        "Connector_Fan3DualSensor",
+        "Connector_Fan3SingleSensor",
+        "Connector_Fan4DualSensor",
+        "Connector_Fan4SingleSensor"
+      ]
+    },
+    "JtagOverLocalBus_1": {
+      "Chips": [
+        "Cpld_1"
+      ]
+    }
+  },
+  "Objects": {
+    "Smc_FanBoardSMC": {
+      "Name": "FanBoardSMC",
+      "Address": 96,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 0,
+      "ReadTmout": 0
+    },
+    "Smc_ExpBoardSMC": {
+      "Name": "ExpBoardSMC",
+      "Address": 96,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 0,
+      "ReadTmout": 0
+    },
+    "Eeprom_CLU": {
+      "OffsetWidth": 2,
+      "AddrWidth": 1,
+      "Address": 174,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 20,
+      "HealthStatus": 0
+    },
+    "Chip_Fan_PWM": {
+      "OffsetWidth": 4,
+      "AddrWidth": 4,
+      "Address": 96
+    },
+    "Fans_0": {
+      "PWMChip": "#/Chip_Fan_PWM",
+      "SetPWMCmd": 402657792
+    },
+    "FanBoard_1": {
+      "Slot": 1,
+      "UID": "00000001050302023924",
+      "Name": "BC83FDCA",
+      "Manufacturer": "Huawei",
+      "Type": "CLU",
+      "Description": "FanBoard",
+      "PartNumber": "0302023924",
+      "LogicVersion": "",
+      "LogicUnit": 1,
+      "PcbID": "#/Accessor_PcbID.Value",
+      "PcbVersion": "",
+      "LogicVersionID": "#/Accessor_LogicVersionID.Value",
+      "SRVersion": "${DataVersion}",
+      "BoardID": 65535,
+      "BoardType": "FanBoard",
+      "Number": 1,
+      "DeviceName": "FanBoard${Slot}",
+      "Position": "CLU${Slot}",
+      "NodeId": "CLU${Slot}FanBoard${Slot}",
+      "RefSMCChip": "#/Smc_FanBoardSMC",
+      "FruID": "<=/Fru_FanBoard.FruId",
+      "PowerWattsExp": "#/Accessor_Fan1_Pwr.Value |> expr(-0.000000000000000000000001392242 * $1 * $1 * $1 * $1 * $1 * $1 + 0.000000000000000000163618116237 * $1 * $1 * $1 * $1 * $1 - 0.00000000000000714729233014839 * $1 * $1 * $1 * $1 + 0.000000000141146266763049 * $1 * $1 * $1 - 0.00000124480707999752 * $1 * $1 + 0.0196497990638136 * $1)",
+      "CpldTestReg": "#/Accessor_CpldTest.Value",
+      "CpldStatus": 0
+    },
+    "Scanner_PowerGood": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469765888,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 100,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Fan1_Pwr": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 4868,
+      "Size": 2,
+      "Mask": 65535,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PcbID": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 1792,
+      "Size": 2,
+      "Mask": 15,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LogicVersionID": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 2816,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_Fan1_Presence": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402656001,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "ScanEnabled": "<=/Scanner_PowerGood.Value",
+      "NominalValue": 1,
+      "@Default": {
+        "ScanEnabled": 0
+      },
+      "Value": 0
+    },
+    "Scanner_Fan1_FSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657025,
+      "Size": 4,
+      "Mask": 4294901760,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Fan1_RSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657025,
+      "Size": 4,
+      "Mask": 65535,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Fan1_PWM": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657281,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Connector_Fan1DualSensor": {
+      "Bom": "Dual",
+      "Slot": 1,
+      "Position": 0,
+      "Presence": "<=/Fan_1.IsTwins |> expr($1 ? 1 : 0)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan1SingleSensor": {
+      "Bom": "Single",
+      "Slot": 1,
+      "Position": 1,
+      "Presence": "<=/Fan_1.IsTwins |> expr($1 ? 0 : 1)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan2DualSensor": {
+      "Bom": "Dual",
+      "Slot": 2,
+      "Position": 2,
+      "Presence": "<=/Fan_2.IsTwins |> expr($1 ? 1 : 0)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan2SingleSensor": {
+      "Bom": "Single",
+      "Slot": 2,
+      "Position": 3,
+      "Presence": "<=/Fan_2.IsTwins |> expr($1 ? 0 : 1)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan3DualSensor": {
+      "Bom": "Dual",
+      "Slot": 3,
+      "Position": 4,
+      "Presence": "<=/Fan_3.IsTwins |> expr($1 ? 1 : 0)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan3SingleSensor": {
+      "Bom": "Single",
+      "Slot": 3,
+      "Position": 5,
+      "Presence": "<=/Fan_3.IsTwins |> expr($1 ? 0 : 1)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan4DualSensor": {
+      "Bom": "Dual",
+      "Slot": 4,
+      "Position": 6,
+      "Presence": "<=/Fan_4.IsTwins |> expr($1 ? 1 : 0)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Connector_Fan4SingleSensor": {
+      "Bom": "Single",
+      "Slot": 4,
+      "Position": 7,
+      "Presence": "<=/Fan_4.IsTwins |> expr($1 ? 0 : 1)",
+      "@Default": {
+        "Presence": 0
+      },
+      "Id": "Rotator",
+      "AuxId": "",
+      "Buses": [
+        "I2c_2",
+        "I2c_4"
+      ],
+      "SystemId": 1,
+      "IdentifyMode": 2
+    },
+    "Fan_1": {
+      "FanId": 1,
+      "Slot": 1,
+      "Coefficient": 1,
+      "FrontPresence": "<=/Scanner_Fan1_Presence.Value",
+      "RearPresence": "<=/Scanner_Fan1_Presence.Value",
+      "FrontSpeed": "<=/Scanner_Fan1_FSpeed.Value",
+      "RearSpeed": "<=/Scanner_Fan1_RSpeed.Value",
+      "HardwarePWM": "#/Accessor_Fan1_PWM.Value",
+      "SystemId": 1,
+      "FrontStatus": 0,
+      "RearStatus": 0,
+      "MaxSupportedPWM": 255,
+      "IdentifySpeedLevel": 35,
+      "Position": "<=/FanBoard_1.Position",
+      "PowerGood": "<=/Scanner_PowerGood.Value"
+    },
+    "CoolingFan_1_1": {
+      "FanId": 1,
+      "Slot": 1,
+      "FrontPresence": "<=/Fan_1.FrontPresence",
+      "RearPresence": "<=/Fan_1.RearPresence",
+      "FrontStatus": "<=/Fan_1.FrontStatus",
+      "RearStatus": "<=/Fan_1.RearStatus",
+      "HardwarePWM": "#/Accessor_Fan1_PWM.Value",
+      "MaxSupportedPWM": 255
+    },
+    "Scanner_Fan2_Presence": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402656002,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "ScanEnabled": "<=/Scanner_PowerGood.Value",
+      "NominalValue": 1,
+      "@Default": {
+        "ScanEnabled": 0
+      },
+      "Value": 0
+    },
+    "Scanner_Fan2_FSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657026,
+      "Size": 4,
+      "Mask": 4294901760,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Fan2_RSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657026,
+      "Size": 4,
+      "Mask": 65535,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Fan2_PWM": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657282,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Fan_2": {
+      "FanId": 2,
+      "Slot": 2,
+      "Coefficient": 1,
+      "FrontPresence": "<=/Scanner_Fan2_Presence.Value",
+      "RearPresence": "<=/Scanner_Fan2_Presence.Value",
+      "FrontSpeed": "<=/Scanner_Fan2_FSpeed.Value",
+      "RearSpeed": "<=/Scanner_Fan2_RSpeed.Value",
+      "HardwarePWM": "#/Accessor_Fan2_PWM.Value",
+      "SystemId": 1,
+      "FrontStatus": 0,
+      "RearStatus": 0,
+      "MaxSupportedPWM": 255,
+      "IdentifySpeedLevel": 35,
+      "Position": "<=/FanBoard_1.Position",
+      "PowerGood": "<=/Scanner_PowerGood.Value"
+    },
+    "CoolingFan_1_2": {
+      "FanId": 2,
+      "Slot": 2,
+      "FrontPresence": "<=/Fan_2.FrontPresence",
+      "RearPresence": "<=/Fan_2.RearPresence",
+      "FrontStatus": "<=/Fan_2.FrontStatus",
+      "RearStatus": "<=/Fan_2.RearStatus",
+      "HardwarePWM": "#/Accessor_Fan2_PWM.Value",
+      "MaxSupportedPWM": 255
+    },
+    "Scanner_Fan3_Presence": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402656003,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "ScanEnabled": "<=/Scanner_PowerGood.Value",
+      "NominalValue": 1,
+      "@Default": {
+        "ScanEnabled": 0
+      },
+      "Value": 0
+    },
+    "Scanner_Fan3_FSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657027,
+      "Size": 4,
+      "Mask": 4294901760,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Fan3_RSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657027,
+      "Size": 4,
+      "Mask": 65535,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Fan3_PWM": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657283,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Fan_3": {
+      "FanId": 3,
+      "Slot": 3,
+      "Coefficient": 1,
+      "FrontPresence": "<=/Scanner_Fan3_Presence.Value",
+      "RearPresence": "<=/Scanner_Fan3_Presence.Value",
+      "FrontSpeed": "<=/Scanner_Fan3_FSpeed.Value",
+      "RearSpeed": "<=/Scanner_Fan3_RSpeed.Value",
+      "HardwarePWM": "#/Accessor_Fan3_PWM.Value",
+      "SystemId": 1,
+      "FrontStatus": 0,
+      "RearStatus": 0,
+      "MaxSupportedPWM": 255,
+      "IdentifySpeedLevel": 35,
+      "Position": "<=/FanBoard_1.Position",
+      "PowerGood": "<=/Scanner_PowerGood.Value"
+    },
+    "Scanner_Fan4_Presence": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402656004,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "ScanEnabled": "<=/Scanner_PowerGood.Value",
+      "NominalValue": 1,
+      "@Default": {
+        "ScanEnabled": 0
+      },
+      "Value": 0
+    },
+    "Scanner_Fan4_FSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657028,
+      "Size": 4,
+      "Mask": 4294901760,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Fan4_RSpeed": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657028,
+      "Size": 4,
+      "Mask": 65535,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Fan4_PWM": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 402657284,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Fan_4": {
+      "FanId": 4,
+      "Slot": 4,
+      "Coefficient": 1,
+      "FrontPresence": "<=/Scanner_Fan4_Presence.Value",
+      "RearPresence": "<=/Scanner_Fan4_Presence.Value",
+      "FrontSpeed": "<=/Scanner_Fan4_FSpeed.Value",
+      "RearSpeed": "<=/Scanner_Fan4_RSpeed.Value",
+      "HardwarePWM": "#/Accessor_Fan4_PWM.Value",
+      "SystemId": 1,
+      "FrontStatus": 0,
+      "RearStatus": 0,
+      "MaxSupportedPWM": 255,
+      "IdentifySpeedLevel": 35,
+      "Position": "<=/FanBoard_1.Position",
+      "PowerGood": "<=/Scanner_PowerGood.Value"
+    },
+    "AbnormalFan_1": {
+      "Id": 1,
+      "FanIdx": 1,
+      "Status": "AbnormalRotation",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_2": {
+      "Id": 2,
+      "FanIdx": 1,
+      "Status": "NotInPosition",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_3": {
+      "Id": 3,
+      "FanIdx": 2,
+      "Status": "NotInPosition",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_4": {
+      "Id": 4,
+      "FanIdx": 3,
+      "Status": "NotInPosition",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_5": {
+      "Id": 5,
+      "FanIdx": 4,
+      "Status": "NotInPosition",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_6": {
+      "Id": 6,
+      "FanIdx": 2,
+      "Status": "AbnormalRotation",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_7": {
+      "Id": 7,
+      "FanIdx": 3,
+      "Status": "AbnormalRotation",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "AbnormalFan_8": {
+      "Id": 8,
+      "FanIdx": 4,
+      "Status": "AbnormalRotation",
+      "FanGroup": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Accessor_JtagSwitch": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469776896,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LogicVerId": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 2816,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Cpld_1": {
+      "HealthStatus": 0
+    },
+    "DftJTAG_1": {
+      "Type": 2,
+      "Id": 69,
+      "DeviceNum": 1,
+      "Slot": "${GroupId}",
+      "ItemName": "CLU JTAG Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "InputChip": "#/Cpld_1",
+      "Channel": 2
+    },
+    "LogicFirmware_CLU_1": {
+      "UId": "00000001050302023924",
+      "Name": "CLU_CPLD",
+      "Manufacturer": "Huawei",
+      "Version": "#/Accessor_LogicVerId.Value",
+      "Location": 1,
+      "UpgradeChip": "#/Cpld_1",
+      "ChipInfo": "#/Cpld_1",
+      "Routes": "#/Accessor_JtagSwitch.Value",
+      "DefaultRoute": 0,
+      "FirmwareRoute": 5,
+      "ValidMode": 0,
+      "SoftwareId": "CPLD-BC83FDCA",
+      "ValidAction": 0
+    },
+    "Accessor_CLUWP": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Size": 1,
+      "Offset": 11776,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "SRUpgrade_1": {
+      "UID": "00000001050302023924",
+      "Type": "CLU",
+      "Version": "${DataVersion}",
+      "StorageChip": "#/Eeprom_CLU",
+      "SoftwareId": "HWSR-BC83FDCA",
+      "WriteProtect": "#/Accessor_CLUWP.Value"
+    },
+    "Fru_FanBoard": {
+      "PcbId": 1,
+      "FruId": 1,
+      "FruName": "FanBoard${Slot}"
+    },
+    "DiscreteSensor_FAN1FPresence": {
+      "AssertMask": 1,
+      "DeassertMask": 1,
+      "DiscreteMask": 1
+    },
+    "DiscreteSensor_FAN2FPresence": {
+      "AssertMask": 1,
+      "DeassertMask": 1,
+      "DiscreteMask": 1
+    },
+    "DiscreteSensor_FAN3FPresence": {
+      "AssertMask": 1,
+      "DeassertMask": 1,
+      "DiscreteMask": 1
+    },
+    "DiscreteSensor_FAN4FPresence": {
+      "AssertMask": 1,
+      "DeassertMask": 1,
+      "DiscreteMask": 1
+    },
+    "MCUFirmware_1": {
+      "UID": "00000001050302023924",
+      "RefChip": "#/Smc_FanBoardSMC",
+      "LockChip": "#/Smc_FanBoardSMC",
+      "Address": 96,
+      "Protocol": "SMC",
+      "SoftwareId": "MCU-BC83FDCA",
+      "BoardType": "CLU"
+    },
+    "CoolingFan_1_3": {
+      "FanId": 3,
+      "Slot": 3,
+      "FrontPresence": "<=/Fan_3.FrontPresence",
+      "RearPresence": "<=/Fan_3.RearPresence",
+      "FrontStatus": "<=/Fan_3.FrontStatus",
+      "RearStatus": "<=/Fan_3.RearStatus",
+      "HardwarePWM": "#/Accessor_Fan3_PWM.Value",
+      "MaxSupportedPWM": 255
+    },
+    "CoolingFan_1_4": {
+      "FanId": 4,
+      "Slot": 4,
+      "FrontPresence": "<=/Fan_4.FrontPresence",
+      "RearPresence": "<=/Fan_4.RearPresence",
+      "FrontStatus": "<=/Fan_4.FrontStatus",
+      "RearStatus": "<=/Fan_4.RearStatus",
+      "HardwarePWM": "#/Accessor_Fan4_PWM.Value",
+      "MaxSupportedPWM": 255
+    },
+    "FanType_8038P": {
+      "Name": "02314BLG 8038+",
+      "Index": 1,
+      "IsDefaultType": true,
+      "IsTwins": false,
+      "FrontMaxSpeed": 15000,
+      "RearMaxSpeed": 15000,
+      "IdentifyRangeLow": 3230,
+      "IdentifyRangeHigh": 4750,
+      "PartNumber": "02314BLG",
+      "BOM": "BOM32030275",
+      "SystemId": 1,
+      "SpeedRange": [
+        0,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "PowerRange": [
+        120,
+        120,
+        190,
+        390,
+        680,
+        1050,
+        1800,
+        2400,
+        3600,
+        5200
+      ],
+      "FanDiameterMm": 80
+    },
+    "FanType_8080P": {
+      "Name": "02314EWC 8080+",
+      "Index": 2,
+      "IsDefaultType": true,
+      "IsTwins": true,
+      "FrontMaxSpeed": 16500,
+      "RearMaxSpeed": 16500,
+      "IdentifyRangeLow": 4908,
+      "IdentifyRangeHigh": 6641,
+      "PartNumber": "02314EWC",
+      "BOM": "BOM32030389-001",
+      "SystemId": 1,
+      "SpeedRange": [
+        0,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "PowerRange": [
+        120,
+        120,
+        190,
+        390,
+        680,
+        1050,
+        1800,
+        2400,
+        3600,
+        5200
+      ],
+      "FanDiameterMm": 80
+    },
+    "DftIOTest_1": {
+      "Type": 2,
+      "Id": 89,
+      "DeviceNum": 6,
+      "ItemName": "SMC For FanBoard LM75 Temp",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "Destination": "#/Accessor_FanBLm75.Value",
+      "Data": 0,
+      "ActionType": 2
+    },
+    "Accessor_FanBLm75": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 4354,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "MidAvg_FanBrd": {
+      "WindowSize": 4,
+      "DefaultValue": 20,
+      "IsSigned": true
+    },
+    "Scanner_FanBrdTemp": {
+      "Type":0,
+      "Chip": "#/Smc_FanBoardSMC",
+      "Size": 2,
+      "Offset": 4865,
+      "Mask": 65280,
+      "Period": 2000,
+      "Debounce": "#/MidAvg_FanBrd",
+      "Value": 0,
+      "Status": 0
+    },
+    "CoolingRequirement_1_8": {
+      "RequirementId": 8,
+      "MonitoringStatus": "<=/Scanner_FanBrdTemp.Status",
+      "MonitoringValue": "<=/Scanner_FanBrdTemp.Value",
+      "IsBackupRequirement": true,
+      "SensorName": "#/ThresholdSensor_FanBoardTemp.SensorName"
+    },
+    "CoolingArea_1_8": {
+      "AreaId": 8,
+      "RequirementIdx": 8,
+      "PolicyIdxGroup": [],
+      "FanIdxGroup": []
+    },
+    "ThresholdSensor_FanBoardTemp": {
+      "AssertMask": 0,
+      "DeassertMask": 0,
+      "ReadingMask": 0,
+      "Linearization": 0,
+      "M": 100,
+      "RBExp": 224
+    },
+    "Event_FanRedundancyMntr": {
+      "EventKeyId": "Fan.FanRedundancy",
+      "Condition": 4,
+      "LedFaultCode": "F01"
+    },
+    "Event_FanBoardReplaceMntr": {
+      "EventKeyId": "Fan.FanBoardReplace",
+      "Condition": 1
+    },
+    "Event_Fan1FStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F01"
+    },
+    "Event_Fan2FStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F02"
+    },
+    "Event_Fan3FStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F03"
+    },
+    "Event_Fan4FStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F04"
+    },
+    "Event_Fan1RStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F01"
+    },
+    "Event_Fan2RStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F02"
+    },
+    "Event_Fan3RStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F03"
+    },
+    "Event_Fan4RStatus": {
+      "EventKeyId": "Fan.FanSpeedDeviation",
+      "Condition": 0,
+      "LedFaultCode": "F04"
+    },
+    "Event_Fan1FInstall": {
+      "EventKeyId": "Fan.FanInstalled",
+      "Condition": 1
+    },
+    "Event_Fan2FInstall": {
+      "EventKeyId": "Fan.FanInstalled",
+      "Condition": 1
+    },
+    "Event_Fan3FInstall": {
+      "EventKeyId": "Fan.FanInstalled",
+      "Condition": 1
+    },
+    "Event_Fan4FInstall": {
+      "EventKeyId": "Fan.FanInstalled",
+      "Condition": 1
+    },
+    "Event_Fan1FRemoved": {
+      "EventKeyId": "Fan.FanRemoved",
+      "Condition": 0
+    },
+    "Event_Fan2FRemoved": {
+      "EventKeyId": "Fan.FanRemoved",
+      "Condition": 0
+    },
+    "Event_Fan3FRemoved": {
+      "EventKeyId": "Fan.FanRemoved",
+      "Condition": 0
+    },
+    "Event_Fan4FRemoved": {
+      "EventKeyId": "Fan.FanRemoved",
+      "Condition": 0
+    },
+    "Accessor_CpldTest": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Size": 1,
+      "Offset": 8704,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Event_CpldSelfcheck": {
+      "EventKeyId": "FanBoard.FanBoardCPLDSelfTestFailure",
+      "Condition": 1
+    },
+    "SmcDfxInfo_CLU": {
+      "Chip": "#/Smc_FanBoardSMC",
+      "Offset": 7424,
+      "Size": 33,
+      "Period": 2000,
+      "SmcVersion": 108,
+      "Config": {
+        "1": {
+          "cpld_ver": 255
+        },
+        "2": {
+          "board_temp_l": 255
+        },
+        "3": {
+          "board_temp_h": 255
+        },
+        "12": {
+          "code_power_fail": 255
+        },
+        "13": {
+          "code_power_time_out": 255
+        },
+        "14": {
+          "fan1_prsnt_n": 1
+        },
+        "15": {
+          "fan2_prsnt_n": 1
+        },
+        "16": {
+          "fan3_prsnt_n": 1
+        },
+        "17": {
+          "fan4_prsnt_n": 1
+        },
+        "18": {
+          "fan1_tach_a_data_l": 255
+        },
+        "19": {
+          "fan1_tach_a_data_h": 255
+        },
+        "20": {
+          "fan1_tach_b_data_l": 255
+        },
+        "21": {
+          "fan1_tach_b_data_h": 255
+        },
+        "22": {
+          "fan2_tach_a_data_l": 255
+        },
+        "23": {
+          "fan2_tach_a_data_h": 255
+        },
+        "24": {
+          "fan2_tach_b_data_l": 255
+        },
+        "25": {
+          "fan2_tach_b_data_h": 255
+        },
+        "26": {
+          "fan3_tach_a_data_l": 255
+        },
+        "27": {
+          "fan3_tach_a_data_h": 255
+        },
+        "28": {
+          "fan3_tach_b_data_l": 255
+        },
+        "29": {
+          "fan3_tach_b_data_h": 255
+        },
+        "30": {
+          "fan4_tach_a_data_l": 255
+        },
+        "31": {
+          "fan4_tach_a_data_h": 255
+        },
+        "32": {
+          "fan4_tach_b_data_l": 255
+        },
+        "33": {
+          "fan4_tach_b_data_h": 255
+        }
+      },
+      "Mapping": {
+        "Scanner_Fan1_Presence": {
+          "Value": "expr($fan1_prsnt_n)"
+        },
+        "Scanner_Fan1_FSpeed": {
+          "Value": "expr((($fan1_tach_b_data_l >> 7) << 7) + ($fan1_tach_b_data_h << 8))"
+        },
+        "Scanner_Fan1_RSpeed": {
+          "Value": "expr((($fan1_tach_a_data_l >> 7) << 7) + ($fan1_tach_a_data_h << 8))"
+        },
+        "Scanner_Fan2_Presence": {
+          "Value": "expr($fan2_prsnt_n)"
+        },
+        "Scanner_Fan2_FSpeed": {
+          "Value": "expr((($fan2_tach_b_data_l >> 7) << 7) + ($fan2_tach_b_data_h << 8))"
+        },
+        "Scanner_Fan2_RSpeed": {
+          "Value": "expr((($fan2_tach_a_data_l >> 7) << 7) + ($fan2_tach_a_data_h << 8))"
+        },
+        "Scanner_Fan3_Presence": {
+          "Value": "expr($fan3_prsnt_n)"
+        },
+        "Scanner_Fan3_FSpeed": {
+          "Value": "expr((($fan3_tach_b_data_l >> 7) << 7) + ($fan3_tach_b_data_h << 8))"
+        },
+        "Scanner_Fan3_RSpeed": {
+          "Value": "expr((($fan3_tach_a_data_l >> 7) << 7) + ($fan3_tach_a_data_h << 8))"
+        },
+        "Scanner_Fan4_Presence": {
+          "Value": "expr($fan4_prsnt_n)"
+        },
+        "Scanner_Fan4_FSpeed": {
+          "Value": "expr((($fan4_tach_b_data_l >> 7) << 7) + ($fan4_tach_b_data_h << 8))"
+        },
+        "Scanner_Fan4_RSpeed": {
+          "Value": "expr((($fan4_tach_a_data_l >> 7) << 7) + ($fan4_tach_a_data_h << 8))"
+        },
+        "Scanner_FanBrdTemp": {
+          "Value": "expr($board_temp_h)"
+        }
+      }
+    },
+    "TemperatureInfo_1_6": {
+      "Name": "#/ThresholdSensor_FanBoardTemp.SensorName",
+      "ReadingValue": "<=/Scanner_FanBrdTemp.Value",
+      "Status": "<=/Scanner_FanBrdTemp.Status",
+      "Health": "<=/ThresholdSensor_FanBoardTemp.Health",
+      "UpperThreshold": [
+        255,
+        255,
+        255
+      ],
+      "LowerThreshold": [
+        255,
+        255,
+        255
+      ],
+      "CoordinateX": 7,
+      "CoordinateY": 6
+    }
+  }
+}

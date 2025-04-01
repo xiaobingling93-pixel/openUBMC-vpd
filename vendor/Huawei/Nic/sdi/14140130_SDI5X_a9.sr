@@ -1,0 +1,112 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_MCU_0",
+                "Chip_Id_0"
+            ],
+            "Connectors": [
+                "Connector_Virtural_NetCard"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_MCU_0": {
+            "OffsetWidth": 1,
+            "AddrWidth": 4,
+            "Address": 212,
+            "WriteRetryTimes": 5,
+            "ReadRetryTimes": 0
+        },
+        "Chip_Id_0": {
+            "OffsetWidth": 1,
+            "AddrWidth": 4,
+            "Address": 54
+        },
+        "PCIeDevice_0": {
+            "DeviceName": "PCIe Card $ (SDI V5.1)",
+            "SlotID": 0,
+            "DevBus": 255,
+            "DevDevice": 255,
+            "DevFunction": 255,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "FunctionClass": 5
+        },
+        "Fru_DPUCard": {
+            "PcbId": 254,
+            "FruId": 1,
+            "FruName": "DPU Card",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535
+        },
+        "Event_PCIeCardHeartBeatAbnormal": {
+            "EventKeyId": "PCIeCard.PCIeCardHeartBeatAbnormal",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "DPUCard_0": {
+            "M2SlotMaxCount": 2,
+            "NetworkAdapterMaxCount": 2,
+            "Name": "SDI 5.1",
+            "BoardID": 169,
+            "BoardName": "IT21SHSL",
+            "Description": "SDI V5.1",
+            "FunctionClass": 5,
+            "SlotID": "<=/PCIeDevice_0.SlotID",
+            "Manufacturer": "3SNIC",
+            "PcbVersion": "<=/Fru_DPUCard.PcbVersion",
+            "RefChip": "#/Chip_MCU_0",
+            "RefIdChip": "#/Chip_Id_0",
+            "Health": "<=/Component_DPUCard_0.Health",
+            "HeartBeatLoss": 0,
+            "SerialRecordConnect": [
+                {
+                    "Source": "UART4 COM",
+                    "Destination": "CARD COM"
+                }
+            ],
+            "RefFrudata": "#/FruData_DPUCard",
+            "SRVersion": "1.0",
+            "UID": "",
+            "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber"
+        },
+        "Connector_Virtural_NetCard": {
+            "Bom": "14140130",
+            "Slot": 6,
+            "Position": 6,
+            "Presence": 1,
+            "Id": "SDI5X_NetCard",
+            "AuxId": "ae",
+            "Buses": [
+                "I2cMux_Chan"
+            ],
+            "SystemId": "${SystemId}",
+            "ManagerId": "${ManagerId}",
+            "ChassisId": "${ChassisId}",
+            "SilkText": "RiserCard${Slot}",
+            "IdentifyMode": 2,
+            "Type": "PCIe"
+        }
+    }
+}

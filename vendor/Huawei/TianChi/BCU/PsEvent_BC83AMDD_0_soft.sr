@@ -1,0 +1,1472 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "Component_ComSystem": {
+            "FruId": 255,
+            "Instance": 0,
+            "Type": 44,
+            "Name": "System",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1
+        },
+        "Event_BCUPwrFaultMntr01": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 1) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_2",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr02": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 2) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_3",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr03": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 3) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_4",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr04": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 4) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_VCC_3V3",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr05": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 5) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_5V0_RESV",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr06": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 6) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V7_CPU1_DA_CORE_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr07": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 7) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_MEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr08": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 8) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_UC_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr09": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 9) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_UCMEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr10": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 10) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V7_CPU1_DB_CORE_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr11": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 11) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_MEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr12": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 12) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_UC_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr13": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 13) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_UCMEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr14": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 14) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA_DDR",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr15": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 15) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DB_DDR",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr16": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 16) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DADB_PERI_STARS_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr17": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 17) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM02_DBHBM13_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr18": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 18) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr19": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 19) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA0B1_CORE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr20": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 20) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr21": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 21) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM13_DBHBM02_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr22": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 22) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr23": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 23) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr24": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 24) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_CORE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr25": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 25) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_MEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr26": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 26) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_UC_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr27": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 27) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_UCMEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr28": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 28) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V7_CPU2_DB_CORE_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr29": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 29) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_MEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr30": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 30) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_UC_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr31": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 31) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_UCMEM_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr32": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 32) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA_DDR",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr33": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 33) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DADB_PERI_STARS_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr34": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 34) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DB_DDR",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr35": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 35) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr36": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 36) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM02_DBHBM13_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr37": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 37) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA0B1_CORE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr38": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 38) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr39": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 39) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM13_DBHBM02_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr40": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 40) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr41": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 41) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr42": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 42) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_CORE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr43": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 43) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA1B0_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr44": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 44) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DADB_EFUSE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr45": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 45) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DADB_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr46": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 46) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA1B0_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr47": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 47) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DADB_EFUSE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr48": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 48) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DADB_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr49": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 49) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_3V3_CPU1_DA0B1_USB2",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr50": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 50) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_3V3_CPU1_DA1B0_USB2",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr51": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 51) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_3V3_CPU2_DA0B1_USB2",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr52": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 52) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_3V3_CPU2_DA1B0_USB2",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr53": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 53) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_CPU1_CA_DIMM_R",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr54": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 54) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_CPU1_CB_DIMM_R",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr55": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 55) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_CPU2_CA_DIMM_R",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr56": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 56) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_CPU2_CB_DIMM_R",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr57": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 57) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA_ACG",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr58": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 58) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA0B1_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr59": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 59) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr60": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 60) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr61": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 61) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DB_ACG",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr62": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 62) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA_ACG",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr63": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 63) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA0B1_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr64": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 64) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr65": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 65) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_SIOE",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr66": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 66) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DB_ACG",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr67": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 67) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V9_CPU1_DA0B1_PAH32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr68": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 68) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V9_CPU1_DA1B0_PAH32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr69": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 69) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V9_CPU2_DA0B1_PAH32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr70": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 70) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V9_CPU2_DA1B0_PAH32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr71": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 71) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V1_CPU1_DA_DDRIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr72": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 72) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V1_CPU1_DB_DDRIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr73": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 73) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V1_CPU2_DA_DDRIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr74": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 74) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V1_CPU2_DB_DDRIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr75": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 75) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr76": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 76) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_SDS_VCO_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr77": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 77) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_USB_PLL_RCD_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr78": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 78) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr79": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 79) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_SDS_VCO_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr80": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 80) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_USB_PLL_RCD_SIOE_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr81": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 81) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DADB_PLL_RCD_SIOE_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr82": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 82) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr83": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 83) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_SDS_VCO_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr84": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 84) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_USB_PLL_RCD_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr85": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 85) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_SDS_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr86": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 86) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_SDS_VCO_H60_H32",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr87": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 87) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_USB_PLL_RCD_SIOE_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr88": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 88) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DADB_PLL_RCD_SIOE_TS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr89": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 89) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA0B1_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr90": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 90) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DAHBM02_DBHBM13_PLL",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr91": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 91) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DAHBM13_DBHBM02_PLL",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr92": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 92) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA0B1_GPIO",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr93": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 93) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DAHBM02_DBHBM13_PLL",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr94": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 94) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DAHBM13_DBHBM02_PLL",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr95": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 95) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_2V5_CPU1_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr96": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 96) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_2V5_CPU1_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr97": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 97) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_2V5_CPU2_DAHBM02_DBHBM13",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr98": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 98) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_2V5_CPU2_DAHBM13_DBHBM02",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr99": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 99) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA_DB_HBM",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr100": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 100) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA_DB_HBM",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr101": {
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 101) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "BCU${Slot}_V_0V7_CPU2_DA_CORE_DVFS",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_BCUPwrFaultMntr129": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 129) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr130": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_3",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 130) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr131": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_VCC_12V0_4",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 131) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr132": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_VCC_3V3",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 132) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr133": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_5V0_RESV",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 133) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr134": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_STBY_3V3_VRD",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 134) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr135": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_VCC_3V3_RISER2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 135) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr136": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V7_CPU1_DA_CORE_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 136) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr137": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_MEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 137) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr138": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_UC_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 138) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr139": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DA_UCMEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 139) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr140": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V7_CPU1_DB_CORE_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 140) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr141": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_MEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 141) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr142": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_UC_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 142) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr143": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU1_DB_UCMEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 143) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr144": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA_DDR",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 144) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr145": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DB_DDR",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 145) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr146": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DADB_PERI_STARS_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 146) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr147": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM02_DBHBM13_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 147) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr148": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 148) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr149": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA0B1_CORE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 149) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr150": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 150) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr151": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM13_DBHBM02_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 151) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr152": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 152) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr153": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 153) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr154": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_CORE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 154) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr155": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_MEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 155) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr156": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_UC_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 156) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr157": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DA_UCMEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 157) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr158": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V7_CPU2_DB_CORE_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 158) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr159": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_MEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 159) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr160": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_UC_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 160) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr161": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V75_CPU2_DB_UCMEM_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 161) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr162": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA_DDR",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 162) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr163": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DADB_PERI_STARS_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 163) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr164": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DB_DDR",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 164) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr165": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 165) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr166": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM02_DBHBM13_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 166) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr167": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA0B1_CORE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 167) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr168": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 168) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr169": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM13_DBHBM02_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 169) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr170": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 170) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr171": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 171) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr172": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_CORE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 172) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr173": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA1B0_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 173) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr174": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DADB_EFUSE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 174) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr175": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DADB_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 175) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr176": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA1B0_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 176) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr177": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DADB_EFUSE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 177) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr178": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DADB_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 178) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr179": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_3V3_CPU1_DA0B1_USB2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 179) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr180": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_3V3_CPU1_DA1B0_USB2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 180) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr181": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_3V3_CPU2_DA0B1_USB2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 181) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr182": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_3V3_CPU2_DA1B0_USB2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 182) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr183": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_CPU1_CA_DIMM_R",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 183) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr184": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_CPU1_CB_DIMM_R",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 184) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr185": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_CPU2_CA_DIMM_R",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 185) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr186": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_CPU2_CB_DIMM_R",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 186) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr187": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA_ACG",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 187) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr188": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA0B1_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 188) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr189": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 189) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr190": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DA1B0_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 190) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr191": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU1_DB_ACG",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 191) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr192": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA_ACG",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 192) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr193": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA0B1_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 193) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr194": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 194) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr195": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DA1B0_SIOE",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 195) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr196": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V8_CPU2_DB_ACG",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 196) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr197": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V9_CPU1_DA0B1_PAH32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 197) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr198": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V9_CPU1_DA1B0_PAH32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 198) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr199": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V9_CPU2_DA0B1_PAH32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 199) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr200": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V9_CPU2_DA1B0_PAH32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 200) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr201": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V1_CPU1_DA_DDRIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 201) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr202": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V1_CPU1_DB_DDRIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 202) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr203": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V1_CPU2_DA_DDRIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 203) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr204": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V1_CPU2_DB_DDRIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 204) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr205": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 205) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr206": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_SDS_VCO_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 206) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr207": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA0B1_USB_PLL_RCD_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 207) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr208": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 208) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr209": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_SDS_VCO_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 209) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr210": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DA1B0_USB_PLL_RCD_SIOE_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 210) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr211": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU1_DADB_PLL_RCD_SIOE_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 211) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr212": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 212) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr213": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_SDS_VCO_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 213) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr214": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA0B1_USB_PLL_RCD_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 214) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr215": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_SDS_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 215) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr216": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_SDS_VCO_H60_H32",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 216) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr217": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DA1B0_USB_PLL_RCD_SIOE_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 217) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr218": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V2_CPU2_DADB_PLL_RCD_SIOE_TS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 218) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr219": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA0B1_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 219) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr220": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DAHBM02_DBHBM13_PLL",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 220) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr221": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DAHBM13_DBHBM02_PLL",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 221) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr222": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA0B1_GPIO",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 222) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr223": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DAHBM02_DBHBM13_PLL",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 223) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr224": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DAHBM13_DBHBM02_PLL",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 224) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr225": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_2V5_CPU1_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 225) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr226": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_2V5_CPU1_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 226) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr227": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_2V5_CPU2_DAHBM02_DBHBM13",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 227) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr228": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_2V5_CPU2_DAHBM13_DBHBM02",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 228) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr229": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU1_DA_DB_HBM",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 229) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr230": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_1V8_CPU2_DA_DB_HBM",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 230) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr231": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_STBY_3V3_RISER_UBC15",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 231) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr232": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_STBY_3V3_RISER_UBC1",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 232) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr233": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_STBY_3V3_RISER_UBC2",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 233) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr234": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_STBY_3V3_RISER_UBC7",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 234) ? 1 : 0)"
+        },
+        "Event_BCUPwrFaultMntr235": {
+            "Component": "#/Component_ComSystem",
+            "DescArg2": "BCU${Slot}_V_0V7_CPU2_DA_CORE_DVFS",
+            "Enabled": true,
+            "OperatorId": 5,
+            "Reading": "<=/Scanner_BCUPwrFault.Value |> expr(($1 == 235) ? 1 : 0)"
+        }
+    }
+}

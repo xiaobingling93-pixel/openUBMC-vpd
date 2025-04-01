@@ -1,0 +1,104 @@
+{
+  "FormatVersion": "1.11",
+  "DataVersion": "1.11",
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2cMux_SMC"
+      ]
+    },
+    "I2cMux_SMC": {
+      "Chips": [
+        "Chip_Virtual_SSD"
+      ]
+    }
+  },
+  "Objects": {
+    "Component_PCIeCard": {
+      "FruId": 255,
+      "Name": "Disk${Slot}",
+      "Instance": "${Slot}",
+      "BoardId": 65535,
+      "Type": 2,
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "UniqueId": "N/A",
+      "Manufacturer": "",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "",
+      "GroupId": 1
+    },
+    "VirtualVPDConnect": {
+      "Slot": "${Slot}",
+      "RefVPDChip": "#/Chip_Virtual_SSD",
+      "RefConnector": "#/Connector_ComVPD"
+    },
+    "Chip_Virtual_SSD": {
+      "Address": 166,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "HealthStatus": 0
+    },
+    "Connector_ComVPD": {
+      "Bom": "14140224",
+      "Slot": "${Slot}",
+      "Position": 1,
+      "Presence": 0,
+      "Id": "PROTOCOL",
+      "AuxId": "255",
+      "Buses": [
+        "I2cMux_SMC"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "PCIeDevice_1": {
+      "DeviceName": "Disk${Slot}",
+      "DiagnosticFault": 0,
+      "PredictiveFault": 0,
+      "FunctionClass": 4,
+      "LinkSpeedReduced": 0,
+      "Position": "",
+      "Container": "${Container}",
+      "GroupPosition": "PCIeDevice_${GroupPosition}",
+      "DeviceType": "#/Component_PCIeCard.Type"
+    },
+    "Event_DiskLinkSpeed": {
+      "EventKeyId": "Disk.DiskLinkSpeedReduced",
+      "Condition": 1,
+      "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "${Slot}",
+      "Component": "#/Component_PCIeCard"
+    },
+    "Event_DiskUncorrectableErr": {
+      "EventKeyId": "Disk.DiskUncorrectableErr",
+      "Condition": 1,
+      "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_PCIeCard.Name",
+      "DescArg3": "NA",
+      "Component": "#/Component_PCIeCard"
+    },
+    "Event_DiskCEHardFailure": {
+      "EventKeyId": "Disk.DiskCEHardFailure",
+      "Condition": 1,
+      "Reading": "<=/PCIeDevice_1.PredictiveFault",
+      "OperatorId": 5,
+      "Enabled": true,
+      "AdditionalInfo": "2",
+      "DescArg2": "#/Component_PCIeCard.Name",
+      "Component": "#/Component_PCIeCard"
+    }
+  }
+}

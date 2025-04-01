@@ -1,0 +1,162 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "Component_OCPCard": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 83,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
+            "PartNumber": "",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "SerialNumber": ""
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "ThresholdSensor_OCPTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_OCPCard.Id",
+            "EntityInstance": "<=/Entity_OCPCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "OCP${Slot} Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_NIC_Lm75.Value |> expr(($1 & 3840 == 0) ? $1 : ($1 & 255))",
+            "ReadingStatus": "<=/Scanner_NIC_Lm75.Status"
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_OCPCard.Id",
+            "EntityInstance": "<=/Entity_OCPCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('OCP%s OP Temp', $1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr($1 > $2 ? $1 : $2)",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) ? 32768 : ($1 > $2 ? $1 : $2)) |> expr($1 > 255 ? 3 : 0)"
+        },
+        "Entity_OCPCard": {
+            "Id": 11,
+            "Instance": 101,
+            "Name": "Pcie Card",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_Port1LinkDown": {
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "<=/Component_OCPCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port2LinkDown": {
+            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "<=/Component_OCPCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OCPCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OverTemp": {
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
+            "Reading": "<=/ThresholdSensor_OCPTemp.Reading |> expr(($1 >= 128) ? ($1 - 256) : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OCPTemp.UpperNoncritical"
+        },
+        "Event_OpticalModule_OverTemp": {
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
+            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 40 : $1) |> expr($1 & 255)",
+            "@Default": {
+                "Condition": 75
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "#/Event_OpticalModule_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical"
+        }
+    }
+}

@@ -1,0 +1,305 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_TempChip"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_TempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_IBTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 65535,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_IBTemp"
+        },
+        "MidAvg_IBTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_OpticalModule_OverTemp": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": "<=/ThresholdSensor_OpticalModuleTemp.UpperNoncritical"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (MCX653105A-HDAT)",
+            "FunctionClass": 10,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "MCX653105A-HDAT",
+            "BoardName": "MCX653105A-HDAT",
+            "Description": "MT28908 Family [ConnectX-6]",
+            "FunctionClass": 10,
+            "VendorID": 5555,
+            "DeviceID": 4123,
+            "SubVendorID": 5555,
+            "SubDeviceID": 7,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Mellanox Technologies",
+            "PartNumber": "06310158",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "CX6-DX",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbVersion": "N/A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": ""
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "MCX653105A-HDAT",
+            "Manufacturer": "Mellanox Technologies",
+            "Description": "1*200GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "CX6-DX",
+            "ModelDescription": "1*200GE",
+            "ChipVendor": "Mellanox",
+            "ChipManufacturer": "Mellanox",
+            "NetworkPortCount": 1,
+            "BoardName": "N/A",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x101b",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0007",
+            "ComponentUniqueID": "N/A",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "FruId": 255,
+            "SupportedMctp": false,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "BandwidthThresholdPercent": 100,
+            "ParentCardSlotId": 255,
+            "Health": "<=/Component_PCIeCard.Health"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "N/A",
+            "Name": "N/A",
+            "Manufacturer": "Mellanox",
+            "Type": "PCIeCard",
+            "Description": "1*200GE",
+            "PartNumber": "N/A",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 85,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+            "NodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Component_PCIeCard.FruId",
+            "PcbVersion": "<=/PCIeCard_1.PcbVersion"
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 32,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200G"
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "MCX653105A-HDAT网卡调速",
+            "MonitoringStatus": "<=/Scanner_IBTemp.Status",
+            "MonitoringValue": "<=/Scanner_IBTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 == 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_150": {
+            "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
+            "Description": "MCX653105A-HDAT网卡芯片调速（光模块异常）",
+            "MonitoringStatus": "<=/Scanner_IBTemp.Status",
+            "MonitoringValue": "<=/Scanner_IBTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "ActiveInStandby": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "Description": "MCX653105A-HDAT网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255 || $1 == 0) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius",
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        }
+    }
+}

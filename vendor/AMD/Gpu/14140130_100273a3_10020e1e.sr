@@ -1,0 +1,141 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        }
+    },
+    "Objects": {
+        "GPU_1": {
+            "SystemId": 1,
+            "Id": 1,
+            "Name": "Radeon Pro W6800",
+            "Presence": 1,
+            "Manufacturer": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "Model": "Radeon Pro W6800",
+            "SN": "",
+            "SocketDesignation": "1",
+            "Position": "PCIe Riser${Slot}",
+            "ProcessorType": "2",
+            "Health": "#/Component_PCIeCard.Health",
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "VendorID": 4098,
+            "DeviceID": 29603,
+            "SubVendorID": 4098,
+            "SubDeviceID": 3614,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "#/PCIeCard_1.SerialNumber",
+            "CardFirmwareVersion": "#/PCIeCard_1.FirmwareVersion",
+            "CardPartNumber": "06320204"
+        },
+        "Entity_GPUCard": {
+            "Id": 11,
+            "Name": "GPUCard",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 101
+        },
+        "ThresholdSensor_GpuPower": {
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('GPU%s Power',$1)",
+            "Unit": 0,
+            "BaseUnit": 6,
+            "NominalReading": 0,
+			"MaximumReading": 255,
+			"AssertMask": 0,
+			"DeassertMask": 0,
+			"ReadingMask": 0,
+			"M": 12,
+			"RBExp": 240,
+			"Analog": 1,
+            "Reading": "<=/GPU_1.PowerWatts |> expr($1 // 12)",
+            "ReadingStatus": "<=/GPU_1.PowerWatts |> expr(($1 == 0) ? 2 : 0)",
+            "SensorNumber": 255
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (Radeon Pro W6800)",
+            "FunctionClass": 3,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "BandwidthReduction": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "LinkSpeedReduced": 0,
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "Radeon Pro W6800",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Description": "Ellesmere [Radeon Pro W 6800]",
+            "FunctionClass": 3,
+            "VendorID": 4098,
+            "DeviceID": 29603,
+            "SubVendorID": 4098,
+            "SubDeviceID": 3614,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "Manufacturer": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "PartNumber": "06320204",
+            "PcbVersion": "N/A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "N/A",
+            "Manufacturer": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "Type": "PCIeCard",
+            "Description": "Ellesmere [Radeon Pro W 6800]",
+            "PartNumber": "06320204",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": 255
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        }
+    }
+}

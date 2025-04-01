@@ -1,0 +1,1061 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_8",
+                "I2c_2"
+            ]
+        },
+        "I2c_8": {
+            "Chips": [
+                "Lm75_InletTemp",
+                "Eeprom_1"
+            ]
+        }
+    },
+    "Objects": {
+        "Lm75_InletTemp": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 144,
+            "WriteTmout": 0,
+            "ReadTmout": 0,
+            "HealthStatus": 0
+        },
+        "DftLm75_1": {
+            "Id": 1,
+            "Type": 1,
+            "DeviceNum": 0,
+            "ItemName": "LM75 For Inlet Temp",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "RefChip": "#/Lm75_InletTemp"
+        },
+        "Contact_1": {
+            "OfficalWeb": "",
+            "DefaultOfficalWeb": "",
+            "SupportWeb": "",
+            "Email": "",
+            "Phone": "",
+            "Copyright": "Huawei Technologies Co., Ltd. 2022-2025. All rights reserved.",
+            "DefaultCopyright": "Huawei Technologies Co., Ltd. 2022-2025. All rights reserved.",
+            "KVMClientDownloadLink": "",
+            "QRCodeSupported": true
+        },
+        "UnitConfiguration_IEU1": {
+            "SlotType": "IEU",
+            "SlotNumber": 1,
+            "SlotSilkText": "IEUSlot1",
+            "Configurations": [
+                {
+                    "UID": "00000001040302023940",
+                    "Index": 1,
+                    "SrcPortName": [
+                        "A3a",
+                        "A3c"
+                    ],
+                    "TargetPortID": [
+                        49,
+                        50
+                    ],
+                    "Slot": [
+                        2,
+                        3
+                    ],
+                    "Device": []
+                },
+                {
+                    "UID": "00000001040302023945",
+                    "Index": 1,
+                    "SrcPortName": [
+                        "A3a",
+                        "A3c"
+                    ],
+                    "TargetPortID": [
+                        17,
+                        18
+                    ],
+                    "Slot": [
+                        3
+                    ],
+                    "Device": []
+                }
+            ],
+            "Port1LinkInfo": ""
+        },
+        "UnitConfiguration_IEU2": {
+            "SlotType": "IEU",
+            "SlotNumber": 2,
+            "SlotSilkText": "IEUSlot2",
+            "Configurations": [
+                {
+                    "UID": "00000001040302023940",
+                    "Index": 2,
+                    "SrcPortName": [
+                        "B2a",
+                        "B2c"
+                    ],
+                    "TargetPortID": [
+                        49,
+                        50
+                    ],
+                    "Slot": [
+                        5,
+                        6
+                    ],
+                    "Device": []
+                },
+                {
+                    "UID": "00000001040302023945",
+                    "Index": 2,
+                    "SrcPortName": [
+                        "B2a",
+                        "B2c"
+                    ],
+                    "TargetPortID": [
+                        17,
+                        18
+                    ],
+                    "Slot": [
+                        6
+                    ],
+                    "Device": []
+                }
+            ],
+            "Port1LinkInfo": ""
+        },
+        "UnitConfiguration_IEU3": {
+            "SlotType": "IEU",
+            "SlotNumber": 3,
+            "SlotSilkText": "IEUSlot3",
+            "Configurations": [
+                {
+                    "UID": "00000001040302023947",
+                    "Index": 0,
+                    "SrcPortName": [
+                        "B4c",
+                        "B4a"
+                    ],
+                    "TargetPortID": [
+                        17,
+                        49
+                    ],
+                    "Slot": [
+                        7,
+                        8
+                    ],
+                    "Device": [
+                        8,
+                        12
+                    ]
+                }
+            ],
+            "Port1LinkInfo": ""
+        },
+        "UnitConfiguration_FlexIO1_1": {
+          "SlotType": "FlexIO",
+          "SlotNumber": 1,
+          "SlotSilkText": "FlexIO1",
+          "Configurations": [
+              {
+                  "UID": "00000001010302023922",
+                  "Index": 1,
+                  "SrcPortName": ["A1a"],
+                  "TargetPortID": [17],
+                  "Slot": [],
+                  "Device": []
+              }
+          ],
+          "Port1LinkInfo": ""
+      },
+      "UnitConfiguration_FlexIO1_2": {
+          "SlotType": "FlexIO",
+          "SlotNumber": 1,
+          "SlotSilkText": "FlexIO1",
+          "Configurations": [
+              {
+                  "UID": "00000001010302023922",
+                  "Index": 1,
+                  "SrcPortName": ["A4a"],
+                  "TargetPortID": [18],
+                  "Slot": [],
+                  "Device": []
+              }
+          ],
+          "Port1LinkInfo": ""
+      },
+      "UnitConfiguration_FlexIO2_1": {
+          "SlotType": "FlexIO",
+          "SlotNumber": 2,
+          "SlotSilkText": "FlexIO2",
+          "Configurations": [
+              {
+                  "UID": "00000001010302023922",
+                  "Index": 2,
+                  "SrcPortName": ["B1a"],
+                  "TargetPortID": [33],
+                  "Slot": [],
+                  "Device": []
+              }
+          ],
+          "Port1LinkInfo": ""
+      },
+      "UnitConfiguration_FlexIO2_2": {
+          "SlotType": "FlexIO",
+          "SlotNumber": 2,
+          "SlotSilkText": "FlexIO2",
+          "Configurations": [
+              {
+                  "UID": "00000001010302023922",
+                  "Index": 2,
+                  "SrcPortName": ["B3a"],
+                  "TargetPortID": [34],
+                  "Slot": [],
+                  "Device": []
+              }
+          ],
+          "Port1LinkInfo": ""
+      },
+        "BoardSlotConfig_1": {
+            "UID": "00000001030302023934",
+            "SlotConfigs": [
+                {
+                    "SelfSlot": 1,
+                    "ChildSlotType": "SEU",
+                    "ChildSlotIndex": [
+                        1,
+                        2
+                    ],
+                    "ChildSlotNumber": [
+                        2,
+                        3
+                    ],
+                    "ChildSlotSilkText": [
+                        "Rear",
+                        "Rear"
+                    ]
+                }
+            ]
+        },
+        "BoardSlotConfig_2": {
+            "UID": "00000001010302023922",
+            "SlotConfigs": [
+                {
+                    "SelfSlot": 1,
+                    "ChildSlotType": "SEU",
+                    "ChildSlotIndex": [
+                        1,
+                        5
+                    ],
+                    "ChildSlotNumber": [
+                        1,
+                        5
+                    ],
+                    "ChildSlotSilkText": [
+                        "Front",
+                        "Rear"
+                    ]
+                }
+            ]
+        },
+        "Eeprom_1": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 174,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "SRUpgrade_1": {
+            "UID": "00000001040302023953",
+            "Type": "PSR",
+            "Version": "${DataVersion}",
+            "StorageChip": "#/Eeprom_1"
+        },
+        "Fru_MotherBoard": {
+            "PcbId": 1,
+            "FruId": 0,
+            "FruName": "BMC",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535,
+            "UniqueId": "N/A"
+        },
+        "Fru_BMCCard": {
+            "PcbId": 0,
+            "FruId": 80,
+            "FruName": "BMCCard",
+            "ConnectorGroupId": 240,
+            "BoardId": 65535,
+            "UniqueId": ""
+        },
+        "ChassisBMC_1": {
+            "NodeId": "chassisBMC",
+            "Description": "BMC",
+            "Number": 0,
+            "DeviceName": "BMC",
+            "Type": "BMC",
+            "Position": "chassis",
+            "Manufacturer": "<=/FruData_Fru0.BoardManufacturer",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+            "LogicUnit": 0,
+            "PcbVersion": "<=/Fru_MotherBoard.PcbVersion",
+            "Name": "<=/FruData_Fru0.BoardProductName",
+            "BoardID": "<=/Fru_MotherBoard.BoardId",
+            "FruID": "<=/Fru_MotherBoard.FruId",
+            "BoardType": "BMC",
+            "UID": "00000001040302023953"
+        },
+        "Product_1": {
+            "ProductName": "S920X20",
+            "ProductAlias": "VF",
+            "DefaultProductAlias": "VF",
+            "ProductPicture": "img_01",
+            "ProductUniqueID": "0x0207be00",
+            "ProductVendorID": "0xffffffff",
+            "ProductId": 0,
+            "ProductVersion": "V6",
+            "DeviceOwnerId": "<=/FruData_Fru0.ProductSerialNumber",
+            "DeviceSerialNumber": "<=/FruData_Fru0.SystemSerialNumber",
+            "DeviceName": "<=/FruData_Fru0.SystemProductName"
+        },
+        "EnergyMetric_1": {
+            "SystemPower": 0,
+            "SystemOutputPower": 0,
+            "HighPowerThresholdWatts": 65535
+        },
+        "PowerStrategy_1": {
+            "PowerWorkingMode": "LoadBalancing",
+            "PowerLimitValue": 9999,
+            "PowerLimitEnabled": false,
+            "PowerLimitFailed": false,
+            "PSUsOutputVoltageLow": false,
+            "RedundancyFailure": false,
+            "PowerLimitActivated": false,
+            "PowerCappingSupported": true,
+            "PowerLimitExceptionSupported": true,
+            "DeepSleepSupported": true,
+            "ActiveStandbySupported": true,
+            "NormalAndRedundancySupported": false
+        },
+        "Event_SystemPowerCapTriggered": {
+            "EventKeyId": "System.SystemPowerCapTriggered",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "Event_SystemPowerCapFailure": {
+            "EventKeyId": "System.SystemPowerCapFailure",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "Event_SystemPowerHigh": {
+            "EventKeyId": "System.SystemPowerHigh",
+            "Condition": "<=/EnergyMetric_1.HighPowerThresholdWatts",
+            "Hysteresis": 30
+        },
+        "Event_NormalAndRedundancyVoltageError": {
+            "EventKeyId": "PSU.NormalAndRedundancyVoltageError",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "Event_PSURedundancyLost": {
+            "EventKeyId": "PSU.PSURedundancyLost",
+            "Condition": 1,
+            "Hysteresis": 0,
+            "LedFaultCode": "P$$"
+        },
+        "Event_PSUsOutputCurrentImbalance": {
+            "EventKeyId": "System.PSUsOutputCurrentImbalance",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "DiscreteSensor_PwrCapStatus": {
+            "AssertMask": 3,
+            "DeassertMask": 3,
+            "DiscreteMask": 3
+        },
+        "ThresholdSensor_SysTotalPower": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 3
+        },
+        "CoolingConfig_1": {
+            "SmartCoolingState": "Enabled",
+            "SmartCoolingMode": "EnergySaving",
+            "LevelPercentRange": [
+                10,
+                100
+            ],
+            "InitLevelInStartup": 100,
+            "DiskRowTemperatureAvailable": false,
+            "SysHDDsMaxTemperature": 0,
+            "SysSSDsMaxTemperature": 0
+        },
+        "CoolingPolicy_1_6": {
+            "PolicyIdx": 6,
+            "ExpCondVal": "EnergySaving",
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "TemperatureRangeHigh": [
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                127
+            ],
+            "SpeedRangeLow": [
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                37,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100,
+                100
+            ],
+            "SpeedRangeHigh": [
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                37,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100,
+                100
+            ]
+        },
+        "CoolingPolicy_1_7": {
+            "PolicyIdx": 7,
+            "ExpCondVal": "HighPerformance",
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "TemperatureRangeHigh": [
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                127
+            ],
+            "SpeedRangeLow": [
+                30,
+                30,
+                31,
+                31,
+                32,
+                32,
+                33,
+                34,
+                35,
+                37,
+                39,
+                42,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100,
+                100,
+                100
+            ],
+            "SpeedRangeHigh": [
+                30,
+                30,
+                31,
+                31,
+                32,
+                32,
+                33,
+                34,
+                35,
+                37,
+                39,
+                42,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100,
+                100,
+                100
+            ]
+        },
+        "CoolingPolicy_1_8": {
+            "PolicyIdx": 8,
+            "ExpCondVal": "LowNoise",
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "TemperatureRangeHigh": [
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                127
+            ],
+            "SpeedRangeLow": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                30,
+                30,
+                31,
+                31,
+                31,
+                32,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100
+            ],
+            "SpeedRangeHigh": [
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                30,
+                30,
+                31,
+                31,
+                31,
+                32,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60,
+                65,
+                70,
+                75,
+                80,
+                85,
+                90,
+                95,
+                100,
+                100
+            ]
+        },
+        "CoolingPolicy_1_9": {
+            "PolicyIdx": 9,
+            "PolicyType": 1,
+            "CustomSupported": true,
+            "ExpCondVal": "Custom",
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                20,
+                30,
+                40
+            ],
+            "TemperatureRangeHigh": [
+                20,
+                30,
+                40,
+                127
+            ],
+            "SpeedRangeLow": [
+                20,
+                32,
+                70,
+                100
+            ],
+            "SpeedRangeHigh": [
+                20,
+                32,
+                70,
+                100
+            ],
+            "FanSpeedRangePercents": [
+                20,
+                100
+            ]
+        },
+        "CoolingPolicy_1_10": {
+            "PolicyIdx": 10,
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                25,
+                30,
+                35,
+                40
+            ],
+            "TemperatureRangeHigh": [
+                25,
+                30,
+                35,
+                40,
+                127
+            ],
+            "SpeedRangeLow": [
+                35,
+                35,
+                50,
+                70,
+                100
+            ],
+            "SpeedRangeHigh": [
+                35,
+                35,
+                50,
+                70,
+                100
+            ],
+            "FanSpeedRangePercents": [
+                20,
+                100
+            ],
+            "HDDBackPlaneName": [
+                "BC83HBBA"
+            ]
+        },
+        "CoolingPolicy_1_11": {
+            "PolicyIdx": 11,
+            "ActualCondVal": "<=/CoolingConfig_1.SmartCoolingMode",
+            "Hysteresis": 1,
+            "TemperatureRangeLow": [
+                -127,
+                25,
+                30,
+                35,
+                40
+            ],
+            "TemperatureRangeHigh": [
+                25,
+                30,
+                35,
+                40,
+                127
+            ],
+            "SpeedRangeLow": [
+                35,
+                35,
+                50,
+                70,
+                100
+            ],
+            "SpeedRangeHigh": [
+                35,
+                35,
+                50,
+                70,
+                100
+            ],
+            "FanSpeedRangePercents": [
+                20,
+                100
+            ],
+            "PCIeCardName": [
+                "SP580"
+            ]
+        },
+        "CoolingArea_1_6": {
+            "AreaId": 6,
+            "RequirementIdx": 6,
+            "PolicyIdxGroup": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_7": {
+            "AreaId": 7,
+            "RequirementIdx": 7,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_10": {
+            "AreaId": 10,
+            "RequirementIdx": 10,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_24": {
+            "AreaId": 24,
+            "RequirementIdx": 24,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_25": {
+            "AreaId": 25,
+            "RequirementIdx": 25,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_50": {
+            "AreaId": 50,
+            "RequirementIdx": 50,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_58": {
+            "AreaId": 58,
+            "RequirementIdx": 58,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_40": {
+            "RequirementId": "${Slot} |> expr((40 << 8) | $1)",
+            "Description": "HDD SMART目标调速配置",
+            "MonitoringStatus": "<=/CoolingConfig_1.SysHDDsMaxTemperature |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/CoolingConfig_1.SysHDDsMaxTemperature",
+            "FailedValue": 0,
+            "TargetTemperatureCelsius": 52,
+            "MaxAllowedTemperatureCelsius": 60,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_DisksTemp.SensorName"
+        },
+        "CoolingArea_1_40": {
+            "AreaId": 40,
+            "RequirementIdx": 40,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_41": {
+            "RequirementId": "${Slot} |> expr((41 << 8) | $1)",
+            "Description": "SSD SMART目标调速配置",
+            "MonitoringStatus": "<=/CoolingConfig_1.SysSSDsMaxTemperature |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/CoolingConfig_1.SysSSDsMaxTemperature",
+            "FailedValue": 0,
+            "TargetTemperatureCelsius": 62,
+            "MaxAllowedTemperatureCelsius": 67,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "SSD MAX Temp"
+        },
+        "CoolingArea_1_41": {
+            "AreaId": 41,
+            "RequirementIdx": 41,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_42": {
+            "RequirementId": "${Slot} |> expr((42 << 8) | $1)",
+            "Description": "M.2 目标调速配置",
+            "MonitoringStatus": 0,
+            "MonitoringValue": 10,
+            "FailedValue": 0,
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 68,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingArea_1_42": {
+            "AreaId": 42,
+            "RequirementIdx": 42,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_48": {
+            "AreaId": 48,
+            "RequirementIdx": 48,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "ThresholdSensor_DisksTemp": {
+            "M": 1
+        }
+    }
+}

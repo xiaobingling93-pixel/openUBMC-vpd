@@ -1,0 +1,393 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "SEU",
+        "Name": "HddBackplane_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_5"
+            ]
+        },
+        "I2c_5": {
+            "Chips": [
+                "Smc_EnclSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_EnclSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Scanner_Drive0PresentAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545613 : 335545615)",
+            "Size": 2,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive0LocateAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545613 : 335545615)",
+            "Size": 2,
+            "Mask": 3072,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive0FalutAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545613 : 335545615)",
+            "Size": 2,
+            "Mask": 768,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive0ActivationAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545613 : 335545615)",
+            "Size": 2,
+            "Mask": 12288,
+            "Type": 0,
+            "Period": 5000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Drive_1": {
+            "Id": "${Slot} |> expr($1 == 3 ? 40 : 42)",
+            "Name": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('Disk%s',$1)",
+            "PhysicalLocation": "HDD Plane",
+            "NodeId": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('HDDPlaneDisk%s',$1)",
+            "Presence": "<=/Scanner_Drive0PresentAccessor.Value",
+            "LocateLed": "<=/Scanner_Drive0LocateAccessor.Value",
+            "FaultLed": "<=/Scanner_Drive0FalutAccessor.Value",
+            "ActivationLed": "<=/Scanner_Drive0ActivationAccessor.Value",
+            "TemperatureCelsius": 255,
+            "Missing": 0,
+            "Health": "<=/Component_Drive0.Health",
+            "RebuildState": 0,
+            "FirmwareStatus": 255,
+            "PredictiveFailure": 0,
+            "InAFailedArray": 0,
+            "FirmwareStatusError": false,
+            "SerialNumber": "",
+            "RelativeSlot": 0,
+            "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+            "IODeteriorationHealthCode": 0
+        },
+        "DiscreteSensor_Disk0": {
+            "AssertMask": 199,
+            "DeassertMask": 199,
+            "DiscreteMask": 199
+        },
+        "Scanner_Drive1PresentAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545614 : 335545616)",
+            "Size": 2,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive1LocateAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545614 : 335545616)",
+            "Size": 2,
+            "Mask": 3072,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive1FalutAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545614 : 335545616)",
+            "Size": 2,
+            "Mask": 768,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Drive1ActivationAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": "${Slot} |> expr($1 == 3 ? 335545614 : 335545616)",
+            "Size": 2,
+            "Mask": 12288,
+            "Type": 0,
+            "Period": 5000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Drive_2": {
+            "Id": "${Slot} |> expr($1 == 3 ? 41 : 43)",
+            "Name": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('Disk%s',$1)",
+            "PhysicalLocation": "HDD Plane",
+            "NodeId": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('HDDPlaneDisk%s',$1)",
+            "Presence": "<=/Scanner_Drive1PresentAccessor.Value",
+            "LocateLed": "<=/Scanner_Drive1LocateAccessor.Value",
+            "FaultLed": "<=/Scanner_Drive1FalutAccessor.Value",
+            "ActivationLed": "<=/Scanner_Drive1ActivationAccessor.Value",
+            "TemperatureCelsius": 255,
+            "Missing": 0,
+            "Health": "<=/Component_Drive1.Health",
+            "RebuildState": 0,
+            "FirmwareStatus": 255,
+            "PredictiveFailure": 0,
+            "InAFailedArray": 0,
+            "FirmwareStatusError": false,
+            "SerialNumber": "",
+            "RelativeSlot": 1,
+            "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+            "IODeteriorationHealthCode": 0
+        },
+        "DiscreteSensor_Disk1": {
+            "AssertMask": 199,
+            "DeassertMask": 199,
+            "DiscreteMask": 199
+        },
+        "PcieAddrInfo_SAS_1": {
+            "Location": "HddBackplane${Slot}",
+            "ComponentType": 71,
+            "ControllerIndex": 0,
+            "ControllerType": 2,
+            "ContainerSlot": "${Slot}",
+            "GroupPosition": "PcieAddrInfo_SAS_1_${GroupPosition}",
+            "ContainerUID": "00000001030302023928",
+            "ContainerUnitType": "SEU SAS",
+            "SocketID": 1,
+            "SlotID": "${Slot} |> expr($1 == 3 ? 40 : 42)",
+            "PortID": "${Slot} |> expr($1 == 3 ? 14 : 12)",
+            "Bus": 50,
+            "Device": 4,
+            "Function": 0
+        },
+        "PcieAddrInfo_SAS_2": {
+            "Location": "HddBackplane${Slot}",
+            "ComponentType": 71,
+            "ControllerIndex": 0,
+            "ControllerType": 2,
+            "ContainerSlot": "${Slot}",
+            "GroupPosition": "PcieAddrInfo_SAS_2_${GroupPosition}",
+            "ContainerUID": "00000001030302023928",
+            "ContainerUnitType": "SEU SAS",
+            "SocketID": 1,
+            "SlotID": "${Slot} |> expr($1 == 3 ? 41 : 43)",
+            "PortID": "${Slot} |> expr($1 == 3 ? 15 : 13)",
+            "Bus": 50,
+            "Device": 4,
+            "Function": 0
+        },
+        "Event_Disk0Missing": {
+            "EventKeyId": "Disk.DiskMissing",
+            "Condition": 2
+        },
+        "Event_Disk1Missing": {
+            "EventKeyId": "Disk.DiskMissing",
+            "Condition": 2
+        },
+        "Event_Hdd1Insert": {
+            "EventKeyId": "Hdd.DiskInstalled",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Hdd2Insert": {
+            "EventKeyId": "Hdd.DiskInstalled",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Hdd1Removed": {
+            "EventKeyId": "Hdd.DiskRemoved",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 0
+        },
+        "Event_Hdd2Removed": {
+            "EventKeyId": "Hdd.DiskRemoved",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 0
+        },
+        "Event_Disk1LocatErr": {
+            "EventKeyId": "Disk.DiskLocateError",
+            "Condition": 1
+        },
+        "Event_Disk2LocatErr": {
+            "EventKeyId": "Disk.DiskLocateError",
+            "Condition": 1
+        },
+        "Event_Hdd1FailedArray": {
+            "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Hdd2FailedArray": {
+            "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Hdd1PredicFail": {
+            "EventKeyId": "Disk.DiskPredictiveFailure",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Hdd2PredicFail": {
+            "EventKeyId": "Disk.DiskPredictiveFailure",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Disk1Foreign": {
+            "EventKeyId": "Disk.DiskStateForeign",
+            "Condition": 12
+        },
+        "Event_Disk2Foreign": {
+            "EventKeyId": "Disk.DiskStateForeign",
+            "Condition": 12
+        },
+        "Event_Hdd1MdWroutLow": {
+            "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+            "Condition": 5
+        },
+        "Event_Hdd2MdWroutLow": {
+            "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+            "Condition": 5
+        },
+        "Event_Drive1RebuildStart": {
+            "EventKeyId": "Disk.DiskRAIDRebuildStart",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Drive1RebuildEnd": {
+            "EventKeyId": "Disk.DiskRAIDRebuildStop",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 0
+        },
+        "Event_Drive2RebuildStart": {
+            "EventKeyId": "Disk.DiskRAIDRebuildStart",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Drive2RebuildEnd": {
+            "EventKeyId": "Disk.DiskRAIDRebuildStop",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 0
+        },
+        "Event_Disk1StatErr": {
+            "EventKeyId": "Disk.DiskStateAbnormal",
+            "Condition": 1
+        },
+        "Event_Disk2StatErr": {
+            "EventKeyId": "Disk.DiskStateAbnormal",
+            "Condition": 1
+        },
+        "Event_Disk1Fail": {
+            "EventKeyId": "Disk.DiskFault",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Disk2Fail": {
+            "EventKeyId": "Disk.DiskFault",
+            "LedFaultCode": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('H%s',$1)",
+            "Condition": 1
+        },
+        "Event_Disk1ReplaceMntr": {
+            "EventKeyId": "Disk.DiskReplaced",
+            "Condition": 1
+        },
+        "Event_Disk2ReplaceMntr": {
+            "EventKeyId": "Disk.DiskReplaced",
+            "Condition": 1
+        },
+        "MidAvg_HddBpTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "Scanner_HddBPTemp_1": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": 4356,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_HddBpTemp",
+            "Status": 0,
+            "Value": 0
+        },
+        "Scanner_HddBPTemp_2": {
+            "Chip": "#/Smc_EnclSMC",
+            "Offset": 4358,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_HddBpTemp",
+            "Status": 0,
+            "Value": 0
+        },
+        "ThresholdSensor_HddBpTemp": {
+            "M": 100,
+            "RBExp": 224
+        },
+        "CoolingRequirement_1_63": {
+            "RequirementId": "${Slot} |> expr((63 << 8) | $1)",
+            "MonitoringStatus": "<=/ThresholdSensor_HddBpTemp.Reading |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/ThresholdSensor_HddBpTemp.Reading",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 42,
+            "MaxAllowedTemperatureCelsius": 58,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "Enabled": "<=/Drive_1.TemperatureCelsius;<=/Drive_2.TemperatureCelsius |> expr($1 + $2 >= 510 ? 1 : 0)",
+            "SensorName": "#/ThresholdSensor_HddBpTemp.SensorName"
+        },
+        "Event_HddBkpReplaceMntr": {
+            "EventKeyId": "Hdd.HddBackplaneReplace",
+            "Condition": 1
+        },
+        "Event_HardDisk1IOPerformanceDeterioration": {
+            "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+            "Condition": 1
+        },
+        "Event_HardDisk2IOPerformanceDeterioration": {
+            "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+            "Condition": 1
+        },
+        "HddBackplane_1": {
+            "Slot": 1,
+            "UID": "00000001030302023928",
+            "Name": "BC83HBBF",
+            "Manufacturer": "Huawei",
+            "Type": "SEU",
+            "Description": "2*3.5 SAS/SATA, Rear",
+            "PartNumber": "0302023928",
+            "LogicVersion": "N/A",
+            "LogicUnit": 0,
+            "PcbVersion": "",
+            "BoardID": 65535,
+            "BoardType": "HddBackplane",
+            "Number": 1,
+            "DeviceName": "DiskBP${Slot}",
+            "Position": "SEU${Slot}Rear",
+            "NodeId": "SEU${Slot}DiskBP${Slot}",
+            "RefSMCChip": "#/Smc_EnclSMC",
+            "FruID": 0,
+            "Container": "${Container}",
+            "SerialNumber": "",
+            "RefComponent": "#/Component_HddBackplane",
+            "StartSlot": "${Slot} |> expr($1 == 3 ? 40 : 42)"
+        }
+    }
+}

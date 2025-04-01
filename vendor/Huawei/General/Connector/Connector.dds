@@ -1,0 +1,8 @@
+{
+  "Schema": "dds-v1",
+  "Type": "Chip",
+  "Path": ":Parent/Connector/:Id",
+  "Interfaces": [
+    "bmc.dev.Connector"
+  ]
+}

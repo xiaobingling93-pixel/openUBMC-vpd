@@ -1,0 +1,38 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.05",
+  "Unit": {
+    "Type": "SEU",
+    "Name": "M2TransferCard_1"
+  },
+  "Objects": {
+    "Event_PCA9555ReadFail": {
+      "EventKeyId": "BMC.BMCAccessI2CDeviceFailure",
+      "Condition": 1
+    },
+    "Event_LM75ReadFail": {
+      "EventKeyId": "BMC.BMCAccessI2CDeviceFailure",
+      "Condition": 1
+    },
+    "Event_MCUSelfTestFail": {
+      "EventKeyId": "M2TransferCard.M2TransferCardMCUSelfTestAbnormal",
+      "Condition": 1
+    },
+    "Event_Hdd1MdWroutLow": {
+        "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+        "Condition": 5
+    },
+    "Event_Hdd2MdWroutLow": {
+        "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+        "Condition": 5
+    },
+    "Event_HardDisk1EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk2EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    }
+  }
+}

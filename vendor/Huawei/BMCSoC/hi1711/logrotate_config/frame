@@ -1,0 +1,1120 @@
+/var/log/frame_debug_log{
+	su root root
+	size = 1024k
+	nocompress
+	copytruncate
+	rotate 5
+	prerotate
+		/etc/prerotate.sh "$1"
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/frame_debug_log.* 2> /dev/null || true
+	endscript
+}
+/var/log/security_log{
+	su root root
+	size = 1024k
+	nocompress
+	copytruncate
+	rotate 5
+	prerotate
+		/etc/prerotate.sh "$1"
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0440 /var/log/security_log.* 2> /dev/null || true
+	endscript
+}
+/var/log/linux_kernel_log{
+	su root root
+	size = 1024k
+	nocompress
+	copytruncate
+	rotate 5
+	prerotate
+		/etc/prerotate.sh "$1"
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/linux_kernel_log.* 2> /dev/null || true
+	endscript
+}
+/var/log/remote_log{
+	size = 200k
+	compress
+	copytruncate
+	rotate 1
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/remote_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/remote_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/app.log{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 9
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/app.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/app.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/app_debug_log_all{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 9
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/app_debug_log_all.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/app_debug_log_all.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/fdm_output{
+	size = 200k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/fdm_output.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/fdm_output.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/running_log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/running_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/running_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/bma_debug_log{
+	size = 200k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/bma_debug_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/bma_debug_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/operate_log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/operate_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/operate_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/mass_operate_log{
+	size = 200k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mass_operate_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mass_operate_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/maintenance_log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/maintenance_log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/maintenance_log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/ps_black_box.log{
+	size = 30k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/ps_black_box.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/ps_black_box.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework.log{
+	size = 2048K
+	compress
+	copytruncate
+	rotate 9
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/bmc_core.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/bmc_core.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/bmc_core.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/framework.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/framework.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/framework.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/hica.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/hica.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/hica.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/om.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/om.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/om.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/ras.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/ras.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/ras.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/energy.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/energy.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/energy.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/hardware.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/hardware.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/hardware.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/interface.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/interface.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/interface.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/security.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/security.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/security.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/iam.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/iam.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/iam.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/key_mgmt.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/key_mgmt.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/key_mgmt.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/hwproxy.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/hwproxy.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/hwproxy.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/persistence.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/persistence.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/persistence.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/manufacture.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/manufacture.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/manufacture.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/rmcpd.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/rmcpd.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/rmcpd.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/remote_console.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/remote_console.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/remote_console.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/framework/event.log{
+	size = 512K
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/framework/event.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/framework/event.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/security.log{
+	su root root
+	size = 1024k
+	nocompress
+	copytruncate
+	rotate 5
+	prerotate
+		/etc/prerotate.sh "$1"
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0440 /var/log/security.log.* 2> /dev/null || true
+	endscript
+}
+/var/log/running.log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/running.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/running.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/operation.log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/operation.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/operation.log.*.gz 2> /dev/null || true
+	endscript
+}
+/var/log/maintenance.log{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/maintenance.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/maintenance.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/cpumem_usage_info_dump.csv{
+	size = 3584k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/cpumem_usage_info_dump.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/cpumem_usage_info_dump.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/bmc_health.log{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 9
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/bmc_health.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/bmc_health.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SDI5.0/error_log_SDIV5.0.bin{
+        su root root
+        size = 512k
+        compress
+        copytruncate
+        rotate 1
+        sharedscripts
+        prerotate
+                if [ `stat -c %s $1` -gt 104857600 ]; then
+                    cat /dev/null > $1
+                    echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+                else
+                    rm -f /var/log/pciecard/*_SDI5.0/error_log_SDIV5.0.bin.1
+                fi 2> /dev/null || true
+        endscript
+}
+
+/var/log/LSI_RAID_Controller_Log{
+	size = 1000k
+	compress
+	copytruncate
+	rotate 2
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/LSI_RAID_Controller_Log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/LSI_RAID_Controller_Log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/cooling_control.log{
+	size = 512k
+	compress
+	copytruncate
+	rotate 4
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/cooling_control.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/cooling_control.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/dev/shm/log/net_stream.log{
+	size = 1000k
+	compress
+	copytruncate
+	rotate 2
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /dev/shm/log/net_stream.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /dev/shm/log/net_stream.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SDIV6.0/error_log_SDIV6.0.bin{
+        su root root
+        size = 512k
+        compress
+        copytruncate
+        rotate 1
+        sharedscripts                                    
+        prerotate
+                if [ `stat -c %s $1` -gt 104857600 ]; then
+                    cat /dev/null > $1
+                    echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+                else
+                    rm -f /var/log/pciecard/*_SDIV6.0/error_log_SDIV6.0.bin.1
+                fi 2> /dev/null || true
+        endscript
+}
+
+/var/log/pciecard/*_Hi1823V200QT100n\(2\*200G\)/error_log_Hi1823V200QT100n\(2\*200G\).bin{
+        su root root
+        size = 512k
+        compress
+        copytruncate
+        rotate 1
+        sharedscripts                                    
+        prerotate
+                if [ `stat -c %s $1` -gt 104857600 ]; then
+                    cat /dev/null > $1
+                    echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+                else
+                    rm -f /var/log/pciecard/*_Hi1823V200QT100n\(2\*200G\)/error_log_Hi1823V200QT100n\(2\*200G\).bin.1
+                fi 2> /dev/null || true
+        endscript
+}
+
+/var/log/alarm.log{
+	size = 200k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/alarm.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/alarm.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/sensor.log{
+	size = 200k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/sensor.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/sensor.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/storage/IODeterioration{
+	size = 200k
+	compress
+	copytruncate
+	rotate 1
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/storage/IODeterioration.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/storage/IODeterioration.*.gz 2> /dev/null || true
+	endscript
+}
+
+/dev/shm/log/hisec/intrusion_detection.log{
+    su root root
+    size = 512K
+    compress
+    copytruncate
+    rotate 3
+    sharedscripts
+    prerotate
+        /etc/prerotate.sh "$1"
+        rm -f /dev/shm/log/hisec/intrusion_detection.log.1
+    endscript
+    postrotate
+        /bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+    endscript
+    lastaction
+        chmod 0400 /dev/shm/log/hisec/intrusion_detection.log.*.gz 2> /dev/null || true
+    endscript
+}
+
+/var/log/bmccom.dat{
+	size = 4096k
+	compress
+	copytruncate
+	rotate 5
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/bmccom.dat.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/bmccom.dat.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/systemcom.dat{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 3
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/systemcom.dat.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/systemcom.dat.*.gz 2> /dev/null || true
+	endscript
+}
+
+/dev/shm/log/hw_stream.log{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 1
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /dev/shm/log/hw_stream.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /dev/shm/log/hw_stream.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/dev/shm/log/mc_stream.log{
+	size = 2048k
+	compress
+	copytruncate
+	rotate 1
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /dev/shm/log/mc_stream.log.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /dev/shm/log/mc_stream.log.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_alarm.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_alarm.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_alarm.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_bmc_core.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_bmc_core.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_bmc_core.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_energy.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_energy.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_energy.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_framework.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_framework.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_framework.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_hardware.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_hardware.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_hardware.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_interface.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_interface.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_interface.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_om.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_om.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_om.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_om_priv.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_om_priv.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_om_priv.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_ras.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_ras.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_ras.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/mem_info_security.csv{
+	size = 1024k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		/etc/prerotate.sh "$1"
+		rm -f /var/log/mem_info_security.csv.1
+	endscript
+	postrotate
+		/bin/kill -HUP `cat /var/run/rsyslogd.pid 2> /dev/null` 2> /dev/null || true
+	endscript
+	lastaction
+		chmod 0400 /var/log/mem_info_security.csv.*.gz 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SP925D-VL/error_log_SP925D-VL.bin{
+	su root root
+	size = 512k
+	nocompress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		if [ `stat -c %s $1` -gt 104857600 ]; then
+			cat /dev/null > &1
+			echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+		else
+			rm -f /var/log/pciecard/*_SP925D-VL/error_log_SP925D-VL.bin.1
+			fi 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SP923Q-VL/error_log_SP923Q-VL.bin{
+	su root root
+	size = 512k
+	nocompress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		if [ `stat -c %s $1` -gt 104857600 ]; then
+			cat /dev/null > &1
+			echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+		else
+			rm -f /var/log/pciecard/*_SP923Q-VL/error_log_SP923Q-VL.bin.1
+			fi 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SP923H-VL/error_log_SP923H-VL.bin{
+	su root root
+	size = 512k
+	nocompress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		if [ `stat -c %s $1` -gt 104857600 ]; then
+			cat /dev/null > &1
+			echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+		else
+			rm -f /var/log/pciecard/*_SP923H-VL/error_log_SP923H-VL.bin.1
+			fi 2> /dev/null || true
+	endscript
+}
+
+/var/log/pciecard/*_SP920-VL/error_log_SP920-VL.bin{
+	su root root
+	size = 512k
+	nocompress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		if [ `stat -c %s $1` -gt 104857600 ]; then
+			cat /dev/null > &1
+			echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+		else
+			rm -f /var/log/pciecard/*_SP920-VL/error_log_SP920-VL.bin.1
+			fi 2> /dev/null || true
+	endscript
+}

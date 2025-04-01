@@ -1,0 +1,860 @@
+{
+  "FormatVersion": "1.10",
+  "DataVersion": "1.30",
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c4",
+        "I2c7",
+        "I2c8",
+        "I2c9",
+        "I2c11",
+        "JtagMux_1",
+        "JtagMux_2"
+      ]
+    },
+    "I2c4": {
+      "Chips": [
+        "Smc_ExpBoardSMC"
+      ]
+    },
+    "I2c11": {
+      "Chips": [
+        "Smc_SwL1BoardSMC",
+        "Eeprom_EXU"
+      ]
+    },
+    "JtagMux_1": {
+      "Chips": [
+        "Cpld_EXU"
+      ]
+    },
+    "JtagMux_2": {
+      "Chips": [
+        "JtagSwitch_1"
+      ]
+    },
+    "JtagSwitch_1": {
+      "Buses": [
+        "JtagMux_JtagSwitch_1_1",
+        "JtagMux_JtagSwitch_1_2",
+        "JtagMux_JtagSwitch_1_3",
+        "JtagMux_JtagSwitch_1_4"
+      ]
+    },
+    "I2c8": {
+      "Chips": [
+        "Pca9545_i2c8_chip"
+      ]
+    },
+    "I2c9": {
+      "Chips": [
+        "Pca9545_i2c9_chip"
+      ]
+    },
+    "I2c7": {
+      "Chips": [
+        "Eeprom_QB900_1",
+        "Eeprom_QB900_2"
+      ],
+      "Connectors": [
+        "Connector_QB900_1",
+        "Connector_QB900_2"
+      ]
+    },
+    "Pca9545_i2c8_chip": {
+      "Buses": [
+        "I2cMux_Pca9545_i2c8_chip_3",
+        "I2cMux_Pca9545_i2c8_chip_1",
+        "I2cMux_Pca9545_i2c8_chip_2",
+        "I2cMux_Pca9545_i2c8_chip_4"
+      ]
+    },
+    "I2cMux_Pca9545_i2c8_chip_3": {
+      "Connectors": [
+        "Connector_ACU1"
+      ]
+    },
+    "I2cMux_Pca9545_i2c8_chip_1": {
+      "Connectors": [
+        "Connector_ACU2"
+      ]
+    },
+    "I2cMux_Pca9545_i2c8_chip_2": {
+      "Connectors": [
+        "Connector_ACU3"
+      ]
+    },
+    "I2cMux_Pca9545_i2c8_chip_4": {
+      "Connectors": [
+        "Connector_ACU4"
+      ]
+    }
+  },
+  "Objects": {
+    "Smc_ExpBoardSMC": {
+      "AddrWidth": 1,
+      "Address": 96,
+      "OffsetWidth": 1,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Smc_SwL1BoardSMC": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 96,
+      "OffsetWidth": 1,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Cpld_EXU": {
+      "@Default": {},
+      "HealthStatus": 0
+    },
+    "Eeprom_EXU": {
+      "AddrWidth": 1,
+      "Address": 174,
+      "HealthStatus": 0,
+      "OffsetWidth": 2,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 20,
+      "WriteTmout": 100
+    },
+    "Pca9545_i2c8_chip": {
+      "@Default": {},
+      "Address": 226,
+      "HealthStatus": 0,
+      "OffsetWidth": 0,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Pca9545_i2c9_chip": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 226,
+      "HealthStatus": 0,
+      "OffsetWidth": 0,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Connector_QB900_1": {
+      "@Default": {},
+      "AuxId": "2",
+      "Bom": "14191046",
+      "Buses": [
+        "I2c4"
+      ],
+      "Id": "PSU",
+      "IdentifyMode": 2,
+      "Position": 9,
+      "Presence": 1,
+      "SilkText": "psu2",
+      "Slot": 2,
+      "Type": "Psu"
+    },
+    "Connector_QB900_2": {
+      "@Default": {},
+      "AuxId": "2",
+      "Bom": "14191046",
+      "Buses": [
+        "I2c4"
+      ],
+      "Id": "PSU",
+      "IdentifyMode": 2,
+      "Position": 10,
+      "Presence": 1,
+      "SilkText": "psu3",
+      "Slot": 3,
+      "Type": "Psu"
+    },
+    "Eeprom_QB900_1": {
+      "@Default": {},
+      "Address": 168,
+      "HealthStatus": 0,
+      "OffsetWidth": 1,
+      "PowerStatus": 0,
+      "ReadTmout": 30,
+      "RwBlockSize": 1024,
+      "WriteTmout": 30
+    },
+    "Eeprom_QB900_2": {
+      "@Default": {},
+      "Address": 172,
+      "HealthStatus": 0,
+      "OffsetWidth": 1,
+      "PowerStatus": 0,
+      "ReadTmout": 30,
+      "RwBlockSize": 1024,
+      "WriteTmout": 30
+    },
+    "Scanner_ACU1": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 1,
+      "Offset": 134283520,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Connector_ACU1": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2cMux_Pca9545_i2c8_chip_3",
+        "I2c11",
+        "JtagMux_JtagSwitch_1_1"
+      ],
+      "IdentifyMode": 3,
+      "Position": 1,
+      "Presence": "<=/Scanner_ACU1.Value",
+      "SilkText": "ACU1",
+      "Slot": 1,
+      "Type": "ACU"
+    },
+    "Scanner_ACU2": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 2,
+      "Offset": 134283520,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Connector_ACU2": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2cMux_Pca9545_i2c8_chip_1",
+        "I2c11",
+        "JtagMux_JtagSwitch_1_2"
+      ],
+      "IdentifyMode": 3,
+      "Position": 2,
+      "Presence": "<=/Scanner_ACU2.Value",
+      "SilkText": "ACU2",
+      "Slot": 2,
+      "Type": "ACU"
+    },
+    "Scanner_ACU3": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 4,
+      "Offset": 134283520,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Connector_ACU3": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2cMux_Pca9545_i2c8_chip_2",
+        "I2c11",
+        "JtagMux_JtagSwitch_1_3"
+      ],
+      "IdentifyMode": 3,
+      "Position": 3,
+      "Presence": "<=/Scanner_ACU3.Value",
+      "SilkText": "ACU3",
+      "Slot": 3,
+      "Type": "ACU"
+    },
+    "Scanner_ACU4": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 8,
+      "Offset": 134283520,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Connector_ACU4": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2cMux_Pca9545_i2c8_chip_4",
+        "I2c11",
+        "JtagMux_JtagSwitch_1_4"
+      ],
+      "IdentifyMode": 3,
+      "Position": 4,
+      "Presence": "<=/Scanner_ACU4.Value",
+      "SilkText": "ACU4",
+      "Slot": 4,
+      "Type": "ACU"
+    },
+    "Accessor_L1PwrChipStatus": {
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 1,
+      "Offset": 67119360,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_L1PwrPhyStatus": {
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 2,
+      "Offset": 67119360,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "JtagSwitch_1": {
+      "Accessor": "#/Accessor_JtagSwitch"
+    },
+    "JtagMux_JtagSwitch_1_1": {
+      "@Default": {},
+      "ChannelId": 1
+    },
+    "JtagMux_JtagSwitch_1_2": {
+      "@Default": {},
+      "ChannelId": 2
+    },
+    "JtagMux_JtagSwitch_1_3": {
+      "@Default": {},
+      "ChannelId": 3
+    },
+    "JtagMux_JtagSwitch_1_4": {
+      "@Default": {},
+      "ChannelId": 4
+    },
+    "Accessor_LSW": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 16,
+      "Offset": 67110401,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LswSwitchInfo_1": {
+      "@Default": {},
+      "ChipRst": "#/Accessor_LSW.Value",
+      "PowerState": "#/Accessor_L1PwrChipStatus.Value",
+      "Type": 1,
+      "Unit": 0
+    },
+    "Accessor_phy1": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 1,
+      "Offset": 67110401,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LswPhyInfo_1": {
+      "@Default": {},
+      "ChipRst": "#/Accessor_phy1.Value",
+      "PhysicalAddr": 1,
+      "PhysicalId": 0,
+      "PowerState": "#/Accessor_L1PwrPhyStatus.Value",
+      "Unit": 0
+    },
+    "Accessor_phy2": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 2,
+      "Offset": 67110401,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LswPhyInfo_2": {
+      "@Default": {},
+      "ChipRst": "#/Accessor_phy2.Value",
+      "PhysicalAddr": 2,
+      "PhysicalId": 1,
+      "PowerState": "#/Accessor_L1PwrPhyStatus.Value",
+      "Unit": 0
+    },
+    "Accessor_phy3": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 4,
+      "Offset": 67110401,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LswPhyInfo_3": {
+      "@Default": {},
+      "ChipRst": "#/Accessor_phy3.Value",
+      "PhysicalAddr": 3,
+      "PhysicalId": 2,
+      "PowerState": "#/Accessor_L1PwrPhyStatus.Value",
+      "Unit": 0
+    },
+    "Accessor_phy4": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 8,
+      "Offset": 67110401,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LswPhyInfo_4": {
+      "@Default": {},
+      "ChipRst": "#/Accessor_phy4.Value",
+      "PhysicalAddr": 4,
+      "PhysicalId": 3,
+      "PowerState": "#/Accessor_L1PwrPhyStatus.Value",
+      "Unit": 0
+    },
+    "Accessor_CpldTest": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 255,
+      "Offset": 8704,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LogicVerId": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 255,
+      "Offset": 2816,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PcbID": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 15,
+      "Offset": 1792,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "ExpBoard_1": {
+      "@Default": {},
+      "BoardID": 65535,
+      "CpldTestReg": "#/Accessor_CpldTest.Value",
+      "Description": "Expander Board",
+      "FruID": "#/Fru_Expander.FruId",
+      "LogicUnit": 93,
+      "LogicVersionID": "#/Accessor_LogicVerId.Value",
+      "Manufacturer": "Huawei",
+      "Name": "IT51XCUB",
+      "NodeId": "EXU${Slot}ExpBoard${Slot}",
+      "Number": 1,
+      "PartNumber": "0302047647",
+      "PcbID": "#/Accessor_PcbID.Value",
+      "Position": "EXU${Slot}",
+      "RefSMCChip": "#/Smc_SwL1BoardSMC",
+      "DeviceName": "ExpBoard${Slot}",
+      "RunningStatus": 0,
+      "SRVersion": "1.30",
+      "Slot": 2,
+      "UID": "00000001010302047647",
+      "CpldStatus": 0
+    },
+    "Accessor_EXUWP": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 255,
+      "Offset": 11776,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_JtagSwitch": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 255,
+      "Offset": 67111424,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "LogicFirmware_EXU_1": {
+      "@Default": {},
+      "Location": 26,
+      "Manufacturer": "Huawei",
+      "Name": "EXU_CPLD",
+      "SoftwareId": "CPLD-IT51XCUB",
+      "UId": "00000001010302047647",
+      "UpgradeChip": "#/Cpld_EXU",
+      "ChipInfo": "#/Cpld_EXU",
+      "ValidMode": 1,
+      "Version": "#/Accessor_LogicVerId.Value"
+    },
+    "SRUpgrade_1": {
+      "@Default": {},
+      "SoftwareId": "HWSR-IT51XCUB",
+      "StorageChip": "#/Eeprom_EXU",
+      "Type": "EXU",
+      "UID": "00000001010302047647",
+      "Version": "1.30",
+      "WriteProtect": "#/Accessor_EXUWP.Value"
+    },
+    "FruData_Expander": {
+      "@Default": {},
+      "EepromWp": "#/Accessor_EXUWP.Value",
+      "FruDev": "#/Eeprom_EXU",
+      "FruId": 1,
+      "StorageType": "TianChi"
+    },
+    "PsuSlot_QB900_1": {
+      "@Default": {},
+      "Presence": 1,
+      "PsuChip": "#/Eeprom_QB900_1",
+      "SlotI2cAddr": 168,
+      "SlotNumber": 2
+    },
+    "PsuSlot_QB900_2": {
+      "@Default": {},
+      "Presence": 1,
+      "PsuChip": "#/Eeprom_QB900_2",
+      "SlotI2cAddr": 172,
+      "SlotNumber": 3
+    },
+    "LswPortInfo_1": {
+      "@Default": {},
+      "AccFrameType": 0,
+      "ConPhyAddr": 1,
+      "ExtMode": 255,
+      "LogicId": 0,
+      "PVid": 1,
+      "PhysicalId": 0,
+      "PortType": 0,
+      "Unit": 0,
+      "PortIso": 31,
+      "ExportPort": false
+    },
+    "LswPortInfo_2": {
+      "@Default": {},
+      "AccFrameType": 0,
+      "ConPhyAddr": 2,
+      "ExtMode": 255,
+      "LogicId": 1,
+      "PVid": 255,
+      "PhysicalId": 1,
+      "PortType": 0,
+      "Unit": 0,
+      "PortIso": 31,
+      "ExportPort": false
+    },
+    "LswPortInfo_3": {
+      "@Default": {},
+      "AccFrameType": 0,
+      "ConPhyAddr": 3,
+      "ExtMode": 255,
+      "LogicId": 2,
+      "PVid": 1,
+      "PhysicalId": 2,
+      "PortType": 0,
+      "Unit": 0,
+      "PortIso": 31,
+      "ExportPort": false
+    },
+    "LswPortInfo_4": {
+      "@Default": {},
+      "AccFrameType": 0,
+      "ConPhyAddr": 4,
+      "ExtMode": 255,
+      "LogicId": 3,
+      "PVid": 1,
+      "PhysicalId": 3,
+      "PortType": 0,
+      "Unit": 0,
+      "PortIso": 31,
+      "ExportPort": false
+    },
+    "LswPortInfo_5": {
+      "@Default": {},
+      "AccFrameType": 255,
+      "ConPhyAddr": 255,
+      "ExtMode": 255,
+      "LogicId": 4,
+      "PVid": 255,
+      "PhysicalId": 4,
+      "PortType": 0,
+      "Unit": 0,
+      "PortIso": 31,
+      "ExportPort": false
+    },
+    "LswVlanInfo_4090": {
+      "@Default": {},
+      "Member": 5,
+      "Unit": 0,
+      "Untaged": 0,
+      "VlanId": 4090
+    },
+    "LswVlanInfo_4091": {
+      "@Default": {},
+      "Member": 9,
+      "Unit": 0,
+      "Untaged": 0,
+      "VlanId": 4091
+    },
+    "Scanner_SoltId": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 65535,
+      "Offset": 13568,
+      "Size": 4,
+      "Type": 0,
+      "Period": 4000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "NodeLocation_L1": {
+      "LocationId": "<=/Scanner_SoltId.Value",
+      "LocationType": "Slot"
+    },
+    "Fru_Expander": {
+      "@Default": {},
+      "ConnectorGroupId": "${GroupId}",
+      "EepStatus": 1,
+      "FruDataId": "#/FruData_Expander",
+      "FruId": 1,
+      "FruName": "ExpBoard${Slot}",
+      "Health": 0,
+      "PcbId": 1,
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Type": 50
+    },
+    "I2cMux_Pca9545_i2c8_chip_3": {
+      "ChannelId": 2
+    },
+    "I2cMux_Pca9545_i2c8_chip_1": {
+      "ChannelId": 0
+    },
+    "I2cMux_Pca9545_i2c8_chip_2": {
+      "ChannelId": 1
+    },
+    "I2cMux_Pca9545_i2c8_chip_4": {
+      "ChannelId": 3
+    },
+    "Scanner_InflowLm75": {
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Type": 0,
+      "Size": 2,
+      "Offset": 4352,
+      "Mask": 65535,
+      "Period": 1000,
+      "Debounce": "None"
+    },
+    "Scanner_MiddleLm75": {
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Type": 0,
+      "Size": 2,
+      "Offset": 4353,
+      "Mask": 65535,
+      "Period": 1000,
+      "Debounce": "None"
+    },
+    "Scanner_OutflowLm75": {
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Type": 0,
+      "Size": 2,
+      "Offset": 4354,
+      "Mask": 65535,
+      "Period": 1000,
+      "Debounce": "None"
+    },
+    "Entity_MainBoard": {
+      "Id": 7,
+      "Name": "MainBoard",
+      "PowerState": 1,
+      "Presence": 1,
+      "Instance": 96
+    },
+    "ThresholdSensor_InflowTemp": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "EXU${Slot} Inflow Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "M": 1,
+      "Analog": 1,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_InflowLm75.Value |> expr($1 / 16 * 0.0625)",
+      "ReadingStatus": "<=/Scanner_InflowLm75.Status;<=/Scanner_InflowLm75.Value |> expr((($1 == 0) && (($2 / 16 * 0.0625) > 255)) ? 2 : $1)",
+      "SensorNumber": 255
+    },
+    "ThresholdSensor_MiddleTemp": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "EXU${Slot} Middle Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "M": 1,
+      "Analog": 1,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_MiddleLm75.Value |> expr($1 / 16 * 0.0625)",
+      "ReadingStatus": "<=/Scanner_MiddleLm75.Status;<=/Scanner_MiddleLm75.Value |> expr((($1 == 0) && (($2 / 16 * 0.0625) > 255)) ? 2 : $1)",
+      "SensorNumber": 255
+    },
+    "ThresholdSensor_OutflowTemp": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "EXU${Slot} Outflow Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "M": 1,
+      "Analog": 1,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_OutflowLm75.Value |> expr($1 / 16 * 0.0625)",
+      "ReadingStatus": "<=/Scanner_OutflowLm75.Status;<=/Scanner_OutflowLm75.Value |> expr((($1 == 0) && (($2 / 16 * 0.0625) > 255)) ? 2 : $1)",
+      "SensorNumber": 255
+    },
+    "Component_ComEXU": {
+      "@Default": {},
+      "BoardId": "<=/ExpBoard_1.BoardID",
+      "FruId": 255,
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": 255,
+      "Location": "Chassis",
+      "Name": "EXU${Slot}",
+      "PowerState": 1,
+      "Presence": 1,
+      "Type": 193,
+      "UniqueId": "N/A"
+    },
+    "Component_ComExpander": {
+      "@Default": {},
+      "BoardId": "<=/ExpBoard_1.BoardID",
+      "FruId": "<=/Fru_Expander.FruId",
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": "${Slot}",
+      "Location": "<=/ExpBoard_1.Position",
+      "Manufacturer": "<=/ExpBoard_1.Manufacturer",
+      "Name": "<=/ExpBoard_1.DeviceName",
+      "PowerState": 1,
+      "Presence": 1,
+      "ReplaceFlag": 0,
+      "SerialNumber": "<=/FruData_Expander.BoardSerialNumber",
+      "Type": 93,
+      "UniqueId": "<=/ExpBoard_1.UID"
+    },
+    "DftEeprom_1": {
+      "Id": 12,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_Expander"
+    },
+    "DftEepromWp_1": {
+      "Id": 47,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Write Protect Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_Expander"
+    },
+    "Event_CSRFailureMntr_ACU_1": {
+      "EventKeyId": "BMC.AccessCSRFailure",
+      "Reading": "<=/Connector_ACU1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComEXU",
+      "DescArg1": "#/ExpBoard_1.DeviceName",
+      "DescArg2": "#/Connector_ACU1.Slot |> string.format(' ACU%s',$1)"
+    },
+    "Event_CSRFailureMntr_ACU_2": {
+      "EventKeyId": "BMC.AccessCSRFailure",
+      "Reading": "<=/Connector_ACU2.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComEXU",
+      "DescArg1": "#/ExpBoard_1.DeviceName",
+      "DescArg2": "#/Connector_ACU2.Slot |> string.format(' ACU%s',$1)"
+    },
+    "Event_CSRFailureMntr_ACU_3": {
+      "EventKeyId": "BMC.AccessCSRFailure",
+      "Reading": "<=/Connector_ACU3.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComEXU",
+      "DescArg1": "#/ExpBoard_1.DeviceName",
+      "DescArg2": "#/Connector_ACU3.Slot |> string.format(' ACU%s',$1)"
+    },
+    "Event_CSRFailureMntr_ACU_4": {
+      "EventKeyId": "BMC.AccessCSRFailure",
+      "Reading": "<=/Connector_ACU4.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComEXU",
+      "DescArg1": "#/ExpBoard_1.DeviceName",
+      "DescArg2": "#/Connector_ACU4.Slot |> string.format(' ACU%s',$1)"
+    },
+    "Event_ExpanderAccessFRULableFailure": {
+      "EventKeyId": "ExpandBoard.ExpBoardAccessFRULableFailure",
+      "Reading": "<=/Fru_Expander.Health",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComExpander"
+    },
+    "Event_ExpBoardReplaceMntr": {
+      "EventKeyId": "ExpBoard.ExpBoardReplace",
+      "Reading": "<=/Component_ComExpander.ReplaceFlag",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_ComExpander.Instance",
+      "DescArg2": "#/Component_ComExpander.PreviousSN",
+      "DescArg3": "#/Component_ComExpander.SerialNumber",
+      "Component": "#/Component_ComExpander"
+    },
+    "Event_CpldSelfcheck": {
+      "EventKeyId": "ExpBoard.ExpBoardCPLDSelfTestFailure",
+      "Reading": "<=/ExpBoard_1.CpldStatus",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "1",
+      "@Default":{
+        "Reading": 255
+      },
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "Component": "#/Component_ComExpander"
+    }
+  }
+}

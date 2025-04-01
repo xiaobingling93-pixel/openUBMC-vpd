@@ -1,0 +1,431 @@
+{
+    "FormatVersion": "1.00",
+    "DataVersion": "1.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "Hisport_UBCDD"
+            ]
+        },
+        "Hisport_UBCDD": {
+            "Chips": [
+                "Chip_HisportUBCDD",
+                "Eeprom_UBCDD"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_HisportUBCDD": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 226,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus":0,
+            "WriteRetryTimes": 0
+        },
+        "Eeprom_UBCDD": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 174,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "SRUpgrade_1": {
+            "UID": "34343735",
+            "Type": "UBCDD",
+            "Version": "${DataVersion}",
+            "StorageChip": "#/Eeprom_UBCDD",
+            "SoftwareId": "UBCDD"
+        },
+        "Accessor_I2cTest0": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Size": 1,
+            "Offset": 32,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_I2cTest1": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Size": 1,
+            "Offset": 33,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "DftHwChannel_DFT0": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 1,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c RISER2_SCL_CLKA_A Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 3,
+            "Input": "#/Accessor_I2cTest0.Value",
+            "Output": "#/Accessor_I2cTest0.Value",
+            "InputValue": [10],
+            "OutputValue": [10],
+            "Operator": 5 
+        },
+        "DftHwChannel_DFT1": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 2,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c RISER2_SCL_CLKA_A Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 3,
+            "Input": "#/Accessor_I2cTest1.Value",
+            "Output": "#/Accessor_I2cTest1.Value",
+            "InputValue": [10],
+            "OutputValue": [10],
+            "Operator": 5 
+        },
+        "Accessor_LowSignalDftTest0": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 16,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest1": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 17,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest2": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 18,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest3": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 19,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest4": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 20,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest5": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 21,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest6": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 22,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LowSignalDftTest7": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 23,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },     
+        "DftHwChannel_LowSignalDftTest0": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 5,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c RISER2_RST_DOUTA_A Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest0.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest1": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 6,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test1",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest1.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest2": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 7,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test2",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest2.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest3": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 8,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test3",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest3.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest4": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 9,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test4",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest4.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest5": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 10,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test5",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest5.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest6": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 11,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test6",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest6.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_LowSignalDftTest7": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 12,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c LowSignal Test7",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_LowSignalDftTest7.Value",
+            "InputValue": [0],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "Accessor_HighSignalTest0": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 24,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_HighSignalTest1": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 25,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "DftHwChannel_HighSignalDftTest0": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 13,
+            "Slot": "${GroupId}",
+            "ItemName": "II2c RISER2_PRSNTA_A Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_HighSignalTest0.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_HighSignalDftTest1": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 14,
+            "Slot": "${GroupId}",
+            "ItemName": "II2c RISER2_PRSNTA_A Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_HighSignalTest1.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "Accessor_I2cClockTest0": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 42,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_I2cClockTest1": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 43,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_I2cClockTest2": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 44,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_I2cClockTest3": {
+            "Chip": "#/Chip_HisportUBCDD",
+            "Offset": 45,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "DftHwChannel_I2cClockDftTest0": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 15,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c CLK_100M_CPLD0_P Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_I2cClockTest0.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_I2cClockDftTest1": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 16,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c CLK_100M_CPLD0_N Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_I2cClockTest1.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_I2cClockDftTest2": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 17,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c CLK_100M_CPLD2_P Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_I2cClockTest2.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        },
+        "DftHwChannel_I2cClockDftTest3": {
+            "Id": 84,
+            "Type": 2,
+            "DeviceNum": 18,
+            "Slot": "${GroupId}",
+            "ItemName": "I2c CLK_100M_CPLD2_N Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "IFType": 1,
+            "TestType": 1,
+            "Input": "#/Accessor_I2cClockTest3.Value",
+            "InputValue": [1],
+            "OutputValue": [],
+            "Operator": 5 
+        }
+    }
+}

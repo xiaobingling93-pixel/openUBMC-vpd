@@ -1,0 +1,571 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.12",
+  "Unit": {
+    "Type": "NICCard",
+    "Name": "BoardNICCard_1"
+  },
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c_2",
+        "I2cMux_pca9545_chan1"
+      ]
+    },
+    "I2cMux_pca9545_chan1": {
+      "Chips": [
+        "Eeprom_NIC",
+        "Pca9555_NIC",
+        "Lm75_1",
+        "Chip_Cdr5902L_0"
+      ]
+    },
+    "I2c_2": {
+      "Chips": [
+        "Smc_ExpBoardSMC"
+      ]
+    }
+  },
+  "Objects": {
+    "Eeprom_NIC": {
+      "OffsetWidth": 2,
+      "AddrWidth": 1,
+      "Address": 174,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 20,
+      "HealthStatus": 0
+    },
+    "Pca9555_NIC": {
+      "HealthStatus": 0,
+      "Address": 66,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 100,
+      "ReadTmout": 100
+    },
+    "Lm75_1": {
+      "HealthStatus": 0,
+      "Address": 144,
+      "AddrWidth": 1,
+      "OffsetWidth": 2,
+      "WriteTmout": 100,
+      "ReadTmout": 100
+    },
+    "Chip_Cdr5902L_0": {
+      "HealthStatus": 0,
+      "Address": 192,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 0,
+      "ReadTmout": 0,
+      "WriteRetryTimes": 3,
+      "ReadRetryTimes": 3
+    },
+    "Smc_ExpBoardSMC": {
+      "Address": 96,
+      "AddrWidth": 1,
+      "OffsetWidth": 1
+    },
+    "Fru_NICCard": {
+      "PcbId": 1,
+      "FruId": 1,
+      "FruName": "NIC ${Slot} (SF223D-H)",
+      "ConnectorGroupId": "${GroupId}",
+      "BoardId": 65535,
+      "UniqueId": "00000001100302023956"
+    },
+    "Scanner_NIC1PowerGood": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469771520,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 100,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_NIC2PowerGood": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469771520,
+      "Size": 2,
+      "Mask": 512,
+      "Type": 0,
+      "Period": 100,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_ReadyToRemove": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": "${Slot} |> expr(($1 == 1) ? 469772801 : 469772802)",
+      "Size": 1,
+      "Mask": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "PCIeDevice_1": {
+      "SlotID": "${Slot}",
+      "DeviceName": "NIC ${Slot} (SF223D-H)",
+      "Bus": 0,
+      "Device": 0,
+      "Function": 0,
+      "DevBus": 0,
+      "DevDevice": 0,
+      "DevFunction": 0,
+      "SocketID": 0,
+      "FunctionClass": 2,
+      "DeviceType": 13,
+      "Position": "chassis",
+      "DiagnosticFault": 0,
+      "PredictiveFault": 0,
+      "Container": "${Container}",
+      "GroupPosition": "PCIeDevice_${GroupPosition}"
+    },
+    "NetworkAdapter_1": {
+      "SystemID": 1,
+      "SlotNumber": "${Slot}",
+      "Name": "NIC ${Slot} (SF223D-H)",
+      "Manufacturer": "Huawei",
+      "Description": "2*25GE",
+      "Position": "chassis",
+      "DeviceLocator": "NIC ${Slot} (SF223D-H)",
+      "Type": 1,
+      "Model": "SD5902L",
+      "ModelDescription": "2*25GE",
+      "ChipManufacturer": "Huawei",
+      "NetworkPortCount": 2,
+      "BoardName": "BC83ETHB",
+      "VendorID": "0xFFFF",
+      "DeviceID": "0xFFFF",
+      "SubsystemVendorID": "0xFFFF",
+      "SubsystemDeviceID": "0xFFFF",
+      "BoardID": 65535,
+      "ComponentUniqueID": "00000001100302023956",
+      "FruId": "<=/Fru_NICCard.FruId",
+      "PCBVersion": ".A",
+      "SupportedMctp": false,
+      "SupportedLLDP": false,
+      "HotPluggable": true,
+      "ReadyToRemove": false,
+      "ReadyToRemoveValue": "#/Accessor_ReadyToRemove.Value",
+      "CardPowerGood": "<=/Scanner_NIC1PowerGood.Value;<=/Scanner_NIC2PowerGood.Value |> expr((${Slot} == 1) ? $1 : $2)",
+      "AttentionHotPlugState": 255,
+      "SocketId": "<=/PCIeDevice_1.SocketID",
+      "Bus": "<=/PCIeDevice_1.Bus",
+      "Device": "<=/PCIeDevice_1.Device",
+      "Function": "<=/PCIeDevice_1.Function",
+      "DevBus": "<=/PCIeDevice_1.DevBus",
+      "DevDevice": "<=/PCIeDevice_1.DevDevice",
+      "DevFunction": "<=/PCIeDevice_1.DevFunction",
+      "Health": "<=/Component_NICCard.Health",
+      "SerialNumber": "<=/Component_NICCard.SerialNumber",
+      "PreviousSerialNumber": "N/A",
+      "ReplacedFlag": 0,
+      "BandwidthThresholdPercent": 100,
+      "ParentCardSlotId": 255,
+      "TemperatureCelsius": 0,
+      "TemperatureStatus": 0
+    },
+    "CoolingRequirement_1_55": {
+      "RequirementId": "${Slot} |> expr((55 << 8) | $1)",
+      "Description": "0302023956NIC卡5902L主芯片温度",
+      "MonitoringStatus": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+      "MonitoringValue": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius",
+      "FailedValue": 80,
+      "TargetTemperatureCelsius": 90,
+      "MaxAllowedTemperatureCelsius": 100,
+      "TargetTemperatureRangeCelsius": [],
+      "ThresholdValue": [],
+      "AlarmSpeed": [],
+      "SmartCoolingTargetTemperature": [],
+      "CustomSupported": false,
+      "CustomTargetTemperatureCelsius": 255,
+      "Enabled": "<=/CoolingRequirement_1_56.MonitoringStatus |> expr($1 == 0 ? true : false)",
+      "SensorName": "#/ThresholdSensor_5902LTemp.SensorName"
+    },
+    "CoolingRequirement_1_155": {
+      "RequirementId": "${Slot} |> expr((155 << 8) | $1)",
+      "Description": "0302023956NIC卡温度（光模块异常）调速",
+      "MonitoringStatus": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+      "MonitoringValue": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius",
+      "FailedValue": 80,
+      "TargetTemperatureCelsius": 80,
+      "MaxAllowedTemperatureCelsius": 100,
+      "TargetTemperatureRangeCelsius": [],
+      "ThresholdValue": [],
+      "AlarmSpeed": [],
+      "SmartCoolingTargetTemperature": [],
+      "CustomSupported": false,
+      "CustomTargetTemperatureCelsius": 255,
+      "Enabled": "<=/CoolingRequirement_1_56.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+      "SensorName": "#/ThresholdSensor_5902LTemp.SensorName"
+    },
+    "CoolingRequirement_1_56": {
+      "RequirementId": "${Slot} |> expr((56 << 8) | $1)",
+      "Description": "0302023956NIC卡光模块温度调速",
+      "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 >= $2 ? (($1 == 16384) ? 0 : ($1 >= 255 ? 1 : 0)) : (($2 == 16384) ? 0 : ($2 >= 255 ? 1 : 0)))",
+      "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+      "TargetTemperatureCelsius": 62,
+      "MaxAllowedTemperatureCelsius": 68,
+      "TargetTemperatureRangeCelsius": [],
+      "ThresholdValue": [],
+      "AlarmSpeed": [],
+      "SmartCoolingTargetTemperature": [],
+      "CustomSupported": false,
+      "CustomTargetTemperatureCelsius": 255,
+      "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp', $1)"
+    },
+    "Event_NICCardReplaceMntr": {
+      "EventKeyId": "NICCard.NICCardReplace",
+      "Condition": 1
+    },
+    "Event_LomCardAERMntr": {
+      "EventKeyId": "NIC.NetworkCardUncorrectableErr",
+      "Condition": 1
+    },
+    "Event_LomCardPFAEMntr": {
+      "EventKeyId": "NetworkCard.NetworkCardCEHardFailure",
+      "Condition": 1
+    },
+    "BoardNICCard_1": {
+      "Slot": "${Slot}",
+      "UID": "00000001100302023956",
+      "BoardNICCardName": "BC83ETHB",
+      "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
+      "Type": "NICCard",
+      "Description": "<=/NetworkAdapter_1.ModelDescription",
+      "PartNumber": "N/A",
+      "PcbID": "<=/Fru_NICCard.PcbId",
+      "PcbVersion": "<=/Fru_NICCard.PcbVersion",
+      "LogicVersion": "N/A",
+      "SRVersion": "${DataVersion}",
+      "BoardID": "<=/NetworkAdapter_1.BoardID",
+      "BoardType": "BoardNICCard",
+      "Number": 1,
+      "DeviceName": "<=/NetworkAdapter_1.DeviceLocator",
+      "Position": "<=/NetworkAdapter_1.Position",
+      "BoardNodeId": "<=/NetworkAdapter_1.SlotNumber |> string.format('chassisNIC%s(SF223D-H)',$1)",
+      "FruID": "<=/Fru_NICCard.FruId",
+      "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+      "RefComponent": "#/Component_NICCard",
+      "RefFru": "#/Fru_NICCard"
+    },
+    "Event_Port0BWUsageMntr": {
+      "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+      "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+    },
+    "Event_Port1BWUsageMntr": {
+      "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+      "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+    },
+    "Event_Port1LinkDown": {
+      "EventKeyId": "Port.PortDisconnected",
+      "Condition": 0
+    },
+    "Event_Port2LinkDown": {
+      "EventKeyId": "Port.PortDisconnected",
+      "Condition": 0
+    },
+    "OpticalModule_1": {
+      "@Parent": "NetworkPort_1",
+      "ChannelNum": 1,
+      "TemperatureCelsius": 0,
+      "PowerState": 0,
+      "IsSupportedType": 0,
+      "Temp_UpperThresholdCritical": 0,
+      "FaultState": 0,
+      "SupplyVoltage": 0,
+      "VoltageLowerThresholdCritical": 0,
+      "VoltageUpperThresholdCritical": 0
+    },
+    "OpticalModule_2": {
+      "@Parent": "NetworkPort_2",
+      "ChannelNum": 2,
+      "TemperatureCelsius": 0,
+      "PowerState": 0,
+      "IsSupportedType": 0,
+      "Temp_UpperThresholdCritical": 0,
+      "FaultState": 0,
+      "SupplyVoltage": 0,
+      "VoltageLowerThresholdCritical": 0,
+      "VoltageUpperThresholdCritical": 0
+    },
+    "Event_OM1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1SpeedMatch": {
+      "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2SpeedMatch": {
+      "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1VAMntr": {
+      "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+      "Condition": 1
+    },
+    "Event_OM2VAMntr": {
+      "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+      "Condition": 1
+    },
+    "SRUpgrade_1": {
+      "UID": "00000001100302023956",
+      "Type": "NIC",
+      "Version": "${DataVersion}",
+      "StorageChip": "#/Eeprom_NIC",
+      "SoftwareId": "HWSR-BC83ETHB",
+      "WriteProtect": 0
+    },
+    "Event_NicTemHighMinor": {
+      "EventKeyId": "NICCard.NetworkCardOverTemp",
+      "Condition": "<=/ThresholdSensor_NICTemp.UpperNoncritical",
+      "Hysteresis": "<=/ThresholdSensor_NICTemp.PositiveHysteresis"
+    },
+    "Event_NICTempFailMntr": {
+      "EventKeyId": "NICCard.NetworkCardAccessTempFailure",
+      "Condition": 1
+    },
+    "Retimer_Cdr5902L_Obj_0": {
+      "ChipName": "Cdr5902L_Board",
+      "ChipType": 0,
+      "ChipLocation": "U1",
+      "RetimerId": 0,
+      "LoadSequence": 0,
+      "RefChip": "#/Chip_Cdr5902L_0",
+      "UpgradeGroup": 0,
+      "ReqAccNotify": "#/Accessor_Cdr5902L_AccNotify.Value",
+      "IpmiChannelId": 255,
+      "LinkStatus": 0,
+      "Reset": 0,
+      "Switch": "#/Accessor_Cdr5902L_ChSwitch.Value",
+      "TemperatureCelsius": 0
+    },
+    "Accessor_Cdr5902L_ChSwitch": {
+      "Value": 0,
+      "Chip": "#/Pca9555_NIC",
+      "Size": 1,
+      "Offset": 1,
+      "Mask": 128,
+      "Type": 0
+    },
+    "Accessor_Cdr5902L_AccNotify": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Size": 2,
+      "Offset": 469779969,
+      "Mask": "${Slot} |> expr($1 == 1 ? 2 : 512)",
+      "Type": 0,
+      "Value": 0
+    },
+    "NetworkPort_1": {
+      "@Parent": "NetworkAdapter_1",
+      "SystemID": 1,
+      "PortID": 0,
+      "Type": 5,
+      "LinkStatusNumeric": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port1Link.Value;<=/Scanner_Lom2Port1Link.Value |> expr($1 == 1 ? $2 : $3)",
+      "SupportedFuncType": 1,
+      "BandwidthUsagePercent": 0,
+      "NetDevFuncType": 1,
+      "SupportedLinkCapability": "25GE",
+      "MediumType": "FiberOptic",
+      "MACAddress": "00:00:00:00:00:00"
+    },
+    "NetworkPort_2": {
+      "@Parent": "NetworkAdapter_1",
+      "SystemID": 1,
+      "PortID": 1,
+      "Type": 5,
+      "LinkStatusNumeric": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port2Link.Value;<=/Scanner_Lom2Port2Link.Value |> expr($1 == 1 ? $2 : $3)",
+      "SupportedFuncType": 1,
+      "BandwidthUsagePercent": 0,
+      "NetDevFuncType": 1,
+      "SupportedLinkCapability": "25GE",
+      "MediumType": "FiberOptic",
+      "MACAddress": "00:00:00:00:00:00"
+    },
+    "MidAvg_NicTemp": {
+      "WindowSize": 6,
+      "DefaultValue": 20,
+      "IsSigned": true
+    },
+    "Scanner_NicLm75": {
+      "Type":0,
+      "Chip": "#/Lm75_1",
+      "Size": 1,
+      "Offset": 0,
+      "Mask": 255,
+      "Period": 1000,
+      "Debounce": "#/MidAvg_NicTemp"
+    },
+    "Scanner_Lom1Port1Link": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469774080,
+      "Size": 2,
+      "Type": 0,
+      "Mask": 1,
+      "Period": 3000,
+      "Debounce": "#/ContBin_H3L3",
+      "Value": 0
+    },
+    "Scanner_Lom1Port2Link": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469774080,
+      "Size": 2,
+      "Type": 0,
+      "Mask": 2,
+      "Period": 3000,
+      "Debounce": "#/ContBin_H3L3",
+      "Value": 0
+    },
+    "Scanner_Lom2Port1Link": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469774080,
+      "Size": 2,
+      "Type": 0,
+      "Mask": 256,
+      "Period": 3000,
+      "Debounce": "#/ContBin_H3L3",
+      "Value": 0
+    },
+    "Scanner_Lom2Port2Link": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469774080,
+      "Size": 2,
+      "Type": 0,
+      "Mask": 512,
+      "Period": 3000,
+      "Debounce": "#/ContBin_H3L3",
+      "Value": 0
+    },
+    "ContBin_H3L3": {
+      "NumH": 3,
+      "NumL": 3,
+      "DefaultValue": 0
+    },
+    "Scanner_PowerGd": {
+        "Chip": "#/Smc_ExpBoardSMC",
+        "Offset": 469765888,
+        "Size": 1,
+        "Mask": 255,
+        "Type": 0,
+        "Period":100,
+        "Debounce":"None",
+        "Status":0,
+        "Value": 0
+      },
+    "ThresholdSensor_NICTemp": {
+      "ReadingMask": 2056,
+      "M": 100,
+      "RBExp": 224,
+      "UpperNoncritical": 115,
+      "PositiveHysteresis": 2,
+      "NegativeHysteresis": 2
+    },
+    "ThresholdSensor_5902LTemp": {
+      "AssertMask": 128,
+      "DeassertMask": 28800,
+      "ReadingMask": 2056,
+      "M": 100,
+      "RBExp": 224,
+      "UpperNoncritical": 105,
+      "PositiveHysteresis": 2,
+      "NegativeHysteresis": 2
+    },
+    "TemperatureInfo_1_8": {
+      "Name": "#/ThresholdSensor_NICTemp.SensorName",
+      "ReadingValue": "<=/Scanner_NicLm75.Value",
+      "Status": "<=/Scanner_NicLm75.Status;<=/Scanner_NicLm75.Value |> expr((($1 == 0) && ($2 > 255)) ? 2 : $1)",
+      "Health": "<=/ThresholdSensor_NICTemp.Health",
+      "UpperThreshold": [
+        115,
+        255,
+        255
+      ],
+      "LowerThreshold": [
+        255,
+        255,
+        255
+      ],
+      "CoordinateX": "${Slot} |> expr($1 == 1 ? 13 : 7)",
+      "CoordinateY": 25
+    },
+    "TemperatureInfo_1_9": {
+      "Name": "#/ThresholdSensor_5902LTemp.SensorName",
+      "ReadingValue": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius",
+      "Status": 0,
+      "Health": "<=/ThresholdSensor_5902LTemp.Health",
+      "UpperThreshold": [
+        105,
+        255,
+        255
+      ],
+      "LowerThreshold": [
+        255,
+        255,
+        255
+      ],
+      "CoordinateX": "${Slot} |> expr($1 == 1 ? 13 : 7)",
+      "CoordinateY": 24
+    },
+    "SmcDfxInfo_EXU": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 7424,
+      "Size": 55,
+      "Period": 200,
+      "SmcVersion": 115,
+      "Config": {
+        "47": {
+          "link_nic1_port_1": 1,
+          "link_nic1_port_2": 2,
+          "link_nic1_port_3": 4,
+          "link_nic1_port_4": 8
+        },
+        "48": {
+          "link_nic2_port_1": 1,
+          "link_nic2_port_2": 2,
+          "link_nic2_port_3": 4,
+          "link_nic2_port_4": 8
+        },
+        "54": {
+          "nic1_power": 2
+        },
+        "55": {
+          "nic2_power": 2
+        }
+      },
+      "Mapping": {
+        "Scanner_Lom1Port1Link": {
+          "Value": "expr($link_nic1_port_1)"
+        },
+        "Scanner_Lom1Port2Link": {
+          "Value": "expr($link_nic1_port_2)"
+        },
+        "Scanner_Lom2Port1Link": {
+          "Value": "expr($link_nic2_port_1)"
+        },
+        "Scanner_Lom2Port2Link": {
+          "Value": "expr($link_nic2_port_2)"
+        },
+        "Scanner_NIC1PowerGood": {
+          "Value": "expr($nic1_power)"
+        },
+        "Scanner_NIC2PowerGood": {
+          "Value": "expr($nic2_power)"
+        },
+        "Scanner_PowerGd": {
+          "Value": "expr($sys_all_pwrgd_reg)"
+        }
+      }
+    }
+  }
+}

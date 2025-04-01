@@ -1,0 +1,148 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_2",
+                "I2cMux_pca9545_chan1"
+            ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        },
+        "I2cMux_pca9545_chan1": {
+            "Chips": [
+                "Chip_NICTempChip",
+                "Eeprom_NIC"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_NICTempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Eeprom_NIC": {
+            "Address": "${Slot} |> expr($1 == 1 ? 160 : 164)",
+            "AddrWidth": 1,
+            "OffsetWidth": 2,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_NIC_Lm75": {
+            "Chip": "#/Chip_NICTempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_NICTemp"
+        },
+        "MidAvg_NICTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "OCP Card $ (SC332)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced":0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 83,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": 1,
+            "Name": "SC332",
+            "Manufacturer": "Mellanox",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 10,
+            "Model": "CX4-Lx",
+            "Description": "2*10G",
+            "ModelDescription": "2*10G",
+            "NetworkPortCount": 2,
+            "BoardName": "BC53ETHA",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x1015",
+            "SubsystemVendorID": "0x19e5",
+            "SubsystemDeviceID": "0xd13b",
+            "BoardID": 65535,
+            "ComponentUniqueID": "N/A",
+            "PCBVersion": "<=/Fru_OCP.PcbVersion",
+            "SupportedMctp": false,
+            "SupportedLLDP": false,
+            "HotPluggable": true,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 1,
+            "FruId": "<=/Fru_OCP.FruId",
+            "ParentCardSlotId": 255
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "SupportedFuncType": 1,
+            "LinkStatus": "NoLink"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "SupportedFuncType": 1,
+            "LinkStatus": "NoLink"
+        },
+        "Fru_OCP": {
+            "PcbId": 255,
+            "FruId": 0,
+            "FruName": "SC332",
+            "ConnectorGroupId": "${GroupId}"
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Event_OCPCardUCE": {
+            "EventKeyId": "OCPCard.OCPCardUncorrectableErr",
+            "Condition": 1
+        },
+        "Event_OCPCardCE": {
+            "EventKeyId": "OCPCard.OCPCardCEHardFailure",
+            "Condition": 1
+        },
+        "Event_OCPLinkSpeed": {
+            "EventKeyId": "OCPCard.OCPCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "ThresholdSensor_OCPTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        }
+    }
+}

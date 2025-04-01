@@ -1,0 +1,14 @@
+{
+    "Schema": "dds-v1",
+    "Type": "Component",
+    "Objects": {
+      "ExpBoard": {
+        "Path": "/bmc/dev/Systems/:SystemId/ExpBoard",
+        "Interfaces": [
+          "bmc.dev.Attach",
+          "bmc.dev.Bus",
+          "bmc.dev.Board"
+        ]
+      }
+    }
+  }

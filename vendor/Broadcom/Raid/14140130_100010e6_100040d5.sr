@@ -1,0 +1,292 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_RaidChip"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_RaidChip": {
+            "Address": 2,
+            "AddrWidth": 1,
+            "OffsetWidth": 0,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (9540-8i)",
+            "FunctionClass": 1,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FaultByBios": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "9540-8i",
+            "BoardName": "9540-8i",
+            "Description": "MegaRAID 9540-8i",
+            "FunctionClass": 1,
+            "VendorID": 4096,
+            "DeviceID": 4326,
+            "SubVendorID": 4096,
+            "SubDeviceID": 16597,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/Controller_1.FirmwareVersion",
+            "Manufacturer": "Broadcom",
+            "PartNumber": "N/A",
+            "SerialNumber": "<=/Controller_1.SerialNumber",
+            "RefChip": "#/Chip_RaidChip",
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "Model": "RAID_SAS3808",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "N/A",
+            "BoardID": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Controller_1": {
+            "Name": "9540-8i",
+            "TypeId": 10,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "OOBSupport": 1,
+            "SystemId": 0,
+            "Segment": 0,
+            "SocketId": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "FaultCodeByBios": 0,
+            "SlotId": "#/PCIeDevice_1.SlotID",
+            "RefChip": "#/Chip_RaidChip",
+            "CtrlOption1": 2265055232,
+            "CtrlOption2": 135,
+            "CtrlOption3": 4927,
+            "BatteryPresence": 255,
+            "BatteryFault": 0,
+            "BatteryHealth": "<=/Component_Battery.Health",
+            "FaultCode": 0,
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "SerialNumber": "",
+            "CommunicationLoss": 0,
+            "TemperatureAbnormal": 0,
+            "TemperatureCelsius": 0,
+            "BOMNumber": "N/A",
+            "Model": "SAS3808",
+            "ChipManufacturer": "BROADCOM"
+        },
+        "SASPhy_1": {
+            "@Parent": "Controller_1",
+            "PhyId": 1,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_2": {
+            "@Parent": "Controller_1",
+            "PhyId": 2,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_3": {
+            "@Parent": "Controller_1",
+            "PhyId": 3,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_4": {
+            "@Parent": "Controller_1",
+            "PhyId": 4,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_5": {
+            "@Parent": "Controller_1",
+            "PhyId": 5,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_6": {
+            "@Parent": "Controller_1",
+            "PhyId": 6,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_7": {
+            "@Parent": "Controller_1",
+            "PhyId": 7,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_8": {
+            "@Parent": "Controller_1",
+            "PhyId": 8,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "Battery_1": {
+            "@Parent": "Controller_1",
+            "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
+            "RefControllerSlotId": "<=/PCIeDevice_1.SlotID",
+            "RefControllerTypeId": "<=/Controller_1.TypeId",
+            "TemperatureCelsius": 0
+        },
+        "ThresholdSensor_PCIeBBUTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 60,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "CoolingRequirement_1_10": {
+            "RequirementId": "${Slot} |> expr((10 << 8) | $1)",
+            "MonitoringStatus": "<=/Controller_1.TemperatureAbnormal",
+            "MonitoringValue": "<=/Controller_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SensorName": "#/ThresholdSensor_RaidCardTemp.SensorName"
+        },
+        "CoolingRequirement_1_64": {
+            "RequirementId": "${Slot} |> expr((64 << 8) | $1)",
+            "MonitoringStatus": "<=/Battery_1.TemperatureCelsius;<=/Controller_1.BatteryPresence |> expr($2 == 255 ? 0 : ($1 == 32767 ? 1 : 0))",
+            "MonitoringValue": "<=/Battery_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 49,
+            "MaxAllowedTemperatureCelsius": 55,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SensorName": "#/ThresholdSensor_PCIeBBUTemp.SensorName"
+        },
+        "Event_PCIeRaidComLossMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
+            "Condition": 1
+        },
+        "Event_PCIeRAIDCardFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_BatteryFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeCardBBUFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+	"Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieBBURemove": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUNotPresent",
+            "Condition": 0
+        },
+        "Event_PcieBBUInstall": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUPresent",
+            "Condition": 1
+        },
+        "Event_PCIeRaidInitErr": {
+            "EventKeyId": "PCIeCard.PCIeCardInitializationAbnormal",
+            "Condition": 0
+        },
+        "Event_BBUOverTemp": {
+            "EventKeyId": "PCIeCard.BBUOverTemp",
+            "Condition": 1
+        },
+        "Event_BBUTempReadFail": {
+            "EventKeyId": "PCIeCard.BBUTempReadFail",
+            "Condition": 32767
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "ThresholdSensor_RaidCardTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_RaidCardTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_RaidCardTemp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        }
+    }
+}

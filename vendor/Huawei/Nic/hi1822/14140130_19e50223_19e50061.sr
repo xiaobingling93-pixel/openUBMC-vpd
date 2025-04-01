@@ -1,0 +1,418 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_9545Chan3"
+            ]
+        },
+        "I2cMux_9545Chan3": {
+            "Chips": [
+                "Chip_Hi1822",
+                "Pca9555_PCIe",
+                "Eeprom_NetCard"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_Hi1822": {
+            "OffsetWidth": 0,
+            "AddrWidth": 1,
+            "Address": 232,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 2,
+            "ReadRetryTimes": 0
+        },
+        "Pca9555_PCIe": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 68,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Eeprom_NetCard": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 172,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "Accessor_WP": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 8,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 7,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_BoardID": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 0,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "#/Cont_BoardID",
+            "Value": 0
+        },
+        "Cont_BoardID": {
+            "Num": 5,
+            "DefaultValue": 0
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (SP323D)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "SP323D",
+            "BoardName": "SP323D",
+            "BoardID": 255,
+            "Description": "Hi1822 SP323D (2*32G)FC",
+            "FunctionClass": 2,
+            "VendorID": 6629,
+            "DeviceID": 547,
+            "SubVendorID": 6629,
+            "SubDeviceID": 91,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Huawei",
+            "PartNumber": "0302074895",
+            "RefChip": "#/Chip_Hi1822",
+            "Protocol": "SmBus",
+            "MaxFrameLen": 64,
+            "Model": "Hi1822-FC",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbID": "#/Accessor_PcbID.Value",
+            "PcbVersion": ".A",
+            "Health": "<=/Component_PCIeCard.Health",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "SP323D",
+            "Manufacturer": "Huawei",
+            "Description": "2*32Gb",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "Hi1822-FC",
+            "ModelDescription": "2*32Gb",
+            "ChipManufacturer": "Huawei",
+            "NetworkPortCount": 2,
+            "BoardName": "SP323D",
+            "VendorID": "0x19e5",
+            "DeviceID": "0x0223",
+            "SubsystemVendorID": "0x19e5",
+            "SubsystemDeviceID": "0x0061",
+            "BoardID": 255,
+            "ComponentUniqueID": "N/A",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PCBVersion": ".A"
+            },
+            "FruId": "<=/Fru_PCIeCard.FruId",
+            "SupportedMctp": true,
+            "SupportedLLDP": true,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "RefChip": "#/Chip_Hi1822",
+            "SpecialPcieCard": true,
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "ParentCardSlotId": 255,
+            "FaultState": 0,
+            "Health": "<=/Component_PCIeCard.Health",
+            "BandwidthThresholdPercent": 100
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "Description": "SP323D网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_Hi1822Temp.SensorName"
+        },
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "Description": "SP323D网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": true,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "N/A",
+            "Name": "SP323D",
+            "Manufacturer": "Huawei",
+            "Type": "PCIeCard",
+            "Description": "2*32Gb",
+            "PartNumber": "0302074895",
+            "PcbVersion": "<=/Fru_PCIeCard.PcbVersion",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 255,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Fru_PCIeCard.FruId"
+        },
+        "Fru_PCIeCard": {
+            "PcbId": "#/Accessor_PcbID.Value",
+            "FruId": 1,
+            "FruName": "SP323D",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 255,
+            "UniqueId": "N/A"
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 2,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "32Gb",
+            "BandwidthUsagePercent": 0
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 2,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "32Gb",
+            "BandwidthUsagePercent": 0
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "ThresholdSensor_Hi1822Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_Hi1822OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Hi1822Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Hi1822Temp.PositiveHysteresis"
+        },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCA9555ReadFail": {
+            "EventKeyId": "BMC.BMCAccessI2CDeviceFailure",
+            "Condition": 1
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_FRUReadFailMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardAccessFRULableFailure",
+            "Condition": 1
+        },
+        "Event_PCIeRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardRecovError",
+            "Condition": 1
+        },
+        "Event_PCIeUnRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardUnRecovError",
+            "Condition": 3
+        },
+        "Event_PCIeSelfTestFail": {
+            "EventKeyId": "PCIeCard.PCIESelfTestFail",
+            "Condition": 2
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "FruData_DPUCard": {
+            "FruId": 1,
+            "StorageType": "MCU"
+        },
+        "Component_DPUCard_0": {
+            "FruId": "<=/Fru_DPUCard.FruId",
+            "Instance": "<=/PCIeDevice_0.SlotID",
+            "Type": 57,
+            "Name": "<=/PCIeDevice_0.DeviceName",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device(SDI)",
+            "BoardId": "<=/Fru_DPUCard.BoardId",
+            "GroupId": 1,
+            "PowerState": 1
+        },
+        "Fru_DPUCard": {
+            "PcbVersion": "",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": 1,
+            "Type": 57,
+            "FruDataId": "#/FruData_DPUCard"
+        },
+        "Event_PCIeCardHeartBeatAbnormal": {
+            "Reading": "<=/DPUCard_0.HeartBeatLoss",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Component_DPUCard_0.Name",
+            "Component": "#/Component_DPUCard_0"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_0.DiagnosticFault;<=/PCIeDevice_0.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard_0.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_DPUCard_0"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_0.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard_0.Name",
+            "Component": "#/Component_DPUCard_0"
+        }
+    }
+}

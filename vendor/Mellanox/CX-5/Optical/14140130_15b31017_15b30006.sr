@@ -1,0 +1,207 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {}
+    },
+    "Objects": {
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (MCX515A-CCAT)",
+            "FunctionClass": 2,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Position": "",
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "MCX515A-CCAT",
+            "BoardName": "MCX515A-CCAT",
+            "BoardID": 0,
+            "Description": "MCX515A-CCAT/1*100G",
+            "FunctionClass": 2,
+            "VendorID": 5555,
+            "DeviceID": 4119,
+            "SubVendorID": 5555,
+            "SubDeviceID": 6,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Mellanox",
+            "PartNumber": "06310149",
+            "Protocol": "255",
+            "MaxFrameLen": 0,
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "CX5",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbID": 0,
+            "PcbVersion": ".A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "SerialNumber": "",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "MCX515A-CCAT",
+            "Model": "CX5",
+            "Manufacturer": "Mellanox",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PCBVersion": ".A"
+            },
+            "FruId": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "ParentCardSlotId": 255,
+            "LinkSpeedCapability": "N/A",
+            "LinkSpeed": "N/A",
+            "Description": "1*100GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "ChipVendor": "Mellanox",
+            "ChipManufacturer": "Mellanox",
+            "NetworkPortCount": 1,
+            "BoardName": "N/A",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x1017",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0006",
+            "BoardID": 85,
+            "ComponentUniqueID": "N/A",
+            "SupportedMctp": false,
+            "SupportedLLDP": false,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "ModelDescription": "1*100GE",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "LinkWidthCapability": "N/A",
+            "LinkWidth": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "Health": "<=/Component_PCIeCard.Health",
+            "BandwidthThresholdPercent": 100
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "100G",
+            "BandwidthUsagePercent": 0
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "N/A",
+            "Name": "N/A",
+            "Manufacturer": "Mellanox",
+            "Type": "PCIeCard",
+            "Description": "1*100GE",
+            "PartNumber": "N/A",
+            "PcbVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PcbVersion": ".A"
+            },
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 85,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+            "NodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Component_PCIeCard.FruId"
+        }
+    }
+}

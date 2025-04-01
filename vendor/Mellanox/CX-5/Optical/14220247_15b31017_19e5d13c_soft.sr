@@ -1,0 +1,90 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "FruData_Fru0": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_NIC",
+            "EepromWp": 0,
+            "BoardPartNumber": "N/A",
+            "BoardSerialNumber": "N/A",
+            "StorageType": "EepromV2"
+        },
+        "Component_OCPCard": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 83,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+        },
+        "Fru_OCP": {
+            "PcbVersion": ".A",
+            "PowerState": 0,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_NIC.HealthStatus",
+            "Type": 83,
+            "FruDataId": "#/FruData_Fru0"
+        },
+        "ThresholdSensor_OCPTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_OCPCard.Id",
+            "EntityInstance": "<=/Entity_OCPCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "OCP${Slot} Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_NIC_Lm75.Value",
+            "ReadingStatus": "<=/Scanner_NIC_Lm75.Status"
+        },
+        "Entity_OCPCard": {
+            "Id": 11,
+            "Instance": 101,
+            "Name": "Pcie Card",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_OCPCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        }
+    }
+}

@@ -1,0 +1,273 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PSU",
+        "Name": "OnePower_0"
+    },
+    "Objects": {
+        "FruData_Ps": {
+            "FruId": 1,
+            "StorageType": "Power"
+        },
+        "Component_PowerSupply": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 3,
+            "Location": "chassis",
+            "Name": "PS",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/OnePower_0.SerialNumber",
+            "PartNumber": "<=/OnePower_0.PartNumber",
+            "BoardId": "<=/Fru_Ps.BoardId",
+            "GroupId": 1
+        },
+        "Fru_Ps": {
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": 1,
+            "Type": 3,
+            "FruDataId": "#/FruData_Ps"
+        },
+        "ThresholdSensor_PsuOutputPower": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} POut",
+            "Unit": 0,
+            "BaseUnit": 6,
+            "Analog": 1,
+            "MaximumReading": 255,
+            "Reading": "<=/OnePower_0.OutputPowerWatts"
+        },
+        "ThresholdSensor_PsuInletTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} Inlet Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "Analog": 1,
+            "Reading": "<=/OnePower_0.EnvTemperatureCelsius"
+        },
+        "ThresholdSensor_PsuCoreTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "Analog": 1,
+            "Reading": "<=/OnePower_0.PrimaryChipTemperatureCelsius"
+        },
+        "ThresholdSensor_PsuVin": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 2,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} VIN",
+            "BaseUnit": 4,
+            "Analog": 1,
+            "Reading": "<=/OnePower_0.InputVoltage"
+        },
+        "ThresholdSensor_PsuVout": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 2,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} VOUT",
+            "BaseUnit": 4,
+            "Analog": 1,
+            "M": 1,
+            "Reading": "<=/OnePower_0.OutputVoltage"
+        },
+        "ThresholdSensor_PsuIout": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 3,
+            "ReadingType": 1,
+            "SensorName": "PS${Slot} IOUT",
+            "BaseUnit": 5,
+            "Analog": 1,
+            "M": 1,
+            "Reading": "<=/OnePower_0.OutputCurrentAmps"
+        },
+        "DiscreteSensor_PsTempStatus": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 33,
+            "ReadingType": 111,
+            "SensorName": "PS${Slot} Temp Status",
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_PsListen3": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/OnePower_0.OverTemperature",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PsTempStatus"
+        },
+        "Entity_PowerSupply": {
+            "Id": 10,
+            "Instance": 96,
+            "Name": "PowerSupply${Slot}",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_PSFailure": {
+            "Reading": "<=/OnePower_0.Failure",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinUvFault": {
+            "Reading": "<=/OnePower_0.InputVoltageFault |> expr($1 == 32768 ? 32768 : $1 & 16)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 32768,
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutOvFault": {
+            "Reading": "<=/OnePower_0.OutputVoltageFault |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutUvFault": {
+            "Reading": "<=/OnePower_0.OutputVoltageFault;<=/Scanner_PsuIPOKStatus.Value;<=/Scanner_PsuOPOKStatus.Value;<=/OnePower_0.IsUpgrading;<=/OnePower_0.DeepSleepEnabled |> expr(($2 == 1 && $4 == false && $5 == 0) ? (($1 == 16 || $3 == 0 ) ? 16 : 0) : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_IoutOcFault": {
+            "Reading": "<=/OnePower_0.OutputCurrentFault |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinOvFault": {
+            "Reading": "<=/OnePower_0.InputVoltageFault |> expr($1 == 32768 ? 32768 : $1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 32768,
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinUvWarning": {
+            "Reading": "<=/OnePower_0.InputVoltageFault |> expr($1 == 32768 ? 32768 : $1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 32768,
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutOvWarning": {
+            "Reading": "<=/OnePower_0.OutputVoltageFault |> expr($1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutUvWarning": {
+            "Reading": "<=/OnePower_0.OutputVoltageFault |> expr($1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_IoutOcWarning": {
+            "Reading": "<=/OnePower_0.OutputCurrentFault |> expr($1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinOvWarning": {
+            "Reading": "<=/OnePower_0.InputVoltageFault |> expr($1 == 32768 ? 32768 : $1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 32768,
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_PSOverTemp": {
+            "Reading": "<=/OnePower_0.OverTemperature |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_OtWarning": {
+            "Reading": "<=/OnePower_0.OverTemperature |> expr($1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        }
+    }
+}

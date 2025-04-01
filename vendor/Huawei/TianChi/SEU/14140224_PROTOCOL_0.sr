@@ -1,0 +1,211 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_SMC"
+            ]
+        },
+        "I2cMux_SMC": {
+            "Chips": [
+                "Chip_Temp",
+                "Chip_Virtual_SSD",
+                "Chip_SSD"
+            ]
+        }
+    },
+    "Objects": {
+        "Nvme_1": {
+            "Slot": "${Slot}",
+            "TemperatureCelsius": "<=/Scanner_Temp.Value",
+            "MediaType": 1,
+            "Protocol": 6,
+            "Revision": "<=/Scanner_SSD_Firmware.Value",
+            "PredictedMediaLifeLeftPercent": "<=/Scanner_Remtime.Value",
+            "RefComponent": "#/Component_PCIeCard",
+            "Failure": "<=/Scanner_SSD_Fault.Value",
+            "PredictiveFailure": "<=/Scanner_SSD_Pre_Fault.Value",
+            "VPDChip": "#/Chip_Virtual_SSD",
+            "SSDChip": "#/Chip_SSD"
+        },
+        "Chip_Virtual_SSD": {
+            "Address": 166,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Chip_SSD": {
+            "Address": 212,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_SSD_Enabled": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 0,
+            "Size": 8,
+            "Mask": 255,
+            "Type": 1,
+            "Period": 2000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "Scanner_SSD_ReadVPDFail": {
+            "Chip": "#/Chip_Virtual_SSD",
+            "Offset": 0,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 5000,
+            "FailureDebounceCount": 8,
+            "SuccessDebounceCount": 1,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
+        },
+        "Scanner_SSD_Firmware": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 39,
+            "Size": 8,
+            "Mask": 255,
+            "Type": 1,
+            "Period": 60000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "Scanner_Remtime": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 4,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "Chip_Temp": {
+            "Address": 213,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_Temp": {
+            "Chip": "#/Chip_Temp",
+            "Offset": 3,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "#/MidAvg_DiskTemp",
+            "NominalValue": 20,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 20
+        },
+        "ThresholdSensor_NvmeTemp": {
+            "AssertMask": 29312,
+            "DeassertMask": 29312,
+            "ReadingMask": 6168,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperCritical": 85,
+            "UpperNoncritical": 84,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_NVMeTempHighMinor": {
+            "EventKeyId": "PCIeCard.DiskOverTempMinor",
+            "Condition": "<=/ThresholdSensor_NvmeTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_NvmeTemp.PositiveHysteresis"
+        },
+        "Event_NVMeTempHighMajor": {
+            "EventKeyId": "Disk.DiskMaxTempMajorInfo",
+            "Condition": "<=/ThresholdSensor_NvmeTemp.UpperCritical",
+            "Hysteresis": "<=/ThresholdSensor_NvmeTemp.PositiveHysteresis"
+        },
+        "Event_NVMeTempFail": {
+            "EventKeyId": "Disk.DiskAccessTempFailure",
+            "Condition": 1
+        },
+        "CoolingRequirement_1_60": {
+            "RequirementId": "${Slot} |> expr((60 << 8) | $1)",
+            "MonitoringStatus": "<=/Scanner_Temp.Value |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/Scanner_Temp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 68,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": []
+        },
+        "Scanner_SSD_Fault": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "Scanner_SSD_Pre_Fault": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 2,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 2000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "MidAvg_DiskTemp": {
+            "WindowSize": 3,
+            "DefaultValue": 20
+        },
+        "Event_VPDReadFail": {
+            "EventKeyId": "Disk.VPDReadFail",
+            "Condition": 1
+        }
+    },
+    "SmcDfxInfo_NVMe": {
+        "Chip": "#/Chip_SSD",
+        "Offset": 0,
+        "Size": 8,
+        "Period": 2000,
+        "SmcVersion": 100,
+        "Config": {
+            "0": {"ssd_enabled_byte_0": 255},
+            "1": {"failure": 255},
+            "2": {"pre_failure": 255},
+            "3": {"ssd_enabled_byte_3": 255},
+            "4": {"remtime": 255},
+            "5": {"ssd_enabled_byte_5": 255},
+            "6": {"ssd_enabled_byte_6": 255},
+            "7": {"ssd_enabled_byte_7": 255}
+        },
+        "Mapping": {
+            "Scanner_SSD_Enabled": {"Value": "expr($ssd_enabled_byte_0 + ($failure << 8) + ($pre_failure << 16) + ($ssd_enabled_byte_3 << 24) + ($remtime << 32) + ($ssd_enabled_byte_5 << 40) + ($ssd_enabled_byte_6 << 48) + ($ssd_enabled_byte_7 << 56))"},
+            "Scanner_Remtime": {"Value": "expr($remtime)"},
+            "Scanner_SSD_Fault": {"Value": "expr($failure)"},
+            "Scanner_SSD_Pre_Fault": {"Value": "expr($pre_failure)"}
+        },
+        "Context": {
+          "SmcVersion": "expr(100)"
+        }
+    }
+}

@@ -1,0 +1,1662 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_1",
+                "I2c_2"
+            ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_ExpBoardSMC": {
+            "Name": "ExpBoardSMC",
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Accessor_PowerGd": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Size": 1,
+            "Offset": 469765888,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_PowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469765888,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Entity_CPU1": {
+			"Id": 3,
+			"Instance": 96,
+			"Name": "CPU1",
+			"PowerState": 1,
+			"Presence": 1
+		},
+		"Entity_CPU2": {
+			"Id": 3,
+			"Instance": 97,
+			"Name": "CPU2",
+			"PowerState": 1,
+			"Presence": 1
+		},
+        "Component_ComCpu1": {
+			"FruId": 255,
+			"Instance": 1,
+			"Type": 0,
+			"Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%s', $1)",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"NodeId": "1"
+		},
+        "Component_ComCpu2": {
+			"FruId": 255,
+			"Instance": 2,
+			"Type": 0,
+			"Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%s', $1)",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"NodeId": "2"
+		},
+        "ThresholdSensor_CPU1DACORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU1 0V9_DACORE",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 132,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DACORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU1_DACORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DBCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU1 0V9_DBCORE",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 132,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DBCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU1_DBCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DA_UNCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU1 0V85_DA_UC",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 110,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU1_DA_UNCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DB_UNCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU1 0V85_DB_UC",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 110,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU1_DB_UNCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DACORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU2 0V9_DACORE",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 132,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DACORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU2_DACORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DBCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU2 0V9_DBCORE",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 132,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DBCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU2_DBCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DA_UNCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU2 0V85_DA_UC",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 110,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU2_DA_UNCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DB_UNCORE": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "CPU2 0V85_DB_UC",
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"BaseUnit": 4,
+			"M": 1,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 80,
+			"MaximumReading": 255,
+			"UpperCritical": 110,
+			"LowerCritical": 52,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.Voltage |> expr($1 * 100) |> expr(($1 == 0 || $1 >= 255) ? 80 : $1)",
+			"@Default": {
+				"Reading": 80,
+				"ReadingStatus": 2
+			},
+			"ReadingStatus": "<=/Scanner_PowerGood.Value;<=/VrdPower_CPU2_DB_UNCORE.Voltage |> expr(($1 == 0 || $2 == 0 || $2 == 255) ? 2 : 0)",
+			"SensorNumber": 255
+		},
+        "VrdMgmt_1": {
+			"SystemId": 1,
+			"CpuId": 1
+		},
+		"VrdChip_U9": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip0"
+        },
+		"VrdChip_U14": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip1"
+        },
+		"VrdChip_U26": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip2"
+        },
+		"VrdChip_U28": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip3"
+        },
+		"VrdChip_U15333": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip4"
+        },
+		"VrdChip_U49": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip5"
+        },
+		"VrdChip_U42": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip6"
+        },
+		"VrdChip_U38": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip7"
+        },
+		"VrdChip_U40": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip8"
+        },
+		"VrdChip_U15330": {
+            "@Parent": "VrdMgmt_1",
+            "Name": "VrdChip9"
+        },
+        "VrdPower_CPU1_DACORE": {
+			"@Parent": "VrdChip_U9",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 0,
+            "DieId": 0
+        },
+		"VrdPower_CPU1_DACORE_MEM": {
+			"@Parent": "VrdChip_U9",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 5,
+            "DieId": 0
+        },
+		"VrdPower_CPU1_DA_UNCORE": {
+			"@Parent": "VrdChip_U14",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 1,
+            "DieId": 0
+        },
+		"VrdPower_CPU1_DA_UNCORE_MEM": {
+			"@Parent": "VrdChip_U14",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 6,
+            "DieId": 0
+        },
+		"VrdPower_CPU1_DBCORE": {
+			"@Parent": "VrdChip_U26",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 0,
+            "DieId": 1
+        },
+		"VrdPower_CPU1_DBCORE_MEM": {
+			"@Parent": "VrdChip_U26",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 5,
+            "DieId": 1
+        },
+		"VrdPower_CPU1_DB_UNCORE": {
+			"@Parent": "VrdChip_U28",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 1,
+            "DieId": 1
+        },
+		"VrdPower_CPU1_DB_UNCORE_MEM": {
+			"@Parent": "VrdChip_U28",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 6,
+            "DieId": 1
+        },
+		"VrdPower_CPU1_DA_DDR": {
+			"@Parent": "VrdChip_U15333",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 2,
+            "DieId": 0
+        },
+		"VrdPower_CPU1_DB_DDR": {
+			"@Parent": "VrdChip_U49",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 2,
+            "DieId": 1
+        },
+		"VrdPower_CPU1_IACORE": {
+			"@Parent": "VrdChip_U38",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 3,
+            "DieId": 2
+        },
+		"VrdPower_CPU1_IBCORE": {
+			"@Parent": "VrdChip_U15330",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 3,
+            "DieId": 3
+        },
+		"VrdPower_CPU1_SIOE": {
+			"@Parent": "VrdChip_U49",
+            "SystemId": 1,
+            "CpuId": 1,
+            "Type": 7,
+            "DieId": 255
+        },
+		"VrdMgmt_2": {
+			"SystemId": 1,
+			"CpuId": 2
+		},
+		"VrdChip_U137": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip10"
+        },
+		"VrdChip_U43": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip11"
+        },
+		"VrdChip_U120": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip12"
+        },
+		"VrdChip_U119": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip13"
+        },
+		"VrdChip_U161": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip14"
+        },
+		"VrdChip_U96": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip15"
+        },
+		"VrdChip_U63": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip16"
+        },
+		"VrdChip_U34": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip17"
+        },
+		"VrdChip_U75": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip18"
+        },
+		"VrdChip_U29": {
+            "@Parent": "VrdMgmt_2",
+            "Name": "VrdChip19"
+        },
+        "VrdPower_CPU2_DACORE": {
+			"@Parent": "VrdChip_U137",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 0,
+            "DieId": 0
+        },
+		"VrdPower_CPU2_DACORE_MEM": {
+			"@Parent": "VrdChip_U137",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 5,
+            "DieId": 0
+        },
+		"VrdPower_CPU2_DA_UNCORE": {
+			"@Parent": "VrdChip_U43",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 1,
+            "DieId": 0
+        },
+		"VrdPower_CPU2_DA_UNCORE_MEM": {
+			"@Parent": "VrdChip_U43",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 6,
+            "DieId": 0
+        },
+		"VrdPower_CPU2_DBCORE": {
+			"@Parent": "VrdChip_U120",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 0,
+            "DieId": 1
+        },
+		"VrdPower_CPU2_DBCORE_MEM": {
+			"@Parent": "VrdChip_U120",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 5,
+            "DieId": 1
+        },
+		"VrdPower_CPU2_DB_UNCORE": {
+			"@Parent": "VrdChip_U119",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 1,
+            "DieId": 1
+        },
+		"VrdPower_CPU2_DB_UNCORE_MEM": {
+			"@Parent": "VrdChip_U119",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 6,
+            "DieId": 1
+        },
+		"VrdPower_CPU2_DA_DDR": {
+			"@Parent": "VrdChip_U161",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 2,
+            "DieId": 0
+        },
+		"VrdPower_CPU2_DB_DDR": {
+			"@Parent": "VrdChip_U96",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 2,
+            "DieId": 1
+        },
+		"VrdPower_CPU2_IACORE": {
+			"@Parent": "VrdChip_U34",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 3,
+            "DieId": 2
+        },
+		"VrdPower_CPU2_IBCORE": {
+			"@Parent": "VrdChip_U29",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 3,
+            "DieId": 3
+        },
+		"VrdPower_CPU2_SIOE": {
+			"@Parent": "VrdChip_U96",
+            "SystemId": 1,
+            "CpuId": 2,
+            "Type": 7,
+            "DieId": 255
+        },
+		"CoolingRequirement_1_30": {
+			"RequirementId": 30,
+			"Description": "VRD1目标调速配置",
+			"MonitoringStatus": "<=/VrdMgmt_1.VrdTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+			"MonitoringValue": "<=/VrdMgmt_1.VrdTemperatureCelsius",
+			"FailedValue": 80,
+			"TargetTemperatureCelsius": 90,
+			"MaxAllowedTemperatureCelsius": 100,
+			"TargetTemperatureRangeCelsius": [],
+			"ThresholdValue": [],
+			"AlarmSpeed": [],
+			"SmartCoolingTargetTemperature": [],
+			"CustomSupported": false,
+			"CustomTargetTemperatureCelsius": 255
+		},
+		"CoolingRequirement_1_31": {
+			"RequirementId": 31,
+			"Description": "VRD2目标调速配置",
+			"MonitoringStatus": "<=/VrdMgmt_2.VrdTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+			"MonitoringValue": "<=/VrdMgmt_2.VrdTemperatureCelsius",
+			"FailedValue": 80,
+			"TargetTemperatureCelsius": 90,
+			"MaxAllowedTemperatureCelsius": 100,
+			"TargetTemperatureRangeCelsius": [],
+			"ThresholdValue": [],
+			"AlarmSpeed": [],
+			"SmartCoolingTargetTemperature": [],
+			"CustomSupported": false,
+			"CustomTargetTemperatureCelsius": 255
+		},
+        "ThresholdSensor_CPU1DACORETemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 DACORE Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DACORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU1_DACORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DBCORETemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 DBCORE Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DBCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU1_DBCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DAUCTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 DA_UC Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU1_DA_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU1DBUCTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 DB_UC Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU1_DB_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_Cpu1VrdTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 VRD Temp",
+			"AssertMask": 128,
+			"DeassertMask": 4224,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 1,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdMgmt_1.VrdTemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdMgmt_1.VrdTemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"Event_Cpu1VrdOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdMgmt_1.VrdTemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+			"Condition": "<=/ThresholdSensor_Cpu1VrdTemp.UpperNoncritical",
+			"@Default": {
+				"Condition": 120
+			},
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_Cpu1VrdOverTempMinor.Reading",
+			"DescArg3": "#/Event_Cpu1VrdOverTempMinor.Condition",
+			"DescArg4": "max",
+			"Component": "#/Component_ComCpu1"
+		},
+		"ThresholdSensor_CPU2DACORETemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU2 DACORE Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DACORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU2_DACORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DBCORETemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU2 DBCORE Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DBCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU2_DBCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DAUCTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU2 DA_UC Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU2_DA_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPU2DBUCTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU2 DB_UC Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.TemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdPower_CPU2_DB_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_Cpu2VrdTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU2.Id",
+			"EntityInstance": "<=/Entity_CPU2.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU2 VRD Temp",
+			"AssertMask": 128,
+			"DeassertMask": 4224,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 1,
+			"Analog": 1,
+			"NominalReading": 30,
+			"UpperNoncritical": 120,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/VrdMgmt_2.VrdTemperatureCelsius |> expr($1 > 255 ? 128 : $1)",
+			"ReadingStatus": "<=/VrdMgmt_2.VrdTemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+			"SensorNumber": 255
+		},
+		"Event_Cpu2VrdOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdMgmt_2.VrdTemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+			"Condition": "<=/ThresholdSensor_Cpu2VrdTemp.UpperNoncritical",
+			"@Default": {
+				"Condition": 120
+			},
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"Enabled": true,
+			"DescArg1": "2",
+			"DescArg2": "#/Event_Cpu2VrdOverTempMinor.Reading",
+			"DescArg3": "#/Event_Cpu2VrdOverTempMinor.Condition",
+			"DescArg4": "max",
+			"Component": "#/Component_ComCpu2"
+		},
+        "Event_CPU1DACOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU1_DACORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_CPU1DACOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CPU1DBCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU1_DBCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_CPU1DBCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CPU1DAUNCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_CPU1DAUNCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CPU1DBUNCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_CPU1DBUNCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CPU2DACOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU1_DACORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "2",
+			"DescArg2": "#/Event_CPU2DACOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu2"
+		},
+		"Event_CPU2DBCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU2_DBCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "2",
+			"DescArg2": "#/Event_CPU2DBCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu2"
+		},
+		"Event_CPU2DAUNCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "2",
+			"DescArg2": "#/Event_CPU2DAUNCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu2"
+		},
+		"Event_CPU2DBUNCOREOverTempMinor": {
+			"EventKeyId": "CPU.VRDOverTempMinor",
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+			"Condition": 120,
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"DescArg1": "2",
+			"DescArg2": "#/Event_CPU2DBUNCOREOverTempMinor.Reading",
+			"DescArg3": "120",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu2"
+		},
+		"Event_CPU1DACORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU1_DACORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DACORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DACOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU1_DACORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 1.32,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DACORE.Voltage",
+			"DescArg3": "1.32",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DBCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU1_DBCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DBCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DBCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU1_DBCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 1.32,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DBCORE.Voltage",
+			"DescArg3": "1.32",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DAUNCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DA_UNCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DAUNCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 1.1,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DA_UNCORE.Voltage",
+			"DescArg3": "1.1",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DBUNCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DB_UNCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DBUNCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 1.1,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "1",
+			"DescArg2": "#/VrdPower_CPU1_DB_UNCORE.Voltage",
+			"DescArg3": "1.1",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DACORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU2_DACORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DACORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DACOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU2_DACORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 1.32,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DACORE.Voltage",
+			"DescArg3": "1.32",
+			"DescArg4": "DACore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DBCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU2_DBCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DBCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DBCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU2_DBCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.7 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.7 : $1))",
+			"@Default": {
+				"Reading": 0.7
+			},
+			"Condition": 1.32,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DBCORE.Voltage",
+			"DescArg3": "1.32",
+			"DescArg4": "DBCore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DAUNCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DA_UNCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DAUNCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 1.1,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DA_UNCORE.Voltage",
+			"DescArg3": "1.1",
+			"DescArg4": "DA Uncore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DBUNCORELowerVoltage": {
+			"EventKeyId": "CPU.CPUVRDLowerVoltage",
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 0.52,
+			"OperatorId": 2,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DB_UNCORE.Voltage",
+			"DescArg3": "0.52",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU2DBUNCOREOverVoltage": {
+			"EventKeyId": "CPU.CPUVRDOverVoltage",
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.Voltage;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 0.75 : (($1 >= 255 || $1 == 1.55  || $1 == 0) ? 0.75 : $1))",
+			"@Default": {
+				"Reading": 0.75
+			},
+			"Condition": 1.1,
+			"OperatorId": 4,
+			"Hysteresis": 0.02,
+			"DescArg1": "2",
+			"DescArg2": "#/VrdPower_CPU2_DB_UNCORE.Voltage",
+			"DescArg3": "1.1",
+			"DescArg4": "DB Uncore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "4"
+		},
+		"Event_CPU1DACoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU1_DACORE.Voltage;<=/VrdMgmt_1.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "1",
+			"DescArg2": "DACore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU1DBCoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU1_DBCORE.Voltage;<=/VrdMgmt_1.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "1",
+			"DescArg2": "DBCore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU1DAUncoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU1_DA_UNCORE.Voltage;<=/VrdMgmt_1.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "1",
+			"DescArg2": "DA Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU1DBUncoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU1_DB_UNCORE.Voltage;<=/VrdMgmt_1.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "1",
+			"DescArg2": "DB Uncore",
+			"Component": "#/Component_ComCpu1",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU2DACoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU2_DACORE.Voltage;<=/VrdMgmt_2.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "2",
+			"DescArg2": "DACore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU2DBCoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU2_DBCORE.Voltage;<=/VrdMgmt_2.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "2",
+			"DescArg2": "DBCore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "2"
+		},
+		"Event_CPU2DAUncoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU2_DA_UNCORE.Voltage;<=/VrdMgmt_2.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "2",
+			"DescArg2": "DA Uncore",
+			"Component": "#/Component_ComCpu2"
+		},
+		"Event_CPU2DBUncoreVoltageFailed": {
+			"EventKeyId": "CPU.CPUAccessVRDVoltFailure",
+			"Reading": "<=/VrdPower_CPU2_DB_UNCORE.Voltage;<=/VrdMgmt_2.Status |> expr(($2 == 1) ? 0 : (($1 == 255) ? 1 : 0))",
+			"Condition": 1,
+			"OperatorId": 5,
+			"DescArg1": "2",
+			"DescArg2": "DB Uncore",
+			"Component": "#/Component_ComCpu2",
+			"AdditionalInfo": "2"
+		},
+		"DftMemoryVolt_1": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 1,
+            "ItemName": "V_0V9_CPU1_DA_CORE_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DACORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.32,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_2": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 2,
+            "ItemName": "V_0V9_CPU1_DA_MEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DACORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.232,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_3": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 3,
+            "ItemName": "V_0V85_CPU1_DA_UC_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DA_UNCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_4": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 4,
+            "ItemName": "V_0V85_CPU1_DA_UCMEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DA_UNCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_5": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 5,
+            "ItemName": "V_0V9_CPU1_DB_CORE_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DBCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.32,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_6": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 6,
+            "ItemName": "V_0V9_CPU1_DB_MEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DBCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.232,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_7": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 7,
+            "ItemName": "V_0V85_CPU1_DB_UC_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DB_UNCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_8": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 8,
+            "ItemName": "V_0V85_CPU1_DB_UCMEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DB_UNCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_9": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 9,
+            "ItemName": "V_0V8_CPU1_DA_DDR",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DA_DDR.Voltage",
+            "LowThreshold": 0.6075,
+            "HighThreshold": 0.979,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_10": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 10,
+            "ItemName": "V_0V8_CPU1_DB_DDR",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_DB_DDR.Voltage",
+            "LowThreshold": 0.6075,
+            "HighThreshold": 0.979,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_11": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 11,
+            "ItemName": "V_0V8_CPU1_DADB_PERI_STARS_SIOE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_SIOE.Voltage",
+            "LowThreshold": 0.684,
+            "HighThreshold": 0.924,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_12": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 12,
+            "ItemName": "V_0V8_CPU1_DA0B1_CORE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_IACORE.Voltage",
+            "LowThreshold": 0.648,
+            "HighThreshold": 1.0285,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_13": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 13,
+            "ItemName": "V_0V8_CPU1_DA1B0_CORE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU1_IBCORE.Voltage",
+            "LowThreshold": 0.648,
+            "HighThreshold": 1.0285,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_14": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 14,
+            "ItemName": "V_0V9_CPU2_DA_CORE_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DACORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.32,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_15": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 15,
+            "ItemName": "V_0V9_CPU2_DA_MEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DACORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.232,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_16": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 16,
+            "ItemName": "V_0V85_CPU2_DA_UC_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DA_UNCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_17": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 17,
+            "ItemName": "V_0V85_CPU2_DA_UCMEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DA_UNCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_18": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 18,
+            "ItemName": "V_0V9_CPU2_DB_CORE_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DBCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.32,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_19": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 19,
+            "ItemName": "V_0V9_CPU2_DB_MEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DBCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.232,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_20": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 20,
+            "ItemName": "V_0V85_CPU2_DB_UC_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DB_UNCORE.Voltage",
+            "LowThreshold": 0.522,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_21": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 21,
+            "ItemName": "V_0V85_CPU2_DB_UCMEM_DVFS",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DB_UNCORE_MEM.Voltage",
+            "LowThreshold": 0.675,
+            "HighThreshold": 1.1,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_22": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 22,
+            "ItemName": "V_0V8_CPU2_DA_DDR",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DA_DDR.Voltage",
+            "LowThreshold": 0.6075,
+            "HighThreshold": 0.979,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_23": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 23,
+            "ItemName": "V_0V8_CPU2_DB_DDR",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_DB_DDR.Voltage",
+            "LowThreshold": 0.6075,
+            "HighThreshold": 0.979,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_24": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 24,
+            "ItemName": "V_0V8_CPU2_DADB_PERI_STARS_SIOE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_SIOE.Voltage",
+            "LowThreshold": 0.684,
+            "HighThreshold": 0.924,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_25": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 25,
+            "ItemName": "V_0V8_CPU2_DA0B1_CORE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_IACORE.Voltage",
+            "LowThreshold": 0.648,
+            "HighThreshold": 1.0285,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftMemoryVolt_26": {
+            "Type": 1,
+            "Id": 17,
+            "DeviceNum": 26,
+            "ItemName": "V_0V8_CPU2_DA1B0_CORE",
+            "Slot": "${Slot}",
+            "ProcessPeriod": 65535,
+            "VoltValue": "<=/VrdPower_CPU2_IBCORE.Voltage",
+            "LowThreshold": 0.648,
+            "HighThreshold": 1.0285,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        }
+    }
+}

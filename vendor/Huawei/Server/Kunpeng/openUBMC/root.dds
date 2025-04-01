@@ -1,0 +1,13 @@
+{
+    "Type": "Component",
+    "Objects": {
+        "RootBoard": {
+            "Path": "/bmc/dev/Systems/:SystemId/RootBoard",
+            "Interfaces": [
+                "bmc.dev.Attach",
+                "bmc.dev.Board",
+                "bmc.dev.Bus"
+            ]
+        }
+    }
+}

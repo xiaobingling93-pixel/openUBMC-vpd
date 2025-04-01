@@ -1,0 +1,236 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Eeprom_NetCard"
+            ]
+        }
+    },
+    "Objects": {
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (MCX623105AN-VDAT)",
+            "FunctionClass": 2,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Position": "",
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "MCX623105AN-VDAT",
+            "BoardName": "MCX623105AN-VDAT",
+            "BoardID": 65535,
+            "Description": "MCX623105AN-VDAT/1*200G",
+            "FunctionClass": 2,
+            "VendorID": 5555,
+            "DeviceID": 4125,
+            "SubVendorID": 5555,
+            "SubDeviceID": 24,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Nvidia",
+            "PartNumber": "06310377",
+            "Protocol": "255",
+            "MaxFrameLen": 0,
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "CX6-DX",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbID": 0,
+            "PcbVersion": ".A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "MCX623105AN-VDAT",
+            "Model": "CX6-DX",
+            "Manufacturer": "Nvidia",
+            "ChipModel": "CX6-DX",
+            "Description": "1*200GE",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PCBVersion": ".A"
+            },
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "ParentCardSlotId": 255,
+            "LinkSpeedCapability": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "BandwidthThresholdPercent": 100,
+            "NetworkPortCount": 1,
+            "Type": 3,
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "ModelDescription": "1*200GE",
+            "ChipVendor": "Nvidia",
+            "ChipManufacturer": "Nvidia",
+            "BoardName": "MCX623105AN-VDAT",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x101d",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0018",
+            "ComponentUniqueID": "N/A",
+            "FruId": "<=/Fru_PCIeCard.FruId",
+            "SupportedMctp": true,
+            "SupportedLLDP": false,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "LinkWidthCapability": "N/A",
+            "LinkWidth": "N/A",
+            "FaultState": 0,
+            "Health": "<=/Component_PCIeCard.Health"
+        },
+        "CoolingRequirement_1_48": {
+            "RequirementId": "${Slot} |> expr((48 << 8) | $1)",
+            "Description": "MCX623105AN-VDAT网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 95,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200GE"
+        },
+        "Fru_PCIeCard": {
+            "PcbId": 0,
+            "FruId": 1,
+            "FruName": "MCX623105AN-VDAT",
+            "BoardId": 0,
+            "UniqueId": "N/A"
+        },
+        "Eeprom_NetCard": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 160,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        }
+    }
+}

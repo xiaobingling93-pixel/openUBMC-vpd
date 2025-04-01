@@ -1,0 +1,94 @@
+{
+    "FormatVersion": "1.00",
+    "DataVersion": "1.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_2",
+                "I2cMux_pca9545_chan1"
+            ]
+        },
+        "I2c_2": {
+           "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        },
+        "I2cMux_pca9545_chan1": {
+            "Chips": [
+                "Chip_Cdr5902L_0",
+                "Pca9555_nic_chip"
+            ]
+        }
+    },
+    "Objects": {
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": 1,
+            "Name": "NIC 1 (SF223D-H)",
+            "Model": "SD5902L",
+            "Manufacturer": "Huawei",
+            "ChipModel": "Intel",
+            "Type": 1,
+            "Bus": 255,
+            "Device": 255,
+            "Function": 255,
+            "ParentCardSlotId": 255
+        },
+        "Chip_Cdr5902L_0": {
+            "Address": 192,
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0,
+            "HealthStatus":0,
+            "WriteRetryTimes": 3,
+            "ReadRetryTimes": 3
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Accessor_Cdr5902L_AccNotify": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469779969,
+            "Size": 2,
+            "Mask": 2,
+            "Type": 0,
+            "Value": 0
+        },
+        "Pca9555_nic_chip": {
+            "Address": 66,
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0,
+            "HealthStatus":0
+        },
+        "Accessor_Cdr5902L_ChSwitch": {
+            "Chip": "#/Pca9555_nic_chip",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 128,
+            "Type": 0,
+            "Value": 0
+        },
+        "Retimer_Cdr5902L_Obj_0": {
+            "RetimerId": 0,
+            "LoadSequence": 0,
+            "ChipName": "Cdr5902L_Board",
+            "ChipType": 0,
+            "RefChip": "#/Chip_Cdr5902L_0",
+            "ChipVersion": "",
+            "ChipLocation": "U1",
+            "UpgradeGroup": 0,
+            "ReqAccNotify": "#/Accessor_Cdr5902L_AccNotify.Value",
+            "Reset": 0,
+            "LinkStatus": 0,
+            "Switch": "#/Accessor_Cdr5902L_ChSwitch.Value",
+            "IpmiChannelId": 255
+        }
+    }
+}

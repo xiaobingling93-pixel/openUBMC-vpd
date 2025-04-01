@@ -1,0 +1,1430 @@
+{
+  "FormatVersion": "1.16",
+  "DataVersion": "1.39",
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c_0",
+        "I2c_1",
+        "I2c_2",
+        "I2c_3",
+        "I2c_4",
+        "I2c_5",
+        "I2c_7",
+        "I2c_8",
+        "I2c_9",
+        "I2c_11",
+        "Jtag_1",
+        "JtagOverLocalBus_1",
+        "Hisport_0",
+        "Hisport_1",
+        "Hisport_2",
+        "Hisport_3",
+        "Hisport_4",
+        "Hisport_5",
+        "Hisport_6",
+        "Hisport_7",
+        "Hisport_8",
+        "Hisport_9",
+        "Hisport_10",
+        "Hisport_11",
+        "Hisport_12",
+        "Hisport_13",
+        "Hisport_14",
+        "Hisport_15",
+        "Hisport_16",
+        "Hisport_17",
+        "Hisport_18",
+        "Hisport_19",
+        "Hisport_20",
+        "Hisport_21",
+        "Can_0"
+      ]
+    },
+    "Can_0": {
+      "Connectors": [
+        "Connector_PowerSupply_5",
+        "Connector_PowerSupply_6"
+      ]
+    },
+    "I2c_4": {
+      "Chips": [
+        "Smc_ExpBrd1SMC",
+        "Eeprom_EXU"
+      ]
+    },
+    "I2c_5": {
+      "Chips": [
+        "Pca9545_i2c5_chip"
+      ]
+    },
+    "I2c_7": {
+      "Chips": [
+        "Pca9545_i2c7"
+      ]
+    },
+    "Jtag_1": {
+      "Chips": [
+        "Cpld_EXU"
+      ]
+    },
+    "JtagOverLocalBus_1": {
+      "Chips": [
+        "JtagSwitch_1"
+      ]
+    },
+    "JtagSwitch_1": {
+      "Buses": [
+        "JtagMux_JtagSwitch_1_1",
+        "JtagMux_JtagSwitch_1_2",
+        "JtagMux_JtagSwitch_1_7",
+        "JtagMux_JtagSwitch_1_8"
+      ]
+    },
+    "I2c_11": {
+      "Chips": [
+        "Pca9545_i2c11"
+      ]
+    },
+    "Pca9545_i2c5_chip": {
+      "Buses": [
+        "I2cMux_Pca9545_i2c5_chip_1"
+      ]
+    },
+    "I2cMux_Pca9545_i2c5_chip_1": {
+      "Chips": [
+        "Smc_CpuBrdSMC"
+      ],
+      "Connectors": [
+        "Connector_BCU_1"
+      ]
+    },
+    "Pca9545_i2c7": {
+      "Buses": [
+        "I2cMux_Pca9545_i2c7_1",
+        "I2cMux_Pca9545_i2c7_3",
+        "I2cMux_Pca9545_i2c7_4"
+      ]
+    },
+    "I2cMux_Pca9545_i2c7_1": {
+      "Chips": [
+        "Eeprom_Psu_4"
+      ],
+      "Connectors": [
+        "Connector_PowerSupply_4"
+      ]
+    },
+    "I2cMux_Pca9545_i2c7_3": {
+      "Chips": [
+        "Eeprom_EXU_QB900"
+      ],
+      "Connectors": [
+        "Connector_PowerSupply_1"
+      ]
+    },
+    "Pca9545_i2c11": {
+      "Buses": [
+        "I2cMux_Pca9545_i2c11_1",
+        "I2cMux_Pca9545_i2c11_2"
+      ]
+    },
+    "I2cMux_Pca9545_i2c11_1": {
+      "Connectors": [
+        "Connector_L1"
+      ]
+    },
+    "I2cMux_Pca9545_i2c11_2": {
+      "Connectors": [
+        "Connector_SEU_1"
+      ]
+    }
+  },
+  "Objects": {
+    "Smc_ExpBrd1SMC": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 96,
+      "OffsetWidth": 1,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Eeprom_EXU": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 174,
+      "HealthStatus": 0,
+      "OffsetWidth": 2,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 100,
+      "WriteTmout": 100
+    },
+    "JtagSwitch_1": {
+      "Accessor": "#/Accessor_JtagSwitch"
+    },
+    "JtagMux_JtagSwitch_1_1": {
+      "ChannelId": 1
+    },
+    "JtagMux_JtagSwitch_1_2": {
+      "ChannelId": 2
+    },
+    "JtagMux_JtagSwitch_1_7": {
+      "ChannelId": 7
+    },
+    "JtagMux_JtagSwitch_1_8": {
+      "ChannelId": 8
+    },
+    "Pca9545_i2c5_chip": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 226,
+      "HealthStatus": 0,
+      "OffsetWidth": 0,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Smc_CpuBrdSMC": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 96,
+      "OffsetWidth": 1,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Pca9545_i2c7": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 226,
+      "OffsetWidth": 0,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Connector_L1": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2c_4",
+        "I2cMux_Pca9545_i2c7_4",
+        "I2c_8",
+        "I2c_9",
+        "I2cMux_Pca9545_i2c11_1",
+        "JtagMux_JtagSwitch_1_7",
+        "JtagMux_JtagSwitch_1_8"
+      ],
+      "ChassisId": "${ChassisId}",
+      "IdentifyMode": 3,
+      "ManagerId": "${ManagerId}",
+      "Position": 3,
+      "Presence": "<=/Scanner_L1.Value",
+      "SilkText": "EXU2",
+      "Slot": 2,
+      "SystemId": "${SystemId}",
+      "Type": "ExpandBoard"
+    },
+    "Connector_BCU_1": {
+      "@Default": {},
+      "Bom": "14060876",
+      "Buses": [
+        "I2cMux_Pca9545_i2c5_chip_1",
+        "I2c_4",
+        "I2c_8",
+        "JtagMux_JtagSwitch_1_1",
+        "Hisport_0",
+        "Hisport_1",
+        "Hisport_2",
+        "Hisport_3",
+        "Hisport_4",
+        "Hisport_5",
+        "Hisport_6",
+        "Hisport_7",
+        "Hisport_8",
+        "Hisport_9",
+        "Hisport_10",
+        "Hisport_11",
+        "Hisport_12",
+        "Hisport_13",
+        "Hisport_14",
+        "Hisport_15",
+        "Hisport_16",
+        "Hisport_17",
+        "Hisport_18",
+        "Hisport_19",
+        "Hisport_20",
+        "Hisport_21"
+      ],
+      "ChassisId": "${ChassisId}",
+      "IdentifyMode": 3,
+      "ManagerId": "${ManagerId}",
+      "Position": 1,
+      "Presence": "<=/Scanner_BCU_1.Value",
+      "SilkText": "BCU",
+      "Slot": 1,
+      "SystemId": "${SystemId}",
+      "Type": "CPUBoard"
+    },
+    "Connector_SEU_1": {
+      "@Default": {},
+      "Bom": "14100665",
+      "Buses": [
+        "I2c_4",
+        "I2cMux_Pca9545_i2c11_2",
+        "JtagMux_JtagSwitch_1_2"
+      ],
+      "ChassisId": "${ChassisId}",
+      "IdentifyMode": 3,
+      "ManagerId": "${ManagerId}",
+      "Position": 4,
+      "Presence": "<=/Scanner_SEU_1.Value",
+      "SilkText": "SEU",
+      "Slot": 1,
+      "SystemId": "${SystemId}",
+      "Type": "DiskBackplane"
+    },
+    "Cpld_EXU": {
+      "@Default": {},
+      "HealthStatus": 0
+    },
+    "Pca9545_i2c11": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 226,
+      "HealthStatus": 0,
+      "OffsetWidth": 0,
+      "ReadTmout": 0,
+      "WriteTmout": 0
+    },
+    "Scanner_BCU_1": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 32,
+      "Offset": 134237440,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_SEU_1": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 2,
+      "Offset": 134237440,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "FruData_Expander": {
+      "@Default": {},
+      "EepromWp": "#/Accessor_EXUWP.Value",
+      "FruDev": "#/Eeprom_EXU",
+      "FruId": 1,
+      "StorageType": "TianChi"
+    },
+    "Accessor_EXUWP": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 11776,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "SRUpgrade_1": {
+      "@Default": {},
+      "SoftwareId": "HWSR-IT22SMMA",
+      "StorageChip": "#/Eeprom_EXU",
+      "Type": "EXU",
+      "UID": "00000001010302056919",
+      "Version": "1.39",
+      "WriteProtect": "#/Accessor_EXUWP.Value"
+    },
+    "LogicFirmware_EXU_1": {
+      "@Default": {},
+      "DefaultRoute": 0,
+      "FirmwareRoute": 0,
+      "Location": 26,
+      "Manufacturer": "Huawei",
+      "Name": "EXU_CPLD",
+      "SoftwareId": "CPLD-IT22SMMA",
+      "UId": "00000001010302056919",
+      "UpgradeChip": "#/Cpld_EXU",
+      "ChipInfo": "#/Cpld_EXU",
+      "ValidMode": 1,
+      "Version": "#/Accessor_LogicVerId.Value"
+    },
+    "Accessor_LogicVerId": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 2816,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_JtagSwitch": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 469776896,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_AC": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 603983360,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "ACCycle_1": {
+      "@Default": {},
+      "AC": "#/Accessor_AC.Value"
+    },
+    "ExpBoard_1": {
+      "@Default": {},
+      "BoardID": 65535,
+      "CpldTestReg": "#/Accessor_CpldTest.Value",
+      "Description": "Expander Board",
+      "FruID": "<=/Fru_Expander.FruId",
+      "LogicUnit": 5,
+      "LogicVersionID": "#/Accessor_LogicVerId.Value",
+      "Manufacturer": "Huawei",
+      "Name": "IT22SMMA",
+      "NodeId": "EXU${Slot}ExpBoard${Slot}",
+      "Number": 1,
+      "PartNumber": "0302056919",
+      "PcbID": "#/Accessor_PcbID.Value",
+      "Position": "EXU${Slot}",
+      "RefSMCChip": "#/Smc_ExpBrd1SMC",
+      "DeviceName": "ExpBoard${Slot}",
+      "RunningStatus": 0,
+      "Slot": 1,
+      "UID": "00000001010302056919",
+      "SRVersion": "1.39"
+    },
+    "Fru_Expander": {
+      "@Default": {},
+      "ConnectorGroupId": "${GroupId}",
+      "EepStatus": 1,
+      "FruDataId": "#/FruData_Expander",
+      "FruId": 1,
+      "FruName": "ExpBoard${Slot}",
+      "Health": 0,
+      "PcbId": 1,
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Type": 50
+    },
+    "Component_ComEXU": {
+      "@Default": {},
+      "BoardId": "<=/ExpBoard_1.BoardID",
+      "FruId": 255,
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": 255,
+      "Location": "Chassis",
+      "Name": "EXU${Slot}",
+      "PowerState": 1,
+      "Presence": 1,
+      "Type": 193,
+      "UniqueId": "N/A"
+    },
+    "Component_ComExpander": {
+      "@Default": {},
+      "BoardId": "<=/ExpBoard_1.BoardID",
+      "FruId": "<=/Fru_Expander.FruId",
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": "${Slot}",
+      "Location": "<=/ExpBoard_1.Position",
+      "Manufacturer": "<=/ExpBoard_1.Manufacturer",
+      "Name": "<=/ExpBoard_1.DeviceName",
+      "PowerState": 1,
+      "Presence": 1,
+      "ReplaceFlag": 0,
+      "SerialNumber": "<=/FruData_Expander.BoardSerialNumber",
+      "Type": 93,
+      "UniqueId": "<=/ExpBoard_1.UID"
+    },
+    "Component_ComSystem": {
+      "@Default": {},
+      "FruId": 255,
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": 255,
+      "Location": "chassis",
+      "Name": "System",
+      "PowerState": 1,
+      "Presence": 1,
+      "Type": 44,
+      "UniqueId": "N/A"
+    },
+    "Accessor_CpldTest": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 8704,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PcbID": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 15,
+      "Offset": 1792,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PowerOnLock": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 8,
+      "Offset": 469766657,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "PowerAction_1": {
+      "@Default": {},
+      "PowerOnTimeoutFlag": "#/Accessor_PowerOnLock.Value"
+    },
+    "Accessor_PowerBtnLock": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 134222336,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_PowerBtnEvt": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Debounce": "None",
+      "Mask": 1,
+      "Offset": 134221312,
+      "Period": 400,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PowerBtnEvt": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 1,
+      "Offset": 134221312,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "ButtonEvt_1": {
+      "@Default": {},
+      "GetPowerBtnEvt": "<=/Scanner_PowerBtnEvt.Value",
+      "PowerBtnLock": "#/Accessor_PowerBtnLock.Value",
+      "SetPowerBtnEvt": "#/Accessor_PowerBtnEvt.Value"
+    },
+    "Component_Button": {
+      "@Default": {},
+      "FruId": 255,
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": 255,
+      "Location": "chassis",
+      "Name": "button",
+      "PowerState": 1,
+      "Presence": 1,
+      "Type": 49,
+      "UniqueId": "N/A"
+    },
+    "Scanner_PowerGd": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Debounce": "None",
+      "Mask": 255,
+      "Offset": 469765376,
+      "Period": 100,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "PGSignal_1": {
+      "@Default": {},
+      "PowerGDState": "<=/Scanner_PowerGd.Value"
+    },
+    "Scanner_L1": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 8192,
+      "Offset": 134237440,
+      "Period": 8000,
+      "Size": 2,
+      "Type": 0,
+      "Value": 0
+    },
+    "PowerButton_1": {
+      "@Default": {},
+      "LongPushButton": "#/Accessor_LongPushButton.Value",
+      "ShortPushButton": "#/Accessor_ShortPushButton.Value"
+    },
+    "Accessor_ShortPushButton": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 1,
+      "Offset": 134224384,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LongPushButton": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 2,
+      "Offset": 134224384,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Eeprom_EXU_QB900": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 182,
+      "OffsetWidth": 1,
+      "ReadTmout": 30,
+      "RwBlockSize": 1024,
+      "WriteTmout": 30
+    },
+    "Connector_PowerSupply_1": {
+      "@Default": {},
+      "AuxId": "2",
+      "Bom": "14191046",
+      "Buses": [
+        "I2c_4"
+      ],
+      "Id": "PSU",
+      "IdentifyMode": 2,
+      "Position": 9,
+      "Presence": 1,
+      "SilkText": "psu1",
+      "Slot": 1,
+      "Type": "Psu"
+    },
+    "PsuSlot_EXU_QB900": {
+      "@Default": {},
+      "Presence": 1,
+      "PsuChip": "#/Eeprom_EXU_QB900",
+      "SlotI2cAddr": 182,
+      "SlotNumber": 1
+    },
+    "Eeprom_Psu_4": {
+      "@Default": {},
+      "AddrWidth": 1,
+      "Address": 184,
+      "OffsetWidth": 1,
+      "ReadTmout": 30,
+      "RwBlockSize": 1024,
+      "WriteTmout": 30
+    },
+    "Connector_PowerSupply_4": {
+        "@Default": {},
+        "Bom": "14191046",
+        "Slot": 4,
+        "Position": 12,
+        "Presence": 1,
+        "Id": "PSU",
+        "AuxId": "0",
+        "Buses": [
+            "I2c_4"
+        ],
+        "SystemId": 1,
+        "SilkText": "psu4",
+        "IdentifyMode": 2,
+        "Type": "Psu"
+    },
+    "PsuSlot_4": {
+        "@Default": {},
+        "SlotNumber": 4,
+        "Presence": 1,
+        "PsuChip": "#/Eeprom_Psu_4",
+        "SlotI2cAddr": 184
+    },
+    "Scanner_PS5Pres": {
+        "@Default": {},
+        "Chip": "#/Smc_ExpBrd1SMC",
+        "Offset": 603981056,
+        "Size": 2,
+        "Mask": 1,
+        "Type": 0,
+        "Value": 0,
+        "Period": 2000
+    },
+    "Connector_PowerSupply_5": {
+        "@Default": {},
+        "Bom": "14191046",
+        "Slot": 5,
+        "Position": 13,
+        "Presence": "<=/Scanner_PS5Pres.Value",
+        "Id": "PSU",
+        "AuxId": "1",
+        "Buses": [
+            "I2c_4"
+        ],
+        "SystemId": 1,
+        "SilkText": "psu5",
+        "IdentifyMode": 2,
+        "Type": "Psu"
+    },
+    "PsuSlot_5": {
+        "@Default": {},
+        "SlotNumber": 5,
+        "Presence": "<=/Scanner_PS5Pres.Value",
+        "PsuChip": "#/::CanbusChip_0",
+        "SlotI2cAddr": 5
+    },
+    "Scanner_PS6Pres": {
+        "@Default": {},
+        "Chip": "#/Smc_ExpBrd1SMC",
+        "Offset": 603981056,
+        "Size": 2,
+        "Mask": 256,
+        "Type": 0,
+        "Value": 0,
+        "Period": 2000
+    },
+    "Connector_PowerSupply_6": {
+        "@Default": {},
+        "Bom": "14191046",
+        "Slot": 6,
+        "Position": 14,
+        "Presence": "<=/Scanner_PS6Pres.Value",
+        "Id": "PSU",
+        "AuxId": "1",
+        "Buses": [
+            "I2c_4"
+        ],
+        "SystemId": 1,
+        "SilkText": "psu6",
+        "IdentifyMode": 2,
+        "Type": "Psu"
+    },
+    "PsuSlot_6": {
+        "@Default": {},
+        "SlotNumber": 6,
+        "Presence": "<=/Scanner_PS6Pres.Value",
+        "PsuChip": "#/::CanbusChip_1",
+        "SlotI2cAddr": 6
+    },
+    "Component_Chassis": {
+      "@Default": {},
+      "BoardId": 65535,
+      "FruId": 255,
+      "GroupId": 1,
+      "Health": 0,
+      "Instance": 255,
+      "Name": "Chassis",
+      "PowerState": 1,
+      "Presence": 1,
+      "Type": 18,
+      "UniqueId": "N/A"
+    },
+    "Chassis_1": {
+      "@Default": {},
+      "CoverStatus": "<=/Scanner_ChassisCoverStatus.Value",
+      "IntrusionACOff": "<=/Scanner_ChassisIntrusionACOff.Value",
+      "IntrusionACOffClear": "#/Accessor_ChassisIntrusionACOffClear.Value",
+      "IntrusionACOn": "<=/Scanner_ChassisIntrusionACOn.Value",
+      "IntrusionACOnClear": "#/Accessor_ChassisIntrusionACOnClear.Value",
+      "Name": "1",
+      "UidButtonAccessor": "#/Accessor_UIDButtonEvent.Value",
+      "UidButtonScanner": "<=/Scanner_UIDButtonEvent.Value"
+    },
+    "Scanner_ChassisIntrusionACOn": {
+      "@Default": {},
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Debounce": "None",
+      "Mask": 4,
+      "Offset": 201345280,
+      "Period": 5000,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_ChassisIntrusionACOff": {
+      "@Default": {},
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Debounce": "None",
+      "Mask": 8,
+      "Offset": 201345280,
+      "Period": 5000,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_ChassisCoverStatus": {
+      "@Default": {},
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Debounce": "None",
+      "Mask": 2,
+      "Offset": 201345280,
+      "Period": 5000,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_ChassisIntrusionACOnClear": {
+      "@Default": {},
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Mask": 4,
+      "Offset": 201345536,
+      "Size": 1,
+      "Type": 1,
+      "Value": 0
+    },
+    "Accessor_ChassisIntrusionACOffClear": {
+      "@Default": {},
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Mask": 8,
+      "Offset": 201345536,
+      "Size": 1,
+      "Type": 1,
+      "Value": 0
+    },
+    "Accessor_UIDButtonEvent": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 2,
+      "Offset": 134221312,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_UIDButtonEvent": {
+      "@Default": {},
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Debounce": "None",
+      "Mask": 2,
+      "Offset": 134221312,
+      "Period": 1000,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
+    "I2cMux_Pca9545_i2c5_chip_1": {
+      "ChannelId": 0
+    },
+    "I2cMux_Pca9545_i2c7_3": {
+      "ChannelId": 2
+    },
+    "I2cMux_Pca9545_i2c11_1": {
+      "ChannelId": 0
+    },
+    "I2cMux_Pca9545_i2c11_2": {
+      "ChannelId": 1
+    },
+    "I2cMux_Pca9545_i2c7_4": {
+      "ChannelId": 3
+    },
+    "I2cMux_Pca9545_i2c7_1": {
+      "ChannelId": 0
+    },
+    "Accessor_UIDLedAccessor": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 134227457,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Led_UIDLed": {
+      "Id": 4,
+      "SystemId": 1,
+      "Name": "UIDLed",
+      "CtrlValue": "#/Accessor_UIDLedAccessor.Value",
+      "Capability": 1,
+      "Mode": 0,
+      "ColorCapabilities": 2,
+      "DefaultOSColor": 1,
+      "DefaultLCSColor": 1,
+      "LCSColor": 1,
+      "LCSState": 0,
+      "OSColor": 1,
+      "OSState": 0,
+      "LampTestColor": 1,
+      "LampTestDuration": 0
+    },
+    "Accessor_SysHealthLedAccessor": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 134226433,
+      "Size": 2,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LedColorAccessor": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 134226433,
+      "Size": 2,
+      "Mask": 65280,
+      "Type": 0,
+      "Value": 0
+    },
+    "Led_SysHealth": {
+      "SystemId": 1,
+      "Name": "SysHealLed",
+      "CtrlValue": "#/Accessor_SysHealthLedAccessor.Value",
+      "Capability": "#/Accessor_LedColorAccessor.Value",
+      "Id": 2,
+      "Mode": 0,
+      "ColorCapabilities": 12,
+      "DefaultOSColor": 3,
+      "DefaultLCSColor": 3,
+      "LCSColor": 3,
+      "LCSState": 255,
+      "OSColor": 3,
+      "OSState": 0,
+      "LampTestColor": 3,
+      "LampTestDuration": 0
+    },
+    "Event_CSRFailureMntr_BCU_1": {
+	  "EventKeyId": "BMC.AccessCSRFailure",
+	  "Reading": "<=/Connector_BCU_1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+	  "Condition": 1,
+	  "OperatorId": 5,
+	  "Enabled": true,
+	  "Component": "#/Component_ComEXU",
+	  "DescArg1": "#/ExpBoard_1.DeviceName",
+	  "DescArg2": "#/Connector_BCU_1.Slot |> string.format(' BCU%s',$1)"
+    },
+    "Event_CSRFailureMntr_SEU_1": {
+	  "EventKeyId": "BMC.AccessCSRFailure",
+	  "Reading": "<=/Connector_SEU_1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+	  "Condition": 1,
+	  "OperatorId": 5,
+	  "Enabled": true,
+	  "Component": "#/Component_ComEXU",
+	  "DescArg1": "#/ExpBoard_1.DeviceName",
+	  "DescArg2": "#/Connector_SEU_1.Slot |> string.format(' SEU%s',$1)"
+    },
+    "Event_CSRFailureMntr_L1_1": {
+	  "EventKeyId": "BMC.AccessCSRFailure",
+	  "Reading": "<=/Connector_L1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+	  "Condition": 1,
+	  "OperatorId": 5,
+	  "Enabled": true,
+	  "Component": "#/Component_ComEXU",
+	  "DescArg1": "#/ExpBoard_1.DeviceName",
+	  "DescArg2": "L1"
+    },
+    "Event_ExpanderAccessFRULableFailure": {
+      "EventKeyId": "ExpandBoard.ExpBoardAccessFRULableFailure",
+      "Reading": "<=/Fru_Expander.Health",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_ComExpander"
+    },
+    "ContBin_H3L1": {
+      "NumH": 3,
+      "NumL": 1,
+      "DefaultValue": 0
+    },
+    "Scanner_ExpMosTempHigh": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469778688,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "#/ContBin_H3L1",
+      "Value": 0
+    },
+    "Event_ExpMos1TempHigh": {
+      "EventKeyId": "ExpBoard.ExpBoardStartUpOverTemp",
+      "Reading": "<=/Scanner_ExpMosTempHigh.Value",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "(V_VCC_12V0_1)",
+      "Component": "#/Component_ComEXU",
+      "AdditionalInfo" : "1"
+    },
+    "ContBin_ExpBoardClockSignalLost": {
+      "NumH": 6,
+      "NumL": 6,
+      "DefaultValue": 0
+    },
+    "Scanner_PowerGd": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469765888,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 100,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_100M1ClockFailMntr": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469769472,
+      "Size": 9,
+      "Type": 0,
+      "Mask": 256,
+      "Period": 400,
+      "Debounce": "#/ContBin_ExpBoardClockSignalLost",
+      "ScanEnabled": "<=/Scanner_PowerGd.Value",
+      "NominalValue": 0,
+      "Value": 0,
+      "@Default": {
+        "ScanEnabled": 0
+      }
+    },
+    "Scanner_50M1ClockFailMntr": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469769472,
+      "Size": 1,
+      "Type": 0,
+      "Mask": 1,
+      "Period": 400,
+      "Debounce": "#/ContBin_ExpBoardClockSignalLost",
+      "ScanEnabled": "<=/Scanner_PowerGd.Value",
+      "NominalValue": 0,
+      "Value": 0
+    },
+    "Event_100M1ClockFailMntr": {
+      "EventKeyId": "ExpandBoard.EXPBoardClockSignalLost",
+      "Reading": "<=/Scanner_100M1ClockFailMntr.Value",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "100M",
+      "DescArg2": "buffer 1",
+      "Component": "#/Component_ComExpander"
+    },
+    "DiscreteSensor_SysFwProgress": {
+      "OwnerId": 64,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 15,
+      "ReadingType": 111,
+      "SensorName": "SysFwProgress",
+      "AssertMask": 7,
+      "DeassertMask": 7,
+      "DiscreteMask": 7,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "DiscreteType": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Event_50M1ClockFailMntr": {
+      "EventKeyId": "ExpandBoard.EXPBoardClockSignalLost",
+      "Reading": "<=/Scanner_50M1ClockFailMntr.Value",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "50M",
+      "DescArg2": "buffer 1",
+      "Component": "#/Component_ComExpander"
+    },
+    "Event_ButtonPowerButtonPressed": {
+      "EventKeyId": "Button.ButtonPowerButtonPressed",
+      "Reading": "<=/Scanner_PowerBtnEvt.Value",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_Button"
+    },
+    "Event_SystemACPIWorkingState": {
+      "EventKeyId": "System.SystemACPIWorkingState",
+      "Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+      "@Default" :{
+        "Reading" : 1
+    },
+      "Condition": 1,
+      "OperatorId": 7,
+      "Enabled": true,
+      "Component": "#/Component_ComSystem"
+    },
+    "Event_SystemACPISoftOffState": {
+      "EventKeyId": "System.SystemACPISoftOffState",
+      "Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+      "@Default": {
+        "Reading": 1
+      },
+      "Condition": 0,
+      "OperatorId": 8,
+      "Enabled": true,
+      "Component": "#/Component_ComSystem"
+    },
+    "Event_ExpBoardReplaceMntr": {
+      "EventKeyId": "ExpBoard.ExpBoardReplace",
+      "Reading": "<=/Component_ComExpander.ReplaceFlag",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_ComExpander.Instance",
+      "DescArg2": "#/Component_ComExpander.PreviousSN",
+      "DescArg3": "#/Component_ComExpander.SerialNumber",
+      "Component": "#/Component_ComExpander"
+    },
+    "Event_CpldSelfcheck": {
+      "EventKeyId": "ExpBoard.ExpBoardCPLDSelfTestFailure",
+      "Reading": "<=/ExpBoard_1.CpldStatus",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "1",
+      "Component": "#/Component_ComExpander",
+      "@Default":{
+        "Reading": 255
+      },
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255
+    },
+    "DiscreteSensor_AcpiState": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 99,
+      "Capabilities": 64,
+      "SensorType": 34,
+      "ReadingType": 111,
+      "SensorName": "ACPI State",
+      "AssertMask": 65,
+      "DeassertMask": 0,
+      "DiscreteMask": 65,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "DiscreteType": 1,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteEvent_AcpiState": {
+      "Property": "<=/Scanner_PowerGd.Value |> expr((((((1 << 8) | 255) << 8) | 255) << 8) | ($1 == 1 ? 0 : 6))",
+      "ListenType": 0,
+      "EventData1": 255,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": 0,
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_AcpiState"
+    },
+    "DiscreteSensor_PowerButton": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 99,
+      "Capabilities": 64,
+      "SensorType": 20,
+      "ReadingType": 111,
+      "SensorName": "Power Button",
+      "AssertMask": 1,
+      "DeassertMask": 0,
+      "DiscreteMask": 1,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "DiscreteType": 1,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "DiscreteEvent_PowerButton": {
+      "Property": "<=/Scanner_PowerBtnEvt.Value |> expr(((((($1 << 8) | 255) << 8) | 255) << 8) |  0)",
+      "ListenType": 0,
+      "EventData1": 255,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": 255,
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_PowerButton"
+    },
+    "DiscreteSensor_PwrOkSigDrop": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 99,
+      "Capabilities": 64,
+      "SensorType": 8,
+      "ReadingType": 111,
+      "SensorName": "PwrOk Sig. Drop",
+      "AssertMask": 2,
+      "DeassertMask": 2,
+      "DiscreteMask": 2,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "DiscreteType": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Scanner_PwrOkSigDrop": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469766656,
+      "Size": 1,
+      "Mask": 4,
+      "Type": 0,
+      "Period": 400,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "DiscreteEvent_PwrOkSigDrop": {
+      "Property": "<=/Scanner_PwrOkSigDrop.Value |> expr(((((($1 << 8) | 255) << 8) | 255) << 8) |  1)",
+      "ListenType": 0,
+      "EventData1": 255,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": 255,
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_PwrOkSigDrop"
+    },
+    "Entity_MainBoard": {
+      "Id": 7,
+      "Name": "MainBoard",
+      "PowerState": 1,
+      "Presence": 1,
+      "Instance": 96
+    },
+    "Scanner_PowerOnTimeout": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Offset": 469766656,
+      "Size": 1,
+      "Mask": 8,
+      "Type": 0,
+      "Period": 400,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "DiscreteEvent_PwrOnTimeOut": {
+      "Property": "<=/Scanner_PowerOnTimeout.Value",
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Scanner_PowerOnTimeout.Value",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_PwrOnTimeOut"
+    },
+    "DiscreteSensor_PwrOnTimeOut": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_MainBoard.Id",
+      "EntityInstance": "<=/Entity_MainBoard.Instance",
+      "Initialization": 99,
+      "Capabilities": 64,
+      "SensorType": 8,
+      "ReadingType": 111,
+      "SensorName": "PwrOn TimeOut",
+      "AssertMask": 2,
+      "DeassertMask": 2,
+      "DiscreteMask": 2,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "DiscreteType": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Scanner_DftMode": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 255,
+      "Offset": 3328,
+      "Size": 1,
+      "Type": 0,
+      "Period": 400,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "DFT_1": {
+      "Mode": "<=/Scanner_DftMode.Value"
+    },
+    "DftBmcCard_1": {
+      "Id": 26,
+      "Type": 1,
+      "DeviceNum": 0,
+      "ItemName": "hi1711 Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535
+    },
+    "DftPowerSupply_1": {
+      "Id": 8,
+      "Type": 1,
+      "DeviceNum": 0,
+      "ItemName": "Power Supply Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535
+    },
+    "DftIpmb_1": {
+      "Id": 35,
+      "Type": 1,
+      "DeviceNum": 0,
+      "ItemName": "Ipmb Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535
+    },
+    "DftKeyBoard_1": {
+      "Id": 65,
+      "Type": 2,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Keyboard Test",
+      "ProcessPeriod": 65535
+    },
+    "DftCD_1": {
+      "Id": 66,
+      "Type": 2,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Cd Test",
+      "ProcessPeriod": 65535
+    },
+    "IPMIChannel_MEBusId11": {
+      "ChanType": 1,
+      "Instance": 1,
+      "ChanPro": 1,
+      "ChannelID": 5,
+      "DestAddr": 44,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId12": {
+      "ChanType": 1,
+      "Instance": 2,
+      "ChanPro": 1,
+      "ChannelID": 10,
+      "DestAddr": 46,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId13": {
+      "ChanType": 1,
+      "Instance": 3,
+      "ChanPro": 1,
+      "ChannelID": 11,
+      "DestAddr": 48,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId14": {
+      "ChanType": 1,
+      "Instance": 4,
+      "ChanPro": 1,
+      "ChannelID": 12,
+      "DestAddr": 50,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId21": {
+      "ChanType": 1,
+      "Instance": 5,
+      "ChanPro": 1,
+      "ChannelID": 2,
+      "DestAddr": 60,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId22": {
+      "ChanType": 1,
+      "Instance": 6,
+      "ChanPro": 1,
+      "ChannelID": 3,
+      "DestAddr": 62,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId23": {
+      "ChanType": 1,
+      "Instance": 7,
+      "ChanPro": 1,
+      "ChannelID": 4,
+      "DestAddr": 64,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMIChannel_MEBusId24": {
+      "ChanType": 1,
+      "Instance": 8,
+      "ChanPro": 1,
+      "ChannelID": 7,
+      "DestAddr": 66,
+      "SrcAddr": 0,
+      "MedType": 1
+    },
+    "IPMB_BusId11": {
+      "ChannelID": 5,
+      "SlaveAddr": 32,
+      "BusID": 1,
+      "ModuleID": 25
+    },
+    "IPMB_BusId12": {
+      "ChannelID": 10,
+      "SlaveAddr": 32,
+      "BusID": 1,
+      "ModuleID": 26
+    },
+    "IPMB_BusId13": {
+      "ChannelID": 11,
+      "SlaveAddr": 32,
+      "BusID": 1
+    },
+    "IPMB_BusId14": {
+      "ChannelID": 12,
+      "SlaveAddr": 32,
+      "BusID": 1
+    },
+    "IPMB_BusId21": {
+      "ChannelID": 2,
+      "SlaveAddr": 32,
+      "BusID": 2,
+      "ModuleID": 27
+    },
+    "IPMB_BusId22": {
+      "ChannelID": 3,
+      "SlaveAddr": 32,
+      "BusID": 2
+    },
+    "IPMB_BusId23": {
+      "ChannelID": 4,
+      "SlaveAddr": 32,
+      "BusID": 2
+    },
+    "IPMB_BusId24": {
+      "ChannelID": 7,
+      "SlaveAddr": 32,
+      "BusID": 2
+    },
+    "Scanner_LiquidLeakage": {
+      "Chip": "#/Smc_ExpBrd1SMC",
+      "Mask": 1,
+      "Offset": 134268160,
+      "Size": 1,
+      "Type": 0,
+      "Period": 1000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Event_LiquidCoolingDeviceIsLeaking": {
+      "EventKeyId": "Chassis.LiquidCoolingDeviceIsLeaking",
+      "Reading": "<=/Scanner_LiquidLeakage.Value",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "1",
+      "Component": "#/Component_Chassis"
+    }
+  }
+}

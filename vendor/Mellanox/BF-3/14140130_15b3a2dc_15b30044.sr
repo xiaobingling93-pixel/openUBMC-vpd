@@ -1,0 +1,361 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.02",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_TempChip",
+                "Eeprom_BF3"
+            ]
+        }
+    },
+    "Objects": {
+        "Eeprom_BF3": {
+            "AddrWidth": 1,
+            "Address": 160,
+            "HealthStatus": 0,
+            "OffsetWidth": 2,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "WriteTmout": 100
+        },
+        "Chip_TempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_NICTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 65535,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_NICTemp"
+        },
+        "MidAvg_NICTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 95,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (MT43244 BlueField-3)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "Container": "${Container}",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "900-9D3B6-F2SV-PA0",
+            "BoardName": "MT43244 BlueField-3",
+            "Description": "MT43244 BlueField-3 integrated ConnectX-7 network controller",
+            "FunctionClass": 2,
+            "VendorID": 5555,
+            "DeviceID": 41692,
+            "SubVendorID": 5555,
+            "SubDeviceID": 68,
+            "PartNumber": "900-9D3B6-F2SV-PA0",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Mellanox",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "BF3",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidthAbility": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "PcbVersion": "",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/FruData_BF3.BoardSerialNumber  |> expr(string.gsub($1, '%s+$','') )"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "900-9D3B6-F2SV-PA0",
+            "Manufacturer": "Mellanox",
+            "Description": "2*200GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "BF3",
+            "ModelDescription": "2*200GE",
+            "ChipVendor": "Mellanox",
+            "ChipManufacturer": "<=/PCIeCard_1.Manufacturer",
+            "NetworkPortCount": 2,
+            "BoardName": "MT43244 BlueField-3",
+            "VendorID": "0x15b3",
+            "DeviceID": "0xa2dc",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0044",
+            "ComponentUniqueID": "",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "FruId": 255,
+            "SupportedMctp": true,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "LinkSpeed": "",
+            "LinkSpeedCapability": "Gen5 (32.0GT/s)",
+            "LinkWidth": "",
+            "LinkWidthCapability": "X16",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "BandwidthThresholdPercent": 100,
+            "ParentCardSlotId": 255,
+            "Health": "<=/Component_PCIeCard.Health"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "",
+            "Name": "",
+            "Manufacturer": "Mellanox",
+            "Type": "PCIeCard",
+            "Description": "2*200GE",
+            "PartNumber": "900-9D3B6-F2SV-PA0",
+            "LogicVersion": "",
+            "SRVersion": "",
+            "BoardID": 65535,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+            "NodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Component_PCIeCard.FruId"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200GE"
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "200GE"
+        },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_OM2VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM2PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM2SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_Port2BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "BF3网卡芯片调速",
+            "MonitoringStatus": "<=/Scanner_NICTemp.Status",
+            "MonitoringValue": "<=/Scanner_NICTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 82,
+            "MaxAllowedTemperatureCelsius": 90,
+            "TargetTemperatureRangeCelsius": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/CoolingRequirement_1_55.MonitoringStatus |> expr($1 == 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_54": {
+            "RequirementId": "${Slot} |> expr((54 << 8) | $1)",
+            "Description": "BF3网卡网卡芯片调速（光模块异常）",
+            "MonitoringStatus": "<=/Scanner_NICTemp.Status",
+            "MonitoringValue": "<=/Scanner_NICTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 75,
+            "MaxAllowedTemperatureCelsius": 90,
+            "TargetTemperatureRangeCelsius": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/CoolingRequirement_1_55.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_55": {
+            "RequirementId": "${Slot} |> expr((55 << 8) | $1)",
+            "Description": "BF3网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr((($1 == 1 && $3 >= 255) || ($2 == 1 && $4 >= 255)) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius  |> expr($3 >= $4 ? ($1 == 1 ? $3 : $4) : ($2 == 1 ? $4 : $3))",
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 75,
+            "FailedValue": 0,
+            "TargetTemperatureRangeCelsius": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence |> expr(($1 == 1 || $2 == 1) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        }
+    }
+}

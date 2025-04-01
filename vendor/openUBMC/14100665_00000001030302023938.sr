@@ -1,0 +1,5046 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.10",
+  "Unit": {
+    "Type": "SEU",
+    "Name": "HddBackplane_1"
+  },
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2c_2",
+        "I2c_5",
+        "JtagOverLocalBus_1"
+      ]
+    },
+    "I2c_5": {
+      "Chips": [
+        "Smc_EnclSMC",
+        "Eeprom_SEU"
+      ]
+    },
+    "I2c_2": {
+      "Chips": [
+        "Smc_ExpBoardSMC"
+      ]
+    },
+    "Smc_EnclSMC": {
+      "Buses": [
+        "I2cMux_SMC_1",
+        "I2cMux_SMC_2",
+        "I2cMux_SMC_3",
+        "I2cMux_SMC_4",
+        "I2cMux_SMC_5",
+        "I2cMux_SMC_6",
+        "I2cMux_SMC_7",
+        "I2cMux_SMC_8",
+        "I2cMux_SMC_9",
+        "I2cMux_SMC_10",
+        "I2cMux_SMC_11",
+        "I2cMux_SMC_12",
+        "I2cMux_SMC_13",
+        "I2cMux_SMC_14",
+        "I2cMux_SMC_15",
+        "I2cMux_SMC_16"
+      ]
+    },
+    "I2cMux_SMC_1": {
+      "Connectors": [
+        "Connector_ComVPDConnect_1"
+      ]
+    },
+    "I2cMux_SMC_2": {
+      "Connectors": [
+        "Connector_ComVPDConnect_2"
+      ]
+    },
+    "I2cMux_SMC_3": {
+      "Connectors": [
+        "Connector_ComVPDConnect_3"
+      ]
+    },
+    "I2cMux_SMC_4": {
+      "Connectors": [
+        "Connector_ComVPDConnect_4"
+      ]
+    },
+    "I2cMux_SMC_5": {
+      "Connectors": [
+        "Connector_ComVPDConnect_5"
+      ]
+    },
+    "I2cMux_SMC_6": {
+      "Connectors": [
+        "Connector_ComVPDConnect_6"
+      ]
+    },
+    "I2cMux_SMC_7": {
+      "Connectors": [
+        "Connector_ComVPDConnect_7"
+      ]
+    },
+    "I2cMux_SMC_8": {
+      "Connectors": [
+        "Connector_ComVPDConnect_8"
+      ]
+    },
+    "I2cMux_SMC_9": {
+      "Connectors": [
+        "Connector_ComVPDConnect_9"
+      ]
+    },
+    "I2cMux_SMC_10": {
+      "Connectors": [
+        "Connector_ComVPDConnect_10"
+      ]
+    },
+    "I2cMux_SMC_11": {
+      "Connectors": [
+        "Connector_ComVPDConnect_11"
+      ]
+    },
+    "I2cMux_SMC_12": {
+      "Connectors": [
+        "Connector_ComVPDConnect_12"
+      ]
+    },
+    "I2cMux_SMC_13": {
+      "Connectors": [
+        "Connector_ComVPDConnect_13"
+      ]
+    },
+    "I2cMux_SMC_14": {
+      "Connectors": [
+        "Connector_ComVPDConnect_14"
+      ]
+    },
+    "I2cMux_SMC_15": {
+      "Connectors": [
+        "Connector_ComVPDConnect_15"
+      ]
+    },
+    "I2cMux_SMC_16": {
+      "Connectors": [
+        "Connector_ComVPDConnect_16"
+      ]
+    },
+    "JtagOverLocalBus_1": {
+      "Chips": [
+        "Cpld_1"
+      ]
+    }
+  },
+  "Objects": {
+    "Smc_EnclSMC": {
+      "Name": "EnclSMC",
+      "Address": 96,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 0,
+      "ReadTmout": 0
+    },
+    "Smc_ExpBoardSMC": {
+      "Name": "ExpBoardSMC",
+      "Address": 96,
+      "AddrWidth": 1,
+      "OffsetWidth": 1,
+      "WriteTmout": 0,
+      "ReadTmout": 0
+    },
+    "I2cMux_SMC_1": {
+      "ChannelId": 0
+    },
+    "I2cMux_SMC_2": {
+      "ChannelId": 1
+    },
+    "I2cMux_SMC_3": {
+      "ChannelId": 2
+    },
+    "I2cMux_SMC_4": {
+      "ChannelId": 3
+    },
+    "I2cMux_SMC_5": {
+      "ChannelId": 4
+    },
+    "I2cMux_SMC_6": {
+      "ChannelId": 5
+    },
+    "I2cMux_SMC_7": {
+      "ChannelId": 6
+    },
+    "I2cMux_SMC_8": {
+      "ChannelId": 7
+    },
+    "I2cMux_SMC_9": {
+      "ChannelId": 8
+    },
+    "I2cMux_SMC_10": {
+      "ChannelId": 9
+    },
+    "I2cMux_SMC_11": {
+      "ChannelId": 10
+    },
+    "I2cMux_SMC_12": {
+      "ChannelId": 11
+    },
+    "I2cMux_SMC_13": {
+      "ChannelId": 12
+    },
+    "I2cMux_SMC_14": {
+      "ChannelId": 13
+    },
+    "I2cMux_SMC_15": {
+      "ChannelId": 14
+    },
+    "I2cMux_SMC_16": {
+      "ChannelId": 15
+    },
+    "Cpld_1": {},
+    "DftJTAG_1": {
+      "Type": 2,
+      "Id": 69,
+      "DeviceNum": 1,
+      "Slot": "${GroupId}",
+      "ItemName": "SEU JTAG Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "InputChip": "#/Cpld_1",
+      "Channel": 2
+    },
+    "Scanner_Drive1PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive1PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive2PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive2PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive3PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive3PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive4PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive4PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive5PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive5PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive6PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive6PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive7PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive7PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive8PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive8PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive9PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive9PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive10PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive10PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive11PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive11PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive12PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive12PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive13PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive13PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive14PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive14PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive15PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive15PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive16PCIePresence": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive16PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Connector_ComVPDConnect_1": {
+      "Bom": "14140224",
+      "Slot": 0,
+      "Position": 1,
+      "Presence": "<=/Scanner_Drive1PCIePresence.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_1"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J139",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_2": {
+      "Bom": "14140224",
+      "Slot": 1,
+      "Position": 2,
+      "Presence": "<=/Scanner_Drive2PCIePresence.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_2"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J139",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_3": {
+      "Bom": "14140224",
+      "Slot": 2,
+      "Position": 3,
+      "Presence": "<=/Scanner_Drive3PCIePresence.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_3"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J5201",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_4": {
+      "Bom": "14140224",
+      "Slot": 3,
+      "Position": 4,
+      "Presence": "<=/Scanner_Drive4PCIePresence.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_4"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J5201",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_5": {
+      "Bom": "14140224",
+      "Slot": 4,
+      "Position": 5,
+      "Presence": "<=/Scanner_Drive5PCIePresence.Value;<=/Scanner_Drive5PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_5"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_6": {
+      "Bom": "14140224",
+      "Slot": 5,
+      "Position": 6,
+      "Presence": "<=/Scanner_Drive6PCIePresence.Value;<=/Scanner_Drive6PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_6"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_7": {
+      "Bom": "14140224",
+      "Slot": 6,
+      "Position": 7,
+      "Presence": "<=/Scanner_Drive7PCIePresence.Value;<=/Scanner_Drive7PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_7"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_8": {
+      "Bom": "14140224",
+      "Slot": 7,
+      "Position": 8,
+      "Presence": "<=/Scanner_Drive8PCIePresence.Value;<=/Scanner_Drive8PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_8"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_9": {
+      "Bom": "14140224",
+      "Slot": 8,
+      "Position": 9,
+      "Presence": "<=/Scanner_Drive9PCIePresence.Value;<=/Scanner_Drive9PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_9"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_10": {
+      "Bom": "14140224",
+      "Slot": 9,
+      "Position": 10,
+      "Presence": "<=/Scanner_Drive10PCIePresence.Value;<=/Scanner_Drive10PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_10"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_11": {
+      "Bom": "14140224",
+      "Slot": 10,
+      "Position": 11,
+      "Presence": "<=/Scanner_Drive11PCIePresence.Value;<=/Scanner_Drive11PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_11"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_12": {
+      "Bom": "14140224",
+      "Slot": 11,
+      "Position": 12,
+      "Presence": "<=/Scanner_Drive12PCIePresence.Value;<=/Scanner_Drive12PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_12"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6013",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_13": {
+      "Bom": "14140224",
+      "Slot": 12,
+      "Position": 13,
+      "Presence": "<=/Scanner_Drive13PCIePresence.Value;<=/Scanner_Drive13PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_13"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6056",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_14": {
+      "Bom": "14140224",
+      "Slot": 13,
+      "Position": 14,
+      "Presence": "<=/Scanner_Drive14PCIePresence.Value;<=/Scanner_Drive14PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_14"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6056",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_15": {
+      "Bom": "14140224",
+      "Slot": 14,
+      "Position": 15,
+      "Presence": "<=/Scanner_Drive15PCIePresence.Value;<=/Scanner_Drive15PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_15"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6012",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_ComVPDConnect_16": {
+      "Bom": "14140224",
+      "Slot": 15,
+      "Position": 16,
+      "Presence": "<=/Scanner_Drive16PCIePresence.Value;<=/Scanner_Drive16PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Id": "VPD",
+      "AuxId": "0",
+      "Buses": [
+        "I2cMux_SMC_16"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "J6012",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "BusinessConnector_1": {
+      "Name": "Up_1",
+      "Direction": "Upstream",
+      "Slot": 1,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 17,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 17,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_2": {
+      "Name": "Down_1",
+      "Direction": "Downstream",
+      "Slot": 1,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_1",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_1",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_1"
+    },
+    "BusinessConnector_3": {
+      "Name": "Down_2",
+      "Direction": "Downstream",
+      "Slot": 2,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_1",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_2",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_2"
+    },
+    "BusinessConnector_4": {
+      "Name": "Up_2",
+      "Direction": "Upstream",
+      "Slot": 2,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 33,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 33,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_5": {
+      "Name": "Down_3",
+      "Direction": "Downstream",
+      "Slot": 3,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_2",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_3",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_3"
+    },
+    "BusinessConnector_6": {
+      "Name": "Down_4",
+      "Direction": "Downstream",
+      "Slot": 4,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_2",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_4",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_4"
+    },
+    "BusinessConnector_7": {
+      "Name": "Up_3",
+      "Direction": "Upstream",
+      "Slot": 3,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 49,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 49,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_8": {
+      "Name": "Down_5",
+      "Direction": "Downstream",
+      "Slot": 5,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_3",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_5",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_5"
+    },
+    "BusinessConnector_9": {
+      "Name": "Down_6",
+      "Direction": "Downstream",
+      "Slot": 6,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_3",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_6",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_6"
+    },
+    "BusinessConnector_10": {
+      "Name": "Up_4",
+      "Direction": "Upstream",
+      "Slot": 4,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 65,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 65,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_11": {
+      "Name": "Down_7",
+      "Direction": "Downstream",
+      "Slot": 7,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_4",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_7",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_7"
+    },
+    "BusinessConnector_12": {
+      "Name": "Down_8",
+      "Direction": "Downstream",
+      "Slot": 8,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_4",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_8",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_8"
+    },
+    "BusinessConnector_13": {
+      "Name": "Up_5",
+      "Direction": "Upstream",
+      "Slot": 5,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 81,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 81,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_14": {
+      "Name": "Down_9",
+      "Direction": "Downstream",
+      "Slot": 9,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_5",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_9",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_9"
+    },
+    "BusinessConnector_15": {
+      "Name": "Down_10",
+      "Direction": "Downstream",
+      "Slot": 10,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_5",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_10",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_10"
+    },
+    "BusinessConnector_16": {
+      "Name": "Up_6",
+      "Direction": "Upstream",
+      "Slot": 6,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 97,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 97,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_17": {
+      "Name": "Down_11",
+      "Direction": "Downstream",
+      "Slot": 11,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_6",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_11",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_11"
+    },
+    "BusinessConnector_18": {
+      "Name": "Down_12",
+      "Direction": "Downstream",
+      "Slot": 12,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_6",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_12",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_12"
+    },
+    "BusinessConnector_19": {
+      "Name": "Up_7",
+      "Direction": "Upstream",
+      "Slot": 7,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 113,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 113,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_20": {
+      "Name": "Down_13",
+      "Direction": "Downstream",
+      "Slot": 13,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_7",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_13",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_13"
+    },
+    "BusinessConnector_21": {
+      "Name": "Down_14",
+      "Direction": "Downstream",
+      "Slot": 14,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_7",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_14",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_14"
+    },
+    "BusinessConnector_22": {
+      "Name": "Up_8",
+      "Direction": "Upstream",
+      "Slot": 8,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 129,
+          "Offset": 0,
+          "Width": 4
+        },
+        {
+          "Name": "Port2",
+          "ID": 129,
+          "Offset": 4,
+          "Width": 4
+        }
+      ]
+    },
+    "BusinessConnector_23": {
+      "Name": "Down_15",
+      "Direction": "Downstream",
+      "Slot": 15,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_8",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_15",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_15"
+    },
+    "BusinessConnector_24": {
+      "Name": "Down_16",
+      "Direction": "Downstream",
+      "Slot": 16,
+      "LinkWidth": "X4",
+      "MaxLinkRate": "PCIe 4.0",
+      "ConnectorType": "NVMe CEM",
+      "UpstreamResources": [
+        {
+          "Name": "Up_8",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 4
+        }
+      ],
+      "RefMgmtConnector": "#/Connector_ComVPDConnect_16",
+      "RefPCIeAddrInfo": "#/PcieAddrInfo_NVMe_16"
+    },
+    "PcieAddrInfo_NVMe_1": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_1_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_2": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_2_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_3": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_3_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_4": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_4_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_5": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_5_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_6": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_6_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_7": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_7_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_8": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_8_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_9": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_9_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_10": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_10_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_11": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_11_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_12": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_12_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_13": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_13_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_14": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_14_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_15": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_15_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+    "PcieAddrInfo_NVMe_16": {
+      "ComponentType": 2,
+      "ControllerIndex": 0,
+      "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_NVMe_16_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU"
+    },
+
+    "PcieAddrInfo_SAS_1": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_1_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_2": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_2_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_3": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_3_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_4": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_4_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_5": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_5_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_6": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_6_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_7": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_7_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+    "PcieAddrInfo_SAS_8": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_8_${GroupPosition}",
+      "ContainerUID": "00000001030302023938",
+      "ContainerUnitType": "SEU SAS"
+    },
+
+    "BusinessConnector_SAS_1": {
+      "Name": "Down_1",
+      "Direction": "Downstream",
+      "Slot": 1,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 0,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_1"
+    },
+    "BusinessConnector_SAS_2": {
+      "Name": "Down_2",
+      "Direction": "Downstream",
+      "Slot": 2,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 1,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_2"
+    },
+    "BusinessConnector_SAS_3": {
+      "Name": "Down_3",
+      "Direction": "Downstream",
+      "Slot": 3,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 2,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_3"
+    },
+    "BusinessConnector_SAS_4": {
+      "Name": "Down_4",
+      "Direction": "Downstream",
+      "Slot": 4,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 3,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_4"
+    },
+    "BusinessConnector_SAS_5": {
+      "Name": "Down_5",
+      "Direction": "Downstream",
+      "Slot": 5,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 4,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_5"
+    },
+    "BusinessConnector_SAS_6": {
+      "Name": "Down_6",
+      "Direction": "Downstream",
+      "Slot": 6,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 5,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_6"
+    },
+    "BusinessConnector_SAS_7": {
+      "Name": "Down_7",
+      "Direction": "Downstream",
+      "Slot": 7,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 6,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_7"
+    },
+    "BusinessConnector_SAS_8": {
+      "Name": "Down_8",
+      "Direction": "Downstream",
+      "Slot": 8,
+      "LinkWidth": "X1",
+      "ConnectorType": "SAS",
+      "UpstreamResources": [
+        {
+          "Name": "Up_SAS_1",
+          "ID": 255,
+          "Offset": 7,
+          "Width": 1
+        }
+      ],
+      "RefPCIeAddrInfo":"#/PcieAddrInfo_SAS_8"
+    },
+
+    "BusinessConnector_SAS_9": {
+      "Name": "Up_SAS_1",
+      "Direction": "Upstream",
+      "Slot": 1,
+      "LinkWidth": "X8",
+      "MaxLinkRate": "PCIe4.0",
+      "ConnectorType": "UBC",
+      "Ports": [
+        {
+          "Name": "Port1",
+          "ID": 81,
+          "Offset": 0,
+          "Width": 1
+        },
+        {
+          "Name": "Port2",
+          "ID": 81,
+          "Offset": 1,
+          "Width": 1
+        },
+        {
+          "Name": "Port3",
+          "ID": 81,
+          "Offset": 2,
+          "Width": 1
+        },
+        {
+          "Name": "Port4",
+          "ID": 81,
+          "Offset": 3,
+          "Width": 1
+        },
+        {
+          "Name": "Port5",
+          "ID": 81,
+          "Offset": 4,
+          "Width": 1
+        },
+        {
+          "Name": "Port6",
+          "ID": 81,
+          "Offset": 5,
+          "Width": 1
+        },
+        {
+          "Name": "Port7",
+          "ID": 81,
+          "Offset": 6,
+          "Width": 1
+        },
+        {
+          "Name": "Port8",
+          "ID": 81,
+          "Offset": 7,
+          "Width": 1
+        }
+      ]
+    },
+
+    "Eeprom_SEU": {
+      "OffsetWidth": 2,
+      "AddrWidth": 1,
+      "Address": 174,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 20,
+      "HealthStatus": 0
+    },
+    "Accessor_PcbID": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 1792,
+      "Size": 2,
+      "Mask": 15,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LogicVersionID": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 2816,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_Drive0PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive0LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive0FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive0ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545601,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_1": {
+      "Id": 0,
+      "Name": "Disk0",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk0",
+      "Presence": "<=/Scanner_Drive0PresentAccessor.Status;<=/Scanner_Drive0PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive0LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive0FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive0ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive0LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive0FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive0.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 0,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive1PCIePresence.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk0": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive1PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive1LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive1FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive1ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545602,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_2": {
+      "Id": 1,
+      "Name": "Disk1",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk1",
+      "Presence": "<=/Scanner_Drive1PresentAccessor.Status;<=/Scanner_Drive1PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive1LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive1FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive1ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive1LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive1FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive1.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 1,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive2PCIePresence.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk1": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive2PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive2LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive2FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive2ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545603,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_3": {
+      "Id": 2,
+      "Name": "Disk2",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk2",
+      "Presence": "<=/Scanner_Drive2PresentAccessor.Status;<=/Scanner_Drive2PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive2LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive2FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive2ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive2LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive2FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive2.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 2,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive3PCIePresence.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk2": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive3PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive3LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive3FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive3ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545604,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_4": {
+      "Id": 3,
+      "Name": "Disk3",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk3",
+      "Presence": "<=/Scanner_Drive3PresentAccessor.Status;<=/Scanner_Drive3PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive3LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive3FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive3ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive3LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive3FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive3.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 3,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive4PCIePresence.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk3": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive4PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive4LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive4FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive4ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545605,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_5": {
+      "Id": 4,
+      "Name": "Disk4",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk4",
+      "Presence": "<=/Scanner_Drive4PresentAccessor.Status;<=/Scanner_Drive4PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive4LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive4FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive4ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive4LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive4FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive4.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 4,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive5PCIePresence.Value;<=/Scanner_Drive5PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk4": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive5PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive5LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive5FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive5ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545606,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_6": {
+      "Id": 5,
+      "Name": "Disk5",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk5",
+      "Presence": "<=/Scanner_Drive5PresentAccessor.Status;<=/Scanner_Drive5PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive5LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive5FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive5ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive5LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive5FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive5.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 5,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive6PCIePresence.Value;<=/Scanner_Drive6PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk5": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive6PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive6LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive6FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive6ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545607,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_7": {
+      "Id": 6,
+      "Name": "Disk6",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk6",
+      "Presence": "<=/Scanner_Drive6PresentAccessor.Status;<=/Scanner_Drive6PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive6LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive6FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive6ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive6LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive6FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive6.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 6,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive7PCIePresence.Value;<=/Scanner_Drive7PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk6": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive7PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive7LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive7FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive7ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545608,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_8": {
+      "Id": 7,
+      "Name": "Disk7",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk7",
+      "Presence": "<=/Scanner_Drive7PresentAccessor.Status;<=/Scanner_Drive7PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive7LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive7FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive7ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive7LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive7FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive7.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 7,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive8PCIePresence.Value;<=/Scanner_Drive8PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk7": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive8PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive8LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive8FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive8ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_9": {
+      "Id": 8,
+      "Name": "Disk8",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk8",
+      "Presence": "<=/Scanner_Drive8PresentAccessor.Status;<=/Scanner_Drive8PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive8LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive8FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive8ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive8LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive8FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive8.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 8,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive9PCIePresence.Value;<=/Scanner_Drive9PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk8": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive9PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive9LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive9FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive9ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_10": {
+      "Id": 9,
+      "Name": "Disk9",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk9",
+      "Presence": "<=/Scanner_Drive9PresentAccessor.Status;<=/Scanner_Drive9PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive9LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive9FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive9ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive9LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive9FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive9.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 9,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive10PCIePresence.Value;<=/Scanner_Drive10PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk9": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive10PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive10LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive10FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive10ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_11": {
+      "Id": 10,
+      "Name": "Disk10",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk10",
+      "Presence": "<=/Scanner_Drive10PresentAccessor.Status;<=/Scanner_Drive10PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive10LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive10FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive10ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive10LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive10FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive10.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 10,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive11PCIePresence.Value;<=/Scanner_Drive11PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk10": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive11PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive11LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive11FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive11ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_12": {
+      "Id": 11,
+      "Name": "Disk11",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk11",
+      "Presence": "<=/Scanner_Drive11PresentAccessor.Status;<=/Scanner_Drive11PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive11LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive11FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive11ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive11LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive11FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive11.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 11,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive12PCIePresence.Value;<=/Scanner_Drive12PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "Type": "SATA/SAS",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk11": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive12PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive12LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive12FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive12ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545613,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_13": {
+      "Id": 12,
+      "Name": "Disk12",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk12",
+      "Presence": "<=/Scanner_Drive12PresentAccessor.Status;<=/Scanner_Drive12PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive12LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive12FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive12ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive12LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive12FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive12.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 12,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive13PCIePresence.Value;<=/Scanner_Drive13PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk12": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive13PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive13LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive13FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive13ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545614,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_14": {
+      "Id": 13,
+      "Name": "Disk13",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk13",
+      "Presence": "<=/Scanner_Drive13PresentAccessor.Status;<=/Scanner_Drive13PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive13LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive13FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive13ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive13LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive13FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive13.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 13,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive14PCIePresence.Value;<=/Scanner_Drive14PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk13": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive14PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive14LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive14FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive14ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545615,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_15": {
+      "Id": 14,
+      "Name": "Disk14",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk14",
+      "Presence": "<=/Scanner_Drive14PresentAccessor.Status;<=/Scanner_Drive14PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive14LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive14FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive14ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive14LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive14FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive14.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 14,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive15PCIePresence.Value;<=/Scanner_Drive15PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk14": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Scanner_Drive15PresentAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Scanner_Drive15LocateAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 3072,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive15FalutAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 768,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive15ActivationAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545616,
+      "Size": 2,
+      "Mask": 12288,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Drive_16": {
+      "Id": 15,
+      "Name": "Disk15",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk15",
+      "Presence": "<=/Scanner_Drive15PresentAccessor.Status;<=/Scanner_Drive15PresentAccessor.Value |> expr($1 != 0 ? 255 : $2)",
+      "LocateLed": "<=/Scanner_Drive15LocateAccessor.Value",
+      "FaultLed": "<=/Scanner_Drive15FalutAccessor.Value",
+      "ActivationLed": "<=/Scanner_Drive15ActivationAccessor.Value",
+      "SetLocateLed": "#/Accessor_Drive15LocateAccessor.Value",
+      "SetFaultLed": "#/Accessor_Drive15FaultAccessor.Value",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive15.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "SerialNumber": "",
+      "RelativeSlot": 15,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "PassThrough": "<=/Scanner_Drive16PCIePresence.Value;<=/Scanner_Drive16PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
+      "IODeteriorationHealthCode": 0
+    },
+    "DiscreteSensor_Disk15": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199
+    },
+    "Accessor_JtagSwitch": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469776896,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LogicVerId": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 2816,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "LogicFirmware_SEU_1": {
+      "UId": "00000001030302023938",
+      "Name": "SEU_CPLD",
+      "Manufacturer": "Huawei",
+      "Version": "#/Accessor_LogicVerId.Value",
+      "Location": 26,
+      "UpgradeChip": "#/Cpld_1",
+      "ChipInfo": "#/Cpld_1",
+      "Routes": "#/Accessor_JtagSwitch.Value",
+      "DefaultRoute": 0,
+      "FirmwareRoute": 2,
+      "ValidMode": 0,
+      "SoftwareId": "CPLD-BC83NHBN",
+      "ValidAction": 0
+    },
+    "Accessor_SEUWP": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 1,
+      "Offset": 11776,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_PowerGd": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Size": 1,
+      "Offset": 469765888,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Scanner_PowerGood": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Offset": 469765888,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 100,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "SRUpgrade_1": {
+      "UID": "00000001030302023938",
+      "Type": "SEU",
+      "Version": "${DataVersion}",
+      "StorageChip": "#/Eeprom_SEU",
+      "SoftwareId": "HWSR-BC83NHBN",
+      "WriteProtect": "#/Accessor_SEUWP.Value"
+    },
+    "Fru_SEU": {
+      "PcbId": 1,
+      "FruId": 1,
+      "FruName": "DiskBP${Slot}"
+    },
+    "Scanner_HddBPTemp": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 4865,
+      "Size": 2,
+      "Type": 0,
+      "Mask": 65280,
+      "Period": 2000,
+      "Debounce": "#/MidAvg_HddBpTemp",
+      "Status": 0,
+      "Value": 0
+    },
+    "ThresholdSensor_HddBpTemp": {
+      "M": 100,
+      "RBExp": 224
+    },
+    "Event_Disk0Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk1Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk2Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk3Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk4Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk5Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk6Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk7Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk8Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk9Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk10Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk11Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk12Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk13Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk14Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Disk15Missing": {
+      "EventKeyId": "Disk.DiskMissing",
+      "Condition": 2
+    },
+    "Event_Hdd1Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H00",
+      "Condition": 1
+    },
+    "Event_Hdd2Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H01",
+      "Condition": 1
+    },
+    "Event_Hdd3Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H02",
+      "Condition": 1
+    },
+    "Event_Hdd4Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H03",
+      "Condition": 1
+    },
+    "Event_Hdd5Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H04",
+      "Condition": 1
+    },
+    "Event_Hdd6Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H05",
+      "Condition": 1
+    },
+    "Event_Hdd7Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H06",
+      "Condition": 1
+    },
+    "Event_Hdd8Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H07",
+      "Condition": 1
+    },
+    "Event_Hdd9Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H08",
+      "Condition": 1
+    },
+    "Event_Hdd10Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H09",
+      "Condition": 1
+    },
+    "Event_Hdd11Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H10",
+      "Condition": 1
+    },
+    "Event_Hdd12Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H11",
+      "Condition": 1
+    },
+    "Event_Hdd13Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H12",
+      "Condition": 1
+    },
+    "Event_Hdd14Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H13",
+      "Condition": 1
+    },
+    "Event_Hdd15Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H14",
+      "Condition": 1
+    },
+    "Event_Hdd16Insert": {
+      "EventKeyId": "Hdd.DiskInstalled",
+      "LedFaultCode": "H15",
+      "Condition": 1
+    },
+    "Event_Hdd1Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H00",
+      "Condition": 0
+    },
+    "Event_Hdd2Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H01",
+      "Condition": 0
+    },
+    "Event_Hdd3Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H02",
+      "Condition": 0
+    },
+    "Event_Hdd4Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H03",
+      "Condition": 0
+    },
+    "Event_Hdd5Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H04",
+      "Condition": 0
+    },
+    "Event_Hdd6Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H05",
+      "Condition": 0
+    },
+    "Event_Hdd7Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H06",
+      "Condition": 0
+    },
+    "Event_Hdd8Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H07",
+      "Condition": 0
+    },
+    "Event_Hdd9Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H08",
+      "Condition": 0
+    },
+    "Event_Hdd10Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H09",
+      "Condition": 0
+    },
+    "Event_Hdd11Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H10",
+      "Condition": 0
+    },
+    "Event_Hdd12Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H11",
+      "Condition": 0
+    },
+    "Event_Hdd13Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H12",
+      "Condition": 0
+    },
+    "Event_Hdd14Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H13",
+      "Condition": 0
+    },
+    "Event_Hdd15Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H14",
+      "Condition": 0
+    },
+    "Event_Hdd16Removed": {
+      "EventKeyId": "Hdd.DiskRemoved",
+      "LedFaultCode": "H15",
+      "Condition": 0
+    },
+    "Event_Disk1LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk2LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk3LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk4LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk5LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk6LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk7LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk8LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk9LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk10LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk11LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk12LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk13LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk14LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk15LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Disk16LocatErr": {
+      "EventKeyId": "Disk.DiskLocateError",
+      "Condition": 1
+    },
+    "Event_Hdd1FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H00",
+      "Condition": 1
+    },
+    "Event_Hdd2FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H01",
+      "Condition": 1
+    },
+    "Event_Hdd3FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H02",
+      "Condition": 1
+    },
+    "Event_Hdd4FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H03",
+      "Condition": 1
+    },
+    "Event_Hdd5FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H04",
+      "Condition": 1
+    },
+    "Event_Hdd6FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H05",
+      "Condition": 1
+    },
+    "Event_Hdd7FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H06",
+      "Condition": 1
+    },
+    "Event_Hdd8FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H07",
+      "Condition": 1
+    },
+    "Event_Hdd9FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H08",
+      "Condition": 1
+    },
+    "Event_Hdd10FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H09",
+      "Condition": 1
+    },
+    "Event_Hdd11FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H10",
+      "Condition": 1
+    },
+    "Event_Hdd12FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H11",
+      "Condition": 1
+    },
+    "Event_Hdd13FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H12",
+      "Condition": 1
+    },
+    "Event_Hdd14FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H13",
+      "Condition": 1
+    },
+    "Event_Hdd15FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H14",
+      "Condition": 1
+    },
+    "Event_Hdd16FailedArray": {
+      "EventKeyId": "Disk.DiskRAIDArrayInvalid",
+      "LedFaultCode": "H15",
+      "Condition": 1
+    },
+    "Event_Hdd1PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H00",
+      "Condition": 1
+    },
+    "Event_Hdd2PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H01",
+      "Condition": 1
+    },
+    "Event_Hdd3PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H02",
+      "Condition": 1
+    },
+    "Event_Hdd4PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H03",
+      "Condition": 1
+    },
+    "Event_Hdd5PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H04",
+      "Condition": 1
+    },
+    "Event_Hdd6PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H05",
+      "Condition": 1
+    },
+    "Event_Hdd7PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H06",
+      "Condition": 1
+    },
+    "Event_Hdd8PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H07",
+      "Condition": 1
+    },
+    "Event_Hdd9PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H08",
+      "Condition": 1
+    },
+    "Event_Hdd10PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H09",
+      "Condition": 1
+    },
+    "Event_Hdd11PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H10",
+      "Condition": 1
+    },
+    "Event_Hdd12PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H11",
+      "Condition": 1
+    },
+    "Event_Hdd13PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H12",
+      "Condition": 1
+    },
+    "Event_Hdd14PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H13",
+      "Condition": 1
+    },
+    "Event_Hdd15PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H14",
+      "Condition": 1
+    },
+    "Event_Hdd16PredicFail": {
+      "EventKeyId": "Disk.DiskPredictiveFailure",
+      "LedFaultCode": "H15",
+      "Condition": 1
+    },
+    "Event_Disk1Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk2Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk3Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk4Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk5Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk6Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk7Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk8Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk9Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk10Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk11Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk12Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk13Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk14Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk15Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Disk16Foreign": {
+      "EventKeyId": "Disk.DiskStateForeign",
+      "Condition": 12
+    },
+    "Event_Hdd1MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd2MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd3MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd4MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd5MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd6MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd7MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd8MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd9MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd10MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd11MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd12MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd13MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd14MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd15MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Hdd16MdWroutLow": {
+      "EventKeyId": "Disk.DiskRemMediaWearoutLow",
+      "Condition": 5
+    },
+    "Event_Drive1RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H00",
+      "Condition": 1
+    },
+    "Event_Drive1RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H00",
+      "Condition": 0
+    },
+    "Event_Drive2RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H01",
+      "Condition": 1
+    },
+    "Event_Drive2RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H01",
+      "Condition": 0
+    },
+    "Event_Drive3RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H02",
+      "Condition": 1
+    },
+    "Event_Drive3RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H02",
+      "Condition": 0
+    },
+    "Event_Drive4RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H03",
+      "Condition": 1
+    },
+    "Event_Drive4RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H03",
+      "Condition": 0
+    },
+    "Event_Drive5RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H04",
+      "Condition": 1
+    },
+    "Event_Drive5RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H04",
+      "Condition": 0
+    },
+    "Event_Drive6RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H05",
+      "Condition": 1
+    },
+    "Event_Drive6RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H05",
+      "Condition": 0
+    },
+    "Event_Drive7RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H06",
+      "Condition": 1
+    },
+    "Event_Drive7RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H06",
+      "Condition": 0
+    },
+    "Event_Drive8RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H07",
+      "Condition": 1
+    },
+    "Event_Drive8RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H07",
+      "Condition": 0
+    },
+    "Event_Drive9RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H08",
+      "Condition": 1
+    },
+    "Event_Drive9RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H08",
+      "Condition": 0
+    },
+    "Event_Drive10RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H09",
+      "Condition": 1
+    },
+    "Event_Drive10RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H09",
+      "Condition": 0
+    },
+    "Event_Drive11RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H10",
+      "Condition": 1
+    },
+    "Event_Drive11RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H10",
+      "Condition": 0
+    },
+    "Event_Drive12RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H11",
+      "Condition": 1
+    },
+    "Event_Drive12RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H11",
+      "Condition": 0
+    },
+    "Event_Drive13RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H12",
+      "Condition": 1
+    },
+    "Event_Drive13RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H12",
+      "Condition": 0
+    },
+    "Event_Drive14RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H13",
+      "Condition": 1
+    },
+    "Event_Drive14RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H13",
+      "Condition": 0
+    },
+    "Event_Drive15RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H14",
+      "Condition": 1
+    },
+    "Event_Drive15RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H14",
+      "Condition": 0
+    },
+    "Event_Drive16RebuildStart": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStart",
+      "LedFaultCode": "H15",
+      "Condition": 1
+    },
+    "Event_Drive16RebuildEnd": {
+      "EventKeyId": "Disk.DiskRAIDRebuildStop",
+      "LedFaultCode": "H15",
+      "Condition": 0
+    },
+    "Event_Disk1StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk2StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk3StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk4StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk5StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk6StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk7StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk8StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk9StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk10StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk11StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk12StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk13StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk14StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk15StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk16StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Condition": 1
+    },
+    "Event_Disk1Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H00",
+      "Condition": 1
+    },
+    "Event_Disk2Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H01",
+      "Condition": 1
+    },
+    "Event_Disk3Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H02",
+      "Condition": 1
+    },
+    "Event_Disk4Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H03",
+      "Condition": 1
+    },
+    "Event_Disk5Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H04",
+      "Condition": 1
+    },
+    "Event_Disk6Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H05",
+      "Condition": 1
+    },
+    "Event_Disk7Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H06",
+      "Condition": 1
+    },
+    "Event_Disk8Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H07",
+      "Condition": 1
+    },
+    "Event_Disk9Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H08",
+      "Condition": 1
+    },
+    "Event_Disk10Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H09",
+      "Condition": 1
+    },
+    "Event_Disk11Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H10",
+      "Condition": 1
+    },
+    "Event_Disk12Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H11",
+      "Condition": 1
+    },
+    "Event_Disk13Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H12",
+      "Condition": 1
+    },
+    "Event_Disk14Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H13",
+      "Condition": 1
+    },
+    "Event_Disk15Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H14",
+      "Condition": 1
+    },
+    "Event_Disk16Fail": {
+      "EventKeyId": "Disk.DiskFault",
+      "LedFaultCode": "H15",
+      "Condition": 1
+    },
+    "Event_HddBkpReplaceMntr": {
+      "EventKeyId": "Hdd.HddBackplaneReplace",
+      "Condition": 1
+    },
+    "Event_Disk1ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk2ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk3ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk4ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk5ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk6ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk7ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk8ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk9ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk10ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk11ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk12ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk13ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk14ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk15ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk16ReplaceMntr": {
+      "EventKeyId": "Disk.DiskReplaced",
+      "Condition": 1
+    },
+    "Event_Disk1BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk2BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk3BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk4BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk5BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk6BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk7BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk8BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk9BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk10BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk11BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk12BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk13BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk14BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk15BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_Disk16BlockLow": {
+      "EventKeyId": "Disk.DiskSpareBlockLow",
+      "Condition": 70
+    },
+    "Event_HardDisk1EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk2EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk3EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk4EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk5EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk6EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk7EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk8EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk9EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk10EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk11EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk12EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk13EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk14EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk15EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "Event_HardDisk16EstimatedRemainingLifespanLow": {
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
+      "Condition": 1
+    },
+    "DftIOTest_1": {
+      "Type": 2,
+      "Id": 89,
+      "DeviceNum": 7,
+      "ItemName": "SMC For Hdd BackCard Temp",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "Destination": "#/Accessor_HddBPTEMP.Value",
+      "Data": 0,
+      "ActionType": 2
+    },
+    "Accessor_HddBPTEMP": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 4354,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_LedTest": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 3584,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "I2cLed_1": {
+      "CtrlValue": "#/Accessor_LedTest.Value",
+      "LedOnValue": 1
+    },
+    "Scanner_DiskBPPwrOnTimeOut": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335550208,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_DiskBPPwrFault": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335549184,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Accessor_Drive0FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545857,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive1FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545858,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive2FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545859,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive3FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545860,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive4FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545861,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive5FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545862,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive6FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545863,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive7FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545864,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive8FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545865,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive9FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545866,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive10FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545867,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive11FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545868,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive12FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545869,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive13FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545870,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive14FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545871,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive15FaultAccessor": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 2,
+      "Offset": 335545872,
+      "Mask": 768,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_Drive0LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545857,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive1LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545858,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive2LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545859,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive3LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545860,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive4LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545861,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive5LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545862,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive6LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545863,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive7LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545864,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive8LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545865,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive9LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545866,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive10LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545867,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive11LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545868,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive12LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545869,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive13LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545870,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive14LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545871,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+      "Accessor_Drive15LocateAccessor": {
+        "Chip": "#/Smc_EnclSMC",
+        "Size": 2,
+        "Offset": 335545872,
+        "Mask": 3072,
+        "Type": 0,
+        "Value": 0
+      },
+    "Event_DiskBPPwrFaultMntr64": {
+      "EventKeyId": "System.SystemPowerOnTmout",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr65": {
+      "EventKeyId": "System.SystemPowerOnTmout",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr66": {
+      "EventKeyId": "System.SystemPowerOnTmout",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr67": {
+      "EventKeyId": "System.SystemPowerOnTmout",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr68": {
+      "EventKeyId": "System.SystemPowerOnTmout",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr166": {
+      "EventKeyId": "Disk.DiskBackplanePSFault",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr167": {
+      "EventKeyId": "Disk.DiskBackplanePSFault",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr168": {
+      "EventKeyId": "Disk.DiskBackplanePSFault",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr169": {
+      "EventKeyId": "Disk.DiskBackplanePSFault",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Event_DiskBPPwrFaultMntr170": {
+      "EventKeyId": "Disk.DiskBackplanePSFault",
+      "Condition": 1,
+      "LedFaultCode": "BP1"
+    },
+    "Accessor_CpldTest": {
+      "Chip": "#/Smc_EnclSMC",
+      "Size": 1,
+      "Offset": 8704,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "HddBackplane_1": {
+      "Slot": 1,
+      "UID": "00000001030302023938",
+      "Name": "BC83NHBN",
+      "Manufacturer": "Huawei",
+      "Type": "SEU",
+      "Description": "16*2.5 NVMe(8*SAS/SATA)",
+      "PartNumber": "<=/FruData_SEU.BoardPartNumber",
+      "LogicVersion": "",
+      "LogicUnit": 26,
+      "PcbID": "#/Accessor_PcbID.Value",
+      "PcbVersion": "",
+      "LogicVersionID": "#/Accessor_LogicVersionID.Value",
+      "SRVersion": "${DataVersion}",
+      "BoardID": 65535,
+      "BoardType": "HddBackplane",
+      "Number": 1,
+      "DeviceName": "DiskBP${Slot}",
+      "Position": "SEU${Slot}",
+      "NodeId": "SEU${Slot}DiskBP${Slot}",
+      "RefSMCChip": "#/Smc_EnclSMC",
+      "FruID": "<=/Fru_SEU.FruId",
+      "Container": "${Container}",
+      "RefComponent": "#/Component_HddBackplane",
+      "SerialNumber": "<=/FruData_SEU.BoardSerialNumber",
+      "StartSlot": 0,
+      "CpldTestReg": "#/Accessor_CpldTest.Value",
+      "CpldStatus": 0
+    },
+    "Event_CpldSelfcheck": {
+      "EventKeyId": "DiskBackplane.DiskBackplaneCPLDSelfTestFailure",
+      "Condition": 1
+    },
+    "Event_HardDisk1IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk2IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk3IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk4IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk5IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk6IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk7IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk8IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk9IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk10IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk11IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk12IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk13IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk14IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk15IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "Event_HardDisk16IOPerformanceDeterioration": {
+      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "Condition": 1
+    },
+    "MidAvg_HddBpTemp": {
+      "WindowSize": 4,
+      "DefaultValue": 20,
+      "IsSigned": true
+    },
+    "SmcDfxInfo_SEU": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 7424,
+      "Size": 55,
+      "Period": 2000,
+      "SmcVersion": 5,
+      "Config": {
+        "1": {
+          "cpld_ver": 255
+        },
+        "2": {
+          "lm75_data_low": 255
+        },
+        "3": {
+          "lm75_data_high": 255
+        },
+        "21": {
+          "power_error_code": 255
+        },
+        "22": {
+          "power_timeout_record": 255
+        },
+        "23": {
+          "disk_rst_0": 32,
+          "bmc_set_disk_rst_0": 16,
+          "pg_hdd_pwr_0": 8,
+          "disk_type_0": 2,
+          "disk_prsnt_0": 1
+        },
+        "24": {
+          "disk_active_0": 48,
+          "disk_locate_0": 12,
+          "disk_fault_0": 3
+        },
+        "25": {
+          "disk_rst_1": 32,
+          "bmc_set_disk_rst_1": 16,
+          "pg_hdd_pwr_1": 8,
+          "disk_type_1": 2,
+          "disk_prsnt_1": 1
+        },
+        "26": {
+          "disk_active_1": 48,
+          "disk_locate_1": 12,
+          "disk_fault_1": 3
+        },
+        "27": {
+          "disk_rst_2": 32,
+          "bmc_set_disk_rst_2": 16,
+          "pg_hdd_pwr_2": 8,
+          "disk_type_2": 2,
+          "disk_prsnt_2": 1
+        },
+        "28": {
+          "disk_active_2": 48,
+          "disk_locate_2": 12,
+          "disk_fault_2": 3
+        },
+        "29": {
+          "disk_rst_3": 32,
+          "bmc_set_disk_rst_3": 16,
+          "pg_hdd_pwr_3": 8,
+          "disk_type_3": 2,
+          "disk_prsnt_3": 1
+        },
+        "30": {
+          "disk_active_3": 48,
+          "disk_locate_3": 12,
+          "disk_fault_3": 3
+        },
+        "31": {
+          "disk_rst_4": 32,
+          "bmc_set_disk_rst_4": 16,
+          "pg_hdd_pwr_4": 8,
+          "disk_type_4": 2,
+          "disk_prsnt_4": 1
+        },
+        "32": {
+          "disk_active_4": 48,
+          "disk_locate_4": 12,
+          "disk_fault_4": 3
+        },
+        "33": {
+          "disk_rst_5": 32,
+          "bmc_set_disk_rst_5": 16,
+          "pg_hdd_pwr_5": 8,
+          "disk_type_5": 2,
+          "disk_prsnt_5": 1
+        },
+        "34": {
+          "disk_active_5": 48,
+          "disk_locate_5": 12,
+          "disk_fault_5": 3
+        },
+        "35": {
+          "disk_rst_6": 32,
+          "bmc_set_disk_rst_6": 16,
+          "pg_hdd_pwr_6": 8,
+          "disk_type_6": 2,
+          "disk_prsnt_6": 1
+        },
+        "36": {
+          "disk_active_6": 48,
+          "disk_locate_6": 12,
+          "disk_fault_6": 3
+        },
+        "37": {
+          "disk_rst_7": 32,
+          "bmc_set_disk_rst_7": 16,
+          "pg_hdd_pwr_7": 8,
+          "disk_type_7": 2,
+          "disk_prsnt_7": 1
+        },
+        "38": {
+          "disk_active_7": 48,
+          "disk_locate_7": 12,
+          "disk_fault_7": 3
+        },
+        "39": {
+          "disk_rst_8": 32,
+          "bmc_set_disk_rst_8": 16,
+          "pg_hdd_pwr_8": 8,
+          "disk_type_8": 2,
+          "disk_prsnt_8": 1
+        },
+        "40": {
+          "disk_active_8": 48,
+          "disk_locate_8": 12,
+          "disk_fault_8": 3
+        },
+        "41": {
+          "disk_rst_9": 32,
+          "bmc_set_disk_rst_9": 16,
+          "pg_hdd_pwr_9": 8,
+          "disk_type_9": 2,
+          "disk_prsnt_9": 1
+        },
+        "42": {
+          "disk_active_9": 48,
+          "disk_locate_9": 12,
+          "disk_fault_9": 3
+        },
+        "43": {
+          "disk_rst_10": 32,
+          "bmc_set_disk_rst_10": 16,
+          "pg_hdd_pwr_10": 8,
+          "disk_type_10": 2,
+          "disk_prsnt_10": 1
+        },
+        "44": {
+          "disk_active_10": 48,
+          "disk_locate_10": 12,
+          "disk_fault_10": 3
+        },
+        "45": {
+          "disk_rst_11": 32,
+          "bmc_set_disk_rst_11": 16,
+          "pg_hdd_pwr_11": 8,
+          "disk_type_11": 2,
+          "disk_prsnt_11": 1
+        },
+        "46": {
+          "disk_active_11": 48,
+          "disk_locate_11": 12,
+          "disk_fault_11": 3
+        },
+        "47": {
+          "disk_rst_12": 32,
+          "bmc_set_disk_rst_12": 16,
+          "pg_hdd_pwr_12": 8,
+          "disk_type_12": 2,
+          "disk_prsnt_12": 1
+        },
+        "48": {
+          "disk_active_12": 48,
+          "disk_locate_12": 12,
+          "disk_fault_12": 3
+        },
+        "49": {
+          "disk_rst_13": 32,
+          "bmc_set_disk_rst_13": 16,
+          "pg_hdd_pwr_13": 8,
+          "disk_type_13": 2,
+          "disk_prsnt_13": 1
+        },
+        "50": {
+          "disk_active_13": 48,
+          "disk_locate_13": 12,
+          "disk_fault_13": 3
+        },
+        "51": {
+          "disk_rst_14": 32,
+          "bmc_set_disk_rst_14": 16,
+          "pg_hdd_pwr_14": 8,
+          "disk_type_14": 2,
+          "disk_prsnt_14": 1
+        },
+        "52": {
+          "disk_active_14": 48,
+          "disk_locate_14": 12,
+          "disk_fault_14": 3
+        },
+        "53": {
+          "disk_rst_15": 32,
+          "bmc_set_disk_rst_15": 16,
+          "pg_hdd_pwr_15": 8,
+          "disk_type_15": 2,
+          "disk_prsnt_15": 1
+        },
+        "54": {
+          "disk_active_15": 48,
+          "disk_locate_15": 12,
+          "disk_fault_15": 3
+        }
+      },
+      "Mapping": {
+        "Scanner_Drive1PCIePresence": {
+          "Value": "expr($disk_prsnt_0)"
+        },
+        "Scanner_Drive1PCIeType": {
+          "Value": "expr($disk_type_0)"
+        },
+        "Scanner_Drive2PCIePresence": {
+          "Value": "expr($disk_prsnt_1)"
+        },
+        "Scanner_Drive2PCIeType": {
+          "Value": "expr($disk_type_1)"
+        },
+        "Scanner_Drive3PCIePresence": {
+          "Value": "expr($disk_prsnt_2)"
+        },
+        "Scanner_Drive3PCIeType": {
+          "Value": "expr($disk_type_2)"
+        },
+        "Scanner_Drive4PCIePresence": {
+          "Value": "expr($disk_prsnt_3)"
+        },
+        "Scanner_Drive4PCIeType": {
+          "Value": "expr($disk_type_3)"
+        },
+        "Scanner_Drive5PCIePresence": {
+          "Value": "expr($disk_prsnt_4)"
+        },
+        "Scanner_Drive5PCIeType": {
+          "Value": "expr($disk_type_4)"
+        },
+        "Scanner_Drive6PCIePresence": {
+          "Value": "expr($disk_prsnt_5)"
+        },
+        "Scanner_Drive6PCIeType": {
+          "Value": "expr($disk_type_5)"
+        },
+        "Scanner_Drive7PCIePresence": {
+          "Value": "expr($disk_prsnt_6)"
+        },
+        "Scanner_Drive7PCIeType": {
+          "Value": "expr($disk_type_6)"
+        },
+        "Scanner_Drive8PCIePresence": {
+          "Value": "expr($disk_prsnt_7)"
+        },
+        "Scanner_Drive8PCIeType": {
+          "Value": "expr($disk_type_7)"
+        },
+        "Scanner_Drive9PCIePresence": {
+          "Value": "expr($disk_prsnt_8)"
+        },
+        "Scanner_Drive9PCIeType": {
+          "Value": "expr($disk_type_8)"
+        },
+        "Scanner_Drive10PCIePresence": {
+          "Value": "expr($disk_prsnt_9)"
+        },
+        "Scanner_Drive10PCIeType": {
+          "Value": "expr($disk_type_9)"
+        },
+        "Scanner_Drive11PCIePresence": {
+          "Value": "expr($disk_prsnt_10)"
+        },
+        "Scanner_Drive11PCIeType": {
+          "Value": "expr($disk_type_10)"
+        },
+        "Scanner_Drive12PCIePresence": {
+          "Value": "expr($disk_prsnt_11)"
+        },
+        "Scanner_Drive12PCIeType": {
+          "Value": "expr($disk_type_11)"
+        },
+        "Scanner_Drive13PCIePresence": {
+          "Value": "expr($disk_prsnt_12)"
+        },
+        "Scanner_Drive13PCIeType": {
+          "Value": "expr($disk_type_12)"
+        },
+        "Scanner_Drive14PCIePresence": {
+          "Value": "expr($disk_prsnt_13)"
+        },
+        "Scanner_Drive14PCIeType": {
+          "Value": "expr($disk_type_13)"
+        },
+        "Scanner_Drive15PCIePresence": {
+          "Value": "expr($disk_prsnt_14)"
+        },
+        "Scanner_Drive15PCIeType": {
+          "Value": "expr($disk_type_14)"
+        },
+        "Scanner_Drive16PCIePresence": {
+          "Value": "expr($disk_prsnt_15)"
+        },
+        "Scanner_Drive16PCIeType": {
+          "Value": "expr($disk_type_15)"
+        },
+        "Scanner_Drive0PresentAccessor": {
+          "Value": "expr($disk_prsnt_0)"
+        },
+        "Scanner_Drive0LocateAccessor": {
+          "Value": "expr($disk_locate_0)"
+        },
+        "Scanner_Drive0FalutAccessor": {
+          "Value": "expr($disk_fault_0)"
+        },
+        "Scanner_Drive0ActivationAccessor": {
+          "Value": "expr($disk_active_0)"
+        },
+        "Scanner_Drive1PresentAccessor": {
+          "Value": "expr($disk_prsnt_1)"
+        },
+        "Scanner_Drive1LocateAccessor": {
+          "Value": "expr($disk_locate_1)"
+        },
+        "Scanner_Drive1FalutAccessor": {
+          "Value": "expr($disk_fault_1)"
+        },
+        "Scanner_Drive1ActivationAccessor": {
+          "Value": "expr($disk_active_1)"
+        },
+        "Scanner_Drive2PresentAccessor": {
+          "Value": "expr($disk_prsnt_2)"
+        },
+        "Scanner_Drive2LocateAccessor": {
+          "Value": "expr($disk_locate_2)"
+        },
+        "Scanner_Drive2FalutAccessor": {
+          "Value": "expr($disk_fault_2)"
+        },
+        "Scanner_Drive2ActivationAccessor": {
+          "Value": "expr($disk_active_2)"
+        },
+        "Scanner_Drive3PresentAccessor": {
+          "Value": "expr($disk_prsnt_3)"
+        },
+        "Scanner_Drive3LocateAccessor": {
+          "Value": "expr($disk_locate_3)"
+        },
+        "Scanner_Drive3FalutAccessor": {
+          "Value": "expr($disk_fault_3)"
+        },
+        "Scanner_Drive3ActivationAccessor": {
+          "Value": "expr($disk_active_3)"
+        },
+        "Scanner_Drive4PresentAccessor": {
+          "Value": "expr($disk_prsnt_4)"
+        },
+        "Scanner_Drive4LocateAccessor": {
+          "Value": "expr($disk_locate_4)"
+        },
+        "Scanner_Drive4FalutAccessor": {
+          "Value": "expr($disk_fault_4)"
+        },
+        "Scanner_Drive4ActivationAccessor": {
+          "Value": "expr($disk_active_4)"
+        },
+        "Scanner_Drive5PresentAccessor": {
+          "Value": "expr($disk_prsnt_5)"
+        },
+        "Scanner_Drive5LocateAccessor": {
+          "Value": "expr($disk_locate_5)"
+        },
+        "Scanner_Drive5FalutAccessor": {
+          "Value": "expr($disk_fault_5)"
+        },
+        "Scanner_Drive5ActivationAccessor": {
+          "Value": "expr($disk_active_5)"
+        },
+        "Scanner_Drive6PresentAccessor": {
+          "Value": "expr($disk_prsnt_6)"
+        },
+        "Scanner_Drive6LocateAccessor": {
+          "Value": "expr($disk_locate_6)"
+        },
+        "Scanner_Drive6FalutAccessor": {
+          "Value": "expr($disk_fault_6)"
+        },
+        "Scanner_Drive6ActivationAccessor": {
+          "Value": "expr($disk_active_6)"
+        },
+        "Scanner_Drive7PresentAccessor": {
+          "Value": "expr($disk_prsnt_7)"
+        },
+        "Scanner_Drive7LocateAccessor": {
+          "Value": "expr($disk_locate_7)"
+        },
+        "Scanner_Drive7FalutAccessor": {
+          "Value": "expr($disk_fault_7)"
+        },
+        "Scanner_Drive7ActivationAccessor": {
+          "Value": "expr($disk_active_7)"
+        },
+        "Scanner_Drive8PresentAccessor": {
+          "Value": "expr($disk_prsnt_8)"
+        },
+        "Scanner_Drive8LocateAccessor": {
+          "Value": "expr($disk_locate_8)"
+        },
+        "Scanner_Drive8FalutAccessor": {
+          "Value": "expr($disk_fault_8)"
+        },
+        "Scanner_Drive8ActivationAccessor": {
+          "Value": "expr($disk_active_8)"
+        },
+        "Scanner_Drive9PresentAccessor": {
+          "Value": "expr($disk_prsnt_9)"
+        },
+        "Scanner_Drive9LocateAccessor": {
+          "Value": "expr($disk_locate_9)"
+        },
+        "Scanner_Drive9FalutAccessor": {
+          "Value": "expr($disk_fault_9)"
+        },
+        "Scanner_Drive9ActivationAccessor": {
+          "Value": "expr($disk_active_9)"
+        },
+        "Scanner_Drive10PresentAccessor": {
+          "Value": "expr($disk_prsnt_10)"
+        },
+        "Scanner_Drive10LocateAccessor": {
+          "Value": "expr($disk_locate_10)"
+        },
+        "Scanner_Drive10FalutAccessor": {
+          "Value": "expr($disk_fault_10)"
+        },
+        "Scanner_Drive10ActivationAccessor": {
+          "Value": "expr($disk_active_10)"
+        },
+        "Scanner_Drive11PresentAccessor": {
+          "Value": "expr($disk_prsnt_11)"
+        },
+        "Scanner_Drive11LocateAccessor": {
+          "Value": "expr($disk_locate_11)"
+        },
+        "Scanner_Drive11FalutAccessor": {
+          "Value": "expr($disk_fault_11)"
+        },
+        "Scanner_Drive11ActivationAccessor": {
+          "Value": "expr($disk_active_11)"
+        },
+        "Scanner_Drive12PresentAccessor": {
+          "Value": "expr($disk_prsnt_12)"
+        },
+        "Scanner_Drive12LocateAccessor": {
+          "Value": "expr($disk_locate_12)"
+        },
+        "Scanner_Drive12FalutAccessor": {
+          "Value": "expr($disk_fault_12)"
+        },
+        "Scanner_Drive12ActivationAccessor": {
+          "Value": "expr($disk_active_12)"
+        },
+        "Scanner_Drive13PresentAccessor": {
+          "Value": "expr($disk_prsnt_13)"
+        },
+        "Scanner_Drive13LocateAccessor": {
+          "Value": "expr($disk_locate_13)"
+        },
+        "Scanner_Drive13FalutAccessor": {
+          "Value": "expr($disk_fault_13)"
+        },
+        "Scanner_Drive13ActivationAccessor": {
+          "Value": "expr($disk_active_13)"
+        },
+        "Scanner_Drive14PresentAccessor": {
+          "Value": "expr($disk_prsnt_14)"
+        },
+        "Scanner_Drive14LocateAccessor": {
+          "Value": "expr($disk_locate_14)"
+        },
+        "Scanner_Drive14FalutAccessor": {
+          "Value": "expr($disk_fault_14)"
+        },
+        "Scanner_Drive14ActivationAccessor": {
+          "Value": "expr($disk_active_14)"
+        },
+        "Scanner_Drive15PresentAccessor": {
+          "Value": "expr($disk_prsnt_15)"
+        },
+        "Scanner_Drive15LocateAccessor": {
+          "Value": "expr($disk_locate_15)"
+        },
+        "Scanner_Drive15FalutAccessor": {
+          "Value": "expr($disk_fault_15)"
+        },
+        "Scanner_Drive15ActivationAccessor": {
+          "Value": "expr($disk_active_15)"
+        },
+        "Scanner_HddBPTemp": {
+          "Value": "expr($lm75_data_high)"
+        },
+        "Scanner_DiskBPPwrOnTimeOut": {
+          "Value": "expr($power_timeout_record)"
+        },
+        "Scanner_DiskBPPwrFault": {
+          "Value": "expr($power_error_code)"
+        }
+      }
+    },
+    "TemperatureInfo_1_7": {
+      "Name": "#/ThresholdSensor_HddBpTemp.SensorName",
+      "ReadingValue": "<=/Scanner_HddBPTemp.Value",
+      "Status": "<=/Scanner_HddBPTemp.Status",
+      "Health": "<=/ThresholdSensor_HddBpTemp.Health",
+      "UpperThreshold": [
+        255,
+        255,
+        255
+      ],
+      "LowerThreshold": [
+        255,
+        255,
+        255
+      ],
+      "CoordinateX": 2,
+      "CoordinateY": 4
+    }
+  }
+}

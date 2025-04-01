@@ -1,0 +1,1164 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+      "Anchor": {
+        "Buses": [
+          "I2c_8",
+          "I2c_9"
+        ]
+      },
+      "I2c_8": {
+        "Chips": [
+          "Pca9545_i2c8_chip"
+        ]
+      },
+      "I2c_9": {
+        "Chips": [
+          "Pca9545_i2c9_chip"
+        ]
+      },
+      "Pca9545_i2c8_chip": {
+        "Buses": [
+          "I2cMux_Pca9545_i2c8_chip_4",
+          "I2cMux_Pca9545_i2c8_chip_3",
+          "I2cMux_Pca9545_i2c8_chip_2",
+          "I2cMux_Pca9545_i2c8_chip_1"
+        ]
+      },
+      "I2cMux_Pca9545_i2c8_chip_1": {
+        "Chips": [
+          "Smc_NpuBrdSMC1"
+        ]
+      },
+      "I2cMux_Pca9545_i2c8_chip_2": {
+        "Chips": [
+          "Smc_NpuBrdSMC5"
+        ]
+      },
+      "I2cMux_Pca9545_i2c8_chip_3": {
+        "Chips": [
+          "Smc_NpuBrdSMC2"
+        ]
+      },
+      "I2cMux_Pca9545_i2c8_chip_4": {
+        "Chips": [
+          "Smc_NpuBrdSMC6"
+        ]
+      },
+      "Pca9545_i2c9_chip": {
+        "Buses": [
+          "I2cMux_Pca9545_i2c9_chip_4",
+          "I2cMux_Pca9545_i2c9_chip_3",
+          "I2cMux_Pca9545_i2c9_chip_2",
+          "I2cMux_Pca9545_i2c9_chip_1"
+        ]
+      },
+      "I2cMux_Pca9545_i2c9_chip_1": {
+        "Chips": [
+          "Smc_NpuBrdSMC3"
+        ]
+      },
+      "I2cMux_Pca9545_i2c9_chip_2": {
+        "Chips": [
+          "Smc_NpuBrdSMC7"
+        ]
+      },
+      "I2cMux_Pca9545_i2c9_chip_3": {
+        "Chips": [
+          "Smc_NpuBrdSMC4"
+        ]
+      },
+      "I2cMux_Pca9545_i2c9_chip_4": {
+        "Chips": [
+          "Smc_NpuBrdSMC8"
+        ]
+      }
+    },
+    "Objects": {
+      "Pca9545_i2c8_chip": {
+        "@Default": {},
+        "Address": 226,
+        "HealthStatus": 0,
+        "OffsetWidth": 0,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "I2cMux_Pca9545_i2c8_chip_1": {
+        "ChannelId": 3
+      },
+      "I2cMux_Pca9545_i2c8_chip_2": {
+        "ChannelId": 2
+      },
+      "I2cMux_Pca9545_i2c8_chip_3": {
+        "ChannelId": 1
+      },
+      "I2cMux_Pca9545_i2c8_chip_4": {
+        "ChannelId": 0
+      },
+      "Pca9545_i2c9_chip": {
+        "@Default": {},
+        "Address": 226,
+        "HealthStatus": 0,
+        "OffsetWidth": 0,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "I2cMux_Pca9545_i2c9_chip_1": {
+        "ChannelId": 3
+      },
+      "I2cMux_Pca9545_i2c9_chip_2": {
+        "ChannelId": 2
+      },
+      "I2cMux_Pca9545_i2c9_chip_3": {
+        "ChannelId": 1
+      },
+      "I2cMux_Pca9545_i2c9_chip_4": {
+        "ChannelId": 0
+      },
+      "Smc_NpuBrdSMC1": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC1",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC2": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC2",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC3": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC3",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC4": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC4",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC5": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC5",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC6": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC6",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC7": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC7",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Smc_NpuBrdSMC8": {
+        "@Default": {},
+        "AddrWidth": 1,
+        "Address": 216,
+        "Name": "Smc_NpuBrdSMC8",
+        "OffsetWidth": 1,
+        "ReadTmout": 0,
+        "WriteTmout": 0
+      },
+      "Eeprom_ACU": {
+        "AddrWidth": 1,
+        "Address": 174,
+        "HealthStatus": 0,
+        "OffsetWidth": 2,
+        "ReadTmout": 100,
+        "RwBlockSize": 32,
+        "WriteInterval": 20,
+        "WriteTmout": 100
+      },
+      "ContBin_H3L3": {
+        "NumH": 3,
+        "NumL": 3,
+        "DefaultValue": 0
+      },
+      "Scanner_NPU1Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC1",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU1Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC1",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU2Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC2",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU2Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC2",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU3Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC3",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU3Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC3",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU4Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC4",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU4Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC4",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU5Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC5",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU5Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC5",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU6Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC6",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU6Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC6",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU7Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC7",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU7Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC7",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU8Die0Link": {
+        "Chip": "#/Smc_NpuBrdSMC8",
+        "Offset": 1073759489,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU8Die1Link": {
+        "Chip": "#/Smc_NpuBrdSMC8",
+        "Offset": 1073759490,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "#/ContBin_H3L3",
+        "Value": 0
+      },
+      "Scanner_NPU1Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC1",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU1Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC1",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU2Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC2",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU2Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC2",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU3Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC3",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU3Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC3",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU4Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC4",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU4Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC4",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU5Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC5",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU5Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC5",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU6Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC6",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU6Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC6",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU7Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC7",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU7Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC7",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU8Die0PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC8",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 1,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+      "Scanner_NPU8Die1PowerOn": {
+        "Chip": "#/Smc_NpuBrdSMC8",
+        "Offset": 1073753344,
+        "Size": 1,
+        "Mask": 16,
+        "Type": 0,
+        "Period": 400,
+        "Debounce": "None",
+        "Value": 0
+      },
+  
+      "PCIeDevice_1": {
+        "DeviceName": "Ethernet Adapter Board",
+        "FunctionClass": 2,
+        "LinkSpeedReduced": 0,
+        "Container": "${Container}",
+        "GroupPosition": "PCIeDevice_${GroupPosition}",
+        "DeviceType": 8,
+        "PCIeDeviceType": "Simulated",
+        "SlotType": "FullLength",
+        "FunctionProtocol": "PCIe",
+        "FunctionType": "Virtual"
+      },
+      "NetworkAdapter_1": {
+        "SystemID": 1,
+        "SlotNumber": "${Slot}",
+        "Name": "Ethernet Adapter Board",
+        "Manufacturer": "Huawei",
+        "Position": "ACU",
+        "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+        "Type": 3,
+        "Model": "NPU",
+        "NetworkPortCount": 16,
+        "VendorID": "0xffff",
+        "DeviceID": "0xffff",
+        "SubsystemVendorID": "0xffff",
+        "SubsystemDeviceID": "0xffff",
+        "BoardID": 65535,
+        "ComponentUniqueID": "00000001070302055991",
+        "PCBVersion": ".A",
+        "ParentCardSlotId": 255,
+        "Description": "16*200GE",
+        "ModelDescription": "16*200GE",
+        "ChipVendor": "HiSilicon",
+        "SocketId": "<=/PCIeDevice_1.SocketID",
+        "Bus": "<=/PCIeDevice_1.Bus",
+        "Device": "<=/PCIeDevice_1.Device",
+        "Function": "<=/PCIeDevice_1.Function",
+        "DevBus": "<=/PCIeDevice_1.DevBus",
+        "DevDevice": "<=/PCIeDevice_1.DevDevice",
+        "DevFunction": "<=/PCIeDevice_1.DevFunction"
+      },
+      "Component_SwitchModule": {
+        "FruId": 255,
+        "Instance": 254,
+        "Type": 20,
+        "Name": "SwitchModule",
+        "Presence": 1,
+        "Health": 0,
+        "PowerState": 1,
+        "GroupId": 1
+      },
+      "Event_CdrOpticalModuleTempMinor": {
+        "EventKeyId": "SwitchModule.SwitchModuleComponentOverTempMinor",
+        "Reading": "<=/NetworkAdapter_1.SFPMaxTemperatureCelsius |> expr( $1 == 32767 ? 30 : $1)",
+        "Condition": 75,
+        "OperatorId": 4,
+        "Hysteresis": 2,
+        "DescArg1": "Cdr OpticalModule",
+        "DescArg2": " max",
+        "DescArg3": "#/Event_CdrOpticalModuleTempMinor.Reading",
+        "DescArg4": "#/Event_CdrOpticalModuleTempMinor.Condition",
+        "Component": "#/Component_SwitchModule",
+        "AdditionalInfo": "1",
+        "LedFaultCode": "A00"
+      },
+      "Event_CdrOpticalModuleTempFailure": {
+        "EventKeyId": "SwitchModule.SwitchModuleComponentAccessTempFailure",
+        "Reading": "<=/NetworkAdapter_1.SFPMaxTemperatureCelsius |> expr( $1 == 32767 ? 1 : 0)",
+        "Condition": 1,
+        "OperatorId": 5,
+        "DescArg1": "Cdr OpticalModule",
+        "DescArg2": " max",
+        "Component": "#/Component_SwitchModule",
+        "AdditionalInfo": "1"
+      },
+      "CoolingRequirement_1_cdropt": {
+        "RequirementId": 74,
+        "MonitoringStatus": "<=/NetworkAdapter_1.SFPMaxTemperatureCelsius |> expr(($1 != 32767) ? 0 : 1)",
+        "MonitoringValue": "<=/NetworkAdapter_1.SFPMaxTemperatureCelsius",
+        "FailedValue": 80,
+        "TargetTemperatureCelsius": 55,
+        "MaxAllowedTemperatureCelsius": 70,
+        "TargetTemperatureRangeCelsius": [],
+        "SmartCoolingTargetTemperature": [
+          60,
+          55,
+          65
+        ],
+        "CustomSupported": false,
+        "ActiveInStandby": true,
+        "Enabled": "<=/NetworkAdapter_1.SFPMaxTemperatureCelsius |> expr(($1 != 0) ? true : false)"
+      },
+      "NetworkPort_01": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 0,
+        "NpuID": 1,
+        "PowerOn": "<=/Scanner_NPU1Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU1Die0Link.Value"
+      },
+      "NetworkPort_02": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 1,
+        "NpuID": 2,
+        "PowerOn": "<=/Scanner_NPU1Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU1Die1Link.Value"
+      },
+      "NetworkPort_03": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 2,
+        "NpuID": 3,
+        "PowerOn": "<=/Scanner_NPU2Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU2Die0Link.Value"
+      },
+      "NetworkPort_04": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 3,
+        "NpuID": 4,
+        "PowerOn": "<=/Scanner_NPU2Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU2Die1Link.Value"
+      },
+      "NetworkPort_05": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 4,
+        "NpuID": 5,
+        "PowerOn": "<=/Scanner_NPU3Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU3Die0Link.Value"
+      },
+      "NetworkPort_06": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 5,
+        "NpuID": 6,
+        "PowerOn": "<=/Scanner_NPU3Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU3Die1Link.Value"
+      },
+      "NetworkPort_07": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 6,
+        "NpuID": 7,
+        "PowerOn": "<=/Scanner_NPU4Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU4Die0Link.Value"
+      },
+      "NetworkPort_08": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 7,
+        "NpuID": 8,
+        "PowerOn": "<=/Scanner_NPU4Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU4Die1Link.Value"
+      },
+      "NetworkPort_09": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 8,
+        "NpuID": 9,
+        "PowerOn": "<=/Scanner_NPU5Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU5Die0Link.Value"
+      },
+      "NetworkPort_10": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 9,
+        "NpuID": 10,
+        "PowerOn": "<=/Scanner_NPU5Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU5Die1Link.Value"
+      },
+      "NetworkPort_11": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 10,
+        "NpuID": 11,
+        "PowerOn": "<=/Scanner_NPU6Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU6Die0Link.Value"
+      },
+      "NetworkPort_12": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 11,
+        "NpuID": 12,
+        "PowerOn": "<=/Scanner_NPU6Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU6Die1Link.Value"
+      },
+      "NetworkPort_13": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 12,
+        "NpuID": 13,
+        "PowerOn": "<=/Scanner_NPU7Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU7Die0Link.Value"
+      },
+      "NetworkPort_14": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 13,
+        "NpuID": 14,
+        "PowerOn": "<=/Scanner_NPU7Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU7Die1Link.Value"
+      },
+      "NetworkPort_15": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 14,
+        "NpuID": 15,
+        "PowerOn": "<=/Scanner_NPU8Die0PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU8Die0Link.Value"
+      },
+      "NetworkPort_16": {
+        "@Parent": "NetworkAdapter_1",
+        "SystemID": 1,
+        "PortID": 15,
+        "NpuID": 16,
+        "PowerOn": "<=/Scanner_NPU8Die1PowerOn.Value",
+        "MediumType": "FiberOptic",
+        "SupportedLinkCapability": "200GE",
+        "LinkStatusNumeric": "<=/Scanner_NPU8Die1Link.Value"
+      },
+      "OpticalModule_1_Die0": {
+        "@Parent": "NetworkPort_01"
+      },
+      "OpticalModule_2_Die1": {
+        "@Parent": "NetworkPort_03"
+      },
+      "OpticalModule_3_Die0": {
+        "@Parent": "NetworkPort_05"
+      },
+      "OpticalModule_4_Die1": {
+        "@Parent": "NetworkPort_07"
+      },
+      "OpticalModule_5_Die0": {
+        "@Parent": "NetworkPort_10"
+      },
+      "OpticalModule_6_Die1": {
+        "@Parent": "NetworkPort_12"
+      },
+      "OpticalModule_7_Die0": {
+        "@Parent": "NetworkPort_14"
+      },
+      "OpticalModule_8_Die1": {
+        "@Parent": "NetworkPort_16"
+      },
+      "Component_NetworkPort1": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port1",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort1"
+      },
+      "Component_NetworkPort2": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port2",
+        "Health": "<=/Component_NetworkPort1.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort2"
+      },
+      "Component_NetworkPort3": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port3",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort3"
+      },
+      "Component_NetworkPort4": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port4",
+        "Health": "<=/Component_NetworkPort3.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort4"
+      },
+      "Component_NetworkPort5": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port5",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort5"
+      },
+      "Component_NetworkPort6": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port6",
+        "Health": "<=/Component_NetworkPort5.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort6"
+      },
+      "Component_NetworkPort7": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port7",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort7"
+      },
+      "Component_NetworkPort8": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port8",
+        "Health": "<=/Component_NetworkPort7.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort8"
+      },
+      "Component_NetworkPort9": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port9",
+        "Health": "<=/Component_NetworkPort10.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort9"
+      },
+      "Component_NetworkPort10": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port10",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort10"
+      },
+      "Component_NetworkPort11": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port11",
+        "Health": "<=/Component_NetworkPort12.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort11"
+      },
+      "Component_NetworkPort12": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port12",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort12"
+      },
+      "Component_NetworkPort13": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port13",
+        "Health": "<=/Component_NetworkPort14.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort13"
+      },
+      "Component_NetworkPort14": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port14",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort14"
+      },
+      "Component_NetworkPort15": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port15",
+        "Health": "<=/Component_NetworkPort16.Health",
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort15"
+      },
+      "Component_NetworkPort16": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 41,
+        "Name": "Port16",
+        "Health": 0,
+        "PowerState": 1,
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort16"
+      },
+      "Component_OpticalModule1": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU1OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule2": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU2OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule3": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU3OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule4": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU4OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule5": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU5OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule6": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU6OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule7": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU7OpticalModule",
+        "Health": 0
+      },
+      "Component_OpticalModule8": {
+        "FruId": 255,
+        "Instance": 255,
+        "Type": 95,
+        "Name": "NPU8OpticalModule",
+        "Health": 0
+      },
+      "Event_OpticalModule1Die0DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_1_Die0.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU1",
+          "Component": "#/Component_OpticalModule1"
+      },
+      "Event_OpticalModule2Die1DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_2_Die1.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU2",
+          "Component": "#/Component_OpticalModule2"
+      },
+      "Event_OpticalModule3Die0DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_3_Die0.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU3",
+          "Component": "#/Component_OpticalModule3"
+      },
+      "Event_OpticalModule4Die1DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_4_Die1.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU4",
+          "Component": "#/Component_OpticalModule4"
+      },
+      "Event_OpticalModule5Die0DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_5_Die0.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU5",
+          "Component": "#/Component_OpticalModule5"
+      },
+      "Event_OpticalModule6Die1DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_6_Die1.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU6",
+          "Component": "#/Component_OpticalModule6"
+      },
+      "Event_OpticalModule7Die0DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_7_Die0.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU7",
+          "Component": "#/Component_OpticalModule7"
+      },
+      "Event_OpticalModule8Die1DirtyAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
+          "Reading": "<=/OpticalModule_8_Die1.FiberDirtyDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU8",
+          "Component": "#/Component_OpticalModule8"
+      },
+      "Event_OpticalModule1Die0LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_1_Die0.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU1",
+          "Component": "#/Component_OpticalModule1"
+      },
+      "Event_OpticalModule2Die1LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_2_Die1.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU2",
+          "Component": "#/Component_OpticalModule2"
+      },
+      "Event_OpticalModule3Die0LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_3_Die0.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU3",
+          "Component": "#/Component_OpticalModule3"
+      },
+      "Event_OpticalModule4Die1LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_4_Die1.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU4",
+          "Component": "#/Component_OpticalModule4"
+      },
+      "Event_OpticalModule5Die0LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_5_Die0.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU5",
+          "Component": "#/Component_OpticalModule5"
+      },
+      "Event_OpticalModule6Die1LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_6_Die1.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU6",
+          "Component": "#/Component_OpticalModule6"
+      },
+      "Event_OpticalModule7Die0LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_7_Die0.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU7",
+          "Component": "#/Component_OpticalModule7"
+      },
+      "Event_OpticalModule8Die1LooseAlarm": {
+          "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
+          "Reading": "<=/OpticalModule_8_Die1.FiberLoosenessDetected |> expr($1 ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "#/NetworkAdapter_1.Name",
+          "DescArg2": "NPU8",
+          "Component": "#/Component_OpticalModule8"
+      }
+    }
+  }

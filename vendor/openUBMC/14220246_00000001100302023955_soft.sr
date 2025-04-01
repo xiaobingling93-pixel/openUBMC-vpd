@@ -1,0 +1,268 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.04",
+  "Unit": {
+    "Type": "NICCard",
+    "Name": "BoardNICCard_1"
+  },
+  "Objects": {
+    "FruData_Fru0": {
+      "FruId": 1,
+      "FruDev": "#/Eeprom_NIC",
+      "EepromWp": 0,
+      "BoardPartNumber": "N/A",
+      "BoardSerialNumber": "N/A",
+      "StorageType": "TianChi"
+    },
+    "Component_NICCard": {
+      "FruId": "<=/Fru_NICCard.FruId",
+      "Instance": "${Slot}",
+      "Type": 13,
+      "Name": "NIC ${Slot} (SF221Q)",
+      "Presence": 1,
+      "Location": "<=/NetworkAdapter_1.Position",
+      "Manufacturer": "Huawei",
+      "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+      "UniqueId": "00000001100302023955",
+      "Health": 0,
+      "PowerState": 1,
+      "GroupId": 1,
+      "Function": "NIC Card",
+      "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "BoardId": "<=/NetworkAdapter_1.BoardID",
+      "NodeId": "chassisNIC${Slot}(SF221Q)"
+    },
+    "Component_Port1": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 41,
+      "Name": "Port1",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1
+    },
+    "Component_Port2": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 41,
+      "Name": "Port2",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1
+    },
+    "Component_Port3": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 41,
+      "Name": "Port3",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1
+    },
+    "Component_Port4": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 41,
+      "Name": "Port4",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1
+    },
+    "Fru_NICCard": {
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Health": 0,
+      "EepStatus": 1,
+      "Type": 13,
+      "FruDataId": "#/FruData_Fru0",
+      "UniqueId": "00000001100302023955"
+    },
+    "DftVersion_BoardNICPcbVersion": {
+      "FruId": "<=/Fru_NICCard.FruId",
+      "VersionType": 0,
+      "Version": "<=/BoardNICCard_1.PcbVersion"
+    },
+    "DftVersion_BoardNICCsrVersion": {
+      "FruId": "<=/Fru_NICCard.FruId",
+      "VersionType": 25,
+      "Version": "<=/BoardNICCard_1.SRVersion"
+    },
+    "DftEeprom_1": {
+      "Id": 12,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "NIC${Slot} Eeprom Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_Fru0"
+    },
+    "ThresholdSensor_NICTemp": {
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": 42,
+      "EntityInstance": 96,
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "NIC${Slot} Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "Analog": 1,
+      "NominalReading": 25,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_NicLm75.Value",
+      "ReadingStatus": "<=/Scanner_NicLm75.Status;<=/Scanner_NicLm75.Value |> expr((($1 == 0) && ($2 > 255)) ? 2 : $1)",
+      "SensorNumber": 255
+    },
+    "Event_NICCardReplaceMntr": {
+      "Reading": "<=/Component_NICCard.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Instance",
+      "DescArg2": "#/Component_NICCard.PreviousSN",
+      "DescArg3": "#/Component_NICCard.SerialNumber",
+      "Component": "#/Component_NICCard",
+      "ComponentHealth": "#/Component_NICCard.Health"
+    },
+    "Event_LomCardAERMntr": {
+      "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg2": "NA"
+    },
+    "Event_LomCardPFAEMntr": {
+      "Reading": "<=/PCIeDevice_1.PredictiveFault",
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}"
+    },
+    "Event_Port0BWUsageMntr": {
+      "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+      "@Default": {
+        "Condition": 100
+      },
+      "OperatorId": 4,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg3": "Port 1",
+      "DescArg4": "#/Event_Port0BWUsageMntr.Reading",
+      "DescArg5": "#/Event_Port0BWUsageMntr.Condition",
+      "AdditionalInfo": "1,3"
+    },
+    "Event_Port1BWUsageMntr": {
+      "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
+      "@Default": {
+        "Condition": 100
+      },
+      "OperatorId": 4,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg3": "Port 2",
+      "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
+      "DescArg5": "#/Event_Port1BWUsageMntr.Condition",
+      "AdditionalInfo": "1,3"
+    },
+    "Event_Port2BWUsageMntr": {
+      "Reading": "<=/NetworkPort_3.BandwidthUsagePercent",
+      "@Default": {
+        "Condition": 100
+      },
+      "OperatorId": 4,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg3": "Port 3",
+      "DescArg4": "#/Event_Port2BWUsageMntr.Reading",
+      "DescArg5": "#/Event_Port2BWUsageMntr.Condition",
+      "AdditionalInfo": "1,3"
+    },
+    "Event_Port3BWUsageMntr": {
+      "Reading": "<=/NetworkPort_4.BandwidthUsagePercent",
+      "@Default": {
+        "Condition": 100
+      },
+      "OperatorId": 4,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg3": "Port 4",
+      "DescArg4": "#/Event_Port3BWUsageMntr.Reading",
+      "DescArg5": "#/Event_Port3BWUsageMntr.Condition",
+      "AdditionalInfo": "1,3"
+    },
+    "Event_Port1LinkDown": {
+      "Reading": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port1Link.Value;<=/Scanner_Lom2Port1Link.Value;<=/Scanner_Lom1Port1Link.Status;<=/Scanner_Lom2Port1Link.Status |> expr($1 == 1 ? ($4 == 0 ? $2 : 255) : ($5 == 0 ? $3 : 255))",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1",
+      "Component": "#/Component_Port1"
+    },
+    "Event_Port2LinkDown": {
+      "Reading": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port2Link.Value;<=/Scanner_Lom2Port2Link.Value;<=/Scanner_Lom1Port2Link.Status;<=/Scanner_Lom2Port2Link.Status |> expr($1 == 1 ? ($4 == 0 ? $2 : 255) : ($5 == 0 ? $3 : 255))",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 2",
+      "Component": "#/Component_Port2"
+    },
+    "Event_Port3LinkDown": {
+      "Reading": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port3Link.Value;<=/Scanner_Lom2Port3Link.Value;<=/Scanner_Lom1Port3Link.Status;<=/Scanner_Lom2Port3Link.Status |> expr($1 == 1 ? ($4 == 0 ? $2 : 255) : ($5 == 0 ? $3 : 255))",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 3",
+      "Component": "#/Component_Port3"
+    },
+    "Event_Port4LinkDown": {
+      "Reading": "<=/NetworkAdapter_1.SlotNumber;<=/Scanner_Lom1Port4Link.Value;<=/Scanner_Lom2Port4Link.Value;<=/Scanner_Lom1Port4Link.Status;<=/Scanner_Lom2Port4Link.Status |> expr($1 == 1 ? ($4 == 0 ? $2 : 255) : ($5 == 0 ? $3 : 255))",
+      "@Default": {
+        "Reading": 255
+      },
+      "OperatorId": 8,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 4",
+      "Component": "#/Component_Port4"
+    },
+    "Event_NicTemHighMinor": {
+      "Reading": "<=/ThresholdSensor_NICTemp.Reading |> expr(($1 >= 128) ? ($1 - 256) : $1)",
+      "@Default": {
+        "Condition": 115
+      },
+      "OperatorId": 4,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}",
+      "DescArg2": "#/Event_NicTemHighMinor.Reading",
+      "DescArg3": "#/Event_NicTemHighMinor.Condition"
+    },
+    "Event_NICTempFailMntr": {
+      "Reading": "<=/Scanner_NicLm75.Status",
+      "OperatorId": 5,
+      "Enabled": true,
+      "Component": "#/Component_NICCard",
+      "DescArg1": "${Slot}"
+    }
+  }
+}

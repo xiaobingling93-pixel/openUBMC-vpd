@@ -1,0 +1,209 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PSU",
+        "Name": "OnePower_1"
+    },
+    "Objects": {
+        "FruData_Ps": {
+            "FruId": 1,
+            "StorageType": "Power"
+        },
+        "Component_PowerSupply": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 3,
+            "Location": "chassis",
+            "Name": "PS",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/OnePower_1.SerialNumber",
+            "PartNumber": "<=/OnePower_1.PartNumber",
+            "BoardId": "<=/Fru_Ps.BoardId",
+            "GroupId": 1
+        },
+        "Fru_Ps": {
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": 1,
+            "Type": 3,
+            "FruDataId": "#/FruData_Ps"
+        },
+        "DiscreteSensor_PsStatus": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PowerSupply.Id",
+            "EntityInstance": "<=/Entity_PowerSupply.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 8,
+            "ReadingType": 111,
+            "SensorName": "PS${Slot} Status",
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_PsListen0": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": 1,
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PsStatus"
+        },
+        "DiscreteEvent_PsListen1": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/OnePower_1.Failure",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PsStatus"
+        },
+        "DiscreteEvent_PsListen2": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 3,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/OnePower_1.LossOfInput",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PsStatus"
+        },
+        "DiscreteEvent_PsListen4": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/OnePower_1.OutputVoltageFault |> expr($1 & 240)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PsStatus"
+        },
+        "Entity_PowerSupply": {
+            "Id": 10,
+            "Instance": 96,
+            "Name": "PowerSupply${Slot}",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_VinUvFault": {
+            "Reading": "<=/OnePower_1.InputVoltageFault |> expr($1 & 16)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutOvFault": {
+            "Reading": "<=/OnePower_1.OutputVoltageFault |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutUvFault": {
+            "Reading": "<=/OnePower_1.OutputVoltageFault;<=/Scanner_PsuIPOKStatus.Value;<=/Scanner_PsuOPOKStatus.Value;<=/OnePower_1.IsUpgrading;<=/OnePower_1.DeepSleepEnabled |> expr(($2 == 1 && $4 == false && $5 == 0) ? (($1 == 16 || $3 == 0 ) ? 16 : 0) : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_IoutOcFault": {
+            "Reading": "<=/OnePower_1.OutputCurrentFault |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinOvFault": {
+            "Reading": "<=/OnePower_1.InputVoltageFault |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinUvWarning": {
+            "Reading": "<=/OnePower_1.InputVoltageFault |> expr($1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutOvWarning": {
+            "Reading": "<=/OnePower_1.OutputVoltageFault |> expr($1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VoutUvWarning": {
+            "Reading": "<=/OnePower_1.OutputVoltageFault |> expr($1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_IoutOcWarning": {
+            "Reading": "<=/OnePower_1.OutputCurrentFault |> expr($1 & 32)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_VinOvWarning": {
+            "Reading": "<=/OnePower_1.InputVoltageFault |> expr($1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_PSOverTemp": {
+            "Reading": "<=/OnePower_1.OverTemperature |> expr($1 & 128)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_OtWarning": {
+            "Reading": "<=/OnePower_1.OverTemperature |> expr($1 & 64)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_PSUReplaceMntr": {
+            "Reading": "<=/Component_PowerSupply.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "DescArg2": "#/Component_PowerSupply.PreviousSN",
+            "DescArg3": "#/Component_PowerSupply.SerialNumber",
+            "Component": "#/Component_PowerSupply"
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_MCU_0"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_MCU_0": {
+            "OffsetWidth": 1,
+            "AddrWidth": 4,
+            "Address": 212
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (3S970)",
+            "DevBus": 255,
+            "DevDevice": 255,
+            "DevFunction": 255,
+            "SocketID": 255,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "FunctionClass": 5,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "3S970",
+            "Model": "Gemini",
+            "Manufacturer": "3SNIC",
+            "Type": 3,
+            "Bus": 255,
+            "Device": 255,
+            "Function": 255,
+            "FruId": 255,
+            "RefChip": "#/Chip_MCU_0",
+            "RefFrudata": "#/FruData_NetCard",
+            "ParentCardSlotId": 0
+        },
+        "Fru_NetworkAdapter": {
+            "PcbId": 254,
+            "FruId": 1,
+            "FruName": "3S970",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        }
+    }
+}

@@ -1,0 +1,269 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "DftEeprom_1": {
+            "Id": 12,
+            "Type": 1,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "PSR Eeprom Self Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "FruData": "#/FruData_Fru0"
+        },
+        "FruData_Fru0": {
+            "FruId": 0,
+            "FruDev": "#/Eeprom_1",
+            "EepromWp": 0,
+            "BoardManufacturer": "",
+            "BoardProductName": "",
+            "BoardSerialNumber": "",
+            "BoardPartNumber": "",
+            "StorageType": "TianChi",
+            "ProductSerialNumber": "",
+            "SystemSerialNumber": "",
+            "SystemProductName": ""
+        },
+        "FruData_BMCCard": {
+            "FruId": 80,
+            "StorageLoc": "/data/opt/bmc/conf/BMCCardFru.dat",
+            "BoardManufacturer": "",
+            "BoardProductName": "",
+            "BoardSerialNumber": "",
+            "BoardPartNumber": "",
+            "StorageType": "File"
+        },
+        "Component_Cable": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 40,
+            "Name": "cable",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1
+        },
+        "Component_BMCCard": {
+            "FruId": "<=/Fru_BMCCard.FruId",
+            "Instance": 1,
+            "Type": 26,
+            "BoardId": "<=/Fru_BMCCard.BoardId",
+            "Name": "<=/Fru_BMCCard.FruName",
+            "Location": "chassis",
+            "Manufacturer": "<=/FruData_BMCCard.BoardManufacturer",
+            "PartNumber": "<=/FruData_BMCCard.BoardPartNumber",
+            "UniqueId": "",
+            "Presence": 1,
+            "Health": 0,
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/FruData_BMCCard.BoardSerialNumber",
+            "NodeId": ""
+        },
+        "Component_PSR": {
+            "FruId": "<=/Fru_MotherBoard.FruId",
+            "Instance": 1,
+            "Type": 255,
+            "BoardId": "<=/Fru_MotherBoard.BoardId",
+            "Name": "<=/Fru_MotherBoard.FruName",
+            "Location": "chassis",
+            "Manufacturer": "<=/FruData_Fru0.BoardManufacturer",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber",
+            "NodeId": "chassisBMC"
+        },
+        "Component_ComSystem": {
+            "FruId": 255,
+            "Instance": 0,
+            "Type": 44,
+            "Name": "System",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "NodeId": ""
+        },
+        "Component_ComPS": {
+            "FruId": 255,
+            "Instance": 0,
+            "Type": 3,
+            "Name": "PowerSupply",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1
+        },
+        "DftVersion_MotherBoardPcbVersion": {
+            "FruId": "<=/Fru_MotherBoard.FruId",
+            "VersionType": 0,
+            "Version": "<=/Fru_MotherBoard.PcbVersion"
+        },
+        "Fru_MotherBoard": {
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_1.HealthStatus",
+            "Type": 0,
+            "FruDataId": "#/FruData_Fru0"
+        },
+        "Fru_BMCCard": {
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": 0,
+            "Type": 26,
+            "FruDataId": "#/FruData_BMCCard"
+        },
+        "ThresholdSensor_SysTotalPower": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_MainBoard.Id",
+            "EntityInstance": "<=/Entity_MainBoard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "Power",
+            "Unit": 0,
+            "BaseUnit": 6,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 0,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 255,
+            "MinimumReading": 0,
+            "Reading": "<=/EnergyMetric_1.SystemPower |> expr($1 / 3)"
+        },
+        "ThresholdSensor_DisksTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_MainBoard.Id",
+            "EntityInstance": "<=/Entity_MainBoard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "Disks Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "Analog": 1,
+            "Reading": "<=/CoolingConfig_1.SysHDDsMaxTemperature"
+        },
+        "DiscreteSensor_PwrCapStatus": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_MainBoard.Id",
+            "EntityInstance": "<=/Entity_MainBoard.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 18,
+            "ReadingType": 3,
+            "SensorName": "PwrCap Status",
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_PwrCapFailed": {
+            "Property": "<=/PowerStrategy_1.PowerLimitFailed",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/PowerStrategy_1.PowerLimitFailed",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PwrCapStatus"
+        },
+        "Entity_PSBoard": {
+          "Id": 3,
+          "Name": "PSBoard",
+          "PowerState": 1,
+          "Presence": 1
+        },
+        "DiscreteSensor_PSRedundancy": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PSBoard.Id",
+            "EntityInstance": "<=/Entity_PSBoard.Instance",
+            "Initialization": 99,
+            "Capabilities": 64,
+            "SensorType": 8,
+            "ReadingType": 11,
+            "SensorName": "PS Redundant",
+            "AssertMask": 2,
+            "DeassertMask": 2,
+            "DiscreteMask": 2,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_PSRedundancy": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/PowerStrategy_1.RedundancyFailure |> expr($1 ? 1 : 0)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_PSRedundancy"
+        },
+        "Entity_MainBoard": {
+            "Id": 7,
+            "Name": "MainBoard",
+            "PowerState": 1,
+            "Presence": 1
+        },
+        "Event_SystemPowerCapTriggered": {
+            "Reading": "<=/PowerStrategy_1.PowerLimitActivated",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_SystemPowerCapFailure": {
+            "Reading": "<=/PowerStrategy_1.PowerLimitFailed",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_SystemPowerHigh": {
+            "Reading": "<=/EnergyMetric_1.SystemPower",
+            "@Default": {
+                "Condition": 65535
+            },
+            "OperatorId": 3,
+            "Enabled": true,
+            "DescArg1": "#/Event_SystemPowerHigh.Reading",
+            "DescArg2": "#/Event_SystemPowerHigh.Condition",
+            "Component": "#/Component_ComSystem"
+        },
+        "Event_NormalAndRedundancyVoltageError": {
+            "Reading": "<=/PowerStrategy_1.PSUsOutputVoltageLow",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "5V",
+            "Component": "#/Component_ComPS"
+        },
+        "Event_PSURedundancyLost": {
+            "Reading": "<=/PowerStrategy_1.RedundancyFailure",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_ComPS"
+        }
+    }
+}

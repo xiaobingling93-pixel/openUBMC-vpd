@@ -1,0 +1,23 @@
+{
+    "name": "vpd",
+    "type": "configuration",
+    "version": "1.70.84",
+    "author": "Huawei",
+    "license": "Mulan PSL v2",
+    "options": {
+        "board_name": {
+            "option": [
+                "common",
+                "openUBMC",
+                "S920H20",
+                "S920X20"
+            ],
+            "default": "common"
+        }
+    },
+    "dependencies": {
+        "test": [],
+        "build": []
+    },
+    "required": []
+}

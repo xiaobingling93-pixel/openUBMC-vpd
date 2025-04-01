@@ -1,0 +1,521 @@
+{
+    "Component": [
+        {
+            "ComponentType" : "Disk",
+            "RelatedMetricObjList": [
+                "disk.temperature", "disk.hddhealth", "disk.mediaerrorcount", "disk.prefailerrorcount",
+                "disk.othererrorcount", "disk.asc", "disk.ascq", "disk.smart_item",
+                "disk.error_log_count", "disk.error_log", "disk.selftest_failure_count", "disk.selftest_log",
+                "disk.phy_event_icrc_count", "disk.glist_count", "disk.glist", "disk.plist_count",
+                "disk.plist", "disk.critical_event_count", "disk.critical_event_log", "disk.error_count_log",
+                "disk.temperature_log", "disk.informational_exceptions_log", "disk.background_medium_scan_count",
+                "disk.background_medium_scan_log", "disk.protocol_specific_port_log", "disk.solid_state_media_log",
+                "disk.general_statistics_log", "disk.vendor_specific_log"
+            ]
+        },
+        {
+            "ComponentType" : "Memory",
+            "RelatedMetricObjList": [
+                "memory.memhealth", "memory.dimmtemp", "memory.dimmecccnt", "memory.dimmeccalert",
+                "memory.dimmuceccalert", "memory.dimmcfgerralert", "memory.dimmcfgerrcode",
+                "memory.dimmpfaevent", "memory.dimmerrorlog", "memory.dimmifmmerrorlog", "memory.dimmstormcnt"
+            ]
+        },
+        {
+            "ComponentType" : "System",
+            "RelatedMetricObjList": [
+                "system.power", "system.powercappingenable", "system.powercappinglimitvalue",
+                "system.powercappingbasevalue", "system.powercappingtopvalue", "system.psuredundancymode",
+                "system.psudeepsleepmodeenable", "system.powercappingstatus", "system.rackpowercappingstatus",
+                "system.cpuutilise", "system.memutilise", "system.membandwidthutilise", "system.ifmm_log"
+            ]
+        },
+        {
+            "ComponentType" : "Fan",
+            "RelatedMetricObjList": [
+                "fan.frpm", "fan.rrpm"
+            ]
+        },
+        {
+            "ComponentType" : "PSU",
+            "RelatedMetricObjList": [
+                "psu.health", "psu.vin", "psu.vout", "psu.iin", "psu.iout"
+            ]
+        },
+        {
+            "ComponentType" : "Chassis",
+            "RelatedMetricObjList": [
+                "chassis.inlettemp", "chassis.outlettemp"
+            ]
+        },
+        {
+            "ComponentType" : "CPU",
+            "RelatedMetricObjList": [
+                "cpu.cpuhealth", "cpu.cpucorerem", "cpu.cpumemtemp"
+            ]
+        },
+        {
+            "ComponentType" : "OpticalModule",
+            "RelatedMetricObjList": [
+                "opticalmodule.metric"
+            ]
+        }
+    ],
+    "Metric": [
+        {
+            "Name": "system.ifmm_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 0,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.power",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.powercappingenable",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.powercappinglimitvalue",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.powercappingbasevalue",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.powercappingtopvalue",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.psuredundancymode",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.psudeepsleepmodeenable",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.powercappingstatus",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.rackpowercappingstatus",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.cpuutilise",
+            "MetricType": "Performance Indicator",
+            "Unit": "%",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.memutilise",
+            "MetricType": "Performance Indicator",
+            "Unit": "%",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "system.membandwidthutilise",
+            "MetricType": "Performance Indicator",
+            "Unit": "%",
+            "CacheIntervalInSec": 5,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.memhealth",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmtemp",
+            "MetricType": "Temperature",
+            "Unit": "",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmecccnt",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmeccalert",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmuceccalert",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmcfgerralert",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmcfgerrcode",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmpfaevent",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmerrorlog",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmifmmerrorlog",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "memory.dimmstormcnt",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.temperature",
+            "MetricType": "Temperature",
+            "Unit": "Cel",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.hddhealth",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.mediaerrorcount",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.prefailerrorcount",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.othererrorcount",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.asc",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.ascq",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.smart_item",
+            "MetricType": "Smart",
+            "Unit": "",
+            "CacheIntervalInSec": 3600,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.error_log_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.error_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.selftest_failure_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.selftest_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.phy_event_icrc_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.glist_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.glist",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.plist_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.plist",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.critical_event_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.critical_event_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.error_count_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.temperature_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.informational_exceptions_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.background_medium_scan_count",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.background_medium_scan_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.protocol_specific_port_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.solid_state_media_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.general_statistics_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "disk.vendor_specific_log",
+            "MetricType": "Log",
+            "Unit": "",
+            "CacheIntervalInSec": 86400,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "fan.frpm",
+            "MetricType": "Performance Indicator",
+            "Unit": "RPM",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "fan.rrpm",
+            "MetricType": "Performance Indicator",
+            "Unit": "RPM",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "psu.health",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "psu.vin",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "psu.vout",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "psu.iin",
+            "MetricType": "Current",
+            "Unit": "A",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "psu.iout",
+            "MetricType": "Current",
+            "Unit": "A",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "chassis.inlettemp",
+            "MetricType": "Temperature",
+            "Unit": "Cel",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "chassis.outlettemp",
+            "MetricType": "Temperature",
+            "Unit": "Cel",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.cpuhealth",
+            "MetricType": "Health Status Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.cpucorerem",
+            "MetricType": "Temperature",
+            "Unit": "Cel",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.cpumemtemp",
+            "MetricType": "Temperature",
+            "Unit": "Cel",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "opticalmodule.metric",
+            "MetricType": "Performance Indicator",
+            "Unit": "",
+            "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        }
+    ]
+}

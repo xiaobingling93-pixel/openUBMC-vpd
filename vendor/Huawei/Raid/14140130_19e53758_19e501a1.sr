@@ -1,0 +1,414 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_RaidChip",
+                "Pca9555_Raid",
+                "Eeprom_Raid",
+                "Lm75_Raid"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_RaidChip": {
+            "Address": 122,
+            "AddrWidth": 1,
+            "OffsetWidth": 0,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Pca9555_Raid": {
+            "Address": 64,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Eeprom_Raid": {
+            "Address": 162,
+            "AddrWidth": 1,
+            "OffsetWidth": 2,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "RwBlockSize": 32
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Pca9555_Raid",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 7,
+            "Type": 0,
+            "Value": 0
+        },
+        "Fru_PCIeCard": {
+            "PcbId": "#/Accessor_PcbID.Value",
+            "FruId": 1,
+            "FruName": "SP686C-M-40i",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 255,
+            "UniqueId": "N/A"
+        },
+        "Scanner_Eeprom_Raid": {
+            "Chip": "#/Eeprom_Raid",
+            "Size": 1,
+            "Offset": 0,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "None"
+        },
+        "Event_EepromReadFault": {
+            "Reading": "<=/Scanner_Eeprom_Raid.Status",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "SP686C-M-40i 2G",
+            "Component": "#/Component_ComPCIeCard1",
+            "EventKeyId": "PCIeCard.EEPROMFault",
+            "LedFaultCode": "q$$"
+        },
+        "Lm75_Raid": {
+            "Address": 148,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_Raid_Lm75": {
+            "Chip": "#/Lm75_Raid",
+            "Size": 1,
+            "Offset": 0,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_RaidTemp"
+        },
+        "MidAvg_RaidTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (SP686C-M-40i 2G)",
+            "FunctionClass": 1,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FaultByBios": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "SP686C-M-40i",
+            "BoardName": "SP686C-M-40i 2G",
+            "Description": "SP686C-M-40i 2G",
+            "FunctionClass": 1,
+            "VendorID": 6629,
+            "DeviceID": 14168,
+            "SubVendorID": 6629,
+            "SubDeviceID": 417,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/Controller_1.FirmwareVersion",
+            "Manufacturer": "Huawei",
+            "PartNumber": "0302024979",
+            "SerialNumber": "<=/Controller_1.SerialNumber",
+            "RefChip": "#/Chip_RaidChip",
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "Model": "Hi1880",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "N/A",
+            "BoardID": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Controller_1": {
+            "Name": "SP686C-M-40i",
+            "TypeId": 102,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "OOBSupport": 1,
+            "SystemId": 0,
+            "Segment": 0,
+            "SocketID": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "FaultCodeByBios": 0,
+            "SlotId": "#/PCIeDevice_1.SlotID",
+            "RefChip": "#/Chip_RaidChip",
+            "CtrlOption1": 34691,
+            "CtrlOption2": 65559,
+            "CtrlOption3": 5888,
+            "BatteryPresence": 0,
+            "BatteryFault": 0,
+            "BatteryHealth": "<=/Component_Battery.Health",
+            "FaultCode": 0,
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "SerialNumber": "",
+            "CommunicationLoss": 0,
+            "TemperatureAbnormal": 0,
+            "TemperatureCelsius": 0,
+            "BOMNumber": "0302024979",
+            "Model": "B80121",
+            "ChipManufacturer": "HUAWEI"
+        },
+        "SASPhy_0": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_1": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_2": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_3": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_4": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_5": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_6": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_7": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_8": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_9": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_10": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_11": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_12": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_13": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_14": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_15": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "Battery_1": {
+            "@Parent": "Controller_1",
+            "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
+            "RefControllerSlotId": "<=/PCIeDevice_1.SlotID",
+            "RefControllerTypeId": "<=/Controller_1.TypeId",
+            "TemperatureCelsius": 0
+        },
+        "CoolingRequirement_1_10": {
+            "RequirementId": "${Slot} |> expr((10 << 8) | $1)",
+            "MonitoringStatus": "<=/Controller_1.TemperatureAbnormal",
+            "MonitoringValue": "<=/Controller_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 95,
+            "MaxAllowedTemperatureCelsius": 103,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SensorName": "#/ThresholdSensor_RaidCardTemp.SensorName"
+        },
+        "Event_PCIeRaidComLossMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
+            "Condition": 1
+        },
+        "Event_PCIeRAIDCardFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_BatteryFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeCardBBUFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieBBURemove": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUNotPresent",
+            "Condition": 0
+        },
+        "Event_PcieBBUInstall": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUPresent",
+            "Condition": 1
+        },
+        "Event_PCIeRaidInitErr": {
+            "EventKeyId": "PCIeCard.PCIeCardInitializationAbnormal",
+            "Condition": 0
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "ThresholdSensor_RaidCardTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_RaidCardTemp.UpperNoncritical",
+            "LedFaultCode": "b02",
+            "Hysteresis": "<=/ThresholdSensor_RaidCardTemp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "LedFaultCode": "b02",
+            "Condition": 1
+        },
+        "ThresholdSensor_RaidDDRTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 95,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.02",
+  "Unit": {
+    "Type": "IEU",
+    "Name": "RiserCard_1"
+  },
+  "Objects": {
+    "DftEeprom_1": {
+      "Id": 12,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_IEU"
+    },
+    "DftEepromWp_1": {
+      "Id": 47,
+      "Type": 1,
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Write Protect Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_IEU"
+    },
+    "FruData_IEU": {
+      "FruId": 1,
+      "FruDev": "#/Eeprom_IEU",
+      "EepromWp": "#/Accessor_IEUWP.Value",
+      "StorageType": "TianChi"
+    },
+    "Component_RiserCard": {
+      "FruId": "<=/Fru_IEU.FruId",
+      "Instance": "${Slot}",
+      "Type": 15,
+      "Location": "<=/RiserCard_1.Position",
+      "Name": "<=/RiserCard_1.DeviceName",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "GroupId": 1,
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/RiserCard_1.SerialNumber",
+      "UniqueId": "<=/RiserCard_1.UID",
+      "PartNumber": "0302046567"
+    },
+    "Fru_IEU": {
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Health": 0,
+      "EepStatus": 1,
+      "Type": 15,
+      "FruDataId": "#/FruData_IEU",
+      "UniqueId": "00000001040302046567"
+    },
+    "DftVersion_RiserCardCsrVersion": {
+      "FruId": "<=/Fru_IEU.FruId",
+      "VersionType": 25,
+      "Version": "<=/RiserCard_1.SRVersion"
+    },
+    "DftVersion_RiserCardPcbVersion": {
+      "FruId": "<=/Fru_IEU.FruId",
+      "VersionType": 0,
+      "Version": "<=/RiserCard_1.PcbVersion"
+    },
+    "DftVersion_RiserCardMcuVersion": {
+      "FruId": "<=/Fru_IEU.FruId",
+      "VersionType": 27,
+      "Version": "<=/RiserCard_1.MCUVersion"
+    },
+    "Event_RiserCardReplaceMntr": {
+      "Reading": "<=/Component_RiserCard.ReplaceFlag",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_RiserCard.Instance",
+      "DescArg2": "#/Component_RiserCard.PreviousSN",
+      "DescArg3": "#/Component_RiserCard.SerialNumber",
+      "Component": "#/Component_RiserCard"
+    },
+    "Event_Riser3V3Event": {
+      "Reading": "<=/Scanner_Riser3V3Event.Status;<=/Scanner_Riser3V3Event.Value |> expr($1 ==0 ? $2 : 1)",
+      "@Default": {
+        "Reading": 1
+      },
+      "OperatorId": 5,
+      "Enabled": true,
+      "AdditionalInfo": "1",
+      "DescArg1": "#/RiserCard_1.Slot",
+      "Component": "#/Component_RiserCard"
+    }
+  }
+}

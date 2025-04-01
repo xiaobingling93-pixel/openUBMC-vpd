@@ -1,0 +1,587 @@
+{
+  "FormatVersion": "3.00",
+  "DataVersion": "3.10",
+  "Unit": {
+    "Type": "SEU",
+    "Name": "M2TransferCard_1"
+  },
+  "ManagementTopology": {
+    "Anchor": {
+      "Buses": [
+        "I2cMux_pca9545_chan1"
+      ]
+    },
+    "I2cMux_pca9545_chan1": {
+      "Chips": [
+        "Pca9545_PCA9545",
+        "Eeprom_SEU",
+        "Chip_MCU1"
+      ]
+    },
+    "Pca9545_PCA9545": {
+      "Buses": [
+        "I2cMux_Pca9545_PCA9545_4",
+        "I2cMux_Pca9545_PCA9545_1",
+        "I2cMux_Pca9545_PCA9545_2"
+      ]
+    },
+    "I2cMux_Pca9545_PCA9545_4": {
+      "Chips": [
+        "Pca9555_IO",
+        "Lm75_LM75"
+      ]
+    }
+  },
+  "Objects": {
+    "Component_ComBMC": {
+        "FruId": 255,
+        "Instance": 1,
+        "Type": 26,
+        "Name": "BMC",
+        "Presence": 1,
+        "Health": 0,
+        "PowerState": 1,
+        "GroupId": 1,
+        "BoardId": 0,
+        "Manufacturer": "",
+        "Function": "BMC",
+        "UniqueId": "N/A",
+        "NodeId": ""
+    },
+    "Pca9545_PCA9545": {
+      "OffsetWidth": 0,
+      "AddrWidth": 1,
+      "Address": 226,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "HealthStatus": 0
+    },
+    "Pca9555_IO": {
+      "OffsetWidth": 1,
+      "AddrWidth": 1,
+      "Address": 64,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "HealthStatus": 0
+    },
+    "Lm75_LM75": {
+      "OffsetWidth": 1,
+      "AddrWidth": 1,
+      "Address": 144,
+      "WriteTmout": 200,
+      "ReadTmout": 200,
+      "HealthStatus": 0
+    },
+    "Chip_MCU1": {
+      "OffsetWidth": 1,
+      "AddrWidth": 1,
+      "Address": 200,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "HealthStatus": 0,
+      "WriteRetryTimes": 2,
+      "ReadRetryTimes": 0,
+      "DrvWriteDelay": "<=/M2TransferCard_1.MCUVersion |> string.sub($1, 1, 4) |> expr($1 >= '1.12' ? 0 : 1)"
+    },
+    "MCUFirmware_1": {
+      "UID": "00000001030302023954",
+      "RefChip": "#/Chip_MCU1",
+      "Address": 200,
+      "SoftwareId": "MCU-BC83MSMA",
+      "BoardType": "SEU"
+    },
+    "DftEeprom_1": {
+      "Id": 12,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_SEU"
+    },
+    "DftEepromWp_1": {
+      "Id": 47,
+      "Type": 1,
+      "Slot": "${GroupId}",
+      "DeviceNum": 0,
+      "ItemName": "Eeprom Write Protect Self Test",
+      "PrompteReady": "",
+      "PrompteFinish": "",
+      "ProcessPeriod": 65535,
+      "FruData": "#/FruData_SEU"
+    },
+    "FruData_SEU": {
+      "FruId": 1,
+      "FruDev": "#/Eeprom_SEU",
+      "EepromWp": "#/Accessor_SEUWP.Value",
+      "StorageType": "TianChi"
+    },
+    "Component_M2TransferCard": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "Instance": "${Slot}",
+      "Type": 45,
+      "Location": "<=/M2TransferCard_1.Position",
+      "Name": "<=/M2TransferCard_1.DeviceName",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "GroupId": 1,
+      "UniqueId": "00000001030302023954",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/M2TransferCard_1.SerialNumber",
+      "NodeId": "<=/M2TransferCard_1.Position;<=/M2TransferCard_1.DeviceName |> string.format('%s%s',$1,$2)"
+    },
+    "Component_Drive0": {
+      "FruId": 255,
+      "Instance": 1,
+      "Type": 2,
+      "Name": "<=/Drive_1.Name",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "<=/Drive_1.Name",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_1.SerialNumber",
+      "Manufacturer": "<=/Drive_1.Manufacturer"
+    },
+    "Component_Drive1": {
+      "FruId": 255,
+      "Instance": 2,
+      "Type": 2,
+      "Name": "<=/Drive_2.Name",
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "NodeId": "<=/Drive_2.Name",
+      "ReplaceFlag": 0,
+      "PreviousSN": "",
+      "SerialNumber": "<=/Drive_2.SerialNumber",
+      "Manufacturer": "<=/Drive_2.Manufacturer"
+    },
+    "Entity_Disk0": {
+      "Id": 4,
+      "Instance": 50,
+      "Name": "<=/Drive_1.Name",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_Disk1": {
+      "Id": 4,
+      "Instance": 51,
+      "Name": "<=/Drive_2.Name",
+      "PowerState": 1,
+      "Presence": 1
+    },
+    "Entity_M2TransferCard": {
+      "Id": 11,
+      "Name": "M2TransferCard${Slot}",
+      "PowerState": 1,
+      "Presence": 1,
+      "Instance": 101
+    },
+    "DiscreteEvent_Disk0Presence": {
+      "Property": "<=/Drive_1.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk0Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.CapacityError;<=/Drive_1.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk0FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_1.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk0"
+    },
+    "DiscreteEvent_Disk1Presence": {
+      "Property": "<=/Drive_2.Presence",
+      "ListenType": 1,
+      "EventData1": 0,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.Presence",
+      "Conversion": 0,
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "DiscreteEvent_Disk1Fault": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 1,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.CapacityError;<=/Drive_2.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "DiscreteEvent_Disk1FaildedArray": {
+      "Property": 0,
+      "ListenType": 1,
+      "EventData1": 6,
+      "EventData2": 255,
+      "EventData3": 255,
+      "EventDir": "<=/Drive_2.InAFailedArray",
+      "Conversion": 0,
+      "SensorObject": "#/DiscreteSensor_Disk1"
+    },
+    "I2cMux_Pca9545_PCA9545_4": {
+      "ChannelId": 3
+    },
+    "I2cMux_Pca9545_PCA9545_1": {
+      "ChannelId": 0
+    },
+    "I2cMux_Pca9545_PCA9545_2": {
+      "ChannelId": 1
+    },
+    "Eeprom_SEU": {
+      "OffsetWidth": 2,
+      "AddrWidth": 1,
+      "Address": 174,
+      "WriteTmout": 100,
+      "ReadTmout": 100,
+      "RwBlockSize": 32,
+      "WriteInterval": 20,
+      "HealthStatus": 0
+    },
+    "ContBin_H20L5": {
+        "NumH": 20,
+        "NumL": 5,
+        "DefaultValue": 0
+    },
+    "Scanner_PcbID": {
+      "Chip": "#/Pca9555_IO",
+      "Offset": 1,
+      "Size": 1,
+      "Mask": 192,
+      "Type": 0,
+      "Value": 0,
+      "Period": 1000,
+      "Debounce": "#/ContBin_H20L5"
+    },
+    "Scanner_Drive0PresentAccessor": {
+      "Chip": "#/Pca9555_IO",
+      "Offset": 1,
+      "Size": 1,
+      "Mask": 1,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Drive_1": {
+      "Id": 50,
+      "Name": "Disk50",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk50",
+      "Presence": "<=/Scanner_Drive0PresentAccessor.Status;<=/Scanner_Drive0PresentAccessor.Value |> expr($1 != 0 ? 255 : ($2 == 0 ? 1 : 0))",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive0.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "Type": "SATA/SAS",
+      "SerialNumber": "",
+      "RelativeSlot": 0,
+      "HddBackplaneStartSlot": "<=/M2TransferCard_1.StartSlot"
+    },
+    "PcieAddrInfo_SAS_1": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_1_${GroupPosition}",
+      "ContainerUID": "00000001030302023934",
+      "ContainerUnitType": "SEU SAS",
+      "SocketID": 0,
+      "SlotID": 50,
+      "PortID": 1,
+      "Bus": 56,
+      "Device": 5,
+      "Function": 0
+    },
+    "DiscreteSensor_Disk0": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199,
+      "EntityId": "<=/Entity_Disk0.Id",
+      "EntityInstance": "<=/Entity_Disk0.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK50",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Scanner_Drive1PresentAccessor": {
+      "Chip": "#/Pca9555_IO",
+      "Offset": 1,
+      "Size": 1,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 5000,
+      "Debounce": "None",
+      "Value": 255
+    },
+    "Drive_2": {
+      "Id": 51,
+      "Name": "Disk51",
+      "PhysicalLocation": "HDD Plane",
+      "NodeId": "HDDPlaneDisk51",
+      "Presence": "<=/Scanner_Drive1PresentAccessor.Status;<=/Scanner_Drive1PresentAccessor.Value |> expr($1 != 0 ? 255 : ($2 == 0 ? 1 : 0 ))",
+      "TemperatureCelsius": 255,
+      "Missing": 0,
+      "Health": "<=/Component_Drive1.Health",
+      "RebuildState": 0,
+      "FirmwareStatus": 255,
+      "PredictiveFailure": 0,
+      "InAFailedArray": 0,
+      "FirmwareStatusError": false,
+      "@Default": {
+        "PredictedMediaLifeLeftPercent": 255
+      },
+      "Type": "SATA/SAS",
+      "SerialNumber": "",
+      "RelativeSlot": 1,
+      "HddBackplaneStartSlot": "<=/M2TransferCard_1.StartSlot"
+    },
+    "PcieAddrInfo_SAS_2": {
+      "Location": "HddBackplane${Slot}",
+      "ComponentType": 71,
+      "ControllerIndex": 0,
+      "ControllerType": 2,
+      "ContainerSlot": "${Slot}",
+      "GroupPosition": "PcieAddrInfo_SAS_2_${GroupPosition}",
+      "ContainerUID": "00000001030302023934",
+      "ContainerUnitType": "SEU SAS",
+      "SocketID": 0,
+      "SlotID": 51,
+      "PortID": 0,
+      "Bus": 56,
+      "Device": 5,
+      "Function": 0
+    },
+    "DiscreteSensor_Disk1": {
+      "AssertMask": 199,
+      "DeassertMask": 199,
+      "DiscreteMask": 199,
+      "EntityId": "<=/Entity_Disk1.Id",
+      "EntityInstance": "<=/Entity_Disk1.Instance",
+      "Initialization": 99,
+      "Capabilities": 192,
+      "SensorType": 13,
+      "ReadingType": 111,
+      "SensorName": "DISK51",
+      "DiscreteType": 0,
+      "Unit": 192,
+      "BaseUnit": 0,
+      "ModifierUnit": 0,
+      "RecordSharing": 1,
+      "Reading": 0
+    },
+    "Accessor_SEUWP": {
+      "Chip": "#/Pca9555_IO",
+      "Size": 1,
+      "Offset": 1,
+      "Mask": 4,
+      "Type": 0,
+      "Value": 0
+    },
+    "SRUpgrade_1": {
+      "UID": "00000001030302023954",
+      "Type": "SEU",
+      "Version": "${DataVersion}",
+      "StorageChip": "#/Eeprom_SEU",
+      "SoftwareId": "HWSR-BC83MSMA",
+      "WriteProtect": "#/Accessor_SEUWP.Value"
+    },
+    "Fru_SEU": {
+      "PcbId": 1,
+      "FruId": 1,
+      "FruName": "M2TransferCard${Slot}",
+      "PcbVersion": ".A",
+      "PowerState": 1,
+      "Health": 0,
+      "EepStatus": 1,
+      "Type": 45,
+      "FruDataId": "#/FruData_SEU"
+    },
+    "ThresholdSensor_M2TransferCardTemp": {
+      "M": 100,
+      "RBExp": 224,
+      "OwnerId": 32,
+      "OwnerLun": 0,
+      "EntityId": "<=/Entity_M2TransferCard.Id",
+      "EntityInstance": "<=/Entity_M2TransferCard.Instance",
+      "Initialization": 127,
+      "Capabilities": 104,
+      "SensorType": 1,
+      "ReadingType": 1,
+      "SensorName": "M2 Trans${Slot} Temp",
+      "Unit": 128,
+      "BaseUnit": 1,
+      "Analog": 1,
+      "NominalReading": 25,
+      "MaximumReading": 127,
+      "MinimumReading": 128,
+      "Reading": "<=/Scanner_M2TransferCardTemp.Value",
+      "ReadingStatus": "<=/Scanner_M2TransferCardTemp.Status",
+      "SensorNumber": 255
+    },
+    "MidAvg_M2TransferCardTemp": {
+      "WindowSize": 4,
+      "DefaultValue": 20,
+      "IsSigned": true
+    },
+    "Scanner_M2TransferCardTemp": {
+      "Chip": "#/Lm75_LM75",
+      "Offset": 0,
+      "Size": 1,
+      "Type": 0,
+      "Mask": 255,
+      "Period": 1000,
+      "Debounce": "#/MidAvg_M2TransferCardTemp",
+      "Status": 0,
+      "Value": 0
+    },
+    "M2TransferCard_1": {
+      "Slot": "${Slot}",
+      "UID": "00000001030302023954",
+      "Name": "BC83MSMA",
+      "Manufacturer": "Huawei",
+      "Type": "SEU",
+      "Description": "M.2 Transform card, 2*PCIE interface",
+      "PartNumber": "<=/FruData_SEU.BoardPartNumber",
+      "PcbID": "#/Scanner_PcbID.Value",
+      "PcbVersion": "",
+      "LogicVersion": "N/A",
+      "SRVersion": "${DataVersion}",
+      "MCUVersion": "",
+      "BoardID": 65535,
+      "BoardType": "HddBackplane",
+      "Number": 1,
+      "DeviceName": "M2TransferCard${Slot}",
+      "Position": "chassis",
+      "NodeId": "chassisM2TransferCard${Slot}",
+      "RefMCUChip": "#/Chip_MCU1",
+      "FruID": "<=/Fru_SEU.FruId",
+      "RefComponent": "#/Component_M2TransferCard",
+      "SerialNumber": "<=/FruData_SEU.BoardSerialNumber",
+      "StartSlot": 50,
+      "CpldStatus": 0,
+      "M2SlotPresence": "<=/Drive_1.Presence;<=/Drive_2.Presence |> expr($2 << 1 | $1)"
+    },
+    "Event_PCA9555ReadFail": {
+      "Reading": "<=/Scanner_PcbID.Status",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/M2TransferCard_1.Name",
+      "DescArg2": "PCA9555",
+      "Component": "#/Component_ComBMC",
+      "AdditionalInfo" : "1,2"
+    },
+    "Event_LM75ReadFail": {
+      "Reading": "<=/Scanner_M2TransferCardTemp.Status",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/M2TransferCard_1.Name",
+      "DescArg2": "LM75",
+      "Component": "#/Component_ComBMC",
+      "AdditionalInfo" : "1,2"
+    },
+    "Event_MCUSelfTestFail": {
+      "Reading": "<=/M2TransferCard_1.CpldStatus",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/M2TransferCard_1.Slot",
+      "Component": "#/Component_M2TransferCard",
+      "AdditionalInfo" : "1"
+    },
+    "DftVersion_M2TransferCardMcuVersion": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "VersionType": 27,
+      "Version": "<=/M2TransferCard_1.MCUVersion"
+    },
+    "DftVersion_M2TransferCardCsrVersion": {
+      "FruId": "<=/Fru_SEU.FruId",
+      "VersionType": 25,
+      "Version": "<=/M2TransferCard_1.SRVersion"
+    },
+    "Event_Hdd1MdWroutLow": {
+        "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
+        "@Default": {
+            "Reading": 255
+        },
+        "OperatorId": 1,
+        "Enabled": true,
+        "DescArg2": "#/Component_Drive0.Name",
+        "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
+        "DescArg4": "5",
+        "Component": "#/Component_Drive0"
+    },
+    "Event_Hdd2MdWroutLow": {
+        "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
+        "@Default": {
+            "Reading": 255
+        },
+        "OperatorId": 1,
+        "Enabled": true,
+        "DescArg2": "#/Component_Drive1.Name",
+        "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
+        "DescArg4": "5",
+        "Component": "#/Component_Drive1"
+    },
+    "Event_HardDisk1EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_1.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "DescArg3": "<=/Drive_1.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_HardDisk2EstimatedRemainingLifespanLow": {
+      "Reading": "<=/Drive_2.EstimatedRemainingLifespanInsufficient",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "DescArg3": "<=/Drive_2.EstimatedRemainingLifespan",
+      "DescArg4": "60",
+      "Component": "#/Component_Drive1"
+    }
+  }
+} 

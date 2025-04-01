@@ -1,0 +1,59 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "ThresholdSensor_FanRspeed": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_Fan.Id",
+            "EntityInstance": "<=/Entity_Fan.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 4,
+            "ReadingType": 1,
+            "SensorName": "FAN${SilkText} R Speed",
+            "SensorIdentifier": "FAN${SilkText} R Speed",
+            "Unit": 0,
+            "BaseUnit": 18,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 42,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 255,
+            "MinimumReading": 0,
+            "Reading": "<=/Scanner_Fan_RSpeed.Value |> expr(($1 // 126) & 255)",
+            "ReadingStatus": "<=/Scanner_Fan_RSpeed.Status"
+        },
+        "ThresholdSensor_FanFspeed": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_Fan.Id",
+            "EntityInstance": "<=/Entity_Fan.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 4,
+            "ReadingType": 1,
+            "SensorName": "FAN${SilkText} F Speed",
+            "SensorIdentifier": "FAN${SilkText} F Speed",
+            "Unit": 0,
+            "BaseUnit": 18,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 42,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 255,
+            "MinimumReading": 0,
+            "Reading": "<=/Scanner_Fan_FSpeed.Value |> expr(($1 // 126) & 255)",
+            "ReadingStatus": "<=/Scanner_Fan_FSpeed.Status"
+        },
+        "Entity_Fan": {
+            "Id": 30,
+            "Instance": "${Slot} |> expr(95 + $1)",
+            "Name": "Fan${SilkText}",
+            "Presence": "<=/Scanner_Fan_Presence.Value",
+            "PowerState": "#/Accessor_PowerGd.Value"
+        }
+    }
+}

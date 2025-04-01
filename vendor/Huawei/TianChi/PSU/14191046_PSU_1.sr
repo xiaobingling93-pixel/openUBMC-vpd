@@ -1,0 +1,109 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PSU",
+        "Name": "OnePower_0"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_2"
+            ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "OnePower_0": {
+            "SlotNumber": "${Slot}",
+            "Presence": 1,
+            "Protocol": "canbus",
+            "PhysicalInterface": "canbus",
+            "DeviceLocator": "PSU${Slot}",
+            "Position": "EXU",
+            "EnvTemperatureCelsius": 0,
+            "SerialNumber": "",
+            "OutputState": "<=/Scanner_PsuOPOKStatus.Value",
+            "DeepSleepEnabled": 0,
+            "OutputPowerWatts": 0,
+            "InputVoltageFault": 32768,
+            "OutputVoltageFault": 0,
+            "OutputCurrentFault": 0,
+            "FanFault": 0,
+            "Fan1Fault": 0,
+            "Fan2Fault": 0,
+            "Failure": 0,
+            "OverTemperature": 0,
+            "LossOfInput": 255,
+            "RefFrudata": "#/FruData_Ps",
+            "PartNumber": ""
+        },
+        "Scanner_PsuOPOKStatus": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 603981056,
+            "Size": 2,
+            "Mask": "${Slot} |> expr($1 == 1 ? 4 : 1024)",
+            "Type": 0,
+            "Value": 0,
+            "Period": 1000,
+            "Debounce": "#/ContBin_OPOK"
+        },
+        "ContBin_OPOK": {
+            "NumH": 1,
+	        "NumL": 5,
+            "DefaultValue": 1
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Fru_Ps": {
+            "PcbId": 254,
+            "FruId": 1,
+            "FruName": "PSU${Slot}",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535
+        },
+        "Event_VoutOvFault": {
+            "EventKeyId": "PSU.PSUOutputOverVoltage",
+            "Condition": 128,
+            "LedFaultCode": "P$$"
+        },
+        "Event_PSOverTemp": {
+            "EventKeyId": "PSU.PSUOverTemp",
+            "Condition": 128,
+            "LedFaultCode": "P$$"
+        },
+        "Event_IoutOcFault": {
+            "EventKeyId": "PSU.PSUOutputOverCurrent",
+            "Condition": 128,
+            "LedFaultCode": "P$$"
+        },
+        "Event_VinOvFault": {
+            "EventKeyId": "PSU.PSUInputOverVoltage",
+            "Condition": 128,
+            "LedFaultCode": "P$$"
+        },
+        "Event_VinUvFault": {
+            "EventKeyId": "PSU.PSUInputLost",
+            "Condition": 16,
+            "LedFaultCode": "P$$"
+        },
+        "Event_PSUReplaceMntr": {
+            "EventKeyId": "PSU.PSUReplace",
+            "Condition": 1
+        },
+        "DiscreteSensor_PsStatus": {
+            "AssertMask": 79,
+            "DeassertMask": 79,
+            "DiscreteMask": 79
+        }
+    }
+}

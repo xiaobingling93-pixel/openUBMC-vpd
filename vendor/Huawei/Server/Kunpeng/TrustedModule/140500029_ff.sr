@@ -1,0 +1,19 @@
+{
+    "FormatVersion": "1.00",
+    "DataVersion": "1.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": []
+        }
+    },
+    "Objects": {
+        "SecurityModule_1": {
+            "Presence": 1,
+            "Health": 255,
+            "Protocol": "TPM/TCM",
+            "Manufacturer": "N/A",
+            "ProtocolVersion": "N/A",
+            "FirmwareVersion": "N/A"
+        }
+    }
+}

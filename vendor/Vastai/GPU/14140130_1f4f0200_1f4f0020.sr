@@ -1,0 +1,214 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_Vastai"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_Vastai": {
+            "Address": 170,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_GPUTemp": {
+            "Chip": "#/Chip_Vastai",
+            "Size": 3,
+            "Offset": 5,
+            "Mask": 16777215,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_GPUTemp",
+            "Type": 0
+        },
+        "MidAvg_GPUTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "GPU_1": {
+            "SystemId": 1,
+            "Id": 1,
+            "Name": "DC1000",
+            "Presence": 1,
+            "Manufacturer": "Vastai Technologies",
+            "Model": "DC1000",
+            "SN": "",
+            "SocketDesignation": "1",
+            "Position": "PCIe Riser${Slot}",
+            "ProcessorType": "2",
+            "Health": "#/Component_PCIeCard.Health",
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "VendorID": 8015,
+            "DeviceID": 512,
+            "SubVendorID": 8015,
+            "SubDeviceID": 32,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "RefChip": "#/Chip_Vastai"
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (DC1000)",
+            "FunctionClass": 3,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "BandwidthReduction": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "LinkSpeedReduced": 0,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "DC1000",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Description": "DC1000 Accelerator",
+            "FunctionClass": 3,
+            "VendorID": 8015,
+            "DeviceID": 512,
+            "SubVendorID": 8015,
+            "SubDeviceID": 32,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "Manufacturer": "Vastai Technologies",
+            "PartNumber": "",
+            "PcbVersion": "N/A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/GPU_1.SN"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "N/A",
+            "Manufacturer": "Vastai Technologies",
+            "Type": "PCIeCard",
+            "Description": "DC1000 Accelerator",
+            "PartNumber": "",
+            "PcbID": 0,
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": 255
+        },
+        "Entity_GPUCard": {
+            "Id": 11,
+            "Name": "GPUCard",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 101
+        },
+        "ThresholdSensor_GpuPower": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "GPU${Slot} Power",
+            "Unit": 0,
+            "BaseUnit": 6,
+            "NominalReading": 0,
+			"MaximumReading": 255,
+			"AssertMask": 0,
+			"DeassertMask": 0,
+			"ReadingMask": 0,
+			"M": 1,
+			"RBExp": 0,
+			"Analog": 1,
+            "Reading": "<=/GPU_1.PowerWatts",
+            "ReadingStatus": 0,
+            "SensorNumber": 255
+        },
+        "ThresholdSensor_VA1AGPUTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "GPU${Slot} Temp",
+            "Unit": 0,
+            "BaseUnit": 1,
+            "NominalReading": 25,
+			"MaximumReading": 127,
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+            "Reading": "<=/Scanner_GPUTemp.Value |> expr($1 // 25600)",
+            "ReadingStatus": 0,
+            "SensorNumber": 255,
+            "UpperNoncritical": 85,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+ 
+        },
+        "CoolingRequirement_1_59": {
+            "RequirementId": "${Slot} |> expr((59 << 8) | $1)",
+            "MonitoringStatus": "<=/ThresholdSensor_VA1AGPUTemp.Reading |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/ThresholdSensor_VA1AGPUTemp.Reading |> expr($1 >= 255 ? 30 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 70,
+            "MaxAllowedTemperatureCelsius": 78
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_VA1AGPUTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_VA1AGPUTemp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "FruData_NetCard": {
+            "FruId": 1,
+            "StorageType": "MCU"
+        },
+        "Component_NetworkAdapter_0": {
+            "FruId": "<=/Fru_NetworkAdapter.FruId",
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device(SDI)",
+            "GroupId": 1,
+            "PowerState": 1,
+            "BoardId": "<=/Fru_NetworkAdapter.BoardId"
+        },
+        "Fru_NetworkAdapter": {
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": 1,
+            "Type": 8,
+            "FruDataId": "#/FruData_NetCard"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.DeviceName",
+            "DescArg4": "NA",
+            "Component": "#/Component_NetworkAdapter_0"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.DeviceName",
+            "Component": "#/Component_NetworkAdapter_0"
+        }
+    }
+}

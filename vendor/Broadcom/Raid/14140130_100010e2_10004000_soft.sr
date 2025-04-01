@@ -1,0 +1,232 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "Objects": {
+        "Component_ComPCIeCard1": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Battery": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "Name": "PCIe Card BBU",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Type": 8,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "Instance": 1,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Presence": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+        },
+        "ThresholdSensor_PCIeBBUTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_RaidCard.Id",
+            "EntityInstance": "<=/Entity_RaidCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s BBU Temp', $1)",
+            "Unit": 0,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 20,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 255,
+            "MinimumReading": 0,
+            "Reading": "<=/Battery_1.TemperatureCelsius",
+            "ReadingStatus": "<=/Battery_1.TemperatureCelsius |> expr($1 == 32767 ? 1 : ($1 == 255 ? 2 : ($1 == 0 ? 3 : 0)))"
+        },
+        "ThresholdSensor_RaidCardTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_RaidCard.Id",
+            "EntityInstance": "<=/Entity_RaidCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe RAID%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Controller_1.TemperatureCelsius",
+            "ReadingStatus": "<=/Controller_1.TemperatureCelsius |> expr($1 == 32767 ? 1 : ($1 == 255 ? 2 : ($1 == 0 ? 3 : 0)))"
+        },
+        "Entity_RaidCard": {
+            "Id": 11,
+            "Instance": 96,
+            "Name": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s (RAID)',$1)",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_PCIeRaidComLossMntr": {
+            "Reading": "<=/Controller_1.CommunicationLoss",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_ComPCIeCard1.Instance",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_PCIeRAIDCardFault": {
+            "Reading": "<=/Controller_1.FaultCode",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_BatteryFault": {
+            "Reading": "<=/Controller_1.BatteryFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_Battery"
+        },
+        "Event_PCIeBandWidth": {
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(9560-16i)",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_PCIeLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(9560-16i)",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.DeviceName",
+            "DescArg4": "NA",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.DeviceName",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_PcieBBURemove": {
+            "Reading": "<=/Controller_1.BatteryPresence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_Battery"
+        },
+        "Event_PcieBBUInstall": {
+            "Reading": "<=/Controller_1.BatteryPresence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_Battery"
+        },
+        "Event_PCIeRaidInitErr": {
+            "Reading": "<=/Controller_1.FaultCodeByBios",
+            "OperatorId": 6,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "9560-16i",
+            "Component": "#/Component_ComPCIeCard1"
+        },
+        "Event_BBUOverTemp": {
+            "Reading": "<=/Battery_1.TemperatureCelsius;<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical |> expr((($1 > $2) && ($1 <= 255)) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/PCIeDevice_1.SlotID",
+            "DescArg2": "#/Battery_1.TemperatureCelsius",
+            "DescArg3": "#/ThresholdSensor_PCIeBBUTemp.UpperNoncritical",
+            "LedFaultCode": "b02",
+            "Component": "#/Component_Battery"
+        },
+        "Event_BBUTempReadFail": {
+            "Reading": "<=/Battery_1.TemperatureCelsius",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/PCIeDevice_1.SlotID",
+            "Component": "#/Component_Battery"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_OverTemp": {
+            "Reading": "<=/Controller_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading |> string.format('%s', $1)",
+            "DescArg5": "#/ThresholdSensor_RaidCardTemp.UpperNoncritical"
+        },
+        "Event_TempFail": {
+            "Reading": "<=/Controller_1.TemperatureAbnormal",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name"
+        }
+    }
+}

@@ -1,0 +1,347 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_1"
+            ]
+        },
+        "I2c_1": {
+            "Chips": [
+                "Chip_MCU",
+                "Chip_PcbId",
+                "Eeprom_SDI"
+            ]
+        }
+    },
+    "Objects": {
+        "Eeprom_SDI": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 160,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "SRUpgrade_1": {
+            "UID": "00000001A40302050670",
+            "Type": "SDI",
+            "Version": "${DataVersion}",
+            "StorageChip": "#/Eeprom_SDI",
+            "SoftwareId": "HWSR-IT21SHSM",
+            "WriteProtectChip": "#/Chip_MCU"
+        },
+        "Chip_MCU": {
+            "OffsetWidth": 1,
+            "AddrWidth": 4,
+            "Address": 212,
+            "WriteRetryTimes": 5,
+            "ReadRetryTimes": 0
+        },
+        "Chip_PcbId": {
+            "OffsetWidth": 1,
+            "AddrWidth": 4,
+            "Address": 54,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 0,
+            "ReadRetryTimes": 2
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Chip_PcbId",
+            "Offset": 49,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (SDI V5.0)",
+            "FunctionClass": 5,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "Fru_DPUCard": {
+            "FruId": 1,
+            "PcbId": "#/Accessor_PcbID.Value",
+            "FruName": "IT21SHSM",
+            "BoardId": 165,
+            "ConnectorGroupId": "${GroupId}"
+        },
+        "DPUCard_1": {
+            "Model": "IT21SHSM",
+            "Name": "SDI 5.0",
+            "BoardID": 165,
+            "BoardName": "IT21SHSM",
+            "PartNumber": "05024MXS",
+            "Description": "SDI V5.0",
+            "M2SlotMaxCount": 2,
+            "NetworkAdapterMaxCount": 2,
+            "FunctionClass": 5,
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Manufacturer": "3SNIC",
+            "PcbVersion": "<=/Fru_DPUCard.PcbVersion",
+            "RefChip": "#/Chip_MCU",
+            "RefIdChip": "#/Chip_PcbId",
+            "Health": "<=/Component_DPUCard.Health",
+            "HeartBeatLoss": 0,
+            "SerialRecordConnect": [
+                {
+                    "Source": "UART4 COM",
+                    "Destination": "CARD COM"
+                }
+            ],
+            "RefFrudata": "#/FruData_DPUCard",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "VendorID": 7999,
+            "DeviceID": 36913,
+            "SubVendorID": 7999,
+            "SubDeviceID": 417,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "SRVersion": "1.00",
+            "UID": "00000001A40302050670",
+            "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber",
+            "AssetTag": "<=/FruData_DPUCard.AssetTag",
+            "ManufactureDate": "<=/FruData_DPUCard.MfgDate",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "NodeId": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "3S960",
+            "Manufacturer": "3SNIC",
+            "Description": "2*100GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "Gemini-E",
+            "ModelDescription": "2*100GE",
+            "ChipVendor": "3SNIC",
+            "ChipManufacturer": "3SNIC",
+            "NetworkPortCount": 2,
+            "BoardID": 165,
+            "VendorID": "0x1f3f",
+            "DeviceID": "0x9031",
+            "SubsystemVendorID": "0x1f3f",
+            "SubsystemDeviceID": "0x01a1",
+            "ComponentUniqueID": "00000001A40302050670",
+            "PCBVersion": "<=/DPUCard_1.PcbVersion",
+            "@Default": {
+                "PCBVersion": ".A"
+            },
+            "FruId": "<=/FruData_DPUCard.FruId",
+            "SupportedMctp": true,
+            "SupportedLLDP": false,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "RefChip": "#/Chip_MCU",
+            "SpecialPcieCard": true,
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureCelsius": 0,
+            "TemperatureStatus": 0,
+            "ParentCardSlotId": "<=/PCIeDevice_1.SlotID",
+            "FaultState": 0,
+            "Health": "<=/Component_DPUCard.Health"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "100GE"
+        },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "100GE"
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 1
+        },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeCardHeartBeatAbnormal": {
+            "EventKeyId": "PCIeCard.PCIeCardHeartBeatAbnormal",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "ThresholdSensor_PCIeCpuTemp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224
+        },
+        "ThresholdSensor_PCIeInletTemp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224
+        },
+        "ThresholdSensor_PCIeOutlet1Temp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224
+        },
+        "CoolingRequirement_1_1": {
+            "RequirementId": "${Slot} |> expr((1 << 8) | $1)",
+            "Description": "主芯片调速",
+            "MonitoringStatus": "<=/DPUCard_1.CPUTemperatureCelsius |> expr(($1 == 0 || $1 > 200) ? 1 : 0)",
+            "MonitoringValue": "<=/DPUCard_1.CPUTemperatureCelsius |> expr($1 & 255)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 87,
+            "MaxAllowedTemperatureCelsius": 97,
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_PCIeCpuTemp.SensorName"
+        },
+        "CoolingArea_1_1": {
+            "AreaId": 1,
+            "RequirementIdx": 1,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_2": {
+            "RequirementId": "${Slot} |> expr((2 << 8) | $1)",
+            "Description": "进风口调速",
+            "MonitoringStatus": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr(($1 == 0 || $1 > 200) ? 1 : 0)",
+            "MonitoringValue": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr($1 & 255)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 65,
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_PCIeInletTemp.SensorName"
+        },
+        "CoolingArea_1_2": {
+            "AreaId": 2,
+            "RequirementIdx": 2,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_3": {
+            "RequirementId": "${Slot} |> expr((3 << 8) | $1)",
+            "Description": "出风口调速",
+            "MonitoringStatus": "<=/DPUCard_1.Outlet1TemperatureCelsius |> expr(($1 == 0 || $1 > 200) ? 1 : 0)",
+            "MonitoringValue": "<=/DPUCard_1.Outlet1TemperatureCelsius |> expr($1 & 255)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 75,
+            "MaxAllowedTemperatureCelsius": 85,
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_PCIeOutlet1Temp.SensorName"
+        },
+        "CoolingArea_1_3": {
+            "AreaId": 3,
+            "RequirementIdx": 3,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_4": {
+            "RequirementId": "${Slot} |> expr((4 << 8) | $1)",
+            "Description": "光模块调速",
+            "MonitoringStatus": "<=/DPUCard_1.SFP1TemperatureCelsius;<=/DPUCard_1.SFP2TemperatureCelsius |> expr(($1 > 200 && $1 != 32766) ? 1 : (($2 > 200 && $2 != 32766) ? 2 : 0))",
+            "MonitoringValue": "<=/DPUCard_1.SFP1TemperatureCelsius;<=/DPUCard_1.SFP2TemperatureCelsius |> expr((($1 == 0 || $1 > 200) && ($2 == 0 || $2 > 200)) ? 0 : (($2 == 0 || $2 > 200) ? ($1 & 255) : (($1 == 0 || $1 > 200) ? ($2 & 255) : ($1 > $2 ? ($1 & 255) : ($2 & 255)))))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "CoolingArea_1_4": {
+            "AreaId": 4,
+            "RequirementIdx": 4,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "SerialManagement_SDI": {
+            "SrcSerial": 4,
+            "Source": "UART4 COM",
+            "SourceId": 2,
+            "DestSerial": 21,
+            "Destination": "CARD COM",
+            "DestinationId": 13
+        }
+    }
+}

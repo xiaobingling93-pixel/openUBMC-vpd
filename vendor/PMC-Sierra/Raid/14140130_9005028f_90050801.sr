@@ -1,0 +1,147 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": []
+        }
+    },
+    "Objects": {
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (SAS 3152)",
+            "FunctionClass": 1,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FaultByBios": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "HalfLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "SAS 3152",
+            "BoardName": "SAS 3152",
+            "Description": "RAID 3152 2G cache",
+            "FunctionClass": 1,
+            "VendorID": 36869,
+            "DeviceID": 655,
+            "SubVendorID": 36869,
+            "SubDeviceID": 2049,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/Controller_1.FirmwareVersion",
+            "Manufacturer": "PMC-Sierra",
+            "PartNumber": "06030413",
+            "SerialNumber": "<=/Controller_1.SerialNumber",
+            "RefChip": "N/A",
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "Model": "N/A",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "N/A",
+            "BoardID": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Controller_1": {
+            "Name": "SAS 3152",
+            "TypeId": 64,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "OOBSupport": 1,
+            "SystemId": 0,
+            "Segment": 0,
+            "SocketId": 0,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "FaultCodeByBios": 0,
+            "SlotId": "#/PCIeDevice_1.SlotID",
+            "RefChip": "N/A",
+            "CtrlOption1": 768,
+            "CtrlOption2": 65536,
+            "CtrlOption3": 130879,
+            "BatteryPresence": 255,
+            "BatteryFault": 0,
+            "BatteryHealth": "<=/Component_Battery.Health",
+            "FaultCode": 0,
+            "Health": "<=/Component_ComPCIeCard1.Health",
+            "SerialNumber": "",
+            "CommunicationLoss": 0,
+            "TemperatureAbnormal": 0,
+            "TemperatureCelsius": 0,
+            "BOMNumber": "06030413",
+            "Model": "PM3152",
+            "ChipManufacturer": "Microchip"
+        },
+        "Battery_1": {
+            "@Parent": "Controller_1",
+            "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
+            "RefControllerSlotId": "<=/PCIeDevice_1.SlotID",
+            "RefControllerTypeId": "<=/Controller_1.TypeId",
+            "TemperatureCelsius": 0
+        },
+        "Event_PCIeRaidComLossMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
+            "Condition": 1
+        },
+        "Event_PCIeRAIDCardFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_BatteryFault": {
+            "EventKeyId": "PCIeRAIDCard.PCIeCardBBUFault",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieBBURemove": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUNotPresent",
+            "Condition": 0
+        },
+        "Event_PcieBBUInstall": {
+            "EventKeyId": "PCIeCard.PCIeCardBBUPresent",
+            "Condition": 1
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        }
+    }
+}

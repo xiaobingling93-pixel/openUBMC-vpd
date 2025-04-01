@@ -1,0 +1,87 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "IEU",
+        "Name": "RiserCard_1"
+    },
+    "Objects": {
+        "DftEeprom_1": {
+            "Id": 12,
+            "Type": 1,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "IEU Eeprom Self Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "FruData": "#/FruData_IEU"
+        },
+        "DftEepromWp_1": {
+            "Id": 47,
+            "Type": 1,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "IEU Eeprom Write Protect Self Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "FruData": "#/FruData_IEU"
+        },
+        "FruData_IEU": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_IEU",
+            "EepromWp": "#/Accessor_IEUWP.Value",
+            "StorageType": "TianChi"
+        },
+        "Component_RiserCard": {
+            "FruId": "<=/Fru_IEU.FruId",
+            "Instance": 0,
+            "Type": 15,
+            "Location": "<=/RiserCard_1.Position",
+            "Name": "<=/RiserCard_1.DeviceName",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "UniqueId": "<=/RiserCard_1.UID",
+            "NodeId": "<=/RiserCard_1.Position;<=/RiserCard_1.DeviceName |> string.format('%s%s',$1,$2)",
+            "BoardId": "<=/RiserCard_1.BoardID",
+            "PartNumber": "<=/RiserCard_1.PartNumber"
+        },
+        "DftVersion_RiserCardPcbVersion": {
+            "FruId": "<=/Fru_IEU.FruId",
+            "VersionType": 0,
+            "Version": "<=/RiserCard_1.PcbVersion"
+        },
+        "DftVersion_RiserCardCsrVersion": {
+            "FruId": "<=/Fru_IEU.FruId",
+            "VersionType": 25,
+            "Version": "<=/RiserCard_1.SRVersion"
+        },
+        "DftVersion_RiserCardMcuVersion": {
+            "FruId": "<=/Fru_IEU.FruId",
+            "VersionType": 27,
+            "Version": "<=/RiserCard_1.MCUVersion"
+        },
+        "Fru_IEU": {
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_IEU.HealthStatus",
+            "Type": 195,
+            "FruDataId": "#/FruData_IEU"
+        },
+        "Event_Riser3V3Event": {
+            "Reading": "<=/Scanner_Riser3V3Event.Value",
+            "@Default": {
+                "Reading": 1
+            },
+            "OperatorId": 5,
+            "Enabled": false,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/RiserCard_1.Slot",
+            "Component": "#/Component_RiserCard"
+        }
+    }
+}
