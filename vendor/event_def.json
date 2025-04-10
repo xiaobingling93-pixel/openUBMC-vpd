@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -2018,7 +2018,7 @@
             "EventName": "PSUSingleInputPreLowerVoltage"
         },
         {
-            "EventCode": "0x0300005b",
+            "EventCode": "0x0300005B",
             "ReportChannel": 65535,
             "OldEventCode": "",
             "EventType": 0,
@@ -2030,7 +2030,7 @@
             "EventName": "PSUSingleInputOverVoltage"
         },
         {
-            "EventCode": "0x0300005f",
+            "EventCode": "0x0300005F",
             "ReportChannel": 65535,
             "OldEventCode": "",
             "EventType": 0,
