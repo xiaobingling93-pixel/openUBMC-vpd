@@ -105,7 +105,7 @@
             "Presence": 1
         },
         "Event_NicOverTemp": {
-            "Reading": "<=/Scanner_NicTemp.Value |> expr(($1 >= 255) ? 65 : $1) |> expr($1 & 255)",
+            "Reading": "<=/Scanner_NicTemp.Value |> expr(($1 >= 128) ? ($1 - 256) : $1)",
             "@Default": {
                 "Condition": 105
             },
