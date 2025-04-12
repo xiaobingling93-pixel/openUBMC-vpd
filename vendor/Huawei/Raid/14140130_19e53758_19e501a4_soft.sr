@@ -6,6 +6,22 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
+        "FruData_RaidCard": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_Raid",
+            "EepromWp": 0,
+            "BoardPartNumber": "N/A",
+            "BoardSerialNumber": "N/A",
+            "StorageType": "EepromV2"
+        },
+        "Fru_PCIeCard": {
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_Raid.HealthStatus",
+            "Type": 8,
+            "FruDataId": "#/FruData_RaidCard"
+        },
         "Component_ComPCIeCard1": {
             "FruId": 255,
             "Instance": "<=/PCIeDevice_1.SlotID",

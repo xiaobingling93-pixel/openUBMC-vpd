@@ -13,7 +13,8 @@
         },
         "I2cMux_Chan": {
             "Chips": [
-                "Chip_TempChip"
+                "Chip_TempChip",
+                "Eeprom_BF3"
             ]
         }
     },

@@ -43,7 +43,25 @@
             "OffsetWidth": 2,
             "WriteTmout": 100,
             "ReadTmout": 100,
-            "HealthStatus": 0
+            "HealthStatus": 0,
+            "WriteInterval": 20,
+            "RwBlockSize": 32
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Pca9555_Raid",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 7,
+            "Type": 0,
+            "Value": 0
+        },
+        "Fru_PCIeCard": {
+            "PcbId": "#/Accessor_PcbID.Value",
+            "FruId": 1,
+            "FruName": "SP686C-M-16i 4G",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 255,
+            "UniqueId": "N/A"
         },
         "Scanner_Eeprom_Raid": {
             "Chip": "#/Eeprom_Raid",

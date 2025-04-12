@@ -1118,3 +1118,20 @@
 			fi 2> /dev/null || true
 	endscript
 }
+
+/var/log/pciecard/*_DPUV1.3/error_log_DPUV1.3.bin{
+	su root root
+	size = 512k
+	compress
+	copytruncate
+	rotate 1
+	sharedscripts
+	prerotate
+		if [ `stat -c %s $1` -gt 104857600 ]; then
+			cat /dev/null > $1
+			echo `date "+%Y-%m-%d %H:%M:%S"` "ERROR: The $1 file is too large and needs to be deleted." >> /var/log/maintenance.log;
+		else
+			rm -f /var/log/pciecard/*_DPUV1.3/error_log_DPUV1.3.bin.1
+			fi 2> /dev/null || true
+	endscript
+}
