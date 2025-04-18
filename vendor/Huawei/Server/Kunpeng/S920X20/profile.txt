@@ -106,6 +106,8 @@ Huawei/Nic/hi1822/14140130_19e50222_19e500a1_soft.sr
 Huawei/Nic/hi1822/14140130_19e50223_19e50041_soft.sr
 Huawei/Nic/hi1822/14140130_19e50223_19e50061_soft.sr
 Huawei/Nic/hi1822/14140130_19e50222_19e50152_soft.sr
+Huawei/Nic/hi1822/14140130_19e50222_19e50035_soft.sr
+Huawei/Nic/hi1822/14140130_19e50222_19e50035.sr
 Huawei/Nic/sdi/14140130_SDI5X_a9_soft.sr
 Huawei/Nic/sdi/14140130_SDI5X_NetCard_ae_soft.sr
 Broadcom/Nic/OCP/14220247_14e41750_14e45208_soft.sr
@@ -197,3 +199,5 @@ Broadcom/Nic/OCP/14140130_14e416ec_14e41402.sr
 Broadcom/Nic/OCP/14140130_14e416ec_14e41402_soft.sr
 Broadcom/Nic/OCP/14140130_14e416ed_14e41402.sr
 Broadcom/Nic/OCP/14140130_14e416ed_14e41402_soft.sr
+Huawei/Nic/hi1823/14140130_19e50222_19e504b1.sr
+Huawei/Nic/hi1823/14140130_19e50222_19e504b1_soft.sr
