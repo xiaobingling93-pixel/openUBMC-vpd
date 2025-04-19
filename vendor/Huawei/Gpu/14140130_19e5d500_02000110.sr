@@ -112,6 +112,7 @@
             "CardDescription": "Atlas 300I Duo Inference Card PCI-E 1*16x(FHFL)",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "RefChip":"#/Chip_Dmini",
+            "LockChip":"#/Chip_Dmini",
             "RefEeprom":"#/Chip_Dmini_Elabel",
             "RefFrudata": "#/FruData_NPUCard",
             "Model": "Atlas_300I_Duo",
