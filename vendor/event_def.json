@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4896,6 +4896,78 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "PCIePowerCollectionFailed"
+        },
+        {
+            "EventCode": "0x14000011",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "SwitchModule.NPUToSwitchModuleLinkAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NPUToSwitchModuleLinkAbnormal"
+        },
+        {
+            "EventCode": "0x62000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNMinorFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "LCNMinorFailure"
+        },
+        {
+            "EventCode": "0x62000003",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNMajorFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "LCNMajorFailure"
+        },
+        {
+            "EventCode": "0x62000005",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNCriticalFailure",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "LCNCriticalFailure"
+        },
+        {
+            "EventCode": "0x62000007",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNNetworkCommunicationFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "LCNNetworkCommunicationFailure"
+        },
+        {
+            "EventCode": "0x62000009",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNAuthenticationFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "LCNAuthenticationFailure"
         }
     ],
     "EventDescription": [
@@ -12649,6 +12721,120 @@
             "Cause": {
                 "En": "Internal error of the PCIe device.",
                 "Zh": "PCIe设备内部异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the switch module and check whether the alarm is cleared. @#AB;2. Replace the NPU board and check whether the alarm is cleared. @#AB;3. Contact technical support.",
+                "Zh": "1、更换对应交换板，检查告警是否清除。@#AB;2、更换对应NPU模组，检查告警是否清除。@#AB;3、请联系技术支持处理。"
+            },
+            "EventKeyId": "SwitchModule.NPUToSwitchModuleLinkAbnormal",
+            "Description": {
+                "En": "%2 of the %1 failed to access the %4 of the %3.",
+                "Zh": "%1 %2 访问 %3 %4 异常。"
+            },
+            "Influence": {
+                "En": "The NPU network port cannot work properly and may go down.",
+                "Zh": "影响NPU网口正常工作，可能导致网口Down。"
+            },
+            "Cause": {
+                "En": "1. The switch module is faulty.@#AB;2. The NPU board is faulty.",
+                "Zh": "1、对应交换板故障。@#AB;2、对应NPU模组故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            },
+            "EventKeyId": "LCN.LCNMinorFailure",
+            "Description": {
+                "En": "The LCN%1 health state is degraded. %2",
+                "Zh": "LCN%1健康状态降级。%2"
+            },
+            "Influence": {
+                "En": "The LCN health state is degraded. Maintenance personnel need to promptly identify the cause of the alarm and eliminate potential faults.",
+                "Zh": "LCN健康状态降级，维护人员需及时查找告警原因，消除故障隐患。"
+            },
+            "Cause": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            },
+            "EventKeyId": "LCN.LCNMajorFailure",
+            "Description": {
+                "En": "The LCN%1 has major alarm. %2",
+                "Zh": "LCN%1出现严重问题。%2"
+            },
+            "Influence": {
+                "En": "The LCN has major alarm and impacting system service quality. Immediate resolution is required.",
+                "Zh": "LCN出现严重问题，会影响到系统服务质量，需要立即处理。"
+            },
+            "Cause": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            },
+            "EventKeyId": "LCN.LCNCriticalFailure",
+            "Description": {
+                "En": "The LCN%1 has critical alarm. %2",
+                "Zh": "LCN%1出现紧急问题。%2"
+            },
+            "Influence": {
+                "En": "The LCN has critical alarm. Risks disrupting system operations. Emergency action required.",
+                "Zh": "LCN出现紧急问题，可能危及系统正常运行，需要紧急处理。"
+            },
+            "Cause": {
+                "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
+                "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Upgrade the firmware of the LCN.@#AB;2. Check the network configuration settings between the BMC and the LCN.@#AB;3. Restart the BMC.@#AB;4. Restart the LCN.@#AB;5. Replace the board where the LCN is located.",
+                "Zh": "1、升级LCN固件。@#AB;2、检查BMC与LCN的网络配置信息。@#AB;3、重启BMC。@#AB;4、重启LCN。@#AB;5、更换LCN所在的单板。"
+            },
+            "EventKeyId": "LCN.LCNNetworkCommunicationFailure",
+            "Description": {
+                "En": "Network communication between the BMC and LCN%1 failed.",
+                "Zh": "BMC与LCN%1网络通信异常。"
+            },
+            "Influence": {
+                "En": "The BMC cannot manage the LCN, which affects the health status monitoring of the LCN.",
+                "Zh": "导致BMC无法管理LCN，无法监控LCN健康状态。"
+            },
+            "Cause": {
+                "En": "1. The LCN firmware version is obsolete.@#AB;2. The LCN is improperly connected or configured.@#AB;3. The BMC is inactive or functioning abnormally.@#AB;4. The LCN is inactive or functioning abnormally.@#AB;5. Hardware failure detected. Perform hardware diagnostics or replace the faulty component.",
+                "Zh": "1、LCN固件版本过低，需要更新到最新版本。@#AB;2、LCN设备未正确连接或配置，需检查物理连接和配置信息。@#AB;3、BMC服务未启动或运行异常，应检查并重启BMC。@#AB;4、LCN服务未启动或运行异常，应检查并重启LCN。@#AB;5、存在硬件故障，如LCN设备本身出现问题，需要进行硬件检测或更换。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the account configuration settings between the BMC and the LCN.@#AB;2. Update the local password via BMC.@#AB;3. Upgrade the firmware of the LCN.@#AB;4. Restart the LCN.",
+                "Zh": "1、检查BMC与LCN的用户配置信息。@#AB;2、更新BMC侧LCN的登录密码。@#AB;3、升级LCN固件。@#AB;4、重启LCN。"
+            },
+            "EventKeyId": "LCN.LCNAuthenticationFailure",
+            "Description": {
+                "En": "Authentication failure caused communication loss between the BMC and LCN%1.",
+                "Zh": "鉴权失败导致BMC与LCN%1通信丢失。"
+            },
+            "Influence": {
+                "En": "The BMC cannot manage the LCN, which affects the health status monitoring of the LCN.",
+                "Zh": "导致BMC无法管理LCN，无法监控LCN健康状态。"
+            },
+            "Cause": {
+                "En": "1. The LCN is improperly configured.@#AB;2. The local password is abnormal.@#AB;3. The LCN firmware version is obsolete.@#AB;4. The LCN is inactive or functioning abnormally.",
+                "Zh": "1、LCN未正确配置用户信息，需检查用户配置信息。@#AB;2、BMC侧LCN的登录密码异常，应检查并更新BMC侧LCN的登录密码。@#AB;3、LCN固件版本过低，需要更新到最新版本。@#AB;4、LCN服务未启动或运行异常，应检查并重启LCN。"
             }
         }
     ]

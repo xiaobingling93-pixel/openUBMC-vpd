@@ -1135,3 +1135,17 @@
 			fi 2> /dev/null || true
 	endscript
 }
+
+/var/log/compute/npu_hbm_wave.dat{
+	su root root
+	size = 370k
+	nocompress
+	copytruncate
+	rotate 1
+	prerotate
+		/etc/prerotate.sh "$1"
+	endscript
+	lastaction
+		chmod 0400 /var/log/compute/npu_hbm_wave.dat.* 2> /dev/null || true
+	endscript
+}

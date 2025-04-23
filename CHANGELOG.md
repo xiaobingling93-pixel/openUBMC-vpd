@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.90] - 2025-4-22
+compute组件固件升级总线互斥
+
 ## [1.70.89] - 2025-4-19
 compute组件固件升级总线互斥
 
