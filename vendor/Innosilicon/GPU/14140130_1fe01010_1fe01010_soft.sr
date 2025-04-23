@@ -1,0 +1,83 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "Objects": {
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "BoardId": 65535,
+            "Type": 8,
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "UniqueId": "N/A",
+            "Manufacturer": "ALLWINMETA",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber",
+            "GroupId": 1
+        },
+        "Event_OverTemp": {
+            "Reading": "<=/Scanner_GPUTemp.Value |> expr($1 // 256) |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "@Default": {
+                "Condition": 85
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading |> string.format('%s', $1)",
+            "DescArg5": "#/ThresholdSensor_M11PGPUTemp.UpperNoncritical"
+        },
+        "Event_TempFail": {
+            "Reading": "<=/Scanner_GPUTemp.Status;<=/Scanner_GPUTemp.Value |> expr($1 == 0 ? ($2 == 32768 ? 1 : 0) : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeBandWidth": {
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(AWM M11P)",
+            "Component": "#/Component_PCIeCard"
+        }
+    }
+}

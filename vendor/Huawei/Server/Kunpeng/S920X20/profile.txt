@@ -201,3 +201,7 @@ Broadcom/Nic/OCP/14140130_14e416ed_14e41402.sr
 Broadcom/Nic/OCP/14140130_14e416ed_14e41402_soft.sr
 Huawei/Nic/hi1823/14140130_19e50222_19e504b1.sr
 Huawei/Nic/hi1823/14140130_19e50222_19e504b1_soft.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010_soft.sr
+MooreThreads/GPU/14140130_1ed50105_1ed50105.sr
+MooreThreads/GPU/14140130_1ed50105_1ed50105_soft.sr

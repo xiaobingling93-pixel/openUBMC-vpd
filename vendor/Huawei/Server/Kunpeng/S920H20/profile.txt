@@ -190,3 +190,7 @@ PMC-Sierra/Raid/14140130_9005028f_90050801.sr
 PMC-Sierra/Raid/14140130_9005028f_90050801_soft.sr
 Huawei/Server/Kunpeng/S920H20/OCP/14220247_OCP_1.sr
 Huawei/Server/Kunpeng/S920H20/OCP/14220247_OCP_2.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010_soft.sr
+MooreThreads/GPU/14140130_1ed50105_1ed50105.sr
+MooreThreads/GPU/14140130_1ed50105_1ed50105_soft.sr
