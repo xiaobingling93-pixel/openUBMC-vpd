@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -10716,8 +10716,8 @@
             },
             "EventKeyId": "NPU.NpuHealthCriticalFault",
             "Description": {
-                "En": "NPU Board%1 NPU%2 has critical alarm. %3",
-                "Zh": "NPU Board%1 NPU%2出现紧急问题，可能危及系统正常运行，需要紧急处理。%3"
+                "En": "NPU Board%1 NPU%2 has critical alarm. %3. NPU Board%1 SN: %4.",
+                "Zh": "NPU Board%1 NPU%2出现紧急问题，可能危及系统正常运行，需要紧急处理。%3。NPU Board%1 SN：%4。"
             },
             "Influence": {
                 "En": "Abnormal DDR access, or NPU reset upon undertemperature or overtemperature may occur.",
@@ -10735,8 +10735,8 @@
             },
             "EventKeyId": "NPU.NpuHealthMajorFault",
             "Description": {
-                "En": "NPU Board%1 NPU%2 has major alarm. %3",
-                "Zh": "NPU Board%1 NPU%2出现严重问题，会影响到系统服务质量，需要立即处理。%3"
+                "En": "NPU Board%1 NPU%2 has major alarm. %3. NPU Board%1 SN: %4.",
+                "Zh": "NPU Board%1 NPU%2出现严重问题，会影响到系统服务质量，需要立即处理。%3。NPU Board%1 SN：%4。"
             },
             "Influence": {
                 "En": "An OS exception may occur, resulting in a system overtemperature reset.",
@@ -10754,8 +10754,8 @@
             },
             "EventKeyId": "NPU.NpuHealthMinorFault",
             "Description": {
-                "En": "NPU Board%1 NPU%2 health state is degraded. %3",
-                "Zh": "NPU Board%1 NPU%2健康状态降级,需要维护人员需及时查找告警原因，消除故障隐患。%3"
+                "En": "NPU Board%1 NPU%2 health state is degraded. %3. NPU Board%1 SN: %4.",
+                "Zh": "NPU Board%1 NPU%2健康状态降级,需要维护人员需及时查找告警原因，消除故障隐患。%3。NPU Board%1 SN：%4。"
             },
             "Influence": {
                 "En": "Services may fail to start or run abnormally.",
