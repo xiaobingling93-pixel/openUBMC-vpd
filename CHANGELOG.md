@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.92] - 2025-4-27
+解决GPU卡温度读取状态异常问题
+
 ## [1.70.91] - 2025-4-23
 适配GPU卡:MTT S50、M11P
 
