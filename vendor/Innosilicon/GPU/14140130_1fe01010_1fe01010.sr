@@ -140,7 +140,7 @@
             "RBExp": 224,
             "Analog": 1,
             "Reading": "<=/Scanner_GPUTemp.Value |> expr($1 // 256)",
-            "ReadingStatus": 0,
+            "ReadingStatus": "<=/Scanner_GPUTemp.Value |> expr($1 == 32768 ? 1 : 0)",
             "SensorNumber": 255,
             "UpperNoncritical": 85,
             "PositiveHysteresis": 2,
