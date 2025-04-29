@@ -324,6 +324,7 @@
             "TargetTemperatureRangeCelsius": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
+            "ActiveInStandby": true,
             "CustomTargetTemperatureCelsius": 255,
             "Enabled": "<=/CoolingRequirement_1_55.MonitoringStatus |> expr($1 == 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
@@ -357,16 +358,6 @@
             "CustomTargetTemperatureCelsius": 255,
             "Enabled": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence |> expr(($1 == 1 || $2 == 1) ? true : false)",
             "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
-        },
-        "CoolingRequirement_1_96": {
-            "RequirementId": "${Slot} |> expr((96 << 8) | $1)",
-            "Description": "BF3网卡芯片温度目标调速",
-            "MonitoringStatus": "<=/Scanner_NICTemp.Status",
-            "MonitoringValue": "<=/Scanner_NICTemp.Value",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 80,
-            "MaxAllowedTemperatureCelsius": 92,
-            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         }
     }
 }

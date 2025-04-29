@@ -323,6 +323,7 @@
             "TargetTemperatureRangeCelsius": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
+            "ActiveInStandby": true,
             "CustomTargetTemperatureCelsius": 255,
             "Enabled": "<=/CoolingRequirement_1_55.MonitoringStatus |> expr($1 == 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
