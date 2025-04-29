@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.3",
+    "Version": "1.0.4",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4968,6 +4968,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "LCNAuthenticationFailure"
+        },
+        {
+            "EventCode": "0x1A00006D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "BMC.BMCTimeSynchronizationFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "BMCTimeSynchronizationFailure"
         }
     ],
     "EventDescription": [
@@ -12835,6 +12847,25 @@
             "Cause": {
                 "En": "1. The LCN is improperly configured.@#AB;2. The local password is abnormal.@#AB;3. The LCN firmware version is obsolete.@#AB;4. The LCN is inactive or functioning abnormally.",
                 "Zh": "1、LCN未正确配置用户信息，需检查用户配置信息。@#AB;2、BMC侧LCN的登录密码异常，应检查并更新BMC侧LCN的登录密码。@#AB;3、LCN固件版本过低，需要更新到最新版本。@#AB;4、LCN服务未启动或运行异常，应检查并重启LCN。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the NTP server is configured correctly.@#AB;2. Check communication between the {BMC} and the NTP server.@#AB;3. Check whether the RTC chip works properly.",
+                "Zh": "1、检查NTP服务器配置是否正确。@#AB;2、检查{BMC}和NTP服务器之间网络是否连通。@#AB;3、检查RTC芯片是否正常工作。"
+            },
+            "EventKeyId": "BMC.BMCTimeSynchronizationFailure",
+            "Description": {
+                "En": "BMC time synchronization failure.",
+                "Zh": "BMC时间同步失败。"
+            },
+            "Influence": {
+                "En": "The BMC system time may be inaccurate.",
+                "Zh": "可能导致BMC系统时间不准确。"
+            },
+            "Cause": {
+                "En": "1. The NTP server is incorrectly configured.@#AB;2. The network between the BMC and the NTP server is disconnected.@#AB;3. The RTC chip is abnormal.",
+                "Zh": "1、NTP服务器配置不正确。@#AB;2、BMC和NTP服务器间网络不通。@#AB;3、RTC芯片异常。"
             }
         }
     ]
