@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.96] - 2025-4-29
+新增所有时间源同步失败告警
+
 ## [1.70.95] - 2025-4-29
 适配BF3网卡standby调速策略
 
