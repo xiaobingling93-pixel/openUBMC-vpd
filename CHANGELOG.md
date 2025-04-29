@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.95] - 2025-4-29
+适配BF3网卡standby调速策略
+
 ## [1.70.94] - 2025-4-29
 适配BT驱动加载及服务启动
 
