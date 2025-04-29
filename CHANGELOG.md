@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.94] - 2025-4-29
+适配BT驱动加载及服务启动
+
 ## [1.70.92] - 2025-4-27
 解决GPU卡温度读取状态异常问题
 
