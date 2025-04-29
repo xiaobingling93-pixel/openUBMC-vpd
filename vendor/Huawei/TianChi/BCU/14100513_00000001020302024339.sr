@@ -3937,6 +3937,9 @@
         "Event_CpldSelfcheck": {
             "EventKeyId": "CpuBoard.CpuBoardCPLDSelfTestFailure",
             "Condition": 1
+        },
+        "BTCChannelMode_BT": {
+            "BTCMode": 0
         }
     }
 }
