@@ -55,6 +55,11 @@
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
         },
+        "Event_OMOverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
         "Event_TempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1
@@ -314,6 +319,55 @@
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_83": {
+            "RequirementId": "${Slot} |> expr((83 << 8) | $1)",
+            "Description": "MCX631102AN-ADAT网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_84.MonitoringStatus |> expr($1 == 0 ? true : false)"
+        },
+        "CoolingRequirement_1_84": {
+            "RequirementId": "${Slot} |> expr((84 << 8) | $1)",
+            "Description": "MCX631102AN-ADAT光模块调速",
+            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp', $1)"
+        },
+        "CoolingRequirement_1_85": {
+            "RequirementId": "${Slot} |> expr((85 << 8) | $1)",
+            "Description": "MCX631102AN-ADAT网卡芯片调速(光模块异常)",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_84.MonitoringStatus |> expr($1 ~= 0 ? true : false)"            
         }
     }
 }

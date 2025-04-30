@@ -311,7 +311,9 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 == 0 ? true : false)"
         },
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
@@ -321,10 +323,28 @@
             "TargetTemperatureCelsius": 60,
             "MaxAllowedTemperatureCelsius": 70,
             "TargetTemperatureRangeCelsius": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
             "ThresholdValue": [],
             "AlarmSpeed": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingRequirement_1_150": {
+            "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
+            "Description": "MCX623105AN-VDAT网卡芯片调速(光模块异常)",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
         }
     }
 }

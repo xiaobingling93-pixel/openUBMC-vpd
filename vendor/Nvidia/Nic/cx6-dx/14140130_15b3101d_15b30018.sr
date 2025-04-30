@@ -34,6 +34,11 @@
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
         },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
         "Event_TempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1
@@ -180,6 +185,65 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "CoolingRequirement_1_77": {
+            "RequirementId": "${Slot} |> expr((77 << 8) | $1)",
+            "Description": "MCX623105AN-VDAT网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_78.MonitoringStatus |> expr($1 == 0 ? true : false)"
+        },
+        "CoolingRequirement_1_78": {
+            "RequirementId": "${Slot} |> expr((78 << 8) | $1)",
+            "Description": "MCX623105AN-VDAT光模块调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius",
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "CoolingRequirement_1_79": {
+            "RequirementId": "${Slot} |> expr((79 << 8) | $1)",
+            "Description": "MCX623105AN-VDAT网卡芯片调速(光模块异常)",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_78.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",

@@ -156,6 +156,19 @@
             "DescArg4": "#/Event_OverTemp.Reading",
             "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
+        "Event_OMOverTempInfo": {
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2) |> expr($1 > 255 ? 30 : $1)",
+            "@Default": {
+                "Condition": 75
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg4": "#/Event_OMOverTempInfo.Reading",
+            "DescArg5": "75",
+            "Hysteresis": 2,
+            "Component": "#/Component_PCIeCard"
+        },
         "Event_TempFail": {
             "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
             "OperatorId": 5,
