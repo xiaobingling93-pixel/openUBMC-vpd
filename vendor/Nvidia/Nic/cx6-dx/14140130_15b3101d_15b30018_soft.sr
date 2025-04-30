@@ -72,6 +72,28 @@
             "MinimumReading": 0,
             "Reading": "<=/NetworkAdapter_1.TemperatureCelsius"
         },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp', $1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_0.Presence |> expr($2 == 0 ? 32768 : (($1 > 255 ? 3 : $1)))"
+        },
         "Entity_PCIeCard": {
             "Id": 11,
             "Name": "PCIeCard",
@@ -92,6 +114,16 @@
             "DescArg3": "IBCard",
             "DescArg4": "#/Event_OverTemp.Reading",
             "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
+        },
+        "Event_OM0OverTempInfo": {
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg4": "#/Event_OM0OverTempInfo.Reading",
+            "DescArg5": "75",
+            "Hysteresis": 2,
+            "Component": "#/Component_PCIeCard"
         },
         "Event_TempFail": {
             "Reading": "<=/NetworkAdapter_1.TemperatureStatus",

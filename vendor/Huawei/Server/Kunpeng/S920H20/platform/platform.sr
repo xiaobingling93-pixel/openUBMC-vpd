@@ -157,6 +157,7 @@
             "MemHardPPREnabled": false,
             "MemACLSEnabled": true,
             "MaxMemPageOfflineCount": 10000,
+            "MemFaultPredictionEnabled": true,
             "HostHbmFPCEnabled": true,
             "HostHbmACLSEnabled": true,
             "HostHbmSoftPPREnabled": true
