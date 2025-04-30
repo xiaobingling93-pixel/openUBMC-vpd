@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.98] - 2025-4-30
+解决所有时间源同步失败告警没有恢复事件的问题
+
 ## [1.70.97] - 2025-4-30
 标卡调速
 

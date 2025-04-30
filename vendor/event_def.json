@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.4",
+    "Version": "1.0.5",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4975,7 +4975,7 @@
             "OldEventCode": "",
             "EventType": 0,
             "LifeCycleId": 0,
-            "DeassertFlag": 0,
+            "DeassertFlag": 1,
             "EventKeyId": "BMC.BMCTimeSynchronizationFailure",
             "SeverityId": 1,
             "ActionId": 0,
