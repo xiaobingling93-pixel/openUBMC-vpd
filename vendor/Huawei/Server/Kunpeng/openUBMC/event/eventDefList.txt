@@ -406,3 +406,4 @@ Port.PortNegotiationSpeedReduced
 PCIeCard.PCIeTempCollectionFailed
 PCIeCard.PCIeVoltCollectionFailed
 PCIeCard.PCIePowerCollectionFailed
+BMC.BMCTimeSynchronizationFailure

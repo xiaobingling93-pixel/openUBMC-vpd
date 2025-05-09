@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.100] - 2025-5-9
+开源社区事件列表适配所有时间源同步失败告警
+
 ## [1.70.99] - 2025-5-6
 添加电源转换效率曲线
 
