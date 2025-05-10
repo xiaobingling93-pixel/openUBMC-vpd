@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.5",
+    "Version": "1.0.6",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4980,6 +4980,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "BMCTimeSynchronizationFailure"
+        },
+        {
+            "EventCode": "0x5D00001F",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "ExpBoard.ExpBoardFPGASelfTestFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "ExpBoardFPGASelfTestFailure"
         }
     ],
     "EventDescription": [
@@ -12866,6 +12878,25 @@
             "Cause": {
                 "En": "1. The NTP server is incorrectly configured.@#AB;2. The network between the BMC and the NTP server is disconnected.@#AB;3. The RTC chip is abnormal.",
                 "Zh": "1、NTP服务器配置不正确。@#AB;2、BMC和NTP服务器间网络不通。@#AB;3、RTC芯片异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power on and off the FPGA by using AC.@#AB;2. Replace the cables.",
+                "Zh": "1、AC上下电恢复。@#AB;2、更换线缆。"
+            },
+            "EventKeyId": "ExpBoard.ExpBoardFPGASelfTestFailure",
+            "Description": {
+                "En": "Expand board %2 FPGA %1 self-check result is abnormal.",
+                "Zh": "扩展板%2 FPGA%1 自检结果异常。"
+            },
+            "Influence": {
+                "En": "The CPU board may fail to be identified.",
+                "Zh": "可能导致基础板无法识别。"
+            },
+            "Cause": {
+                "En": "1. The FPGA is faulty.@#AB;2. The cables are faulty.",
+                "Zh": "1、FPGA故障。@#AB;2、线缆故障。"
             }
         }
     ]

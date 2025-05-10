@@ -407,3 +407,4 @@ PCIeCard.PCIeTempCollectionFailed
 PCIeCard.PCIeVoltCollectionFailed
 PCIeCard.PCIePowerCollectionFailed
 BMC.BMCTimeSynchronizationFailure
+ExpBoard.ExpBoardFPGASelfTestFailure
