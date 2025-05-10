@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.102] - 2025-5-10
+新增fpga自检失败告警
+
 ## [1.70.101] - 2025-5-9
 调整logrotate配置存放位置，允许机型定制
 
