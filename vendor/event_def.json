@@ -3979,7 +3979,7 @@
             "OldEventCode": "",
             "EventType": 0,
             "LifeCycleId": 0,
-            "DeassertFlag": 1,
+            "DeassertFlag": 0,
             "EventKeyId": "PCIeCard.PCIeCardOSBootUp",
             "SeverityId": 0,
             "ActionId": 0,
