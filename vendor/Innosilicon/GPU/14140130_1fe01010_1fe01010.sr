@@ -56,7 +56,8 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "RefChip": "#/Chip_M11P"
+            "RefChip": "#/Chip_M11P",
+            "PrimaryGPUTemperatureCelsius": "<=/Scanner_GPUTemp.Value |> expr($1 // 256)"
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (AWM M11P)",
