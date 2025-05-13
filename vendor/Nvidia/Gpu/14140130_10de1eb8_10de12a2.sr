@@ -63,7 +63,8 @@
             "RefChip": "#/Chip_TempChip",
             "SerialNumber": "#/PCIeCard_1.SerialNumber",
             "CardFirmwareVersion": "#/PCIeCard_1.FirmwareVersion",
-            "CardPartNumber": "02570029"
+            "CardPartNumber": "02570029",
+            "PrimaryGPUTemperatureCelsius": "<=/Scanner_GPUTemp.Value"
         },
         "Entity_GPUCard": {
             "Id": 11,

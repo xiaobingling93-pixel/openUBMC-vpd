@@ -56,7 +56,8 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "RefChip": "#/Chip_Vastai"
+            "RefChip": "#/Chip_Vastai",
+            "PrimaryGPUTemperatureCelsius": "<=/Scanner_GPUTemp.Value |> expr($1 // 25600)"
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (DC1000)",

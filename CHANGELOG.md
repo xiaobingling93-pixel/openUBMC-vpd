@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.104] - 2025-5-13
+GPU新增PrimaryGPUTemperatureCelsius属性
+
 ## [1.70.103] - 2025-5-12
 修改0x08000019事件DeassertFlag为0
 
