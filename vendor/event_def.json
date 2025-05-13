@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.6",
+    "Version": "1.0.7",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -12882,8 +12882,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Power on and off the FPGA by using AC.@#AB;2. Replace the cables.",
-                "Zh": "1、AC上下电恢复。@#AB;2、更换线缆。"
+                "En": "1. Power on and off the FPGA by using AC.@#AB;2. Replace the cables.@#AB;3. Replace the expand board.",
+                "Zh": "1、AC上下电恢复。@#AB;2、更换线缆。@#AB;3、更换扩展板。"
             },
             "EventKeyId": "ExpBoard.ExpBoardFPGASelfTestFailure",
             "Description": {
@@ -12891,8 +12891,8 @@
                 "Zh": "扩展板%2 FPGA%1 自检结果异常。"
             },
             "Influence": {
-                "En": "The CPU board may fail to be identified.",
-                "Zh": "可能导致基础板无法识别。"
+                "En": "The server cannot start.",
+                "Zh": "可能导致服务器无法正常启动。"
             },
             "Cause": {
                 "En": "1. The FPGA is faulty.@#AB;2. The cables are faulty.",
