@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.106] - 2025-5-13
+完善0x5D00001F告警修复建议和原因
+
 ## [1.70.105] - 2025-5-13
 适配AWM M11P的PrimaryGPUTemperatureCelsius属性
 
