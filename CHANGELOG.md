@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.107] - 2025-5-23
+新增适配管理网卡SP625D
+
 ## [1.70.106] - 2025-5-13
 完善0x5D00001F告警修复建议和原因
 
