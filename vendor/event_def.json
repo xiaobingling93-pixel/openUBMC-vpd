@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.7",
+    "Version": "1.0.8",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -3984,6 +3984,18 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "PCIeCardOSBootUp"
+        },
+        {
+            "EventCode": "0x2C000005",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Bios.SystemSetConfigFailed",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "SystemSetConfigFailed"
         },
         {
             "EventCode": "0x120000CB",
@@ -11282,6 +11294,25 @@
             "Cause": {
                 "En": "The NIC is faulty.",
                 "Zh": "网卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Bios.SystemSetConfigFailed",
+            "Description": {
+                "En": "Set BIOS %1 failed.",
+                "Zh": "设置BIOS %1 失败。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "1. The BIOS does not support this setting. @#AB;2. The BIOS supports this parameter, but the parameter value is out of range.",
+                "Zh": "1、BIOS不支持该设置项。 @#AB;2、BIOS支持该设置项，但是设置参数值超出范围"
             }
         },
         {
