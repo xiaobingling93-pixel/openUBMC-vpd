@@ -48,6 +48,7 @@ BMC.BMCFilesSystemAbnormal
 BMC.BMCOverTempMinor
 BMC.BMCDDRSelfTestFail
 Bios.SecureBootFailed
+Bios.SystemSetConfigFailed
 PcieCard.PCIeCardOMOverTemp
 Port.PortOpticalModulePowerAlarm
 Port.PortOpticalModuleSpeedMismatch

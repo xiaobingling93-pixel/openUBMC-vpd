@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.70.106] - 2025-5-13
+添加0x2C000005事件码的相关定义
+
+## [1.70.106] - 2025-5-13
 完善0x5D00001F告警修复建议和原因
 
 ## [1.70.105] - 2025-5-13
