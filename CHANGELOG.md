@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.107] - 2025-5-23
+新增适配管理网卡SP625D
+
 ## [1.70.106] - 2025-5-13
 添加0x2C000005事件码的相关定义
 
