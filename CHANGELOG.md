@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.108] - 2025-5-23
+新增适配管理网卡SF200HT
+
 ## [1.70.107] - 2025-5-23
 新增适配管理网卡SP625D
 
