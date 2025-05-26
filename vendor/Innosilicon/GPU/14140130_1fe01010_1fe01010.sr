@@ -141,11 +141,20 @@
             "RBExp": 224,
             "Analog": 1,
             "Reading": "<=/Scanner_GPUTemp.Value |> expr($1 // 256)",
-            "ReadingStatus": "<=/Scanner_GPUTemp.Value |> expr($1 == 32768 ? 1 : 0)",
+            "ReadingStatus": "<=/Scanner_GPUTemp.Value |> expr($1 >= 32768 ? 1 : 0)",
             "SensorNumber": 255,
             "UpperNoncritical": 85,
             "PositiveHysteresis": 2,
             "NegativeHysteresis": 2
+        },
+        "CoolingRequirement_1_87": {
+            "RequirementId": "${Slot} |> expr((87 << 8) | $1)",
+            "TemperatureType": 1,
+            "MonitoringStatus": "<=/Scanner_GPUTemp.Value |> expr($1 >= 65536 ? 1 : 0)",
+            "MonitoringValue": "<=/Scanner_GPUTemp.Value |> expr((($1 // 256) > 255) ? 30 : (((($1 // 256) & 255) >= 128) ? (-(255 - (($1 // 256) & 255) + 1)) : (($1 // 256) & 255)) )",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 70,
+            "MaxAllowedTemperatureCelsius": 78
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
