@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.109] - 2025-5-26
+修改SF400HT基础信息
+
 ## [1.70.108] - 2025-5-23
 新增适配管理网卡SF200HT
 

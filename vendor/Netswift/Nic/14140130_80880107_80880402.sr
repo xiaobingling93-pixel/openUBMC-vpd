@@ -14,7 +14,7 @@
     },
     "Objects": {
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (SF400HT-A)",
+            "DeviceName": "PCIe Card $ (SF400HT)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
@@ -32,9 +32,9 @@
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "SF400HT-A",
-            "BoardName": "SF400HT-A",
-            "Description": "Qual-Port Ethernet Network Adaptor SF400HT-A",
+            "Name": "SF400HT",
+            "BoardName": "SF400HT",
+            "Description": "Qual-Port Ethernet Network Adaptor SF400HT",
             "FunctionClass": 2,
             "VendorID": 32904,
             "DeviceID": 263,
@@ -58,7 +58,7 @@
         "NetworkAdapter_1": {
             "SystemID": 1,
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
-            "Name": "SF400HT-A",
+            "Name": "SF400HT",
             "Manufacturer": "Netswift",
             "Description": "4*GE",
             "Position": "<=/PCIeDevice_1.Position",
@@ -69,7 +69,7 @@
             "ChipVendor": "Netswift",
             "ChipManufacturer": "Netswift",
             "NetworkPortCount": 2,
-            "BoardName": "SF400HT-A",
+            "BoardName": "SF400HT",
             "VendorID": "0x8088",
             "DeviceID": "0x0107",
             "SubsystemVendorID": "0x8088",
@@ -101,7 +101,7 @@
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
             "UID": "N/A",
-            "Name": "SF400HT-A",
+            "Name": "SF400HT",
             "Manufacturer": "Netswift",
             "Type": "PCIeCard",
             "Description": "4*GE",
