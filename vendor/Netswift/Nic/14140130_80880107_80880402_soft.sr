@@ -161,7 +161,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(SF400HT-A)",
+            "DescArg3": "(SF400HT)",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
@@ -170,7 +170,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(SF400HT-A)",
+            "DescArg3": "(SF400HT)",
             "Component": "#/Component_PCIeCard"
         }
     }
