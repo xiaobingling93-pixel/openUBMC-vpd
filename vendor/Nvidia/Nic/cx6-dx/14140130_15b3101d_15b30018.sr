@@ -169,7 +169,8 @@
             "LinkWidthCapability": "N/A",
             "LinkWidth": "N/A",
             "FaultState": 0,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "CoolingRequirement_1_48": {
             "RequirementId": "${Slot} |> expr((48 << 8) | $1)",

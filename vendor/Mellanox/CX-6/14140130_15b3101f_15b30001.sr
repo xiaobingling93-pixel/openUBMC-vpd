@@ -170,7 +170,8 @@
             "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
@@ -367,7 +368,7 @@
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
             "SensorName": "#/ThresholdSensor_Temp.SensorName",
-            "Enabled": "<=/CoolingRequirement_1_84.MonitoringStatus |> expr($1 ~= 0 ? true : false)"            
+            "Enabled": "<=/CoolingRequirement_1_84.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
         }
     }
 }

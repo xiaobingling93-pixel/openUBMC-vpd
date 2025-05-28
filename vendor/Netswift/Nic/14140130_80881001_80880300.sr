@@ -13,7 +13,7 @@
         },
         "I2cMux_9545Chan": {
             "Chips": [
-            "Chip_SmbusChip"
+                "Chip_SmbusChip"
             ]
         }
     },
@@ -120,7 +120,8 @@
             "TemperatureStatus": 0,
             "ParentCardSlotId": 255,
             "FaultState": 0,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
@@ -194,7 +195,7 @@
             "EventKeyId": "PcieCard.PcieCardReplace",
             "Condition": 1
         },
-        "Endpoint_1":{
+        "Endpoint_1": {
             "TargetEid": 14,
             "TargetPhyAddr": 73,
             "MessageType": 2,

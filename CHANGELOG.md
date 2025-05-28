@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.116] - 2025-6-4
+NetworkAdapter对象SerialNumber属性同步引用PCIeCard对象
+
 ## [1.70.115] - 2025-6-3
 电源及风扇部分传感器新增SensorIdentifier
 
