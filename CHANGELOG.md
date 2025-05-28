@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.110] - 2025-5-28
+新增M11P的调速策略
+
 ## [1.70.109] - 2025-5-26
 修改SF400HT基础信息
 
