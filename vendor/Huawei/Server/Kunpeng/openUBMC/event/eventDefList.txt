@@ -50,6 +50,9 @@ BMC.BMCDDRSelfTestFail
 Bios.SecureBootFailed
 Bios.SystemSetConfigFailed
 PcieCard.PCIeCardOMOverTemp
+PcieCard.MiniModuleCriticalFault
+PcieCard.MiniModuleMajorFault
+PcieCard.MiniModuleMinorFault
 Port.PortOpticalModulePowerAlarm
 Port.PortOpticalModuleSpeedMismatch
 NICCard.NICCardOMOverTemp
