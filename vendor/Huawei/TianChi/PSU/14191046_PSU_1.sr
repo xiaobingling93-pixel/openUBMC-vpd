@@ -100,6 +100,11 @@
             "EventKeyId": "PSU.PSUReplace",
             "Condition": 1
         },
+        "Event_PowerSupplyGetFail": {
+            "EventKeyId": "PSU.PSUCommunicationFailure",
+            "Condition": 1,
+            "LedFaultCode": "P$$"
+        },
         "DiscreteSensor_PsStatus": {
             "AssertMask": 79,
             "DeassertMask": 79,
