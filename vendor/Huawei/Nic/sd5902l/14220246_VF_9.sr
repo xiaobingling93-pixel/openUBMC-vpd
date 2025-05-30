@@ -120,8 +120,8 @@
             "Health": "<=/Component_NICCard.Health",
             "SerialNumber": "<=/Component_NICCard.SerialNumber",
             "ReplacedFlag": 0,
-            "PredictiveFault": "<=PCIeDevice_1.PredictiveFault",
-            "DiagnosticFault": "<=PCIeDevice_1.DiagnosticFault",
+            "PredictiveFault": "<=/PCIeDevice_1.PredictiveFault",
+            "DiagnosticFault": "<=/PCIeDevice_1.DiagnosticFault",
             "BandwidthThresholdPercent": 100
         },
         "BoardNICCard_1": {

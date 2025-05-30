@@ -486,7 +486,7 @@
       "Type": "SEU",
       "Description": "M.2 Transform card, 2*PCIE interface",
       "PartNumber": "<=/FruData_SEU.BoardPartNumber",
-      "PcbID": "#/Scanner_PcbID.Value",
+      "PcbID": "<=/Scanner_PcbID.Value",
       "PcbVersion": "",
       "LogicVersion": "N/A",
       "SRVersion": "${DataVersion}",

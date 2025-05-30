@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.121] - 2025-6-09
+模型检查门禁sr问题修复
+
 ## [1.70.120] - 2025-6-4
 BF2板卡信息适配
 

@@ -27,14 +27,6 @@
             "ReadTmout": 100,
             "HealthStatus": 0
         },
-        "Scanner_NicTemp": {
-            "Chip": "#/Chip_TempChip",
-            "Size": 1,
-            "Offset": 1,
-            "Mask": 65535,
-            "Period": 1000,
-            "Debounce": "#/MidAvg_CX6Temp"
-        },
         "MidAvg_CX6Temp": {
             "WindowSize": 4,
             "DefaultValue": 20,

@@ -2183,11 +2183,6 @@
       "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
       "Condition": 1
     },
-    "ContBin_HddBackplaneMosTempHigh": {
-      "NumH": 3,
-      "NumL": 1,
-      "DefaultValue": 0
-    },
     "MidAvg_HddBpTemp": {
       "WindowSize": 4,
       "DefaultValue": 20,
