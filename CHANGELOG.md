@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.111] - 2025-5-29
+添加 精细化告警事件码的相关定义 【0x080000FB、0x080000FD、0x080000FF】
+
 ## [1.70.110] - 2025-5-28
 新增M11P的调速策略
 

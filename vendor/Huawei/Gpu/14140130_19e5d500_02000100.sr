@@ -460,6 +460,42 @@
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
             "DescArg4": "#/NPUCard_1.FaultCode"
+        },
+        "Event_MiniModuleCriticalFault": { 
+            "EventKeyId": "PcieCard.MiniModuleCriticalFault",
+            "Reading": "<=/NPUCard_1.ChipHealthStatus |> expr($1 == 3 ? 1 : 0)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg1": "MINI",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.ChipFaultDescription",
+            "AdditionalInfo": "1,2"
+        },
+        "Event_MiniModuleMajorFault": {
+            "EventKeyId": "PcieCard.MiniModuleMajorFault",
+            "Reading": "<=/NPUCard_1.ChipHealthStatus |> expr($1 == 2 ? 1 : 0)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg1": "MINI",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.ChipFaultDescription",
+            "AdditionalInfo": "1,2"
+        },
+        "Event_MiniModuleMinorFault": {
+            "EventKeyId": "PcieCard.MiniModuleMinorFault",
+            "Reading": "<=/NPUCard_1.ChipHealthStatus |> expr($1 == 1 ? 1 : 0)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Component": "#/Component_PCIeCard",
+            "DescArg1": "MINI",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "DescArg4": "#/NPUCard_1.ChipFaultDescription",
+            "AdditionalInfo": "1,2"
         }
     }
 }

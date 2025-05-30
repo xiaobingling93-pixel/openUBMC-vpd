@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.8",
+    "Version": "1.0.9",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5004,6 +5004,42 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "ExpBoardFPGASelfTestFailure"
+        },
+        {
+            "EventCode": "0x080000FB",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.MiniModuleCriticalFault",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "MiniModuleCriticalFault"
+        },
+        {
+            "EventCode": "0x080000FD",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.MiniModuleMajorFault",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MiniModuleMajorFault"
+        },
+        {
+            "EventCode": "0x080000FF",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.MiniModuleMinorFault",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "MiniModuleMinorFault"
         }
     ],
     "EventDescription": [
@@ -12929,6 +12965,64 @@
                 "En": "1. The FPGA is faulty.@#AB;2. The cables are faulty.",
                 "Zh": "1、FPGA故障。@#AB;2、线缆故障。"
             }
-        }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then on the OS, and check whether the alarm is cleared.@#AB; 2. Replace the faulty device.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PcieCard.MiniModuleCriticalFault",
+            "Description": {
+                "En": "The %1 module of the PCIe card %2(%3) is critical faulty. [%4].",
+                "Zh": "PCIe卡%2（%3）%1 模块紧急故障。[%4]。"
+            },
+            "Influence": {
+                "En": "The PCIe card run unstably, and the system may run abnormally.",
+                "Zh": "导致PCIe卡运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "The PCIe card is faulty.",
+                "Zh": "PCIe卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then on the OS, and check whether the alarm is cleared.@#AB;2. Replace the faulty device.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PcieCard.MiniModuleMajorFault",
+            "Description": {
+                "En": "The %1 module of the PCIe card %2(%3) is major faulty. [%4].",
+                "Zh": "PCIe卡%2（%3）%1 模块严重故障。[%4]。"
+
+            },
+            "Influence": {
+                "En": "The PCIe card run unstably, and the system may run abnormally.",
+                "Zh": "导致PCIe卡运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "The PCIe card is faulty.",
+                "Zh": "PCIe卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then on the OS, and check whether the alarm is cleared.@#AB;2. Replace the faulty device.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PcieCard.MiniModuleMinorFault",
+            "Description": {
+                "En": "The %1 module of the PCIe card %2(%3) is minor faulty. [%4].",
+                "Zh": "PCIe卡%2（%3）%1 模块一般故障。[%4]。"
+            },
+            "Influence": {
+                "En": "The PCIe card run unstably, and the system may run abnormally.",
+                "Zh": "导致PCIe卡运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "The PCIe card is faulty.",
+                "Zh": "PCIe卡故障。"
+            }
+        }     
     ]
 }
