@@ -87,6 +87,14 @@
             "DescArg3": "#/Component_PowerSupply.SerialNumber",
             "Component": "#/Component_PowerSupply"
         },
+        "Event_PowerSupplyGetFail": {
+            "Reading": "<=/OnePower_0.CommunicationStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
         "Entity_PowerSupply": {
             "Id": 10,
             "Instance": 96,
