@@ -2093,6 +2093,7 @@
       "SensorType": 11,
       "ReadingType": 1,
       "SensorName": "FAN Power",
+      "SensorIdentifier": "FAN Power",
       "AssertMask": 512,
       "DeassertMask": 512,
       "ReadingMask": 4112,

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.115] - 2025-6-3
+电源及风扇部分传感器新增SensorIdentifier
+
 ## [1.70.114] - 2025-6-3
 添加MCX755106AS-HEAT sr到profile.txt
 

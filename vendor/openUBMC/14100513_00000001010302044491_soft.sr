@@ -352,6 +352,7 @@
       "SensorType": 11,
       "ReadingType": 1,
       "SensorName": "FAN Power",
+      "SensorIdentifier": "FAN Power",
       "BaseUnit": 6,
       "Analog": 1,
       "NominalReading": 25,
