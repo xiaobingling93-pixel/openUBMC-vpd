@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.114] - 2025-6-3
+添加MCX755106AS-HEAT sr到profile.txt
+
 ## [1.70.113] - 2025-5-30
 新增电源模块等级
 
