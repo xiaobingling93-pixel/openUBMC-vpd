@@ -424,6 +424,36 @@
                 0.94794,
                 0.94417
             ]
+        },
+        "PowerOutputEfficiencyCurve_6": {
+            "Position": "",
+            "PartNumber": "02313FNC",
+            "PowerLevel": "80PLUS Platinum"
+        },
+        "PowerOutputEfficiencyCurve_7": {
+            "Position": "",
+            "PartNumber": "02312YKR",
+            "PowerLevel": "80PLUS Platinum"
+        },
+        "PowerOutputEfficiencyCurve_8": {
+            "Position": "",
+            "PartNumber": "02314KMU",
+            "PowerLevel": "80PLUS Platinum"
+        },
+        "PowerOutputEfficiencyCurve_9": {
+            "Position": "",
+            "PartNumber": "02314VNQ",
+            "PowerLevel": "80PLUS Titanium"
+        },
+        "PowerOutputEfficiencyCurve_10": {
+            "Position": "",
+            "PartNumber": "02314FNU",
+            "PowerLevel": "80PLUS Platinum"
+        },
+        "PowerOutputEfficiencyCurve_11": {
+            "Position": "",
+            "PartNumber": "02314XDX",
+            "PowerLevel": "80PLUS Titanium"
         }
     }
 }
