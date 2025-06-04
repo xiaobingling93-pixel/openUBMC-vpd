@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.119] - 2025-6-4
+修复CSR门禁检查近端运维相关问题
+
 ## [1.70.118] - 2025-6-4
 新增兼容性板卡
 

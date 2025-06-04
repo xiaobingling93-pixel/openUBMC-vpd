@@ -635,6 +635,22 @@
       "LampTestColor": 1,
       "LampTestDuration": 0
     },
+    "Accessor_USBGreenLed": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Size": 2,
+      "Offset": 134230528,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0
+    },
+    "Accessor_USBRedLed": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Size": 2,
+      "Offset": 134230528,
+      "Mask": 65280,
+      "Type": 0,
+      "Value": 0
+    },
     "Accessor_SysHealthLedAccessor": {
       "Chip": "#/Smc_ExpBoardSMC",
       "Offset": 134226432,
@@ -1407,6 +1423,15 @@
       "ReadTmout": 0,
       "HealthStatus": 0
     },
+    "Scanner_CcChipOnAttachStatus": {
+      "Chip": "#/Chip_UsbCc_On",
+      "Offset": 18,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 1000,
+      "Value": 0
+    },
     "Chip_UsbCc_Sgm": {
       "Address": 142,
       "OffsetWidth": 1,
@@ -1415,11 +1440,27 @@
       "ReadTmout": 0,
       "HealthStatus": 0
     },
+    "Scanner_CcChipSgmAttachStatus": {
+      "Chip": "#/Chip_UsbCc_Sgm",
+      "Offset": 9,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 1000,
+      "Value": 0
+    },
     "UsbLocalOMService_1": {
       "Supported": true,
+      "Presence": "<=/Scanner_RightEar.Value",
       "Enabled": true,
       "RefCcChipOn": "#/Chip_UsbCc_On",
-      "RefCcChipSgm": "#/Chip_UsbCc_Sgm"
+      "RefCcChipSgm": "#/Chip_UsbCc_Sgm",
+      "CcChipOnAttachStatus": "<=/Scanner_CcChipOnAttachStatus.Value",
+      "CcChipSgmAttachStatus": "<=/Scanner_CcChipSgmAttachStatus.Value",
+      "GLedStatus": "#/Accessor_USBGreenLed.Value",
+      "RLedStatus": "#/Accessor_USBRedLed.Value",
+      "RndisHostIpAddr": "169.254.1.5",
+      "PortNum": 3
     },
     "DftUsb_1": {
       "Id": 94,
