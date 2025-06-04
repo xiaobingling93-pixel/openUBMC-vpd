@@ -126,7 +126,8 @@
             "LinkSpeed": "N/A",
             "ParentCardSlotId": 255,
             "Health": "<=/Component_PCIeCard.Health",
-            "BandwidthThresholdPercent": 100
+            "BandwidthThresholdPercent": 100,
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",

@@ -168,7 +168,8 @@
             "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "Eeprom_CX7": {
             "OffsetWidth": 2,

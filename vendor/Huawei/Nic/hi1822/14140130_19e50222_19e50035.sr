@@ -159,7 +159,8 @@
             "ParentCardSlotId": 255,
             "FaultState": 0,
             "Health": "<=/Component_PCIeCard.Health",
-            "BandwidthThresholdPercent": 100
+            "BandwidthThresholdPercent": 100,
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "CoolingRequirement_1_50": {
             "RequirementId": "${Slot} |> expr((50 << 8) | $1)",

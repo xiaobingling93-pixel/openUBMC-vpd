@@ -236,7 +236,8 @@
             "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": 1,

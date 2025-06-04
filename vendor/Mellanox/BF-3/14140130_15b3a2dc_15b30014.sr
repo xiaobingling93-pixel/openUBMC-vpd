@@ -100,7 +100,7 @@
             "CorrectableError": 0,
             "UncorrectableError": 0,
             "FatalError": 0,
-            "GroupPosition":"PCIeDevice_${GroupPosition}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
             "Container": "${Container}",
             "SlotType": "FullLength",
             "FunctionProtocol": "PCIe",
@@ -179,7 +179,8 @@
             "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
