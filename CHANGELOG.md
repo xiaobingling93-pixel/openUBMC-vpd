@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.117] - 2025-6-4
+CSR门禁整改
+
 ## [1.70.116] - 2025-6-4
 NetworkAdapter对象SerialNumber属性同步引用PCIeCard对象
 

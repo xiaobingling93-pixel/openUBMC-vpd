@@ -32,6 +32,7 @@
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (Moore Threads MTT S50)",
+            "DeviceType": 8,
             "FunctionClass": 3,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
