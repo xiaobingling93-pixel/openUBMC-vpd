@@ -61,6 +61,7 @@
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (AWM M11P)",
+            "DeviceType": 8,
             "FunctionClass": 3,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
