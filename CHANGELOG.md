@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.118] - 2025-6-4
+新增兼容性板卡
+
 ## [1.70.117] - 2025-6-4
 CSR门禁整改
 
