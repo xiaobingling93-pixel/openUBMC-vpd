@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.124] - 2025-6-8
+QLE2742网卡适配
+
 ## [1.70.123] - 2025-6-10
 CSR门禁整改
 
