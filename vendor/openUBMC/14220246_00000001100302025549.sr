@@ -454,9 +454,12 @@
       "Chip": "#/Smc_ExpBoardSMC",
       "Offset": 7424,
       "Size": 55,
-      "Period": 200,
+      "Period": 100,
       "SmcVersion": 115,
       "Config": {
+        "40": {
+          "sys_all_pwrgd_reg": 1
+        },
         "47": {
           "link_nic1_port_1": 1,
           "link_nic1_port_2": 2,

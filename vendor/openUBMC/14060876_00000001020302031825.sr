@@ -358,6 +358,16 @@
       "Debounce": "None",
       "Value": 0
     },
+    "Scanner_C3a": {
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Offset": 201394432,
+      "Size": 2,
+      "Mask": 16,
+      "Type": 0,
+      "Period": 8000,
+      "Debounce": "None",
+      "Value": 0
+    },
     "Scanner_C4a": {
       "Chip": "#/Smc_CpuBrdSMC",
       "Offset": 201394432,
@@ -692,6 +702,16 @@
       "EventKeyId": "CpuBoard.GetVoltageFailure",
       "Condition": 0
     },
+    "Scanner_Rtc": {
+      "Chip": "#/Smc_CpuBrdSMC",
+      "Offset": 201327872,
+      "Size": 8,
+      "Mask": 0,
+      "Type": 1,
+      "Period": 6000,
+      "Debounce": "None",
+      "Value": 0
+    },
     "Scanner_RTCBatteryMntr": {
       "Chip": "#/Smc_CpuBrdSMC",
       "Offset": 4871,
@@ -714,10 +734,6 @@
     "Event_Cpu1PresentMntr": {
       "EventKeyId": "CPU.Cpu1Present",
       "Condition": 0
-    },
-    "Event_BMAHeartBeatMntr": {
-      "EventKeyId": "BMC.BMCLostBmaHeartBeat",
-      "Condition": 1
     },
     "Scanner_CpuMosTempHigh_1": {
       "Chip": "#/Smc_CpuBrdSMC",

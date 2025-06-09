@@ -188,16 +188,6 @@
         "ReadTmout": 0,
         "WriteTmout": 0
       },
-      "Eeprom_ACU": {
-        "AddrWidth": 1,
-        "Address": 174,
-        "HealthStatus": 0,
-        "OffsetWidth": 2,
-        "ReadTmout": 100,
-        "RwBlockSize": 32,
-        "WriteInterval": 20,
-        "WriteTmout": 100
-      },
       "ContBin_H3L3": {
         "NumH": 3,
         "NumL": 3,

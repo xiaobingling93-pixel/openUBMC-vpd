@@ -4708,7 +4708,7 @@
       "Chip": "#/Smc_EnclSMC",
       "Offset": 7424,
       "Size": 104,
-      "Period": 2000,
+      "Period": 1000,
       "SmcVersion": 108,
       "Config": {
         "2": {"cpld_ver": 255},

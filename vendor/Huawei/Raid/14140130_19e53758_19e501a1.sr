@@ -68,6 +68,7 @@
             "Offset": 0,
             "Mask": 255,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "None"
         },
         "Event_EepromReadFault": {
@@ -77,7 +78,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SP686C-M-40i 2G",
-            "Component": "#/Component_ComPCIeCard1",
+            "Component": "#/Component_PCIeCard",
             "EventKeyId": "PCIeCard.EEPROMFault",
             "LedFaultCode": "q$$"
         },
@@ -95,6 +96,7 @@
             "Offset": 0,
             "Mask": 255,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_RaidTemp"
         },
         "MidAvg_RaidTemp": {
@@ -140,7 +142,7 @@
             "PartNumber": "0302024979",
             "SerialNumber": "<=/Controller_1.SerialNumber",
             "RefChip": "#/Chip_RaidChip",
-            "Health": "<=/Component_ComPCIeCard1.Health",
+            "Health": "<=/Component_PCIeCard.Health",
             "Model": "Hi1880",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "LinkSpeed": "N/A",
@@ -176,7 +178,7 @@
             "BatteryFault": 0,
             "BatteryHealth": "<=/Component_Battery.Health",
             "FaultCode": 0,
-            "Health": "<=/Component_ComPCIeCard1.Health",
+            "Health": "<=/Component_PCIeCard.Health",
             "SerialNumber": "",
             "CommunicationLoss": 0,
             "TemperatureAbnormal": 0,

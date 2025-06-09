@@ -15,7 +15,6 @@
     "I2cMux_pca9545_chan1": {
       "Chips": [
         "Eeprom_NIC",
-        "Pca9555_1",
         "Lm75_1"
       ]
     },
@@ -35,9 +34,6 @@
       "RwBlockSize": 32,
       "WriteInterval": 30,
       "HealthStatus": 0
-    },
-    "Pca9555_1": {
-      "Address": 66
     },
     "Lm75_1": {
       "Address": 144
@@ -432,7 +428,7 @@
       "Chip": "#/Smc_ExpBoardSMC",
       "Offset": 7424,
       "Size": 55,
-      "Period": 200,
+      "Period": 100,
       "SmcVersion": 115,
       "Config": {
         "47": {

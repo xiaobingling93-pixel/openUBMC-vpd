@@ -440,6 +440,7 @@
       "Offset": 0,
       "Mask": 255,
       "Period": 1000,
+      "Type": 0,
       "Debounce": "#/MidAvg_NicTemp"
     },
     "Scanner_Lom1Port1Link": {

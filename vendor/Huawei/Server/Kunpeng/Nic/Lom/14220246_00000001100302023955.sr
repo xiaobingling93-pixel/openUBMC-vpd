@@ -11,7 +11,6 @@
         "I2cMux_pca9545_chan1": {
             "Chips": [
                 "Eeprom_NIC",
-                "Pca9555_1",
                 "Lm75_1"
             ]
         },
@@ -31,9 +30,6 @@
             "RwBlockSize": 32,
             "WriteInterval": 20,
             "HealthStatus": 0
-        },
-        "Pca9555_1": {
-            "Address": 66
         },
         "Lm75_1": {
             "Address": 144
@@ -506,13 +502,21 @@
             "Offset": 0,
             "Mask": 255,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_NicTemp"
+        },
+        "Entity_Lom": {
+            "Id": 42,
+            "Instance": 96,
+            "Name": "Lom",
+            "PowerState": 1,
+            "Presence": 1
         },
         "ThresholdSensor_NICTemp": {
             "OwnerId": 32,
             "OwnerLun": 0,
-            "EntityId": 42,
-            "EntityInstance": 96,
+            "EntityId": "<=/Entity_Lom.Id",
+            "EntityInstance": "<=/Entity_Lom.Instance",
             "Initialization": 127,
             "Capabilities": 104,
             "SensorType": 1,
@@ -566,7 +570,7 @@
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 7424,
             "Size": 51,
-            "Period": 200,
+            "Period": 3000,
             "SmcVersion": 108,
             "Config": {
               "47": {"link_nic1_port_1": 1, "link_nic1_port_2": 2, "link_nic1_port_3": 4, "link_nic1_port_4": 8},

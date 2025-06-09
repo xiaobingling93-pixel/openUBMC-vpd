@@ -2156,7 +2156,7 @@
       "Chip": "#/Smc_FanBoardSMC",
       "Offset": 7424,
       "Size": 55,
-      "Period": 400,
+      "Period": 1000,
       "SmcVersion": 784,
       "Config": {
         "1": {"mcu_ver_major": 255},

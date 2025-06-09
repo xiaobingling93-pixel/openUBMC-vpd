@@ -1320,7 +1320,7 @@
       "Chip": "#/Smc_FanBoardSMC",
       "Offset": 7424,
       "Size": 33,
-      "Period": 400,
+      "Period": 1000,
       "SmcVersion": 108,
       "Config": {
         "1": {"cpld_ver": 255},
