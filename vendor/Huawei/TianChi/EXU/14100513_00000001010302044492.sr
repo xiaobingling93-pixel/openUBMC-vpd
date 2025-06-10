@@ -486,19 +486,9 @@
       "ReadTmout": 0,
       "HealthStatus": 0
     },
-    "Scanner_OutletTemp": {
-      "Chip": "#/Lm75_OutletTemp",
-      "Offset": 0,
-      "Size": 1,
-      "Mask": 255,
-      "Type": 0,
-      "Period": 1000,
-      "Debounce": "#/MidAvg_Inlet",
-      "Value": 0
-    },
     "Event_OutletTempFail": {
       "EventKeyId": "Chassis.ChassisOutletTempFail",
-      "Reading": "<=/Scanner_OutletTemp.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
+      "Reading": "<=/Scanner_Lm75_Outlet.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
       "Condition": 1,
       "OperatorId": 5,
       "Enabled": true,
@@ -1961,15 +1951,15 @@
     },
     "Median_ExpBoardLowerVoltage": {
       "WindowSize": 36,
-      "DefaultValue": 1780
+      "DefaultValue": 32767
     },
     "Median_ECUSys3V1LowMntr": {
       "WindowSize": 36,
-      "DefaultValue": 2700
+      "DefaultValue": 32767
     },
     "Median_ECUSys5VLowMntr": {
       "WindowSize": 36,
-      "DefaultValue": 2740
+      "DefaultValue": 32767
     },
     "Scanner_ECUSys12V1": {
       "Chip": "#/Smc_ExpBoardSMC",

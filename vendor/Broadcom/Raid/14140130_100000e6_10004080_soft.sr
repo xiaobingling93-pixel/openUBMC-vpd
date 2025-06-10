@@ -6,13 +6,11 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
-        "Component_ComPCIeCard1": {
-            "FruId": 255,
-            "Instance": "<=/PCIeDevice_1.SlotID",
-            "Type": 8,
-            "Name": "<=/PCIeDevice_1.DeviceName",
+        "Entity_RaidCard": {
+            "Id": 11,
+            "Instance": 96,
+            "Name": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s (RAID)',$1)",
             "Presence": 1,
-            "Health": 0,
             "PowerState": 1
         },
         "Component_PCIeCard": {
@@ -28,20 +26,13 @@
             "PreviousSN": "N/A",
             "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
-        "Entity_RaidCard": {
-            "Id": 11,
-            "Instance": 96,
-            "Name": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s (RAID)',$1)",
-            "Presence": 1,
-            "PowerState": 1
-        },
         "Event_PCIeRAIDCardFault": {
             "Reading": "<=/Controller_1.FaultCode",
             "OperatorId": 5,
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "9500-8e",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
@@ -50,7 +41,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "(9500-8e)",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeLinkSpeed": {
             "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
@@ -59,7 +50,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "(9500-8e)",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
@@ -68,7 +59,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.DeviceName",
             "DescArg4": "NA",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "Reading": "<=/PCIeDevice_1.PredictiveFault",
@@ -76,7 +67,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.DeviceName",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PcieCardReplaceMntr": {
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",

@@ -7,7 +7,7 @@
     },
     "Objects": {
         "PGSignal_1": {
-            "PowerGDState": "<=/Scanner_PowerGd.Value",
+            "PowerGDState": "<=/Scanner_PowerGood.Value",
             "@Default": {
                 "PowerGDState": 255
             }
@@ -395,7 +395,7 @@
             "Reading": 0
         },
         "DiscreteEvent_AcpiState": {
-            "Property": "<=/Scanner_PowerGd.Value |> expr((((((1 << 8) | 255) << 8) | 255) << 8) | ($1 == 1 ? 0 : 6))",
+            "Property": "<=/Scanner_PowerGood.Value |> expr((((((1 << 8) | 255) << 8) | 255) << 8) | ($1 == 1 ? 0 : 6))",
             "ListenType": 0,
             "EventData1": 255,
             "EventData2": 255,
@@ -575,13 +575,13 @@
             "Component": "#/Component_Chassis"
         },
         "Event_OutletTempFail": {
-            "Reading": "<=/Scanner_OutletTemp.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
+            "Reading": "<=/Scanner_Lm75_Outlet.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
             "OperatorId": 5,
             "Enabled": true,
             "Component": "#/Component_Chassis"
         },
         "Event_ECU12V1GetFailMntr": {
-            "Reading": "<=/Scanner_ECU12V1GetFailMntr.Status;<=/Scanner_ECU12V1GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys12V1Mntr.Status;<=/Scanner_ECUSys12V1Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -590,7 +590,7 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECU12V2GetFailMntr": {
-            "Reading": "<=/Scanner_ECU12V2GetFailMntr.Status;<=/Scanner_ECU12V2GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys12V2Mntr.Status;<=/Scanner_ECUSys12V2Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -599,7 +599,7 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECU12V3GetFailMntr": {
-            "Reading": "<=/Scanner_ECU12V3GetFailMntr.Status;<=/Scanner_ECU12V3GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys12V3Mntr.Status;<=/Scanner_ECUSys12V3Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -608,7 +608,7 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECU3V1GetFailMntr": {
-            "Reading": "<=/Scanner_ECU3V1GetFailMntr.Status;<=/Scanner_ECU3V1GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys3V1Mntr.Status;<=/Scanner_ECUSys3V1Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -617,7 +617,7 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECU5V1GetFailMntr": {
-            "Reading": "<=/Scanner_ECU5V1GetFailMntr.Status;<=/Scanner_ECU5V1GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys5V1Mntr.Status;<=/Scanner_ECUSys5V1Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -626,7 +626,7 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECU5V2GetFailMntr": {
-            "Reading": "<=/Scanner_ECU5V2GetFailMntr.Status;<=/Scanner_ECU5V2GetFailMntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
+            "Reading": "<=/Scanner_ECUSys5V2Mntr.Status;<=/Scanner_ECUSys5V2Mntr.Value |> expr(($1 == 0) ? ((($2 & 32768) == 0) ? 0 : 1) : 0)",
             "OperatorId": 6,
             "Enabled": true,
             "AdditionalInfo": "2",
@@ -635,168 +635,168 @@
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V1HighMntr": {
-            "Reading": "<=/Scanner_ECUSys12V1HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V1Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V1HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V1Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC1_12V0",
             "DescArg4": "13.2",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V2HighMntr": {
-            "Reading": "<=/Scanner_ECUSys12V2HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V2Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V2HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V2Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC2_12V0",
             "DescArg4": "13.2",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V3HighMntr": {
-            "Reading": "<=/Scanner_ECUSys12V3HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V3Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V3HighMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V3Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC3_12V0",
             "DescArg4": "13.2",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys3V1HighMntr": {
-            "Reading": "<=/Scanner_ECUSys3V1HighMntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys3V1Mntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096)",
             "@Default": {
                 "Reading": 3.3
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys3V1HighMntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys3V1Mntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "3.3V",
             "DescArg3": "EXU_V_STBY_3V3",
             "DescArg4": "3.6",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys5V1HighMntr": {
-            "Reading": "<=/Scanner_ECUSys5V1HighMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys5V1Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
             "@Default": {
                 "Reading": 5
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys5V1HighMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys5V1Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "5V",
             "DescArg3": "EXU_V_VCC_5V0",
             "DescArg4": "5.5",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys5V2HighMntr": {
-            "Reading": "<=/Scanner_ECUSys5V2HighMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys5V2Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
             "@Default": {
                 "Reading": 5
             },
             "OperatorId": 4,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys5V2HighMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys5V2Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "5V",
             "DescArg3": "EXU_V_STBY_5V0",
             "DescArg4": "5.5",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V1LowMntr": {
-            "Reading": "<=/Scanner_ECUSys12V1LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V1Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V1LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V1Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC1_12V0",
             "DescArg4": "10.8",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V2LowMntr": {
-            "Reading": "<=/Scanner_ECUSys12V2LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V2Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V2LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V2Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC2_12V0",
             "DescArg4": "10.8",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys12V3LowMntr": {
-            "Reading": "<=/Scanner_ECUSys12V3LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
+            "Reading": "<=/Scanner_ECUSys12V3Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096)",
             "@Default": {
                 "Reading": 12
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys12V3LowMntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys12V3Mntr.Value |> expr(((($1 // 10) > 255) ? 178 : (($1 // 10) & 255)) * 2.5 * 11 * 10 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "12V",
             "DescArg3": "EXU_V_VCC3_12V0",
             "DescArg4": "10.8",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys3V1LowMntr": {
-            "Reading": "<=/Scanner_ECUSys3V1LowMntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys3V1Mntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096)",
             "@Default": {
                 "Reading": 3.3
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys3V1LowMntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys3V1Mntr.Value |> expr(((($1 // 20) > 255) ? 135 : (($1 // 20) & 255)) * 2.5 * 2 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "3.3V",
             "DescArg3": "EXU_V_STBY_3V3",
             "DescArg4": "3.0",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys5V1LowMntr": {
-            "Reading": "<=/Scanner_ECUSys5V1LowMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys5V1Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
             "@Default": {
                 "Reading": 5
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys5V1LowMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys5V1Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "5V",
             "DescArg3": "EXU_V_VCC_5V0",
             "DescArg4": "4.5",
             "Component": "#/Component_ComExpander"
         },
         "Event_ECUSys5V2LowMntr": {
-            "Reading": "<=/Scanner_ECUSys5V2LowMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
+            "Reading": "<=/Scanner_ECUSys5V2Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096)",
             "@Default": {
                 "Reading": 5
             },
             "OperatorId": 2,
             "Enabled": true,
             "AdditionalInfo": "3",
-            "DescArg1": "<=/Scanner_ECUSys5V2LowMntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
+            "DescArg1": "#/Scanner_ECUSys5V2Mntr.Value |> expr(((($1 // 20) > 255) ? 137 : (($1 // 20) & 255)) * 2.5 * 3 * 20 / 4096) |> string.format('%0.3f', $1)",
             "DescArg2": "5V",
             "DescArg3": "EXU_V_STBY_5V0",
             "DescArg4": "4.5",
@@ -828,7 +828,7 @@
             "Component": "#/Component_Button"
         },
         "Event_SystemACPIWorkingState": {
-            "Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+            "Reading": "<=/Scanner_PowerGood.Status;<=/Scanner_PowerGood.Value |> expr($1 == 4 ? 255 : $2)",
             "@Default": {
                 "Reading": 255
             },
@@ -837,7 +837,7 @@
             "Component": "#/Component_ComSystem"
         },
         "Event_SystemACPISoftOffState": {
-            "Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+            "Reading": "<=/Scanner_PowerGood.Status;<=/Scanner_PowerGood.Value |> expr($1 == 4 ? 255 : $2)",
             "@Default": {
                 "Reading": 255
             },

@@ -60,6 +60,7 @@
             "Offset": 1,
             "Mask": 255,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_NICTemp"
         },
         "MidAvg_NICTemp": {

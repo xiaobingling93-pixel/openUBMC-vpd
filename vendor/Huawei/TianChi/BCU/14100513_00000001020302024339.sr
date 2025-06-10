@@ -191,9 +191,11 @@
         },
         "BusinessTopoNode_1": {
             "Type": "Compute",
+            "Slot": "${Slot}",
             "RefSmcChip": "#/Smc_CpuBrdSMC"
         },
         "BusinessConnector_NIC1CPU1": {
+            "Name": "BusinessConnector_NIC1CPU1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 1,
@@ -242,6 +244,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU1UBC2": {
+            "Name": "BusinessConnector_CPU1UBC2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 2,
@@ -283,6 +286,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU1UBCDD1": {
+            "Name": "BusinessConnector_CPU1UBCDD1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 3,
@@ -361,6 +365,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU1UBC1": {
+            "Name": "BusinessConnector_CPU1UBC1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 4,
@@ -395,6 +400,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_NIC2CPU2": {
+            "Name": "BusinessConnector_NIC2CPU2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 5,
@@ -429,6 +435,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU2UBCDD1": {
+            "Name": "BusinessConnector_CPU2UBCDD1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 6,
@@ -500,6 +507,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU2UBC1": {
+            "Name": "BusinessConnector_CPU2UBC1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 7,
@@ -534,6 +542,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU2UBCDD2": {
+            "Name": "BusinessConnector_CPU2UBCDD2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 8,
@@ -2317,6 +2326,7 @@
             "ComponentType": 13,
             "ControllerIndex": 0,
             "ControllerType": 1,
+            "ContainerSlot": "${Slot}",
             "ContainerUID": "00000001020302024339",
             "ContainerUnitType": "BCU",
             "GroupPosition": "PcieAddrInfo_NIC_1_${GroupPosition}"
@@ -2333,6 +2343,7 @@
             "ComponentType": 13,
             "ControllerIndex": 0,
             "ControllerType": 1,
+            "ContainerSlot": "${Slot}",
             "ContainerUID": "00000001020302024339",
             "ContainerUnitType": "BCU",
             "GroupPosition": "PcieAddrInfo_NIC_2_${GroupPosition}"
@@ -2349,6 +2360,7 @@
             "ComponentType": 13,
             "ControllerIndex": 0,
             "ControllerType": 1,
+            "ContainerSlot": "${Slot}",
             "ContainerUID": "00000001020302024339",
             "ContainerUnitType": "BCU",
             "GroupPosition": "PcieAddrInfo_NIC_5_${GroupPosition}"
@@ -3464,7 +3476,7 @@
         },
         "MidAvg_6win": {
             "WindowSize": 6,
-            "DefaultValue": 1780
+            "DefaultValue": 32767
         },
         "Scanner_R12v1": {
             "Chip": "#/Smc_CpuBrdSMC",
@@ -3516,7 +3528,7 @@
         },
         "MidAvg_6win_3v": {
             "WindowSize": 6,
-            "DefaultValue": 2700
+            "DefaultValue": 32767
         },
         "Scanner_R3v1": {
             "Chip": "#/Smc_CpuBrdSMC",
@@ -3552,7 +3564,7 @@
         },
         "MidAvg_6win_5v": {
             "WindowSize": 6,
-            "DefaultValue": 1900
+            "DefaultValue": 32767
         },
         "Scanner_R5v": {
             "Chip": "#/Smc_CpuBrdSMC",

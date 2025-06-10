@@ -1690,6 +1690,46 @@
       "Debounce": "None",
       "Value": 0
     },
+    "Scanner_Drive1PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545609,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive2PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545610,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive3PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545611,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
+    "Scanner_Drive4PCIeType": {
+      "Chip": "#/Smc_EnclSMC",
+      "Offset": 335545612,
+      "Size": 2,
+      "Mask": 2,
+      "Type": 0,
+      "Period": 2000,
+      "Debounce": "None",
+      "Value": 0
+    },
     "Drive_12": {
       "Id": 11,
       "Name": "Disk11",
@@ -1713,7 +1753,6 @@
       "Type": "SATA/SAS",
       "IODeteriorationHealthCode": 0
     },
-
     "PcieAddrInfo_SAS_1": {
       "Location": "HddBackplane${Slot}",
       "ComponentType": 71,
@@ -2106,7 +2145,7 @@
       "ReadingStatus": "<=/Scanner_HddBPTemp.Status",
       "SensorNumber": 255
     },
-       "Scanner_Inner_1_CablePresent": {
+     "Scanner_Inner_1_CablePresent": {
         "Chip": "#/Smc_EnclSMC",
         "Offset": 335565056,
         "Size": 1,
@@ -2173,7 +2212,7 @@
           "DescArg1": "<=/Accessor_Id_2.Value |> expr($1 == 51 ? 1030302023930 : 1030302023928) |> string.format('%020d(SEUSlot4)',$1)",
           "Component": "#/Component_Cable",
           "ComponentHealth": "#/Component_Cable.Health"
-        },
+        },      
     "Event_Disk0Missing": {
       "EventKeyId": "Disk.DiskMissing",
       "Reading": "<=/Drive_1.Missing",
@@ -4035,26 +4074,6 @@
       "Debounce": "None",
       "Value": 0
     },
-    "Scanner_DiskBPPwrOnTimeOut_2": {
-        "Chip": "#/Smc_EnclSMC",
-        "Offset": 335549696,
-        "Size": 1,
-        "Mask": 255,
-        "Type": 0,
-        "Period": 2000,
-        "Debounce": "None",
-        "Value": 0
-      },
-      "Scanner_DiskBPPwrFault_2": {
-        "Chip": "#/Smc_EnclSMC",
-        "Offset": 335548672,
-        "Size": 1,
-        "Mask": 255,
-        "Type": 0,
-        "Period": 2000,
-        "Debounce": "None",
-        "Value": 0
-      },
      "Accessor_Drive0FaultAccessor": {
       "Chip": "#/Smc_EnclSMC",
       "Size": 2,
@@ -4285,7 +4304,7 @@
     },
     "Event_DiskBPPwrFaultMntr69": {
         "EventKeyId": "System.SystemPowerOnTmout",
-        "Reading": "<=/Scanner_DiskBPPwrOnTimeOut_2.Value |> expr(($1 == 69) ? 1 : 0)",
+        "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 69) ? 1 : 0)",
         "Condition": 1,
         "OperatorId": 5,
         "Enabled": true,
@@ -4297,7 +4316,7 @@
       },
       "Event_DiskBPPwrFaultMntr70": {
         "EventKeyId": "System.SystemPowerOnTmout",
-        "Reading": "<=/Scanner_DiskBPPwrOnTimeOut_2.Value |> expr(($1 == 70) ? 1 : 0)",
+        "Reading": "<=/Scanner_DiskBPPwrOnTimeOut.Value |> expr(($1 == 70) ? 1 : 0)",
         "Condition": 1,
         "OperatorId": 5,
         "Enabled": true,
@@ -4345,7 +4364,7 @@
     },
     "Event_DiskBPPwrFaultMntr211": {
         "EventKeyId": "Disk.DiskBackplanePSFault",
-        "Reading": "<=/Scanner_DiskBPPwrFault_2.Value |> expr(($1 == 211) ? 1 : 0)",
+        "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 211) ? 1 : 0)",
         "Condition": 1,
         "OperatorId": 5,
         "Enabled": true,
@@ -4357,7 +4376,7 @@
       },
       "Event_DiskBPPwrFaultMntr212": {
         "EventKeyId": "Disk.DiskBackplanePSFault",
-        "Reading": "<=/Scanner_DiskBPPwrFault_2.Value |> expr(($1 == 212) ? 1 : 0)",
+        "Reading": "<=/Scanner_DiskBPPwrFault.Value |> expr(($1 == 212) ? 1 : 0)",
         "Condition": 1,
         "OperatorId": 5,
         "Enabled": true,
@@ -4790,13 +4809,9 @@
         "Scanner_Drive11LocateAccessor": {"Value": "expr($disk_locate_11)"},
         "Scanner_Drive11FalutAccessor": {"Value": "expr($disk_fault_11)"},
         "Scanner_Drive11ActivationAccessor": {"Value": "expr($disk_active_11)"},
-        "Scanner_Drive1PCIePresence": {"Value": "expr($disk_prsnt_8)"},
         "Scanner_Drive1PCIeType": {"Value": "expr($disk_type_8)"},
-        "Scanner_Drive2PCIePresence": {"Value": "expr($disk_prsnt_9)"},
         "Scanner_Drive2PCIeType": {"Value": "expr($disk_type_9)"},
-        "Scanner_Drive3PCIePresence": {"Value": "expr($disk_prsnt_10)"},
         "Scanner_Drive3PCIeType": {"Value": "expr($disk_type_10)"},
-        "Scanner_Drive4PCIePresence": {"Value": "expr($disk_prsnt_11)"},
         "Scanner_Drive4PCIeType": {"Value": "expr($disk_type_11)"},
         "Scanner_SEU_Inner_1": {"Value": "expr($affi_bp0_prsnt)"},
         "Scanner_SEU_Inner_2": {"Value": "expr($affi_bp1_prsnt)"},
@@ -4805,9 +4820,7 @@
         "Scanner_HddBackplaneMosTempHigh_1": {"Value": "expr($over_temp_12v_1)"},
         "Scanner_DiskBPPwrFault": {"Value": "expr($power_error_code)"},
         "Scanner_Inner_2_CablePresent": {"Value": "expr($Inner_2_prsnt)"},
-        "Scanner_DiskBPPwrFault_2": {"Value": "expr($power_2_error_code)"},
-        "Scanner_DiskBPPwrOnTimeOut_2": {"Value": "expr($power_2_timeout_record)"},
-        "Scanner_Inner_1_CablePresent": {"Value": "expr($Inner_1_prsnt"}
+        "Scanner_Inner_1_CablePresent": {"Value": "expr($Inner_1_prsnt)"}
       }
     },
     "TemperatureInfo_1_7": {

@@ -328,6 +328,7 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_1_${GroupPosition}",
       "ContainerUID": "00000001030302044496",
@@ -337,6 +338,7 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_2_${GroupPosition}",
       "ContainerUID": "00000001030302044496",
@@ -346,6 +348,7 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_3_${GroupPosition}",
       "ContainerUID": "00000001030302044496",
@@ -355,6 +358,7 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_4_${GroupPosition}",
       "ContainerUID": "00000001030302044496",
@@ -716,6 +720,7 @@
       "Direction": "Downstream",
       "Slot": 1,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",      
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -732,6 +737,7 @@
       "Direction": "Downstream",
       "Slot": 2,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",      
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -748,6 +754,7 @@
       "Direction": "Downstream",
       "Slot": 3,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",      
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -764,6 +771,7 @@
       "Direction": "Downstream",
       "Slot": 4,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",      
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {

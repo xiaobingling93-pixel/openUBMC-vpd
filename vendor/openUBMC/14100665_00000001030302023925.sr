@@ -791,6 +791,7 @@
       "Direction": "Downstream",
       "Slot": 1,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -807,6 +808,7 @@
       "Direction": "Downstream",
       "Slot": 2,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -823,6 +825,7 @@
       "Direction": "Downstream",
       "Slot": 3,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -839,6 +842,7 @@
       "Direction": "Downstream",
       "Slot": 4,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -855,6 +859,7 @@
       "Direction": "Downstream",
       "Slot": 5,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -871,6 +876,7 @@
       "Direction": "Downstream",
       "Slot": 6,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -887,6 +893,7 @@
       "Direction": "Downstream",
       "Slot": 7,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {
@@ -903,6 +910,7 @@
       "Direction": "Downstream",
       "Slot": 8,
       "LinkWidth": "X1",
+      "MaxLinkRate": "PCIe4.0",
       "ConnectorType": "SAS",
       "UpstreamResources": [
         {

@@ -145,9 +145,13 @@
             "LinkSpeedCapability": "N/A",
             "PcbVersion": "#/NPUCard_1.PcbVersion",
             "BoardID": "#/NPUCard_1.BoardID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "",
+            "Model": "Atlas_300I_Duo",
             "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
         "Event_PCIeCardUCE": {

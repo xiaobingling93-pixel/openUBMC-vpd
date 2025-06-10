@@ -693,7 +693,7 @@
       "DescArg2": "#/Connector_LOM_2.Slot |> string.format(' LOM%s',$1)"
     },
     "Event_OutletTempFail": {
-      "Reading": "<=/Scanner_OutletTemp.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
+      "Reading": "<=/Scanner_Lm75_Outlet.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
       "OperatorId": 5,
       "Enabled": true,
       "Component": "#/Component_Chassis"

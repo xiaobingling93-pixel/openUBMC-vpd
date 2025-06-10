@@ -79,6 +79,7 @@
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Name": "AWM M11P",
+            "BoardName": "AWM M11P",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Description": "AWM M11P",
             "FunctionClass": 3,
@@ -91,9 +92,14 @@
             "Manufacturer": "ALLWINMETA",
             "PartNumber": "",
             "PcbVersion": "N/A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "Health": "<=/Component_PCIeCard.Health",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "Model": "AWM M11P",
             "SerialNumber": "<=/GPU_1.SN"
         },
         "BoardPCIeCard_1": {

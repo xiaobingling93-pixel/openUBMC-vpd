@@ -43,6 +43,7 @@
             "Offset": 1,
             "Mask": 65535,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_NICTemp"
         },
         "MidAvg_NICTemp": {
@@ -97,6 +98,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "LinkSpeedReduced": 0,
+            "DeviceType": 8,
             "CorrectableError": 0,
             "UncorrectableError": 0,
             "FatalError": 0,

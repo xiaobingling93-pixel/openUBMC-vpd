@@ -32,6 +32,7 @@
             "Offset": 1,
             "Mask": 65535,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_IBTemp"
         },
         "MidAvg_IBTemp": {
@@ -66,6 +67,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "LinkSpeedReduced": 0,
+            "DeviceType": 8,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_1_${GroupPosition}",
             "PCIeDeviceType": "MultiFunction",

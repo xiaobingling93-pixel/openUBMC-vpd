@@ -66,6 +66,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "LinkSpeedReduced": 0,
+            "DeviceType": 8,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_1_${GroupPosition}"
         },

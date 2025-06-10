@@ -358,7 +358,10 @@
 			"ComponentType": 83,
 			"ControllerIndex": 0,
 			"ControllerType": 0,
-			"GroupPosition": "PcieAddrInfo_OCP_1_${GroupPosition}"
+			"GroupPosition": "PcieAddrInfo_OCP_1_${GroupPosition}",
+			"ContainerSlot": "${Slot}",
+			"ContainerUID": "00000001010302044491",
+			"ContainerUnitType": "EXU"
 		},
 		"PcieAddrInfo_OCP_2": {
 			"Segment": 0,
@@ -373,7 +376,10 @@
 			"ComponentType": 83,
 			"ControllerIndex": 0,
 			"ControllerType": 0,
-			"GroupPosition": "PcieAddrInfo_OCP_2_${GroupPosition}"
+			"GroupPosition": "PcieAddrInfo_OCP_2_${GroupPosition}",
+			"ContainerSlot": "${Slot}",
+			"ContainerUID": "00000001010302044491",
+			"ContainerUnitType": "EXU"
 		},
     "BusinessConnector_1": {
       "Name": "OCP_BizConnector_3",
@@ -515,16 +521,6 @@
       "WriteTmout": 0,
       "ReadTmout": 0,
       "HealthStatus": 0
-    },
-    "Scanner_OutletTemp": {
-      "Chip": "#/Lm75_OutletTemp",
-      "Offset": 0,
-      "Size": 1,
-      "Mask": 255,
-      "Type": 0,
-      "Period": 1000,
-      "Debounce": "#/MidAvg_Inlet",
-      "Value": 0
     },
     "Event_OutletTempFail": {
       "EventKeyId": "Chassis.ChassisOutletTempFail",
@@ -1682,15 +1678,15 @@
     },
     "Median_ExpBoardLowerVoltage": {
       "WindowSize": 36,
-      "DefaultValue": 1780
+      "DefaultValue": 32767
     },
     "Median_ECUSys3V1LowMntr": {
       "WindowSize": 36,
-      "DefaultValue": 2700
+      "DefaultValue": 32767
     },
     "Median_ECUSys5VLowMntr": {
       "WindowSize": 36,
-      "DefaultValue": 2740
+      "DefaultValue": 32767
     },
     "Scanner_ECUSys12V1": {
       "Chip": "#/Smc_ExpBoardSMC",

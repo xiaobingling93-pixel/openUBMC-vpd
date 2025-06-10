@@ -49,6 +49,7 @@
             "Offset": 1,
             "Mask": 65535,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_IBTemp"
         },
         "MidAvg_IBTemp": {
