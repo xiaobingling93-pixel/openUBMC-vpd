@@ -35,8 +35,8 @@
         "ThresholdSensor_GPUTemp": {
             "OwnerId": 32,
             "OwnerLun": 0,
-            "EntityId": "<=/Entity_GPU.Id",
-            "EntityInstance": "<=/Entity_GPU.Instance",
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
             "Initialization": 127,
             "Capabilities": 104,
             "SensorType": 1,
@@ -53,13 +53,6 @@
             "MinimumReading": 128,
             "Reading": "<=/Scanner_GPUTemp.Value",
             "ReadingStatus": "<=/Scanner_GPUTemp.Value;<=/Scanner_GPUTemp.Status |> expr($1 >= 255 ? 2 : ($2 == 0 ? 0 : 2))"
-        },
-        "Entity_GPU": {
-            "Id": 11,
-            "Instance": 101,
-            "Name": "GPUCard",
-            "Presence": 1,
-            "PowerState": 1
         },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",

@@ -128,7 +128,7 @@
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Health": "<=/Component_PCIeCard.Health",
             "Name": "Atlas 300I Pro",
-            "BoardName": "<=/FruData_NPUCard.BoardProductName;<=/FruData_NPUCard.BoardProductName |> string.cmp($1, '') |> expr($1 ? 'IT21PDDA' : $2)",
+            "BoardName": "<=/FruData_NPUCard.BoardProductName |> expr($1 == '' ? 'IT21PDDA' : $1)",
             "Description": "Atlas 300I Pro Inference Card PCI-E 1*16x (HHHL)",
             "FunctionClass": 9,
             "VendorID": 6629,
