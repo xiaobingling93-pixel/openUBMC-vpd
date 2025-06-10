@@ -128,7 +128,7 @@
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Health": "<=/Component_PCIeCard.Health",
             "Name": "Atlas 300I Duo",
-            "BoardName": "<=/FruData_NPUCard.BoardProductName;<=/FruData_NPUCard.BoardProductName |> string.cmp($1, '') |> expr($1 ? 'IT21PD2E' : $2)",
+            "BoardName": "<=/FruData_NPUCard.BoardProductName |> expr($1 == '' ? 'IT21PD2E' : $2)",
             "Description": "Atlas 300I Duo Inference Card PCI-E 1*16x(FHFL)",
             "FunctionClass": 9,
             "VendorID": 6629,

@@ -1266,6 +1266,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM000",
             "SerialNumber": "",
             "Health": "<=/Component_Memory1.Health"
         },
@@ -1292,6 +1293,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM001",
             "SerialNumber": "",
             "Health": "<=/Component_Memory2.Health"
         },
@@ -1318,6 +1320,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s10', $1)",
+            "SilkText": "DIMM010",
             "SerialNumber": "",
             "Health": "<=/Component_Memory3.Health"
         },
@@ -1344,6 +1347,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s11', $1)",
+            "SilkText": "DIMM011",
             "SerialNumber": "",
             "Health": "<=/Component_Memory4.Health"
         },
@@ -1370,6 +1374,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM020",
             "SerialNumber": "",
             "Health": "<=/Component_Memory5.Health"
         },
@@ -1396,6 +1401,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM021",
             "SerialNumber": "",
             "Health": "<=/Component_Memory6.Health"
         },
@@ -1422,6 +1428,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s30', $1)",
+            "SilkText": "DIMM030",
             "SerialNumber": "",
             "Health": "<=/Component_Memory7.Health"
         },
@@ -1448,6 +1455,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s31', $1)",
+            "SilkText": "DIMM031",
             "SerialNumber": "",
             "Health": "<=/Component_Memory8.Health"
         },
@@ -1474,6 +1482,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM100",
             "SerialNumber": "",
             "Health": "<=/Component_Memory9.Health"
         },
@@ -1500,6 +1509,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM101",
             "SerialNumber": "",
             "Health": "<=/Component_Memory10.Health"
         },
@@ -1526,6 +1536,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s10', $1)",
+            "SilkText": "DIMM110",
             "SerialNumber": "",
             "Health": "<=/Component_Memory11.Health"
         },
@@ -1552,6 +1563,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s11', $1)",
+            "SilkText": "DIMM111",
             "SerialNumber": "",
             "Health": "<=/Component_Memory12.Health"
         },
@@ -1578,6 +1590,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM120",
             "SerialNumber": "",
             "Health": "<=/Component_Memory13.Health"
         },
@@ -1604,6 +1617,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM121",
             "SerialNumber": "",
             "Health": "<=/Component_Memory14.Health"
         },
@@ -1630,6 +1644,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s30', $1)",
+            "SilkText": "DIMM130",
             "SerialNumber": "",
             "Health": "<=/Component_Memory15.Health"
         },
@@ -1656,6 +1671,7 @@
             "OriginalPartNumber": "N/A",
             "Position": "CpuBoard${Slot}",
             "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s31', $1)",
+            "SilkText": "DIMM131",
             "SerialNumber": "",
             "Health": "<=/Component_Memory16.Health"
         },

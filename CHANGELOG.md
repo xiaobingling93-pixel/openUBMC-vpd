@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.123] - 2025-6-10
+CSR门禁整改
+
 ## [1.70.122] - 2025-6-10
 适配SWIFT-2200N、修复SF200HT did vid
 
