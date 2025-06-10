@@ -384,6 +384,7 @@
             "LedFaultCode": "L01"
         },
         "BusinessConnector_CPU1UBC1": {
+            "Name": "BusinessConnector_CPU1UBC1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 1,
@@ -417,6 +418,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC2": {
+            "Name": "BusinessConnector_CPU1UBC2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 2,
@@ -444,6 +446,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBCDD1": {
+            "Name": "BusinessConnector_CPU1UBCDD1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 3,
@@ -483,6 +486,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBCDD2": {
+            "Name": "BusinessConnector_CPU1UBCDD2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 4,
@@ -522,6 +526,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC3": {
+            "Name": "BusinessConnector_CPU1UBC3",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 5,
@@ -555,6 +560,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC4": {
+            "Name": "BusinessConnector_CPU1UBC4",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 6,
@@ -582,6 +588,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC5": {
+            "Name": "BusinessConnector_CPU1UBC5",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 7,
@@ -609,6 +616,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC6": {
+            "Name": "BusinessConnector_CPU1UBC6",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 8,
@@ -642,6 +650,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU1UBC7": {
+            "Name": "BusinessConnector_CPU1UBC7",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 17,
@@ -669,6 +678,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC1": {
+            "Name": "BusinessConnector_CPU2UBC1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 9,
@@ -702,6 +712,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC2": {
+            "Name": "BusinessConnector_CPU2UBC2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 10,
@@ -729,6 +740,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBCDD1": {
+            "Name": "BusinessConnector_CPU2UBCDD1",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 11,
@@ -768,6 +780,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBCDD2": {
+            "Name": "BusinessConnector_CPU2UBCDD2",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 12,
@@ -807,6 +820,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC3": {
+            "Name": "BusinessConnector_CPU2UBC3",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 13,
@@ -840,6 +854,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC4": {
+            "Name": "BusinessConnector_CPU2UBC4",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 14,
@@ -867,6 +882,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC5": {
+            "Name": "BusinessConnector_CPU2UBC5",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 15,
@@ -894,6 +910,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC6": {
+            "Name": "BusinessConnector_CPU2UBC6",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 16,
@@ -927,6 +944,7 @@
             "Port2LinkInfo": ""
         },
         "BusinessConnector_CPU2UBC7": {
+            "Name": "BusinessConnector_CPU2UBC7",
             "Direction": "Downstream",
             "BCUIndex": "${Slot}",
             "Slot": 18,

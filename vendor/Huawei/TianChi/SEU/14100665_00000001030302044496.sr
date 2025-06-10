@@ -202,8 +202,10 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001030302044496",
       "ContainerUnitType": "SEU",
+      "Location": "SEUBoard${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_1_${GroupPosition}"
 	},
     "PcieAddrInfo_NVMe_2": {
@@ -214,8 +216,10 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001030302044496",
       "ContainerUnitType": "SEU",
+      "Location": "SEUBoard${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_2_${GroupPosition}"
 	},
     "PcieAddrInfo_NVMe_3": {
@@ -226,8 +230,10 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001030302044496",
       "ContainerUnitType": "SEU",
+      "Location": "SEUBoard${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_3_${GroupPosition}"
 	},
     "PcieAddrInfo_NVMe_4": {
@@ -238,6 +244,8 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001030302044496",
       "ContainerUnitType": "SEU",
       "GroupPosition": "PcieAddrInfo_NVMe_4_${GroupPosition}"

@@ -152,6 +152,7 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_46_${GroupPosition}",
       "ContainerUID": "00000001030302046571",
@@ -161,36 +162,17 @@
       "ComponentType": 2,
       "ControllerIndex": 0,
       "ControllerType": 0,
+      "Location": "SEUBoard${Slot}",
       "ContainerSlot": "${Slot}",
       "GroupPosition": "PcieAddrInfo_NVMe_47_${GroupPosition}",
       "ContainerUID": "00000001030302046571",
       "ContainerUnitType": "SEU"
-    },
-    "Scanner_Drive1PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545601,
-      "Size": 2,
-      "Mask": 1,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
     },
     "Scanner_Drive1PCIeType": {
       "Chip": "#/Smc_EnclSMC",
       "Offset": 335545601,
       "Size": 2,
       "Mask": 2,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
-    },
-    "Scanner_Drive2PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545602,
-      "Size": 2,
-      "Mask": 1,
       "Type": 0,
       "Period": 2000,
       "Debounce": "None",
@@ -210,7 +192,7 @@
       "Bom": "14140224",
       "Slot": 46,
       "Position": 1,
-      "Presence": "<=/Scanner_Drive1PCIePresence.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive0PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -227,7 +209,7 @@
       "Bom": "14140224",
       "Slot": 47,
       "Position": 2,
-      "Presence": "<=/Scanner_Drive2PCIePresence.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive1PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -328,7 +310,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive1PCIePresence.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive0PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "RelativeSlot": 0,
       "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
@@ -401,7 +383,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive2PCIePresence.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive1PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "RelativeSlot": 1,
       "HddBackplaneStartSlot": "<=/HddBackplane_1.StartSlot",
@@ -882,13 +864,13 @@
           "Scanner_Drive1ActivationAccessor": {
               "Value": "expr($disk_active_1)"
           },
-          "Scanner_Drive1PCIePresence": {
+          "Scanner_Drive0PresentAccessor": {
               "Value": "expr($disk_prsnt_0)"
           },
           "Scanner_Drive1PCIeType": {
               "Value": "expr($disk_type_0)"
           },
-          "Scanner_Drive2PCIePresence": {
+          "Scanner_Drive1PresentAccessor": {
               "Value": "expr($disk_prsnt_1)"
           },
           "Scanner_Drive2PCIeType": {

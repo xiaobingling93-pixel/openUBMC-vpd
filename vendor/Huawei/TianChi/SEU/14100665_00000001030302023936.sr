@@ -85,31 +85,11 @@
     "I2cMux_SMC_4": {
       "ChannelId": 3
     },
-    "Scanner_Drive1PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545609,
-      "Size": 2,
-      "Mask": 1,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
-    },
     "Scanner_Drive1PCIeType": {
       "Chip": "#/Smc_EnclSMC",
       "Offset": 335545609,
       "Size": 2,
       "Mask": 2,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
-    },
-    "Scanner_Drive2PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545610,
-      "Size": 2,
-      "Mask": 1,
       "Type": 0,
       "Period": 2000,
       "Debounce": "None",
@@ -125,31 +105,11 @@
       "Debounce": "None",
       "Value": 0
     },
-    "Scanner_Drive3PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545611,
-      "Size": 2,
-      "Mask": 1,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
-    },
     "Scanner_Drive3PCIeType": {
       "Chip": "#/Smc_EnclSMC",
       "Offset": 335545611,
       "Size": 2,
       "Mask": 2,
-      "Type": 0,
-      "Period": 2000,
-      "Debounce": "None",
-      "Value": 0
-    },
-    "Scanner_Drive4PCIePresence": {
-      "Chip": "#/Smc_EnclSMC",
-      "Offset": 335545612,
-      "Size": 2,
-      "Mask": 1,
       "Type": 0,
       "Period": 2000,
       "Debounce": "None",
@@ -169,7 +129,7 @@
       "Bom": "14140224",
       "Slot": 8,
       "Position": 1,  
-      "Presence": "<=/Scanner_Drive1PCIePresence.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive0PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -186,7 +146,7 @@
       "Bom": "14140224",
       "Slot": 9,
       "Position": 2,  
-      "Presence": "<=/Scanner_Drive2PCIePresence.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive1PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -203,7 +163,7 @@
       "Bom": "14140224",
       "Slot": 10,
       "Position": 3,  
-      "Presence": "<=/Scanner_Drive3PCIePresence.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive2PresentAccessor.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -220,7 +180,7 @@
       "Bom": "14140224",
       "Slot": 11,
       "Position": 4,  
-      "Presence": "<=/Scanner_Drive4PCIePresence.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive3PresentAccessor.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -4222,13 +4182,13 @@
         "Scanner_Drive11LocateAccessor": {"Value": "expr($disk_locate_11)"},
         "Scanner_Drive11FalutAccessor": {"Value": "expr($disk_fault_11)"},
         "Scanner_Drive11ActivationAccessor": {"Value": "expr($disk_active_11)"},
-        "Scanner_Drive1PCIePresence": {"Value": "expr($disk_prsnt_8)"},
+        "Scanner_Drive0PresentAccessor": {"Value": "expr($disk_prsnt_8)"},
         "Scanner_Drive1PCIeType": {"Value": "expr($disk_type_8)"},
-        "Scanner_Drive2PCIePresence": {"Value": "expr($disk_prsnt_9)"},
+        "Scanner_Drive1PresentAccessor": {"Value": "expr($disk_prsnt_9)"},
         "Scanner_Drive2PCIeType": {"Value": "expr($disk_type_9)"},
-        "Scanner_Drive3PCIePresence": {"Value": "expr($disk_prsnt_10)"},
+        "Scanner_Drive2PresentAccessor": {"Value": "expr($disk_prsnt_10)"},
         "Scanner_Drive3PCIeType": {"Value": "expr($disk_type_10)"},
-        "Scanner_Drive4PCIePresence": {"Value": "expr($disk_prsnt_11)"},
+        "Scanner_Drive3PresentAccessor": {"Value": "expr($disk_prsnt_11)"},
         "Scanner_Drive4PCIeType": {"Value": "expr($disk_type_11)"},
         "Scanner_SEU_Inner_1": {"Value": "expr($affi_bp0_prsnt)"},
         "Scanner_SEU_Inner_2": {"Value": "expr($affi_bp1_prsnt)"},

@@ -6,15 +6,6 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
-        "Component_ComPCIeCard1": {
-            "FruId": 255,
-            "Instance": "<=/PCIeDevice_1.SlotID",
-            "Type": 8,
-            "Name": "<=/PCIeDevice_1.DeviceName",
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1
-        },
         "Component_Battery": {
             "FruId": 255,
             "Instance": "<=/PCIeDevice_1.SlotID",
@@ -95,9 +86,9 @@
             },
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg2": "#/Component_ComPCIeCard1.Instance",
+            "DescArg2": "#/Component_PCIeCard.Instance",
             "DescArg3": "9540-8i",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeRAIDCardFault": {
             "Reading": "<=/Controller_1.FaultCode",
@@ -105,7 +96,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "9540-8i",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_BatteryFault": {
             "Reading": "<=/Controller_1.BatteryFault",
@@ -122,7 +113,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "(9540-8i)",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
 	"Event_PCIeLinkSpeed": {
             "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
@@ -131,7 +122,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "(9560-8i)",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
@@ -140,7 +131,7 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.DeviceName",
             "DescArg4": "NA",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "Reading": "<=/PCIeDevice_1.PredictiveFault",
@@ -148,7 +139,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.DeviceName",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PcieBBURemove": {
             "Reading": "<=/Controller_1.BatteryPresence",
@@ -178,7 +169,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "9540-8i",
-            "Component": "#/Component_ComPCIeCard1"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_BBUOverTemp": {
             "Reading": "<=/Battery_1.TemperatureCelsius;<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical |> expr((($1 > $2) && ($1 <= 255)) ? 1 : 0)",

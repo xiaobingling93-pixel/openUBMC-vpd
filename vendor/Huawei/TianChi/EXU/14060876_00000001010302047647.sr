@@ -323,6 +323,15 @@
       "@Default": {},
       "ChannelId": 4
     },
+    "Accessor_SwitchErrCode": {
+      "@Default": {},
+      "Chip": "#/Smc_SwL1BoardSMC",
+      "Mask": 255,
+      "Offset": 67127808,
+      "Size": 1,
+      "Type": 0,
+      "Value": 0
+    },
     "Accessor_LSW": {
       "@Default": {},
       "Chip": "#/Smc_SwL1BoardSMC",
@@ -337,6 +346,8 @@
       "ChipRst": "#/Accessor_LSW.Value",
       "PowerState": "#/Accessor_L1PwrChipStatus.Value",
       "Type": 1,
+      "ErrorCode": "#/Accessor_SwitchErrCode.Value",
+      "SlotNumber": "#/ExpBoard_1.Slot",
       "Unit": 0
     },
     "Accessor_phy1": {

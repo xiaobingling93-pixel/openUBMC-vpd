@@ -440,7 +440,7 @@
     },
     "Median_6win": {
       "WindowSize": 31,
-      "DefaultValue": 2467
+      "DefaultValue": 32767
     },
     "Scanner_12v1": {
       "Chip": "#/Smc_CpuBrdSMC",
@@ -492,7 +492,7 @@
     },
     "Median_6win_3v": {
       "WindowSize": 31,
-      "DefaultValue": 2700
+      "DefaultValue": 32767
     },
     "Scanner_3v1": {
       "Chip": "#/Smc_CpuBrdSMC",
@@ -2502,6 +2502,7 @@
       "ComponentType": 13,
       "ControllerIndex": 0,
       "ControllerType": 1,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001020302031825",
       "ContainerUnitType": "BCU",
       "GroupPosition": "PcieAddrInfo_NIC_1_${GroupPosition}"
@@ -2518,6 +2519,7 @@
       "ComponentType": 13,
       "ControllerIndex": 0,
       "ControllerType": 1,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001020302031825",
       "ContainerUnitType": "BCU",
       "GroupPosition": "PcieAddrInfo_NIC_2_${GroupPosition}"
@@ -2534,6 +2536,7 @@
       "ComponentType": 13,
       "ControllerIndex": 0,
       "ControllerType": 1,
+      "ContainerSlot": "${Slot}",
       "ContainerUID": "00000001020302031825",
       "ContainerUnitType": "BCU",
       "GroupPosition": "PcieAddrInfo_NIC_5_${GroupPosition}"

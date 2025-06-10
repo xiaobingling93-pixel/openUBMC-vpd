@@ -93,12 +93,16 @@
             "Soc": "0",
             "ProcessorsStatus": "<=/Scanner_CPUStatus.Value",
             "SysStatus": "<=/Scanner_SystemStatus.Value",
-            "CaterrDiagnoseResult": 0
+            "CaterrDiagnoseResult": 0,
+     	    "GlobalSystemId": "${SystemId}",
+            "LocalSystemId": 0
         },
         "BoardRAS_1": {
             "ManageChip": "Cpld",
             "Name": "CpuBoard${Slot}",
-            "BoardLogChip": "#/Eeprom_LogChip"
+            "BoardLogChip": "#/Eeprom_LogChip",
+            "GlobalSystemId": "${SystemId}",
+            "LocalSystemId": 0
         },
         "CPURAS_1": {
             "SystemId": 1,
@@ -115,8 +119,25 @@
             "FirmwareMismatched": 0,
             "InterConnectionLaneFault": 0,
             "InterConnectionLaneErrorMask": 0,
-            "CacheWayErrorMask": 0
+            "CacheWayErrorMask": 0,
+            "TotemRstOut": "#/Accessor_CPU1RstOut.Value"
         },
+      "Accessor_CPU1RstOut": {
+            "Value": 0,
+            "Type": 0,
+            "Size": 1,
+            "Mask": 24,
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201335552
+   	 },
+    "Accessor_CPU2RstOut": {
+     	    "Value": 0,
+     	    "Type": 0,
+     	    "Size": 1,
+     	    "Mask": 96,
+     	    "Chip": "#/Smc_CpuBrdSMC",
+     	    "Offset": 201335552
+   	 },
         "CPURAS_2": {
             "SystemId": 1,
             "LogicalId": 1,
@@ -132,7 +153,8 @@
             "FirmwareMismatched": 0,
             "InterConnectionLaneFault": 0,
             "InterConnectionLaneErrorMask": 0,
-            "CacheWayErrorMask": 0
+            "CacheWayErrorMask": 0,
+            "TotemRstOut": "#/Accessor_CPU2RstOut.Value"
         },
         "MemoryRAS_1": {
             "SystemId": 1,

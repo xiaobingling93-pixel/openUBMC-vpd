@@ -116,7 +116,6 @@
       "PredictiveFault": 0,
       "Container": "${Container}",
       "GroupPosition": "PCIeDevice_${GroupPosition}",
-      "DeviceType": 13,
       "PCIeDeviceType": "MultiFunction",
       "SlotType": "HalfLength",
       "FunctionProtocol": "PCIe",

@@ -34,6 +34,7 @@
             "Offset": 1,
             "Mask": 255,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_NICTemp"
         },
         "MidAvg_NICTemp": {
@@ -49,6 +50,7 @@
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
             "LinkSpeedReduced":0,
+            "DeviceType": 8,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "PCIeDeviceType": "MultiFunction",
@@ -80,7 +82,7 @@
             "Name": "MCX623436AN-CDAB",
             "BoardName": "MCX623436AN-CDAB",
             "Description": "MT2892 Family [ConnectX-6 Dx]",
-            "FunctionCDass": 2,
+            "FunctionClass": 2,
             "VendorID": 5555,
             "DeviceID": 4125,
             "SubVendorID": 5555,

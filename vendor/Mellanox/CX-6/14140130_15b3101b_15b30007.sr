@@ -32,6 +32,7 @@
             "Offset": 1,
             "Mask": 65535,
             "Period": 1000,
+            "Type": 0,
             "Debounce": "#/MidAvg_IBTemp"
         },
         "MidAvg_IBTemp": {
@@ -157,6 +158,9 @@
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "PcbVersion": "N/A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",

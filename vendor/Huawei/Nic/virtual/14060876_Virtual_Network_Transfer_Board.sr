@@ -807,7 +807,8 @@
         "Name": "Port1",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort1"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort1",
+        "Presence": 1
       },
       "Component_NetworkPort2": {
         "FruId": 255,
@@ -816,7 +817,8 @@
         "Name": "Port2",
         "Health": "<=/Component_NetworkPort1.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort2"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort2",
+        "Presence": 1
       },
       "Component_NetworkPort3": {
         "FruId": 255,
@@ -825,7 +827,8 @@
         "Name": "Port3",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort3"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort3",
+        "Presence": 1
       },
       "Component_NetworkPort4": {
         "FruId": 255,
@@ -834,7 +837,8 @@
         "Name": "Port4",
         "Health": "<=/Component_NetworkPort3.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort4"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort4",
+        "Presence": 1
       },
       "Component_NetworkPort5": {
         "FruId": 255,
@@ -843,7 +847,8 @@
         "Name": "Port5",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort5"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort5",
+        "Presence": 1
       },
       "Component_NetworkPort6": {
         "FruId": 255,
@@ -852,7 +857,8 @@
         "Name": "Port6",
         "Health": "<=/Component_NetworkPort5.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort6"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort6",
+        "Presence": 1
       },
       "Component_NetworkPort7": {
         "FruId": 255,
@@ -861,7 +867,8 @@
         "Name": "Port7",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort7"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort7",
+        "Presence": 1
       },
       "Component_NetworkPort8": {
         "FruId": 255,
@@ -870,7 +877,8 @@
         "Name": "Port8",
         "Health": "<=/Component_NetworkPort7.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort8"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort8",
+        "Presence": 1
       },
       "Component_NetworkPort9": {
         "FruId": 255,
@@ -879,7 +887,8 @@
         "Name": "Port9",
         "Health": "<=/Component_NetworkPort10.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort9"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort9",
+        "Presence": 1
       },
       "Component_NetworkPort10": {
         "FruId": 255,
@@ -888,7 +897,8 @@
         "Name": "Port10",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort10"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort10",
+        "Presence": 1
       },
       "Component_NetworkPort11": {
         "FruId": 255,
@@ -897,7 +907,8 @@
         "Name": "Port11",
         "Health": "<=/Component_NetworkPort12.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort11"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort11",
+        "Presence": 1
       },
       "Component_NetworkPort12": {
         "FruId": 255,
@@ -906,7 +917,8 @@
         "Name": "Port12",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort12"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort12",
+        "Presence": 1
       },
       "Component_NetworkPort13": {
         "FruId": 255,
@@ -915,7 +927,8 @@
         "Name": "Port13",
         "Health": "<=/Component_NetworkPort14.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort13"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort13",
+        "Presence": 1
       },
       "Component_NetworkPort14": {
         "FruId": 255,
@@ -924,7 +937,8 @@
         "Name": "Port14",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort14"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort14",
+        "Presence": 1
       },
       "Component_NetworkPort15": {
         "FruId": 255,
@@ -933,7 +947,8 @@
         "Name": "Port15",
         "Health": "<=/Component_NetworkPort16.Health",
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort15"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort15",
+        "Presence": 1
       },
       "Component_NetworkPort16": {
         "FruId": 255,
@@ -942,63 +957,80 @@
         "Name": "Port16",
         "Health": 0,
         "PowerState": 1,
-        "NodeId": "OpticalModule_EthernetAdapterBoardPort16"
+        "NodeId": "OpticalModule_EthernetAdapterBoardPort16",
+        "Presence": 1
       },
       "Component_OpticalModule1": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU1OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule2": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU2OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule3": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU3OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule4": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU4OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule5": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU5OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule6": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU6OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule7": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU7OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Component_OpticalModule8": {
         "FruId": 255,
         "Instance": 255,
         "Type": 95,
         "Name": "NPU8OpticalModule",
-        "Health": 0
+        "Health": 0,
+        "Presence": 1,
+        "PowerState": 1
       },
       "Event_OpticalModule1Die0DirtyAlarm": {
           "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",

@@ -196,6 +196,7 @@
             "Direction": "Downstream",
             "Slot": 1,
             "LinkWidth": "X1",
+            "MaxLinkRate": "PCIe4.0",
             "ConnectorType": "SAS",
             "UpstreamResources": [
                 {
@@ -212,6 +213,7 @@
             "Direction": "Downstream",
             "Slot": 2,
             "LinkWidth": "X1",
+            "MaxLinkRate": "PCIe4.0",
             "ConnectorType": "SAS",
             "UpstreamResources": [
                 {

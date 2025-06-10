@@ -200,20 +200,11 @@
             "IdentifyMode": 3,
             "Type": "CPUBoard"
         },
-        "Scanner_SEU_1": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 134237440,
-            "Size": 2,
-            "Mask": 8,
-            "Type": 0,
-            "Period": 8000,
-            "Value": 0
-        },
         "Connector_SEU_1": {
             "Bom": "14100665",
             "Slot": 1,
             "Position": 2,
-            "Presence": "<=/Scanner_SEU_1.Value",
+            "Presence": "<=/Scanner_FanCableMntr.Value",
             "Id": "",
             "AuxId": "",
             "Buses": [
@@ -249,20 +240,11 @@
             "Container": "Component_ComExpander",
             "Type": "DiskBackplane"
         },
-        "Scanner_CLU_1": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 134237440,
-            "Size": 2,
-            "Mask": 1,
-            "Type": 0,
-            "Period": 8000,
-            "Value": 0
-        },
         "Connector_CLU_1": {
             "Bom": "14100363",
             "Slot": 1,
             "Position": 3,
-            "Presence": "<=/Scanner_CLU_1.Value",
+            "Presence": "<=/Scanner_HddBPPresent.Value",
             "Id": "",
             "AuxId": "",
             "Buses": [
@@ -619,16 +601,6 @@
             "ReadTmout": 0,
             "HealthStatus": 0
         },
-        "Scanner_OutletTemp": {
-            "Chip": "#/Lm75_OutletTemp",
-            "Offset": 0,
-            "Size": 1,
-            "Mask": 255,
-            "Type": 0,
-            "Period": 1000,
-            "Debounce": "#/MidAvg_Inlet",
-            "Value": 0
-        },
         "DftLm75_2": {
             "Id": 1,
             "Type": 1,
@@ -720,6 +692,7 @@
             "Type": 0,
             "Period": 100,
             "Debounce": "None",
+            "Status": 0,
             "Value": 0
         },
         "Scanner_RightEar": {
@@ -805,18 +778,7 @@
             "Mask": 255,
             "Type": 0,
             "Value": 0
-        },
-        "Scanner_PowerGd": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 469765888,
-            "Size": 1,
-            "Mask": 255,
-            "Type": 0,
-            "Period": 100,
-            "Debounce": "None",
-            "Status": 0,
-            "Value": 0
-        },
+        },        
         "Dft5V0Vlot_1": {
             "Type": 1,
             "Id": 19,
@@ -1206,121 +1168,31 @@
             "EventKeyId": "Chassis.ChassisOutletTempFail",
             "Condition": 1
         },
-        "Scanner_ECU12V1GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4869,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU12VGetFailMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
-        },
-        "MidAvg_ECU12VGetFailMntr": {
-            "WindowSize": 36,
-            "DefaultValue": 1780
-        },
         "Event_ECU12V1GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
-        },
-        "Scanner_ECU12V2GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4870,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU12VGetFailMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
         },
         "Event_ECU12V2GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
         },
-        "Scanner_ECU12V3GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4871,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU12VGetFailMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
-        },
         "Event_ECU12V3GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
-        },
-        "Scanner_ECU3V1GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4872,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU3V1GetMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
-        },
-        "MidAvg_ECU3V1GetMntr": {
-            "WindowSize": 12,
-            "DefaultValue": 2700
         },
         "Event_ECU3V1GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
         },
-        "Scanner_ECU5V1GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4873,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU5VGetFailMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
-        },
-        "MidAvg_ECU5VGetFailMntr": {
-            "WindowSize": 12,
-            "DefaultValue": 2740
-        },
         "Event_ECU5V1GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
-        },
-        "Scanner_ECU5V2GetFailMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4874,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECU5VGetFailMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "Value": 0
         },
         "Event_ECU5V2GetFailMntr": {
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Condition": 0
         },
-        "Scanner_ECUSys12V1HighMntr": {
+        "Scanner_ECUSys12V1Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4869,
             "Size": 2,
@@ -1328,7 +1200,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ExpBoardOverVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1342,7 +1214,7 @@
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys12V2HighMntr": {
+        "Scanner_ECUSys12V2Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4870,
             "Size": 2,
@@ -1350,7 +1222,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ExpBoardOverVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1364,7 +1236,7 @@
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys12V3HighMntr": {
+        "Scanner_ECUSys12V3Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4871,
             "Size": 2,
@@ -1372,7 +1244,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ExpBoardOverVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1386,7 +1258,7 @@
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys3V1HighMntr": {
+        "Scanner_ECUSys3V1Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4872,
             "Size": 2,
@@ -1394,7 +1266,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ECUSys3V1HighMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1408,7 +1280,7 @@
             "Hysteresis": 0.13,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys5V1HighMntr": {
+        "Scanner_ECUSys5V1Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4873,
             "Size": 2,
@@ -1416,7 +1288,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ECUSys5V1HighMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1430,7 +1302,7 @@
             "Hysteresis": 0.2,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys5V2HighMntr": {
+        "Scanner_ECUSys5V2Mntr": {
             "Chip": "#/Smc_ExpBoardSMC",
             "Offset": 4874,
             "Size": 2,
@@ -1438,7 +1310,7 @@
             "Mask": 65535,
             "Period": 3000,
             "Debounce": "#/MidAvg_ECUSys5V2HighMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
             "NominalValue": 32767,
             "Status": 0,
             "@Default": {
@@ -1452,43 +1324,11 @@
             "Hysteresis": 0.2,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys12V1LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4869,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ExpBoardLowerVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
-        },
         "Event_ECUSys12V1LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
             "Condition": 10.8,
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
-        },
-        "Scanner_ECUSys12V2LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4870,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ExpBoardLowerVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
         },
         "Event_ECUSys12V2LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
@@ -1496,43 +1336,11 @@
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys12V3LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4871,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ExpBoardLowerVoltage",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
-        },
         "Event_ECUSys12V3LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
             "Condition": 10.8,
             "Hysteresis": 0.48,
             "LedFaultCode": "b01"
-        },
-        "Scanner_ECUSys3V1LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4872,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECUSys3V1LowMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
         },
         "Event_ECUSys3V1LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
@@ -1540,43 +1348,11 @@
             "Hysteresis": 0.13,
             "LedFaultCode": "b01"
         },
-        "Scanner_ECUSys5V1LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4873,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECUSys5V1LowMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
-        },
         "Event_ECUSys5V1LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
             "Condition": 4.5,
             "Hysteresis": 0.2,
             "LedFaultCode": "b01"
-        },
-        "Scanner_ECUSys5V2LowMntr": {
-            "Chip": "#/Smc_ExpBoardSMC",
-            "Offset": 4874,
-            "Size": 2,
-            "Type": 0,
-            "Mask": 65535,
-            "Period": 3000,
-            "Debounce": "#/MidAvg_ECUSys5V2LowMntr",
-            "ScanEnabled": "<=/Scanner_PowerGd.Value",
-            "NominalValue": 32767,
-            "Status": 0,
-            "@Default": {
-                "ScanEnabled": 0
-            },
-            "Value": 0
         },
         "Event_ECUSys5V2LowMntr": {
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
@@ -1917,35 +1693,35 @@
         },
         "MidAvg_ExpBoardOverVoltage": {
             "WindowSize": 36,
-            "DefaultValue": 1780
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys3V1HighMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2700
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys5V1HighMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2740
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys5V2HighMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2740
+            "DefaultValue": 32767
         },
         "MidAvg_ExpBoardLowerVoltage": {
             "WindowSize": 36,
-            "DefaultValue": 1780
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys3V1LowMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2700
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys5V1LowMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2740
+            "DefaultValue": 32767
         },
         "MidAvg_ECUSys5V2LowMntr": {
             "WindowSize": 12,
-            "DefaultValue": 2740
+            "DefaultValue": 32767
         },
         "ContBin_CableCPLDIncorrectConnection": {
             "NumH": 4,

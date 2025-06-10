@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+
+## [1.70.126] - 2025-6-10
+CSR门禁规则问题修改
+
 ## [1.70.125] - 2025-6-10
 排除GPU卡AC后，上报32767导致异常告警的场景 /CSR门禁整改
 
