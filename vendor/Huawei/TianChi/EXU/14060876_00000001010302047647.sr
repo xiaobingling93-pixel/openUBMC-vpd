@@ -4,21 +4,21 @@
   "ManagementTopology": {
     "Anchor": {
       "Buses": [
-        "I2c4",
-        "I2c7",
-        "I2c8",
-        "I2c9",
-        "I2c11",
+        "I2c_4",
+        "I2c_7",
+        "I2c_8",
+        "I2c_9",
+        "I2c_11",
         "JtagMux_1",
         "JtagMux_2"
       ]
     },
-    "I2c4": {
+    "I2c_4": {
       "Chips": [
         "Smc_ExpBoardSMC"
       ]
     },
-    "I2c11": {
+    "I2c_11": {
       "Chips": [
         "Smc_SwL1BoardSMC",
         "Eeprom_EXU"
@@ -42,17 +42,17 @@
         "JtagMux_JtagSwitch_1_4"
       ]
     },
-    "I2c8": {
+    "I2c_8": {
       "Chips": [
         "Pca9545_i2c8_chip"
       ]
     },
-    "I2c9": {
+    "I2c_9": {
       "Chips": [
         "Pca9545_i2c9_chip"
       ]
     },
-    "I2c7": {
+    "I2c_7": {
       "Chips": [
         "Eeprom_QB900_1",
         "Eeprom_QB900_2"
@@ -143,7 +143,7 @@
       "AuxId": "2",
       "Bom": "14191046",
       "Buses": [
-        "I2c4"
+        "I2c_4"
       ],
       "Id": "PSU",
       "IdentifyMode": 2,
@@ -158,7 +158,7 @@
       "AuxId": "2",
       "Bom": "14191046",
       "Buses": [
-        "I2c4"
+        "I2c_4"
       ],
       "Id": "PSU",
       "IdentifyMode": 2,

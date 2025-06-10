@@ -3894,7 +3894,7 @@
     "Event_Disk6BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_6.SLCSpareBlockPercentage;<=/Drive_6.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_6.SLCSpareBlockPercentage;<=/Drive_6.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive5.Name",
@@ -3904,7 +3904,7 @@
     "Event_Disk7BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_7.SLCSpareBlockPercentage;<=/Drive_7.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_7.SLCSpareBlockPercentage;<=/Drive_7.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive6.Name",
@@ -3914,7 +3914,7 @@
     "Event_Disk8BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_8.SLCSpareBlockPercentage;<=/Drive_8.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_8.SLCSpareBlockPercentage;<=/Drive_8.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive7.Name",
@@ -3924,7 +3924,7 @@
     "Event_Disk9BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_9.SLCSpareBlockPercentage;<=/Drive_9.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_9.SLCSpareBlockPercentage;<=/Drive_9.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive8.Name",
@@ -3934,7 +3934,7 @@
     "Event_Disk10BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_10.SLCSpareBlockPercentage;<=/Drive_10.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_10.SLCSpareBlockPercentage;<=/Drive_10.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive9.Name",
@@ -3944,7 +3944,7 @@
     "Event_Disk11BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_11.SLCSpareBlockPercentage;<=/Drive_11.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_11.SLCSpareBlockPercentage;<=/Drive_11.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive10.Name",
@@ -3954,7 +3954,7 @@
     "Event_Disk12BlockLow": {
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
-      "Reading": "<=/Drive_12.SLCSpareBlockPercentage;<=/Drive_12.TLCSpareBlockPercentage;<=/Accessor_PowerGd.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "Reading": "<=/Drive_12.SLCSpareBlockPercentage;<=/Drive_12.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive11.Name",

@@ -1255,7 +1255,7 @@
         "Reading": 12
       },
       "OperatorId": 2,
-      "DescArg1": "#/Scanner_12v1.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v1.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_1",
       "DescArg4": "10.8",
@@ -1268,7 +1268,7 @@
         "Reading": 12
       },
       "OperatorId": 4,
-      "DescArg1": "#/Scanner_12v1.Value |> expr( $1  == 32767? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v1.Value |> expr( $1  == 32767? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_1",
       "DescArg4": "13.2",
@@ -1289,7 +1289,7 @@
         "Reading": 12
       },
       "OperatorId": 2,
-      "DescArg1": "#/Scanner_12v2.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v2.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_2",
       "DescArg4": "10.8",
@@ -1302,7 +1302,7 @@
         "Reading": 12
       },
       "OperatorId": 4,
-      "DescArg1": "#/Scanner_12v2.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v2.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_2",
       "DescArg4": "13.2",
@@ -1323,7 +1323,7 @@
         "Reading": 12
       },
       "OperatorId": 2,
-      "DescArg1": "#/Scanner_12v3.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v3.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_3",
       "DescArg4": "10.8",
@@ -1336,7 +1336,7 @@
         "Reading": 12
       },
       "OperatorId": 4,
-      "DescArg1": "#/Scanner_12v3.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_12v3.Value |> expr($1  == 32767 ? 12 : (($1 / 10) * 3.3 * 6 * 10 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "12V",
       "DescArg3": "BCU${Slot}_V_VCC_12V0_3",
       "DescArg4": "13.2",
@@ -1357,7 +1357,7 @@
         "Reading": 3.3
       },
       "OperatorId": 2,
-      "DescArg1": "#/Scanner_3v1.Value |> expr($1  == 32767 ? 3.3 : (($1 / 20) * 3.3 * 1.5 * 20 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_3v1.Value |> expr($1  == 32767 ? 3.3 : (($1 / 20) * 3.3 * 1.5 * 20 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "3.3V",
       "DescArg3": "BCU${Slot}_V_VCC_3V3",
       "DescArg4": "3.0",
@@ -1404,7 +1404,7 @@
         "Reading": 3.3
       },
       "OperatorId": 4,
-      "DescArg1": "#/Scanner_3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : (($1 / 20) * 3.3 * 1.5 * 20 / 4096)) |> string.format('%0.3f', $1)",
+      "DescArg1": "<=/Scanner_3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : (($1 / 20) * 3.3 * 1.5 * 20 / 4096)) |> string.format('%0.3f', $1)",
       "DescArg2": "3.3V",
       "DescArg3": "BCU${Slot}_V_VCC_3V3_RISER2",
       "DescArg4": "3.6",
@@ -1430,7 +1430,7 @@
       },
       "OperatorId": 2,
       "DescArg1": "#/Event_CpuBoard5V_LowerVoltage.Reading |> string.format('%0.3f', $1)",
-      "DescArg2": "#/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
+      "DescArg2": "<=/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
       "DescArg3": "BCU${Slot}_V_VCC_5V0_3V3_RESV",
       "DescArg4": "#/Event_CpuBoard5V_LowerVoltage.Condition |> string.format('%0.2f', $1)",
       "Component": "#/Component_CpuBoard",
@@ -1444,7 +1444,7 @@
       },
       "OperatorId": 4,
       "DescArg1": "#/Event_CpuBoard5V_OverVoltage.Reading |> string.format('%0.3f', $1)",
-      "DescArg2": "#/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
+      "DescArg2": "<=/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
       "DescArg3": "BCU${Slot}_V_VCC_5V0_3V3_RESV",
       "DescArg4": "#/Event_CpuBoard5V_OverVoltage.Condition |> string.format('%0.2f', $1)",
       "Component": "#/Component_CpuBoard",
@@ -1453,7 +1453,7 @@
     "Event_CpuBoard5V_GetVoltageFailure": {
       "Reading": "<=/Scanner_5v.Value;<=/Scanner_5v.Status |> expr($2 == 0 ? (($1 & 0x8000) == 0 ? 0 : 1) : 0)",
       "OperatorId": 6,
-      "DescArg1": "#/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
+      "DescArg1": "<=/Scanner_vid.Value |> expr(($1 == 4)? 3.3 : 5) |> string.format('%0.2fV', $1)",
       "DescArg2": "BCU${Slot}_V_VCC_5V0_3V3_RESV",
       "Component": "#/Component_CpuBoard",
       "AdditionalInfo": "2"
