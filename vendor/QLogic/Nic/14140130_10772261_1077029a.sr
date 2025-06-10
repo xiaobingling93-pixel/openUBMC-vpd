@@ -10,9 +10,55 @@
             "Buses": [
                 "I2cMux_9545Chan"
             ]
+        },
+        "I2cMux_9545Chan": {
+            "Chips": [
+                "Pca9555_PCIe",
+                "Eeprom_NetCard"
+            ]
         }
     },
     "Objects": {
+        "Pca9555_PCIe": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 68,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Eeprom_NetCard": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 172,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "Accessor_WP": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 8,
+            "Type": 0,
+            "Value": 0
+        },
+         "Scanner_BoardID": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 0,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "#/Cont_BoardID",
+            "Value": 0
+        },
+        "Cont_BoardID": {
+            "Num": 5,
+            "DefaultValue": 0
+        },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (QLE2742-HUA-SP)",
             "FunctionClass": 2,
@@ -100,7 +146,7 @@
             "ParentCardSlotId": 255,
             "FaultState": 0,
             "Health": "<=/Component_PCIeCard.Health",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+            "BandwidthThresholdPercent": 100
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
@@ -130,7 +176,8 @@
             "PortID": 0,
             "NetDevFuncType": 2,
             "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "32Gb"
+            "SupportedLinkCapability": "32Gb",
+            "BandwidthUsagePercent": 0
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
@@ -138,31 +185,78 @@
             "PortID": 1,
             "NetDevFuncType": 2,
             "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "32Gb"
+            "SupportedLinkCapability": "32Gb",
+            "BandwidthUsagePercent": 0
         },
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
             "FaultState": 0,
-            "SupplyVoltage": 0,
+            "SupplyVoltage": 65535,
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
         },
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
             "FaultState": 0,
-            "SupplyVoltage": 0,
+            "SupplyVoltage": 65535,
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
+        },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_PCIeCardOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$"
+        },
+        "Event_FRUReadFailMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardAccessFRULableFailure",
+            "Condition": 1
+        },
+        "Event_PCIeRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardRecovError",
+            "Condition": 1
+        },
+        "Event_PCIeUnRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardUnRecovError",
+            "Condition": 3
+        },
+        "Event_PCIeSelfTestFail": {
+            "EventKeyId": "PCIeCard.PCIESelfTestFail",
+            "Condition": 2
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
         },
         "Event_OM0PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
@@ -221,6 +315,48 @@
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
             "Condition": 1
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "Description": "QLE2742网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 102,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "ActiveInStandby": true,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "Description": "QLE2742网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": true,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
         }
     }
 }
