@@ -172,7 +172,7 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_BBUOverTemp": {
-            "Reading": "<=/Battery_1.TemperatureCelsius;<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical |> expr((($1 > $2) && ($1 <= 255)) ? 1 : 0)",
+            "Reading": "<=/Battery_1.TemperatureCelsius;<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical |> expr((($1 >= $2) && ($1 <= 255)) ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "#/PCIeDevice_1.SlotID",

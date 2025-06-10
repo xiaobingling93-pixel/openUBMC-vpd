@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.131] - 2025-6-11
+Raid卡BBU过温告警阈值适配
+
 ## [1.70.130] - 2025-6-12
 修复BMC传感器页面输入电压显示
 
