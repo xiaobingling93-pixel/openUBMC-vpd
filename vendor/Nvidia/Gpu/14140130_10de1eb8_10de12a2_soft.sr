@@ -6,31 +6,21 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
-        "Component_Tesla": {
-            "Instance": "<=/PCIeDevice_1.SlotID",
-            "Type": 8,
-            "Name": "<=/PCIeDevice_1.DeviceName",
-            "FruId": 255,
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1,
-            "BoardId": 65535,
-            "UniqueId": "N/A",
-            "Manufacturer": "Nvidia",
-            "GroupId": 1
-        },
         "Component_PCIeCard": {
             "FruId": 255,
-            "Instance": 1,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "BoardId": 65535,
             "Type": 8,
             "Presence": 1,
             "Health": 0,
             "PowerState": 1,
-            "GroupId": 1,
-            "Name": "<=/PCIeDevice_1.DeviceName",
+            "UniqueId": "N/A",
+            "Manufacturer": "Nvidia",
             "ReplaceFlag": 0,
             "PreviousSN": "",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber",
+            "GroupId": 1
         },
         "ThresholdSensor_GPUTemp": {
             "OwnerId": 32,
@@ -59,17 +49,17 @@
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "2",
-            "DescArg2": "#/Component_Tesla.Name",
+            "DescArg2": "#/Component_PCIeCard.Name",
             "DescArg4": "NA",
-            "Component": "#/Component_Tesla"
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "Reading": "<=/PCIeDevice_1.PredictiveFault",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "2",
-            "DescArg2": "#/Component_Tesla.Name",
-            "Component": "#/Component_Tesla"
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PcieCardReplaceMntr": {
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",
