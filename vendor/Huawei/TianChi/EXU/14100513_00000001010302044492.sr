@@ -3392,7 +3392,7 @@
       "Chip": "#/Smc_ExpBoardSMC",
       "Offset": 7424,
       "Size": 53,
-      "Period": 200,
+      "Period": 100,
       "SmcVersion": 108,
       "Config": {
         "1": {"cpld_ver": 255},

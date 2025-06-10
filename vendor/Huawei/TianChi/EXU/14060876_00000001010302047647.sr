@@ -13,10 +13,8 @@
         "JtagMux_2"
       ]
     },
-    "I2c_4": {
-      "Chips": [
-        "Smc_ExpBoardSMC"
-      ]
+    "I2c4": {
+      "Chips": []
     },
     "I2c_11": {
       "Chips": [
@@ -92,13 +90,6 @@
     }
   },
   "Objects": {
-    "Smc_ExpBoardSMC": {
-      "AddrWidth": 1,
-      "Address": 96,
-      "OffsetWidth": 1,
-      "ReadTmout": 0,
-      "WriteTmout": 0
-    },
     "Smc_SwL1BoardSMC": {
       "@Default": {},
       "AddrWidth": 1,

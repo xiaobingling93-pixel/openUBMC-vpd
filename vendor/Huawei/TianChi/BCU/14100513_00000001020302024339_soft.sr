@@ -918,11 +918,18 @@
             "Reading": "<=/CPU_2.MaxMemoryTemperatureCelsius",
             "ReadingStatus": "<=/CPU_2.MaxMemoryTemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))"
         },
+        "Entity_SFP": {
+            "Id": 255,
+            "Instance": 0,
+            "Name": "Entity_SFP",
+            "PowerState": 1,
+            "Presence": 1
+        },
         "ThresholdSensor_SFPMaxTmp": {
             "OwnerId": 32,
             "OwnerLun": 0,
-            "EntityId": 255,
-            "EntityInstance": 0,
+            "EntityId": "<=/Entity_SFP.Id",
+            "EntityInstance": "<=/Entity_SFP.Instance",
             "Initialization": 127,
             "Capabilities": 104,
             "SensorType": 11,
@@ -1417,7 +1424,7 @@
             "EventData1": 0,
             "EventData2": 255,
             "EventData3": 255,
-            "EventDir": 0,
+            "EventDir": "<=/Scanner_RTCBatteryMntr.Value |> expr(($1 < 1396) ? 1 : 0)",
             "Conversion": 1,
             "SensorObject": "#/DiscreteSensor_RTCBattery"
         },

@@ -751,9 +751,16 @@
       },
       "SensorNumber": 255
     },
+    "Entity_SFP": {
+      "Id": 255,
+      "Instance": 0,
+      "Name": "Entity_SFP",
+      "PowerState": 1,
+      "Presence": 1
+    },
     "ThresholdSensor_SFPMaxTmp": {
-      "EntityId": 255,
-      "EntityInstance": 0,
+      "EntityId": "<=/Entity_SFP.Id",
+      "EntityInstance": "<=/Entity_SFP.Instance",
       "Initialization": 127,
       "Capabilities": 104,
       "SensorType": 1,
@@ -1476,11 +1483,6 @@
       "OperatorId": 5,
       "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
       "Component": "#/Component_ComCpu1"
-    },
-    "Event_BMAHeartBeatMntr": {
-      "Reading": 0,
-      "OperatorId": 5,
-      "Enabled": false
     },
     "Event_CpuMosTempHigh_1": {
       "Reading": "<=/Scanner_CpuMosTempHigh_1.Value",

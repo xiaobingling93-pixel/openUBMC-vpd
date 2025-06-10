@@ -27,8 +27,7 @@
     "I2cMux_Pca9545_PCA9545_4": {
       "Chips": [
         "Pca9555_IO",
-        "Chip_MCU1",
-        "Lm75_LM75"
+        "Chip_MCU1"
       ]
     },
     "I2cMux_Pca9545_PCA9545_1": {
@@ -95,9 +94,6 @@
       "ReadRetryTimes": 0,
       "DrvWriteDelay": "<=/RiserCard_1.MCUVersion |> string.sub($1, 1, 4) |> expr($1 >= '1.12' ? 0 : 1)",
       "SwitchSupported": true
-    },
-    "Lm75_LM75": {
-      "Address": 144
     },
     "I2cMux_McuSwitch": {
       "ChannelId": 0

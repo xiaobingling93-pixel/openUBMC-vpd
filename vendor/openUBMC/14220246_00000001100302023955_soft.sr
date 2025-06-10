@@ -100,11 +100,18 @@
       "ProcessPeriod": 65535,
       "FruData": "#/FruData_Fru0"
     },
+    "Entity_Lom": {
+      "Id": 42,
+      "Instance": 96,
+      "Name": "Lom",
+      "PowerState": 1,
+      "Presence": 1
+    },
     "ThresholdSensor_NICTemp": {
       "OwnerId": 32,
       "OwnerLun": 0,
-      "EntityId": 42,
-      "EntityInstance": 96,
+      "EntityId": "<=/Entity_Lom.Id",
+      "EntityInstance": "<=/Entity_Lom.Instance",
       "Initialization": 127,
       "Capabilities": 104,
       "SensorType": 1,

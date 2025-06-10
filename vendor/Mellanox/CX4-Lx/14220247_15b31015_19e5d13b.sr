@@ -9,9 +9,7 @@
             ]
         },
         "I2c_2": {
-            "Chips": [
-                "Smc_ExpBoardSMC"
-            ]
+            "Chips": []
         },
         "I2cMux_pca9545_chan1": {
             "Chips": [
@@ -114,13 +112,6 @@
             "FruId": 0,
             "FruName": "SC332",
             "ConnectorGroupId": "${GroupId}"
-        },
-        "Smc_ExpBoardSMC": {
-            "Address": 96,
-            "AddrWidth": 1,
-            "OffsetWidth": 1,
-            "WriteTmout": 0,
-            "ReadTmout": 0
         },
         "Event_OCPCardUCE": {
             "EventKeyId": "OCPCard.OCPCardUncorrectableErr",

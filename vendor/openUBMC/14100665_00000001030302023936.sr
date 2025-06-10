@@ -2610,7 +2610,7 @@
       "Chip": "#/Smc_EnclSMC",
       "Offset": 7424,
       "Size": 62,
-      "Period": 2000,
+      "Period": 1000,
       "SmcVersion": 100,
       "Config": {
         "1": {"cpld_ver": 255},
@@ -2659,7 +2659,8 @@
         "58": {"affi_bp1_pcb_id": 240, "affi_bp1_prsnt": 1},
         "59": {"affi_bp1_cpld_Id": 255},
         "60": {"affi_bp1_board_id": 255},
-        "62": {"over_temp_12v_1": 1}
+        "62": {"over_temp_12v_1": 1},
+        "103": {"power_timeout_record": 255}
       },
       "Mapping": {
         "Scanner_Drive0PresentAccessor": {"Value": "expr($disk_prsnt_0)"},

@@ -2308,7 +2308,7 @@
       "Chip": "#/Smc_ExpBoardSMC",
       "Offset": 7424,
       "Size": 55,
-      "Period": 200,
+      "Period": 100,
       "SmcVersion": 115,
       "Config": {
         "1": {

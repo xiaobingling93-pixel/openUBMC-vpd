@@ -6,22 +6,13 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
-        "Component_ComPCIeCard1": {
-            "FruId": 255,
-            "Instance": "<=/PCIeDevice_1.SlotID",
-            "Type": 8,
-            "Name": "<=/PCIeDevice_1.DeviceName",
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1
-        },
         "Component_PCIeCard": {
             "FruId": 255,
             "Type": 8,
             "Health": 0,
             "PowerState": 1,
             "GroupId": 1,
-            "Instance": 1,
+            "Instance": "<=/PCIeDevice_1.SlotID",
             "Name": "<=/PCIeDevice_1.DeviceName",
             "Presence": 1,
             "ReplaceFlag": 0,
