@@ -2,6 +2,8 @@ Huawei/Server/Kunpeng/S920H20/platform/platform.sr
 Huawei/Server/Kunpeng/S920H20/root.sr
 Huawei/Server/Kunpeng/S920H20/PSR/14100513_00000001040302023953_920.sr
 Huawei/Server/Kunpeng/S920H20/PSR/14100513_Sensor_0.sr
+YUSUR/Nic/14140130_1f472018_1f472018_soft.sr
+YUSUR/Nic/14140130_1f472018_1f472018.sr
 Mellanox/CX4-Lx/14220247_15b31015_19e5d13b.sr
 Mellanox/CX4-Lx/14140130_15b31015_19e5d11b.sr
 Mellanox/CX-5/Optical/14140130_15b31017_15b30006.sr

@@ -14,16 +14,13 @@
     },
     "Objects": {
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (SF200HT)",
+            "DeviceName": "PCIe Card $ (SWIFT-2200N)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
             "LinkSpeedReduced": 0,
-            "CorrectableError": 0,
-            "UncorrectableError": 0,
-            "FatalError": 0,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 8,
@@ -35,21 +32,21 @@
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "SF200HT",
-            "BoardName": "SF200HT",
-            "Description": "Dual-Port Ethernet Network Adaptor SF200HT",
+            "Name": "SWIFT-2200N",
+            "BoardName": "SWIFT-2200N",
+            "Description": "SWIFT-2200N",
             "FunctionClass": 2,
-            "VendorID": 32904,
-            "DeviceID": 261,
-            "SubVendorID": 32904,
-            "SubDeviceID": 514,
+            "VendorID": 8007,
+            "DeviceID": 8216,
+            "SubVendorID": 8007,
+            "SubDeviceID": 8216,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
-            "Manufacturer": "Beijing Wangxun Technology Co., Ltd.",
-            "PartNumber": "06310171",
+            "Manufacturer": "YUSUR",
+            "PartNumber": "",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "WX1860A2",
+            "Model": "Xilinx 20nm kintex UltraScale KU040",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
@@ -61,22 +58,22 @@
         "NetworkAdapter_1": {
             "SystemID": 1,
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
-            "Name": "SF200HT",
-            "Manufacturer": "Netswift",
-            "Description": "2*GE",
+            "Name": "SWIFT-2200N",
+            "Manufacturer": "YUSUR",
+            "Description": "2*10GE",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "WX1860A2",
-            "ModelDescription": "2*GE",
-            "ChipVendor": "Netswift",
-            "ChipManufacturer": "Netswift",
+            "Model": "Xilinx 20nm kintex UltraScale KU040",
+            "ModelDescription": "2*10GE",
+            "ChipVendor": "YUSUR",
+            "ChipManufacturer": "YUSUR",
             "NetworkPortCount": 2,
-            "BoardName": "SF200HT",
-            "VendorID": "0x8088",
-            "DeviceID": "0x0105",
-            "SubsystemVendorID": "0x8088",
-            "SubsystemDeviceID": "0x0202",
+            "BoardName": "SWIFT-2200N",
+            "VendorID": "0x1f47",
+            "DeviceID": "0x2018",
+            "SubsystemVendorID": "0x1f47",
+            "SubsystemDeviceID": "0x2018",
             "ComponentUniqueID": "N/A",
             "FruId": 255,
             "SupportedMctp": false,
@@ -105,11 +102,11 @@
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
             "UID": "N/A",
-            "Name": "SF200HT",
-            "Manufacturer": "Netswift",
+            "Name": "SWIFT-2200N",
+            "Manufacturer": "YUSUR",
             "Type": "PCIeCard",
-            "Description": "2*GE",
-            "PartNumber": "06310171",
+            "Description": "2*10GE",
+            "PartNumber": "",
             "LogicVersion": "N/A",
             "SRVersion": "",
             "BoardID": 65535,
@@ -124,7 +121,7 @@
             "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
             "FruID": 255
         },
-        "NetworkPort_0": {
+        "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 0,
@@ -132,13 +129,39 @@
             "MediumType": "Copper",
             "SupportedLinkCapability": "1GE"
         },
-        "NetworkPort_1": {
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "NetworkPort_2": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 1,
             "NetDevFuncType": 1,
             "MediumType": "Copper",
             "SupportedLinkCapability": "1GE"
+        },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
@@ -148,26 +171,26 @@
             "EventKeyId": "Port.PortDisconnected",
             "Condition": 0
         },
-        "Event_PCIeBandWidth": {
-            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
             "Condition": 1
-        },
-        "Event_PCIeLinkSpeed": {
-            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
-            "Condition": 1
-        },
-        "Event_PCIeCardUCE": {
-            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
-            "Condition": 1,
-            "LedFaultCode": "q$$"
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
             "LedFaultCode": "q$$"
         },
-        "Event_PcieCardReplaceMntr": {
-            "EventKeyId": "PcieCard.PcieCardReplace",
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
             "Condition": 1
         }
     }

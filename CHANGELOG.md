@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.122] - 2025-6-10
+适配SWIFT-2200N、修复SF200HT did vid
+
 ## [1.70.121] - 2025-6-09
 模型检查门禁sr问题修复
 
