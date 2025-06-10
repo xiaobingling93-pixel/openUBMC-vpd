@@ -51,7 +51,7 @@
             "SocketDesignation": "1",
             "Position": "<=/PCIeDevice_1.Position",
             "ProcessorType": "2",
-            "Health": "#/Component_Tesla.Health",
+            "Health": "#/Component_PCIeCard.Health",
             "Slot": "<=/PCIeDevice_1.SlotID",
             "VendorID": 4318,
             "DeviceID": 7864,
