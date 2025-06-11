@@ -7,7 +7,7 @@
             "Name": "Disk${Slot}",
             "Instance": "${Slot}",
             "BoardId": 65535,
-            "Type": 2,
+            "Type": 8,
             "Presence": 1,
             "Health": 0,
             "PowerState": 1,

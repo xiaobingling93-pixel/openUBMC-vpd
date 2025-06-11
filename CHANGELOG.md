@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.128] - 2025-6-10
+Component_PCIeCard的type应该配置为8
+
 ## [1.70.127] - 2025-6-10
 门禁规则问题CSR修改
 
