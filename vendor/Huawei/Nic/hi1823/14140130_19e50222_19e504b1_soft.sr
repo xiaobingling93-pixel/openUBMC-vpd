@@ -41,6 +41,7 @@
             "UniqueId": "N/A",
             "Presence": 1,
             "Health": 0,
+            "Function": "PCIe device",
             "GroupId": 1,
             "PowerState": 1,
             "ReplaceFlag": 0,

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.129] - 2025-6-11
+对SP226D卡增加"Function"初始化
+
 ## [1.70.128] - 2025-6-10
 Component_PCIeCard的type应该配置为8
 
