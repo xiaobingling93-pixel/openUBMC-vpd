@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.134] - 2025-6-13
+raid卡bbu过温告警迟滞量适配
+
 ## [1.70.133] - 2025-6-12
 新增兼容性说明
 
