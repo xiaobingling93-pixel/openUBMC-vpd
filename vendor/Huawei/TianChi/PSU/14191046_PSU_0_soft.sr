@@ -112,7 +112,7 @@
             "SensorIdentifier": "PS${Slot} VIN",
             "BaseUnit": 4,
             "Analog": 1,
-            "Reading": "<=/OnePower_0.InputVoltage"
+            "Reading": "<=/OnePower_0.InputVoltage |> expr( $1 / 2 )"
         },
         "ThresholdSensor_PsuIin": {
             "OwnerId": 32,

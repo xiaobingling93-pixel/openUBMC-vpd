@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.130] - 2025-6-12
+修复BMC传感器页面输入电压显示
+
 ## [1.70.129] - 2025-6-11
 对SP226D卡增加"Function"初始化
 
