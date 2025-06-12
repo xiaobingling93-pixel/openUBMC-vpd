@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.132] - 2025-6-12
+cx6-dx、cx7调速策略刷新
+
 ## [1.70.131] - 2025-6-11
 Raid卡BBU过温告警阈值适配
 
