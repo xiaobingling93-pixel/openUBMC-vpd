@@ -232,7 +232,7 @@
             "M": 1
         },
         "ThresholdSensor_PsuVin": {
-            "M": 1
+            "M": 2
         },
         "ThresholdSensor_PsuIin": {
             "M": 1
