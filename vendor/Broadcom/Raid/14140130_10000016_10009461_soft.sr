@@ -172,13 +172,18 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_BBUOverTemp": {
-            "Reading": "<=/Battery_1.TemperatureCelsius;<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical |> expr((($1 >= $2) && ($1 <= 255)) ? 1 : 0)",
-            "OperatorId": 5,
+            "Reading": "<=/Battery_1.TemperatureCelsius |> expr(($1 < 255) ? $1 : 0)",
+            "OperatorId": 4,
+            "Condition": "<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical",
+            "@Default": {
+                "Condition": 60
+            },
             "Enabled": true,
             "DescArg1": "#/PCIeDevice_1.SlotID",
             "DescArg2": "#/Battery_1.TemperatureCelsius",
             "DescArg3": "#/ThresholdSensor_PCIeBBUTemp.UpperNoncritical",
-            "Component": "#/Component_Battery"
+            "Component": "#/Component_Battery",
+            "Hysteresis": 2
         },
         "Event_BBUTempReadFail": {
             "Reading": "<=/Battery_1.TemperatureCelsius",

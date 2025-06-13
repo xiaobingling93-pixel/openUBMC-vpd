@@ -260,8 +260,7 @@
             "Condition": 0
         },
         "Event_BBUOverTemp": {
-            "EventKeyId": "PCIeCard.BBUOverTemp",
-            "Condition": 1
+            "EventKeyId": "PCIeCard.BBUOverTemp"
         },
         "Event_BBUTempReadFail": {
             "EventKeyId": "PCIeCard.BBUTempReadFail",
