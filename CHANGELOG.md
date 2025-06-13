@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.133] - 2025-6-12
+新增兼容性说明
+
 ## [1.70.132] - 2025-6-12
 cx6-dx、cx7调速策略刷新
 
