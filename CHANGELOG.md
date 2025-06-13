@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.135] - 2025-6-13
+当PSU输出电流在（0,1）A时，web传感器界面输出电流显示为1.000A
+
 ## [1.70.134] - 2025-6-13
 raid卡bbu过温告警迟滞量适配
 
