@@ -544,7 +544,7 @@
             "BaseUnit": 5,
             "Analog": 1,
             "M": 1,
-            "Reading": "<=/OnePower_0.OutputCurrentAmps"
+            "Reading": "<=/OnePower_0.OutputCurrentAmps |> expr((($1 > 0) && ($1 < 1)) ? 1 : $1)"
         },
         "ThresholdSensor_PsuIin": {
             "OwnerId": 32,
