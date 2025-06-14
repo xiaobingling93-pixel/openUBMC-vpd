@@ -1,5 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.137] - 2025-6-13
+告警描述加点
+
+## [1.70.136] - 2025-6-13
+告警事件显示150-1F0 数码管显示修正；优化有输出电流时最低显示为1A
+
 ## [1.70.135] - 2025-6-13
 当PSU输出电流在（0,1）A时，web传感器界面输出电流显示为1.000A
 
