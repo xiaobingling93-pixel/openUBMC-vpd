@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.9",
+    "Version": "1.0.10",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5373,8 +5373,8 @@
             },
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Description": {
-                "En": "The %1 %2 %3 triggered an uncorrectable error. Error code: %4.",
-                "Zh": "%1 PCIe卡%2(%3)触发了不可纠正错误。故障码：%4。"
+                "En": "The %1 %2 %3 triggered an uncorrectable error. Error code: %4",
+                "Zh": "%1 PCIe卡%2(%3)触发了不可纠正错误。故障码：%4"
             },
             "Influence": {
                 "En": "The PCIe card may run unstably, and the system may stop responding.",
