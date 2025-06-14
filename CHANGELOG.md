@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.138] - 2025-6-14
+GPU卡、NPU卡、SDI卡、DPU卡兼容性说明归档
+
 ## [1.70.137] - 2025-6-13
 告警描述加点
 
