@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.140] - 2025-6-15
+修复SP680、MCX623106AN-CDAT、MCX623436MN-CDAB、SP333卡LinkSpeed相关信息不显示问题
+
 ## [1.70.139] - 2025-6-12
 修复MCX631432AN-ADAB厂商名称
 

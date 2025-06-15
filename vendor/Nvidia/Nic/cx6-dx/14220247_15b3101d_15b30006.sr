@@ -95,8 +95,6 @@
             "Health": "<=/Component_OCPCard.Health",
             "Model": "CX6-DX",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "PcbVersion": ".A",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
