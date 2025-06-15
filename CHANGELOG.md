@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.145] - 2025-6-15
+修复查询不到raid卡问题
+
 ## [1.70.144] - 2025-6-15
 修复0x0200001D告警码当前的处理建议
 
