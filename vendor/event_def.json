@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.10",
+    "Version": "1.0.11",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5653,8 +5653,8 @@
         },
         {
             "Suggestion": {
-                "En": "Replace the disk.",
-                "Zh": "更换硬盘。"
+                "En": "1.Check whether the alarm threshold for the SSD remaining wear level is manually set, and whether the threshold is set to a high value. (Query the current threshold value on the {BMC} WebUI or by referring to the User Guide.)@#AB;2.If the hard drive remaining wear level is lower than 5%, contact your vendor for technical support.",
+                "Zh": "1、请确认是否存在人工设置SSD硬盘剩余磨损率告警阈值的操作，并审视是否设置阈值较高。（可以在{BMC} UI界面查看或参照用户指南查询当前剩余磨损率告警阈值。）@#AB;2、若硬盘剩余磨损率低于5%，请联系厂商技术支持工程师处理。"
             },
             "EventKeyId": "Disk.DiskRemMediaWearoutLow",
             "Description": {
