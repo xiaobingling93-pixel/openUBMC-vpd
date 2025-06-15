@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.70.151] - 2025-6-15
+修复redfish接口的boards下资源不显示MCX623106AN-CDAT资源问题
+修复redfish接口的boards下资源不显示MCX623436MN-CDAB资源问题
+修复redfish接口的boards下资源不显示MCX631432AN-ADAB资源问题
+
+## [1.70.151] - 2025-6-15
 修复SP680网卡温度传感器获取不到时显示为0的问题
 
 ## [1.70.150] - 2025-6-15
