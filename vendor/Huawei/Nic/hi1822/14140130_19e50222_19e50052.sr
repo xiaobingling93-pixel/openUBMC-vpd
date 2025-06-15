@@ -174,7 +174,7 @@
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
             "TemperatureCelsius": 0,
-            "TemperatureStatus": 0,
+            "TemperatureStatus": 3,
             "ParentCardSlotId": 255,
             "FaultState": 0,
             "Health": "<=/Component_PCIeCard.Health",
