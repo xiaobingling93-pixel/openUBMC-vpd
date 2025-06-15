@@ -128,7 +128,7 @@
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "SP686C-M-16i",
+            "Name": "SP686C-M-16i 2G",
             "BoardName": "SP686C-M-16i 2G",
             "Description": "SP686C-M-16i 2G",
             "FunctionClass": 1,
