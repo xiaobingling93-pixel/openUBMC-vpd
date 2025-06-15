@@ -122,7 +122,7 @@
             "Manufacturer": "Mellanox Technologies",
             "Description": "2*25GE",
             "Position": "EXU",
-            "DeviceLocator": "OCP Card ${Slot}(MCX631432AN-ADAB)",
+            "DeviceLocator": "OCP Card ${Slot} (MCX631432AN-ADAB)",
             "Type": 10,
             "Model": "CX6-LX",
             "ModelDescription": "2*25GE",
