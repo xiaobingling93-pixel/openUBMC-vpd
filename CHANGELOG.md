@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.150] - 2025-6-15
+修复SP680网卡温度传感器获取不到时显示为0的问题
+
 ## [1.70.149] - 2025-6-15
 修复MCX631432AN-ADAB芯片厂商名称
 
