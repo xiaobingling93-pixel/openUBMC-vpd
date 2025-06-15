@@ -145,7 +145,7 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-			"ChipManufacturer": "Nvidia",
+			"ChipManufacturer": "Mellanox",
 			"NetworkPortCount": 2,
 			"BoardName": "",
 			"VendorID": "0x15b3",
