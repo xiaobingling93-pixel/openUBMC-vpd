@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.146] - 2025-6-15
+配置SP333的PartNumber
+补齐配置Boardka的PartNumber
+
 ## [1.70.145] - 2025-6-15
 修复查询不到raid卡问题
 
