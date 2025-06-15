@@ -148,7 +148,7 @@
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "LinkSpeed": "N/A",
             "LinkSpeedCapability": "N/A",
-            "PcbVersion": "N/A",
+            "PcbVersion": ".A",
             "BoardID": 0,
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
