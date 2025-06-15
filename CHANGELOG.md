@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.147] - 2025-6-15
+修复redfish接口的boards下资源不显示SP686C-M-16i 2G资源问题
+
 ## [1.70.146] - 2025-6-15
 配置SP333的PartNumber
 补齐配置Boardka的PartNumber
