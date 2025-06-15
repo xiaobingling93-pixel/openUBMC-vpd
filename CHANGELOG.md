@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.139] - 2025-6-12
+修复MCX631432AN-ADAB厂商名称
+
 ## [1.70.138] - 2025-6-14
 GPU卡、NPU卡、SDI卡、DPU卡兼容性说明归档
 补充BF2、BF3的兼容性说明

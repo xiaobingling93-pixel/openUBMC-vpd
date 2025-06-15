@@ -110,7 +110,7 @@
             "SystemID": 1,
             "SlotNumber": "${Slot}",
             "Name": "MCX631432AN-ADAB",
-            "Manufacturer": "Nvidia",
+            "Manufacturer": "Mellanox Technologies",
             "Description": "2*25GE",
             "Position": "EXU",
             "DeviceLocator": "OCP Card ${Slot}(MCX631432AN-ADAB)",
