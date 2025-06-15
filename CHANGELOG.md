@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.143] - 2025-6-15
+修复snmp接口查询componentProperty信息中无MCX631432AN-ADAB网卡的问题
+
 ## [1.70.142] - 2025-6-15
 修复SP680网卡温度传感器获取不到时显示为0的问题
 

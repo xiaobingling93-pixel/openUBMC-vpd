@@ -15,7 +15,8 @@
         },
         "I2cMux_pca9545_chan1": {
             "Chips": [
-                "Chip_NICTempChip"
+                "Chip_NICTempChip",
+                "Eeprom_NIC"
             ]
         }
     },
@@ -27,6 +28,14 @@
             "WriteTmout": 100,
             "ReadTmout": 100,
             "HealthStatus":0
+        },
+        "Eeprom_NIC": {
+            "Address": "${Slot} |> expr($1 == 1 ? 160 : 164)",
+            "AddrWidth": 1,
+            "OffsetWidth": 2,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
         },
         "Scanner_NIC_Lm75": {
             "Chip": "#/Chip_NICTempChip",
@@ -143,7 +152,8 @@
             "DeviceID": "0x101f",
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0004",
-			"PCBVersion": ".A",
+			"PCBVersion": "<=/Fru_OCP.PcbVersion",
+            "FruId": "<=/Fru_OCP.FruId",
 			"SupportedMctp": true,
             "SupportedLLDP": false
         },
@@ -174,6 +184,12 @@
             "SupportedLinkCapability": "25GE",
             "MediumType": "FiberOptic",
             "MACAddress": "00:00:00:00:00:00"
+        },
+        "Fru_OCP": {
+            "PcbId": 255,
+            "FruId": 0,
+            "FruName": "MCX631432AN-ADAB",
+            "ConnectorGroupId": "${GroupId}"
         },
         "OpticalModule_0": {
             "@Parent": "NetworkPort_1",

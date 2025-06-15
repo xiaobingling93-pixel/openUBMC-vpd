@@ -2,6 +2,14 @@
     "FormatVersion": "3.00",
     "DataVersion": "3.00",
     "Objects": {
+        "FruData_Fru0": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_NIC",
+            "EepromWp": 0,
+            "BoardPartNumber": "N/A",
+            "BoardSerialNumber": "N/A",
+            "StorageType": "EepromV2"
+        },
         "Component_OCPCard": {
             "FruId": 255,
             "Instance": "${Slot}",
@@ -10,14 +18,22 @@
             "Name": "<=/PCIeDevice_1.DeviceName",
             "Location": "<=/PCIeDevice_1.Position",
             "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
-            "PartNumber": "",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
             "UniqueId": "N/A",
             "Presence": 1,
             "Health": 0,
             "Function": "PCIe device",
             "GroupId": 1,
             "PowerState": 1,
-            "SerialNumber": ""
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+        },
+        "Fru_OCP": {
+            "PcbVersion": ".A",
+            "PowerState": 0,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_NIC.HealthStatus",
+            "Type": 83,
+            "FruDataId": "#/FruData_Fru0"
         },
         "Component_Port1": {
             "FruId": 255,
