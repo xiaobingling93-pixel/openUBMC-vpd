@@ -111,7 +111,7 @@
             "Manufacturer": "Mellanox Technologies",
             "Description": "2*100GE",
             "Position": "EXU",
-            "DeviceLocator": "OCP Card ${Slot}(MCX623436MN-CDAB)",
+            "DeviceLocator": "OCP Card ${Slot} (MCX623436MN-CDAB)",
             "Type": 10,
             "Model": "CX6-DX",
             "ModelDescription": "2*100GE",

@@ -57,6 +57,7 @@
             "PowerState": 1,
             "Health": 0,
             "EepStatus": "<=/Eeprom_NetCard.HealthStatus",
+            "BoardId": 65535,
             "Type": 8,
             "FruDataId": "#/FruData_Fru0"
         },

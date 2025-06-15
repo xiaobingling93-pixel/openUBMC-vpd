@@ -111,7 +111,7 @@
             "Manufacturer": "Nvidia",
             "Description": "2*100GE",
             "Position": "EXU",
-            "DeviceLocator": "OCP Card ${Slot}(MCX623436AN-CDAB)",
+            "DeviceLocator": "OCP Card ${Slot} (MCX623436AN-CDAB)",
             "Type": 3,
             "Model": "CX6-DX",
             "ModelDescription": "2*100GE",

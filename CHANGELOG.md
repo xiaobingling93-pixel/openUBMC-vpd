@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.148] - 2025-6-15
+modify ocp card devicelocator desc
+添加cx6 卡 boardid
+
 ## [1.70.147] - 2025-6-15
 修复redfish接口的boards下资源不显示SP686C-M-16i 2G资源问题
 
