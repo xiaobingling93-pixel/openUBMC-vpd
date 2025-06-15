@@ -269,7 +269,7 @@
             "Manufacturer": "Huawei",
             "Type": "PCIeCard",
             "Description": "2*100Gb",
-            "PartNumber": "N/A",
+            "PartNumber": "02312BHX",
             "LogicVersion": "N/A",
             "SRVersion": "",
             "BoardID": "#/Accessor_PCIeBDid.Value",

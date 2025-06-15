@@ -187,7 +187,7 @@
             "Manufacturer": "Mellanox",
             "Type": "PCIeCard",
             "Description": "1*100GE",
-            "PartNumber": "N/A",
+            "PartNumber": "06310149",
             "PcbVersion": "<=/PCIeCard_1.PcbVersion",
             "@Default": {
                 "PcbVersion": ".A"
