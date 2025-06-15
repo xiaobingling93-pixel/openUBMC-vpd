@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.149] - 2025-6-15
+修复MCX631432AN-ADAB芯片厂商名称
+
 ## [1.70.148] - 2025-6-15
 modify ocp card devicelocator desc
 添加cx6 卡 boardid
