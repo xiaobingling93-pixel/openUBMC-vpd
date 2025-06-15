@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.141] - 2025-6-15
+修复MCX623106AN-CDAT的BoardId
+修复686C-M-16i 2G Raid标卡的信息显示不正确
+
 ## [1.70.140] - 2025-6-15
 修复SP680、MCX623106AN-CDAT、MCX623436MN-CDAB、SP333卡LinkSpeed相关信息不显示问题
 

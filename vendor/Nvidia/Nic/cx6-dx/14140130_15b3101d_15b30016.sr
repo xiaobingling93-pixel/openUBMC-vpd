@@ -207,7 +207,6 @@
             "PcbId": 0,
             "FruId": 1,
             "FruName": "MCX623106AN-CDAT",
-            "BoardId": 0,
             "UniqueId": "N/A"
         },
         "NetworkPort_0": {
