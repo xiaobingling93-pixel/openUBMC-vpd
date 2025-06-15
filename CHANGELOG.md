@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.142] - 2025-6-15
+修复SP680网卡温度传感器获取不到时显示为0的问题
+
 ## [1.70.141] - 2025-6-15
 修复MCX623106AN-CDAT的BoardId
 修复686C-M-16i 2G Raid标卡的信息显示不正确
