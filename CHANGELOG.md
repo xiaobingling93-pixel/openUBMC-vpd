@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.153] - 2025-6-16
+修复AWM M11P GPU温度传感器读值显示问题
+
 ## [1.70.151] - 2025-6-15
 修复redfish接口的boards下资源不显示MCX623106AN-CDAT资源问题
 修复redfish接口的boards下资源不显示MCX623436MN-CDAB资源问题
