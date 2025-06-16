@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.154] - 2025-6-16
+QLE2742-HUA-SP支持port1 PortOpticalModulePowerAlarm告警
+
 ## [1.70.153] - 2025-6-16
 修复AWM M11P GPU温度传感器读值显示问题
 

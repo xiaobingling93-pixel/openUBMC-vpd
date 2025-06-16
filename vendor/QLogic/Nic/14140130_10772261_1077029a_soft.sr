@@ -230,6 +230,15 @@
             "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
             "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
         },
+        "Event_OM0PowerAlarm": {
+            "Reading": "<=/OpticalModule_0.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port2"
+        },
         "Event_OM1PowerAlarm": {
             "Reading": "<=/OpticalModule_1.PowerState",
             "OperatorId": 5,
