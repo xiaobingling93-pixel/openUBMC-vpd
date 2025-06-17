@@ -321,6 +321,17 @@
             "Enabled": "<=/CoolingRequirement_1_92.MonitoringStatus |> expr($1 == 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         },
+        "CoolingArea_1_90": {
+            "AreaId": 90,
+            "RequirementIdx": 90,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
         "CoolingRequirement_1_91": {
             "RequirementId": "${Slot} |> expr((91 << 8) | $1)",
             "Description": "CX6-LX网卡芯片调速（光模块异常）",
@@ -339,6 +350,17 @@
             "Enabled": "<=/CoolingRequirement_1_92.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         },
+        "CoolingArea_1_91": {
+            "AreaId": 91,
+            "RequirementIdx": 91,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
         "CoolingRequirement_1_92": {
             "RequirementId": "${Slot} |> expr((92 << 8) | $1)",
             "Description": "CX6-LX网卡光模块温度调速",
@@ -355,6 +377,17 @@
             "CustomTargetTemperatureCelsius": 255,
             "Enabled": "<=/CoolingRequirement_1_92.MonitoringStatus |> expr($1 == 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "CoolingArea_1_92": {
+            "AreaId": 92,
+            "RequirementIdx": 92,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
         }
     }
 }

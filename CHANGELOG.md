@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.155] - 2025-6-16
+补充网卡MCX631432AN-ADAB的CoolingArea以支持风扇控速
+
 ## [1.70.154] - 2025-6-16
 QLE2742-HUA-SP支持port1 PortOpticalModulePowerAlarm告警
 
