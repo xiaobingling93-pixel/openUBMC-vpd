@@ -80,7 +80,7 @@
         },
         "Controller_1": {
             "Name": "9500-8e",
-            "TypeId": 16,
+            "TypeId": 10,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
             "OOBSupport": 1,
@@ -105,8 +105,8 @@
             "TemperatureAbnormal": 0,
             "TemperatureCelsius": 0,
             "BOMNumber": "06030718",
-            "Model": "NA",
-            "ChipManufacturer": "NA"
+            "Model": "9500-8e",
+            "ChipManufacturer": "BROADCOM"
         },
         "Event_PCIeRAIDCardFault": {
             "EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
