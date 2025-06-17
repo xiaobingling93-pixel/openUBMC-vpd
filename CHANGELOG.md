@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.160] - 2025-6-17
+更正platform/README.md内容
+
 ## [1.70.159] - 2025-6-17
 适配9500-8i RAID卡
 
