@@ -1,0 +1,113 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        }
+    },
+    "Objects": {
+        "GPU_1": {
+            "SystemId": 1,
+            "Id": 1,
+            "Name": "Moore Threads MTT S3000",
+            "Presence": 1,
+            "Manufacturer": "Moore Threads Technology Co.,Ltd",
+            "Model": "Moore Threads MTT S3000",
+            "SN": "",
+            "SocketDesignation": "1",
+            "Position": "PCIe Riser${Slot}",
+            "ProcessorType": "2",
+            "Health": "#/Component_PCIeCard.Health",
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "VendorID": 7893,
+            "DeviceID": 546,
+            "SubVendorID": 7893,
+            "SubDeviceID": 546,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (Moore Threads MTT S3000)",
+            "DeviceType": 8,
+            "FunctionClass": 3,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "BandwidthReduction": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "LinkSpeedReduced": 0,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "Moore Threads MTT S3000",
+            "BoardName": "Moore Threads MTT S3000",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Description": "MTT S3000 Series GPU",
+            "FunctionClass": 3,
+            "VendorID": 7893,
+            "DeviceID": 546,
+            "SubVendorID": 7893,
+            "SubDeviceID": 546,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "Manufacturer": "Moore Threads Technology Co.,Ltd",
+            "PartNumber": "",
+            "PcbVersion": "N/A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Model": "Moore Threads MTT S3000",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/GPU_1.SN"
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "N/A",
+            "Manufacturer": "Moore Threads Technology Co.,Ltd",
+            "Type": "PCIeCard",
+            "Description": "MTT S3000 Series GPU",
+            "PartNumber": "",
+            "PcbID": 0,
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": 255
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        }
+    }
+}
