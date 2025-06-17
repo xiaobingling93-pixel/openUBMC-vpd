@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.156] - 2025-6-17
+9500-8e TypeId和显示信息修改
+
 ## [1.70.155] - 2025-6-16
 补充网卡MCX631432AN-ADAB的CoolingArea以支持风扇控速
 
