@@ -80,7 +80,7 @@
         },
         "Controller_1": {
             "Name": "9540-8i",
-            "TypeId": 10,
+            "TypeId": 6,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
             "OOBSupport": 1,
@@ -106,7 +106,7 @@
             "TemperatureAbnormal": 0,
             "TemperatureCelsius": 0,
             "BOMNumber": "N/A",
-            "Model": "SAS3808",
+            "Model": "9540-8i",
             "ChipManufacturer": "BROADCOM"
         },
         "SASPhy_1": {
