@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.162] - 2025-6-17
+TPM、HBRT自检失败告警事件配置
+
 ## [1.70.161] - 2025-6-17
 GPU新卡适配
 

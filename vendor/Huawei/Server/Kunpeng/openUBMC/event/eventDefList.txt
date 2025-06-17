@@ -412,3 +412,5 @@ PCIeCard.PCIeVoltCollectionFailed
 PCIeCard.PCIePowerCollectionFailed
 BMC.BMCTimeSynchronizationFailure
 ExpBoard.ExpBoardFPGASelfTestFailure
+SecurityMoudle.HBRTSelfTestFailed
+SecurityMoudle.TPMSelfTestFailed
