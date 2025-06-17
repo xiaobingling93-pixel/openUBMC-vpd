@@ -213,3 +213,5 @@ Innosilicon/GPU/14140130_1fe01010_1fe01010.sr
 Innosilicon/GPU/14140130_1fe01010_1fe01010_soft.sr
 MooreThreads/GPU/14140130_1ed50105_1ed50105.sr
 MooreThreads/GPU/14140130_1ed50105_1ed50105_soft.sr
+Broadcom/Nic/OCP/14220247_14e416d7_14e44146.sr
+Broadcom/Nic/OCP/14220247_14e416d7_14e44146_soft.sr
