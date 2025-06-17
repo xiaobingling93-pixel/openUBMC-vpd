@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.158] - 2025-6-17
+支持网卡BCM957414N4140C
+
 ## [1.70.157] - 2025-6-17
 修改9540-8i TypeId和Model
 
