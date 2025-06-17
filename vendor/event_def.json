@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.11",
+    "Version": "1.0.12",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5040,6 +5040,30 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "MiniModuleMinorFault"
+        },
+        {
+            "EventCode": "0x22000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "TPMSelfTestFailed"
+        },
+        {
+            "EventCode": "0x22000003",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "SecurityMoudle.HBRTSelfTestFailed",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "HBRTSelfTestFailed"
         }
     ],
     "EventDescription": [
@@ -13023,6 +13047,44 @@
                 "En": "The PCIe card is faulty.",
                 "Zh": "PCIe卡故障。"
             }
-        }     
+        },
+        {
+            "Suggestion": {
+                "En": "1.Replace the TPM or TCM module.",
+                "Zh": "更换可信赖平台模块。"
+            },
+            "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
+            "Description": {
+                "En": "Trusted platfrom module(%1) self-test failed.",
+                "Zh": "可信赖平台模块(%1)自检失败。"
+            },
+            "Influence": {
+                "En": "The trusted boot function may be unavailable.",
+                "Zh": "可能影响功能的使用。"
+            },
+            "Cause": {
+                "En": "An internal exception occurs in the TPM.",
+                "Zh": "1、TPM内部异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the HBRT.",
+                "Zh": "更换硬件可信根。"
+            },
+            "EventKeyId": "SecurityMoudle.HBRTSelfTestFailed",
+            "Description": {
+                "En": "HBRT self-test failed.",
+                "Zh": "HBRT自检失败。"
+            },
+            "Influence": {
+                "En": "The trusted boot function may be unavailable.",
+                "Zh": "可能导致可信启动功能不可用。"
+            },
+            "Cause": {
+                "En": "An internal exception occurs in the HBRT.",
+                "Zh": "HBRT内部异常。"
+            }
+        }
     ]
 }

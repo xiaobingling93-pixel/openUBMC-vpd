@@ -7,6 +7,17 @@
         }
     },
     "Objects": {
+        "Component_SecurityMoudle": {
+            "FruId": 255,
+            "Instance": 0,
+            "Type": 34,
+            "Name": "SecurityMoudle",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "NodeId": ""
+        },
         "SecurityModule_1": {
             "Presence": 1,
             "Health": 255,
@@ -14,6 +25,23 @@
             "Manufacturer": "N/A",
             "ProtocolVersion": "N/A",
             "FirmwareVersion": "N/A"
+        },
+        "Event_TPMSelfTestFailed": {
+          "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
+          "Reading": "<=/SecurityModule_1.Protocol;<=/SecurityModule_1.Health |> expr((($1 == 'HBRT') && ($2 != 1) && ($2 != 255)) ? 1 : 0)",
+          "Condition": 1,
+          "OperatorId": 5,
+          "Enabled": true,
+          "DescArg1": "<=/SecurityModule_1.Protocol",
+          "Component": "#/Component_SecurityMoudle"
+        },
+        "Event_HBRTSelfTestFailed": {
+            "EventKeyId": "SecurityMoudle.HBRTSelfTestFailed",
+            "Reading": "<=/SecurityModule_1.Protocol;<=/SecurityModule_1.Health |> expr((($1 == 'HBRT') && ($2 != 1) && ($2 != 255)) ? 1 : 0)",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_SecurityMoudle"
         }
     }
 }
