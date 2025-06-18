@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.167] - 2025-6-18
+修复BF2卡光模块调速策略id冲突
+
 ## [1.70.166] - 2025-6-18
 刷新SWIFT-2200N兼容性表格
 
