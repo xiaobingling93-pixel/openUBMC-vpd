@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.163] - 2025-6-17
+TPM、HBRT自检失败告警事件BUG修改
+
 ## [1.70.162] - 2025-6-17
 TPM、HBRT自检失败告警事件配置
 

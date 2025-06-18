@@ -28,7 +28,7 @@
         },
         "Event_TPMSelfTestFailed": {
           "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
-          "Reading": "<=/SecurityModule_1.Protocol;<=/SecurityModule_1.Health |> expr((($1 == 'HBRT') && ($2 != 1) && ($2 != 255)) ? 1 : 0)",
+          "Reading": "<=/SecurityModule_1.Protocol;<=/SecurityModule_1.Health |> expr((($1 != 'HBRT') && ($2 != 1) && ($2 != 255)) ? 1 : 0)",
           "Condition": 1,
           "OperatorId": 5,
           "Enabled": true,
