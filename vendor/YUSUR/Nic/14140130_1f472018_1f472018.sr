@@ -48,8 +48,7 @@
             "Health": "<=/Component_PCIeCard.Health",
             "Model": "Xilinx 20nm kintex UltraScale KU040",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbVersion": ".A",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "",
@@ -68,7 +67,7 @@
             "ModelDescription": "2*10GE",
             "ChipVendor": "YUSUR",
             "ChipManufacturer": "YUSUR",
-            "NetworkPortCount": 2,
+            "NetworkPortCount": 1,
             "BoardName": "SWIFT-2200N",
             "VendorID": "0x1f47",
             "DeviceID": "0x2018",
@@ -82,6 +81,7 @@
             "ReadyToRemove": false,
             "AttentionHotPlugState": 255,
             "SocketId": "<=/PCIeDevice_1.SocketID",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",
@@ -142,32 +142,7 @@
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
         },
-        "NetworkPort_2": {
-            "@Parent": "NetworkAdapter_1",
-            "SystemID": 1,
-            "PortID": 1,
-            "NetDevFuncType": 1,
-            "MediumType": "Copper",
-            "SupportedLinkCapability": "1GE"
-        },
-        "OpticalModule_2": {
-            "@Parent": "NetworkPort_2",
-            "ChannelNum": 2,
-            "TemperatureCelsius": 0,
-            "PowerState": 0,
-            "Presence": 0,
-            "IsSupportedType": 0,
-            "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
-        },
         "Event_Port1LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
-        },
-        "Event_Port2LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
             "Condition": 0
         },
