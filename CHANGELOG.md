@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.166] - 2025-6-18
+刷新SWIFT-2200N兼容性表格
+
 ## [1.70.165] - 2025-6-18
 网卡sr问题修复
 
