@@ -58,7 +58,7 @@
             "Linearization": 0,
             "M": 100,
             "RBExp": 224,
-            "UpperNoncritical": 94,
+            "UpperNoncritical": 104,
             "PositiveHysteresis": 2,
             "NegativeHysteresis": 2
         },
@@ -329,7 +329,7 @@
             "CustomSupported": false,
             "ActiveInStandby": true,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/CoolingRequirement_1_90.MonitoringStatus |> expr($1 == 0 ? true : false)",
+            "Enabled": "<=/CoolingRequirement_1_96.MonitoringStatus |> expr($1 == 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
         "CoolingRequirement_1_89": {
@@ -344,11 +344,11 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/CoolingRequirement_1_90.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+            "Enabled": "<=/CoolingRequirement_1_96.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
-        "CoolingRequirement_1_90": {
-            "RequirementId": "${Slot} |> expr((90 << 8) | $1)",
+        "CoolingRequirement_1_96": {
+            "RequirementId": "${Slot} |> expr((96 << 8) | $1)",
             "Description": "BF2网卡光模块温度调速",
             "MonitoringStatus": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr((($1 == 1 && $3 >= 255) || ($2 == 1 && $4 >= 255)) ? 1 : 0)",
             "MonitoringValue": "<=/OpticalModule_1.Presence; <=/OpticalModule_2.Presence; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius  |> expr($3 >= $4 ? ($1 == 1 ? $3 : $4) : ($2 == 1 ? $4 : $3))",
