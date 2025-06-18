@@ -50,15 +50,6 @@
             "Health": 0,
             "PowerState": 1
         },
-        "Component_Port2": {
-            "FruId": 255,
-            "Instance": 1,
-            "Type": 41,
-            "Name": "Port2",
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1
-        },
         "Entity_PCIeCard": {
             "Id": 11,
             "Name": "PCIeCard",
@@ -76,17 +67,6 @@
             "DescArg1": "#/PCIeCard_1.DeviceName",
             "DescArg3": "Port 1",
             "Component": "#/Component_Port1"
-        },
-        "Event_Port2LinkDown": {
-            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 0
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 2",
-            "Component": "#/Component_Port2"
         },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",

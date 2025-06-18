@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.165] - 2025-6-18
+网卡sr问题修复
+
 ## [1.70.164] - 2025-6-18
 新增扩展板44492.sr,4492_soft.sr
 
