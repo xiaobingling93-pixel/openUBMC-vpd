@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.168] - 2025-6-19
+QLE2742 LPE31002网卡sr问题修复
+
 ## [1.70.167] - 2025-6-18
 修复BF2卡光模块调速策略id冲突
 

@@ -95,10 +95,8 @@
             "Manufacturer": "QLogic",
             "PartNumber": "06030392",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "QLE2742-HUA-SP",
+            "Model": "QLE2742",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",
@@ -116,7 +114,7 @@
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "QLE2742-HUA-SP",
+            "Model": "QLE2742",
             "ModelDescription": "2*32Gb",
             "ChipVendor": "QLogic",
             "ChipManufacturer": "QLogic",
@@ -171,7 +169,7 @@
             "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
-            "FruID": 255
+            "FruID": "<=/Fru_PCIeCard.FruId"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
