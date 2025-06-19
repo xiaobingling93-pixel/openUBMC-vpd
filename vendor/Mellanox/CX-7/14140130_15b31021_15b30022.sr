@@ -84,7 +84,7 @@
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (MCX755106AS-HEAT)",
-            "FunctionClass": 10,
+            "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
@@ -106,7 +106,7 @@
             "Name": "MCX755106AS-HEAT",
             "BoardName": "MCX755106AS-HEAT",
             "Description": "MT28908 Family [ConnectX-7]",
-            "FunctionClass": 10,
+            "FunctionClass": 2,
             "VendorID": 5555,
             "DeviceID": 4129,
             "SubVendorID": 5555,
