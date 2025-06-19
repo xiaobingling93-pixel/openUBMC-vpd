@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.169] - 2025-6-19
+修复MCX755106AS-HEAT网卡FunctionClass配错问题
+
 ## [1.70.168] - 2025-6-19
 QLE2742 LPE31002网卡sr问题修复
 
