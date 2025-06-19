@@ -144,6 +144,34 @@
             "DescArg3": "Port 2",
             "Component": "#/Component_Port2"
         },
+        "Event_Port0BWUsageMntr": {
+            "Reading": "<=/NetworkPort_0.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "${Slot}",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/Event_Port0BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port0BWUsageMntr.Condition"
+        },
+        "Event_Port1BWUsageMntr": {
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "${Slot}",
+            "DescArg3": "Port 2",
+            "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
+        },
         "Event_PCIeBandWidth": {
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
             "OperatorId": 5,

@@ -125,7 +125,7 @@
             "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
-            "FruID": 255
+            "FruID": "<=/Component_PCIeCard.FruId"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
@@ -202,6 +202,14 @@
         "Event_Port2LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
             "Condition": 0
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
