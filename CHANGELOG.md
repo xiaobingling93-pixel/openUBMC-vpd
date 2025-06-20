@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.171] - 2025-6-20
+BF2卡linkspeed、linkwidth属性由pcie_device获取
+BF2卡PCIeDevices的DeviceType为空值
+
 ## [1.70.170] - 2025-6-19
 QLE2742网卡sr问题修复
 

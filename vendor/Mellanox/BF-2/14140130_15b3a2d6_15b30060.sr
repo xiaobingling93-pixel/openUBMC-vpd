@@ -106,7 +106,8 @@
             "Container": "${Container}",
             "SlotType": "FullLength",
             "FunctionProtocol": "PCIe",
-            "FunctionType": "Physical"
+            "FunctionType": "Physical",
+            "PCIeDeviceType": "MultiFunction"
         },
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
@@ -127,10 +128,6 @@
             "Health": "<=/Component_PCIeCard.Health",
             "Model": "BF2",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
-            "LinkWidthAbility": "<=/NetworkAdapter_1.LinkWidthCapability",
-            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
             "PcbVersion": "",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
