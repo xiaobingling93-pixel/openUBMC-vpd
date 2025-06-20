@@ -169,7 +169,7 @@
             "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
-            "FruID": "<=/Fru_PCIeCard.FruId"
+            "FruID": "255"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
