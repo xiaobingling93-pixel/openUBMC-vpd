@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.172] - 2025-6-21
+修复电源欠压告警概率性清除后再产生
+
 ## [1.70.171] - 2025-6-20
 BF2卡linkspeed、linkwidth属性由pcie_device获取
 BF2卡PCIeDevices的DeviceType为空值

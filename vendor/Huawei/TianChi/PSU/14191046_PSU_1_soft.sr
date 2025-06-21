@@ -63,6 +63,9 @@
             "Enabled": true,
             "AdditionalInfo": "1",
             "DescArg1": "${Slot}",
+            "@Default": {
+                "Reading": 32768
+            },
             "InvalidReadingIgnore": 1,
             "InvalidReading": 32768,
             "Component": "#/Component_PowerSupply"
@@ -73,6 +76,9 @@
             "Enabled": true,
             "AdditionalInfo": "1",
             "DescArg1": "${Slot}",
+            "@Default": {
+                "Reading": 32768
+            },
             "InvalidReadingIgnore": 1,
             "InvalidReading": 32768,
             "Component": "#/Component_PowerSupply"
