@@ -164,7 +164,7 @@
             "OOBSupport": 1,
             "SystemId": 0,
             "Segment": 0,
-            "SocketID": 0,
+            "SocketId": 0,
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",

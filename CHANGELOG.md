@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.175] - 2025-6-22
+修改Controller对象SocketId配置错误；
+修改NPU网卡的PCBVersion默认值为N/A
+
 ## [1.70.174] - 2025-6-21
 修复[NPU] AC时 产生异常事件的场景
 

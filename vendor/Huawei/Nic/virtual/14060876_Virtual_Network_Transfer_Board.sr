@@ -542,7 +542,7 @@
         "SubsystemDeviceID": "0xffff",
         "BoardID": 65535,
         "ComponentUniqueID": "00000001070302055991",
-        "PCBVersion": ".A",
+        "PCBVersion": "N/A",
         "ParentCardSlotId": 255,
         "Description": "16*200GE",
         "ModelDescription": "16*200GE",
