@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [1.70.172] - 2025-6-21
+## [1.70.174] - 2025-6-21
+修复[NPU] AC时 产生异常事件的场景
+
+## [1.70.173] - 2025-6-21
 修复[NPU] AC时 产生异常事件的场景
 
 ## [1.70.172] - 2025-6-21

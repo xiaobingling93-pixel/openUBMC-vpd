@@ -200,7 +200,7 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NPUCard_1.OutletTemperatureCelsius",
-            "ReadingStatus": "<=/NPUCard_1.OutletTemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) 3 : 1) : 0)",
+            "ReadingStatus": "<=/NPUCard_1.OutletTemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) ? 3 : 1) : 0)",
             "SensorNumber": 255
         },
         "ThresholdSensor_GPUInletTemp": {
@@ -231,7 +231,7 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NPUCard_1.InletTemperatureCelsius",
-            "ReadingStatus": "<=/NPUCard_1.InletTemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) 3 : 1) : 0)"
+            "ReadingStatus": "<=/NPUCard_1.InletTemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) ? 3 : 1) : 0)"
         },
         "ThresholdSensor_GPUAICore0Temp": {
             "OwnerId": 32,
@@ -262,7 +262,7 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NPUCard_1.Core0TemperatureCelsius",
-            "ReadingStatus": "<=/NPUCard_1.Core0TemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) 3 : 1) : 0)"
+            "ReadingStatus": "<=/NPUCard_1.Core0TemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) ? 3 : 1) : 0)"
         },
         "ThresholdSensor_GPUAICore1Temp": {
             "OwnerId": 32,
@@ -293,7 +293,7 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NPUCard_1.Core1TemperatureCelsius",
-            "ReadingStatus": "<=/NPUCard_1.Core1TemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) 3 : 1) : 0)"
+            "ReadingStatus": "<=/NPUCard_1.Core1TemperatureCelsius |> expr($1 >= 255 ? (($1 == 32767 || $1 == 32768 || $1 == 255) ? 3 : 1) : 0)"
         },
         "ThresholdSensor_GPUPower": {
             "OwnerId": 32,
