@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.177] - 2025-6-23
+修复MCX631432AN-ADAB查询PCIe速率有误问题
+
 ## [1.70.176] - 2025-6-22
 Swift-2200N支持两个网口
 
