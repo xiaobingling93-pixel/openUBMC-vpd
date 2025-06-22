@@ -67,7 +67,7 @@
             "ModelDescription": "2*10GE",
             "ChipVendor": "YUSUR",
             "ChipManufacturer": "YUSUR",
-            "NetworkPortCount": 1,
+            "NetworkPortCount": 2,
             "BoardName": "SWIFT-2200N",
             "VendorID": "0x1f47",
             "DeviceID": "0x2018",
@@ -129,6 +129,14 @@
             "MediumType": "Copper",
             "SupportedLinkCapability": "1GE"
         },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 1,
+            "MediumType": "Copper",
+            "SupportedLinkCapability": "1GE"
+        },
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 1,
@@ -142,7 +150,24 @@
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
         },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
         "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0
+        },
+        "Event_Port2LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
             "Condition": 0
         },

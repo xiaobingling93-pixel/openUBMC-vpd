@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.176] - 2025-6-22
+Swift-2200N支持两个网口
+
 ## [1.70.175] - 2025-6-22
 修改Controller对象SocketId配置错误；
 修改NPU网卡的PCBVersion默认值为N/A
