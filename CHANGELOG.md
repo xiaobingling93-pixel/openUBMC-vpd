@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.178] - 2025-6-23
+Cx7网卡光模块电压应该显示为-- 而不是0
+
 ## [1.70.177] - 2025-6-23
 修复MCX631432AN-ADAB查询PCIe速率有误问题
 
