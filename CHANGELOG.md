@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.179] - 2025-6-25
+FBGF-RAD-R1-S1卡告警事件配置
+
 ## [1.70.178] - 2025-6-23
 Cx7网卡光模块电压应该显示为-- 而不是0
 
