@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.180] - 2025-6-25
+新增适配 Intel E810-XXVDA2 网卡
+
 ## [1.70.179] - 2025-6-25
 FBGF-RAD-R1-S1卡告警事件配置
 
