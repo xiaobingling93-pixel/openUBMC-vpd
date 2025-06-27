@@ -36,7 +36,7 @@
             "BoardId": 65535,
             "Name": "<=/PCIeDevice_1.DeviceName",
             "Location": "<=/PCIeDevice_1.Position",
-            "Manufacturer": "Huawei",
+            "Manufacturer": "JINGSHIJI",
             "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
             "UniqueId": "N/A",
             "Presence": 1,
