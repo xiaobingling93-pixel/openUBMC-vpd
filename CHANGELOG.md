@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.182] - 2025-6-27
+修改HP380、HP382厂商信息，以及PCIe速率获取有误问题修复
+
 ## [1.70.181] - 2025-6-27
 修复BCM957414N4140C网卡没有PortMaxSpeed信息问题
 
