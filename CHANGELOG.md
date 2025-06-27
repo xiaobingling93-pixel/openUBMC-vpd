@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.183] - 2025-6-27
+修复9500-8i错误告警描述；9500-8i和9500-8e改为不支持带外
+
 ## [1.70.182] - 2025-6-27
 修改HP380、HP382厂商信息，以及PCIe速率获取有误问题修复
 
