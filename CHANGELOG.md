@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.181] - 2025-6-27
+修复BCM957414N4140C网卡没有PortMaxSpeed信息问题
+
 ## [1.70.180] - 2025-6-25
 新增适配 Intel E810-XXVDA2 网卡
 
