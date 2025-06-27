@@ -152,17 +152,17 @@
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 0,
-            "SupportedFuncType": 1,
+            "NetDevFuncType": 1,
             "MediumType": "FiberOptic",
-            "LinkStatus": "N/A"
+            "SupportedLinkCapability": "25GE"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 1,
-            "SupportedFuncType": 1,
+            "NetDevFuncType": 1,
             "MediumType": "FiberOptic",
-            "LinkStatus": "N/A"
+            "SupportedLinkCapability": "25GE"
         },
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
