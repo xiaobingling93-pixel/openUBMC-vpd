@@ -79,7 +79,7 @@
             "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
         "Controller_1": {
-            "Name": "9560-16i",
+            "ControllerName": "9560-16i",
             "TypeId": 15,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",

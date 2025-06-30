@@ -177,7 +177,7 @@
             "UniqueId": "N/A"
         },
         "Controller_1": {
-            "Name": "SP686C-M-16i",
+            "ControllerName": "SP686C-M-16i",
             "TypeId": 99,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",

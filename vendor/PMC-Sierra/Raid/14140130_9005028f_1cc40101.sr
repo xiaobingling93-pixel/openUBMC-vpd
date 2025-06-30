@@ -69,7 +69,7 @@
             "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
         "Controller_1": {
-            "Name": "FBGF-RAD-R1-S1",
+            "ControllerName": "FBGF-RAD-R1-S1",
             "TypeId": 64,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
