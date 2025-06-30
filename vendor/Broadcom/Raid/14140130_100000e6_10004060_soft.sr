@@ -103,7 +103,7 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
+            "DescArg3": "9500-8i",
             "Component": "#/Component_Battery"
         },
         "Event_PCIeBandWidth": {
@@ -149,7 +149,7 @@
             "OperatorId": 8,
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
+            "DescArg3": "9500-8i",
             "Component": "#/Component_Battery"
         },
         "Event_PcieBBUInstall": {
@@ -160,7 +160,7 @@
             "OperatorId": 7,
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
+            "DescArg3": "9500-8i",
             "Component": "#/Component_Battery"
         },
         "Event_PCIeRaidInitErr": {

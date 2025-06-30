@@ -83,7 +83,7 @@
             "TypeId": 10,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
-            "OOBSupport": 1,
+            "OOBSupport": 0,
             "SystemId": 0,
             "Segment": 0,
             "SocketId": 0,
@@ -190,30 +190,6 @@
             "UpperNoncritical": 60,
             "PositiveHysteresis": 2,
             "NegativeHysteresis": 2
-        },
-        "CoolingRequirement_1_10": {
-            "RequirementId": "${Slot} |> expr((10 << 8) | $1)",
-            "MonitoringStatus": "<=/Controller_1.TemperatureAbnormal",
-            "MonitoringValue": "<=/Controller_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 85,
-            "MaxAllowedTemperatureCelsius": 102,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SensorName": "#/ThresholdSensor_RaidCardTemp.SensorName"
-        },
-        "CoolingRequirement_1_64": {
-            "RequirementId": "${Slot} |> expr((64 << 8) | $1)",
-            "MonitoringStatus": "<=/Battery_1.TemperatureCelsius;<=/Controller_1.BatteryPresence |> expr($2 == 255 ? 0 : ($1 == 32767 ? 1 : 0))",
-            "MonitoringValue": "<=/Battery_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 49,
-            "MaxAllowedTemperatureCelsius": 55,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SensorName": "#/ThresholdSensor_PCIeBBUTemp.SensorName"
         },
         "Event_PCIeRaidComLossMntr": {
             "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
