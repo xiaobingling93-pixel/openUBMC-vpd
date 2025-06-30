@@ -157,7 +157,7 @@
             "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
         "Controller_1": {
-            "Name": "SP686C-M-40i",
+            "ControllerName": "SP686C-M-40i",
             "TypeId": 102,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
