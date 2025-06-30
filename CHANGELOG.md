@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.186] - 2025-6-30
+修复网卡冗余调速
+
 ## [1.70.185] - 2025-6-30
 修复RAID卡Name没使用别名ControllerName的问题
 

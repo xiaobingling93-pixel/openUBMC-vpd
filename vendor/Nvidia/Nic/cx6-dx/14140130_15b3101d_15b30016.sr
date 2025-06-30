@@ -175,58 +175,6 @@
             "FruID": "<=/Fru_PCIeCard.FruId",
             "PcbVersion": "<=/PCIeCard_1.PcbVersion"
         },
-        "CoolingRequirement_1_65": {
-            "RequirementId": "${Slot} |> expr((65 << 8) | $1)",
-            "Description": "MCX623106AN-CDAT网卡芯片调速",
-            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
-            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 90,
-            "MaxAllowedTemperatureCelsius": 100,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SmartCoolingTargetTemperature": [],
-            "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
-        },
-        "CoolingArea_1_65": {
-            "AreaId": 65,
-            "RequirementIdx": 65,
-            "PolicyIdxGroup": [],
-            "FanIdxGroup": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "CoolingRequirement_1_66": {
-            "RequirementId": "${Slot} |> expr((66 << 8) | $1)",
-            "Description": "MCX623106AN-CDAT网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
-            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 55,
-            "MaxAllowedTemperatureCelsius": 75,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SmartCoolingTargetTemperature": [60, 55, 65],
-            "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
-        },
-        "CoolingArea_1_66": {
-            "AreaId": 66,
-            "RequirementIdx": 66,
-            "PolicyIdxGroup": [],
-            "FanIdxGroup": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
         "Fru_PCIeCard": {
             "PcbId": 0,
             "FruId": 1,
@@ -389,30 +337,14 @@
             "SensorName": "#/ThresholdSensor_NicTemp.SensorName",
             "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 == 0 ? true : false)"
         },
-        "CoolingRequirement_1_150": {
-            "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
-            "Description": "MCX623106AN-CDAT网卡芯片调速(光模块异常)",
-            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
-            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 80,
-            "MaxAllowedTemperatureCelsius": 100,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SmartCoolingTargetTemperature": [],
-            "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255,
-            "SensorName": "#/ThresholdSensor_NicTemp.SensorName",
-            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
-        },
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
             "Description": "MCX623106AN-CDAT网卡光模块温度调速",
             "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 0 || $2 == 0) ? 1 : ($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0)))",
             "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
-            "TargetTemperatureCelsius": 62,
-            "MaxAllowedTemperatureCelsius": 68,
+            "TargetTemperatureCelsius": 60,
+            "MaxAllowedTemperatureCelsius": 75,
+            "SmartCoolingTargetTemperature": [60, 55, 65],
             "TargetTemperatureRangeCelsius": [],
             "ThresholdValue": [],
             "AlarmSpeed": [],
