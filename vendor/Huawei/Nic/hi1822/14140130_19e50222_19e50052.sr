@@ -148,7 +148,6 @@
             "DeviceID": "0x0222",
             "SubsystemVendorID": "0x19e5",
             "SubsystemDeviceID": "0x0052",
-            "BoardID": 255,
             "ComponentUniqueID": "N/A",
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "FruId": "<=/Fru_PCIeCard.FruId",

@@ -90,7 +90,7 @@
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
-            "Manufacturer": "Mellanox Technologies",
+            "Manufacturer": "Mellanox",
             "PartNumber": "06310299",
             "Health": "<=/Component_OCPCard.Health",
             "Model": "CX6-DX",
@@ -108,7 +108,7 @@
             "SystemID": 1,
             "SlotNumber": "${Slot}",
             "Name": "MCX623436MN-CDAB",
-            "Manufacturer": "Mellanox Technologies",
+            "Manufacturer": "Mellanox",
             "Description": "2*100GE",
             "Position": "EXU",
             "DeviceLocator": "OCP Card ${Slot} (MCX623436MN-CDAB)",
@@ -142,7 +142,9 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "Health": "<=/Component_OCPCard.Health"
+            "Health": "<=/Component_OCPCard.Health",
+            "PCBVersion": "<=/OCPCard_1.PcbVersion",
+            "ComponentUniqueID": "N/A"
         },
         "BoardPCIeCard_1": {
             "Slot": 1,
