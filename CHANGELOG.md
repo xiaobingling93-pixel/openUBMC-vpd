@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.187] - 2025-7-1
+新增适配网卡E810XXVDA2G1P5,E810CQDA2G2P5,MCX755106AS-HEAT
+
 ## [1.70.186] - 2025-6-30
 修复网卡冗余调速
 
