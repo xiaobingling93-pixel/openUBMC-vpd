@@ -45,8 +45,30 @@
             "Type": 0,
             "Value": 0
         },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (E810XXVDA2G1P5)",
+            "DeviceName": "PCIe Card $ (MCX755106AS-HEAT)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
@@ -60,28 +82,28 @@
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 8,
             "PCIeDeviceType": "MultiFunction",
-            "SlotType": "HalfLength",
+            "SlotType": "FullLength",
             "FunctionProtocol": "PCIe",
             "FunctionType": "Physical"
         },
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "E810XXVDA2G1P5",
-            "BoardName": "E810XXVDA2G1P5",
-            "Description": "Intel Corporation Ethernet Network Adapter E810XXVDA2G1P5",
+            "Name": "MCX755106AS-HEAT",
+            "BoardName": "MCX755106AS-HEAT",
+            "Description": "MCX755106AS-HEAT",
             "FunctionClass": 2,
-            "VendorID": 32902,
-            "DeviceID": 5531,
-            "SubVendorID": 32902,
-            "SubDeviceID": 3,
+            "VendorID": 5555,
+            "DeviceID": 4129,
+            "SubVendorID": 5555,
+            "SubDeviceID": 22,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
-            "Manufacturer": "Intel",
-            "PartNumber": "06310219",
+            "Manufacturer": "Nvidia",
+            "PartNumber": "",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "BroadCom",
+            "Model": "CX7",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "PcbID": "#/Accessor_PcbID.Value",
             "PcbVersion": ".A",
@@ -96,22 +118,22 @@
         "NetworkAdapter_1": {
             "SystemID": 1,
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
-            "Name": "E810XXVDA2G1P5",
-            "Manufacturer": "Intel",
-            "Description": "2*25G",
+            "Name": "MCX755106AS-HEAT",
+            "Manufacturer": "Nvidia",
+            "Description": "2*200G",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "BroadCom",
-            "ModelDescription": "2*25G",
-            "ChipVendor": "Intel",
-            "ChipManufacturer": "Intel",
+            "Model": "CX7",
+            "ModelDescription": "2*200G",
+            "ChipVendor": "Nvidia",
+            "ChipManufacturer": "Nvidia",
             "NetworkPortCount": 2,
-            "BoardName": "E810XXVDA2G1P5",
-            "VendorID": "0x8086",
-            "DeviceID": "0x159b",
-            "SubsystemVendorID": "0x8086",
-            "SubsystemDeviceID": "0x0003",
+            "BoardName": "MCX755106AS-HEAT",
+            "VendorID": "0x15b3",
+            "DeviceID": "0x1021",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0022",
             "ComponentUniqueID": "N/A",
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "@Default": {
@@ -144,12 +166,15 @@
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
             "UID": "N/A",
-            "Name": "E810XXVDA2G1P5",
-            "Manufacturer": "Intel",
+            "Name": "MCX755106AS-HEAT",
+            "Manufacturer": "NVIDIA",
             "Type": "PCIeCard",
-            "Description": "2*25G",
-            "PartNumber": "06310219",
+            "Description": "2*200G",
+            "PartNumber": "",
             "PcbVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PcbVersion": ".A"
+            },
             "LogicVersion": "N/A",
             "SRVersion": "",
             "BoardID": 65535,
@@ -167,9 +192,15 @@
         "Fru_PCIeCard": {
             "PcbId": "#/Accessor_PcbID.Value",
             "FruId": 1,
-            "FruName": "E810XXVDA2G1P5",
+            "FruName": "MCX755106AS-HEAT",
             "ConnectorGroupId": "${GroupId}",
-            "UniqueId": "N/A"
+            "UniqueId": "N/A",
+            "PcbVersion": ".A",
+            "PowerState": 1,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_NetCard.HealthStatus",
+            "Type": 8,
+            "FruDataId": "#/FruData_Fru0"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
@@ -177,7 +208,7 @@
             "PortID": 0,
             "NetDevFuncType": 1,
             "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "25G"
+            "SupportedLinkCapability": "200G"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
@@ -185,7 +216,7 @@
             "PortID": 1,
             "NetDevFuncType": 1,
             "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "25G"
+            "SupportedLinkCapability": "200G"
         },
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
@@ -210,22 +241,6 @@
             "SupplyVoltage": 0,
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
-        },
-        "ThresholdSensor_NicTemp": {
-            "AssertMask": 128,
-            "DeassertMask": 28800,
-            "ReadingMask": 2056,
-            "Linearization": 0,
-            "M": 100,
-            "RBExp": 224,
-            "UpperNoncritical": 105,
-            "PositiveHysteresis": 2,
-            "NegativeHysteresis": 2
-        },
-        "Event_OverTemp": {
-            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
-            "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
-            "Hysteresis": "<=/ThresholdSensor_NicTemp.PositiveHysteresis"
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
@@ -284,6 +299,51 @@
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
             "Condition": 1
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "#/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_Temp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_OMOverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_OpticalModuleTemp.PositiveHysteresis",
+            "LedFaultCode": "q$$"
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "Description": "MCX755106AS-HEAT网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 100,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingRequirement_1_66": {
+            "RequirementId": "${Slot} |> expr((66 << 8) | $1)",
+            "Description": "MCX755106AS-HEAT网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
         }
     }
 }
