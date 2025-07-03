@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.189] - 2025-7-4
+修复nvme盘资源归属无法更新的问题
+
 ## [1.70.188] - 2025-7-2
 修复网卡资源显示异常问题
 
