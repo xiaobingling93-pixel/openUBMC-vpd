@@ -23,7 +23,7 @@
             "Protocol": 6,
             "Revision": "<=/Scanner_SSD_Firmware.Value",
             "PredictedMediaLifeLeftPercent": "<=/Scanner_Remtime.Value",
-            "RefComponent": "#/Component_PCIeCard",
+            "RefComponent": "#/Component_PCIeCard1",
             "Failure": "<=/Scanner_SSD_Fault.Value",
             "PredictiveFailure": "<=/Scanner_SSD_Pre_Fault.Value",
             "VPDChip": "#/Chip_Virtual_SSD",

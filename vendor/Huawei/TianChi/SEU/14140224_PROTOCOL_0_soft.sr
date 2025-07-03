@@ -18,6 +18,22 @@
             "SerialNumber": "",
             "GroupId": 1
         },
+        "Component_PCIeCard1": {
+            "FruId": 255,
+            "Name": "NVMe${Slot}",
+            "Instance": "${Slot}",
+            "BoardId": 65535,
+            "Type": 2,
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "UniqueId": "N/A",
+            "Manufacturer": "",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "",
+            "GroupId": 1
+        },
         "ThresholdSensor_NvmeTemp": {
             "OwnerId": 32,
             "OwnerLun": 0,
