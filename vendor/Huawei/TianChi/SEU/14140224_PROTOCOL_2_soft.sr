@@ -64,7 +64,7 @@
             "Presence": 1
         },
         "Event_NVMeTempHighMinor": {
-            "Reading": "<=/ThresholdSensor_NvmeTemp.Reading",
+            "Reading": "<=/Scanner_Temp.Status;<=/Scanner_Temp.Value |> expr($1 != 0 ? 20 : ($2 >= 128 ? (-(255 - $2 + 1)) : ($2 >= 85 ? 20 : $2 )))",
             "@Default": {
                 "Condition": 84
             },
@@ -76,7 +76,7 @@
             "DescArg4": "#/ThresholdSensor_NvmeTemp.UpperNoncritical"
         },
         "Event_NVMeTempHighMajor": {
-            "Reading": "<=/ThresholdSensor_NvmeTemp.Reading",
+            "Reading": "<=/Scanner_Temp.Status;<=/Scanner_Temp.Value |> expr($1 != 0 ? 20 : ($2 >= 128 ? (-(255 - $2 + 1)) : $2))",
             "@Default": {
                 "Condition": 85
             },
@@ -88,11 +88,20 @@
             "DescArg4": "#/ThresholdSensor_NvmeTemp.UpperCritical"
         },
         "Event_NVMeTempFail": {
-            "Reading": "<=/Scanner_Temp.Status",
+            "Reading": "<=/Scanner_SSD_Enabled.Value; <=/Scanner_Temp.Status |> expr((($1 != 0) && ($2 == 1)) ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/Component_PCIeCard.Name"
+        },
+        "Event_VPDReadFail": {
+            "Reading": "<=/Scanner_SSD_ReadVPDFail.Status |> expr(($1 != 1 && $1 != 0) ? 255 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255
         }
     }
 }

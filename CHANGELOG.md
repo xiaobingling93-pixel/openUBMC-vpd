@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.190] - 2025-7-5
+修复nvme盘告警读值表达式有误的问题
+
 ## [1.70.189] - 2025-7-4
 修复nvme盘资源归属无法更新的问题
 

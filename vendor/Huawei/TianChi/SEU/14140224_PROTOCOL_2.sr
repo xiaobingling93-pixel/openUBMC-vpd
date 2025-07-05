@@ -45,6 +45,29 @@
             "ReadTmout": 100,
             "HealthStatus": 0
         },
+        "Scanner_SSD_Enabled": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 0,
+            "Size": 8,
+            "Mask": 255,
+            "Type": 1,
+            "Period": 2000,
+            "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 0
+        },
+        "Scanner_SSD_ReadVPDFail": {
+            "Chip": "#/Chip_Virtual_SSD",
+            "Offset": 0,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 5000,
+            "FailureDebounceCount": 8,
+            "SuccessDebounceCount": 1,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
+        },
         "Scanner_SSD_Firmware": {
             "Chip": "#/Chip_SSD",
             "Offset": 39,
@@ -53,6 +76,8 @@
             "Type": 1,
             "Period": 60000,
             "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
         },
         "Scanner_Remtime": {
@@ -63,6 +88,8 @@
             "Type": 0,
             "Period": 2000,
             "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
         },
         "Chip_Temp": {
@@ -81,7 +108,9 @@
             "Type": 0,
             "Period": 2000,
             "Debounce": "#/MidAvg_DiskTemp",
-            "Value": 0
+            "NominalValue": 20,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "Value": 20
         },
         "MidAvg_DiskTemp": {
             "WindowSize": 3,
@@ -115,7 +144,7 @@
         },
         "CoolingRequirement_1_60": {
             "RequirementId": "${Slot} |> expr((60 << 8) | $1)",
-            "MonitoringStatus": "<=/Scanner_Temp.Value |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringStatus": "<=/Scanner_Temp.Status; <=/Scanner_Temp.Value |> expr(($1 == 1 || $2 >= 255) ? 1 : 0)",
             "MonitoringValue": "<=/Scanner_Temp.Value",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 68,
@@ -133,6 +162,8 @@
             "Type": 0,
             "Period": 2000,
             "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
         },
         "Scanner_SSD_Pre_Fault": {
@@ -143,7 +174,13 @@
             "Type": 0,
             "Period": 2000,
             "Debounce": "None",
+            "NominalValue": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
+        },
+        "Event_VPDReadFail": {
+            "EventKeyId": "Disk.VPDReadFail",
+            "Condition": 1
         }
     },
     "SmcDfxInfo_NVMe": {
