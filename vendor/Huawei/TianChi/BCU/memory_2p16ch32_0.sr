@@ -2998,6 +2998,166 @@
             "AssertMask": 227,
             "DeassertMask": 227,
             "DiscreteMask": 227
+        },
+        "Event_MemoryRAS1CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS2CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS3CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS4CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS5CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS6CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS7CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS8CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS9CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS10CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS11CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS12CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS13CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS14CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS15CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS16CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS17CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS18CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS19CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "050"
+        },
+        "Event_MemoryRAS20CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "051"
+        },
+        "Event_MemoryRAS21CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS22CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS23CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "070"
+        },
+        "Event_MemoryRAS24CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "071"
+        },
+        "Event_MemoryRAS25CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS26CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS27CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "150"
+        },
+        "Event_MemoryRAS28CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "151"
+        },
+        "Event_MemoryRAS29CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS30CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS31CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "170"
+        },
+        "Event_MemoryRAS32CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "171"
         }
     }
 }

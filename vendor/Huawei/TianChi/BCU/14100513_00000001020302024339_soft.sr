@@ -171,6 +171,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_1.SerialNumber"
         },
         "MemoryRAS_2": {
@@ -188,6 +189,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_2.SerialNumber"
         },
         "MemoryRAS_3": {
@@ -205,6 +207,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_3.SerialNumber"
         },
         "MemoryRAS_4": {
@@ -222,6 +225,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_4.SerialNumber"
         },
         "MemoryRAS_5": {
@@ -239,6 +243,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_5.SerialNumber"
         },
         "MemoryRAS_6": {
@@ -256,6 +261,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_6.SerialNumber"
         },
         "MemoryRAS_7": {
@@ -273,6 +279,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_7.SerialNumber"
         },
         "MemoryRAS_8": {
@@ -290,6 +297,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_8.SerialNumber"
         },
         "MemoryRAS_9": {
@@ -307,6 +315,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_9.SerialNumber"
         },
         "MemoryRAS_10": {
@@ -324,6 +333,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_10.SerialNumber"
         },
         "MemoryRAS_11": {
@@ -341,6 +351,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_11.SerialNumber"
         },
         "MemoryRAS_12": {
@@ -358,6 +369,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_12.SerialNumber"
         },
         "MemoryRAS_13": {
@@ -375,6 +387,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_13.SerialNumber"
         },
         "MemoryRAS_14": {
@@ -392,6 +405,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_14.SerialNumber"
         },
         "MemoryRAS_15": {
@@ -409,6 +423,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_15.SerialNumber"
         },
         "MemoryRAS_16": {
@@ -426,6 +441,7 @@
             "PoorContactFault": 0,
             "CorrectableECCStorm": 0,
             "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
             "SerialNumber": "<=/Memory_16.SerialNumber"
         },
         "FruData_CpuBoard": {
@@ -5356,6 +5372,118 @@
             "OperatorId": 5,
             "Enabled": true,
             "Component": "#/Component_ComSystem"
+        },
+        "Event_MemoryRAS1CEStormFault": {
+            "Reading": "<=/MemoryRAS_1.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory1.Name",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS2CEStormFault": {
+            "Reading": "<=/MemoryRAS_2.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory2.Name",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS3CEStormFault": {
+            "Reading": "<=/MemoryRAS_3.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory3.Name",
+            "Component": "#/Component_Memory3"
+        },
+        "Event_MemoryRAS4CEStormFault": {
+            "Reading": "<=/MemoryRAS_4.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory4.Name",
+            "Component": "#/Component_Memory4"
+        },
+        "Event_MemoryRAS5CEStormFault": {
+            "Reading": "<=/MemoryRAS_5.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory5.Name",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS6CEStormFault": {
+            "Reading": "<=/MemoryRAS_6.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory6.Name",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS7CEStormFault": {
+            "Reading": "<=/MemoryRAS_7.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory7.Name",
+            "Component": "#/Component_Memory7"
+        },
+        "Event_MemoryRAS8CEStormFault": {
+            "Reading": "<=/MemoryRAS_8.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory8.Name",
+            "Component": "#/Component_Memory8"
+        },
+        "Event_MemoryRAS9CEStormFault": {
+            "Reading": "<=/MemoryRAS_9.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory9.Name",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS10CEStormFault": {
+            "Reading": "<=/MemoryRAS_10.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory10.Name",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS11CEStormFault": {
+            "Reading": "<=/MemoryRAS_11.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory11.Name",
+            "Component": "#/Component_Memory11"
+        },
+        "Event_MemoryRAS12CEStormFault": {
+            "Reading": "<=/MemoryRAS_12.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory12.Name",
+            "Component": "#/Component_Memory12"
+        },
+        "Event_MemoryRAS13CEStormFault": {
+            "Reading": "<=/MemoryRAS_13.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory13.Name",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS14CEStormFault": {
+            "Reading": "<=/MemoryRAS_14.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory14.Name",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS15CEStormFault": {
+            "Reading": "<=/MemoryRAS_15.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory15.Name",
+            "Component": "#/Component_Memory15"
+        },
+        "Event_MemoryRAS16CEStormFault": {
+            "Reading": "<=/MemoryRAS_16.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "#/Component_Memory16.Name",
+            "Component": "#/Component_Memory16"
         }
     }
 }
