@@ -414,3 +414,4 @@ BMC.BMCTimeSynchronizationFailure
 ExpBoard.ExpBoardFPGASelfTestFailure
 SecurityMoudle.HBRTSelfTestFailed
 SecurityMoudle.TPMSelfTestFailed
+Memory.MemoryCEStormFault

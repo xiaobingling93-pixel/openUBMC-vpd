@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.191] - 2025-7-7
+新增0x01000079告警
+
 ## [1.70.190] - 2025-7-5
 修复nvme盘告警读值表达式有误的问题
 
