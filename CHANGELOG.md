@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.194] - 2025-7-11
+新增适配网卡SWIFT-2502N Pro
+
 ## [1.70.193] - 2025-7-10
 后置2小盘背板硬盘在BMC页面下没有具体信息，硬盘没被raid卡管理到
 
