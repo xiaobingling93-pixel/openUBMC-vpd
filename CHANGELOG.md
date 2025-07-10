@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.193] - 2025-7-10
+后置2小盘背板硬盘在BMC页面下没有具体信息，硬盘没被raid卡管理到
+
 ## [1.70.192] - 2025-7-9
 修复SP625D、SP623Q、MCX623436AN-CDAB的FirmwareVersion为空问题
 
