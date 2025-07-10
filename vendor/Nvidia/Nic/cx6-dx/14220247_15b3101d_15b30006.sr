@@ -89,7 +89,7 @@
             "SubDeviceID": 6,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
-            "FirmwareVersion": "N/A",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
             "Manufacturer": "Nvidia",
             "PartNumber": "N/A",
             "Health": "<=/Component_OCPCard.Health",
