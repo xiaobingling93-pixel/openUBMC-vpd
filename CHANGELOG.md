@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.192] - 2025-7-9
+修复SP625D、SP623Q、MCX623436AN-CDAB的FirmwareVersion为空问题
+
 ## [1.70.191] - 2025-7-7
 新增0x01000079告警
 
