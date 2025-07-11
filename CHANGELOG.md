@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.70.193] - 2025-7-10
+OCP卡(BCM957508-N2100G、SC382)速率单位为GE，SP333速率单位为GE，FC/IB卡（MCX653105A-HDAT、MCX653106A-HDAT）单位为Gb
+
+## [1.70.193] - 2025-7-10
 后置2小盘背板硬盘在BMC页面下没有具体信息，硬盘没被raid卡管理到
 
 ## [1.70.192] - 2025-7-9
