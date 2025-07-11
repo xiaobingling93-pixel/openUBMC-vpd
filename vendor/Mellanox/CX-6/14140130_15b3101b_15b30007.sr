@@ -171,12 +171,12 @@
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
             "Name": "MCX653105A-HDAT",
             "Manufacturer": "Mellanox",
-            "Description": "1*200GE",
+            "Description": "1*200Gb",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
             "Model": "CX6-DX",
-            "ModelDescription": "1*200GE",
+            "ModelDescription": "1*200Gb",
             "ChipVendor": "Mellanox",
             "ChipManufacturer": "Mellanox",
             "NetworkPortCount": 1,
@@ -216,7 +216,7 @@
             "Name": "N/A",
             "Manufacturer": "Mellanox",
             "Type": "PCIeCard",
-            "Description": "1*200GE",
+            "Description": "1*200Gb",
             "PartNumber": "06310158",
             "LogicVersion": "N/A",
             "SRVersion": "",
@@ -240,7 +240,7 @@
             "PortID": 0,
             "NetDevFuncType": 32,
             "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "200G"
+            "SupportedLinkCapability": "200Gb"
         },
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
