@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.197] - 2025-7-12
+修复硬盘冗余块低于阈值的闪现告警问题
+
 ## [1.70.196] - 2025-7-12
 修复PCIe卡的9555告警无法区分槽位
 BMC WEB 上传感器的NIC OM Temp显示数量不正确
