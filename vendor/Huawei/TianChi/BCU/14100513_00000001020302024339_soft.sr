@@ -961,7 +961,8 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/Pmu_1.SFPMaxTemperature |> expr($1 > 255 ? 128 : $1)",
-            "ReadingStatus": "<=/Pmu_1.SFPMaxTemperature |> expr($1 > 255 ? 2 : 0)"
+            "ReadingStatus": "<=/Pmu_1.SFPMaxTemperature |> expr($1 > 255 ? 2 : 0)",
+            "IsValid": "${Slot} |> expr($1 == 1 ? true : false)"
         },
         "ThresholdSensor_CPU1CoreRem": {
             "OwnerId": 32,
