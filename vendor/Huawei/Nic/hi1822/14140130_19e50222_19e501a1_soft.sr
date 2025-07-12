@@ -275,10 +275,22 @@
         "Event_PCA9555ReadFail": {
             "Reading": "<=/Scanner_BoardID.Status",
             "OperatorId": 5,
-            "Enabled": true,
+            "Enabled": false,
             "DescArg1": "#/PCIeCard_1.Name",
             "DescArg2": "PCA9555",
             "Component": "#/Component_ComBMC"
+        },
+        "Event_BoardPCA9555ReadFail": {
+            "Reading": "<=/Scanner_BoardID.Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/PCIeDevice_1.SlotID",
+            "DescArg2": "#/PCIeCard_1.Name",
+            "DescArg3": "PCA9555",
+            "DescArg4": "PCIE Card",
+            "Component": "#/Component_ComBMC",
+            "EventKeyId": "BMC.BMCAccessBoardI2CDeviceFailure",
+            "Condition": 1
         },
         "Event_PcieCardReplaceMntr": {
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",
