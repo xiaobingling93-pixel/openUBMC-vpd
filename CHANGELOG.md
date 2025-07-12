@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.194] - 2025-7-11
+新增适配网卡SWIFT-2502N Pro
+
 ## [1.70.193] - 2025-7-10
 OCP卡(BCM957508-N2100G、SC382)速率单位为GE，SP333速率单位为GE，FC/IB卡（MCX653105A-HDAT、MCX653106A-HDAT）单位为Gb
 
