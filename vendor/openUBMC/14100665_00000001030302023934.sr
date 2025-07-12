@@ -3884,6 +3884,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_1.SLCSpareBlockPercentage;<=/Drive_1.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive0.Name",
@@ -3894,6 +3897,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_2.SLCSpareBlockPercentage;<=/Drive_2.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive1.Name",
@@ -3904,6 +3910,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_3.SLCSpareBlockPercentage;<=/Drive_3.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive2.Name",
@@ -3914,6 +3923,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_4.SLCSpareBlockPercentage;<=/Drive_4.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive3.Name",
@@ -3924,6 +3936,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_5.SLCSpareBlockPercentage;<=/Drive_5.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive4.Name",
@@ -3934,6 +3949,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_6.SLCSpareBlockPercentage;<=/Drive_6.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive5.Name",
@@ -3944,6 +3962,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_7.SLCSpareBlockPercentage;<=/Drive_7.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive6.Name",
@@ -3954,6 +3975,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_8.SLCSpareBlockPercentage;<=/Drive_8.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive7.Name",
@@ -3964,6 +3988,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_9.SLCSpareBlockPercentage;<=/Drive_9.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive8.Name",
@@ -3974,6 +4001,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_10.SLCSpareBlockPercentage;<=/Drive_10.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive9.Name",
@@ -3984,6 +4014,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_11.SLCSpareBlockPercentage;<=/Drive_11.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive10.Name",
@@ -3994,6 +4027,9 @@
       "EventKeyId": "Disk.DiskSpareBlockLow",
       "Condition": 70,
       "Reading": "<=/Drive_12.SLCSpareBlockPercentage;<=/Drive_12.TLCSpareBlockPercentage;<=/Scanner_PowerGood.Value |> expr(($3 == 1) ? ($1 > $2 ? $2 : $1) : 255) |> expr(($1 > 100) ? 255 : $1)",
+      "@Default": {
+        "Reading": 255
+      },
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive11.Name",
