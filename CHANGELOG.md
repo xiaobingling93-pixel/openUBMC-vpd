@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.198] - 2025-7-14
+-10度低温测试下出现温度超温告警
+
 ## [1.70.197] - 2025-7-12
 修复硬盘冗余块低于阈值的闪现告警问题
 
