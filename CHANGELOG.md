@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.199] - 2025-7-14
+网卡温度告警负值优化
+内存传感器在位事件不关联上下电
+
 ## [1.70.198] - 2025-7-14
 -10度低温测试下出现温度超温告警
 

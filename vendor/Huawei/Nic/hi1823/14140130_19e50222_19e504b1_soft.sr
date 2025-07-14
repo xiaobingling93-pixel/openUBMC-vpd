@@ -94,7 +94,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius"
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 128) ? ($1 - 256) : $1)"
         },
         "ThresholdSensor_OpticalModuleTemp": {
             "OwnerId": 32,
@@ -148,7 +148,7 @@
             "Component": "#/Component_Port2"
         },
         "Event_Hi1822OverTemp": {
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 65 : $1) |> expr($1 & 255)",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 128) ? ($1 - 256) : $1)",
             "@Default": {
                 "Condition": 105
             },
