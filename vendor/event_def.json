@@ -10695,8 +10695,8 @@
                 "Zh": "监测点%1液冷装置发生漏液"
             },
             "Influence": {
-                "En": "The server may break down.",
-                "Zh": "可能导致服务器宕机"
+                "En": "1. The server may break down.@#AB;2. The server or NPU board may be powered off.",
+                "Zh": "1、可能导致服务器系统崩溃。@#AB;2、可能导致服务器或NPU板掉电。"
             },
             "Cause": {
                 "En": "1. The liquid cooling device is damaged.@#AB;2. The leakage detection card is faulty.",
