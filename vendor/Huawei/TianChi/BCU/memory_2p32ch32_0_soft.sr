@@ -3131,224 +3131,224 @@
         "Entity_DIMM000": {
             "Id": 32,
             "Name": "DIMM000",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 96
         },
         "Entity_DIMM010": {
             "Id": 32,
             "Name": "DIMM010",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 97
         },
         "Entity_DIMM020": {
             "Id": 32,
             "Name": "DIMM020",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 98
         },
         "Entity_DIMM030": {
             "Id": 32,
             "Name": "DIMM030",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 99
         },
         "Entity_DIMM040": {
             "Id": 32,
             "Name": "DIMM040",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 100
         },
         "Entity_DIMM050": {
             "Id": 32,
             "Name": "DIMM050",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 101
         },
         "Entity_DIMM060": {
             "Id": 32,
             "Name": "DIMM060",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 102
         },
         "Entity_DIMM070": {
             "Id": 32,
             "Name": "DIMM070",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 103
         },
         "Entity_DIMM080": {
             "Id": 32,
             "Name": "DIMM080",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 104
         },
         "Entity_DIMM090": {
             "Id": 32,
             "Name": "DIMM090",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 105
         },
         "Entity_DIMM0A0": {
             "Id": 32,
             "Name": "DIMM0A0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 106
         },
         "Entity_DIMM0B0": {
             "Id": 32,
             "Name": "DIMM0B0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 107
         },
         "Entity_DIMM0C0": {
             "Id": 32,
             "Name": "DIMM0C0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 108
         },
         "Entity_DIMM0D0": {
             "Id": 32,
             "Name": "DIMM0D0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 109
         },
         "Entity_DIMM0E0": {
             "Id": 32,
             "Name": "DIMM0E0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 110
         },
         "Entity_DIMM0F0": {
             "Id": 32,
             "Name": "DIMM0F0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 111
         },
         "Entity_DIMM100": {
             "Id": 32,
             "Name": "DIMM100",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 112
         },
         "Entity_DIMM110": {
             "Id": 32,
             "Name": "DIMM110",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 113
         },
         "Entity_DIMM120": {
             "Id": 32,
             "Name": "DIMM120",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 114
         },
         "Entity_DIMM130": {
             "Id": 32,
             "Name": "DIMM130",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 115
         },
         "Entity_DIMM140": {
             "Id": 32,
             "Name": "DIMM140",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 116
         },
         "Entity_DIMM150": {
             "Id": 32,
             "Name": "DIMM150",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 117
         },
         "Entity_DIMM160": {
             "Id": 32,
             "Name": "DIMM160",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 118
         },
         "Entity_DIMM170": {
             "Id": 32,
             "Name": "DIMM170",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 119
         },
         "Entity_DIMM180": {
             "Id": 32,
             "Name": "DIMM180",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 120
         },
         "Entity_DIMM190": {
             "Id": 32,
             "Name": "DIMM190",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 121
         },
         "Entity_DIMM1A0": {
             "Id": 32,
             "Name": "DIMM1A0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 122
         },
         "Entity_DIMM1B0": {
             "Id": 32,
             "Name": "DIMM1B0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 123
         },
         "Entity_DIMM1C0": {
             "Id": 32,
             "Name": "DIMM1C0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 124
         },
         "Entity_DIMM1D0": {
             "Id": 32,
             "Name": "DIMM1D0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 125
         },
         "Entity_DIMM1E0": {
             "Id": 32,
             "Name": "DIMM1E0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 126
         },
         "Entity_DIMM1F0": {
             "Id": 32,
             "Name": "DIMM1F0",
-            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "PowerState": 1,
             "Presence": 1,
             "Instance": 127
         },
