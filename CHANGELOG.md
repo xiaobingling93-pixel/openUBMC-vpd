@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.200] - 2025-7-14
+LAAC 告警优化
+
 ## [1.70.199] - 2025-7-14
 网卡温度告警负值优化
 内存传感器在位事件不关联上下电
