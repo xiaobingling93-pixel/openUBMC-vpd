@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.70.200] - 2025-7-14
+SP623Q动态获取FruId，光模块调速表达式修正
+
+## [1.70.200] - 2025-7-14
 LAAC 告警优化
 
 ## [1.70.199] - 2025-7-14
