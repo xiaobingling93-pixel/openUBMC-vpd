@@ -48,6 +48,14 @@
             "WriteInterval": 20,
             "HealthStatus": 0
         },
+        "Accessor_WP": {
+            "Chip": "#/Pca9555_PCIe",
+            "Offset": 1,
+            "Size": 1,
+            "Mask": 8,
+            "Type": 0,
+            "Value": 0
+        },
         "Accessor_PcbID": {
             "Chip": "#/Pca9555_PCIe",
             "Offset": 1,

@@ -9,7 +9,7 @@
         "FruData_Fru0": {
             "FruId": 1,
             "FruDev": "#/Eeprom_NetCard",
-            "EepromWp": 0,
+            "EepromWp": "#/Accessor_WP.Value",
             "BoardPartNumber": "N/A",
             "BoardSerialNumber": "N/A",
             "StorageType": "EepromV2"

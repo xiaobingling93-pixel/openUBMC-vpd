@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.203] - 2025-7-16
+SP623Q网卡fru写保护
+
 ## [1.70.202] - 2025-7-16
 SP681修改Scanner_BoardID防抖策略
 
