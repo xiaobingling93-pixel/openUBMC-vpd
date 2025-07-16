@@ -70,12 +70,13 @@
             "Size": 1,
             "Mask": 255,
             "Type": 0,
-            "Period": 100,
-            "Debounce": "#/Cont_BoardID",
+            "Period": 1000,
+            "Debounce": "#/ContBin_BoardID",
             "Value": 0
         },
-        "Cont_BoardID": {
-            "Num": 5,
+        "ContBin_BoardID": {
+            "NumH": 40,
+            "NumL": 5,
             "DefaultValue": 0
         },
         "PCIeDevice_1": {

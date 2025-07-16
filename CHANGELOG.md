@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [1.70.200] - 2025-7-14
+## [1.70.202] - 2025-7-16
+SP681修改Scanner_BoardID防抖策略
+
+## [1.70.201] - 2025-7-14
 SP623Q动态获取FruId，光模块调速表达式修正
 
 ## [1.70.200] - 2025-7-14
