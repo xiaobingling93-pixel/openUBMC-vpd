@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.13",
+    "Version": "1.0.14",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5076,6 +5076,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "MemoryCEStormFault"
+        },
+        {
+            "EventCode": "0x5D000021",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "ExpandBoard.ExpBoardPowerFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ExpBoardPowerFailure"
         }
     ],
     "EventDescription": [
@@ -13115,6 +13127,25 @@
             "Cause": {
                 "En": "1. The DIMM has poor contact with its slot.@#AB;2. The solder joints between the DIMM chip and the DIMM PCB are aged.@#AB;3. The DRAM chip has physical faults.",
                 "Zh": "1、内存与其插槽接触不良。@#AB;2、内存芯片与内存条PCB板的焊点老化。@#AB;3、内存颗粒故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and reinsert the power cable or the board to power off the device and then power it on.@#AB;2. Replace the expansion board.",
+                "Zh": "1、拔插电源线缆或拔插单板将设备彻底下电再上电。@#AB;2、更换扩展板。"
+            },
+            "EventKeyId": "ExpandBoard.ExpBoardPowerFailure",
+            "Description": {
+                "En": "Expansion board %1 power supply %2 is abnormal.",
+                "Zh": "扩展板%1电源%2输出异常。"
+            },
+            "Influence": {
+                "En": "Services on the expansion board are abnormal.",
+                "Zh": "扩展板上业务功能异常。"
+            },
+            "Cause": {
+                "En": "1. Monitoring signal failure.@#AB;2. Power supply is abnormal.",
+                "Zh": "1、监测信号故障。@#AB;2、电源异常。"
             }
         }
     ]
