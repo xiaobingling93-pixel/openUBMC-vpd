@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.206] - 2025-7-17
+支持电源PG告警信息收集；新增0x5D000021告警
+
 ## [1.70.205] - 2025-7-17
 RAID卡故障告警优化
 
