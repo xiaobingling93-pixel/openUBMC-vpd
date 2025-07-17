@@ -64,8 +64,10 @@
             "Mask": 255,
             "Type": 0,
             "Period": 5000,
-            "FailureDebounceCount": 8,
+            "FailureDebounceCount": 20,
             "SuccessDebounceCount": 1,
+            "NominalValue": 1,
+            "Value": 1,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
         },
         "Scanner_SSD_Firmware": {
