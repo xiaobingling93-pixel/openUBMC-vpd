@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.205] - 2025-7-17
+RAID卡故障告警优化
+
 ## [1.70.204] - 2025-7-17
 修复NVME盘VPD闪现告警
 
