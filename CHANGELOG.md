@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.207] - 2025-7-18
+新增0x1A00006B告警
+
 ## [1.70.206] - 2025-7-17
 支持电源PG告警信息收集；新增0x5D000021告警
 
