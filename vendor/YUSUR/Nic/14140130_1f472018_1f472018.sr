@@ -126,7 +126,7 @@
             "SystemID": 1,
             "PortID": 0,
             "NetDevFuncType": 1,
-            "MediumType": "Copper",
+            "MediumType": "FiberOptic",
             "SupportedLinkCapability": "1GE"
         },
         "NetworkPort_2": {
@@ -134,7 +134,7 @@
             "SystemID": 1,
             "PortID": 1,
             "NetDevFuncType": 1,
-            "MediumType": "Copper",
+            "MediumType": "FiberOptic",
             "SupportedLinkCapability": "1GE"
         },
         "OpticalModule_1": {
