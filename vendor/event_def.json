@@ -5078,6 +5078,18 @@
             "EventName": "MemoryCEStormFault"
         },
         {
+            "EventCode": "0x1A00006B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "BMC.BMCAccessBoardI2CDeviceFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "BMCAccessBoardI2CDeviceFailure"
+        },
+        {
             "EventCode": "0x5D000021",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -5091,6 +5103,25 @@
         }
     ],
     "EventDescription": [
+        {
+            "Suggestion": {
+                "En": "1. If the component holding the I2C device needs to be connected to a power cable, check whether the power cable is connected improperly or is faulty.@#AB;2. Replace the component holding the I2C device.",
+                "Zh": "1、如果I2C器件所在部件需要连接电源线缆，则检查线缆是否连接或故障。@#AB;2、更换I2C器件所在的部件。"
+            },
+            "EventKeyId": "BMC.BMCAccessBoardI2CDeviceFailure",
+            "Description": {
+                "En": "Failed to access I2C %3 on %4 %1(%2).",
+                "Zh": "%4 %1 %2 I2C器件 %3 访问失败。"
+            },
+            "Influence": {
+                "En": "The {BMC} cannot monitor component status.",
+                "Zh": "导致{BMC}无法监控部件状态"
+            },
+            "Cause": {
+                "En": "The I2C link is faulty, or the I2C component is damaged.",
+                "Zh": "I2C链路故障或I2C器件损坏。"
+            }
+        },
         {
             "Suggestion": {
                 "En": "",
