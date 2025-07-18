@@ -65,6 +65,22 @@
             "Debounce": "None",
             "Value": 0
         },
+        "Accessor_Drive0LocateAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Size": 2,
+            "Offset": "${Slot} |> expr($1 == 3 ? 665545869 : 665545871)",
+            "Mask": 3072,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_Drive0FaultAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Size": 2,
+            "Offset": "${Slot} |> expr($1 == 3 ? 665545869 : 665545871)",
+            "Mask": 768,
+            "Type": 0,
+            "Value": 0
+        },
         "Drive_1": {
             "Id": "${Slot} |> expr($1 == 3 ? 40 : 42)",
             "Name": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('Disk%s',$1)",
@@ -73,6 +89,8 @@
             "Presence": "<=/Scanner_Drive0PresentAccessor.Value",
             "LocateLed": "<=/Scanner_Drive0LocateAccessor.Value",
             "FaultLed": "<=/Scanner_Drive0FalutAccessor.Value",
+            "SetLocateLed": "#/Accessor_Drive0LocateAccessor.Value",
+            "SetFaultLed": "#/Accessor_Drive0FaultAccessor.Value",
             "ActivationLed": "<=/Scanner_Drive0ActivationAccessor.Value",
             "TemperatureCelsius": 255,
             "Missing": 0,
@@ -132,6 +150,22 @@
             "Debounce": "None",
             "Value": 0
         },
+        "Accessor_Drive1LocateAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Size": 2,
+            "Offset": "${Slot} |> expr($1 == 3 ? 665545870 : 665545872)",
+            "Mask": 3072,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_Drive1FaultAccessor": {
+            "Chip": "#/Smc_EnclSMC",
+            "Size": 2,
+            "Offset": "${Slot} |> expr($1 == 3 ? 665545870 : 665545872)",
+            "Mask": 768,
+            "Type": 0,
+            "Value": 0
+        },
         "Drive_2": {
             "Id": "${Slot} |> expr($1 == 3 ? 41 : 43)",
             "Name": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('Disk%s',$1)",
@@ -140,6 +174,8 @@
             "Presence": "<=/Scanner_Drive1PresentAccessor.Value",
             "LocateLed": "<=/Scanner_Drive1LocateAccessor.Value",
             "FaultLed": "<=/Scanner_Drive1FalutAccessor.Value",
+            "SetLocateLed": "#/Accessor_Drive1LocateAccessor.Value",
+            "SetFaultLed": "#/Accessor_Drive1FaultAccessor.Value",
             "ActivationLed": "<=/Scanner_Drive1ActivationAccessor.Value",
             "TemperatureCelsius": 255,
             "Missing": 0,
