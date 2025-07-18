@@ -95,7 +95,7 @@
             "DescArg2": "#/Component_PCIeCard.Name"
         },
         "Event_VPDReadFail": {
-            "Reading": "<=/Scanner_SSD_ReadVPDFail.Status |> expr(($1 != 1 && $1 != 0) ? 255 : $1)",
+            "Reading": "<=/Scanner_SSD_ReadVPDFail.Status;<=/Scanner_SSD_ReadVPDFail.Value |> expr(($1 == 1 || ($1 == 0 && $2 == 0)) ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "DescArg2": "#/Component_PCIeCard.Name",
