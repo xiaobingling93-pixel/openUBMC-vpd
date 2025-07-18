@@ -52,7 +52,7 @@
             "Mask": "${Slot} |> expr($1 == 1 ? 4 : 1024)",
             "Type": 0,
             "Value": 0,
-            "Period": 1000,
+            "Period": 2000,
             "Debounce": "#/ContBin_OPOK"
         },
         "ContBin_OPOK": {
