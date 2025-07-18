@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.208] - 2025-7-18
+OPOK告警优化，电源内部故障时不做告警
+
 ## [1.70.207] - 2025-7-18
 新增0x1A00006B告警
 
