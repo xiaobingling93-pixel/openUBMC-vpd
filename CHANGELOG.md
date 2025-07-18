@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.209] - 2025-7-18
+修复swift-2200n网口类型配置错误问题
+
 ## [1.70.208] - 2025-7-18
 OPOK告警优化，电源内部故障时不做告警
 
