@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.212] - 2025-7-19
+修复0x28000025告警描述
+
 ## [1.70.211] - 2025-7-19
 新增电源固件支持升级功能
 
