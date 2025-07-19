@@ -1161,6 +1161,12 @@
             "Name": "Vrd",
             "RevisionNumber": 0
         },
+        "FirmwareComponentInfo_VDM": {
+            "ComponentID": 29,
+            "ComponentIDEx": 486539269,
+            "Name": "Vdm",
+            "RevisionNumber": 0
+        },
         "FirmwareComponentInfo_WhiteBranding": {
             "ComponentID": 17,
             "ComponentIDEx": 4294967295,
