@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.14",
+    "Version": "1.0.15",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -10064,7 +10064,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the PCIe or SDI card serial cable is connected.@#AB;2. Check whether the PCIe or SDI card serial cable is connected to a wrong port.@#AB;3.Replace the  PCIe or SDI card serial cable.",
+                "En": "1. Check whether the PCIe card serial cable is connected.@#AB;2. Check whether the PCIe card serial cable is connected to a wrong port.@#AB;3.Replace the  PCIe card serial cable.",
                 "Zh": "1、检查PCIe卡串口线缆是否在位。@#AB;2、检查PCIe卡串口线缆是否插错端口。@#AB;3、更换该PCIe卡串口线缆。"
             },
             "EventKeyId": "PCIeCard.CableSdiIncorrectConnection",
@@ -10077,13 +10077,13 @@
                 "Zh": "无法通过BMC重定向到Pcie卡系统串口进行配置和问题定位。"
             },
             "Cause": {
-                "En": "1.The PCIe or SDI card serial cable is not connected.@#AB;2.ThePCIe or SDI card serial cable is incorrectly connected.@#AB;3.The PCIe or SDI card serial cable is faulty.",
-                "Zh": "1、PCIe或者SDI卡串口线缆没有连接。@#AB;2、PCIe或者SDI卡串口线缆没有连接正确。@#AB;3、PCIe或者SDI卡线缆出现故障。"
+                "En": "1.The PCIe card serial cable is not connected.@#AB;2.The PCIe card serial cable is incorrectly connected.@#AB;3.The PCIe card serial cable is faulty.",
+                "Zh": "1、PCIe卡串口线缆没有连接。@#AB;2、PCIe卡串口线缆没有连接正确。@#AB;3、PCIe卡线缆出现故障。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然存在，建议更换PCIe设备计算卡。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardCPUMajor",
@@ -10092,17 +10092,17 @@
                 "Zh": "PCIe卡%1 %2上的CPU存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI system may be running abnormally.",
+                "En": "The PCIe card system may be running abnormally.",
                 "Zh": "PCIe设备系统运行可能异常。"
             },
             "Cause": {
-                "En": "1. There is a CPU fault or a memory fault.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、CPU故障或内存故障。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. There is a CPU fault or a memory fault.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、CPU故障或内存故障。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Power off and then power on the server, and observe whether the alarms are cleared.@#AB;2. Replace the SDI computing card if the fault persists after the server is powered on.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Power off and then power on the server, and observe whether the alarms are cleared.@#AB;2. Replace the PCIe computing card if the fault persists after the server is powered on.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1 、下电再上电服务器，观测告警是否清除。@#AB;2、如果上电后异常仍然存在，建议更换PCIe设备计算卡。@#AB;3、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardCPUMinor",
@@ -10111,17 +10111,17 @@
                 "Zh": "PCIe卡%1 %2上的CPU存在一般异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI system may be running abnormally.",
+                "En": "The PCIe card system may be running abnormally.",
                 "Zh": "PCIe设备系统运行可能异常。"
             },
             "Cause": {
-                "En": "1. There is a CPU fault or a memory fault.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、CPU故障或内存故障。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. There is a CPU fault or a memory fault.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、CPU故障或内存故障。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然存在，建议更换PCIe设备计算卡。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardCPUCritical",
@@ -10130,17 +10130,17 @@
                 "Zh": "PCIe卡%1 %2上的CPU存在紧急异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI system may be running abnormally.",
+                "En": "The PCIe card system may be running abnormally.",
                 "Zh": "PCIe设备系统运行可能异常。"
             },
             "Cause": {
-                "En": "1. There is a CPU fault or a memory fault or temperature anomaly.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、CPU故障或内存故障或温度异常。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. There is a CPU fault or a memory fault or temperature anomaly.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、CPU故障或内存故障或温度异常。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然存在，建议更换PCIe设备计算卡。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardMemoryMinor",
@@ -10159,7 +10159,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然 存在，建议更换PCIe设备计算卡。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardMemoryMajor",
@@ -10178,7 +10178,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the drive of the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the drive of the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然存在，建议更换PCIe设备计算卡硬盘。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardDiskMajor",
@@ -10187,12 +10187,12 @@
                 "Zh": "PCIe卡%1 %2上的硬盘存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "1. There is a risk of failure in writing data to the local drive of the SDI card. The failure will  cause the logging function to fail.@#AB;2. Operation of the SDI services becomes less reliable.",
+                "En": "1. There is a risk of failure in writing data to the local drive of the PCIe card. The failure will  cause the logging function to fail.@#AB;2. Operation of the PCIe services becomes less reliable.",
                 "Zh": "1、PCIe设备本地硬盘写入数据存在风险，日志可能无法记录。@#AB;2、PCIe设备业务运行可靠性降低。"
             },
             "Cause": {
-                "En": "1. The drive is damaged.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、硬盘损坏。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. The drive is damaged.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、硬盘损坏。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
@@ -10444,7 +10444,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the optical module and the peer port on the switch are normal.@#AB;2. Check whether the SDI NIC firmware version is compatible with the SDI NIC driver version.@#AB;3. Replace the optical module, copper cable, or SDI card.@#AB;4. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the optical module and the peer port on the switch are normal.@#AB;2. Check whether the PCIe NIC firmware version is compatible with the PCIe NIC driver version.@#AB;3. Replace the optical module, copper cable, or PCIe card.@#AB;4. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、检查光模块和交换机端口是否异常。@#AB;2、检查网卡固件和驱动版本是否配套。@#AB;3、更换光模块、铜缆或者PCIe设备网络卡。@#AB;4、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardNetCardMinor",
@@ -10453,17 +10453,17 @@
                 "Zh": "PCIe卡%1 %2上的网卡存在一般异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI NIC may function abnormally.",
+                "En": "The PCIe NIC may function abnormally.",
                 "Zh": "PCIe设备网络功能可能异常。"
             },
             "Cause": {
-                "En": "1. The optical module or copper cable is abnormal.@#AB;2. The port on the peer switch is abnormal.@#AB;3. The network port driver in the system is not loaded correctly.@#AB;4. The SDI NIC firmware version is not compatible with the SDI NIC driver version.@#AB;5. Other unknown  causes.",
+                "En": "1. The optical module or copper cable is abnormal.@#AB;2. The port on the peer switch is abnormal.@#AB;3. The network port driver in the system is not loaded correctly.@#AB;4. The PCIe NIC firmware version is not compatible with the PCIe NIC driver version.@#AB;5. Other unknown  causes.",
                 "Zh": "1、光模块或者铜缆异常。@#AB;2、对端交换机端口异常。@#AB;3、系统内网口 驱动未正确加载。@#AB;4、网卡固件和驱动不匹配。@#AB;5、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the optical module and the peer port on the switch are normal.@#AB;2. Replace the optical module, copper cable, or SDI NIC.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the optical module and the peer port on the switch are normal.@#AB;2. Replace the optical module, copper cable, or PCIe NIC.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、检查光模块和交换机端口是否异常。@#AB;2、更换光模块、铜缆或者PCIe设备网络卡。@#AB;3、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardNetCardMajor",
@@ -10472,17 +10472,17 @@
                 "Zh": "PCIe卡%1 %2上的网卡存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI NIC may function abnormally.",
+                "En": "The PCIe NIC may function abnormally.",
                 "Zh": "PCIe设备网络功能可能异常。"
             },
             "Cause": {
-                "En": "1. The SDI NIC or the optical module is abnormal.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、网卡异常或光模块异常。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. The PCIe NIC or the optical module is abnormal.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、网卡异常或光模块异常。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Replace the SDI NIC.@#AB;2. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Replace the PCIe NIC.@#AB;2. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、更换PCIe设备网络卡。@#AB;2、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardNetCardCritical",
@@ -10491,17 +10491,17 @@
                 "Zh": "PCIe卡%1 %2上的网卡存在紧急异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI NIC may function abnormally.",
+                "En": "The PCIe NIC may function abnormally.",
                 "Zh": "1、更换PCIe设备网络卡。@#AB;2、请联系厂商技术支持工程师。"
             },
             "Cause": {
-                "En": "1. The SDI NIC is abnormal.@#AB;2. The MCU is abnormal.@#AB;3. Other unknown  causes.",
+                "En": "1. The PCIe NIC is abnormal.@#AB;2. The MCU is abnormal.@#AB;3. Other unknown  causes.",
                 "Zh": "1、网卡异常。@#AB;2、MCU异常。@#AB;3、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the software package is correctly installed.@#AB;2. If the software package is correctly installed, collect logs, restart the system, and check whether the exception persists.@#AB;3. Replace the drive of the SDI computing card if the fault persists after the server is restarted.@#AB;4. If the problem persists after you replace the drive of the SDI computing card, replace the SDI computing card.@#AB;5. If the fault does not persist after the system is restarted, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the software package is correctly installed.@#AB;2. If the software package is correctly installed, collect logs, restart the system, and check whether the exception persists.@#AB;3. Replace the drive of the PCIe computing card if the fault persists after the server is restarted.@#AB;4. If the problem persists after you replace the drive of the PCIe computing card, replace the PCIe computing card.@#AB;5. If the fault does not persist after the system is restarted, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、确认软件包是否正确安装。@#AB;2、软件包正确安装的情况下，收集日志后重启系统，观测异常是否持续。@#AB;3、如果重启后异常仍然存在，建议先更换PCIe设备计算卡硬盘。@#AB;4、如果更换PCIe设备计算卡硬盘无法解决，再更换PCIe设备计算卡。@#AB;5、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardStartingMinor",
@@ -10510,17 +10510,17 @@
                 "Zh": "PCIe卡%1 %2的启动阶段存在一般异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI firmware becomes less reliable.",
+                "En": "The PCIe firmware becomes less reliable.",
                 "Zh": "PCIe设备固件可靠性降低。"
             },
             "Cause": {
-                "En": "1. The drive or the flash memory is damaged.@#AB;2. The drive has reached its end of service.@#AB;3. The OS files on the drive are damaged.@#AB;4. The SDI software package is not deployed.@#AB;5. Other unknown  causes.",
+                "En": "1. The drive or the flash memory is damaged.@#AB;2. The drive has reached its end of service.@#AB;3. The OS files on the drive are damaged.@#AB;4. The PCIe software package is not deployed.@#AB;5. Other unknown  causes.",
                 "Zh": "1、硬盘或flash损坏。@#AB;2、硬盘寿命耗尽。@#AB;3、硬盘内OS文件损坏。@#AB;4、未部署PCIe设备软件包。@#AB;5、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. If the PXE boot fails, check the network.@#AB;2. If the OS fails to be started, check whether the OS files are normal.@#AB;3. If the BIOS fails to be booted, check whether the fault persists after the restart.@#AB;4. If the BIOS upgrade fails, upgrade the BIOS firmware again. If the BIOS upgrade still fails, it is advised to replace the computing board of the SDI.@#AB;5. If the fault persists, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. If the PXE boot fails, check the network.@#AB;2. If the OS fails to be started, check whether the OS files are normal.@#AB;3. If the BIOS fails to be booted, check whether the fault persists after the restart.@#AB;4. If the BIOS upgrade fails, upgrade the BIOS firmware again. If the BIOS upgrade still fails, it is advised to replace the computing board of the PCIe.@#AB;5. If the fault persists, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、若PXE引导失败，请排查网络。@#AB;2、若OS启动失败，请排查OS文件是否正常。@#AB;3、若BIOS启动失败，重启后观测异常是否持续。@#AB;4、如BIOS升级失败，则需要重新升级BIOS固件，如果还是升级失败，则建议更换PCIe设备计算卡。@#AB;5、以上排查未解决，请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardStartingMajor",
@@ -10529,17 +10529,17 @@
                 "Zh": "PCIe卡%1 %2的启动阶段存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "The SDI card cannot be started.",
+                "En": "The PCIe card cannot be started.",
                 "Zh": "PCIe设备无法启动。"
             },
             "Cause": {
-                "En": "1. The drive or the flash memory is damaged.@#AB;2. The drive has reached its end of service.@#AB;3. The OS files on the drive are damaged.@#AB;4. The SDI software package is not deployed.@#AB;5. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、硬盘或flash损坏。@#AB;2、硬盘寿命耗尽。@#AB;3、硬盘内OS文件损坏。@#AB;4、未部署PCIe设备软件包。@#AB;5、详细原因参考《SDI故障码手册》。"
+                "En": "1. The drive or the flash memory is damaged.@#AB;2. The drive has reached its end of service.@#AB;3. The OS files on the drive are damaged.@#AB;4. The PCIe software package is not deployed.@#AB;5. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、硬盘或flash损坏。@#AB;2、硬盘寿命耗尽。@#AB;3、硬盘内OS文件损坏。@#AB;4、未部署PCIe设备软件包。@#AB;5、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Upgrade the MCU firmware of the SDI computing card.@#AB;2. Replace the SDI computing card.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Upgrade the MCU firmware of the PCIe computing card.@#AB;2. Replace the PCIe computing card.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、重新升级PCIe设备计算卡MCU固件。@#AB;2、更换PCIe设备计算卡。@#AB;3、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardMcuMinor",
@@ -10548,7 +10548,7 @@
                 "Zh": "PCIe卡%1 %2上MCU存在一般异常,%3 %4。"
             },
             "Influence": {
-                "En": "1. The SDI card may not function properly.@#AB;2. The SDI monitoring and management functions are impaired.",
+                "En": "1. The PCIe card may not function properly.@#AB;2. The PCIe monitoring and management functions are impaired.",
                 "Zh": "1、PCIe设备可能无法正常运行。@#AB;2、PCIe设备的监控管理功能受损。"
             },
             "Cause": {
@@ -10558,7 +10558,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. If the MCU runs abnormally, replace the SDI computing card.@#AB;2. If the VRD runs abnormally, it is advised to power on and off the VRD by using DC. If the fault persists, power on and off the VRD by using AC. If the fault still persists, it is advised to replace the computing board of the SDI.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. If the MCU runs abnormally, replace the PCIe computing card.@#AB;2. If the VRD runs abnormally, it is advised to power on and off the VRD by using DC. If the fault persists, power on and off the VRD by using AC. If the fault still persists, it is advised to replace the computing board of the PCIe.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、如果MCU类异常，更换PCIe设备计算卡。@#AB;2、如果VRD类异常，建议先DC上下电恢复，如果不行 再AC上下电恢复，如果还未恢复，则建议更换SDI的计算板@#AB;3、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardMcuMajor",
@@ -10567,12 +10567,12 @@
                 "Zh": "PCIe卡%1 %2上MCU存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "1. The SDI card may not function properly.@#AB;2. The SDI monitoring and management functions are impaired.",
+                "En": "1. The PCIe card may not function properly.@#AB;2. The PCIe monitoring and management functions are impaired.",
                 "Zh": "1、PCIe设备可能无法正常运行。@#AB;2、PCIe设备的监控管理功能受损。"
             },
             "Cause": {
-                "En": "1. The MCU is damaged.@#AB;2. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、MCU损坏。@#AB;2、详细原因参考《SDI故障码手册》。"
+                "En": "1. The MCU is damaged.@#AB;2. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、MCU损坏。@#AB;2、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
@@ -10590,8 +10590,8 @@
                 "Zh": "单板可能过热下电。"
             },
             "Cause": {
-                "En": "1. The board power consumption is too high.@#AB;2. The main chip of the board is abnormal.@#AB;3. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、单板功耗过高。@#AB;2、单板主芯片异常。@#AB;3、详细原因参考《SDI故 障码手册》。"
+                "En": "1. The board power consumption is too high.@#AB;2. The main chip of the board is abnormal.@#AB;3. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、单板功耗过高。@#AB;2、单板主芯片异常。@#AB;3、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
@@ -10615,7 +10615,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the SDI card is correctly powered on.@#AB;2. Power off and then power on the server, and check whether the alarm is cleared.@#AB;3. Power off and then power on the server by removing and inserting the power cable, and check whether the alarm is cleared.@#AB;4. Replace the SDI card.@#AB;5. If the problem persists, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the PCIe card is correctly powered on.@#AB;2. Power off and then power on the server, and check whether the alarm is cleared.@#AB;3. Power off and then power on the server by removing and inserting the power cable, and check whether the alarm is cleared.@#AB;4. Replace the PCIe card.@#AB;5. If the problem persists, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、请检查PCIe设备是否正确上电。@#AB;2、下电再上电服务器，查看告警是否消失。@#AB;3、通过插拔电源线的方式将服务器彻底下电再上电，查看告警是否消失。@#AB;4、更换PCIe设备。@#AB;5、以上手段均未解决，请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardVoltageMajor",
@@ -10624,17 +10624,17 @@
                 "Zh": "PCIe卡%1 %2上电压存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "Operation of the SDI computing card is unstable, the device may power off, and the system runs abnormally.",
+                "En": "Operation of the PCIe computing card is unstable, the device may power off, and the system runs abnormally.",
                 "Zh": "PCIe设备运行不稳，设备可能掉电，系统运行异常。"
             },
             "Cause": {
-                "En": "1. A power component is faulty.@#AB;2. The MCU ADC module is faulty.@#AB;3. For details about the  causes, see the SDI Error Codes Manual.",
-                "Zh": "1、电源 器件失效。@#AB;2、MCU ADC模块失效。@#AB;3、详细原因参考《SDI故障码手册》。"
+                "En": "1. A power component is faulty.@#AB;2. The MCU ADC module is faulty.@#AB;3. For details about the  causes, see the alarm documents related to PCIe card.",
+                "Zh": "1、电源 器件失效。@#AB;2、MCU ADC模块失效。@#AB;3、详细原因参考PCIe卡相关告警文档。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Check whether power-related alarms are generated on the server and SDI card.@#AB;2. Clear the related power alarms and then check whether this alarm is cleared.@#AB;3. Power off and then power on the device, and check whether the alarm is cleared.@#AB;4. Replace the SDI computing card and NIC.@#AB;5. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether power-related alarms are generated on the server and PCIe card.@#AB;2. Clear the related power alarms and then check whether this alarm is cleared.@#AB;3. Power off and then power on the device, and check whether the alarm is cleared.@#AB;4. Replace the PCIe computing card and NIC.@#AB;5. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、检查服务器和PCIe设备是否存在电源相关告警。@#AB;2、清除相关电源告警后，检查本告警是否清除。@#AB;3、执行下电再上电，检查告警是否清除。@#AB;4、更换PCIe设备计算卡和网络卡。@#AB;5、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardPowerConsumptionMajor",
@@ -10643,17 +10643,17 @@
                 "Zh": "PCIe卡%1 %2上功率存在严重异常,%3 %4。"
             },
             "Influence": {
-                "En": "1. The SDI card may overheat and power off.@#AB;2. The SDI card may be burnt out.",
+                "En": "1. The PCIe card may overheat and power off.@#AB;2. The PCIe card may be burnt out.",
                 "Zh": "1、PCIe设备可能过热下电。@#AB;2、PCIe设备单板可能烧坏。"
             },
             "Cause": {
-                "En": "1. There is a short circuit and overcurrent on the SDI card.@#AB;2. The SDI card fails during power consumption detection.@#AB;3. Other unknown  causes.",
+                "En": "1. There is a short circuit and overcurrent on the PCIe card.@#AB;2. The PCIe card fails during power consumption detection.@#AB;3. Other unknown  causes.",
                 "Zh": "1、PCIe设备单板上存在短路过流。@#AB;2、PCIe设备单板功耗检测期间失效。@#AB;3、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the cable between the SDI NIC and the SDI computing card is properly connected. Remove and insert the cable and check whether the alarm is cleared.@#AB;2. Replace the SDI NIC.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the cable between the PCIe NIC and the PCIe computing card is properly connected. Remove and insert the cable and check whether the alarm is cleared.@#AB;2. Replace the PCIe NIC.@#AB;3. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、检查PCIe设备网络卡和PCIe设备计算卡之间的线缆是否插好，重新插拔线缆后观测告警是否清除。@#AB;2、更换PCIe设备网络卡。@#AB;3、请联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardNetworkMinor",
@@ -10666,13 +10666,13 @@
                 "Zh": "1、业务性能降低。@#AB;2、部分业务可能 无法运行。"
             },
             "Cause": {
-                "En": "1. The cable between the SDI NIC and the SDI computing card is not securely connected.@#AB;2. The link between the cards is faulty.@#AB;3. Other unknown  causes.",
+                "En": "1. The cable between the PCIe NIC and the PCIe computing card is not securely connected.@#AB;2. The link between the cards is faulty.@#AB;3. Other unknown  causes.",
                 "Zh": "1、网络卡和计算卡之间的线缆未插稳。@#AB;2、单板链路存在故障。@#AB;3、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the cable between the SDI NIC and the SDI computing card is properly connected. Remove and insert the cable and check whether the alarm is cleared.@#AB;2. Replace the SDI NIC.@#AB;3. If the problem persists, replace the SDI computing card.@#AB;4. Contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Check whether the cable between the PCIe NIC and the PCIe computing card is properly connected. Remove and insert the cable and check whether the alarm is cleared.@#AB;2. Replace the PCIe NIC.@#AB;3. If the problem persists, replace the PCIe computing card.@#AB;4. Contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、检查PCIe设备网络卡和PCIe设备计算卡之间的线缆是否插好，重新插拔线缆后观测告警是否清除。@#AB;2、先更换PCIe设备网络卡。@#AB;3、如果更换PCIe设备网络卡无法解决，再更换PCIe设备计算卡。@#AB;4、请联系厂 商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardNetworkMajor",
@@ -10685,13 +10685,13 @@
                 "Zh": "业务无法运行。"
             },
             "Cause": {
-                "En": "1. The cable between the SDI NIC and the SDI computing card is not securely connected.@#AB;2. The link between the cards is faulty.@#AB;3. Other unknown  causes.",
+                "En": "1. The cable between the PCIe NIC and the PCIe computing card is not securely connected.@#AB;2. The link between the cards is faulty.@#AB;3. Other unknown  causes.",
                 "Zh": "1、网络卡和计算卡之间的线缆未插稳。@#AB;2、单板链路存在故障。@#AB;3、其他未知原因。"
             }
         },
         {
             "Suggestion": {
-                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the drive of the SDI computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
+                "En": "1. Collect logs, restart the system, and observe whether the fault persists.@#AB;2. Replace the drive of the PCIe computing card if the fault persists after the server is restarted.@#AB;3. If the fault does not persist after restarting the system, contact technical engineers of the original equipment manufacturer.",
                 "Zh": "1、收集日志后重启系统，观测异常是否持续。@#AB;2、如果重启后异常仍然存在，建议更换PCIe设备计算卡硬盘。@#AB;3、如果重启后正常，请同步联系厂商技术支持工程师。"
             },
             "EventKeyId": "PCIeCard.PCIeCardDiskMinor",
@@ -10700,7 +10700,7 @@
                 "Zh": "PCIe卡%1 %2上的硬盘存在一般异常,%3 %4。"
             },
             "Influence": {
-                "En": "1. There is a risk of failure in writing data to the local drive of the SDI card. The failure will  cause the logging function to fail.@#AB;2. Operation of the SDI services becomes less reliable.",
+                "En": "1. There is a risk of failure in writing data to the local drive of the PCIe card. The failure will  cause the logging function to fail.@#AB;2. Operation of the PCIe services becomes less reliable.",
                 "Zh": "1、PCIe设备本地硬盘写入数据存在风险，日志可能无法记录。@#AB;2、PCIe设备业务运行可靠性降低。"
             },
             "Cause": {
