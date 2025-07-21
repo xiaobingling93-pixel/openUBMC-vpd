@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.213] - 2025-7-21
+新机型内存适配
+
 ## [1.70.212] - 2025-7-19
 修复0x28000025告警描述
 
