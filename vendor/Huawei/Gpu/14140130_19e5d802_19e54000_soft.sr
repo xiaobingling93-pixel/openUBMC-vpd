@@ -55,7 +55,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I Duo Inference Card)",
+            "DescArg3": "(Atlas 300I A2 Inference Card)",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
@@ -64,11 +64,11 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I Duo Inference Card)",
+            "DescArg3": "(Atlas 300I A2 Inference Card)",
             "Component": "#/Component_PCIeCard"
         },
-        "Event_AiCore0OverTemp": {
-            "Reading": "<=/NPUCard_1.Core0TemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+        "Event_AiCoreOverTemp": {
+            "Reading": "<=/NPU_1.AiCoreTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
             "@Default": {
                 "Reading": 40
             },
@@ -76,12 +76,12 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "3",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "Chip0",
-            "DescArg4": "#/Event_AiCore0OverTemp.Reading",
-            "DescArg5": "#/Event_AiCore0OverTemp.Condition"
+            "DescArg3": "AICORE",
+            "DescArg4": "#/Event_AiCoreOverTemp.Reading",
+            "DescArg5": "#/Event_AiCoreOverTemp.Condition"
         },
-        "Event_AiCore1OverTemp": {
-            "Reading": "<=/NPUCard_1.Core1TemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+        "Event_HBMOverTemp": {
+            "Reading": "<=/NPU_1.HBMTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
             "@Default": {
                 "Reading": 40
             },
@@ -89,12 +89,12 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "3",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "Chip1",
-            "DescArg4": "#/Event_AiCore1OverTemp.Reading",
-            "DescArg5": "#/Event_AiCore1OverTemp.Condition"
+            "DescArg3": "HBM",
+            "DescArg4": "#/Event_HBMOverTemp.Reading",
+            "DescArg5": "#/Event_HBMOverTemp.Condition"
         },
-        "Event_OutletOverTemp": {
-            "Reading": "<=/NPUCard_1.OutletTemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+        "Event_PREDEVOverTemp": {
+            "Reading": "<=/NPU_1.NimBusTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
             "@Default": {
                 "Reading": 40
             },
@@ -102,12 +102,12 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "3",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "Outlet",
-            "DescArg4": "#/Event_OutletOverTemp.Reading",
-            "DescArg5": "#/Event_OutletOverTemp.Condition"
+            "DescArg3": "PREDEV",
+            "DescArg4": "#/Event_PREDEVOverTemp.Reading",
+            "DescArg5": "#/Event_PREDEVOverTemp.Condition"
         },
-        "Event_InletOverTemp": {
-            "Reading": "<=/NPUCard_1.InletTemperatureCelsius |> expr(($1 >= 255) ? 40 : ($1 & 255))",
+        "Event_VRDOverTemp": {
+            "Reading": "<=/NPU_1.VRDChipTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
             "@Default": {
                 "Reading": 40
             },
@@ -115,9 +115,9 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "3",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "Inlet",
-            "DescArg4": "#/Event_InletOverTemp.Reading",
-            "DescArg5": "#/Event_InletOverTemp.Condition"
+            "DescArg3": "VRD",
+            "DescArg4": "#/Event_VRDOverTemp.Reading",
+            "DescArg5": "#/Event_VRDOverTemp.Condition"
         },
         "Event_AirTempFail": {
             "Reading": "<=/NPUCard_1.FaultState |> expr(($1 & 268435456) == 0 ? 0 : 1)",
