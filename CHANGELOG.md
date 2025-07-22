@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.214] - 2025-7-21
+修正24内存通道匹配
+
 ## [1.70.213] - 2025-7-21
 新机型内存适配
 
