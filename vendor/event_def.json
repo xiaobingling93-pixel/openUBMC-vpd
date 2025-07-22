@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.15",
+    "Version": "1.0.16",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -336,6 +336,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "PSULinkAbnormal"
+        },
+        {
+            "EventCode": "0x03000069",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PSUHealthStatusMajorAlarm"
         },
         {
             "EventCode": "0x01000073",
@@ -5671,6 +5683,25 @@
             "Cause": {
                 "En": "AVSBUS and PMBUS links on the mainboard are abnormal.",
                 "Zh": "主板AVSBUS、PMBUS链路异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "If the PSU is faulty, replace the PSU.",
+                "Zh": "更换电源模块。"
+            },
+            "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
+            "Description": {
+                "En": "PSU %1 has critical error (%2).",
+                "Zh": "电源 %1 出现严重问题 (%2)。"
+            },
+            "Influence": {
+                "En": "The power supply to the system is affected, and the server may be powered off unexpectedly.",
+                "Zh": "影响系统供电，可能导致系统异常下电。"
+            },
+            "Cause": {
+                "En": "PSU internal error.",
+                "Zh": "电源内部异常。"
             }
         },
         {

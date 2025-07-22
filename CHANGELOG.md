@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.215] - 2025-7-22
+新增3kw电源告警
+
 ## [1.70.214] - 2025-7-21
 修正24内存通道匹配
 
