@@ -336,7 +336,7 @@
                     "Reading": 136,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_12V0_1"
                     ]
                 },
@@ -344,7 +344,7 @@
                     "Reading": 137,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_12V0_2"
                     ]
                 },
@@ -352,7 +352,7 @@
                     "Reading": 138,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_12V0_3"
                     ]
                 },
@@ -360,7 +360,7 @@
                     "Reading": 139,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_12V0_4"
                     ]
                 },
@@ -368,7 +368,7 @@
                     "Reading": 144,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_3V3"
                     ]
                 },
@@ -376,7 +376,7 @@
                     "Reading": 145,
                     "LedFaultCode": "U10",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_5V0_RESV"
                     ]
                 },
@@ -384,7 +384,7 @@
                     "Reading": 147,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_3V3_RISER1"
                     ]
                 },
@@ -392,7 +392,7 @@
                     "Reading": 149,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_STBY_3V3_RISER"
                     ]
                 },
@@ -400,7 +400,7 @@
                     "Reading": 150,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_STBY_3V3_VRD"
                     ]
                 },
@@ -408,7 +408,7 @@
                     "Reading": 151,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V8_CPU"
                     ]
                 },
@@ -416,7 +416,7 @@
                     "Reading": 152,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V8_CPU_STBYOFF"
                     ]
                 },
@@ -424,7 +424,7 @@
                     "Reading": 153,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU0_TA_CORE_DVFS"
                     ]
                 },
@@ -432,7 +432,7 @@
                     "Reading": 155,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU0_TB_CORE_DVFS"
                     ]
                 },
@@ -440,7 +440,7 @@
                     "Reading": 157,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU0_DVDD_UNCORE_DVFS"
                     ]
                 },
@@ -448,7 +448,7 @@
                     "Reading": 159,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V75_CPU0_DDRVDD_FIX"
                     ]
                 },
@@ -456,7 +456,7 @@
                     "Reading": 161,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V1_CPU0_DDRVDDQ_FIX"
                     ]
                 },
@@ -464,7 +464,7 @@
                     "Reading": 163,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU0_NA_DVDD_AVS"
                     ]
                 },
@@ -472,7 +472,7 @@
                     "Reading": 183,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU0_NB_DVDD_AVS"
                     ]
                 },
@@ -480,7 +480,7 @@
                     "Reading": 185,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU0_NA_AVDD_SDS_FIX"
                     ]
                 },
@@ -488,7 +488,7 @@
                     "Reading": 187,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU0_NB_AVDD_SDS_FIX"
                     ]
                 },
@@ -496,7 +496,7 @@
                     "Reading": 189,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU0_NA_DVDD_AVS"
                     ]
                 },
@@ -504,7 +504,7 @@
                     "Reading": 191,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU0_NB_DVDD_AVS"
                     ]
                 },
@@ -512,7 +512,7 @@
                     "Reading": 193,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU0_NA_AVDD_SDS_FIX"
                     ]
                 },
@@ -520,7 +520,7 @@
                     "Reading": 195,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU0_NB_AVDD_SDS_FIX"
                     ]
                 },
@@ -528,7 +528,7 @@
                     "Reading": 201,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU0_AVDD_ATS_FNPLL"
                     ]
                 },
@@ -536,7 +536,7 @@
                     "Reading": 203,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8/0V75_CPU0_DVDD_ACG_ATS_EFU"
                     ]
                 },
@@ -544,7 +544,7 @@
                     "Reading": 205,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_3V3_CPU0_AVDD_USB_FIX"
                     ]
                 },
@@ -552,7 +552,7 @@
                     "Reading": 207,
                     "LedFaultCode": "UC1",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2/1V8_CPU0_TBTA_GPIO_FIX"
                     ]
                 },
@@ -560,7 +560,7 @@
                     "Reading": 148,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_VCC_3V3_RISER2"
                     ]
                 },
@@ -568,7 +568,7 @@
                     "Reading": 154,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU1_TA_CORE_DVFS"
                     ]
                 },
@@ -576,7 +576,7 @@
                     "Reading": 156,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU1_TB_CORE_DVFS"
                     ]
                 },
@@ -584,7 +584,7 @@
                     "Reading": 158,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU1_DVDD_UNCORE_DVFS"
                     ]
                 },
@@ -592,7 +592,7 @@
                     "Reading": 160,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V75_CPU1_DDRVDD_FIX"
                     ]
                 },
@@ -600,7 +600,7 @@
                     "Reading": 162,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V1_CPU1_DDRVDDQ_FIX"
                     ]
                 },
@@ -608,7 +608,7 @@
                     "Reading": 164,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU1_NA_DVDD_AVS"
                     ]
                 },
@@ -616,7 +616,7 @@
                     "Reading": 184,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU1_NB_DVDD_AVS"
                     ]
                 },
@@ -624,7 +624,7 @@
                     "Reading": 186,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU1_NA_AVDD_SDS_FIX"
                     ]
                 },
@@ -632,7 +632,7 @@
                     "Reading": 188,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU1_NB_AVDD_SDS_FIX"
                     ]
                 },
@@ -640,7 +640,7 @@
                     "Reading": 190,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU1_NA_DVDD_AVS"
                     ]
                 },
@@ -648,7 +648,7 @@
                     "Reading": 192,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V9_CPU1_NB_DVDD_AVS"
                     ]
                 },
@@ -656,7 +656,7 @@
                     "Reading": 194,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU1_NA_AVDD_SDS_FIX"
                     ]
                 },
@@ -664,7 +664,7 @@
                     "Reading": 196,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8_CPU1_NB_AVDD_SDS_FIX"
                     ]
                 },
@@ -672,7 +672,7 @@
                     "Reading": 202,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2_CPU1_AVDD_ATS_FNPLL"
                     ]
                 },
@@ -680,7 +680,7 @@
                     "Reading": 204,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_0V8/0V75_CPU1_DVDD_ACG_ATS_EFU"
                     ]
                 },
@@ -688,7 +688,7 @@
                     "Reading": 206,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_3V3_CPU1_AVDD_USB_FIX"
                     ]
                 },
@@ -696,7 +696,7 @@
                     "Reading": 208,
                     "LedFaultCode": "UC2",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_1V2/1V8_CPU1_TBTA_GPIO_FIX"
                     ]
                 },
@@ -704,7 +704,7 @@
                     "Reading": 182,
                     "LedFaultCode": "U00",
                     "DescArgs": [
-                        "",
+                        "BCU${Slot}",
                         "BCU_V_STBY_1V8"
                     ]
                 }
