@@ -252,6 +252,19 @@
             "Presence": 1,
             "PowerState": 1
         },
+        "Event_PSUPoorContactMinor": {
+            "Reading": "<=/Scanner_PowerGood.Value;<=/OnePower_0.MfrSpecificStatus |> expr($1 == 1 ? (($2 & 128) == 0 ? 1 : 0) : 0)",
+            "OperatorId": 5,
+            "@Default": {
+                "Reading": 255
+            },
+            "InvalidReading": 255,
+            "InvalidReadingIgnore": 1,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
         "Event_PSFailure": {
             "Reading": "<=/OnePower_0.Failure",
             "OperatorId": 5,

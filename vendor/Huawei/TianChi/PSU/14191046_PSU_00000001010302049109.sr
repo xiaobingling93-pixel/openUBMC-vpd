@@ -142,6 +142,22 @@
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 65535
         },
+        "Event_PSUPoorContactMinor": {
+            "EventKeyId": "PSU.PoorContactMinor",
+            "Condition": 1,
+            "LedFaultCode": "P$$",
+            "Reading": "<=/Scanner_PowerGood.Value;<=/OnePower_0.MfrSpecificStatus |> expr($1 == 1 ? (($2 & 128) == 0 ? 1 : 0) : 0)",
+            "OperatorId": 5,
+            "@Default": {
+                "Reading": 255
+            },
+            "InvalidReading": 255,
+            "InvalidReadingIgnore": 1,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "${Slot}",
+            "Component": "#/Component_PowerSupply"
+        },
         "Event_PSFailure": {
             "EventKeyId": "PSU.PSUFault",
             "Reading": "<=/OnePower_0.Failure",
