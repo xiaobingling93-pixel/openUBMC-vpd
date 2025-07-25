@@ -5090,6 +5090,18 @@
             "EventName": "MemoryCEStormFault"
         },
         {
+            "EventCode": "0x0300004D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PoorContactMinor",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUPoorContact"
+        },
+        {
             "EventCode": "0x1A00006B",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -13170,6 +13182,25 @@
             "Cause": {
                 "En": "An internal exception occurs in the HBRT.",
                 "Zh": "HBRT内部异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and reinstall the power module.@#AB;2. Replace the power module",
+                "Zh": "1、重新插拔电源模块。@#AB;2、更换电源模块。"
+            },
+            "EventKeyId": "PSU.PoorContactMinor",
+            "Description": {
+                "En": "Power module %1 is in poor contact.",
+                "Zh": "电源模块%1接触不良。"
+            },
+            "Influence": {
+                "En": "The power supply reliability is affected.",
+                "Zh": "导致电源供电可靠性降低。"
+            },
+            "Cause": {
+                "En": "1. The edge connector of power module is loosely inserted or loose.@#AB;2.The edge connector of power module is contaminated by foreign matter.@#AB;3. The edge connector of power module is deformed or damaged .",
+                "Zh": "1、电源模块金手指存在虚插或松动。@#AB;2、电源模块金手指异物污染。@#AB;3、电源模块金手指变形或损坏。"
             }
         },
         {

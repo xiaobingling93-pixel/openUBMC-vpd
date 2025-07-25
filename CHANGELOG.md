@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.220] - 2025-7-25
+新增0x0300004D电源接触不良告警
+
 ## [1.70.219] - 2025-7-25
 Atlas 300I A2卡BoardProductName修改
 

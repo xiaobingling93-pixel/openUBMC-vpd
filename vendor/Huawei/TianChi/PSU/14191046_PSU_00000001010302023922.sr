@@ -114,6 +114,11 @@
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 65535
         },
+        "Event_PSUPoorContactMinor": {
+            "EventKeyId": "PSU.PoorContactMinor",
+            "Condition": 1,
+            "LedFaultCode": "P$$"
+        },
         "Event_PSFailure": {
             "EventKeyId": "PSU.PSUFault",
             "Condition": 1,
