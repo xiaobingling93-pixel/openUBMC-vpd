@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.219] - 2025-7-25
+Atlas 300I A2卡BoardProductName修改
+
 ## [1.70.218] - 2025-7-25
 刷新兼容性说明
 
