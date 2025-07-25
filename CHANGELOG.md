@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.218] - 2025-7-25
+刷新兼容性说明
+
 ## [1.70.217] - 2025-7-24
 Atlas 300I A2板卡适配
 
