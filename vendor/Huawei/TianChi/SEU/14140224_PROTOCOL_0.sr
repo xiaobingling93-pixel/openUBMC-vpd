@@ -182,32 +182,32 @@
         "Event_VPDReadFail": {
             "EventKeyId": "Disk.VPDReadFail",
             "Condition": 1
-        }
-    },
-    "SmcDfxInfo_NVMe": {
-        "Chip": "#/Chip_SSD",
-        "Offset": 0,
-        "Size": 8,
-        "Period": 2000,
-        "SmcVersion": 100,
-        "Config": {
-            "0": {"ssd_enabled_byte_0": 255},
-            "1": {"failure": 255},
-            "2": {"pre_failure": 255},
-            "3": {"ssd_enabled_byte_3": 255},
-            "4": {"remtime": 255},
-            "5": {"ssd_enabled_byte_5": 255},
-            "6": {"ssd_enabled_byte_6": 255},
-            "7": {"ssd_enabled_byte_7": 255}
         },
-        "Mapping": {
-            "Scanner_SSD_Enabled": {"Value": "expr($ssd_enabled_byte_0 + ($failure << 8) + ($pre_failure << 16) + ($ssd_enabled_byte_3 << 24) + ($remtime << 32) + ($ssd_enabled_byte_5 << 40) + ($ssd_enabled_byte_6 << 48) + ($ssd_enabled_byte_7 << 56))"},
-            "Scanner_Remtime": {"Value": "expr($remtime)"},
-            "Scanner_SSD_Fault": {"Value": "expr($failure)"},
-            "Scanner_SSD_Pre_Fault": {"Value": "expr($pre_failure)"}
-        },
-        "Context": {
-          "SmcVersion": "expr(100)"
+        "SmcDfxInfo_NVMe": {
+            "Chip": "#/Chip_SSD",
+            "Offset": 0,
+            "Size": 8,
+            "Period": 2000,
+            "SmcVersion": 100,
+            "Config": {
+                "1": {"ssd_enabled_byte_0": 255},
+                "2": {"failure": 255},
+                "3": {"pre_failure": 255},
+                "4": {"ssd_enabled_byte_3": 255},
+                "5": {"remtime": 255},
+                "6": {"ssd_enabled_byte_5": 255},
+                "7": {"ssd_enabled_byte_6": 255},
+                "8": {"ssd_enabled_byte_7": 255}
+            },
+            "Mapping": {
+                "Scanner_SSD_Enabled": {"Value": "expr($ssd_enabled_byte_0 + ($failure << 8) + ($pre_failure << 16) + ($ssd_enabled_byte_3 << 24) + ($remtime << 32) + ($ssd_enabled_byte_5 << 40) + ($ssd_enabled_byte_6 << 48) + ($ssd_enabled_byte_7 << 56))"},
+                "Scanner_Remtime": {"Value": "expr($remtime)"},
+                "Scanner_SSD_Fault": {"Value": "expr($failure)"},
+                "Scanner_SSD_Pre_Fault": {"Value": "expr($pre_failure)"}
+            },
+            "Context": {
+            "SmcVersion": "expr(100)"
+            }
         }
     }
 }
