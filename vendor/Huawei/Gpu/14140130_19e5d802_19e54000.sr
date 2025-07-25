@@ -146,7 +146,7 @@
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Health": "<=/Component_PCIeCard.Health",
             "Name": "Atlas 300I A2 ference Card",
-            "BoardName": "<=/FruData_NPUCard.BoardProductName |> expr($1 == '' ? 'IT21PDDA' : $1)",
+            "BoardName": "<=/FruData_NPUCard.BoardProductName |> expr($1 == '' ? 'IT22PDHB' : $1)",
             "Description": "Atlas 300I A2 Inference Card PCI-E 1*16x(FHFL)",
             "FunctionClass": 9,
             "VendorID": 6629,
