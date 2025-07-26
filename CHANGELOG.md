@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.221] - 2025-7-25
+修复DISK failure告警问题
+
 ## [1.70.220] - 2025-7-25
 新增0x0300004D电源接触不良告警
 
