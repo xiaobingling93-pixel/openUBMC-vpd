@@ -6654,8 +6654,8 @@
             },
             "EventKeyId": "CPUBoard.CpuBoardAccessFRULableFailure",
             "Description": {
-                "En": "Failed to obtain electronic label data of CPU board.",
-                "Zh": "CPU板电子标签数据读取失败。"
+                "En": "Failed to obtain electronic label data of CPU board %1.",
+                "Zh": "CPU板%1电子标签数据读取失败。"
             },
             "Influence": {
                 "En": "The system cannot read asset information.",
@@ -6673,8 +6673,8 @@
             },
             "EventKeyId": "ExpandBoard.ExpBoardAccessFRULableFailure",
             "Description": {
-                "En": "Failed to obtain electronic label data of expansion board.",
-                "Zh": "扩展板 电子标签数据读取失败。"
+                "En": "Failed to obtain electronic label data of expansion board %1.",
+                "Zh": "扩展板%1 电子标签数据读取失败。"
             },
             "Influence": {
                 "En": "The system cannot read asset information.",
@@ -7376,8 +7376,8 @@
             },
             "EventKeyId": "CpuBoard.LowerVoltage",
             "Description": {
-                "En": "CPU board voltage (%1 V) at %2 detection point %3 is lower than the undervoltage threshold (%4 V).",
-                "Zh": "CPU板 %2监测点 %3当前电压（%1V）低于低压门限电压（%4）。"
+                "En": "CPU board %5 voltage (%1 V) at %2 detection point %3 is lower than the undervoltage threshold (%4 V).",
+                "Zh": "CPU板%5 %2监测点 %3当前电压（%1V）低于低压门限电压（%4）。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -7395,8 +7395,8 @@
             },
             "EventKeyId": "CpuBoard.OverVoltage",
             "Description": {
-                "En": "CPU board voltage (%1 V) at %2 detection point %3 exceeds the overvoltage threshold (%4 V).",
-                "Zh": "CPU板 %2监测点 %3当前电压（%1V）高于高压门限电压（%4V）。"
+                "En": "CPU board %5 voltage (%1 V) at %2 detection point %3 exceeds the overvoltage threshold (%4 V).",
+                "Zh": "CPU板%5 %2监测点 %3当前电压（%1V）高于高压门限电压（%4V）。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -7414,8 +7414,8 @@
             },
             "EventKeyId": "CpuBoard.GetVoltageFailure",
             "Description": {
-                "En": "Failed to obtain the voltage at %1 detection point %2 on the CPU board.",
-                "Zh": "CPU板 %1监测点 %2电压读取失败。"
+                "En": "Failed to obtain the voltage at %1 detection point %2 on the CPU board %3.",
+                "Zh": "CPU板%3 %1监测点 %2电压读取失败。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -7490,8 +7490,8 @@
             },
             "EventKeyId": "CPUBoard.CpuBoardAccessRTCTimeFailure",
             "Description": {
-                "En": "Failed to obtain the RTC Time on the CPU board.",
-                "Zh": "CPU板RTC时间读取失败。"
+                "En": "Failed to obtain the RTC Time on the CPU board %1.",
+                "Zh": "CPU板%1RTC时间读取失败。"
             },
             "Influence": {
                 "En": "The time accuracy of BMC logs is affected.",
@@ -7585,8 +7585,8 @@
             },
             "EventKeyId": "ExpBoard.ExpBoardOverVoltage",
             "Description": {
-                "En": "Expansion board voltage (%1 V) at %2 detection point %3 exceeds the overvoltage threshold (%4 V). ",
-                "Zh": "扩展板 %2监测点%3当前电压（%1V）高于高压门限电压（%4V）。"
+                "En": "Expansion board %5 voltage (%1 V) at %2 detection point %3 exceeds the overvoltage threshold (%4 V). ",
+                "Zh": "扩展板%5 %2监测点%3当前电压（%1V）高于高压门限电压（%4V）。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -7604,8 +7604,8 @@
             },
             "EventKeyId": "ExpBoard.ExpBoardSoftStartLowerVoltage",
             "Description": {
-                "En": "Expansion board Soft-start circuit voltage at %1 detection point is undervoltage.",
-                "Zh": "扩展板缓起电路电压监控点%1电压过低。"
+                "En": "Expansion board %3 Soft-start circuit voltage at %1 detection point is undervoltage.",
+                "Zh": "扩展板%3缓起电路电压监控点%1电压过低。"
             },
             "Influence": {
                 "En": "The system is powered off.",
@@ -7623,8 +7623,8 @@
             },
             "EventKeyId": "ExpBoard.ExpBoardLowerVoltage",
             "Description": {
-                "En": "Expansion board voltage (%1 V) at %2 detection point %3 is lower than the undervoltage threshold (%4 V).",
-                "Zh": "扩展板 %2监测点%3当前电压（%1V）低于低压门限电压（%4V）。"
+                "En": "Expansion board %5 voltage (%1 V) at %2 detection point %3 is lower than the undervoltage threshold (%4 V).",
+                "Zh": "扩展板%5 %2监测点%3当前电压（%1V）低于低压门限电压（%4V）。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -7661,8 +7661,8 @@
             },
             "EventKeyId": "CpuBoard.CpuBoardRTCLowerVoltage",
             "Description": {
-                "En": "Low voltage of RTC battery on the CPU board.",
-                "Zh": "CPU板RTC电池电压低。"
+                "En": "Low voltage of RTC battery on the CPU board %1.",
+                "Zh": "CPU板%1RTC电池电压低。"
             },
             "Influence": {
                 "En": "The server clock is affected.",
@@ -8839,8 +8839,8 @@
             },
             "EventKeyId": "Disk.DiskBackplanePSFault",
             "Description": {
-                "En": "Power supply to %1 disk backplane %2 failed.",
-                "Zh": "%1硬盘背板%2电源异常。"
+                "En": "Power supply to %1 disk backplane %3 %2 failed.",
+                "Zh": "%1硬盘背板%3%2电源异常。"
             },
             "Influence": {
                 "En": "The related services are affected, or data loss may occur.",
@@ -8858,8 +8858,8 @@
             },
             "EventKeyId": "CpuBoard.CpuBoardPSFault",
             "Description": {
-                "En": "The power supply %1 on the CPU board is abnormal.",
-                "Zh": "CPU板板内电源%1异常。"
+                "En": "The power supply %1 on the CPU board %2 is abnormal.",
+                "Zh": "CPU板%2板内电源%1异常。"
             },
             "Influence": {
                 "En": "The power supply to the system is affected, and the system may be powered off unexpectedly.",
@@ -9010,8 +9010,8 @@
             },
             "EventKeyId": "ExpBoard.ExpBoardAccess3V3Failure",
             "Description": {
-                "En": "Failed to obtain the voltage at %1 detection point %2 on the Expansion board. ",
-                "Zh": "扩展板 %1监测点 %2电压读取失败。"
+                "En": "Failed to obtain the voltage at %1 detection point %2 on the Expansion board %3. ",
+                "Zh": "扩展板%3 %1监测点 %2电压读取失败。"
             },
             "Influence": {
                 "En": "The system may stop responding.",
@@ -9542,8 +9542,8 @@
             },
             "EventKeyId": "FanBoard.FanBoardCPLDSelfTestFailure",
             "Description": {
-                "En": "Abnormal fan backplane CPLD %1 self-check result.",
-                "Zh": "风扇背板CPLD%1自检结果异常。"
+                "En": "Abnormal fan backplane %2 CPLD %1 self-check result.",
+                "Zh": "风扇背板%2CPLD%1自检结果异常。"
             },
             "Influence": {
                 "En": "The fan backplane fails to work.",
@@ -9561,8 +9561,8 @@
             },
             "EventKeyId": "FanBoard.FanBoardSoftStartOverTemp",
             "Description": {
-                "En": "High temperature of soft-start circuit %1 of the fan backplane.",
-                "Zh": "风扇背板缓启电路%1温度过高。"
+                "En": "High temperature of soft-start circuit %1 of the fan backplane %2.",
+                "Zh": "风扇背板%2缓启电路%1温度过高。"
             },
             "Influence": {
                 "En": "The hard disk function of the server is affected.",
@@ -9618,8 +9618,8 @@
             },
             "EventKeyId": "CpuBoard.CpuBoardCPLDSelfTestFailure",
             "Description": {
-                "En": "CPU board CPLD %1 self-check result is abnormal.",
-                "Zh": "CPU板CPLD%1自检结果异常。"
+                "En": "CPU board %2 CPLD %1 self-check result is abnormal.",
+                "Zh": "CPU板%2CPLD%1自检结果异常。"
             },
             "Influence": {
                 "En": "The server cannot start.",
@@ -9998,8 +9998,8 @@
             },
             "EventKeyId": "ExpandBoard.EXPBoardClockSignalLost",
             "Description": {
-                "En": "Expansion board %1 %2 clock signals lost.",
-                "Zh": "扩展板 %1 %2 时钟丢失。"
+                "En": "Expansion board %3 %1 %2 clock signals lost.",
+                "Zh": "扩展板%3 %1 %2 时钟丢失。"
             },
             "Influence": {
                 "En": "The system may stop responding or fail to start.",
@@ -10264,8 +10264,8 @@
             },
             "EventKeyId": "CPUBoard.AccessPowerInvalidMinor",
             "Description": {
-                "En": "The %1 power of CPU Board is invalid.",
-                "Zh": "CPU板%1功率为无效值。"
+                "En": "The %1 power of CPU Board %2 is invalid.",
+                "Zh": "CPU板%2%1功率为无效值。"
             },
             "Influence": {
                 "En": "Fan speed adjustment is affected.",
@@ -10283,8 +10283,8 @@
             },
             "EventKeyId": "ExpandBoard.AccessPowerFailMinor",
             "Description": {
-                "En": "Failed to obtain the %1 power of Expand Board.",
-                "Zh": "扩展板%1功率读取失败。"
+                "En": "Failed to obtain the %1 power of Expand Board %2.",
+                "Zh": "扩展板%2%1功率读取失败。"
             },
             "Influence": {
                 "En": "The power cannot be monitored normally, and fan speed adjustment is affected.",
@@ -10302,8 +10302,8 @@
             },
             "EventKeyId": "ExpandBoard.AccessPowerInvalidMinor",
             "Description": {
-                "En": "The %1 power of Expand Board is invalid.",
-                "Zh": "扩展板%1功率为无效值。"
+                "En": "The %1 power of Expand Board %2 is invalid.",
+                "Zh": "扩展板%2%1功率为无效值。"
             },
             "Influence": {
                 "En": "Fan speed adjustment is affected.",
@@ -10359,8 +10359,8 @@
             },
             "EventKeyId": "CPUBoard.SystemClockOutputTimeOut",
             "Description": {
-                "En": "System clock output of the CPU Board times out.",
-                "Zh": "CPU板系统时钟输出超时。"
+                "En": "System clock output of the CPU Board %1 times out.",
+                "Zh": "CPU板%1系统时钟输出超时。"
             },
             "Influence": {
                 "En": "",

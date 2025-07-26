@@ -30,13 +30,14 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "1",
+            "DescArg2": "${Slot}",
             "@Default":{
                 "Reading": 255
               },
               "InvalidReadingIgnore": 1,
               "InvalidReading": 255,
             "Component": "#/Component_CpuBoard",
-            "AdditionalInfo": "1"
+            "AdditionalInfo": "1,2"
         },
         "Event_MemoryAccessPowerFail": {
             "Reading": "<=/Scanner_MemPwrSensorStatus.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
@@ -51,6 +52,8 @@
             "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "Memory",
+            "DescArg2": "${Slot}",
+            "AdditionalInfo": "1,2",
             "Component": "#/Component_CpuBoard"
         },
         "Event_100MClockFrequencyOffset_0": {
@@ -132,7 +135,9 @@
         "Event_SystemClockOutputTimeOut": {
             "Reading": "<=/Scanner_SystemClockOutputTimeOut.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
             "OperatorId": 5,
+            "DescArg1": "${Slot}",
             "Enabled": true,
+            "AdditionalInfo": "1",
             "Component": "#/Component_CpuBoard"
         },
         "Event_EXU2BCUHisport_0": {
@@ -140,7 +145,7 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "Expand Board",
-            "DescArg3": "CPU Board",
+            "DescArg3": "CPU Board${Slot}",
             "DescArg4": "0",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
@@ -150,7 +155,7 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "Expand Board",
-            "DescArg3": "CPU Board",
+            "DescArg3": "CPU Board${Slot}",
             "DescArg4": "1",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
@@ -159,7 +164,7 @@
             "Reading": "<=/Scanner_BCUHisport_0.Value",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "CPU Board",
+            "DescArg1": "CPU Board${Slot}",
             "DescArg2": "0",
             "DescArg4": "1",
             "AdditionalInfo": "1,4",
@@ -169,7 +174,7 @@
             "Reading": "<=/Scanner_BCUHisport_1.Value",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "CPU Board",
+            "DescArg1": "CPU Board${Slot}",
             "DescArg2": "1",
             "DescArg4": "0",
             "AdditionalInfo": "1,4",

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.222] - 2025-7-25
+无法区分告警槽位
+
 ## [1.70.221] - 2025-7-25
 修复DISK failure告警问题
 
