@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.226] - 2025-7-28
+支持CPU直出光模块故障检测
+
 ## [1.70.225] - 2025-7-28
 修复Atlas 300I Duo卡ProductName
 
