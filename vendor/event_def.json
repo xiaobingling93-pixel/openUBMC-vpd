@@ -5699,12 +5699,12 @@
         },
         {
             "Suggestion": {
-                "En": "If the PSU is faulty, replace the PSU.",
-                "Zh": "更换电源模块。"
+                "En": "Replace the PSU.",
+                "Zh": "电源模块故障，建议更换。"
             },
             "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
             "Description": {
-                "En": "PSU %1 has critical error (%2).",
+                "En": "PSU %1 has major error (%2).",
                 "Zh": "电源 %1 出现严重问题 (%2)。"
             },
             "Influence": {

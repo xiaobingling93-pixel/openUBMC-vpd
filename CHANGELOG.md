@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.223] - 2025-7-28
+修改电源告警0x03000069
+
 ## [1.70.222] - 2025-7-25
 无法区分告警槽位
 
