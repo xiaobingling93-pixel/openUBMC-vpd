@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.225] - 2025-7-28
+修复Atlas 300I Duo卡ProductName
+
 ## [1.70.224] - 2025-7-28
 cx7网卡，下电获取不到温度告警
 新增0x0500001D、0x05000009告警
