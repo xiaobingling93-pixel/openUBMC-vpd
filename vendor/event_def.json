@@ -5124,9 +5124,71 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "ExpBoardPowerFailure"
+        },
+        {
+            "EventCode": "0x0500001D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "DiskBackplane.DiskBackplanePSMinFault",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DiskBackplanePSMinFault"
+        },
+        {
+            "EventCode": "0x05000009",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "DiskBackplane.DiskBackplaneAccessVoltFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DiskBackplaneAccessVoltFailure"
         }
     ],
     "EventDescription": [
+        {
+            "Suggestion": {
+                "En": "1. Remove and reinstall the cables of the disk backplane.@#AB;2. Replace the disk backplane.",
+                "Zh": "1、重新拔插硬盘背板上的线缆。@#AB;2、更换硬盘背板。"
+            },
+            "EventKeyId": "DiskBackplane.DiskBackplanePSMinFault",
+            "Description": {
+                "En": "%1 Hard disk backplane %3 power %2 failure.",
+                "Zh": "%1硬盘背板%3%2电源异常。"
+            },
+            "Influence": {
+                "En": "When low-speed power cable is faulty, the related services are affected, or data loss may occur.",
+                "Zh": "当低速供电线缆异常时，可能导致相关业务无法正常运行或数据丢失。"
+            },
+            "Cause": {
+                "En": "1. The power cable of the disk backplane is in poor contact.@#AB;2. The disk backplane is faulty.",
+                "Zh": "1、硬盘背板电源线接触不良。@#AB;2、硬盘背板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Restart the {BMC}.@#AB;2. Remove and reinstall the cables of the disk backplane. @#AB;3. Replace the disk backplane.",
+                "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换硬盘背板。"
+            },
+            "EventKeyId": "DiskBackplane.DiskBackplaneAccessVoltFailure",
+            "Description": {
+                "En": "Failed to obtain the voltage at %1 detection point on the [%2] disk backplane %3.",
+                "Zh": "[%2]硬盘背板%3 %1电压监测点的电压读取失败。"
+            },
+            "Influence": {
+                "En": "Cannot monitor voltage properly. If the voltage is abnormal, no alarm is generated in time.",
+                "Zh": "无法正常监控电压，如果电压异常时无法及时告警。"
+            },
+            "Cause": {
+                "En": "The hard disk backplane voltage sensor fails or the access channel is abnormal.",
+                "Zh": "硬盘背板电压传感器失效或者访问通道异常。"
+            }
+        },
         {
             "Suggestion": {
                 "En": "1. If the component holding the I2C device needs to be connected to a power cable, check whether the power cable is connected improperly or is faulty.@#AB;2. Replace the component holding the I2C device.",
