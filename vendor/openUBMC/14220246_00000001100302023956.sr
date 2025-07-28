@@ -279,6 +279,34 @@
       "VoltageLowerThresholdCritical": 0,
       "VoltageUpperThresholdCritical": 0
     },
+    "OpticalModuleChannel_1_1": {
+      "@Parent": "OpticalModule_1",
+      "Id": 1,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_1_2": {
+      "@Parent": "OpticalModule_1",
+      "Id": 2,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_1_3": {
+      "@Parent": "OpticalModule_1",
+      "Id": 3,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_1_4": {
+      "@Parent": "OpticalModule_1",
+      "Id": 4,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
     "OpticalModule_2": {
       "@Parent": "NetworkPort_2",
       "ChannelNum": 2,
@@ -291,12 +319,140 @@
       "VoltageLowerThresholdCritical": 0,
       "VoltageUpperThresholdCritical": 0
     },
+    "OpticalModuleChannel_2_1": {
+      "@Parent": "OpticalModule_2",
+      "Id": 1,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_2_2": {
+      "@Parent": "OpticalModule_2",
+      "Id": 2,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_2_3": {
+      "@Parent": "OpticalModule_2",
+      "Id": 3,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "OpticalModuleChannel_2_4": {
+      "@Parent": "OpticalModule_2",
+      "Id": 4,
+      "BiasCurrentMilliAmps": 0,
+      "RXPowerMilliWatts": 0,
+      "TXPowerMilliWatts": 0
+    },
+    "Event_OM1TempHigh": {
+      "EventKeyId": "NICCard.NICCardOMOverTemp",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2TempHigh": {
+      "EventKeyId": "NICCard.NICCardOMOverTemp",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1TempLow": {
+      "EventKeyId": "Port.PortOpticalModuleLowTempAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2TempLow": {
+      "EventKeyId": "Port.PortOpticalModuleLowTempAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
     "Event_OM1PowerAlarm": {
       "EventKeyId": "Port.PortOpticalModulePowerAlarm",
       "Condition": 1,
       "LedFaultCode": "q$$"
     },
     "Event_OM2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Tx1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Tx2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Tx3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Tx4PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Tx1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Tx2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Tx3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Tx4PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Rx1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Rx2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Rx3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Rx4PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Rx1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Rx2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Rx3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Rx4PowerAlarm": {
       "EventKeyId": "Port.PortOpticalModulePowerAlarm",
       "Condition": 1,
       "LedFaultCode": "q$$"
@@ -318,6 +474,76 @@
     "Event_OM2VAMntr": {
       "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
       "Condition": 1
+    },
+    "Event_OM1Bias1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Bias2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Bias3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1Bias4PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Bias1PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Bias2PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Bias3PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2Bias4PowerAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleCurrentAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1RxLossAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleSignalAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2RxLossAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleSignalAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1TxLossAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleSignalAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2TxLossAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleSignalAlarm",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM1TxFaultAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleTxFault",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
+    },
+    "Event_OM2TxFaultAlarm": {
+      "EventKeyId": "Port.PortOpticalModuleTxFault",
+      "Condition": 1,
+      "LedFaultCode": "q$$"
     },
     "SRUpgrade_1": {
       "UID": "00000001100302023956",

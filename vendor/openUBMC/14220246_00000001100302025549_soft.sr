@@ -118,6 +118,28 @@
       "PowerState": "<=/Scanner_PowerGd.Value",
       "Presence": 1
     },
+    "Event_OM1TempHigh": {
+      "Reading": "<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_1.TemperatureUpperThresholdCritical |> expr(($1 == 65535 || $2 == 65535) ? 0 : ($1 > $2 ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg2": "1",
+      "DescArg3": "#/OpticalModule_1.ReadingCelsius",
+      "DescArg4": "#/OpticalModule_1.TemperatureUpperThresholdCritical",
+      "Component": "#/Component_NICCard",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1TempLow": {
+      "Reading": "<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_1.TemperatureLowerThresholdCritical |> expr(($1 == 65535 || $2 == 65535) ? 0 : ($1 < $2 ? 1 : 0))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg2": "1",
+      "DescArg3": "#/OpticalModule_1.ReadingCelsius",
+      "DescArg4": "#/OpticalModule_1.TemperatureLowerThresholdCritical",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
     "Event_NICCardReplaceMntr": {
       "Reading": "<=/Component_NICCard.ReplaceFlag",
       "OperatorId": 5,
@@ -176,6 +198,78 @@
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
+    "Event_OM1Tx1PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_1.TXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 1 Tx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Tx2PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_2.TXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 2 Tx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Tx3PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_3.TXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 3 Tx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Tx4PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_4.TXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 4 Tx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Rx1PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_1.RXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 1 Rx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Rx2PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_2.RXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 2 Rx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Rx3PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_3.RXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 3 Rx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Rx4PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_4.RXPowerMilliWatts |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 4 Rx Power)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
     "Event_OM1SpeedMatch": {
       "Reading": "<=/OpticalModule_1.IsSupportedType",
       "OperatorId": 5,
@@ -186,12 +280,81 @@
       "AdditionalInfo": "1"
     },
     "Event_OM1VAMntr": {
-      "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+      "Reading": "<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr(($1 == 0 || $1 == 65535) ? 0 : ((($2 != 0 && $2 != 65535 && $1 < $2) || ($3 != 0 && $3 != 65535 && $1 > $3)) ? 1 : 0))",
       "OperatorId": 5,
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 1",
       "DescArg4": "#/OpticalModule_1.SupplyVoltage",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Bias1PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_1.BiasCurrentMilliAmps |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 1)",
+      "DescArg4": "<=/OpticalModuleChannel_1_1.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Bias2PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_2.BiasCurrentMilliAmps |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 2)",
+      "DescArg4": "<=/OpticalModuleChannel_1_2.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Bias3PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_3.BiasCurrentMilliAmps |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 3)",
+      "DescArg4": "<=/OpticalModuleChannel_1_3.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1Bias4PowerAlarm": {
+      "Reading": "<=/OpticalModuleChannel_1_4.BiasCurrentMilliAmps |> expr($1 == 0 ? 0 : ($1 >= 32768))",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1(Channel 4)",
+      "DescArg4": "<=/OpticalModuleChannel_1_4.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1RxLossAlarm": {
+      "Reading": "<=/OpticalModule_1.RxLossState |> expr($1 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1",
+      "DescArg4": "Rx",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1TxLossAlarm": {
+      "Reading": "<=/OpticalModule_1.TxLossState |> expr($1 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg3": "Port 1",
+      "DescArg4": "Tx",
+      "Component": "#/Component_Port1",
+      "AdditionalInfo": "1"
+    },
+    "Event_OM1TxFaultAlarm": {
+      "Reading": "<=/OpticalModule_1.TxFaultState |> expr($1 ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg1": "#/Component_NICCard.Name",
+      "DescArg2": "Port 1",
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
