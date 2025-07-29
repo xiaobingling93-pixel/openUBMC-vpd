@@ -340,7 +340,7 @@
             "ReadingStatus": "<=/NPU_1.Power |> expr($1 >= 16384 ? 1 : 0)"
         },
         "CoolingRequirement_1_97": {
-            "RequirementId": 97,
+            "RequirementId": "${Slot} |> expr((97 << 8) | $1)",
             "Description": "Atlas 300I A2芯片温度调速",
             "MonitoringStatus": "<=/NPU_1.AiCoreTemp |> expr($1 == 32768 ? 1 : 0)",
             "MonitoringValue": "<=/NPU_1.AiCoreTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
@@ -352,7 +352,7 @@
             "SensorName": "#/ThresholdSensor_GPUAICoreTemp.SensorName"
         },
         "CoolingRequirement_1_98": {
-            "RequirementId": 98,
+            "RequirementId": "${Slot} |> expr((98 << 8) | $1)",
             "Description": "Atlas 300I A2 HBM温度调速",
             "MonitoringStatus": "<=/NPU_1.HBMTemp |> expr($1 == 32768 ? 1 : 0)",
             "MonitoringValue": "<=/NPU_1.HBMTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
@@ -364,7 +364,7 @@
             "SensorName": "#/ThresholdSensor_GPUHBMTemp.SensorName"
         },
         "CoolingRequirement_1_99": {
-            "RequirementId": 99,
+            "RequirementId": "${Slot} |> expr((99 << 8) | $1)",
             "Description": "Atlas 300I A2 VRD目标调速",
             "MonitoringStatus": "<=/NPU_1.VRDChipTemp |> expr($1 == 32768 ? 1 : 0)",
             "MonitoringValue": "<=/NPU_1.VRDChipTemp |> expr(($1 >= 255) ? 40 : ($1 & 255))",
