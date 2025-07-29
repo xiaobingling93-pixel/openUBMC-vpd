@@ -315,6 +315,134 @@
             "PhyResetProblemCount": 0,
             "RunningDisparityErrorCount": 0
         },
+        "SASPhy_16": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_17": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_18": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_19": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_20": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_21": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_22": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_23": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_24": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_25": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_26": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_27": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_28": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_29": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_30": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
+        "SASPhy_31": {
+            "@Parent": "Controller_1",
+            "PhyId": 255,
+            "InvalidDwordCount": 0,
+            "LossDwordSyncCount": 0,
+            "PhyResetProblemCount": 0,
+            "RunningDisparityErrorCount": 0
+        },
         "Battery_1": {
             "@Parent": "Controller_1",
             "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
