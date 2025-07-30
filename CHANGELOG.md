@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.70.231] - 2025-7-30
+修复Atlas A2卡NPU Position问题、失效调速问题
+
+## [1.70.231] - 2025-7-30
 刷新GPU兼容性列表
 1、修复风华1号厂商信息问题
 2、新增Moore Threads MTT S3000/Moore Threads MTT S4000/L40/L20
