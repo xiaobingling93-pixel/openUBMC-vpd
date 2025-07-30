@@ -57,7 +57,7 @@
         "Fru_PCIeCard": {
             "PcbId": "#/Accessor_PcbID.Value",
             "FruId": 1,
-            "FruName": "SP686C-M-40i",
+            "FruName": "SP686C-M-40i 4G",
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 255,
             "UniqueId": "N/A"

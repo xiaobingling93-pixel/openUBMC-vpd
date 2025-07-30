@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.230] - 2025-7-30
+修改controller对象fruname
+
 ## [1.70.229] - 2025-7-30
 修改电源告警0x03000069
 
