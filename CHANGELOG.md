@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.229] - 2025-7-30
+修改电源告警0x03000069
+
 ## [1.70.228] - 2025-7-29
 修复Atlas 300I A2卡调速
 
