@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.228] - 2025-7-29
+修复Atlas 300I A2卡调速
+
 ## [1.70.227] - 2025-7-28
 修改controller对象sasphy数量
 
