@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [1.70.231] - 2025-7-30
+## [1.70.233] - 2025-7-30
+修复Atlas A2卡NPU 告警描述多一个括号
+
+## [1.70.232] - 2025-7-30
 修复Atlas A2卡NPU Position问题、失效调速问题
 
 ## [1.70.231] - 2025-7-30

@@ -420,7 +420,7 @@
             "AdditionalInfo": "2",
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)"
+            "DescArg3": "#/PCIeCard_1.Name"
         },
         "Event_VoltFail": {
             "EventKeyId": "PcieCard.PCIeCardAccessVoltFailure",
@@ -429,7 +429,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg5": "#/NPUCard_1.FaultCode"
         },
         "Event_VoltUpper": {
@@ -439,7 +439,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_VoltLower": {
@@ -449,7 +449,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_HealthFail": {
@@ -459,7 +459,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_MiniFail": {
@@ -469,7 +469,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_PowerUpDown": {
@@ -479,7 +479,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_HardwareFail": {
@@ -490,7 +490,7 @@
             "Component": "#/Component_PCIeCard",
             "DescArg1": "#/NPUCard_1.FaultCode",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)"
+            "DescArg3": "#/PCIeCard_1.Name"
         },
         "Event_PwrFail": {
             "EventKeyId": "PcieCard.PCIeCardPwrFail",
@@ -499,7 +499,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         },
         "Event_OverCurrent": {
@@ -509,7 +509,7 @@
             "OperatorId": 5,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(Atlas 300I A2 Inference Card)",
+            "DescArg3": "#/PCIeCard_1.Name",
             "DescArg4": "#/NPUCard_1.FaultCode"
         }
     }
