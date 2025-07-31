@@ -2477,7 +2477,7 @@
     "CoolingRequirement_1_30": {
       "RequirementId": 30,
       "Description": "VRD1目标调速配置",
-      "MonitoringStatus": "<=/VrdMgmt_1.VrdTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+      "MonitoringStatus": "<=/Scanner_PowerGood.Value; <=/VrdMgmt_1.VrdTemperatureCelsius |> expr(($1 != 0 && $2 >= 255 && $2 != 65535)  ? 1 : 0)",
       "MonitoringValue": "<=/VrdMgmt_1.VrdTemperatureCelsius",
       "FailedValue": 80,
       "TargetTemperatureCelsius": 95,
@@ -2493,7 +2493,7 @@
     "CoolingRequirement_1_31": {
       "RequirementId": 31,
       "Description": "VRD2目标调速配置",
-      "MonitoringStatus": "<=/VrdMgmt_2.VrdTemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
+      "MonitoringStatus": "<=/Scanner_PowerGood.Value; <=/VrdMgmt_2.VrdTemperatureCelsius |> expr(($1 != 0 && $2 >= 255 && $2 != 65535)  ? 1 : 0)",
       "MonitoringValue": "<=/VrdMgmt_2.VrdTemperatureCelsius",
       "FailedValue": 80,
       "TargetTemperatureCelsius": 95,
