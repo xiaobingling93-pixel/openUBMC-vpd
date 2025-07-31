@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.234] - 2025-8-1
+修复VRD下电时触发异常调速的问题
+
 ## [1.70.233] - 2025-7-30
 修复Atlas A2卡NPU 告警描述多一个括号
 
