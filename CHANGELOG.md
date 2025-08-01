@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.236] - 2025-8-1
+修复新机型内存丝印问题
+
 ## [1.70.235] - 2025-7-30
 【需求】支持管理网卡MCX75310AAS-HEAT
 

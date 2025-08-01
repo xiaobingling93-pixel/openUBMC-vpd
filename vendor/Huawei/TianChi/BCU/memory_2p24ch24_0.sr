@@ -217,7 +217,7 @@
             "Health": "<=/Component_Memory8.Health"
         },
         "MemorySilk_8": {
-            "DimmName": "${Slot} |> expr($1 * 2 - 17) |> string.format('DIMM%s70', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s70', $1)",
             "CpuId": "${Slot} |> expr($1 * 2 - 2)",
             "ChannelId": 7,
             "LogicalChannelId": 11,
