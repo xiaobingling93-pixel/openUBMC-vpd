@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.235] - 2025-7-30
+【需求】支持管理网卡MCX75310AAS-HEAT
+
 ## [1.70.234] - 2025-8-1
 修复VRD下电时触发异常调速的问题
 
