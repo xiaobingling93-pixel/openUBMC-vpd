@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.17",
+    "Version": "1.0.18",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -8269,8 +8269,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the overtemperature alarm is generated for the air inlet or outlet.@#AB;2. Check for fan alarms.@#AB;3. Check whether the heat sink is faulty.@#AB;4. Replace the power adapter board.",
-                "Zh": "1、检查服务器是否同时存在环境进风口/出风口高温告警。@#AB;2、检查服务器是否同时存在风扇告警。@#AB;3、排查散热器是否故障。@#AB;4、更换电源转接板。"
+                "En": "1. Check whether the overtemperature alarm is generated for the air inlet or outlet.@#AB;2. Check for fan alarms.@#AB;3. Check for PSU alarms.@#AB;4. Replace the power adapter board.",
+                "Zh": "1、检查服务器是否同时存在环境进风口/出风口高温告警。@#AB;2、检查服务器是否同时存在风扇告警。@#AB;3、检查服务器是否同时存在电源告警。@#AB;4、更换电源转接板。"
             },
             "EventKeyId": "PEU.PEUOverTemp",
             "Description": {
@@ -8278,8 +8278,8 @@
                 "Zh": "电源转接板%1温度过高。"
             },
             "Influence": {
-                "En": "The service life of the power adapter board is shortened, which may affect the system power supply.",
-                "Zh": "导致电源转接板器件寿命降低，可能影响系统供电。"
+                "En": "The system power supply is affected, and the system may be powered off unexpectedly.",
+                "Zh": "影响系统供电，可能导致系统异常下电。"
             },
             "Cause": {
                 "En": "1. The ambient temperature is too high.@#AB;2. The air inlet or outlet is blocked.@#AB;3. The PSU fan is faulty.@#AB;4. The power adapter board is faulty.",
