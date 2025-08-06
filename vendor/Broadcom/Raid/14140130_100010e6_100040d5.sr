@@ -61,7 +61,7 @@
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/Controller_1.FirmwareVersion",
             "Manufacturer": "Broadcom",
-            "PartNumber": "N/A",
+            "PartNumber": "02560108",
             "SerialNumber": "<=/Controller_1.SerialNumber",
             "RefChip": "#/Chip_RaidChip",
             "Health": "<=/Component_PCIeCard.Health",
@@ -96,9 +96,6 @@
             "CtrlOption1": 2265055232,
             "CtrlOption2": 135,
             "CtrlOption3": 4927,
-            "BatteryPresence": 255,
-            "BatteryFault": 0,
-            "BatteryHealth": "<=/Component_Battery.Health",
             "FaultCode": 0,
             "Health": "<=/Component_PCIeCard.Health",
             "SerialNumber": "",
@@ -173,24 +170,6 @@
             "PhyResetProblemCount": 0,
             "RunningDisparityErrorCount": 0
         },
-        "Battery_1": {
-            "@Parent": "Controller_1",
-            "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
-            "RefControllerSlotId": "<=/PCIeDevice_1.SlotID",
-            "RefControllerTypeId": "<=/Controller_1.TypeId",
-            "TemperatureCelsius": 0
-        },
-        "ThresholdSensor_PCIeBBUTemp": {
-            "AssertMask": 128,
-            "DeassertMask": 28800,
-            "ReadingMask": 2056,
-            "Linearization": 0,
-            "M": 100,
-            "RBExp": 224,
-            "UpperNoncritical": 60,
-            "PositiveHysteresis": 2,
-            "NegativeHysteresis": 2
-        },
         "CoolingRequirement_1_10": {
             "RequirementId": "${Slot} |> expr((10 << 8) | $1)",
             "MonitoringStatus": "<=/Controller_1.TemperatureAbnormal",
@@ -203,29 +182,12 @@
             "AlarmSpeed": [],
             "SensorName": "#/ThresholdSensor_RaidCardTemp.SensorName"
         },
-        "CoolingRequirement_1_64": {
-            "RequirementId": "${Slot} |> expr((64 << 8) | $1)",
-            "MonitoringStatus": "<=/Battery_1.TemperatureCelsius;<=/Controller_1.BatteryPresence |> expr($2 == 255 ? 0 : ($1 == 32767 ? 1 : 0))",
-            "MonitoringValue": "<=/Battery_1.TemperatureCelsius |> expr($1 >= 255 ? 30 : $1)",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 49,
-            "MaxAllowedTemperatureCelsius": 55,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": [],
-            "SensorName": "#/ThresholdSensor_PCIeBBUTemp.SensorName"
-        },
         "Event_PCIeRaidComLossMntr": {
             "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
             "Condition": 1
         },
         "Event_PCIeRAIDCardFault": {
             "EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
-            "Condition": 1,
-            "LedFaultCode": "q$$"
-        },
-        "Event_BatteryFault": {
-            "EventKeyId": "PCIeRAIDCard.PCIeCardBBUFault",
             "Condition": 1,
             "LedFaultCode": "q$$"
         },
@@ -247,24 +209,9 @@
             "Condition": 1,
             "LedFaultCode": "q$$"
         },
-        "Event_PcieBBURemove": {
-            "EventKeyId": "PCIeCard.PCIeCardBBUNotPresent",
-            "Condition": 0
-        },
-        "Event_PcieBBUInstall": {
-            "EventKeyId": "PCIeCard.PCIeCardBBUPresent",
-            "Condition": 1
-        },
         "Event_PCIeRaidInitErr": {
             "EventKeyId": "PCIeCard.PCIeCardInitializationAbnormal",
             "Condition": 0
-        },
-        "Event_BBUOverTemp": {
-            "EventKeyId": "PCIeCard.BBUOverTemp"
-        },
-        "Event_BBUTempReadFail": {
-            "EventKeyId": "PCIeCard.BBUTempReadFail",
-            "Condition": 32767
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
