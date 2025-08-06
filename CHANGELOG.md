@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.238] - 2025-8-4
+告警(0x0300004D)描述加'.'
+
 ## [1.70.237] - 2025-8-1
 修改告警(0x1900000B) 相关告警影响和修复建议
 

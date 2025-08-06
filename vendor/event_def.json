@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.18",
+    "Version": "1.0.19",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -13248,7 +13248,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Remove and reinstall the power module.@#AB;2. Replace the power module",
+                "En": "1. Remove and reinstall the power module.@#AB;2. Replace the power module.",
                 "Zh": "1、重新插拔电源模块。@#AB;2、更换电源模块。"
             },
             "EventKeyId": "PSU.PoorContactMinor",
