@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.239] - 2025-8-6
+增加电源不在位检测告警PSUCountIncorrent
+
 ## [1.70.238] - 2025-8-4
 告警(0x0300004D)描述加'.'
 

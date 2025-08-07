@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.19",
+    "Version": "1.0.20",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -2004,6 +2004,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "PSUFan1Warning"
+        },
+        {
+            "EventCode": "0x0300003B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PEU.PSUCountIncorrent",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PSUCountIncorrent"
         },
         {
             "EventCode": "0x0300003F",
@@ -9842,6 +9854,25 @@
             "Cause": {
                 "En": "1. The power input is abnormal.@#AB;2. The power cable is incorrectly connected.",
                 "Zh": "1、电源输入故障。@#AB;2、电源线缆插错。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check and correctly configure the expected number of PSUs based on the expected quantity.@#AB;2. Remove and reinstall the management module, PSU, or cables.@#AB;3. Replace the management module, PSU, or cables.",
+                "Zh": "1、检查并配置正确的预期电源数量或根据预期电源模块数量配置正确数量的电源模块。@#AB;2、尝试插拔管理模块、电源模块或线缆。@#AB;3、更换管理模块、电源模块或线缆。"
+            },
+            "EventKeyId": "PEU.PSUCountIncorrent",
+            "Description": {
+                "En": "The number of PSUs that are successfully detected does not meet configuration requirements, the expected PSUs configured is %1.",
+                "Zh": "通信成功的PSU数量不满足配置，预期配置数量%1。"
+            },
+            "Influence": {
+                "En": "The power supply to the cabinet is insufficient or the PSU cannot be managed.",
+                "Zh": "导致整柜供电不足或电源模块无法管理。"
+            },
+            "Cause": {
+                "En": "1. The actual or expected number of PSUs is incorrect.@#AB;2. The CAN controller of the management module or PSU is suspended, causing a CAN bus communication failure. In this case, the number of PSUs detected on the iBMC WebUI is 0.@#AB;3. The PSU is faulty, causing a single-point communication failure.",
+                "Zh": "1、实际电源模块数量或预期数量信息配置错误。@#AB;2、管理模块CAN控制器或单电源模块CAN控制器挂死导致CAN总线整体通信异常在这种情况下， 通过Web界面查看到的电源在位数量为0。@#AB;3、单电源模块故障导致单点通信异常。"
             }
         },
         {
