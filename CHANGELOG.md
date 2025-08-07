@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.6] - 2025-9-16
+修复SP686C系列RAID在web页面不显示fru名的问题
+
 ## [1.80.5] - 2025-9-17
 增加机柜出风口过温告警
 

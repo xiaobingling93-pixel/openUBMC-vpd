@@ -175,7 +175,8 @@
             "FruName": "SP686C-M-16i 2G",
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 255,
-            "UniqueId": "N/A"
+            "UniqueId": "N/A",
+            "FruDataId" :"#/FruData_RaidCard"
         },
         "Controller_1": {
             "ControllerName": "SP686C-M-16i",

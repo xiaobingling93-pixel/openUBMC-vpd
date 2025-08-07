@@ -79,7 +79,8 @@
             "FruName": "SP686C-M-40i 2G",
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 255,
-            "UniqueId": "N/A"
+            "UniqueId": "N/A",
+            "FruDataId" :"#/FruData_RaidCard"
         },
         "Scanner_Eeprom_Raid": {
             "Chip": "#/Eeprom_Raid",
