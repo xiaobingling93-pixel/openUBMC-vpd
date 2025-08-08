@@ -6,15 +6,6 @@
         "Name": "PCIeCard_1"
     },
     "Objects": {
-        "Component_Battery": {
-            "FruId": 255,
-            "Instance": "<=/PCIeDevice_1.SlotID",
-            "Type": 8,
-            "Name": "PCIe Card BBU",
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1
-        },
         "Component_PCIeCard": {
             "FruId": 255,
             "Type": 8,
@@ -27,28 +18,6 @@
             "ReplaceFlag": 0,
             "PreviousSN": "N/A",
             "SerialNumber": "<=/PCIeCard_1.SerialNumber"
-        },
-        "ThresholdSensor_PCIeBBUTemp": {
-            "OwnerId": 32,
-            "OwnerLun": 0,
-            "EntityId": "<=/Entity_RaidCard.Id",
-            "EntityInstance": "<=/Entity_RaidCard.Instance",
-            "Initialization": 127,
-            "Capabilities": 104,
-            "SensorType": 1,
-            "ReadingType": 1,
-            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s BBU Temp', $1)",
-            "Unit": 0,
-            "BaseUnit": 1,
-            "ModifierUnit": 0,
-            "Analog": 1,
-            "NominalReading": 20,
-            "NormalMaximum": 0,
-            "NormalMinimum": 0,
-            "MaximumReading": 255,
-            "MinimumReading": 0,
-            "Reading": "<=/Battery_1.TemperatureCelsius",
-            "ReadingStatus": "<=/Battery_1.TemperatureCelsius |> expr($1 == 32767 ? 1 : ($1 == 255 ? 2 : ($1 == 0 ? 3 : 0)))"
         },
         "ThresholdSensor_RaidCardTemp": {
             "OwnerId": 32,
@@ -98,14 +67,6 @@
             "DescArg3": "9540-8i",
             "Component": "#/Component_PCIeCard"
         },
-        "Event_BatteryFault": {
-            "Reading": "<=/Controller_1.BatteryFault",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
-            "Component": "#/Component_Battery"
-        },
         "Event_PCIeBandWidth": {
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
             "OperatorId": 5,
@@ -141,28 +102,6 @@
             "DescArg2": "#/PCIeDevice_1.DeviceName",
             "Component": "#/Component_PCIeCard"
         },
-        "Event_PcieBBURemove": {
-            "Reading": "<=/Controller_1.BatteryPresence",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
-            "Component": "#/Component_Battery"
-        },
-        "Event_PcieBBUInstall": {
-            "Reading": "<=/Controller_1.BatteryPresence",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 7,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "9540-8i",
-            "Component": "#/Component_Battery"
-        },
         "Event_PCIeRaidInitErr": {
             "Reading": "<=/Controller_1.FaultCodeByBios",
             "OperatorId": 6,
@@ -170,27 +109,6 @@
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "9540-8i",
             "Component": "#/Component_PCIeCard"
-        },
-        "Event_BBUOverTemp": {
-            "Reading": "<=/Battery_1.TemperatureCelsius |> expr(($1 < 255) ? $1 : 0)",
-            "OperatorId": 4,
-            "Condition": "<=/ThresholdSensor_PCIeBBUTemp.UpperNoncritical",
-            "@Default": {
-                "Condition": 60
-            },
-            "Enabled": true,
-            "DescArg1": "#/PCIeDevice_1.SlotID",
-            "DescArg2": "#/Battery_1.TemperatureCelsius",
-            "DescArg3": "#/ThresholdSensor_PCIeBBUTemp.UpperNoncritical",
-            "Component": "#/Component_Battery",
-            "Hysteresis": 2
-        },
-        "Event_BBUTempReadFail": {
-            "Reading": "<=/Battery_1.TemperatureCelsius",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg1": "#/PCIeDevice_1.SlotID",
-            "Component": "#/Component_Battery"
         },
         "Event_PcieCardReplaceMntr": {
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",
