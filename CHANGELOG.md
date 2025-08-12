@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.241] - 2025-8-12
+支持光模块静态信息收集
+
 ## [1.70.240] - 2025-8-6
 删除raid卡bbu相关配置
 
