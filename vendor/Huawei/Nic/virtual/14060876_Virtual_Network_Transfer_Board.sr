@@ -767,28 +767,36 @@
         "LinkStatusNumeric": "<=/Scanner_NPU8Die1Link.Value"
       },
       "OpticalModule_1_Die0": {
-        "@Parent": "NetworkPort_01"
+        "@Parent": "NetworkPort_01",
+        "SilkText": "PIC-8 ETH8"
       },
       "OpticalModule_2_Die1": {
-        "@Parent": "NetworkPort_03"
+        "@Parent": "NetworkPort_03",
+        "SilkText": "PIC-8 ETH6"
       },
       "OpticalModule_3_Die0": {
-        "@Parent": "NetworkPort_05"
+        "@Parent": "NetworkPort_05",
+        "SilkText": "PIC-8 ETH4"
       },
       "OpticalModule_4_Die1": {
-        "@Parent": "NetworkPort_07"
+        "@Parent": "NetworkPort_07",
+        "SilkText": "PIC-8 ETH2"
       },
       "OpticalModule_5_Die0": {
-        "@Parent": "NetworkPort_10"
+        "@Parent": "NetworkPort_10",
+        "SilkText": "PIC-8 ETH7"
       },
       "OpticalModule_6_Die1": {
-        "@Parent": "NetworkPort_12"
+        "@Parent": "NetworkPort_12",
+        "SilkText": "PIC-8 ETH5"
       },
       "OpticalModule_7_Die0": {
-        "@Parent": "NetworkPort_14"
+        "@Parent": "NetworkPort_14",
+        "SilkText": "PIC-8 ETH3"
       },
       "OpticalModule_8_Die1": {
-        "@Parent": "NetworkPort_16"
+        "@Parent": "NetworkPort_16",
+        "SilkText": "PIC-8 ETH1"
       },
       "Component_NetworkPort1": {
         "FruId": 255,
