@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.242] - 2025-8-12
+修正PSUCountIncorrent告警内容
+
 ## [1.70.241] - 2025-8-12
 支持光模块静态信息收集
 
