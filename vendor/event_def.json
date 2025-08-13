@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.20",
+    "Version": "1.0.21",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -9858,7 +9858,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check and correctly configure the expected number of PSUs based on the expected quantity.@#AB;2. Remove and reinstall the management module, PSU, or cables.@#AB;3. Replace the management module, PSU, or cables.",
+                "En": "1. Check and correctly configure the expected number of PSUs or configure the correct number of PSUs based on the expected quantity.@#AB;2. Remove and reinstall the management module, PSU, or cables.@#AB;3. Replace the management module, PSU, or cables.",
                 "Zh": "1、检查并配置正确的预期电源数量或根据预期电源模块数量配置正确数量的电源模块。@#AB;2、尝试插拔管理模块、电源模块或线缆。@#AB;3、更换管理模块、电源模块或线缆。"
             },
             "EventKeyId": "PEU.PSUCountIncorrent",
