@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.246] - 2025-8-18
+增加告警(0x1000000D)
+
 ## [1.70.245] - 2025-8-15
 增加PMIC告警 0x01000083、0x01000085、0x01000087
 
