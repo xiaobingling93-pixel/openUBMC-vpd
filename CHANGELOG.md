@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.243] - 2025-8-14
+刷新告警版本
+
 ## [1.70.242] - 2025-8-12
 修正PSUCountIncorrent告警内容
 
