@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.244] - 2025-8-15
+新增0x24000033 CPU与外围器件链路异常告警
+
 ## [1.70.243] - 2025-8-14
 刷新告警版本
 

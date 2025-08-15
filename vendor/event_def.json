@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.22",
+    "Version": "1.0.23",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4320,6 +4320,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "VRPowerRedundancyFailure"
+        },
+        {
+            "EventCode": "0x24000033",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "CpuBoard.CPULinkAbnormal",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "CPULinkAbnormal"
         },
         {
             "EventCode": "0x2C000093",
@@ -12058,6 +12070,25 @@
             "Cause": {
                 "En": "The VR power supply (single-phase) is abnormal.",
                 "Zh": "VR电源(单相)工作异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then power on the node to check whether the fault is rectified.@#AB;2. Replace the peer component.@#AB;2. Contact technical support.",
+                "Zh": "1、节点重新上下电，确认故障是否消失。@#AB;2、更换对端器件。@#AB;3、联系运维技术人员支撑。"
+            },
+            "EventKeyId": "CpuBoard.CPULinkAbnormal",
+            "Description": {
+                "En": "The %3 link between CPU %1 and %2 is abnormal.",
+                "Zh": "CPU%1 与 %2间的%3链路异常。"
+            },
+            "Influence": {
+                "En": "CPU cannot obtain the information.",
+                "Zh": "CPU无法获取信息。"
+            },
+            "Cause": {
+                "En": "1. The peer component is faulty.@#AB;2. The mainboard link is abnormal.",
+                "Zh": "1、对端器件故障。@#AB;2、主板链路异常。"
             }
         },
         {
