@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.245] - 2025-8-15
+增加PMIC告警 0x01000083、0x01000085、0x01000087
+
 ## [1.70.244] - 2025-8-15
 新增0x24000033 CPU与外围器件链路异常告警
 

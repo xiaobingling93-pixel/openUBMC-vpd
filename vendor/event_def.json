@@ -5172,6 +5172,42 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "DiskBackplaneAccessVoltFailure"
+        },
+        {
+            "EventCode": "0x01000083",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Memory.PMICMinorAbnormal",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "Memory PMIC minor abnormal"
+        },
+        {
+            "EventCode": "0x01000085",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Memory.PMICMinorFault",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "Memory PMIC general abnormal"
+        },
+        {
+            "EventCode": "0x01000087",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Memory.PMICCriticalFault",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "Memory PMIC critical fault"
         }
     ],
     "EventDescription": [
@@ -13363,6 +13399,63 @@
             "Cause": {
                 "En": "1. Monitoring signal failure.@#AB;2. Power supply is abnormal.",
                 "Zh": "1、监测信号故障。@#AB;2、电源异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then power on the OS, and check whether the alarm is cleared.@#AB;2. If the alarm still persists, contact technical support engineers of the vendor.",
+                "Zh": "1、执行OS下电再上电，检查告警是否清除。@#AB;2、以上手段均未解决，请联系厂商技术支持工程师。"
+            },
+            "EventKeyId": "Memory.PMICMinorAbnormal",
+            "Description": {
+                "En": "Memory %1 PMIC minor abnormal(%2).",
+                "Zh": "内存 %1 PMIC出现轻微异常事件（%2）。"
+            },
+            "Influence": {
+                "En": "The memory may be unstable.",
+                "Zh": "内存工作可能不稳定。"
+            },
+            "Cause": {
+                "En": "PMIC error.",
+                "Zh": "PMIC异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then power on the OS, and check whether the alarm is cleared.@#AB;2. If the alarm still persists, contact technical support engineers of the vendor.",
+                "Zh": "1、执行OS下电再上电，检查告警是否清除。@#AB;2、以上手段均未解决，请联系厂商技术支持工程师。"
+            },
+            "EventKeyId": "Memory.PMICMinorFault",
+            "Description": {
+                "En": "Memory %1 PMIC general abnormal(%2).",
+                "Zh": "内存 %1 PMIC出现一般异常事件（%2）。"
+            },
+            "Influence": {
+                "En": "The memory may be unstable.",
+                "Zh": "内存工作可能不稳定。"
+            },
+            "Cause": {
+                "En": "PMIC error.",
+                "Zh": "PMIC异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the DIMM with one of the same specifications.@#AB;2. If the problem persists, contact the technical support.",
+                "Zh": "1、更换同规格内存。@#AB;2、如果问题继续存在，联系厂商技术支持工程师。"
+            },
+            "EventKeyId": "Memory.PMICCriticalFault",
+            "Description": {
+                "En": "Memory %1 PMIC critical error (%2).",
+                "Zh": "内存 %1 PMIC出现紧急故障（%2）。"
+            },
+            "Influence": {
+                "En": "The memory is not working properly.",
+                "Zh": "内存无法正常工作。"
+            },
+            "Cause": {
+                "En": "PMIC error.",
+                "Zh": "PMIC异常。"
             }
         }
     ]
