@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.23",
+    "Version": "1.0.25",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5208,6 +5208,18 @@
             "SeverityId": 3,
             "ActionId": 0,
             "EventName": "Memory PMIC critical fault"
+        },
+        {
+            "EventCode": "0x1000000D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardRTCLowerVoltage",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MainboardRTCLowerVoltage"
         }
     ],
     "EventDescription": [
@@ -13456,6 +13468,25 @@
             "Cause": {
                 "En": "PMIC error.",
                 "Zh": "PMIC异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the RTC battery.@#AB;2. Replace the mainboard. Then check whether the alarm is cleared.",
+                "Zh": "1、更换RTC电池。@#AB;2、更换主板，检查告警是否消除。"
+            },
+            "EventKeyId": "Mainboard.MainboardRTCLowerVoltage",
+            "Description": {
+                "En": "Low voltage of RTC battery on the mainboard.",
+                "Zh": "主板RTC电池电压低。"
+            },
+            "Influence": {
+                "En": "The server clock is affected.",
+                "Zh": "可能影响服务器时钟。"
+            },
+            "Cause": {
+                "En": "The RTC battery on the mainboard is faulty or has low power.",
+                "Zh": "主板RTC电池故障或者电量低。"
             }
         }
     ]

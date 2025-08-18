@@ -416,3 +416,4 @@ SecurityMoudle.HBRTSelfTestFailed
 SecurityMoudle.TPMSelfTestFailed
 Memory.MemoryCEStormFault
 PSU.PoorContactMinor
+Mainboard.MainboardRTCLowerVoltage
