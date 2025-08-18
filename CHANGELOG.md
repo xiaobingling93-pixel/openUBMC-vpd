@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.248] - 2025-8-18
+支持Retimer传感器在温度为无效值时，置为no reading
+
 ## [1.70.247] - 2025-8-18
 补充告警(0x0300003B)txt信息
 
