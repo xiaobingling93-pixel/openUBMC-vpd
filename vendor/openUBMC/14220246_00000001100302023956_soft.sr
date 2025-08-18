@@ -43,6 +43,16 @@
       "Health": 0,
       "PowerState": 1
     },
+    "Scanner_PowerGood": {
+      "Chip": "#/Smc_ExpBoardSMC",
+      "Size": 1,
+      "Offset": 469765888,
+      "Mask": 255,
+      "Type": 0,
+      "Value": 0,
+      "Period": 100,
+      "Debounce": "None"
+    },
     "Component_Port2": {
       "FruId": 255,
       "Instance": 1,
@@ -119,13 +129,14 @@
       "MaximumReading": 127,
       "MinimumReading": 128,
       "Reading": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius",
+      "ReadingStatus": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
       "SensorNumber": 255
     },
     "Entity_Lom": {
       "Id": 42,
       "Instance": 96,
       "Name": "Lom",
-      "PowerState": "<=/Scanner_PowerGd.Value",
+      "PowerState": "<=/Scanner_PowerGood.Value",
       "Presence": 1
     },
     "Event_OM1TempHigh": {
