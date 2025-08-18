@@ -167,6 +167,7 @@ PEU.PEUInputLowerVoltage
 PEU.PEUOutOverVoltage
 PEU.PEUOutLowerVoltage
 PEU.PEUOverTemp
+PEU.PSUCountIncorrent
 PSU.PSUVinUvWarning
 PSU.PSUVoutOvWarning
 PSU.PSUVoutUvWarning

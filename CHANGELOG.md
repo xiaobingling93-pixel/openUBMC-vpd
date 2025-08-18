@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.247] - 2025-8-18
+补充告警(0x0300003B)txt信息
+
 ## [1.70.246] - 2025-8-18
 增加告警(0x1000000D)
 
