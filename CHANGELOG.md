@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.249] - 2025-8-18
+修改告警（0x12000057）告警等级
+
 ## [1.70.248] - 2025-8-18
 支持Retimer传感器在温度为无效值时，置为no reading
 
