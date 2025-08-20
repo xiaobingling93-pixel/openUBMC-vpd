@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.253] - 2025-8-20
+修复LPe32002网卡的序列号更新方式
+
 ## [1.70.252] - 2025-8-20
 MCX4121A-ACAT网卡适配
 
