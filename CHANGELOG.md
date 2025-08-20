@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.258] - 2025-8-21
+新增支持MCX516A-CCAT网卡适配
+
 ## [1.70.257] - 2025-8-21
 LPe32002-AP网卡增加温度传感器、告警事件和调速策略
 
