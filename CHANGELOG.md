@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.260] - 2025-8-22
+新增适配网卡XXV710DA2G1P5
+
 ## [1.70.259] - 2025-8-22
 新增适配MCX653105A-ECAT网卡
 
