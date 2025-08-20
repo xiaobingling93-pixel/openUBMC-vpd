@@ -102,8 +102,7 @@
             "TemperatureStatus": 0,
             "ParentCardSlotId": 255,
             "FaultState": 0,
-            "Health": "<=/Component_PCIeCard.Health",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+            "Health": "<=/Component_PCIeCard.Health"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
