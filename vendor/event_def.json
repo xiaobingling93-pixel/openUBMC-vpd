@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.26",
+    "Version": "1.0.27",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5220,6 +5220,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "MainboardRTCLowerVoltage"
+        },
+        {
+            "EventCode": "0x1A00006F",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "BMC.BMCRestartWithCause",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "BMCRestartWithCause"
         }
     ],
     "EventDescription": [
@@ -13487,6 +13499,25 @@
             "Cause": {
                 "En": "The RTC battery on the mainboard is faulty or has low power.",
                 "Zh": "主板RTC电池故障或者电量低。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "BMC.BMCRestartWithCause",
+            "Description": {
+                "En": "The {BMC} is reset, with the cause code of %1.",
+                "Zh": "{BMC}发生复位，复位原因码为%1。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
             }
         }
     ]
