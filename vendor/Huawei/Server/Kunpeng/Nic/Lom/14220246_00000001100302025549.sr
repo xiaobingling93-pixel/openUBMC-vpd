@@ -535,7 +535,7 @@
       "PositiveHysteresis": 2,
       "NegativeHysteresis": 2,
       "Reading": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius",
-      "ReadingStatus": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : ($1 > 255 ? 2 : 0))",
+      "ReadingStatus": "<=/Retimer_Cdr5902L_Obj_0.TemperatureCelsius;<=/Scanner_PowerGood.Value |> expr(($2 == 0) ? 2 : (($1 > 255 || $1 == 0)? 2 : 0))",
       "SensorNumber": 255
     }
   }

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.251] - 2025-8-20
+支持Retimer传感器在温度为无效值时，置为no reading,修改retimer状态条件
+
 ## [1.70.250] - 2025-8-18
 新增带有复位原因的bmc复位事件0x1A00006F
 
