@@ -172,6 +172,16 @@
             "BandwidthThresholdPercent": 100,
             "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
+        "DftNCSI_1": {
+            "Id": 73,
+            "Type": 2,
+            "Slot": "${Slot}",
+            "DeviceNum": 0,
+            "ItemName": "NCSI Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535
+        },
         "CoolingRequirement_1_50": {
             "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
             "Description": "SP226D网卡芯片调速",
