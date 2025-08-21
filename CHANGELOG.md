@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.256] - 2025-8-20
+MCX4121A-ACUT网卡适配
+
 ## [1.70.255] - 2025-8-20
 新增适配网卡MCX416A-CCAT
 
