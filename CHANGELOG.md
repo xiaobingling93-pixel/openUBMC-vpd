@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.262] - 2025-8-22
+新增LPE35002-AP网卡适配
+
 ## [1.70.261] - 2025-8-22
 适配网卡MCX515A-CCAT支持温感
 
