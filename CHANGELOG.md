@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.261] - 2025-8-22
+适配网卡MCX515A-CCAT支持温感
+
 ## [1.70.260] - 2025-8-22
 新增适配网卡XXV710DA2G1P5
 
