@@ -70,7 +70,7 @@
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "LPe32002-AP",
+            "Model": "XE501",
             "ModelDescription": "2*32Gb",
             "ChipVendor": "Emulex",
             "ChipManufacturer": "Emulex",
@@ -98,8 +98,6 @@
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
-            "TemperatureCelsius": 0,
-            "TemperatureStatus": 0,
             "ParentCardSlotId": 255,
             "FaultState": 0,
             "Health": "<=/Component_PCIeCard.Health"
@@ -145,7 +143,6 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -157,7 +154,6 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -169,60 +165,279 @@
         "Event_OM0PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_0.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
         },
         "Event_OM0SpeedMatch": {
             "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_0.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1SpeedMatch": {
             "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
         },
         "Event_OM0VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/OpticalModule_0.SupplyVoltage",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 2",
+            "DescArg4": "#/OpticalModule_1.SupplyVoltage",
+            "Component": "#/Component_Port2"
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_Port2LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LPe32002-AP)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeLinkSpeed": {
             "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LPe32002-AP)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        },
+        "ThresholdSensor_NicTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 0,
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "ReadingStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_NicOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_NicTemp.PositiveHysteresis",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 65 : $1) |> expr($1 & 255)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "#/Event_NicOverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_NicTemp.UpperNoncritical"
+        },
+        "CoolingRequirement_1_48": {
+            "RequirementId": "${Slot} |> expr((48 << 8) | $1)",
+            "Description": "LPe32002-AP 网卡芯片调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.Status",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 95,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "Component_ComBMC": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 26,
+            "Name": "BMC",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "BoardId": 0,
+            "Manufacturer": "",
+            "Function": "BMC",
+            "UniqueId": "N/A",
+            "NodeId": ""
+        },
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "Emulex",
+            "PartNumber": "",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "",
+            "NodeId": "<=/PCIeDevice_1.SlotID"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
         }
     }
 }
