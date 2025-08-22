@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.259] - 2025-8-22
+新增适配MCX653105A-ECAT网卡
+
 ## [1.70.258] - 2025-8-21
 新增支持MCX516A-CCAT网卡适配
 
