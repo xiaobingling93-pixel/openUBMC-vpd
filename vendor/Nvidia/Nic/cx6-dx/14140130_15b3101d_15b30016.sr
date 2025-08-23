@@ -129,7 +129,7 @@
             "ComponentUniqueID": "N/A",
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "FruId": 255,
-            "SupportedMctp": true,
+            "SupportedMctp": false,
             "HotPluggable": false,
             "ReadyToRemove": false,
             "AttentionHotPlugState": 255,
@@ -351,6 +351,23 @@
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
             "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "CoolingRequirement_1_150": {
+            "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
+            "Description": "MCX623106AN-CDAT网卡芯片调速(光模块异常)",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 100,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_NicTemp.SensorName",
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
         }
     }
 }

@@ -331,7 +331,7 @@
         },
         "CoolingRequirement_1_150": {
             "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
-            "Description": "MCX623105AN-VDAT网卡芯片调速(光模块异常)",
+            "Description": "MCX623436AN-CDAB网卡芯片调速(光模块异常)",
             "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
             "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
             "FailedValue": 80,
