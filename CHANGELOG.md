@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.263] - 2025-8-23
+支持MCX623436AN-CDAB带外获取信息
+
 ## [1.70.262] - 2025-8-22
 新增LPE35002-AP网卡适配
 
