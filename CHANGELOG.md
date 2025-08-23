@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.264] - 2025-8-23
+支持MCX623106AN-CDAT光模块异常时网卡调速
+
 ## [1.70.263] - 2025-8-23
 支持MCX623436AN-CDAB带外获取信息
 
