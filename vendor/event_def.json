@@ -758,6 +758,18 @@
             "EventName": "NcsiNotPresent"
         },
         {
+            "EventCode": "0x2800003D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.UnitUBNotPresent",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "UnitUBNotPresent"
+        },
+        {
             "EventCode": "0x0D000015",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -6487,6 +6499,25 @@
             "Cause": {
                 "En": "1. The NCSI cable is not properly connected or is in poor contact.@#AB;2. The NCSI cable is faulty.",
                 "Zh": "1、NCSI线缆可能没插好或者接触不良。@#AB;2、NCSI线缆故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the cables are disconnected or not properly connected.@#AB;2. Check whether the connector is not properly connected.@#AB;3. Check whether the identification of the RAID controller card is abnormal.@#AB;4. Replace the cables.@#AB;5. Replace the unit.",
+                "Zh": "1、检查线缆是否未插或松动。@#AB;2、检查连接器是否插稳。@#AB;3、检查RAID卡是否识别异常。@#AB;4、更换相应的线缆。@#AB;5、更换组件。"
+            },
+            "EventKeyId": "Cable.UnitUBNotPresent",
+            "Description": {
+                "En": "The %2 cable of unit %1 is absent or the connector is not properly connected.",
+                "Zh": "组件%1的%2线缆不在位或连接器未插稳。"
+            },
+            "Influence": {
+                "En": "Some disks of Storage Unit, standard cards of IO Unit or FlexIO card may cannot be identified correctly by the system.",
+                "Zh": "可能导致存储组件的部分硬盘、IO组件的部分标卡或灵活IO卡无法被系统识别到。"
+            },
+            "Cause": {
+                "En": "1. The cables are disconnected or not securely connected.@#AB;2. The connector is not properly connected.@#AB;3. The identification of the RAID controller card is abnormal.@#AB;4. The cables are faulty.@#AB;5. The unit is faulty.",
+                "Zh": "1、线缆未插或松动。@#AB;2、连接器没有插稳。@#AB;3、RAID卡识别异常。@#AB;4、线缆故障。@#AB;5、组件故障。"
             }
         },
         {

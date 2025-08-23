@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.265] - 2025-8-23
+支持线缆不在位或连接器未插稳告警精细化
+
 ## [1.70.264] - 2025-8-23
 支持MCX623106AN-CDAT光模块异常时网卡调速
 
