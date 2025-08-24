@@ -16,6 +16,17 @@
         }
     },
     "Objects": {
+        "MctpBinding_1": {
+            "BmcSMBusEid": 8,
+            "BmcSMBusPhyAddr": 16
+        },
+        "Endpoint_1": {
+            "TargetEid": "${Slot} |> expr($1 + 8)",
+            "TargetPhyAddr": 29,
+            "MessageType": 4,
+            "MediumType": 2,
+            "RefChip": "#/Chip_SSD"
+        },
         "Nvme_1": {
             "Slot": "${Slot}",
             "TemperatureCelsius": "<=/Scanner_Temp.Value",

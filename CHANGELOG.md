@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.266] - 2025-8-24
+支持nvme盘mctp over smbus
+
 ## [1.70.265] - 2025-8-23
 支持线缆不在位或连接器未插稳告警精细化
 
