@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.27",
+    "Version": "1.0.28",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5244,6 +5244,18 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "BMCRestartWithCause"
+        },
+        {
+            "EventCode": "0x030F0003",
+            "ReportChannel": 65535,
+            "OldEventCode": "0x2800FFFF",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUPsOnFault",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PSUPsOnFault"
         }
     ],
     "EventDescription": [
@@ -13549,6 +13561,25 @@
             "Cause": {
                 "En": "",
                 "Zh": ""
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the PSU.@#AB;2. Collect related event information and contact technical support engineers to replace the %1.",
+                "Zh": "1、更换电源。@#AB;2、请收集相关事件信息，然后联系技术支持工程师更换%1。"
+            },
+            "EventKeyId": "PSU.PSUPsOnFault",
+            "Description": {
+                "En": "The power state of PSU %1 is abnormal.",
+                "Zh": "电源%1供电状态异常。"
+            },
+            "Influence": {
+                "En": "The reliability of the system power supply will be affected.",
+                "Zh": "影响系统可靠性。"
+            },
+            "Cause": {
+                "En": "1. The PSU is faulty.@#AB;2. The signal link of the PSU is faulty.",
+                "Zh": "1、电源内部故障。@#AB;2、系统信号链路异常。"
             }
         }
     ]
