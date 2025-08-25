@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.29",
+    "Version": "1.0.30",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5268,6 +5268,102 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "PSUPsOnFault"
+        },
+        {
+            "EventCode": "0x0300006b",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorOvervoltage",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorOvervoltage"
+        },
+        {
+            "EventCode": "0x0300006d",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorUndervoltage",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorUndervoltage"
+        },
+        {
+            "EventCode": "0x0300006f",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorLifespanAlarm",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorLifespanAlarm"
+        },
+        {
+            "EventCode": "0x03000071",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorCapacityWarning",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorCapacityWarning"
+        },
+        {
+            "EventCode": "0x03000073",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorOvertemperature",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorOvertemperature"
+        },
+        {
+            "EventCode": "0x03000075",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorModuleOvertemperature",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorModuleOvertemperature"
+        },
+        {
+            "EventCode": "0x03000077",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitorFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PSUCapacitorFailure"
+        },
+        {
+            "EventCode": "0x03000079",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCapacitanceAlert",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUCapacitanceAlert"
         }
     ],
     "EventDescription": [
@@ -13611,6 +13707,158 @@
             "Cause": {
                 "En": "1. The PSU is faulty.@#AB;2. The signal link of the PSU is faulty.",
                 "Zh": "1、电源内部故障。@#AB;2、系统信号链路异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the power input status.@#AB;2. Unplug and then replug the power strip. If the fault is re-reported and the alarm persists for 30 minutes, collect relevant events and logs and replace the alarming power supply.@#AB;3. Collect related information and contact technical support.",
+                "Zh": "1. 检查电源输入供电状态。@#AB;2.插拔电源板，如果故障重新上报且告警持续30分钟未消失，请收集相关事件和日志，更换告警电源。@#AB;3.联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUCapacitorOvervoltage",
+            "Description": {
+                "En": "The working voltage of the capacitor pack exceeds the overvoltage threshold on PSU %1.",
+                "Zh": "电源%1电容包工作电压超过压门限"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The input power voltage is abnormal.@#AB;2. The capacitance module fails or samples incorrectly, causing the capacitor overcharging.",
+                "Zh": "1. 输入供电电压异常。@#AB;2. 电容模块器件失效或采样异常，电容充电过多。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the power input status.@#AB;2. Check the output power. If it exceeds the rated capacity, lower the system load.@#AB;3. Unplug and then replug the power strip. If the fault is re-reported and the alarm persists for 30 minutes, collect relevant events and logs and replace the alarming power supply.@#AB;4. Contact technical support.",
+                "Zh": "1.检查电源扥输入供电状态。@#AB;2.检查输出功率，如果持续超过额定工作，降低系统负载。@#AB;3.插拔电源板，如果故障重新上报且告警持续30分钟未消失，请收集相关事件和日志，更换告警电源。@#AB;4.联系技术支持工程师进行处理；"
+            },
+            "EventKeyId": "PSU.PSUCapacitorUndervoltage",
+            "Description": {
+                "En": "The working voltage of the capacitor pack falls below the undervoltage threshold on PSU %1.",
+                "Zh": "电源%1电容包工作电压超欠压门限。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The input power voltage is abnormal.@#AB;2. The output power exceeds the rated capacity.@#AB;3. The capacitance module fails, preventing the capacitor from charging.",
+                "Zh": "1.输入供电电压异常。@#AB;2.输出功率超过额定负载。@#AB;3.电容模块器件失效，电容无法充电；"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Collect related events and logs and contact technical support.",
+                "Zh": "1.请收集相关事件信息和日志，联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUCapacitorLifespanAlarm",
+            "Description": {
+                "En": "Capacitor lifespan warning on PSU %1.",
+                "Zh": "电源%1电容寿命预警。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The number of charge/discharge cycles of the capacitor exceeds the threshold.",
+                "Zh": "1.电容充放电次数超过门限。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Collect related events and logs and contact technical support.",
+                "Zh": "1.请收集相关事件信息和日志，联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUCapacitorCapacityWarning",
+            "Description": {
+                "En": "Capacitor capacity warning on PSU %1.",
+                "Zh": "电源%1电容容量预告警。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The capacity of the capacitor decreases.",
+                "Zh": "1.电容容量减小。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the output power. If it exceeds the rated capacity, lower the system load.@#AB;2. Unplug and then replug the power strip. If the fault is re-reported and the alarm persists for 30 minutes, collect relevant events and logs and replace the alarming power supply.@#AB;3. Contact technical support.",
+                "Zh": "1.检查输出功率，如果持续超过额定工作，降低系统负载。@#AB;2.插拔电源板，如果故障重新上报且告警持续30分钟未消失，请收集相关事件和日志，更换告警电源。@#AB;3.联系技术支持工程师进行处理；"
+            },
+            "EventKeyId": "PSU.PSUCapacitorOvertemperature",
+            "Description": {
+                "En": "The capacitor pack's operating temperature is too high and exceeds the threshold on PSU %1.",
+                "Zh": "电源%1电容包工作温度异常，超门限。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The capacitor's temperature is too high.",
+                "Zh": "1.电容的温度过高。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the output power. If it exceeds the rated capacity, lower the system load.@#AB;2. Unplug and then replug the power strip. If the fault is re-reported and the alarm persists for 30 minutes, collect relevant events and logs and replace the alarming power supply.@#AB;3. Contact technical support.",
+                "Zh": "1.检查输出功率，如果持续超过额定工作，降低系统负载。@#AB;2.插拔电源板，如果故障重新上报且告警持续30分钟未消失，请收集相关事件和日志，更换告警电源。@#AB;3.联系技术支持工程师进行处理；"
+            },
+            "EventKeyId": "PSU.PSUCapacitorModuleOvertemperature",
+            "Description": {
+                "En": "The capacitance module's operating temperature is too high and exceeds the threshold on PSU %1.",
+                "Zh": "电源%1电容模块器件工作温度异常，超门限。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1.The temperature of the capacitance module is too high.",
+                "Zh": "1.电容模块器件温度过高。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. If the alarm persists for 30 minutes, collect related events and logs and replace the power supply.@#AB;2. Contact technical support.",
+                "Zh": "1.如果告警持续30min未消失，请收集相关事件和日志，更换告警电源。@#AB;2.联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUCapacitorFailure",
+            "Description": {
+                "En": "The capacitor fails on PSU %1.",
+                "Zh": "电源%1电容单体失效。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The capacitor inside the power supply fails.",
+                "Zh": "1.电源内部电容失效。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Unplug and then replug the power strip. If the fault is re-reported and the alarm persists for 30 minutes, collect relevant events and logs and contact technical support.",
+                "Zh": "1.插拔电源板，如果故障重新上报且告警持续30分钟未消失，请收集相关事件和日志，联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUCapacitanceAlert",
+            "Description": {
+                "En": "Capacitance module alert alarm on PSU %1.",
+                "Zh": "电源%1电容模块alert告警。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1. The system delivers a shutdown command.@#AB;2. The system load exceeds the rated load for a long time.@#AB;3. Other capacitance faults occur.",
+                "Zh": "1.系统下发了命令关机。@#AB;2.系统负载长时间超过额定负载。@#AB;3.发生了电容的其他故障；"
             }
         }
     ]

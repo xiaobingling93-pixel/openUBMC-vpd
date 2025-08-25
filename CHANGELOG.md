@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.270] - 2025-8-25
+新增电源转接板电容相关异常告警
+
 ## [1.70.269] - 2025-8-25
 MCX623106AN-CDAT光模块默认值时执行正常调速
 
