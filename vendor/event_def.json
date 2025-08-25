@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.28",
+    "Version": "1.0.29",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5232,6 +5232,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "MainboardRTCLowerVoltage"
+        },
+        {
+            "EventCode": "0x1900000D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PEU.PEUCPLDSelfTestFailure",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "PEUCPLDSelfTestFailure"
         },
         {
             "EventCode": "0x1A00006F",
@@ -13542,6 +13554,25 @@
             "Cause": {
                 "En": "The RTC battery on the mainboard is faulty or has low power.",
                 "Zh": "主板RTC电池故障或者电量低。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the connection status of the power adapter board.@#AB;2. Replace the power adapter board.",
+                "Zh": "1、检查电源转接板连接状态。@#AB;2、更换电源转接板。"
+            },
+            "EventKeyId": "PEU.PEUCPLDSelfTestFailure",
+            "Description": {
+                "En": "Power supply Expansion board CPLD self-test is abnormal.",
+                "Zh": "电源转接板cpld自检异常。"
+            },
+            "Influence": {
+                "En": "Services on the entire system may be powered off.",
+                "Zh": "可能导致整机业务下电。"
+            },
+            "Cause": {
+                "En": "1. Power supply exceptions occur.@#AB;2. The power adapter board is faulty.",
+                "Zh": "1、电源供电异常。@#AB;2、电源转接板器件异常。"
             }
         },
         {
