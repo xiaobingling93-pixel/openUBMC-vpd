@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.271] - 2025-8-25
+新增cpu电压采集项
+
 ## [1.70.270] - 2025-8-25
 新增电源转接板电容相关异常告警
 
