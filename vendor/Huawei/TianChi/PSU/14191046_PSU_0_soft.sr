@@ -273,6 +273,33 @@
             "DescArg1": "${Slot}",
             "Component": "#/Component_PowerSupply"
         },
+        "Event_InnerCommFault": {
+            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 2)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,2",
+            "DescArg1": "${Slot}",
+            "DescArg2": "inner communication fault",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_RegisterFault": {
+            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 16)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,2",
+            "DescArg1": "${Slot}",
+            "DescArg2": "register fault",
+            "Component": "#/Component_PowerSupply"
+        },
+        "Event_PhaseLossFault": {
+            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 8)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,2",
+            "DescArg1": "${Slot}",
+            "DescArg2": "phase loss fault",
+            "Component": "#/Component_PowerSupply"
+        },
         "Event_VinUvFault": {
             "Reading": "<=/OnePower_0.InputVoltageFault |> expr($1 == 32768 ? 32768 : $1 & 16)",
             "OperatorId": 5,
