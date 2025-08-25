@@ -419,3 +419,10 @@ Memory.MemoryCEStormFault
 PSU.PoorContactMinor
 Mainboard.MainboardRTCLowerVoltage
 BMC.BMCRestartWithCause
+PSU.PSUCapacitorOvervoltage
+PSU.PSUCapacitorUndervoltage
+PSU.PSUCapacitorCapacityWarning
+PSU.PSUCapacitorOvertemperature
+PSU.PSUCapacitorModuleOvertemperature
+PSU.PSUCapacitorFailure
+PSU.PSUCapacitanceAlert
