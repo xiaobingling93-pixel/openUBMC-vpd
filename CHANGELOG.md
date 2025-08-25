@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.277] - 2025-8-25
+内存适配调整
+
 ## [1.70.276] - 2025-8-25
 添加换行符
 
