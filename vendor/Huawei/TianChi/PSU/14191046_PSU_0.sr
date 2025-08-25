@@ -142,6 +142,21 @@
             "Condition": 1,
             "LedFaultCode": "P$$"
         },
+        "Event_InnerCommFault": {
+            "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
+            "Condition": 2,
+            "LedFaultCode": "P$$"
+        },
+        "Event_RegisterFault": {
+            "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
+            "Condition": 16,
+            "LedFaultCode": "P$$"
+        },
+        "Event_PhaseLossFault": {
+            "EventKeyId": "PSU.PSUHealthStatusMajorAlarm",
+            "Condition": 8,
+            "LedFaultCode": "P$$"
+        },
         "Event_VinUvFault": {
             "EventKeyId": "PSU.PSUInputLost",
             "Condition": 16,
