@@ -51,7 +51,16 @@
         {
             "ComponentType" : "CPU",
             "RelatedMetricObjList": [
-                "cpu.cpuhealth", "cpu.cpucorerem", "cpu.cpumemtemp"
+                "cpu.cpuhealth",
+                "cpu.cpucorerem",
+                "cpu.cpumemtemp",
+                "cpu.tacore_voltage",
+                "cpu.ddrvdd_voltage",
+                "cpu.tbcore_voltage",
+                "cpu.uncore_voltage",
+                "cpu.nadvdd_voltage",
+                "cpu.nbdvdd_voltage",
+                "cpu.ddrvddq_voltage"
             ]
         },
         {
@@ -508,6 +517,55 @@
             "MetricType": "Temperature",
             "Unit": "Cel",
             "CacheIntervalInSec": 60,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.tacore_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.ddrvdd_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.tbcore_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.uncore_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.nadvdd_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.nbdvdd_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
+            "CacheDurationInHour": 336
+        },
+        {
+            "Name": "cpu.ddrvddq_voltage",
+            "MetricType": "Voltage",
+            "Unit": "V",
+            "CacheIntervalInSec": 300,
             "CacheDurationInHour": 336
         },
         {
