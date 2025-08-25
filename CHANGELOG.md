@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.267] - 2025-8-25
+新增电源供电状态异常告警
+
 ## [1.70.266] - 2025-8-24
 支持nvme盘mctp over smbus
 
