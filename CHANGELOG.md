@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.276] - 2025-8-25
+添加换行符
+
 ## [1.70.275] - 2025-8-25
 新增TPSU电源系列相关告警
 
