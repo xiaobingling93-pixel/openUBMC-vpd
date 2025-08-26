@@ -3,59 +3,23 @@
     "DataVersion": "3.00",
     "Unit": {
         "Type": "PCIeCard",
-        "Name": "PCIeCard_1"
+        "Name": "PCIeCard_1" 
     },
     "ManagementTopology": {
         "Anchor": {
             "Buses": [
-                "I2cMux_9545Chan"
-            ]
-        },
-        "I2cMux_9545Chan": {
-            "Chips": [
-                "Pca9555_PCIe",
-                "Eeprom_NetCard"
+                "I2cMux_9545Chan3"
             ]
         }
     },
     "Objects": {
-        "Pca9555_PCIe": {
-            "OffsetWidth": 1,
-            "AddrWidth": 1,
-            "Address": 64,
-            "WriteTmout": 100,
-            "ReadTmout": 100,
-            "HealthStatus": 0
-        },
-        "Eeprom_NetCard": {
-            "OffsetWidth": 2,
-            "AddrWidth": 1,
-            "Address": 172,
-            "WriteTmout": 100,
-            "ReadTmout": 100,
-            "RwBlockSize": 32,
-            "WriteInterval": 20,
-            "HealthStatus": 0
-        },
-        "Accessor_PcbID": {
-            "Chip": "#/Pca9555_PCIe",
-            "Offset": 1,
-            "Size": 1,
-            "Mask": 7,
-            "Type": 0,
-            "Value": 0
-        },
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (E810XXVDA2G1P5)",
+            "DeviceName": "PCIe Card $ (E810-XXVDA2)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
-            "BandwidthReduction": 0,
             "LinkSpeedReduced": 0,
-            "CorrectableError": 0,
-            "UncorrectableError": 0,
-            "FatalError": 0,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 8,
@@ -66,10 +30,10 @@
         },
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
-            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "E810XXVDA2G1P5",
-            "BoardName": "E810XXVDA2G1P5",
-            "Description": "Intel Corporation Ethernet Network Adapter E810XXVDA2G1P5",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s', $1)",
+            "Name": "E810-XXVDA2",
+            "BoardName": "E810-XXVDA2",
+            "Description": "E810-XXVDA2",
             "FunctionClass": 2,
             "VendorID": 32902,
             "DeviceID": 5531,
@@ -79,35 +43,102 @@
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
             "Manufacturer": "Intel",
-            "PartNumber": "06310219",
+            "PartNumber": "",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "BroadCom",
+            "Model": "E810",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "PcbID": "#/Accessor_PcbID.Value",
-            "PcbVersion": ".A",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbVersion": "N/A",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+            "SerialNumber": ""
+        },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "E810-XXVDA2",
+            "Manufacturer": "Intel",
+            "Type": "PCIeCard",
+            "Description": "2*25GE",
+            "PartNumber": "N/A",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 65535,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Component_PCIeCard.FruId"
+        },
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Instance": "PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "Intel",
+            "PartNumber": "",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber",
+            "NodeID": "<=/PCIeDevice_1.SlotID"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 2,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
         },
         "NetworkAdapter_1": {
             "SystemID": 1,
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
-            "Name": "E810XXVDA2G1P5",
+            "Name": "E810-XXVDA2",
             "Manufacturer": "Intel",
-            "Description": "2*25G",
+            "Description": "2*25GE",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "BroadCom",
-            "ModelDescription": "2*25G",
+            "Model": "E810",
+            "ModelDescription": "2*25GE",
             "ChipVendor": "Intel",
             "ChipManufacturer": "Intel",
             "NetworkPortCount": 2,
-            "BoardName": "E810XXVDA2G1P5",
+            "BoardName": "E810-XXVDA2",
             "VendorID": "0x8086",
             "DeviceID": "0x159b",
             "SubsystemVendorID": "0x8086",
@@ -117,12 +148,11 @@
             "@Default": {
                 "PCBVersion": ".A"
             },
-            "FruId": "<=/Fru_PCIeCard.FruId",
+            "FruId": 225,
             "SupportedMctp": true,
-            "SupportedLLDP": false,
             "HotPluggable": false,
             "ReadyToRemove": false,
-            "AttentionHotPlugState": 255,
+            "AttentionHotPlugState": 225,
             "SocketId": "<=/PCIeDevice_1.SocketID",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
@@ -136,74 +166,32 @@
             "LinkSpeed": "N/A",
             "TemperatureCelsius": 0,
             "TemperatureStatus": 0,
-            "ParentCardSlotId": 255,
-            "FaultState": 0,
-            "Health": "<=/Component_PCIeCard.Health",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
-        },
-        "BoardPCIeCard_1": {
-            "Slot": "<=/PCIeDevice_1.SlotID",
-            "UID": "N/A",
-            "Name": "E810XXVDA2G1P5",
-            "Manufacturer": "Intel",
-            "Type": "PCIeCard",
-            "Description": "2*25G",
-            "PartNumber": "06310219",
-            "PcbVersion": "<=/PCIeCard_1.PcbVersion",
-            "LogicVersion": "N/A",
-            "SRVersion": "",
-            "BoardID": 65535,
-            "BoardType": "BoardPCIeCard",
-            "Number": 1,
-            "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "Position": "<=/PCIeDevice_1.Position",
-            "LinkWidthCapability": "<=/NetworkAdapter_1.LinkWidthCapability",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
-            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
-            "FruID": "<=/Fru_PCIeCard.FruId"
-        },
-        "Fru_PCIeCard": {
-            "PcbId": "#/Accessor_PcbID.Value",
-            "FruId": 1,
-            "FruName": "E810XXVDA2G1P5",
-            "ConnectorGroupId": "${GroupId}",
-            "UniqueId": "N/A"
-        },
-        "NetworkPort_0": {
-            "@Parent": "NetworkAdapter_1",
-            "SystemID": 1,
-            "PortID": 0,
-            "NetDevFuncType": 1,
-            "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "25G"
+            "BandwidthThresholdPercent": 100,
+            "ParentCardSlotId": 225,
+            "Health": "<=/Component_PCIeCard.Health"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
-            "PortID": 1,
-            "NetDevFuncType": 1,
+            "PortID": 0,
+            "NetDevFuncType": 32,
             "MediumType": "FiberOptic",
             "SupportedLinkCapability": "25G"
         },
-        "OpticalModule_0": {
-            "@Parent": "NetworkPort_0",
-            "ChannelNum": 1,
-            "TemperatureCelsius": 0,
-            "PowerState": 0,
-            "IsSupportedType": 0,
-            "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 32,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "25G"
         },
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
-            "ChannelNum": 2,
+            "ChannelNum": 1,
             "TemperatureCelsius": 0,
             "PowerState": 0,
+            "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
             "FaultState": 0,
@@ -211,79 +199,266 @@
             "LowerThresholdCritical": 0,
             "UpperThresholdCritical": 0
         },
-        "ThresholdSensor_NicTemp": {
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "ThresholdSensor_Temp": {
+            "AssertMask": 640,
+            "DeassertMask": 12928,
+            "ReadingMask": 6168,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 95,
+            "UpperCritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Chip Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NominalMaximum": 0,
+            "NominalMinimun": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "ReadingStatus": "<=/NetworkAdapter_1.TemperatureStatus"
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
             "AssertMask": 128,
             "DeassertMask": 28800,
             "ReadingMask": 2056,
             "Linearization": 0,
-            "M": 100,
-            "RBExp": 224,
-            "UpperNoncritical": 105,
+            "M": 1,
+            "UpperNoncritical": 75,
             "PositiveHysteresis": 2,
-            "NegativeHysteresis": 2
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s OptMod Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NominalMaximum": 0,
+            "NominalMinimun": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 > $2 ? $1 : $2 )",
+            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 > $2 ? $1 : $2) |> expr($1 > 0 ? 0 : 2)"
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
-            "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
-            "Hysteresis": "<=/ThresholdSensor_NicTemp.PositiveHysteresis"
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "@default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "PcieCard",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_Temp.UpperNocritical"
         },
-        "Event_Port1LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
+        "Event_OverOptModTemp": {
+            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "@default": {
+                "Condition": 75
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "PcieCard",
+            "DescArg4": "#/Event_OverOptModTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OpticalModuleTemp.UpperNocritical"
         },
-        "Event_Port2LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
-        },
-        "Event_OM0PowerAlarm": {
-            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+        "Event_TempFail": {
+            "EventKeyId": "PCIeCard.PCIeCardTempFail",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "E810 Chip"
         },
-        "Event_OM1PowerAlarm": {
-            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PCIeCard.PCIeCardReplace",
             "Condition": 1,
-            "LedFaultCode": "q$$"
-        },
-        "Event_OM0SpeedMatch": {
-            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
-            "Condition": 1,
-            "LedFaultCode": "q$$"
-        },
-        "Event_OM1SpeedMatch": {
-            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
-            "Condition": 1,
-            "LedFaultCode": "q$$"
-        },
-        "Event_OM0VAMntr": {
-            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1
-        },
-        "Event_OM1VAMntr": {
-            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(E810-XXVDA2)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeLinkSpeed": {
             "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(E810-XXVDA2)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1+$2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
         },
-        "Event_PcieCardReplaceMntr": {
-            "EventKeyId": "PcieCard.PcieCardReplace",
-            "Condition": 1
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
+        },
+        "Event_Port2BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 2",
+            "DescArg4": "#/Event_Port2BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port2BWUsageMntr.Condition"
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "E810网卡调速",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 100,
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 90,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
+        },
+        "CoolingArea_1_52": {
+            "AreaId": 52,
+            "RequirementIdx": 52,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
         }
     }
 }
