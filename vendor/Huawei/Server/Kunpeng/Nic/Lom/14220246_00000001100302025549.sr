@@ -271,7 +271,7 @@
       "Hysteresis": 0,
       "Enabled": true,
       "Component": "#/Component_NICCard",
-      "DescArg1": "${Slot}",
+      "DescArg1": "#/PCIeDevice_1.DeviceName",
       "DescArg2": "",
       "DescArg3": "Port 1",
       "DescArg4": "#/Event_Port0BWUsageMntr.Reading",

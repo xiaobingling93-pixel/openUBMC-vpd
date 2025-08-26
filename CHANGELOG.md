@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.273] - 2025-8-25
+BandwidthUsagePercent告警描述的槽位号修改网卡名
+
 ## [1.70.272] - 2025-8-25
 支持3000W电源管理告警
 
