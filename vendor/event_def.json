@@ -83,7 +83,7 @@
             "EventKeyId": "PSU.ModuleInternalCommunicationExceptionAlarm",
             "SeverityId": 1,
             "ActionId": 0,
-            "EventName": "ModuleInternalCommunicationException"
+            "EventName": "ModuleInternalCommunicationExceptionAlarm"
         },
         {
             "EventCode": "0x03000039",
