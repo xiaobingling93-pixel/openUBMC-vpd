@@ -97,6 +97,14 @@ PSU.PSULowerVoltage
 PSU.PSUPreLowerVoltage
 PSU.PSUOverVoltage
 PSU.PSUPreOverVoltage
+PSU.RelayFault
+PSU.PSUCurrentUnequal
+PSU.PSUHealthStatusMajorAlarm
+PSU.ModuleInternalCommunicationExceptionAlarm
+PSU.PSUSingleInputLost
+PSU.PSUIntermix
+PSU.PSUOvertemperatureWarning
+PSU.OutputOvercurrentWarning
 Cpu.CPUInstalled
 Cpu.CPURemoved
 Memory.MemoryInstalled

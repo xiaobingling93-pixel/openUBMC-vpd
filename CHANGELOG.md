@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [1.70.274] - 2025-8-20
+## [1.70.275] - 2025-8-25
+新增TPSU电源系列相关告警
+
+## [1.70.274] - 2025-8-25
 新增支持BCM957508-P2100G网卡
 
 ## [1.70.273] - 2025-8-25
