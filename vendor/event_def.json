@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.30",
+    "Version": "1.0.31",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -62,8 +62,6 @@
             "EventName": "NetworkCardUncorrectableErr"
         },
         {
-<<<<<<< Updated upstream
-=======
             "EventCode": "0x03000041",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -148,7 +146,6 @@
             "EventName": "PSUOutputOvercurrentWarning"
         },
         {
->>>>>>> Stashed changes
             "EventCode": "0x000000BB",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -13947,8 +13944,6 @@
                 "En": "1. The system delivers a shutdown command.@#AB;2. The system load exceeds the rated load for a long time.@#AB;3. Other capacitance faults occur.",
                 "Zh": "1.系统下发了命令关机。@#AB;2.系统负载长时间超过额定负载。@#AB;3.发生了电容的其他故障；"
             }
-<<<<<<< Updated upstream
-=======
         },
         {
             "Suggestion": {
@@ -14082,7 +14077,6 @@
                 "En": "1. The load is too heavy.",
                 "Zh": "1.负载过重。"
             }
->>>>>>> Stashed changes
         }
     ]
 }
