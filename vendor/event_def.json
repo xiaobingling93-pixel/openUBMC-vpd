@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.30",
+    "Version": "1.0.31",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -60,6 +60,90 @@
             "SeverityId": 3,
             "ActionId": 0,
             "EventName": "NetworkCardUncorrectableErr"
+        },
+        {
+            "EventCode": "0x03000041",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUSingleInputLost",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "PSUSingleInputLost"
+        },
+        {
+            "EventCode": "0x03000083",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.ModuleInternalCommunicationExceptionAlarm",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "ModuleInternalCommunicationExceptionAlarm"
+        },
+        {
+            "EventCode": "0x03000039",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUCurrentUnequal",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUCurrentUnequal"
+        },
+        {
+            "EventCode": "0x03000087",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.RelayFault",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "RelayFault"
+        },
+        {
+            "EventCode": "0x0300008b",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUIntermix",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUIntermix"
+        },
+        {
+            "EventCode": "0x0300007d",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUOvertemperatureWarning",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUOvertemperatureWarning"
+        },
+        {
+            "EventCode": "0x0300007f",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.OutputOvercurrentWarning",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PSUOutputOvercurrentWarning"
         },
         {
             "EventCode": "0x000000BB",
@@ -13859,6 +13943,139 @@
             "Cause": {
                 "En": "1. The system delivers a shutdown command.@#AB;2. The system load exceeds the rated load for a long time.@#AB;3. Other capacitance faults occur.",
                 "Zh": "1.系统下发了命令关机。@#AB;2.系统负载长时间超过额定负载。@#AB;3.发生了电容的其他故障；"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1.Check the input.2.Check whether the power cables are disconnected or loose. 3. Replace the power cables. 4. Replace the PSU.",
+                "Zh": "1、检查输入。2、检查电源线缆是否未插或松动。3、更换电源线缆。4、更换电源模块。"
+            },
+            "EventKeyId": "PSU.PSUSingleInputLost",
+            "Description": {
+                "En": "The input of PSU %1%2 is lost.",
+                "Zh": "电源%1%2输入丢失。"
+            },
+            "Influence": {
+                "En": "The power supply to the system is affected, and the system may be powered off unexpectedly.",
+                "Zh": "影响系统供电，可能导致系统异常下电。"
+            },
+            "Cause": {
+                "En": "1. The power cable is not securely connected or is faulty. 2. The PSU is faulty.",
+                "Zh": "1、电源线松动或故障。2、电源模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. If the alarm persists for 30 minutes, collect related events and logs and replace the power supply.2. Contact technical support.",
+                "Zh": "1.如果告警持续30min未消失，请收集相关事件和日志，更换告警电源。2.联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.ModuleInternalCommunicationExceptionAlarm",
+            "Description": {
+                "En": "The internal communication of PSU%1 is abnormal.",
+                "Zh": "电源%1内部通信异常。"
+            },
+            "Influence": {
+                "En": "The system power supply is affected.",
+                "Zh": "影响系统供电。"
+            },
+            "Cause": {
+                "En": "The communication between the chips inside the power supply is abnormal.",
+                "Zh": "电源内部芯片之间通信异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check for input power failure or alarm.2. Replace the PSU.3. Replace the PSU backplane.",
+                "Zh": "1.检查该电源输入电压是否存在掉电情况，是否存在输入掉电告警。2.更换电源模块。3.更换电源背板。"
+            },
+            "EventKeyId": "PSU.PSUCurrentUnequal",
+            "Description": {
+                "En": "PSU %1 has severe current imbalance.",
+                "Zh": "电源%1严重不均流。"
+            },
+            "Influence": {
+                "En": "The power supply to the system is affected if the PSU stays in this state for a long time.",
+                "Zh": "长期处于此状态会影响系统供电。"
+            },
+            "Cause": {
+                "En": "1. The input voltage of the PSU is abnormal. 2. The PSU is faulty. 3. The backplane connector is faulty.",
+                "Zh": "1.该模块输入电压异常。2.电源模块故障。3.背板连接器故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. If the alarm persists for 30 minutes, collect related events and logs and replace the power supply.2. Contact technical support.",
+                "Zh": "1.如果告警持续30min未消失，请收集相关事件和日志，更换告警电源。2.联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.RelayFault",
+            "Description": {
+                "En": "PSU %1 %2 fault.",
+                "Zh": "电源%1%2故障。"
+            },
+            "Influence": {
+                "En": "The system power supply is affected.",
+                "Zh": "影响系统供电。"
+            },
+            "Cause": {
+                "En": "1. The soft-start relay circuit is abnormal.2. The dual-input relay circuit is abnormal.",
+                "Zh": "1. 缓起继电器电路异常。2.双输入继电器电路异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the PSU with the same model.",
+                "Zh": "1.将电源更换成同种型号。"
+            },
+            "EventKeyId": "PSU.PSUIntermix",
+            "Description": {
+                "En": "PSUs are intermixed.",
+                "Zh": "电源混插告警。"
+            },
+            "Influence": {
+                "En": "The input power smoothing capability is affected.",
+                "Zh": "影响输入功率平滑能力。"
+            },
+            "Cause": {
+                "En": "1.The PSU are intermixed in the subrack.",
+                "Zh": "1.框内存在电源的混插情况。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the output power. If it exceeds the rated capacity, lower the system load.2. Check whether the fan of the power module is blocked.",
+                "Zh": "1.检查输出功率，如果持续超过额定工作，降低系统负载。2. 检查电源风扇是否堵塞。"
+            },
+            "EventKeyId": "PSU.PSUOvertemperatureWarning",
+            "Description": {
+                "En": "PSU %1 overtemperature warning.",
+                "Zh": "电源%1过温预告警。"
+            },
+            "Influence": {
+                "En": "Warn the rack system.",
+                "Zh": "给机柜系统预警。"
+            },
+            "Cause": {
+                "En": "1. The system is overloaded.2. The fan channel is blocked.",
+                "Zh": "1.系统负载过重。2.风扇通道阻塞。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the output power. If it exceeds the rated capacity, lower the system load.",
+                "Zh": "1.检查输出功率，如果持续超过额定工作，降低系统负载。"
+            },
+            "EventKeyId": "PSU.OutputOvercurrentWarning",
+            "Description": {
+                "En": "PSU %1 Output overcurrent warning.",
+                "Zh": "电源%1输出过流预告警。"
+            },
+            "Influence": {
+                "En": "Warn the rack system.",
+                "Zh": "给机柜系统预警。"
+            },
+            "Cause": {
+                "En": "1. The load is too heavy.",
+                "Zh": "1.负载过重。"
             }
         }
     ]
