@@ -33,7 +33,8 @@
     "VirtualVPDConnect": {
       "Slot": "${Slot}",
       "RefVPDChip": "#/Chip_Virtual_SSD",
-      "RefConnector": "#/Connector_ComVPD"
+      "RefConnector": "#/Connector_ComVPD",
+      "RefPolicyConnector": "#/Connector_Policy"
     },
     "Chip_Virtual_SSD": {
       "Address": 166,
@@ -49,6 +50,23 @@
       "Position": 1,
       "Presence": 0,
       "Id": "PROTOCOL",
+      "AuxId": "255",
+      "Buses": [
+        "I2cMux_SMC"
+      ],
+      "SystemId": "${SystemId}",
+      "ManagerId": "${ManagerId}",
+      "ChassisId": "${ChassisId}",
+      "SilkText": "",
+      "IdentifyMode": 2,
+      "Type": "NVMe"
+    },
+    "Connector_Policy": {
+      "Bom": "14140224",
+      "Slot": "${Slot}",
+      "Position": 2,
+      "Presence": 0,
+      "Id": "POLICY",
       "AuxId": "255",
       "Buses": [
         "I2cMux_SMC"
