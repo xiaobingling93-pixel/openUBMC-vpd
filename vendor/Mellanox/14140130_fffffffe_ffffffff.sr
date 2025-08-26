@@ -1,0 +1,423 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_9545Chan"
+            ]
+        },
+        "I2cMux_9545Chan": {
+            "Chips": [
+            ]
+        }
+    },
+    "Objects": {
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "N/A",
+            "PartNumber": "",
+            "UniqueId": "",
+            "Presence": 1,
+            "Health": 0,
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "NodeId": "<=/PCIeDevice_1.SlotID"
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $",
+            "FunctionClass": 0,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 8
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "PCIe Card",
+            "BoardName": "",
+            "Description": "PCIe Device",
+            "FunctionClass": 2,
+            "VendorID": 65535,
+            "DeviceID": 65535,
+            "SubVendorID": 65535,
+            "SubDeviceID": 65535,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "Health": "<=/Component_PCIeCard.Health",
+            "Manufacturer": "N/A",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1,
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(PCIe Device)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(PCIe Device)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
+        },
+        "PCIeCardFlashChecker_1": {
+            "GroupPosition": "PCIeCardFlashChecker_1_${GroupPosition}",
+            "FaultStatus": 0,
+            "PCIeQuadrupleList": [
+                {
+                    "Id": "15b3_0191",
+                    "Description": "MT25408 [ConnectX IB Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_01f6",
+                    "Description": "MT27500 Family [ConnectX-3 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_01f8",
+                    "Description": "MT27520 Family [ConnectX-3 Pro Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_01ff",
+                    "Description": "MT27600 Family [Connect-IB Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0209",
+                    "Description": "MT27700 Family [ConnectX-4 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_020b",
+                    "Description": "MT27710 Family [ConnectX-4 Lx Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_020d",
+                    "Description": "MT28800 Family [ConnectX-5 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_020f",
+                    "Description": "MT28908A0 Family [ConnectX-6 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0210",
+                    "Description": "MT28908A0 Family [ConnectX-6 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0211",
+                    "Description": "MT416842 Family [BlueField SoC Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0212",
+                    "Description": "MT2892 Family [ConnectX-6 Dx Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0213",
+                    "Description": "MT2892 Family [ConnectX-6 Dx Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0214",
+                    "Description": "MT42822 Family [BlueField-2 SoC Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0215",
+                    "Description": "MT42822 Family [BlueField-2 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0216",
+                    "Description": "MT2894 Family [ConnectX-6 Lx Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0217",
+                    "Description": "MT2894 Family [ConnectX-6 Lx Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0218",
+                    "Description": "MT2910 Family [ConnectX-7 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0219",
+                    "Description": "MT2910 Family [ConnectX-7 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021a",
+                    "Description": "MT43162 Family [BlueField-3 Lx SoC Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021b",
+                    "Description": "MT43162 Family [BlueField-3 Lx Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021c",
+                    "Description": "MT43244 Family [BlueField-3 SoC Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021d",
+                    "Description": "MT43244 Family [BlueField-3 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021e",
+                    "Description": "CX8 Family [ConnectX-8 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_021f",
+                    "Description": "CX8 Family [ConnectX-8 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0220",
+                    "Description": "BF4 Family Flash Recovery [BlueField-4 SoC Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0221",
+                    "Description": "BF4 Family Secure Flash Recovery [BlueField-4 Secure Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0222",
+                    "Description": "CX8 PCIe Switch Family [ConnectX-8 PCIe Switch Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0223",
+                    "Description": "CX8 PCIe Switch Family [ConnectX-8 PCIe Switch Secure Flash Recovery-RMA]"
+                },
+                {
+                    "Id": "15b3_0224",
+                    "Description": "CX9 Family [ConnectX-9 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0225",
+                    "Description": "CX9 Family [ConnectX-9 Secure Flash Recovery-RMA]"
+                },
+                {
+                    "Id": "15b3_0226",
+                    "Description": "CX10 Family [ConnectX-10 Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0227",
+                    "Description": "CX10 Family [ConnectX-10 Secure Flash Recovery-RMA]"
+                },
+                {
+                    "Id": "15b3_0228",
+                    "Description": "CX9 PCIe Switch Family [ConnectX-9 PCIe Switch Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_0229",
+                    "Description": "CX9 PCIe Switch Family [ConnectX-9 PCIe Switch Secure Flash Recovery-RMA]"
+                },
+                {
+                    "Id": "15b3_024e",
+                    "Description": "MT53100 [Spectrum-2, Flash recovery mode]"
+                },
+                {
+                    "Id": "15b3_024f",
+                    "Description": "MT53100 [Spectrum-2, Secure Flash recovery mode]"
+                },
+                {
+                    "Id": "15b3_0250",
+                    "Description": "Spectrum-3, Flash recovery mode"
+                },
+                {
+                    "Id": "15b3_0251",
+                    "Description": "Spectrum-3, Secure Flash recovery mode"
+                },
+                {
+                    "Id": "15b3_0252",
+                    "Description": "Amos chiplet"
+                },
+                {
+                    "Id": "15b3_0253",
+                    "Description": "Amos GearBox Manager"
+                },
+                {
+                    "Id": "15b3_0254",
+                    "Description": "Spectrum-4, Flash recovery mode"
+                },
+                {
+                    "Id": "15b3_0255",
+                    "Description": "Spectrum-4 RMA"
+                },
+                {
+                    "Id": "15b3_0256",
+                    "Description": "Abir GearBox"
+                },
+                {
+                    "Id": "15b3_0257",
+                    "Description": "Quantum-2 in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_0258",
+                    "Description": "Quantum-2 RMA"
+                },
+                {
+                    "Id": "15b3_0259",
+                    "Description": "Abir Chiplet"
+                },
+                {
+                    "Id": "15b3_025b",
+                    "Description": "Quantum-3 in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_025c",
+                    "Description": "Quantum-3 RMA"
+                },
+                {
+                    "Id": "15b3_025d",
+                    "Description": "Quantum-3CPO in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_025e",
+                    "Description": "Quantum-3CPO RMA"
+                },
+                {
+                    "Id": "15b3_0262",
+                    "Description": "MT27710 [ConnectX-4 Lx Programmable] EN"
+                },
+                {
+                    "Id": "15b3_0263",
+                    "Description": "MT27710 [ConnectX-4 Lx Programmable Virtual Function] EN"
+                },
+                {
+                    "Id": "15b3_0264",
+                    "Description": "Innova-2 Flex Burn image"
+                },
+                {
+                    "Id": "15b3_0270",
+                    "Description": "Spectrum-5 in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_0271",
+                    "Description": "Spectrum-5 RMA"
+                },
+                {
+                    "Id": "15b3_0274",
+                    "Description": "Spectrum-6 in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_0275",
+                    "Description": "Spectrum-6 RMA"
+                },
+                {
+                    "Id": "15b3_0277",
+                    "Description": "Spectrum-6 Tile"
+                },
+                {
+                    "Id": "15b3_0278",
+                    "Description": "Quantum-4 in Flash Recovery Mode"
+                },
+                {
+                    "Id": "15b3_0279",
+                    "Description": "Quantum-4 RMA"
+                },
+                {
+                    "Id": "15b3_027a",
+                    "Description": "Eros Chiplet"
+                },
+                {
+                    "Id": "15b3_0281",
+                    "Description": "NPS-600 Flash Recovery"
+                },
+                {
+                    "Id": "15b3_0282",
+                    "Description": "ArcusE Flash recovery"
+                },
+                {
+                    "Id": "15b3_0283",
+                    "Description": "ArcusE RMA"
+                },
+                {
+                    "Id": "15b3_0284",
+                    "Description": "Sagitta"
+                },
+                {
+                    "Id": "15b3_0285",
+                    "Description": "Sagitta RMA"
+                },
+                {
+                    "Id": "15b3_0286",
+                    "Description": "LibraE Flash Recovery"
+                },
+                {
+                    "Id": "15b3_0287",
+                    "Description": "LibraE RMA"
+                },
+                {
+                    "Id": "15b3_6279",
+                    "Description": "MT25208 [InfiniHost III Ex HCA Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_5e8d",
+                    "Description": "MT25204 [InfiniHost III Lx HCA Flash Recovery]"
+                },
+                {
+                    "Id": "15b3_5a45",
+                    "Description": "MT23108 [Infinihost HCA Flash Recovery]"
+                }
+            ]
+        }
+    }
+}
