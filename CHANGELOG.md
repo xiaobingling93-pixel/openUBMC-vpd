@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.274] - 2025-8-20
+新增支持BCM957508-P2100G网卡
+
 ## [1.70.273] - 2025-8-25
 BandwidthUsagePercent告警描述的槽位号修改网卡名
 
