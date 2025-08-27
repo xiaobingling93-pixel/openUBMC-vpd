@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.280] - 2025-8-27
+修改LPe35002网卡的调速监控状态
+
 ## [1.70.279] - 2025-8-27
 修正0x1900000D告警级别
 
