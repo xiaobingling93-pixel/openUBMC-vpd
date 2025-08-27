@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.279] - 2025-8-27
+修正0x1900000D告警级别
+
 ## [1.70.278] - 2025-8-27
 修改LPe35002网卡的四元组
 

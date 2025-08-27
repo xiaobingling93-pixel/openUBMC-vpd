@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.32",
+    "Version": "1.0.33",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5325,7 +5325,7 @@
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PEU.PEUCPLDSelfTestFailure",
-            "SeverityId": 3,
+            "SeverityId": 2,
             "ActionId": 0,
             "EventName": "PEUCPLDSelfTestFailure"
         },
