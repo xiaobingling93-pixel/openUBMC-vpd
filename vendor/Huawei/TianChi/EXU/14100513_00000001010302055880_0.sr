@@ -1,0 +1,2317 @@
+{
+	"FormatVersion": "1.16",
+	"DataVersion": "1.16",
+	"ManagementTopology": {
+		"Anchor": {
+			"Buses": ["I2c_1", "I2c_2", "I2c_3", "I2c_4", "I2c_5", "I2c_6", "I2c_7", "I2c_8", "I2c_11", "Jtag_1", "JtagOverLocalBus_1", "Hisport_0", "Hisport_1", "Hisport_2", "Hisport_3", "Hisport_4", "Hisport_5", "Hisport_6", "Hisport_7", "Hisport_8", "Hisport_9", "Hisport_10", "Hisport_11", "Hisport_12", "Hisport_13", "Hisport_14", "Hisport_15", "Hisport_16", "Hisport_17", "Hisport_18", "Hisport_19", "Hisport_20", "Hisport_21"]
+		},
+		"I2c_8": {
+			"Chips": ["Chip_UsbCc_On", "Chip_UsbCc_Sgm"],
+			"Connectors": ["Connector_PSR_EEP"]
+		},
+		"I2c_1": {
+			"Chips": ["Smc_CpuBrdSMC"],
+			"Connectors": ["Connector_BCU_1"]
+		},
+		"I2c_3": {
+		},
+		"I2c_4": {
+			"Chips": ["Eeprom_Rtc"],
+			"Connectors": ["Connector_CLU_1"]
+		},
+		"I2c_5": {
+			"Chips": ["Chip_Exu"]
+		},
+		"I2c_7": {
+			"Chips": ["Pca9545_i2c7_chip"]
+		},
+		"I2c_2": {
+			"Chips": ["Smc_ExpBoardSMC", "Eeprom_EXU"],
+			"Connectors": ["Connector_LOM_1", "Connector_LOM_2"]
+		},
+		"Jtag_1": {
+			"Chips": ["Cpld_1"]
+		},
+		"I2c_11": {
+			"Chips": ["Lm75_InletTemp", "Lm75_OutletTemp", "Lm75_MbTemp"]
+		},
+		"Pca9545_i2c7_chip": {
+			"Buses": ["I2cMux_Pca9545_i2c7_chip_1", "I2cMux_Pca9545_i2c7_chip_2"]
+		},
+		"I2cMux_Pca9545_i2c7_chip_1": {
+			"Connectors": ["Connector_OCP_1"]
+		},
+		"I2cMux_Pca9545_i2c7_chip_2": {
+			"Chips": ["Eeprom_FanPower"],
+			"Connectors": ["Connector_OCP_2"]
+		}
+	},
+	"Objects": {
+		"Scanner_BCU_1": {
+			"@Default": {},
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Mask": 32,
+			"Offset": 134237440,
+			"Period": 8000,
+			"Size": 2,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_BCU_2": {
+			"@Default": {},
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Mask": 256,
+			"Offset": 134237440,
+			"Period": 8000,
+			"Size": 2,
+			"Type": 0,
+			"Value": 0
+		},
+		"Connector_PSR_EEP": {
+			"Bom": "14100513",
+			"Slot": 1,
+			"Position": 10,
+			"Presence": 1,
+			"Id": "PSR",
+			"AuxId": "920",
+			"Buses": ["I2c_2", "I2cMux_Pca9545_i2c7_chip_2"],
+			"SystemId": 1,
+			"ManagerId": "1",
+			"ChassisId": "1",
+			"SilkText": "PSR",
+			"IdentifyMode": 2
+		},
+		"Event_CSRFailureMntr_PSR_EEP": {
+			"EventKeyId": "BMC.AccessCSRFailure",
+			"Reading": "<=/Connector_PSR_EEP.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComEXU",
+			"DescArg1": "#/ExpBoard_1.DeviceName",
+			"DescArg2": "#/Connector_PSR_EEP.Slot |> string.format(' PSR%s',$1)"
+		},
+		"Eeprom_FanPower": {
+			"Name": "FanPower",
+			"Address": 128,
+			"AddrWidth": 1,
+			"OffsetWidth": 1,
+			"WriteDivTime": 30,
+			"ReadTmout": 30,
+			"WriteTmout": 30,
+			"RwBlockSize": 1024,
+			"EepStatus": 0
+		},
+		"Connector_BCU_1": {
+			"Bom": "14100513",
+			"Slot": 1,
+			"Position": 1,
+			"Presence": "<=/Scanner_BCU_1.Value",
+			"Id": "00000001020302059020",
+			"AuxId": "0",
+			"Buses": ["I2c_1", "I2c_2", "I2c_6", "I2cMux_Pca9545_i2c7_chip_1", "JtagOverLocalBus_1", "Hisport_0", "Hisport_1", "Hisport_2", "Hisport_3", "Hisport_4", "Hisport_5", "Hisport_6", "Hisport_7", "Hisport_8", "Hisport_9", "Hisport_10", "Hisport_11", "Hisport_12", "Hisport_13", "Hisport_14", "Hisport_15", "Hisport_16", "Hisport_17", "Hisport_18", "Hisport_19", "Hisport_20", "Hisport_21"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "BCU",
+			"IdentifyMode": 2,
+			"Type": "CPUBoard"
+		},
+		"Event_CSRFailureMntr_BCU_1": {
+			"EventKeyId": "BMC.AccessCSRFailure",
+			"Reading": "<=/Connector_BCU_1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComEXU",
+			"DescArg1": "#/ExpBoard_1.DeviceName",
+			"DescArg2": "#/Connector_BCU_1.Slot |> string.format(' BCU%s',$1)"
+		},
+		"Connector_CLU_1": {
+			"Bom": "14100363",
+			"Slot": 1,
+			"Position": 3,
+			"Presence": 1,
+			"Id": "CLU",
+			"AuxId": "0",
+			"Buses": ["I2c_2", "I2c_4"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "CLU",
+			"IdentifyMode": 2
+		},
+		"Event_CSRFailureMntr_CLU_1": {
+			"EventKeyId": "BMC.AccessCSRFailure",
+			"Reading": "<=/Connector_CLU_1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComEXU",
+			"DescArg1": "#/ExpBoard_1.DeviceName",
+			"DescArg2": "#/Connector_CLU_1.Slot |> string.format(' CLU%s',$1)"
+		},
+		"Pca9545_i2c7_chip": {
+			"OffsetWidth": 0,
+			"AddrWidth": 1,
+			"Address": 224,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Connector_LOM_1": {
+			"Bom": "14220246",
+			"Slot": 1,
+			"Position": 5,
+			"Presence": 1,
+			"Id": "LOM",
+			"AuxId": "0",
+			"Buses": ["I2c_2"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "J6008",
+			"IdentifyMode": 2
+		},
+		"Event_CSRFailureMntr_LOM_1": {
+			"EventKeyId": "BMC.AccessCSRFailure",
+			"Reading": "<=/Connector_LOM_1.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComEXU",
+			"DescArg1": "#/ExpBoard_1.DeviceName",
+			"DescArg2": "#/Connector_LOM_1.Slot |> string.format(' LOM%s',$1)"
+		},
+		"Connector_LOM_2": {
+			"Bom": "14220246",
+			"Slot": 2,
+			"Position": 6,
+			"Presence": 0,
+			"Id": "",
+			"AuxId": "",
+			"Buses": ["I2c_2", "I2cMux_Pca9545_i2c7_chip_2"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "J6014",
+			"IdentifyMode": 3
+		},
+		"Event_CSRFailureMntr_LOM_2": {
+			"EventKeyId": "BMC.AccessCSRFailure",
+			"Reading": "<=/Connector_LOM_2.LoadStatus |> expr(($1 == 2) ? 1 : $1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComEXU",
+			"DescArg1": "#/ExpBoard_1.DeviceName",
+			"DescArg2": "#/Connector_LOM_2.Slot |> string.format(' LOM%s',$1)"
+		},
+		"Connector_OCP_1": {
+			"Bom": "14220247",
+			"Slot": 1,
+			"Position": 7,
+			"Presence": 0,
+			"Buses": ["I2c_2", "I2cMux_Pca9545_i2c7_chip_1"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "J6008",
+			"IdentifyMode": 2
+		},
+		"Connector_OCP_2": {
+			"Bom": "14220247",
+			"Slot": 2,
+			"Position": 8,
+			"Presence": 0,
+			"Buses": ["I2c_2", "I2cMux_Pca9545_i2c7_chip_2"],
+			"SystemId": "${SystemId}",
+			"ManagerId": "${ManagerId}",
+			"ChassisId": "${ChassisId}",
+			"SilkText": "J6014",
+			"IdentifyMode": 2
+		},
+		"Smc_ExpBoardSMC": {
+			"Name": "ExpBoardSMC",
+			"Address": 96,
+			"AddrWidth": 1,
+			"OffsetWidth": 1,
+			"WriteTmout": 0,
+			"ReadTmout": 0
+		},
+		"Chip_Exu": {
+			"Address": 36,
+			"AddrWidth": 1,
+			"OffsetWidth": 1,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Cpld_1": {},
+		"Eeprom_Rtc": {
+			"Name": "ExpRtc",
+			"Address": 208,
+			"AddrWidth": 1,
+			"OffsetWidth": 1,
+			"WriteDivTime": 30,
+			"ReadTmout": 30,
+			"WriteTmout": 30,
+			"RwBlockSize": 1024,
+			"EepStatus": 0
+		},
+		"Time_Bmc": {
+			"Id": 1,
+			"RtcTimestamp": "<=/Scanner_Rtc.Value",
+			"CpuBrdRtc": "#/Scanner_Rtc",
+			"TimeSrc": "BoardRtc"
+		},
+		"Scanner_Rtc": {
+			"Chip": "#/Eeprom_Rtc",
+			"Offset": 0,
+			"Size": 8,
+			"Mask": 0,
+			"Type": 1,
+			"Period": 6000,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Eeprom_EXU": {
+			"OffsetWidth": 2,
+			"AddrWidth": 1,
+			"Address": 174,
+			"WriteTmout": 100,
+			"ReadTmout": 100,
+			"RwBlockSize": 32,
+			"WriteInterval": 20,
+			"HealthStatus": 0
+		},
+		"Lm75_InletTemp": {
+			"OffsetWidth": 1,
+			"AddrWidth": 1,
+			"Address": 148,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Lm75_OutletTemp": {
+			"OffsetWidth": 1,
+			"AddrWidth": 1,
+			"Address": 144,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Lm75_MbTemp": {
+			"OffsetWidth": 1,
+			"AddrWidth": 1,
+			"Address": 146,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Scanner_MbTemp": {
+			"Chip": "#/Lm75_MbTemp",
+			"Offset": 0,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 1000,
+			"Debounce": "#/MidAvg_Inlet",
+			"Value": 0
+		},
+		"Scanner_OutletTemp": {
+			"Chip": "#/Lm75_OutletTemp",
+			"Offset": 0,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 1000,
+			"Debounce": "#/MidAvg_Inlet",
+			"Value": 0
+		},
+		"Event_OutletTempFail": {
+			"EventKeyId": "Chassis.ChassisOutletTempFail",
+			"Reading": "<=/Scanner_OutletTemp.Value |> expr(($1 & 32768) == 0 ? 0 : 1)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Chassis"
+		},
+		"ExpBoard_1": {
+			"Slot": 1,
+			"UID": "00000001010302044492",
+			"Name": "BC83SMMBC",
+			"Manufacturer": "<=/FruData_Expander.BoardManufacturer",
+			"Type": "EXU",
+			"Description": "Expander Board",
+			"PartNumber": "0302044492",
+			"LogicVersion": "",
+			"LogicUnit": 19,
+			"PcbID": "#/Accessor_PcbID.Value",
+			"PcbVersion": "",
+			"LogicVersionID": "#/Accessor_LogicVersionID.Value",
+			"SRVersion": "${DataVersion}",
+			"MCUVersion": "",
+			"BoardID": 65535,
+			"BoardType": "ExpBoard",
+			"Number": 1,
+			"DeviceName": "ExpBoard${Slot}",
+			"Position": "EXU${Slot}",
+			"NodeId": "EXU${Slot}ExpBoard${Slot}",
+			"RunningStatus": 0,
+			"RefSMCChip": "#/Smc_ExpBoardSMC",
+			"FruID": "<=/Fru_Expander.FruId",
+			"CpldTestReg": "#/Accessor_CpldTest.Value",
+			"CpldStatus": 0
+		},
+		"Smc_CpuBrdSMC": {
+			"Name": "CpuBrdSMC",
+			"Address": 96,
+			"AddrWidth": 1,
+			"OffsetWidth": 1,
+			"WriteTmout": 0,
+			"ReadTmout": 0
+		},
+		"Accessor_PcbID": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 1792,
+			"Size": 2,
+			"Mask": 15,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_LogicVersionID": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 2816,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 2000,
+			"Value": 0
+		},
+		"Accessor_LogicVersionID": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 2816,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"MidAvg_PSUTemp": {
+			"WindowSize": 3,
+			"DefaultValue": 20
+		},
+		"Accessor_UIDLedAccessor": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134227456,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Led_UIDLed": {
+			"Id": 4,
+			"SystemId": 1,
+			"Name": "UIDLed",
+			"CtrlValue": "#/Accessor_UIDLedAccessor.Value",
+			"Capability": 1,
+			"Mode": 0,
+			"ColorCapabilities": 2,
+			"DefaultOSColor": 1,
+			"DefaultLCSColor": 1,
+			"LCSColor": 1,
+			"LCSState": 0,
+			"OSColor": 1,
+			"OSState": 0,
+			"LampTestColor": 1,
+			"LampTestDuration": 0
+		},
+		"Accessor_SysHealthLedAccessor": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134226432,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Led_SysHealth": {
+			"Id": 2,
+			"SystemId": 1,
+			"Name": "SysHealLed",
+			"CtrlValue": "#/Accessor_SysHealthLedAccessor.Value",
+			"Capability": 5,
+			"Mode": 0,
+			"ColorCapabilities": 32,
+			"DefaultOSColor": 5,
+			"DefaultLCSColor": 5,
+			"LCSColor": 5,
+			"LCSState": 255,
+			"OSColor": 5,
+			"OSState": 0,
+			"LampTestColor": 5,
+			"LampTestDuration": 0
+		},
+		"Scanner_ChassisIntrusionACOn": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Offset": 201345280,
+			"Size": 1,
+			"Mask": 4,
+			"Type": 0,
+			"Period": 5000,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Scanner_ChassisIntrusionACOff": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Offset": 201345280,
+			"Size": 1,
+			"Mask": 8,
+			"Type": 0,
+			"Period": 5000,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Scanner_ChassisCoverStatus": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Offset": 201345280,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Period": 5000,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Accessor_ChassisIntrusionACOffClear": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Size": 1,
+			"Offset": 201345536,
+			"Mask": 8,
+			"Type": 1,
+			"Value": 0
+		},
+		"Accessor_ChassisIntrusionACOnClear": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Size": 1,
+			"Offset": 201345536,
+			"Mask": 4,
+			"Type": 1,
+			"Value": 0
+		},
+		"Accessor_UIDButtonEvent": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_UIDButtonEvent": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Period": 1000,
+			"Value": 0
+		},
+		"Accessor_UIDButtonLongEvent": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 4,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_UIDButtonLongEvent": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 4,
+			"Type": 0,
+			"Period": 1000,
+			"Value": 0
+		},
+		"Chassis_1": {
+			"Name": "1",
+			"IntrusionACOn": "<=/Scanner_ChassisIntrusionACOn.Value",
+			"IntrusionACOff": "<=/Scanner_ChassisIntrusionACOff.Value",
+			"CoverStatus": "<=/Scanner_ChassisCoverStatus.Value",
+			"IntrusionACOnClear": "#/Accessor_ChassisIntrusionACOnClear.Value",
+			"IntrusionACOffClear": "#/Accessor_ChassisIntrusionACOffClear.Value",
+			"IntrusionFlag": 0,
+			"UidButtonAccessor": "#/Accessor_UIDButtonEvent.Value",
+			"UidButtonScanner": "<=/Scanner_UIDButtonEvent.Value",
+			"UidButtonPressed": 0,
+			"UidButtonLongAccessor": "#/Accessor_UIDButtonLongEvent.Value",
+			"UidButtonLongScanner": "<=/Scanner_UIDButtonLongEvent.Value",
+			"UidButtonLongPressed": 0
+		},
+		"Event_ChassisCoverOpen": {
+			"EventKeyId": "Chassis.ChassisCoverOpened",
+			"Reading": "<=/Chassis_1.IntrusionFlag",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Chassis"
+		},
+		"Accessor_AC": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 603983360,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"ACCycle_1": {
+			"AC": "#/Accessor_AC.Value"
+		},
+		"Accessor_JtagSwitch": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469776896,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_LogicVerId": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 2816,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_LogicVerId": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 2816,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 2000,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"LogicFirmware_EXU_1": {
+			"UId": "00000001010302061816",
+			"Name": "EXU_CPLD",
+			"Manufacturer": "Huawei",
+			"Version": "#/Accessor_LogicVerId.Value",
+			"Location": 19,
+			"UpgradeChip": "#/Cpld_1",
+			"ChipInfo": "#/Cpld_1",
+			"Routes": "#/Accessor_JtagSwitch.Value",
+			"DefaultRoute": 0,
+			"FirmwareRoute": 0,
+			"ValidMode": 1,
+			"SoftwareId": "CPLD-BC83SMMBC",
+			"ValidAction": "#/Accessor_AC.Value"
+		},
+		"DftVersion_ExuBoardCpldVersion": {
+			"FruId": "<=/Fru_Expander.FruId",
+			"VersionType": 2,
+			"Version": "<=/ExpBoard_1.LogicVersion",
+			"UnitNum": "<=/ExpBoard_1.LogicUnit",
+			"NeedUintNum": 1
+		},
+		"DftVersion_ExpanderPcbVersion": {
+			"FruId": "<=/Fru_Expander.FruId",
+			"VersionType": 0,
+			"Version": "<=/ExpBoard_1.PcbVersion"
+		},
+		"DftVersion_ExpanderCsrVersion": {
+			"FruId": "<=/Fru_Expander.FruId",
+			"VersionType": 25,
+			"Version": "<=/ExpBoard_1.SRVersion"
+		},
+		"DftVersion_ExpanderMcuVersion": {
+			"FruId": "<=/Fru_Expander.FruId",
+			"VersionType": 27,
+			"Version": "<=/ExpBoard_1.MCUVersion"
+		},
+		"Accessor_EXUWP": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 1,
+			"Offset": 134239488,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"SRUpgrade_1": {
+			"UID": "00000001010302044492",
+			"Type": "EXU",
+			"Version": "${DataVersion}",
+			"StorageChip": "#/Eeprom_EXU",
+			"SoftwareId": "HWSR-BC83SMMBC",
+			"WriteProtect": "#/Accessor_EXUWP.Value"
+		},
+		"DftEeprom_1": {
+			"Id": 12,
+			"Type": 1,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Eeprom Self Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessTime": 65535,
+			"FruData": "#/FruData_Expander"
+		},
+		"DftEepromWp_1": {
+			"Id": 47,
+			"Type": 1,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Eeprom Write Protect Self Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessTime": 65535,
+			"FruData": "#/FruData_Expander"
+		},
+		"FruData_Expander": {
+			"FruId": 1,
+			"FruDev": "#/Eeprom_EXU",
+			"EepromWp": "#/Accessor_EXUWP.Value",
+			"BoardSerialNumber": "",
+			"StorageType": "TianChi"
+		},
+		"Fru_Expander": {
+			"PcbId": 1,
+			"PcbVersion": ".A",
+			"FruId": 1,
+			"FruName": "ExpBoard${Slot}",
+			"PowerState": 1,
+			"Health": 0,
+			"EepStatus": 1,
+			"ConnectorGroupId": "${GroupId}",
+			"Type": 50,
+			"FruDataId": "#/FruData_Expander"
+		},
+		"Component_ComEXU": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 193,
+			"Location": "chassis",
+			"Name": "EXU${Slot}",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"Manufacturer": "",
+			"UniqueId": "N/A",
+			"BoardId": "<=/ExpBoard_1.BoardID"
+		},
+		"Component_ComExpander": {
+			"FruId": "<=/Fru_Expander.FruId",
+			"Instance": "${Slot}",
+			"Type": 93,
+			"Location": "<=/ExpBoard_1.Position",
+			"Name": "<=/ExpBoard_1.DeviceName",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"Manufacturer": "<=/ExpBoard_1.Manufacturer",
+			"UniqueId": "<=/ExpBoard_1.UID",
+			"BoardId": "<=/ExpBoard_1.BoardID",
+			"ReplaceFlag": 0,
+			"PreviousSN": "",
+			"SerialNumber": "<=/FruData_Expander.BoardSerialNumber"
+		},
+		"Component_ComSystem": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 44,
+			"Location": "chassis",
+			"Name": "System",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"UniqueId": "N/A"
+		},
+		"Component_Button": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 49,
+			"Location": "chassis",
+			"Name": "button",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"UniqueId": "N/A"
+		},
+		"Accessor_PowerGd": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 1,
+			"Offset": 469765888,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_PowerGd": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469765888,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 100,
+			"Debounce": "None",
+			"Status": 0,
+			"Value": 0
+		},
+		"PGSignal_1": {
+			"PowerGDState": "<=/Scanner_PowerGd.Value",
+			"@Default": {
+				"PowerGDState": 255
+			}
+		},
+		"Dft5V0Vlot_1": {
+			"Type": 1,
+			"Id": 19,
+			"DeviceNum": 1,
+			"ItemName": "VCC 5V Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"VoltValue": "#/Accessor_Adc5VccVlot.Value",
+			"PowOnStandValue": 2731,
+			"PowOffStandValue": 0,
+			"HystValue": 109,
+			"DevPowerStatus": "#/Accessor_PowerGd.Value"
+		},
+		"Accessor_Adc5VccVlot": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4873,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Dft5V0Vlot_2": {
+			"Type": 1,
+			"Id": 19,
+			"DeviceNum": 2,
+			"ItemName": "VCC 5V Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"VoltValue": "#/Accessor_Adc6VccVlot.Value",
+			"PowOnStandValue": 2731,
+			"PowOffStandValue": 0,
+			"HystValue": 109,
+			"DevPowerStatus": "#/Accessor_PowerGd.Value"
+		},
+		"Accessor_Adc6VccVlot": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4874,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_NCSI": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 1,
+			"Offset": 469774592,
+			"Mask": 16,
+			"Type": 0,
+			"Value": 0
+		},
+		"NCSICapabilities_1": {
+			"PCIeNCSIEnabled": "#/Accessor_NCSI.Value",
+			"PCIeNCSISupported": false
+		},
+		"Dft3V3Vlot_1": {
+			"Type": 1,
+			"Id": 20,
+			"DeviceNum": 1,
+			"ItemName": "VCC 3.3V Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"VoltValue": "#/Accessor_Adc4VccVlot.Value",
+			"PowOnStandValue": 2700,
+			"PowOffStandValue": 0,
+			"HystValue": 108,
+			"DevPowerStatus": "#/Accessor_PowerGd.Value"
+		},
+		"Accessor_Adc4VccVlot": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4872,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Event_ExpanderAccessFRULableFailure": {
+			"EventKeyId": "ExpandBoard.ExpBoardAccessFRULableFailure",
+			"Reading": "<=/Fru_Expander.Health",
+			"ComponentId": 232,
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComExpander"
+		},
+		"ContBin_FanPwrSensorStatus": {
+			"NumH": 3,
+			"NumL": 1,
+			"DefaultValue": 0
+		},
+		"Scanner_FanPwrSensorStatus": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 12544,
+			"Size": 2,
+			"Mask": 8,
+			"Type": 0,
+			"Period": 2000,
+			"Debounce": "#/ContBin_FanPwrSensorStatus",
+			"ScanEnabled": "<=/Scanner_PowerGd.Value",
+			"Value": 0
+		},
+		"MidAvg_FanPwr": {
+			"WindowSize": 30,
+			"DefaultValue": 0
+		},
+		"Scanner_Fan_Pwr": {
+			"Chip": "#/Eeprom_FanPower",
+			"Offset": 3,
+			"Mask": 65535,
+			"Size": 2,
+			"Type": 0,
+			"Period": 2000,
+			"Debounce": "None",
+			"ScanEnabled": "<=/Scanner_PowerGd.Value",
+			"Value": 0
+		},
+		"Scanner_SEU_1": {
+			"Value": 0,
+			"Type": 0,
+			"Size": 2,
+			"Mask": 1,
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Period": 8000,
+			"Offset": 134237440
+		},
+		"Scanner_SEU_2": {
+			"Value": 0,
+			"Type": 0,
+			"Size": 2,
+			"Mask": 2,
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Period": 8000,
+			"Offset": 134237440
+		},
+		"Scanner_Lm75_Inlet": {
+			"Chip": "#/Lm75_InletTemp",
+			"Size": 1,
+			"Offset": 0,
+			"Mask": 255,
+			"Period": 1000,
+			"Debounce": "#/MidAvg_Inlet"
+		},
+		"MidAvg_Inlet": {
+			"WindowSize": 4,
+			"DefaultValue": 20,
+			"IsSigned": true
+		},
+		"CoolingRequirement_1_6": {
+			"RequirementId": 6,
+			"TemperatureType": 11,
+			"MonitoringStatus": "<=/Scanner_Lm75_Inlet.Status",
+			"MonitoringValue": "<=/Scanner_Lm75_Inlet.Value",
+			"FailedValue": 80
+		},
+		"Temperature_1_11": {
+			"TemperatureType": 11
+		},
+		"MidAvg_Outlet": {
+			"WindowSize": 4,
+			"DefaultValue": 20,
+			"IsSigned": true
+		},
+		"Scanner_Lm75_Outlet": {
+			"Chip": "#/Lm75_OutletTemp",
+			"Size": 1,
+			"Offset": 0,
+			"Mask": 255,
+			"Period": 1000,
+			"Debounce": "#/MidAvg_Outlet",
+			"Value": 0
+		},
+		"CoolingRequirement_1_7": {
+			"RequirementId": 7,
+			"TemperatureType": 2,
+			"MonitoringStatus": "<=/Scanner_Lm75_Outlet.Status",
+			"MonitoringValue": "<=/Scanner_Lm75_Inlet.Value;<=/Scanner_Lm75_Outlet.Value |> expr((($1 + 5) > ($2 - 10)) ? ($1 + 5) : ($2 - 10))",
+			"FailedValue": 80,
+			"TargetTemperatureCelsius": 50,
+			"MaxAllowedTemperatureCelsius": 60,
+			"TargetTemperatureRangeCelsius": [45, 60],
+			"SmartCoolingTargetTemperature": [50, 47, 53],
+			"CustomSupported": true,
+			"CustomTargetTemperatureCelsius": 52
+		},
+		"DiscreteSensor_SysFwProgress": {
+			"OwnerId": 64,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 192,
+			"SensorType": 15,
+			"ReadingType": 111,
+			"SensorName": "SysFwProgress",
+			"AssertMask": 7,
+			"DeassertMask": 7,
+			"DiscreteMask": 7,
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 0,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DftPowerSupply_1": {
+			"Id": 8,
+			"Type": 1,
+			"DeviceNum": 0,
+			"ItemName": "Power Supply Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftPmu_1": {
+			"Id": 9,
+			"Type": 1,
+			"DeviceNum": 0,
+			"ItemName": "ME Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftBmcCard_1": {
+			"Id": 26,
+			"Type": 1,
+			"DeviceNum": 0,
+			"ItemName": "hi1711 Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftCpld_1": {
+			"Type": 1,
+			"Id": 15,
+			"DeviceNum": 1,
+			"ItemName": "CpuBrd CPLD Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftFlash_1": {
+			"Type": 1,
+			"Id": 11,
+			"DeviceNum": 0,
+			"ItemName": "Flash Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftDdr3_1": {
+			"Type": 1,
+			"Id": 13,
+			"DeviceNum": 0,
+			"ItemName": "DDR3 Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftLpc_1": {
+			"Id": 34,
+			"Type": 1,
+			"Slot": 0,
+			"DeviceNum": 0,
+			"ItemName": "LPC Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftIpmb_1": {
+			"Id": 35,
+			"Type": 1,
+			"DeviceNum": 0,
+			"ItemName": "Ipmb Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftEth_1": {
+			"Id": 74,
+			"Type": 2,
+			"DeviceNum": 0,
+			"ItemName": "MGMT Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"RefEth": "eth2"
+		},
+		"DftPowerButton_1": {
+			"Id": 163,
+			"Type": 5,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Power Button Press Test",
+			"PrompteReady": "",
+			"PrompteFinish": "Please press Power button",
+			"ProcessPeriod": 65535
+		},
+		"DftChassisCover_1": {
+			"Id": 195,
+			"Type": 5,
+			"Slot": "${GroupId}",
+			"DeviceNum": 1,
+			"ItemName": "Chassis Cover Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftNandFlash_1": {
+			"Id": 28,
+			"Type": 1,
+			"DeviceNum": 0,
+			"ItemName": "NAND Flash Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftJTAG_1": {
+			"Type": 2,
+			"Id": 69,
+			"DeviceNum": 0,
+			"ItemName": "JTAG Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftSPI_1": {
+			"Id": 70,
+			"Type": 2,
+			"DeviceNum": 0,
+			"ItemName": "SPI Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"Accessor_LeftLedTube": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134220288,
+			"Size": 4,
+			"Mask": 16711680,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_MidLedTube": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134220288,
+			"Size": 4,
+			"Mask": 65280,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_RightLedTube": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134220288,
+			"Size": 4,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"LedDispControl_0": {
+			"LedTubeSupport": true,
+			"LeftLedTube": "#/Accessor_LeftLedTube.Value",
+			"MidLedTube": "#/Accessor_MidLedTube.Value",
+			"RightLedTube": "#/Accessor_RightLedTube.Value"
+		},
+		"I2cMux_Pca9545_i2c7_chip_1": {
+			"ChannelId": 0
+		},
+		"I2cMux_Pca9545_i2c7_chip_2": {
+			"ChannelId": 1
+		},
+		"Chip_UsbCc_On": {
+			"Address": 66,
+			"OffsetWidth": 1,
+			"AddrWidth": 1,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"Chip_UsbCc_Sgm": {
+			"Address": 142,
+			"OffsetWidth": 1,
+			"AddrWidth": 1,
+			"WriteTmout": 0,
+			"ReadTmout": 0,
+			"HealthStatus": 0
+		},
+		"DftUsb_1": {
+			"Id": 94,
+			"Type": 2,
+			"Slot": 0,
+			"DeviceNum": 0,
+			"ItemName": "Type C USB Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"Accessor_ShortPushButton": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134224384,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_LongPushButton": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134224384,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Value": 0
+		},
+		"PowerButton_1": {
+			"ShortPushButton": "#/Accessor_ShortPushButton.Value",
+			"LongPushButton": "#/Accessor_LongPushButton.Value"
+		},
+		"Accessor_PowerBtnLock": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134222336,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_PowerBtnEvt": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Period": 400,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Accessor_PowerBtnEvt": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134221312,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Value": 0
+		},
+		"Accessor_PowerBtnShield": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134223361,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Value": 0
+		},
+		"ButtonEvt_1": {
+			"PowerBtnLock": "#/Accessor_PowerBtnLock.Value",
+			"GetPowerBtnEvt": "<=/Scanner_PowerBtnEvt.Value",
+			"SetPowerBtnEvt": "#/Accessor_PowerBtnEvt.Value",
+			"PowerBtnShield": "#/Accessor_PowerBtnShield.Value"
+		},
+		"Accessor_PowerOnLock": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469766657,
+			"Size": 1,
+			"Mask": 8,
+			"Type": 0,
+			"Value": 0
+		},
+		"PowerAction_1": {
+			"PowerOnTimeoutFlag": "#/Accessor_PowerOnLock.Value"
+		},
+		"ContBin_ExpBoardClockSignalLost": {
+			"NumH": 6,
+			"NumL": 6,
+			"DefaultValue": 0
+		},
+		"Scanner_100M1ClockFailMntr": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469770496,
+			"Size": 1,
+			"Type": 0,
+			"Mask": 1,
+			"Period": 400,
+			"Debounce": "#/ContBin_ExpBoardClockSignalLost",
+			"ScanEnabled": "<=/Scanner_PowerGd.Value",
+			"NominalValue": 0,
+			"Value": 0,
+			"@Default": {
+				"ScanEnabled": 0
+			}
+		},
+		"Scanner_50M1ClockFailMntr": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469769472,
+			"Size": 1,
+			"Type": 0,
+			"Mask": 1,
+			"Period": 400,
+			"Debounce": "#/ContBin_ExpBoardClockSignalLost",
+			"NominalValue": 0,
+			"Value": 0
+		},
+		"Scanner_PowerOnTimeout": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469766656,
+			"Size": 1,
+			"Mask": 8,
+			"Type": 0,
+			"Period": 400,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Scanner_PwrOkSigDrop": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469766656,
+			"Size": 1,
+			"Mask": 4,
+			"Type": 0,
+			"Period": 400,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"DftIOTest_1": {
+			"Type": 2,
+			"Id": 89,
+			"DeviceNum": 2,
+			"ItemName": "ExpBoard LM75 SMC Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"Destination": "#/Accessor_EXPBLm75ACC.Value",
+			"Data": 0,
+			"ActionType": 2
+		},
+		"Accessor_EXPBLm75ACC": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 4865,
+			"Size": 2,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"DftIOTest_2": {
+			"Type": 2,
+			"Id": 89,
+			"DeviceNum": 3,
+			"ItemName": "SMC For NIC1 LM75 Temp",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"Destination": "#/Accessor_Nic1Lm75.Value",
+			"Data": 0,
+			"ActionType": 2
+		},
+		"Accessor_Nic1Lm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 4866,
+			"Size": 2,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_Nic1Lm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4866,
+			"Mask": 65535,
+			"Period": 1000,
+			"Debounce": "None"
+		},
+		"DftIOTest_3": {
+			"Type": 2,
+			"Id": 89,
+			"DeviceNum": 4,
+			"ItemName": "SMC For NIC2 LM75 Temp",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"Destination": "#/Accessor_Nic2Lm75.Value",
+			"Data": 0,
+			"ActionType": 2
+		},
+		"Accessor_Nic2Lm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 4867,
+			"Size": 2,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_Nic2Lm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4867,
+			"Mask": 65535,
+			"Period": 1000,
+			"Debounce": "None"
+		},
+		"DftIOTest_4": {
+			"Type": 2,
+			"Id": 89,
+			"DeviceNum": 5,
+			"ItemName": "SMC For PSU LM75 Temp",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535,
+			"Destination": "#/Accessor_PSULm75.Value",
+			"Data": 0,
+			"ActionType": 2
+		},
+		"Accessor_PSULm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 4865,
+			"Size": 2,
+			"Mask": 65535,
+			"Type": 0,
+			"Value": 0
+		},
+		"Scanner_PSULm75": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 2,
+			"Offset": 4865,
+			"Mask": 65535,
+			"Period": 1000,
+			"Debounce": "None"
+		},
+		"Accessor_DftEnable": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 3584,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		},
+		"DftPysicalLed_1": {
+			"Id": 129,
+			"Type": 4,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Physical Led Test",
+			"PrompteReady": "",
+			"PrompteFinish": "Please check the leds",
+			"ProcessPeriod": 65535,
+			"DftEnable": "#/Accessor_DftEnable.Value"
+		},
+		"DftLedIntelligence_1": {
+			"Id": 132,
+			"Type": 4,
+			"Slot": 0,
+			"DeviceNum": 0,
+			"ItemName": "Physical Led Intelligence Test",
+			"PrompteReady": "",
+			"PrompteFinish": "Please check the leds",
+			"ProcessPeriod": 65535,
+			"DftEnable": "#/Accessor_DftEnable.Value"
+		},
+		"DftLedTube_1": {
+			"Id": 130,
+			"Type": 4,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Led Tube Test",
+			"PrompteReady": "",
+			"PrompteFinish": "Please check the Led Tube",
+			"ProcessPeriod": 65535
+		},
+		"DftLedTubeIntelligence_1": {
+			"Id": 133,
+			"Type": 4,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Led Tube Intelligence Test",
+			"PrompteReady": "",
+			"PrompteFinish": "Please check the Led Tube",
+			"ProcessPeriod": 65535
+		},
+		"ContBin_H3L1": {
+			"NumH": 3,
+			"NumL": 1,
+			"DefaultValue": 0
+		},
+		"Scanner_ExpMos1TempHigh": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469778688,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Period": 1000,
+			"Debounce": "#/ContBin_H3L1",
+			"Value": 0
+		},
+		"Scanner_ExpMos2TempHigh": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469778688,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Period": 1000,
+			"Debounce": "#/ContBin_H3L1",
+			"Value": 0
+		},
+		"Scanner_ExpMos3TempHigh": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469778688,
+			"Size": 1,
+			"Mask": 4,
+			"Type": 0,
+			"Period": 1000,
+			"Debounce": "#/ContBin_H3L1",
+			"Value": 0
+		},
+		"Event_ExpMos1TempHigh": {
+			"EventKeyId": "ExpBoard.ExpBoardStartUpOverTemp",
+			"Reading": "<=/Scanner_ExpMos1TempHigh.Value",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "(V_VCC_12V0_1)",
+			"Component": "#/Component_ComEXU",
+			"AdditionalInfo": "1"
+		},
+		"Event_ExpMos2TempHigh": {
+			"EventKeyId": "ExpBoard.ExpBoardStartUpOverTemp",
+			"Reading": "<=/Scanner_ExpMos2TempHigh.Value",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "(V_VCC_12V0_2)",
+			"Component": "#/Component_ComEXU",
+			"AdditionalInfo": "1"
+		},
+		"Event_ExpMos3TempHigh": {
+			"EventKeyId": "ExpBoard.ExpBoardStartUpOverTemp",
+			"Reading": "<=/Scanner_ExpMos3TempHigh.Value",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "(V_VCC_12V0_3)",
+			"Component": "#/Component_ComEXU",
+			"AdditionalInfo": "1"
+		},
+		"Event_InletTempUpperMinor": {
+			"EventKeyId": "Chassis.ChassisInletOverTempMinor",
+			"Reading": "<=/Scanner_Lm75_Inlet.Value |> expr($1 > 255 ? 20 : ($1 >= 128 ? (-(255 - $1 + 1)) : ($1 >= 48 ? 20 : $1 )))",
+			"@Default": {
+				"Condition": 46
+			},
+			"Condition": "<=/ThresholdSensor_InletTemp.UpperNoncritical",
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"Enabled": true,
+			"DescArg1": "#/Event_InletTempUpperMinor.Reading",
+			"DescArg2": "#/ThresholdSensor_InletTemp.UpperNoncritical",
+			"Component": "#/Component_Chassis",
+			"LedFaultCode": "A00"
+		},
+		"Event_InletTempUpperMajor": {
+			"EventKeyId": "Chassis.ChassisInletOverTempMajor",
+			"Reading": "<=/Scanner_Lm75_Inlet.Value |> expr($1 > 255 ? 20 : ($1 >= 128 ? (-(255 - $1 + 1)) : $1))",
+			"@Default": {
+				"Condition": 48
+			},
+			"Condition": "<=/ThresholdSensor_InletTemp.UpperCritical",
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"Enabled": true,
+			"DescArg1": "#/Event_InletTempUpperMajor.Reading",
+			"DescArg2": "#/ThresholdSensor_InletTemp.UpperCritical",
+			"Component": "#/Component_Chassis",
+			"LedFaultCode": "A00"
+		},
+		"Event_InletTempFail": {
+			"EventKeyId": "Chassis.ChassisAccessInletTempFailure",
+			"Reading": "<=/Scanner_Lm75_Inlet.Status",
+			"@Default": {
+				"Reading": 0
+			},
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Chassis",
+			"LedFaultCode": "A00"
+		},
+		"ThresholdSensor_InletTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_AirInlet.Id",
+			"EntityInstance": "<=/Entity_AirInlet.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "Inlet Temp",
+			"AssertMask": 29312,
+			"DeassertMask": 29312,
+			"ReadingMask": 6168,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"ModifierUnit": 0,
+			"Linearization": 0,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 25,
+			"NormalMaximum": 0,
+			"NormalMinimum": 0,
+			"MaximumReading": 127,
+			"MinimumReading": 128,
+			"UpperNonrecoverable": 70,
+			"UpperCritical": 69,
+			"UpperNoncritical": 68,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/Scanner_Lm75_Inlet.Value",
+			"ReadingStatus": "<=/Scanner_Lm75_Inlet.Status"
+		},
+		"Component_Chassis": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 18,
+			"Name": "Chassis",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"UniqueId": "N/A",
+			"BoardId": "<=/ExpBoard_1.BoardID"
+		},
+		"Scanner_RightEar": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134219520,
+			"Size": 1,
+			"Mask": 1,
+			"Type": 0,
+			"Period": 8000,
+			"Debounce": "None",
+			"Value": 1
+		},
+		"Scanner_LeftEar": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134219520,
+			"Size": 1,
+			"Mask": 2,
+			"Type": 0,
+			"Period": 8000,
+			"Debounce": "None",
+			"Value": 1
+		},
+		"Event_RightEarMntr": {
+			"EventKeyId": "Chassis.ChassisRightMountingEarNotPresent",
+			"Reading": "<=/Scanner_RightEar.Value",
+			"@Default": {
+				"Reading": 1
+			},
+			"Condition": 0,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Chassis"
+		},
+		"Event_LeftEarMntr": {
+			"EventKeyId": "Chassis.ChassisLeftMountingEarNotPresent",
+			"Reading": "<=/Scanner_LeftEar.Value",
+			"@Default": {
+				"Reading": 1
+			},
+			"Condition": 0,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Chassis"
+		},
+		"Entity_MainBoard": {
+			"Id": 7,
+			"Name": "MainBoard",
+			"PowerState": 1,
+			"Presence": 1,
+			"Instance": 96
+		},
+		"Entity_AirInlet": {
+			"Id": 55,
+			"Name": "AirInlet",
+			"PowerState": 1,
+			"Presence": 1,
+			"Instance": 96
+		},
+		"ThresholdSensor_MBTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "MB Temp",
+			"Unit": 128,
+			"BaseUnit": 1,
+			"M": 1,
+			"Analog": 1,
+			"MaximumReading": 127,
+			"MinimumReading": 128,
+			"UpperNonrecoverable": 70,
+			"UpperCritical": 69,
+			"UpperNoncritical": 68,
+			"Reading": "<=/Scanner_MbTemp.Value",
+			"ReadingStatus": "<=/Scanner_MbTemp.Status"
+		},
+		"ThresholdSensor_FanPower": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 11,
+			"ReadingType": 1,
+			"SensorName": "FAN Power",
+			"AssertMask": 512,
+			"DeassertMask": 512,
+			"ReadingMask": 4112,
+			"BaseUnit": 6,
+			"M": 1,
+			"Analog": 1,
+			"NominalReading": 25,
+			"MaximumReading": 255,
+			"UpperCritical": 180,
+			"PositiveHysteresis": 1,
+			"NegativeHysteresis": 1,
+			"Reading": "<=/Scanner_Fan_Pwr.Value |> expr(((($1 & 65280) >> 8) | (($1 & 255) << 8)) * 0.05)",
+			"ReadingStatus": "<=/Scanner_PowerGd.Value;<=/Scanner_Fan_Pwr.Status |> expr($1 == 0 ? 2 : $2)"
+		},
+		"DiscreteSensor_AcpiState": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 34,
+			"ReadingType": 111,
+			"SensorName": "ACPI State",
+			"AssertMask": 65,
+			"DeassertMask": 0,
+			"DiscreteMask": 65,
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 1,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteEvent_AcpiState": {
+			"Property": "<=/Scanner_PowerGd.Value |> expr((((((1 << 8) | 255) << 8) | 255) << 8) | ($1 == 1 ? 0 : 6))",
+			"ListenType": 0,
+			"EventData1": 255,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": 0,
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_AcpiState"
+		},
+		"DiscreteSensor_PowerButton": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 20,
+			"ReadingType": 111,
+			"SensorName": "Power Button",
+			"AssertMask": 1,
+			"DeassertMask": 0,
+			"DiscreteMask": 1,
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 1,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteEvent_PowerButton": {
+			"Property": "<=/Scanner_PowerBtnEvt.Value |> expr(((((($1 << 8) | 255) << 8) | 255) << 8) |  0)",
+			"ListenType": 0,
+			"EventData1": 255,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": 255,
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_PowerButton"
+		},
+		"DiscreteSensor_PwrOnTimeOut": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 8,
+			"ReadingType": 111,
+			"SensorName": "PwrOn TimeOut",
+			"AssertMask": 2,
+			"DeassertMask": 2,
+			"DiscreteMask": 2,
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 0,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteEvent_PwrOnTimeOut": {
+			"Property": "<=/Scanner_PowerOnTimeout.Value",
+			"ListenType": 1,
+			"EventData1": 1,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": "<=/Scanner_PowerOnTimeout.Value",
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_PwrOnTimeOut"
+		},
+		"Event_100M1ClockFailMntr": {
+			"EventKeyId": "ExpandBoard.EXPBoardClockSignalLost",
+			"Reading": "<=/Scanner_100M1ClockFailMntr.Value",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "100M",
+			"DescArg2": "buffer 1",
+			"Component": "#/Component_ComExpander"
+		},
+		"Event_ButtonPowerButtonPressed": {
+			"EventKeyId": "Button.ButtonPowerButtonPressed",
+			"Reading": "<=/Scanner_PowerBtnEvt.Value",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_Button"
+		},
+		"Event_SystemACPIWorkingState": {
+			"EventKeyId": "System.SystemACPIWorkingState",
+			"Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+			"@Default": {
+				"Reading": 255
+			},
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_SystemACPISoftOffState": {
+			"EventKeyId": "System.SystemACPISoftOffState",
+			"Reading": "<=/Scanner_PowerGd.Status;<=/Scanner_PowerGd.Value |> expr($1 == 4 ? 255 : $2)",
+			"@Default": {
+				"Reading": 255
+			},
+			"Condition": 0,
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComSystem"
+		},
+		"Component_Cable": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 40,
+			"Name": "cable",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1
+		},
+		"Scanner_CpuBrdPresenceMntr": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 134237440,
+			"Size": 2,
+			"Type": 0,
+			"Mask": 32,
+			"Period": 8000,
+			"Debounce": "#/ContBin_CableCPLDIncorrectConnection",
+			"Value": 1
+		},
+		"Event_CpuBrdPresenceMntr": {
+			"EventKeyId": "ComCable.CableCPLDIncorrectConnection",
+			"Reading": "<=/Scanner_CpuBrdPresenceMntr.Value",
+			"@Default": {
+				"Reading": 1
+			},
+			"Condition": 0,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU",
+			"Component": "#/Component_Cable"
+		},
+		"Event_ExpBoardReplaceMntr": {
+			"EventKeyId": "ExpBoard.ExpBoardReplace",
+			"Reading": "<=/Component_ComExpander.ReplaceFlag",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "#/Component_ComExpander.Instance",
+			"DescArg2": "#/Component_ComExpander.PreviousSN",
+			"DescArg3": "#/Component_ComExpander.SerialNumber",
+			"Component": "#/Component_ComExpander"
+		},
+		"ContBin_CableCPLDIncorrectConnection": {
+			"NumH": 4,
+			"NumL": 4,
+			"DefaultValue": 1
+		},
+		"Component_PowerSupply1": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 3,
+			"Location": "chassis",
+			"Name": "PowerSupply1",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"Manufacturer": "",
+			"UniqueId": "N/A",
+			"BoardId": "<=/ExpBoard_1.BoardID",
+			"NodeId": "0"
+		},
+		"Component_PowerSupply2": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 3,
+			"Location": "chassis",
+			"Name": "PowerSupply2",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"Manufacturer": "",
+			"UniqueId": "N/A",
+			"BoardId": "<=/ExpBoard_1.BoardID",
+			"NodeId": "1"
+		},
+		"Scanner_EXUPwrOnTimeOut": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469767936,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 400,
+			"Debounce": "None",
+			"Value": 0
+		},
+		"Cont_num2": {
+			"Num": 2,
+			"DefaultValue": 0
+		},
+		"Scanner_EXUPwrSigDrop": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Offset": 469768960,
+			"Size": 1,
+			"Mask": 255,
+			"Type": 0,
+			"Period": 400,
+			"Debounce": "#/Cont_num2",
+			"Value": 0
+		},
+		"Event_EXUPwrFaultMntr08": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 8) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_1",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr09": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 9) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr10": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 10) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_3",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr11": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 11) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_4",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr16": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 16) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_3V3",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr17": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 17) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_5V0_RESV",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr80": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 80) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_FLEXIO1",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n01",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr81": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 81) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_FLEXIO2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n02",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr84": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 84) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "FLEXIO1_POWER",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n01",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr85": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 85) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "FLEXIO2_POWER",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n02",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr86": {
+			"EventKeyId": "System.SystemPowerOnTmout",
+			"Reading": "<=/Scanner_EXUPwrOnTimeOut.Value |> expr(($1 == 86) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_M.2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr136": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 136) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_1",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr137": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 137) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr138": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 138) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_3",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr139": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 139) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_12V0_4",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr144": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 144) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_VCC_3V3",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr171": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 171) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_5V0",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr172": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 172) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_FLEXIO1",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n01",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr173": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 173) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_FLEXIO2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n02",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr174": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 174) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_3V3_FLEXIO1",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n01",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr175": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 175) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_3V3_FLEXIO2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n02",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr176": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 176) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "FLEXIO1_POWER",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n01",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr177": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 177) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "FLEXIO2_POWER",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "n02",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr178": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 178) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_12V0_M.2",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U10",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr179": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 179) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_12V0_NCSI_CARD",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr180": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 180) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_3V3_BCU",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr198": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 198) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_5V0_TYPEC",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr199": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 199) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_3V3_RCI",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"Event_EXUPwrFaultMntr200": {
+			"EventKeyId": "System.SystemPowerFailure",
+			"Reading": "<=/Scanner_EXUPwrSigDrop.Value |> expr(($1 == 200) ? 1 : 0)",
+			"Condition": 1,
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg2": "EXU_V_STBY_3V3_LCI",
+			"Component": "#/Component_ComSystem",
+			"LedFaultCode": "U00",
+			"AdditionalInfo": "2"
+		},
+		"ThresholdSensor_OutletTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "Outlet Temp",
+			"AssertMask": 128,
+			"DeassertMask": 28800,
+			"ReadingMask": 2056,
+			"Unit": 128,
+			"BaseUnit": 1,
+			"ModifierUnit": 0,
+			"Linearization": 0,
+			"M": 100,
+			"RBExp": 224,
+			"Analog": 1,
+			"NominalReading": 25,
+			"NormalMaximum": 0,
+			"NormalMinimum": 0,
+			"MaximumReading": 127,
+			"MinimumReading": 128,
+			"UpperNoncritical": 75,
+			"PositiveHysteresis": 2,
+			"NegativeHysteresis": 2,
+			"Reading": "<=/Scanner_Lm75_Outlet.Value"
+		},
+		"Event_OutletTempUpperMinor": {
+			"EventKeyId": "Chassis.ChassisOutletOverTempMinor",
+			"Reading": "<=/Scanner_Lm75_Outlet.Value;<=/Scanner_Lm75_Inlet.Value |> expr(((($2 + 5) > ($1 - 15)) ? ($2 + 5) : ($1 - 15)) > 255 ? 35 : ((((($2 + 5) > ($1 - 15)) ? ($2 + 5) : ($1 - 15)) & 255) >= 128 ? (-(255 - (((($2 + 5) > ($1 - 15)) ? ($2 + 5) : ($1 - 15)) & 255) + 1)) : (((($2 + 5) > ($1 - 15)) ? ($2 + 5) : ($1 - 15)) & 255)))",
+			"Condition": "<=/ThresholdSensor_OutletTemp.UpperNoncritical",
+			"@Default": {
+				"Condition": 75
+			},
+			"OperatorId": 4,
+			"Hysteresis": 2,
+			"Enabled": true,
+			"DescArg2": "#/Event_OutletTempUpperMinor.Reading |> string.format('%.3f', $1)",
+			"DescArg3": "#/Event_OutletTempUpperMinor.Condition |> string.format('%.3f', $1)",
+			"Component": "#/Component_Chassis"
+		},
+		"Event_UIDButtonMntr": {
+			"EventKeyId": "Button.ButtonUIDButtonpressed",
+			"Reading": "<=/Chassis_1.UidButtonPressed",
+			"Condition": 0,
+			"OperatorId": 6,
+			"Enabled": true,
+			"Component": "#/Component_Button"
+		},
+		"Event_UIDButtonLongMntr": {
+			"EventKeyId": "Button.ButtonUIDButtonLongPressed",
+			"Reading": "<=/Chassis_1.UidButtonLongPressed",
+			"Condition": 0,
+			"OperatorId": 6,
+			"Enabled": true,
+			"Component": "#/Component_Button"
+		},
+		"Accessor_CpldTest": {
+			"Chip": "#/Smc_ExpBoardSMC",
+			"Size": 1,
+			"Offset": 8704,
+			"Mask": 255,
+			"Type": 0,
+			"Value": 0
+		}
+	}
+}
+

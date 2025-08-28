@@ -1,0 +1,892 @@
+{
+	"FormatVersion": "3.00",
+	"DataVersion": "3.00",
+	"Unit": {
+		"Type": "BCU",
+		"Name": "CpuBoard_1"
+	},
+	"Objects": {
+		"RecordFault_1": {
+			"IssueRecoredAcc": "#/Accessor_IssueRecoredAcc.Value",
+			"LatchRecoredAcc": "#/Accessor_LatchRecoredAcc.Value"
+		},
+		"Nmi_1": {
+			"NmiInt": "#/Accessor_NmiInt.Value"
+		},
+		"ThermTrip_1": {
+			"GetThermTrip": "<=/Scanner_Cpu1ThermalTripAccessor.Value",
+			"SetThermTrip": "#/Accessor_Cpu1ClearThermalTripAccessor.Value"
+		},
+		"DftKeyBoard_1": {
+			"Id": 65,
+			"Type": 2,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Keyboard Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftCD_1": {
+			"Id": 66,
+			"Type": 2,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Cd Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftNewVideo_1": {
+			"Id": 68,
+			"Type": 2,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "Vce Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessPeriod": 65535
+		},
+		"DftEeprom_1": {
+			"Id": 12,
+			"Type": 1,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "BCU Eeprom Self Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessTime": 65535,
+			"FruData": "#/FruData_CpuBoard"
+		},
+		"DftEepromWp_1": {
+			"Id": 47,
+			"Type": 1,
+			"Slot": "${GroupId}",
+			"DeviceNum": 0,
+			"ItemName": "BCU Eeprom Write Protect Self Test",
+			"PrompteReady": "",
+			"PrompteFinish": "",
+			"ProcessTime": 65535,
+			"FruData": "#/FruData_CpuBoard"
+		},
+		"FDMDomain_1": {
+			"Soc": "Hi1620",
+			"ProcessorsStatus": "<=/Scanner_CPUStatus.Value",
+			"SysStatus": "<=/Scanner_SystemStatus.Value",
+			"CaterrDiagnoseResult": 0
+		},
+		"BoardRAS_1": {
+			"ManageChip": "Cpld",
+			"Name": "CpuBoard${Slot}",
+			"BoardLogChip": "#/Eeprom_LogChip"
+		},
+		"CPURAS_1": {
+			"SystemId": 1,
+			"LogicalId": 0,
+			"BISTFailed": 0,
+			"Isolated": 0,
+			"CoreIsolated": 0,
+			"IsolatedCoreId": "",
+			"ConfigErrorType": 0,
+			"ConfigErrorCode": "",
+			"ModelMismatched": 0,
+			"FirmwareMismatched": 0,
+			"InterConnectionLaneFault": 0,
+			"InterConnectionLaneErrorMask": 0,
+			"CacheWayErrorMask": 0
+		},
+		"FruData_CpuBoard": {
+			"FruId": 1,
+			"FruDev": "#/Eeprom_BCU",
+			"EepromWp": "#/Accessor_BCUWP.Value",
+			"BoardSerialNumber": "",
+			"StorageType": "TianChi"
+		},
+		"Component_ComSystem": {
+			"FruId": 255,
+			"Instance": 0,
+			"Type": 44,
+			"Name": "System",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1
+		},
+		"Component_ComBMC": {
+			"FruId": 255,
+			"Instance": 1,
+			"Type": 26,
+			"Name": "BMC",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1
+		},
+		"Component_Cable": {
+			"FruId": 255,
+			"Instance": 1,
+			"Type": 40,
+			"Name": "cable",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1
+		},
+		"Component_ComCpu1": {
+			"FruId": 255,
+			"Instance": 1,
+			"Type": 0,
+			"Name": "Cpu1",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"NodeId": "1",
+			"Manufacturer": "<=/CPU_1.Manufacturer"
+		},
+		"Component_CpuBoard": {
+			"FruId": "<=/Fru_CpuBoard.FruId",
+			"Instance": "${Slot}",
+			"Type": 36,
+			"Location": "<=/CpuBoard_1.Position",
+			"Name": "<=/CpuBoard_1.DeviceName",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"GroupId": 1,
+			"UniqueId": "<=/CpuBoard_1.UID",
+			"BoardId": "<=/CpuBoard_1.BoardID",
+			"ReplaceFlag": 0,
+			"PreviousSN": "N/A",
+			"SerialNumber": "<=/FruData_CpuBoard.BoardSerialNumber",
+			"NodeId": "<=/CpuBoard_1.Position;<=/CpuBoard_1.DeviceName |> string.format('%s%s',$1,$2)"
+		},
+		"Component_NICCard": {
+			"FruId": 255,
+			"Instance": 255,
+			"Type": 13,
+			"Name": "NIC Card",
+			"Presence": 1,
+			"Health": 0,
+			"PowerState": 1,
+			"NodeId": "NICCard"
+		},
+		"DftVersion_CpuBoardCpldVersion": {
+			"FruId": "<=/Fru_CpuBoard.FruId",
+			"VersionType": 2,
+			"Version": "<=/CpuBoard_1.LogicVersion",
+			"UnitNum": "<=/CpuBoard_1.LogicUnit",
+			"NeedUintNum": 1
+		},
+		"DftVersion_CpuBaordPcbVersion": {
+			"FruId": "<=/Fru_CpuBoard.FruId",
+			"VersionType": 0,
+			"Version": "<=/CpuBoard_1.PcbVersion"
+		},
+		"DftVersion_CpuBaordCsrVersion": {
+			"FruId": "<=/Fru_CpuBoard.FruId",
+			"VersionType": 25,
+			"Version": "<=/CpuBoard_1.SRVersion"
+		},
+		"DftVersion_CpuBaordMcuVersion": {
+			"FruId": "<=/Fru_CpuBoard.FruId",
+			"VersionType": 27,
+			"Version": "<=/CpuBoard_1.MCUVersion"
+		},
+		"Fru_CpuBoard": {
+			"PcbVersion": ".A",
+			"PowerState": 1,
+			"Health": 0,
+			"EepStatus": "<=/Eeprom_BCU.HealthStatus",
+			"Type": 36,
+			"FruDataId": "#/FruData_CpuBoard"
+		},
+		"ThresholdSensor_VCC3V3": {
+			"AssertMask": 516,
+			"DeassertMask": 516,
+			"ReadingMask": 4626,
+			"M": 2,
+			"RBExp": 224,
+			"UpperCritical": 183,
+			"LowerCritical": 147,
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CpuBoard.Id",
+			"EntityInstance": "<=/Entity_CpuBoard.Instance",
+			"Capabilities": 232,
+			"SensorType": 2,
+			"ReadingType": 1,
+			"SensorName": "BCU${Slot} STBY_3V3",
+			"BaseUnit": 4,
+			"Analog": 1,
+			"NominalReading": 165,
+			"MaximumReading": 255,
+			"Reading": "<=/Scanner_R3v1.Value |> expr($1 * 0.061) |> expr($1 > 255 ? 170 : $1)",
+			"ReadingStatus": "<=/Scanner_R3v1.Status"
+		},
+		"ThresholdSensor_CPU1CoreRem": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 232,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "CPU1 Core Rem",
+			"Unit": 128,
+			"BaseUnit": 1,
+			"ModifierUnit": 0,
+			"Analog": 1,
+			"NominalReading": 30,
+			"NormalMaximum": 0,
+			"NormalMinimum": 0,
+			"MaximumReading": 127,
+			"MinimumReading": 128,
+			"Reading": "<=/CPU_1.TemperatureCelsius",
+			"ReadingStatus": "<=/CPU_1.TemperatureCelsius |> expr($1 > 255 ? 1 : 0)"
+		},
+		"ThresholdSensor_CPU1Power": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 11,
+			"ReadingType": 1,
+			"SensorName": "CPU1 Power",
+			"AssertMask": 0,
+			"DeassertMask": 0,
+			"ReadingMask": 0,
+			"Unit": 0,
+			"BaseUnit": 6,
+			"M": 4,
+			"RBExp": 0,
+			"Analog": 1,
+			"MaximumReading": 255,
+			"MinimumReading": 0,
+			"Reading": "<=/Scanner_CPU1Power.Value |> expr(((($1 & 65280) >> 8) | (($1 & 255) << 8)) * 0.05 // 4)",
+			"ReadingStatus": "<=/Scanner_CPU1Power.Status"
+		},
+		"ThresholdSensor_CpuPower": {
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 11,
+			"ReadingType": 1,
+			"SensorName": "CPU Power",
+			"Unit": 0,
+			"BaseUnit": 6,
+			"NominalalReading": 0,
+			"MaximumReading": 255,
+			"AssertMask": 0,
+			"DeassertMask": 0,
+			"ReadingMask": 0,
+			"M": 4,
+			"RBExp": 0,
+			"Analog": 1,
+			"Reading": "<=/Scanner_CPU1Power.Value;<=/Scanner_CPU2Power.Value |> expr((((($1 & 65280) >> 8) | (($1 & 255) << 8)) * 0.05  + ((($2 & 65280) >> 8) | (($2 & 255) << 8)) * 0.05 ) // 4 )",
+			"ReadingStatus": "<=/Scanner_CPU1Power.Status",
+			"SensorNumber": 255
+		},
+		"ThresholdSensor_CPUBoardTemp": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_CpuBoard.Id",
+			"EntityInstance": "<=/Entity_CpuBoard.Instance",
+			"Initialization": 127,
+			"Capabilities": 104,
+			"SensorType": 1,
+			"ReadingType": 1,
+			"SensorName": "BCU${Slot} Temp",
+			"Unit": 128,
+			"BaseUnit": 1,
+			"ModifierUnit": 0,
+			"Analog": 1,
+			"NominalReading": 0,
+			"NormalMaximum": 0,
+			"NormalMinimum": 0,
+			"MaximumReading": 127,
+			"MinimumReading": 128,
+			"Reading": "<=/Scanner_CpuBoard_Temp.Value",
+			"ReadingStatus": "<=/Scanner_CpuBoard_Temp.Status"
+		},
+		"DiscreteSensor_Cpu1Prochot": {
+			"EntityId": "<=/Entity_CPU1.Id",
+			"EntityInstance": "<=/Entity_CPU1.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 7,
+			"ReadingType": 3,
+			"SensorName": "CPU1 Prochot",
+			"DiscreteType": 0,
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteSensor_SystemNotice": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 18,
+			"ReadingType": 7,
+			"SensorName": "System Notice",
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 0,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteSensor_SystemError": {
+			"OwnerId": 32,
+			"OwnerLun": 0,
+			"EntityId": "<=/Entity_MainBoard.Id",
+			"EntityInstance": "<=/Entity_MainBoard.Instance",
+			"Initialization": 99,
+			"Capabilities": 64,
+			"SensorType": 18,
+			"ReadingType": 111,
+			"SensorName": "System Error",
+			"Unit": 192,
+			"BaseUnit": 0,
+			"ModifierUnit": 0,
+			"DiscreteType": 0,
+			"RecordSharing": 1,
+			"Reading": 0
+		},
+		"DiscreteEvent_Cpu1Prochot": {
+			"Property": 0,
+			"ListenType": 1,
+			"EventData1": 1,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": "<=/CPU_1.ProcessorHot",
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_Cpu1Prochot"
+		},
+		"DiscreteEvent_SystemNotice": {
+			"Property": "<=/FDMDomain_1.CaterrDiagnoseResult |> expr(($1 == 1) ? 1 : 0)",
+			"ListenType": 1,
+			"EventData1": 8,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": "<=/FDMDomain_1.CaterrDiagnoseResult |> expr(($1 == 1) ? 1 : 0)",
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_SystemNotice"
+		},
+		"DiscreteEvent_SystemError": {
+			"Property": "<=/FDMDomain_1.CaterrDiagnoseResult |> expr(($1 == 2) ? 1 : 0)",
+			"ListenType": 1,
+			"EventData1": 2,
+			"EventData2": 255,
+			"EventData3": 255,
+			"EventDir": "<=/FDMDomain_1.CaterrDiagnoseResult |> expr(($1 == 2) ? 1 : 0)",
+			"Conversion": 0,
+			"SensorObject": "#/DiscreteSensor_SystemError"
+		},
+		"Entity_CPU1": {
+			"Id": 3,
+			"Instance": 96,
+			"Name": "CPU1",
+			"PowerState": "<=/CPU_1.PowerGood",
+			"Presence": "<=/CPU_1.Presence"
+		},
+		"Entity_MainBoard": {
+			"Id": 7,
+			"Instance": 96,
+			"Name": "MainBoard",
+			"Presence": 1,
+			"PowerState": "#/Accessor_PowerGd.Value"
+		},
+		"Entity_CpuBoard": {
+			"Id": 18,
+			"Instance": 96,
+			"Name": "CpuBoard${Slot}",
+			"Presence": 1,
+			"PowerState": 1
+		},
+		"Event_Cpu1CoreTempFail": {
+			"Reading": "<=/Scanner_PowerGood.Value;<=/CPU_1.TemperatureCelsius |> expr($1 > 0 ? ($2 >= 32768 ? 1 : 0) : 0)",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_SecureBootFailed": {
+			"Reading": "<=/Bios_1.RecoverFailed",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "BIOS",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_Cpu1Installed": {
+			"Reading": "<=/CPU_1.Presence",
+			"@Default": {
+				"Reading": 1
+			},
+			"OperatorId": 7,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1Removed": {
+			"Reading": "<=/CPU_1.Presence",
+			"@Default": {
+				"Reading": 1
+			},
+			"OperatorId": 8,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1ThermalTrip": {
+			"Reading": "<=/CPU_1.ThermalTrip",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1ProcessorHot": {
+			"Reading": "<=/CPU_1.ProcessorHot",
+			"@Default": {
+				"Reading": 0
+			},
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1CE": {
+			"Reading": "<=/CPU_1.PredictiveFault",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1UCE": {
+			"Reading": "<=/CPU_1.DiagnosticFault",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_SystemNoticeInfo": {
+			"Reading": "<=/FDMDomain_1.CaterrDiagnoseResult",
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_SystemErrorInfo": {
+			"Reading": "<=/FDMDomain_1.CaterrDiagnoseResult",
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_CpuMosTempHigh": {
+			"Reading": "<=/Scanner_CpuMosTempHigh.Value",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "(V_VCC_12V0)",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_RTCUnitHealthMntr": {
+			"Reading": "<=/Accessor_RtcUnitStatus.Value",
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_SFPTempFail": {
+			"Reading": "<=/Scanner_PowerGood.Value;<=/Pmu_1.SFPMaxTemperature |> expr($1 > 0 ? ($2 >= 32768 ? 1 : 0) : 0)",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "NIC",
+			"Component": "#/Component_NICCard"
+		},
+		"Event_CpuBoardAccessFRULableFailure": {
+			"Reading": "<=/Fru_CpuBoard.Health",
+			"OperatorId": 5,
+			"Enabled": true,
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_BiosCertOverDue": {
+			"Reading": "<=/SecureBootOptions_1.CertificateExpired",
+			"OperatorId": 5,
+			"Enabled": true,
+			"AdditionalInfo": "1",
+			"DescArg1": "BIOS",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_Cpu1BISTFailure": {
+			"Reading": "<=/CPURAS_1.BISTFailed",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1CacheWayError": {
+			"Reading": "<=/CPURAS_1.CacheWayErrorMask",
+			"OperatorId": 4,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "L3",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1CoreIsolated": {
+			"Reading": "<=/CPURAS_1.CoreIsolated",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CpuFirmwareMismatched": {
+			"Reading": "<=/CPURAS_1.FirmwareMismatched",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_Cpu1Hccs0LaneFault": {
+			"Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 1) == 1 ? 1 : 0)",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "0",
+			"Component": "#/Component_Cable"
+		},
+		"Event_Cpu1Hccs1LaneFault": {
+			"Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 2) == 2 ? 1 : 0)",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "1",
+			"Component": "#/Component_Cable"
+		},
+		"Event_Cpu1Hccs2LaneFault": {
+			"Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 4) == 4 ? 1 : 0)",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "2",
+			"Component": "#/Component_Cable"
+		},
+		"Event_Cpu1Isolated": {
+			"Reading": "<=/CPURAS_1.Isolated",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_CpuModelMismatched": {
+			"Reading": "<=/CPURAS_1.ModelMismatched",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_CPURAS1MemCfgErrorMntr": {
+			"Reading": "<=/CPURAS_1.ConfigErrorType",
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg3": "CPU 1",
+			"DescArg5": "#/CPURAS_1.ConfigErrorCode",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_Cpu1CoreOverTemp": {
+			"Reading": "<=/CPU_1.TemperatureCelsius |> expr($1 > 127 ? 40: $1)",
+			"@Default": {
+				"Condition": 105
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"DescArg1": "1",
+			"DescArg2": "#/Event_Cpu1CoreOverTemp.Reading",
+			"DescArg3": "#/Event_Cpu1CoreOverTemp.Condition",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_Cpu1PresentMntr": {
+			"Reading": "<=/CPU_1.Presence",
+			"@Default": {
+				"Reading": 1
+			},
+			"OperatorId": 5,
+			"Enabled": true,
+			"DescArg1": "1",
+			"Component": "#/Component_ComCpu1"
+		},
+		"Event_BMAHeartBeatMntr": {
+			"Reading": 0,
+			"OperatorId": 5,
+			"Enabled": false
+		},
+		"Event_CpuBoard12V1_LowerVoltage": {
+			"Reading": "<=/Scanner_R12v1.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v1.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_12V0_IN_COPPER",
+			"DescArg4": "10.8",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V1_OverVoltage": {
+			"Reading": "<=/Scanner_R12v1.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v1.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_12V0_IN_COPPER",
+			"DescArg4": "13.2",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V1_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R12v1.Value;<=/Scanner_R12v1.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"DescArg1": "12V",
+			"AdditionalInfo": "2",
+			"DescArg2": "BCU_V_12V0_IN_COPPER",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V2_LowerVoltage": {
+			"Reading": "<=/Scanner_R12v2.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v2.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_VCC_12V0_1",
+			"DescArg4": "10.8",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V2_OverVoltage": {
+			"Reading": "<=/Scanner_R12v2.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v2.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_VCC_12V0_1",
+			"DescArg4": "13.2",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V2_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R12v2.Value;<=/Scanner_R12v2.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"DescArg1": "12V",
+			"AdditionalInfo": "2",
+			"DescArg2": "BCU_V_VCC_12V0_1",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V3_LowerVoltage": {
+			"Reading": "<=/Scanner_R12v3.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v3.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_VCC_12V0_2",
+			"DescArg4": "10.8",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V3_OverVoltage": {
+			"Reading": "<=/Scanner_R12v3.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096))",
+			"@Default": {
+				"Reading": 12
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R12v3.Value |> expr(($1 / 10) > 255 ? 12 : ($1 * 2.5 * 11 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "12V",
+			"DescArg3": "BCU_V_VCC_12V0_2",
+			"DescArg4": "13.2",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard12V3_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R12v3.Value;<=/Scanner_R12v3.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"DescArg1": "12V",
+			"AdditionalInfo": "2",
+			"DescArg2": "BCU_V_VCC_12V0_2",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V1_LowerVoltage": {
+			"Reading": "<=/Scanner_R3v1.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096))",
+			"@Default": {
+				"Reading": 3.3
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R3v1.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "3.3V",
+			"DescArg3": "BCU_V_STBY_3V3_RISER",
+			"DescArg4": "3.0",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V1_OverVoltage": {
+			"Reading": "<=/Scanner_R3v1.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096))",
+			"@Default": {
+				"Reading": 3.3
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R3v1.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "3.3V",
+			"DescArg3": "BCU_V_STBY_3V3_RISER",
+			"DescArg4": "3.6",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V1_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R3v1.Value;<=/Scanner_R3v1.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"AdditionalInfo": "2",
+			"DescArg1": "3.3V",
+			"DescArg2": "BCU_V_STBY_3V3_RISER",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V2_LowerVoltage": {
+			"Reading": "<=/Scanner_R3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096))",
+			"@Default": {
+				"Reading": 3.3
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "3.3V",
+			"DescArg3": "BCU_V_VCC_3V3",
+			"DescArg4": "3.0",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V2_OverVoltage": {
+			"Reading": "<=/Scanner_R3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096))",
+			"@Default": {
+				"Reading": 3.3
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R3v2.Value |> expr(($1 / 20) > 255 ? 3.3 : ($1 * 2.5 * 2 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "3.3V",
+			"DescArg3": "BCU_V_VCC_3V3",
+			"DescArg4": "3.6",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard3V2_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R3v2.Value;<=/Scanner_R3v2.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"AdditionalInfo": "2",
+			"DescArg1": "3.3V",
+			"DescArg2": "BCU_V_VCC_3V3",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard5V_LowerVoltage": {
+			"Reading": "<=/Scanner_R5v.Value |> expr(($1 / 20) > 255 ? 5 : ($1 * 2.5 * 4.3 / 4096))",
+			"@Default": {
+				"Reading": 5
+			},
+			"OperatorId": 2,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R5v.Value |> expr(($1 / 20) > 255 ? 5 : ($1 * 2.5 * 4.3 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "5V",
+			"DescArg3": "BCU_V_VCC_5V0_RESV",
+			"DescArg4": "4.5",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard5V_OverVoltage": {
+			"Reading": "<=/Scanner_R5v.Value |> expr(($1 / 20) > 255 ? 5 : ($1 * 2.5 * 4.3 / 4096))",
+			"@Default": {
+				"Reading": 5
+			},
+			"OperatorId": 4,
+			"Enabled": true,
+			"AdditionalInfo": "3",
+			"DescArg1": "#/Scanner_R5v.Value |> expr(($1 / 20) > 255 ? 5 : ($1 * 2.5 * 4.3 / 4096)) |> string.format('%0.3f', $1)",
+			"DescArg2": "5V",
+			"DescArg3": "BCU_V_VCC_5V0_RESV",
+			"DescArg4": "5.5",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpuBoard5V_GetVoltageFailure": {
+			"Reading": "<=/Scanner_R5v.Value;<=/Scanner_R5v.Status |> expr($2 == 0 ? (($1 & 32768) == 0 ? 0 : 1) : 0)",
+			"OperatorId": 6,
+			"Enabled": true,
+			"AdditionalInfo": "2",
+			"DescArg1": "5V",
+			"DescArg2": "BCU_V_VCC_5V0_RESV",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_MemUsageMntr": {
+			"Reading": "<=/MemoryMetrics_1.BandwidthPercent |> expr(($1 > 100) ? 0 : $1)",
+			"@Default": {
+				"Condition": 100
+			},
+			"OperatorId": 3,
+			"Enabled": true,
+			"DescArg1": "#/MemoryMetrics_1.BandwidthPercent |> expr(($1 > 100) ? 0 : $1)",
+			"DescArg2": "#/MemoryMetrics_1.BandwidthThresholdPercent",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_CpuUsageHighMntr": {
+			"Reading": "<=/CPUMetrics_1.BandwidthPercent |> expr(($1 > 100) ? 0 : $1)",
+			"@Default": {
+				"Condition": 100
+			},
+			"OperatorId": 3,
+			"Enabled": true,
+			"DescArg1": "#/Event_CpuUsageHighMntr.Reading |> string.format('%0.3f', $1)",
+			"DescArg2": "#/Event_CpuUsageHighMntr.Condition",
+			"Component": "#/Component_ComSystem"
+		},
+		"Event_CpuBrdCardReplaceMntr": {
+			"Reading": "<=/Component_CpuBoard.ReplaceFlag",
+			"OperatorId": 5,
+			"Enabled": true,
+			"AdditionalInfo": "1",
+			"DescArg1": "#/Component_CpuBoard.Instance",
+			"DescArg2": "#/Component_CpuBoard.PreviousSN",
+			"DescArg3": "#/Component_CpuBoard.SerialNumber",
+			"Component": "#/Component_CpuBoard"
+		},
+		"Event_CpldSelfcheck": {
+			"Reading": "<=/CpuBoard_1.CpldStatus",
+			"OperatorId": 5,
+			"Enabled": true,
+			"AdditionalInfo": "1",
+			"DescArg1": "1",
+			"Component": "#/Component_CpuBoard"
+		}
+	}
+}
