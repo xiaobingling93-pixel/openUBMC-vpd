@@ -4754,6 +4754,18 @@
             "EventName": "PCIeCardOverCurrent"
         },
         {
+            "EventCode": "0x080000A5",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PCIeCard.PCIeCardInitAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PCIeCardInitAbnormal"
+        },
+        {
             "EventCode": "0x000000ED",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -12897,6 +12909,25 @@
             "Cause": {
                 "En": "The power supply of the PCIe card has failed.",
                 "Zh": "PCIe卡电源故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the cable connection.@#AB;2. Replace the PCIe card.",
+                "Zh": "1、检查线缆连接。@#AB;2、更换PCIe卡。"
+            },
+            "EventKeyId": "PCIeCard.PCIeCardInitAbnormal",
+            "Description": {
+                "En": "%4 occurred during the initialization of the %1 PCIe card %2 (%3).",
+                "Zh": "%1 PCIe卡 %2 (%3) %4 初始化异常。"
+            },
+            "Influence": {
+                "En": "The PCIe card performance is affected, or the PCIe card cannot run properly.",
+                "Zh": "可能导致PCIe卡相关业务性能降低或无法正常运行。"
+            },
+            "Cause": {
+                "En": "1. The slimline cable is not securely connected. 2. The expansion card of the PCIe card is faulty.",
+                "Zh": "1、slimline线缆连接不稳。@#AB;2、PCIe卡的扩展卡故障。"
             }
         },
         {
