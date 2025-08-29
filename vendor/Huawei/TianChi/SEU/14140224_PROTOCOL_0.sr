@@ -151,17 +151,6 @@
             "EventKeyId": "Disk.DiskAccessTempFailure",
             "Condition": 1
         },
-        "CoolingRequirement_1_60": {
-            "RequirementId": "${Slot} |> expr((60 << 8) | $1)",
-            "MonitoringStatus": "<=/Scanner_Temp.Status; <=/Scanner_Temp.Value |> expr(($1 == 1 || $2 >= 255) ? 1 : 0)",
-            "MonitoringValue": "<=/Scanner_Temp.Value",
-            "FailedValue": 80,
-            "TargetTemperatureCelsius": 68,
-            "MaxAllowedTemperatureCelsius": 75,
-            "TargetTemperatureRangeCelsius": [],
-            "ThresholdValue": [],
-            "AlarmSpeed": []
-        },
         "Scanner_SSD_Fault": {
             "Chip": "#/Chip_SSD",
             "Offset": 1,

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.283] - 2025-8-29
+支持nvme盘根据厂商加载调速配置
+
 ## [1.70.282] - 2025-8-29
 修复DEMA通道Medtype为1
 
