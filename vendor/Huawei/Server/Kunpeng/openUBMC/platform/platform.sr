@@ -785,7 +785,7 @@
             "ChannelID": 9,
             "DestAddr": 101,
             "SrcAddr": 32,
-            "MedType": 6
+            "MedType": 1
         },
         "IPMIChannel_BTC1": {
             "ChanType": 10,
