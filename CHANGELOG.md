@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.282] - 2025-8-29
+修复DEMA通道Medtype为1
+
 ## [1.70.281] - 2025-8-28
 支持上报网卡Flash Recovery故障告警
 
