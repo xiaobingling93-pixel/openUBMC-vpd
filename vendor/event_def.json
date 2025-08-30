@@ -10714,8 +10714,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Shut down and restart the OS, and check whether the alarm is cleared.@#AB;2. If the alarm is not cleared, replace the component.",
-                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、如无法恢复，更换该部件并进一步观察。"
+                "En": "1. Power off and power on the server, and check whether the alarm is cleared.  2. If the alarm is not cleared, replace the component.",
+                "Zh": "1、执行整机先下电后上电，观察故障是否恢复。2、如无法恢复，更换该部件并进一步观察。"
             },
             "EventKeyId": "ExpandBoard.AccessPowerFailMinor",
             "Description": {
@@ -10723,8 +10723,8 @@
                 "Zh": "扩展板%2%1功率读取失败。"
             },
             "Influence": {
-                "En": "The power cannot be monitored normally, and fan speed adjustment is affected.",
-                "Zh": "无法正常监控功率，影响风扇调速。"
+                "En": "The power cannot be monitored normally, affecting the power management of the system.",
+                "Zh": "无法正常监控功率，影响整机功率管理。"
             },
             "Cause": {
                 "En": "The power sensor of the device is faulty.",
