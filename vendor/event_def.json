@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.33",
+    "Version": "1.0.34",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4632,6 +4632,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "PCIeCardInspectionFailure"
+        },
+        {
+            "EventCode": "0x08000013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PCIeCardLowerVoltMajor"
+        },
+        {
+            "EventCode": "0x08000015",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PCIeCardOverVoltMajor"
         },
         {
             "EventCode": "0x08000017",
@@ -12719,6 +12743,44 @@
             "Cause": {
                 "En": "1. The I2C or I2C over LAN channel is faulty.@#AB;2. The PCIe card is faulty.",
                 "Zh": "1、i2c或i2c over lan通道故障。@#AB;2、PCIe卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check that the PCIe card is powered on properly.@#AB;2. Replace the PCIe card.@#AB;3. Replace the component where the PCIe card is located.",
+                "Zh": "1、检查PCIe是否上电正常。@#AB;2、更换PCIe卡。@#AB;3、更换PCIe卡槽位所在的部件。"
+            },
+            "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
+            "Description": {
+                "En": "The %1 PCIe card %2 (%3) voltage (%4 V) at %5 detection point is lower than the undervoltage threshold (%6 V).",
+                "Zh": "%1 PCIe卡%2（%3）%4电压监测点当前电压（%5V）低于低压门限电压（%6V）"
+            },
+            "Influence": {
+                "En": "The PCIe card may run unstably, and the system may run abnormally.",
+                "Zh": "可能导致PCIe卡运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "1. The PCIe card is faulty.@#AB;2. The PCIe slot is abnormal.",
+                "Zh": "1、PCIe卡故障。@#AB;2、PCIe槽位异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the PCIe card.@#AB;2. Replace the component where the PCIe card is located.",
+                "Zh": "1、更换PCIe卡。@#AB;2、更换PCIe卡槽位所在的部件。"
+            },
+            "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
+            "Description": {
+                "En": "The %1 PCIe card %2 (%3) voltage (%4 V) at %5 detection point exceeds the overvoltage threshold (%6 V).",
+                "Zh": "%1 PCIe卡%2（%3）%4电压监测点当前电压（%5V）高于高压门限电压（%6V）"
+            },
+            "Influence": {
+                "En": "The PCIe card may run unstably, and the system may run abnormally.",
+                "Zh": "可能导致PCIe卡运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "1. The PCIe card is faulty.@#AB;2. The PCIe slot is abnormal.",
+                "Zh": "1、PCIe卡故障。@#AB;2、PCIe槽位异常。"
             }
         },
         {
