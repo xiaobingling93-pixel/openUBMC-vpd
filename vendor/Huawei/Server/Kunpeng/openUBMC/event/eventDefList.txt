@@ -388,6 +388,8 @@ PcieCard.PCIeCardInspectionFailure
 PcieCard.PCIeCardAccessVoltFailure
 PcieCard.PCIeCardVoltageUpper
 PcieCard.PCIeCardVoltageLower
+PcieCard.PCIeCardLowerVoltMajor
+PcieCard.PCIeCardOverVoltMajor
 PcieCard.PCIeCardHealthFail
 PcieCard.PCIeCardMiniFail
 PcieCard.PCIeCardPowerUpDown

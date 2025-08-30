@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.284] - 2025-8-30
+新增182x网卡（SP670/SP681）电压告警和传感器
+
 ## [1.70.283] - 2025-8-29
 支持nvme盘根据厂商加载调速配置
 
