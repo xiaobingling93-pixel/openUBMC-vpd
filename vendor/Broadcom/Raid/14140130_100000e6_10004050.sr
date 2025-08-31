@@ -1,0 +1,136 @@
+{
+	"FormatVersion": "3.00",
+	"DataVersion": "3.00",
+	"Unit": {
+		"Type": "PCIeCard",
+		"Name": "PCIeCard_1"
+	},
+	"ManagementTopology": {
+		"Anchor": {
+			"Buses": ["I2cMux_Chan"]
+		},
+		"I2cMux_Chan": {
+			"Chips": ["Chip_RaidChip"]
+		}
+	},
+	"Objects": {
+		"Entity_RaidCard": {
+			"Id": 11,
+			"Instance": 96,
+			"Name": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s (RAID)',$1)",
+			"Presence": 1,
+			"PowerState": 1
+		},
+		"Event_PCIeRAIDCardFault": {
+			"EventKeyId": "PCIeRAIDCard.PCIeRAIDCardFault",
+			"Condition": 1,
+			"LedFaultCode": "q$$"
+		},
+		"Event_PCIeBandWidth": {
+			"EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+			"Condition": 1
+		},
+		"Event_PCIeLinkSpeed": {
+			"EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+			"Condition": 1
+		},
+		"Event_PCIeCardUCE": {
+			"EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+			"Condition": 1,
+			"LedFaultCode": "q$$"
+		},
+		"Event_PCIeCardCE": {
+			"EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+			"Condition": 1,
+			"LedFaultCode": "q$$"
+		},
+		"Event_PcieCardReplaceMntr": {
+			"EventKeyId": "PcieCard.PcieCardReplace",
+			"Condition": 1
+		},
+		"Event_PCIeRaidComLossMntr": {
+			"EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
+			"Condition": 1
+		},
+		"Chip_RaidChip": {
+			"Address": 10,
+			"AddrWidth": 1,
+			"OffsetWidth": 0,
+			"WriteTmout": 100,
+			"ReadTmout": 100,
+			"HealthStatus": 0
+		},
+		"PCIeDevice_1": {
+			"DeviceName": "PCIe Card $ (9500-16i)",
+			"FunctionClass": 1,
+			"Position": "",
+			"DiagnosticFault": 0,
+			"PredictiveFault": 0,
+			"FaultByBios": 0,
+			"BandwidthReduction": 0,
+			"LinkSpeedReduced": 0,
+			"Container": "${Container}",
+			"GroupPosition": "PCIeDevice_${GroupPosition}",
+			"DeviceType": 8
+		},
+		"PCIeCard_1": {
+			"SlotID": "<=/PCIeDevice_1.SlotID",
+			"NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+			"Name": "9500-16i",
+			"BoardName": "9500-16i",
+			"Description": "PCIe RAID 9500-16i",
+			"FunctionClass": 1,
+			"VendorID": 4096,
+			"DeviceID": 230,
+			"SubVendorID": 4096,
+			"SubDeviceID": 16464,
+			"Position": "<=/PCIeDevice_1.Position",
+			"LaneOwner": "<=/PCIeDevice_1.SocketID",
+			"FirmwareVersion": "<=/Controller_1.FirmwareVersion",
+			"Manufacturer": "Broadcom",
+			"PartNumber": "06030718",
+			"SerialNumber": "<=/Controller_1.SerialNumber",
+			"RefChip": "#/Chip_RaidChip",
+			"Health": "<=/Component_PCIeCard.Health",
+			"Model": "RAID_SAS3816",
+			"DeviceName": "<=/PCIeDevice_1.DeviceName",
+			"LinkSpeed": "N/A",
+			"LinkSpeedCapability": "N/A",
+			"PcbVersion": "N/A",
+			"BoardID": 0,
+			"DevBus": "<=/PCIeDevice_1.DevBus",
+			"DevDevice": "<=/PCIeDevice_1.DevDevice",
+			"DevFunction": "<=/PCIeDevice_1.DevFunction"
+		},
+		"Controller_1": {
+			"ControllerName": "HBA 9500-16i",
+			"TypeId": 20,
+			"DeviceName": "<=/PCIeDevice_1.DeviceName",
+			"Position": "<=/PCIeDevice_1.Position",
+			"OOBSupport": 1,
+			"SystemId": 0,
+			"Segment": 0,
+			"SocketID": 0,
+			"DevBus": "<=/PCIeDevice_1.DevBus",
+			"DevDevice": "<=/PCIeDevice_1.DevDevice",
+			"DevFunction": "<=/PCIeDevice_1.DevFunction",
+			"SlotId": "#/PCIeDevice_1.SlotID",
+			"RefChip": "#/Chip_RaidChip",
+			"CtrlOption1": 2275649443,
+			"CtrlOption2": 0,
+			"CtrlOption3": 0,
+			"BatteryPresence": 0,
+			"BatteryFault": 0,
+			"BatteryHealth": 0,
+			"FaultCode": 0,
+			"Health": "<=/Component_PCIeCard.Health",
+			"SerialNumber": "",
+			"CommunicationLoss": 0,
+			"TemperatureAbnormal": 0,
+			"TemperatureCelsius": 0,
+			"BOMNumber": "NA",
+			"Model": "NA",
+			"ChipManufacturer": "NA"
+		}
+	}
+}
