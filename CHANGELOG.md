@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.287] - 2025-8-31
+适配GPU卡
+
 ## [1.70.286] - 2025-8-31
 MCX653106A-HDAT下电不获取温度
 
