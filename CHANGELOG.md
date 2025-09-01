@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.289] - 2025-9-1
+修复changlog描述错误
+
 ## [1.70.288] - 2025-8-31
 新增适配A6000 GPU卡
 
@@ -10,7 +13,7 @@ All notable changes to this project will be documented in this file.
 MCX653106A-HDAT下电不获取温度
 
 ## [1.70.285] - 2025-8-30
-修复0x5D000013同步omrp
+修复0x5D000013描述错误
 
 ## [1.70.284] - 2025-8-30
 新增182x网卡（SP670/SP681）电压告警和传感器
