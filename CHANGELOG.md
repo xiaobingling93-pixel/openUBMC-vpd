@@ -1,5 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.291] - 2025-9-1
+新增电源告警码字母改成大写，解决无法mock问题
+
+## [1.70.290] - 2025-9-1
+新增BMC模组拓展板SR配置文件，支持PAC1K3D12-B1 电源管理
+
 ## [1.70.289] - 2025-9-1
 修复changlog描述错误
 
