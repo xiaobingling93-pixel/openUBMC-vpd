@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.292] - 2025-9-1
+适配EMMC厂家Vendor ID
+
 ## [1.70.291] - 2025-9-1
 新增电源告警码字母改成大写，解决无法mock问题
 
