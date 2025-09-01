@@ -1,0 +1,293 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": [
+                "Chip_TempChip"
+            ]
+        }
+    },
+    "Objects": {
+        "Component_PCIeCard": {
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "FruId": 255,
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "BoardId": 65535,
+            "UniqueId": "N/A",
+            "Manufacturer": "Nvidia",
+            "GroupId": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+        },
+        "Entity_GPU": {
+            "Id": 11,
+            "Instance": 101,
+            "Name": "GPUCard",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "ThresholdSensor_GPUTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_GPU.Id",
+            "EntityInstance": "<=/Entity_GPU.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('GPU%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_GPUTemp.Value",
+            "ReadingStatus": "<=/Scanner_GPUTemp.Value;<=/Scanner_GPUTemp.Status |> expr($1 >= 255 ? 2 : ($2 == 0 ? 0 : 2))",
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 93,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Chip_TempChip": {
+            "Address": 159,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_GPUTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Size": 1,
+            "Offset": 0,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_GPUTemp",
+            "Type": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
+        },
+        "MidAvg_GPUTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "GPU_1": {
+            "SystemId": 1,
+            "Id": 1,
+            "Name": "RTX A6000",
+            "Presence": 1,
+            "Manufacturer": "Nvidia",
+            "Model": "RTX A6000",
+            "SN": "",
+            "SocketDesignation": "1",
+            "Position": "<=/PCIeDevice_1.Position",
+            "ProcessorType": "2",
+            "Health": "#/Component_PCIeCard.Health",
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "VendorID": 4318,
+            "DeviceID": 8752,
+            "SubVendorID": 4318,
+            "SubDeviceID": 5209,
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "RefChip": "#/Chip_TempChip",
+            "SerialNumber": "#/PCIeCard_1.SerialNumber",
+            "CardFirmwareVersion": "#/PCIeCard_1.FirmwareVersion",
+            "CardPartNumber": "0632Y014"
+        },
+        "Entity_GPUCard": {
+            "Id": 11,
+            "Name": "GPUCard",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 101
+        },
+        "ThresholdSensor_GpuPower": {
+            "EntityId": "<=/Entity_GPUCard.Id",
+            "EntityInstance": "<=/Entity_GPUCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 11,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('GPU%s Power',$1)",
+            "Unit": 0,
+            "BaseUnit": 6,
+            "NominalReading": 0,
+			"MaximumReading": 255,
+			"AssertMask": 0,
+			"DeassertMask": 0,
+			"ReadingMask": 0,
+			"M": 2,
+			"RBExp": 0,
+			"Analog": 1,
+            "Reading": "<=/GPU_1.PowerWatts |> expr($1 // 2)",
+            "ReadingStatus": "<=/GPU_1.PowerWatts |> expr(($1 == 0) ? 2 : 0)",
+            "SensorNumber": 255
+        },
+        "PCIeDevice_1": {
+            "Segment": 1,
+            "DeviceName": "PCIe Card $ (RTX A6000)",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FunctionClass": 3,
+            "Position": "",
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "BandwidthReduction": 0,
+            "CorrectableError": 0,
+            "UncorrectableError": 0,
+            "FatalError": 0,
+            "LinkSpeedReduced": 0,
+            "DeviceType": 8,
+            "PCIeDeviceType": "SingleFunction",
+            "SlotType": "FullLength",
+            "FunctionProtocol": "PCIe",
+            "FunctionType": "Physical"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "RTX A6000",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "BoardName": "RTX A6000",
+            "Model": "RTX A6000",
+            "Description": "RTX A6000",
+            "FunctionClass": 3,
+            "VendorID": 4318,
+            "DeviceID": 8752,
+            "SubVendorID": 4318,
+            "SubDeviceID": 5209,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/GPU_1.FirmwareVersion",
+            "Manufacturer": "Nvidia",
+            "PartNumber": "0632Y014",
+            "Protocol": "",
+            "MaxFrameLen": 64,
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "N/A",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "SerialNumber": "<=/GPU_1.SN",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "Event_PCIeCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PCIeCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
+        },
+        "CoolingRequirement_1_58": {
+            "RequirementId": "${Slot} |> expr((58 << 8) | $1)",
+            "MonitoringStatus": "<=/Scanner_GPUTemp.Status",
+            "MonitoringValue": "<=/Scanner_GPUTemp.Value |> expr($1 >= 255 ? 30 : ($1 & 255))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 87,
+            "MaxAllowedTemperatureCelsius": 98,
+            "SensorName": "#/ThresholdSensor_GPUTemp.SensorName"
+        },
+        "Event_OverTemp": {
+            "Reading": "<=/Scanner_GPUTemp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "@Default": {
+                "Condition": 93
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading |> string.format('%s', $1)",
+            "DescArg5": "#/ThresholdSensor_GPUTemp.UpperNoncritical",
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_GPUTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_GPUTemp.PositiveHysteresis"
+        },
+        "Event_TempFail": {
+            "Reading": "<=/Scanner_GPUTemp.Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+        "Event_PCIeBandWidth": {
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(RTX A6000)",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_PCIeLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(RTX A6000)",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1
+        }
+    }
+}
