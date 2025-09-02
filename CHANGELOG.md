@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.294] - 2025-9-3
+调整CPU告警描述
+
 ## [1.70.293] - 2025-9-2
 适配GPU卡
 

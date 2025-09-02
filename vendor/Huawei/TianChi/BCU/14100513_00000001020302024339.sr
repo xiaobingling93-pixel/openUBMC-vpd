@@ -1006,7 +1006,8 @@
             "MaxMemoryTemperatureName": "N/A",
             "Name": "${Slot} |> string.format('CPU%s', $1 * 2 - 1)",
             "IsMemoryPresence": 0,
-            "Manufacturer": "Huawei"
+            "Manufacturer": "Huawei",
+            "SilkText": "CPU1"
         },
         "Event_Cpu1MemoryTempFail": {
             "EventKeyId": "CPU.MemoryTempFail",
@@ -1158,7 +1159,8 @@
             "MaxMemoryTemperatureName": "N/A",
             "Name": "${Slot} |> string.format('CPU%s', $1 * 2)",
             "IsMemoryPresence": 0,
-            "Manufacturer": "Huawei"
+            "Manufacturer": "Huawei",
+            "SilkText": "CPU2"
         },
         "Event_Cpu2MemoryTempFail": {
             "EventKeyId": "CPU.MemoryTempFail",

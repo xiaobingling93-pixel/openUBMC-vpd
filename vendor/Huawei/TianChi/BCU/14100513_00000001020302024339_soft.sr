@@ -3220,28 +3220,28 @@
             "Reading": "<=/CPU_1.PredictiveFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu1"
         },
         "Event_Cpu2CE": {
             "Reading": "<=/CPU_2.PredictiveFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu2"
         },
         "Event_Cpu1UCE": {
             "Reading": "<=/CPU_1.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu1"
         },
         "Event_Cpu2UCE": {
             "Reading": "<=/CPU_2.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu2"
         },
         "Event_Cpu1Channel0UCE": {
@@ -3594,14 +3594,14 @@
             "Reading": "<=/CPURAS_1.BISTFailed",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu1"
         },
         "Event_Cpu1CacheWayError": {
             "Reading": "<=/CPURAS_1.CacheWayErrorMask",
             "OperatorId": 4,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "L3",
             "Component": "#/Component_ComCpu1"
         },
@@ -3609,7 +3609,7 @@
             "Reading": "<=/CPURAS_1.CoreIsolated",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu1"
         },
         "Event_CpuFirmwareMismatched": {
@@ -3623,7 +3623,7 @@
             "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 1) == 1 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "0",
             "Component": "#/Component_Cable"
         },
@@ -3631,7 +3631,7 @@
             "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 2) == 2 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "1",
             "Component": "#/Component_Cable"
         },
@@ -3639,7 +3639,7 @@
             "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 4) == 4 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "2",
             "Component": "#/Component_Cable"
         },
@@ -3647,7 +3647,7 @@
             "Reading": "<=/CPURAS_1.Isolated",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu1"
         },
         "Event_CpuModelMismatched": {
@@ -3661,7 +3661,7 @@
             "Reading": "<=/CPURAS_1.ConfigErrorType",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg3": "CPU 1",
+            "DescArg1": "<=/CPU_1.Name;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
             "DescArg5": "#/CPURAS_1.ConfigErrorCode",
             "AdditionalInfo": "3",
             "Component": "#/Component_ComSystem"
@@ -3670,14 +3670,14 @@
             "Reading": "<=/CPURAS_2.BISTFailed",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu2"
         },
         "Event_Cpu2CacheWayError": {
             "Reading": "<=/CPURAS_2.CacheWayErrorMask",
             "OperatorId": 4,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "L3",
             "Component": "#/Component_ComCpu2"
         },
@@ -3685,14 +3685,14 @@
             "Reading": "<=/CPURAS_2.Isolated",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu2"
         },
         "Event_Cpu2Hccs0LaneFault": {
             "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 1) == 1 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "0",
             "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
@@ -3701,7 +3701,7 @@
             "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 2) == 2 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "1",
             "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
@@ -3710,7 +3710,7 @@
             "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 4) == 4 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "2",
             "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
@@ -3719,14 +3719,14 @@
             "Reading": "<=/CPURAS_2.CoreIsolated",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "Component": "#/Component_ComCpu2"
         },
         "Event_CPURAS2MemCfgErrorMntr": {
             "Reading": "<=/CPURAS_2.ConfigErrorType",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg3": "CPU 2",
+            "DescArg1": "<=/CPU_2.Name;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
             "DescArg5": "#/CPURAS_2.ConfigErrorCode",
             "AdditionalInfo": "3",
             "Component": "#/Component_ComSystem"
