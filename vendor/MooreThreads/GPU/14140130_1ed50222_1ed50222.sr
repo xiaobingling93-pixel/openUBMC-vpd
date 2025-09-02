@@ -8,6 +8,10 @@
             ]
         }
     },
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
     "Objects": {
         "GPU_1": {
             "SystemId": 1,
@@ -91,23 +95,78 @@
             "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
             "FruID": 255
         },
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "BoardId": 65535,
+            "Type": 8,
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "UniqueId": "N/A",
+            "Manufacturer": "Moore Threads Technology Co.,Ltd",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber",
+            "GroupId": 1
+        },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(Moore Threads MTT S3000)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(Moore Threads MTT S3000)",
+            "Component": "#/Component_PCIeCard"
         }
     }
 }
