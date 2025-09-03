@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.323] - 2025-9-11
+新增适配网卡MCX631432AS-ADAB
+
 ## [1.70.322] - 2025-9-11
 新增TCM自检异常等8个告警码
 
