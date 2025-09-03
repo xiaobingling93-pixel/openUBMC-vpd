@@ -463,7 +463,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 1(Channel 1)",
-      "DescArg4": "<=/OpticalModuleChannel_1_1.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_1_1.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
@@ -473,7 +473,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 1(Channel 2)",
-      "DescArg4": "<=/OpticalModuleChannel_1_2.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_1_2.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
@@ -483,7 +483,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 1(Channel 3)",
-      "DescArg4": "<=/OpticalModuleChannel_1_3.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_1_3.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
@@ -493,7 +493,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 1(Channel 4)",
-      "DescArg4": "<=/OpticalModuleChannel_1_4.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_1_4.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port1",
       "AdditionalInfo": "1"
     },
@@ -503,7 +503,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 2(Channel 1)",
-      "DescArg4": "<=/OpticalModuleChannel_2_1.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_2_1.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port2",
       "AdditionalInfo": "1"
     },
@@ -513,7 +513,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 2(Channel 2)",
-      "DescArg4": "<=/OpticalModuleChannel_2_2.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_2_2.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port2",
       "AdditionalInfo": "1"
     },
@@ -523,7 +523,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 2(Channel 3)",
-      "DescArg4": "<=/OpticalModuleChannel_2_3.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_2_3.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port2",
       "AdditionalInfo": "1"
     },
@@ -533,7 +533,7 @@
       "Enabled": true,
       "DescArg1": "#/Component_NICCard.Name",
       "DescArg3": "Port 2(Channel 4)",
-      "DescArg4": "<=/OpticalModuleChannel_2_4.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
+      "DescArg4": "#/OpticalModuleChannel_2_4.BiasCurrentMilliAmps |> expr($1 >= 32768 ? ($1 - 32768) : $1) |> string.format('%0.2f', $1)",
       "Component": "#/Component_Port2",
       "AdditionalInfo": "1"
     },

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.296] - 2025-9-3
+修复光模块电流异常告警描述错误的问题
+
 ## [1.70.295] - 2025-9-3
 新增LPE32000-AP网卡适配
 
