@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.295] - 2025-9-3
+新增LPE32000-AP网卡适配
+
 ## [1.70.294] - 2025-9-3
 调整CPU告警描述
 
