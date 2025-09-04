@@ -3625,6 +3625,7 @@
             "Enabled": true,
             "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "0",
+            "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
         },
         "Event_Cpu1Hccs1LaneFault": {
@@ -3633,6 +3634,7 @@
             "Enabled": true,
             "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "1",
+            "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
         },
         "Event_Cpu1Hccs2LaneFault": {
@@ -3641,6 +3643,52 @@
             "Enabled": true,
             "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "2",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu1Hccs3LaneFault": {
+            "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 8) == 8 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "3",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu1Hccs4LaneFault": {
+            "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 16) == 16 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "4",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu1Hccs5LaneFault": {
+            "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 32) == 32 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "5",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu1Hccs6LaneFault": {
+            "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 64) == 64 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "6",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu1Hccs7LaneFault": {
+            "Reading": "<=/CPURAS_1.InterConnectionLaneErrorMask |> expr(($1 & 128) == 128 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "7",
+            "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
         },
         "Event_Cpu1Isolated": {
@@ -3712,6 +3760,51 @@
             "Enabled": true,
             "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
             "DescArg2": "2",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu2Hccs3LaneFault": {
+            "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 8) == 8 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "3",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu2Hccs4LaneFault": {
+            "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 16) == 16 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "4",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu2Hccs5LaneFault": {
+            "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 32) == 32 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "5",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu2Hccs6LaneFault": {
+            "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 64) == 64 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "6",
+            "AdditionalInfo": "2",
+            "Component": "#/Component_Cable"
+        },
+        "Event_Cpu2Hccs7LaneFault": {
+            "Reading": "<=/CPURAS_2.InterConnectionLaneErrorMask |> expr(($1 & 128) == 128 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
+            "DescArg2": "7",
             "AdditionalInfo": "2",
             "Component": "#/Component_Cable"
         },

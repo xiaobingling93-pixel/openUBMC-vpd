@@ -2844,17 +2844,42 @@
         "Event_Cpu1Hccs0LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C01"
         },
         "Event_Cpu1Hccs1LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C01"
         },
         "Event_Cpu1Hccs2LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs3LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs4LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs5LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs6LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs7LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
         },
         "Event_Cpu1Isolated": {
             "EventKeyId": "CPU.CPUIsolated",
@@ -2889,17 +2914,42 @@
         "Event_Cpu2Hccs0LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C02"
         },
         "Event_Cpu2Hccs1LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C02"
         },
         "Event_Cpu2Hccs2LaneFault": {
             "EventKeyId": "CPU.CPUHccsLaneFault",
             "Condition": 1,
-            "LedFaultCode": "L01"
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs3LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs4LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs5LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs6LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs7LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
         },
         "Event_Cpu2CoreIsolated": {
             "EventKeyId": "CPU.CPUCoreIsolated",
