@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.298] - 2025-9-4
+增加HCCS告警
+
 ## [1.70.297] - 2025-9-4
 支持KP920s模组
 
