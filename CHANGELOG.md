@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.299] - 2025-9-4
+修复RAID卡PcbVersion显示错误
+
 ## [1.70.298] - 2025-9-4
 增加HCCS告警
 
