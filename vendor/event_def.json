@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.35",
+    "Version": "1.0.36",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -1656,6 +1656,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "ChassisLeftMountingEarNotPresent"
+        },
+        {
+            "EventCode": "0x120000D3",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "TPCM.DeviceMeasureAbnormal",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DeviceMeasureAbnormal"
         },
         {
             "EventCode": "0x04000005",
@@ -14169,6 +14181,25 @@
             "Cause": {
                 "En": "1. The load is too heavy.",
                 "Zh": "1.负载过重。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Check whether the hardware configurations are correct. If the configurations are correct, click Update Base Value under UserSecurity > TPCM > Hardware Idengtity Measurement Information to update the Device base measurement.",
+                "Zh": "请检查系统当前硬件配置是否正常，确认配置正常后，请在用户安全-可信计算-硬件身份度量信息界面点击刷新基准值按钮，完成度量基准值刷新。"
+            },
+            "EventKeyId": "TPCM.DeviceMeasureAbnormal",
+            "Description": {
+                "En": "Hardware assets measurement information is changed.",
+                "Zh": "硬件资产度量信息发生变更。"
+            },
+            "Influence": {
+                "En": "Hardware configurations are changed, requiring the customer to confirm the validity of the changes. Currently, identity measurement is supported for key hardware assets such as CPUs, GPUs, NPUs, and network adapters.",
+                "Zh": "硬件配置发生变更，需要客户确认变更的合法性。当前支持对CPU、GPU、NPU、网络适配器等关键硬件资产进行身份度量。"
+            },
+            "Cause": {
+                "En": "Hardware devices are changed.",
+                "Zh": "当前硬件设备发生变更。"
             }
         }
     ]

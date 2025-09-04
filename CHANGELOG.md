@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.303] - 2025-9-5
+增加硬件度量失败告警
+
 ## [1.70.302] - 2025-9-5
 补充社区兼容性列表清单器件信息
 
