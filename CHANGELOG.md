@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.297] - 2025-9-4
+支持KP920s模组
+
 ## [1.70.296] - 2025-9-3
 修复光模块电流异常告警描述错误的问题
 

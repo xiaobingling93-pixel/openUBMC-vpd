@@ -1,0 +1,4040 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "BCU",
+        "Name": "CpuBoard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_1",
+                "I2c_2",
+                "I2c_8",
+                "JtagOverLocalBus_1",
+                "Hisport_0",
+                "Hisport_5",
+                "Hisport_6",
+                "Hisport_7"
+            ]
+        },
+        "I2c_1": {
+            "Chips": [
+                "Smc_CpuBrdSMC",
+                "Eeprom_BCU",
+                "Eeprom_LogChip"
+            ]
+        },
+        "Hisport_0": {
+            "Connectors": [
+                "Connector_PCIE_SLOT_4"
+            ]
+        },
+        "Hisport_5": {
+            "Connectors": [
+                "Connector_PCIE_SLOT_1"
+            ]
+        },
+        "Hisport_7": {
+            "Connectors": [
+                "Connector_PCIE_SLOT_2"
+            ]
+        },
+        "Hisport_6": {
+            "Connectors": [
+                "Connector_PCIE_SLOT_3"
+            ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ],
+            "Connectors": [
+                "Connector_TrustedModule"
+            ]
+        },
+        "JtagOverLocalBus_1": {
+            "Chips": [
+                "Cpld_1"
+            ]
+        }
+    },
+    "Objects": {
+        "Smc_CpuBrdSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "CpuBoard_1": {
+            "Slot": 1,
+            "UID": "00000001020302071127",
+            "Name": "BC82AMDT",
+            "Manufacturer": "Huawei",
+            "Type": "BCU",
+            "Description": "CpuBoard(1620s)",
+            "PartNumber": "0302024339",
+            "LogicVersion": "",
+            "LogicUnit": 6288,
+            "PcbID": "#/Accessor_PcbID.Value",
+            "BmcStartFlag": "#/Accessor_BmcStartFlag.Value",
+            "PcbVersion": "",
+            "MCUVersion": "",
+            "MultiLogicUnit": {
+                "CPLD1": 6288,
+                "CPLD2": 6293
+            },
+            "LogicVersionID": "#/Accessor_LogicVersionID.Value",
+            "CPLD2VersionID": "#/Accessor_Cpld2VersionID.Value",
+            "MultiLogicVersion": {
+				"CPLD1": "0.00",
+				"CPLD2": "0.00"
+			},
+            "SRVersion": "${DataVersion}",
+            "BoardID": 65535,
+            "BoardType": "CpuBoard",
+            "Number": 1,
+            "DeviceName": "CpuBoard${Slot}",
+            "Position": "BCU${Slot}",
+            "NodeId": "BCU${Slot}CpuBoard${Slot}",
+            "RefSMCChip": "#/Smc_CpuBrdSMC",
+            "FruID": "<=/Fru_CpuBoard.FruId",
+            "CpldTestReg": "#/Accessor_CpldTest.Value",
+            "CpldStatus": 0
+        },
+        "MCUFirmware_1": {
+            "UID": "00000001020302071127",
+            "RefChip": "#/Smc_CpuBrdSMC",
+            "Address": 96,
+            "Protocol": "SMC",
+            "SoftwareId": "MCU-BC82AMDT",
+            "BoardType": "BCU"
+        },
+        "Accessor_PcbID": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 1792,
+            "Size": 2,
+            "Mask": 15,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_BmcStartFlag": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469763584,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LogicVersionID": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 2816,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_Cpld2VersionID": {
+			"Chip": "#/Smc_CpuBrdSMC",
+			"Offset": 2816,
+			"Size": 4,
+			"Mask": 4278190080,
+			"Type": 0,
+			"Value": 0
+		},
+        "BusinessTopoNode_1": {
+            "Type": "Compute",
+            "Slot": "${Slot}",
+            "RefSmcChip": "#/Smc_CpuBrdSMC"
+        },
+        "BusinessConnector_NIC1CPU1": {
+            "Name": "BusinessConnector_NIC1CPU1",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 1,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "SERDERS",
+            "ConnectorType": "UBC",
+            "SilkText": "NIC1 (CPU1)",
+            "UpstreamResources": [],
+            "Ports": [
+                {
+                    "Name": "A1a",
+                    "ID": 1,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_GetBCUTempretureFailed": {
+            "EventKeyId": "CpuBoard.CpuBdTempGetFailInfo",
+            "Condition": 1
+        },
+        "Event_NIC1CPU1_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Scanner_Dftenabled": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 3584,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 4000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Event_NIC1CPU1_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU1UBC2": {
+            "Name": "BusinessConnector_CPU1UBC2",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 2,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBC",
+            "SilkText": "CPU1 UBC2",
+            "UpstreamResources": [
+                {
+                    "Name": "SerDes_0_5",
+                    "ID": 5,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Ports": [
+                {
+                    "Name": "A2a",
+                    "ID": 5,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_A2a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_A2a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU1UBCDD1": {
+            "Name": "BusinessConnector_CPU1UBCDD1",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 3,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBCDD",
+            "SilkText": "CPU1 UBCDD1",
+            "UpstreamResources": [
+                {
+                    "Name": "SerDes_0_8",
+                    "ID": 8,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "SerDes_0_7",
+                    "ID": 7,
+                    "Offset": 0,
+                    "Width": 4
+                },
+                {
+                    "Name": "SerDes_0_10",
+                    "ID": 10,
+                    "Offset": 0,
+                    "Width": 4
+                }
+            ],
+            "ActualResourceOrder": [
+                "SerDes_0_10",
+                "SerDes_0_7",
+                "SerDes_0_8"
+            ],
+            "Ports": [
+                {
+                    "Name": "A3a",
+                    "ID": 9,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "A3c",
+                    "ID": 11,
+                    "Offset": 8,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_A3a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_A3a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "Event_A3c_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_A3c_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU1UBC1": {
+            "Name": "BusinessConnector_CPU1UBC1",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 4,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBC",
+            "SilkText": "CPU1 UBC1",
+            "UpstreamResources": [],
+            "Ports": [
+                {
+                    "Name": "A4a",
+                    "ID": 13,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_A4a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_A4a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_NIC2CPU2": {
+            "Name": "BusinessConnector_NIC2CPU2",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 5,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "SERDERS",
+            "ConnectorType": "UBC",
+            "SilkText": "NIC2 (CPU2)",
+            "UpstreamResources": [],
+            "Ports": [
+                {
+                    "Name": "B1a",
+                    "ID": 1,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_B1a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B1a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU2UBCDD1": {
+            "Name": "BusinessConnector_CPU2UBCDD1",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 6,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBCDD",
+            "SilkText": "CPU2 UBCDD1",
+            "UpstreamResources": [
+                {
+                    "Name": "SerDes_1_5",
+                    "ID": 5,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "SerDes_1_6",
+                    "ID": 6,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "ActualResourceOrder": [
+                "SerDes_1_6",
+                "SerDes_1_5"
+            ],
+            "Ports": [
+                {
+                    "Name": "B2a",
+                    "ID": 5,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "B2c",
+                    "ID": 7,
+                    "Offset": 8,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_B2a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B2a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "Event_B2c_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B2c_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU2UBC1": {
+            "Name": "BusinessConnector_CPU2UBC1",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 7,
+            "LinkWidth": "X8",
+            "MaxLinkRate": "SERDERS",
+            "ConnectorType": "UBC",
+            "SilkText": "CPU2 UBC1",
+            "UpstreamResources": [],
+            "Ports": [
+                {
+                    "Name": "B3a",
+                    "ID": 9,
+                    "Offset": 0,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_B3a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B3a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "BusinessConnector_CPU2UBCDD2": {
+            "Name": "BusinessConnector_CPU2UBCDD2",
+            "Direction": "Downstream",
+            "BCUIndex": "${Slot}",
+            "Slot": 8,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 4.0",
+            "ConnectorType": "UBCDD",
+            "SilkText": "CPU2 UBCDD2",
+            "UpstreamResources": [
+                {
+                    "Name": "SerDes_1_8",
+                    "ID": 8,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "SerDes_1_7",
+                    "ID": 7,
+                    "Offset": 0,
+                    "Width": 4
+                },
+                {
+                    "Name": "SerDes_1_10",
+                    "ID": 10,
+                    "Offset": 0,
+                    "Width": 4
+                }
+            ],
+            "ActualResourceOrder": [
+                "SerDes_1_10",
+                "SerDes_1_7",
+                "SerDes_1_8"
+            ],
+            "Ports": [
+                {
+                    "Name": "B4a",
+                    "ID": 13,
+                    "Offset": 0,
+                    "Width": 8
+                },
+                {
+                    "Name": "B4c",
+                    "ID": 15,
+                    "Offset": 8,
+                    "Width": 8
+                }
+            ],
+            "Port1LinkInfo": "",
+            "Port2LinkInfo": ""
+        },
+        "Event_B4a_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B4a_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "Event_B4c_IncorrectConnection": {
+            "EventKeyId": "Cable.UBIncorrectConnection",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 2,
+            "LedFaultCode": "L01"
+        },
+        "Event_B4c_UnitNotSupported": {
+            "EventKeyId": "Cable.UnitNotSupported",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "Condition": 3,
+            "LedFaultCode": "L01"
+        },
+        "SerDes_0_5": {
+            "Name": "SerDes_0_5",
+            "ID": 5,
+            "SocketID": 0,
+            "LinkWidth": 8,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        0,
+                        0,
+                        1,
+                        1,
+                        2,
+                        2,
+                        3,
+                        3
+                    ],
+                    "ControllerIndex": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Mode": 4,
+                    "Device": [
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_0_7": {
+            "Name": "SerDes_0_7",
+            "ID": 7,
+            "SocketID": 0,
+            "LinkWidth": 4,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        12,
+                        12,
+                        13,
+                        13
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_0_8": {
+            "Name": "SerDes_0_8",
+            "ID": 8,
+            "SocketID": 0,
+            "LinkWidth": 8,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        8,
+                        8,
+                        9,
+                        9,
+                        10,
+                        10,
+                        11,
+                        11
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_0_10": {
+            "Name": "SerDes_0_10",
+            "ID": 10,
+            "SocketID": 0,
+            "LinkWidth": 4,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        14,
+                        14,
+                        15,
+                        15
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_1_5": {
+            "Name": "SerDes_1_5",
+            "ID": 5,
+            "SocketID": 1,
+            "LinkWidth": 8,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        0,
+                        0,
+                        1,
+                        1,
+                        2,
+                        2,
+                        3,
+                        3
+                    ],
+                    "ControllerIndex": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Mode": 4,
+                    "Device": [
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4,
+                        4
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_1_6": {
+            "Name": "SerDes_1_6",
+            "ID": 6,
+            "SocketID": 1,
+            "LinkWidth": 8,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        4,
+                        4,
+                        5,
+                        5,
+                        6,
+                        6,
+                        7,
+                        7
+                    ],
+                    "ControllerIndex": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Mode": 1,
+                    "Device": [
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "ControllerIndex": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        "SerDes_1_7": {
+            "Name": "SerDes_1_7",
+            "ID": 7,
+            "SocketID": 1,
+            "LinkWidth": 4,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        12,
+                        12,
+                        13,
+                        13
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_1_8": {
+            "Name": "SerDes_1_8",
+            "ID": 8,
+            "SocketID": 1,
+            "LinkWidth": 8,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        8,
+                        8,
+                        9,
+                        9,
+                        10,
+                        10,
+                        11,
+                        11
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "SerDes_1_10": {
+            "Name": "SerDes_1_10",
+            "ID": 10,
+            "SocketID": 1,
+            "LinkWidth": 4,
+            "WorkMode": 1,
+            "ModeConfigs": [
+                {
+                    "Mode": 1,
+                    "Device": [
+                        14,
+                        14,
+                        15,
+                        15
+                    ],
+                    "ControllerIndex": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        "Scanner_Cpu1CATERRAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 8192,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Cpu1ProcessorHotAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 2048,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Cpu1ThermalTripAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 4,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_Cpu1ClearThermalTripAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340416,
+            "Size": 2,
+            "Mask": 4,
+            "Type": 0,
+            "Value": 0
+        },
+        "CPU_1": {
+            "Id": "${Slot} |> expr($1 * 2 - 1)",
+			"SystemId": "${SystemId}",
+			"PhysicalId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalId": "#/CPU_1.PhysicalId |> expr($1 - 1)",
+            "Presence": 1,
+            "Architecture": "ARM",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "CATERR": "<=/Scanner_Cpu1CATERRAccessor.Value",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "#/CPU_1.Name",
+            "ProcessorHot": "<=/Scanner_Cpu1ProcessorHotAccessor.Value",
+            "ThermalTrip": "<=/Scanner_Cpu1ThermalTripAccessor.Value",
+            "ClearThermalTrip": "#/Accessor_Cpu1ClearThermalTripAccessor.Value",
+            "Enabled": true,
+            "Health": "<=/Component_ComCpu1.Health",
+            "PowerGood": "<=/Scanner_PowerGood.Value",
+            "TemperatureCelsius": 0,
+            "MaxMemoryTemperatureCelsius": 0,
+            "MaxMemoryTemperatureName": "N/A",
+            "Name": "${Slot} |> string.format('CPU%s', $1 * 2 - 1)",
+            "IsMemoryPresence": 0,
+            "Manufacturer": "Huawei"
+        },
+        "Event_Cpu1MemoryTempFail": {
+            "EventKeyId": "CPU.MemoryTempFail",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1MemoryOverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 95,
+            "Hysteresis": 2
+        },
+        "ThresholdSensor_Cpu1MemTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNonrecoverable": 105,
+            "UpperCritical": 100,
+            "UpperNoncritical": 95
+        },
+        "Event_Cpu1CoreTempFail": {
+            "EventKeyId": "Cpu.CPUCoreTempFail",
+            "Condition": 1
+        },
+        "CoolingRequirement_1_20": {
+            "RequirementId": 20,
+            "TemperatureType": 1,
+            "MonitoringStatus": "<=/CPU_1.TemperatureCelsius |> expr(($1 == 16384) ? 0 : ($1 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/CPU_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 103,
+            "TargetTemperatureRangeCelsius": [
+                50,
+                95
+            ],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [
+                90,
+                85,
+                95
+            ],
+            "CustomSupported": true,
+            "CustomTargetTemperatureCelsius": 90,
+            "SensorName": "#/ThresholdSensor_CPU1CoreRem.SensorName"
+        },
+        "CoolingArea_1_20": {
+            "AreaId": 20,
+            "RequirementIdx": 20,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_21": {
+            "RequirementId": 21,
+            "TemperatureType": 4,
+            "MonitoringStatus": "<=/CPU_1.MaxMemoryTemperatureCelsius |> expr(($1 == 16384) ? 0 : ($1 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/CPU_1.MaxMemoryTemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 72,
+            "MaxAllowedTemperatureCelsius": 90,
+            "TargetTemperatureRangeCelsius": [
+                50,
+                80
+            ],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [
+                72,
+                65,
+                80
+            ],
+            "CustomSupported": true,
+            "CustomTargetTemperatureCelsius": 72,
+            "SensorName": "#/ThresholdSensor_Cpu1MemTemp.SensorName"
+        },
+        "CoolingArea_1_21": {
+            "AreaId": 21,
+            "RequirementIdx": 21,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                3,
+                4
+            ]
+        },
+        "Scanner_Cpu2CATERRAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 32,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Cpu2ProcessorHotAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 8,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_Cpu2ThermalTripAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 1024,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_Cpu2ClearThermalTripAccessor": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340416,
+            "Size": 2,
+            "Mask": 1024,
+            "Type": 0,
+            "Value": 0
+        },
+        "CPU_2": {
+            "Id": "${Slot} |> expr($1 * 2)",
+			"SystemId": "${SystemId}",
+			"PhysicalId": "${Slot} |> expr($1 * 2)",
+            "LogicalId": "#/CPU_2.PhysicalId |> expr($1 - 1)",
+            "Presence": 1,
+            "Architecture": "ARM",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "CATERR": "<=/Scanner_Cpu2CATERRAccessor.Value",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "#/CPU_2.Name",
+            "ProcessorHot": "<=/Scanner_Cpu2ProcessorHotAccessor.Value",
+            "ThermalTrip": "<=/Scanner_Cpu2ThermalTripAccessor.Value",
+            "ClearThermalTrip": "#/Accessor_Cpu2ClearThermalTripAccessor.Value",
+            "Enabled": true,
+            "Health": "<=/Component_ComCpu2.Health",
+            "PowerGood": "<=/Scanner_PowerGood.Value",
+            "TemperatureCelsius": 0,
+            "MaxMemoryTemperatureCelsius": 0,
+            "MaxMemoryTemperatureName": "N/A",
+            "Name": "${Slot} |> string.format('CPU%s', $1 * 2)",
+            "IsMemoryPresence": 0,
+            "Manufacturer": "Huawei"
+        },
+        "Event_Cpu2MemoryTempFail": {
+            "EventKeyId": "CPU.MemoryTempFail",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2MemoryOverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 95,
+            "Hysteresis": 2
+        },
+        "ThresholdSensor_Cpu2MemTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNonrecoverable": 105,
+            "UpperCritical": 100,
+            "UpperNoncritical": 95
+        },
+        "DiscreteSensor_Cpu1Prochot": {
+            "AssertMask": 2,
+            "DeassertMask": 2,
+            "DiscreteMask": 2
+        },
+        "DiscreteSensor_Cpu2Prochot": {
+            "AssertMask": 2,
+            "DeassertMask": 2,
+            "DiscreteMask": 2
+        },
+        "Event_Cpu2CoreTempFail": {
+            "EventKeyId": "Cpu.CPUCoreTempFail",
+            "Condition": 1
+        },
+        "CoolingRequirement_1_22": {
+            "RequirementId": 22,
+            "TemperatureType": 1,
+            "MonitoringStatus": "<=/CPU_2.TemperatureCelsius |> expr(($1 == 16384) ? 0 : ($1 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/CPU_2.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 103,
+            "TargetTemperatureRangeCelsius": [
+                50,
+                95
+            ],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [
+                90,
+                85,
+                95
+            ],
+            "CustomSupported": true,
+            "CustomTargetTemperatureCelsius": 90,
+            "SensorName": "#/ThresholdSensor_CPU2CoreRem.SensorName"
+        },
+        "CoolingArea_1_22": {
+            "AreaId": 22,
+            "RequirementIdx": 22,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2
+            ]
+        },
+        "CoolingRequirement_1_23": {
+            "RequirementId": 23,
+            "TemperatureType": 4,
+            "MonitoringStatus": "<=/CPU_2.MaxMemoryTemperatureCelsius |> expr(($1 == 16384) ? 0 : ($1 >= 255 ? 1 : 0))",
+            "MonitoringValue": "<=/CPU_2.MaxMemoryTemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 72,
+            "MaxAllowedTemperatureCelsius": 90,
+            "TargetTemperatureRangeCelsius": [
+                50,
+                80
+            ],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [
+                72,
+                65,
+                80
+            ],
+            "CustomSupported": true,
+            "CustomTargetTemperatureCelsius": 72,
+            "SensorName": "#/ThresholdSensor_Cpu2MemTemp.SensorName"
+        },
+        "CoolingArea_1_23": {
+            "AreaId": 23,
+            "RequirementIdx": 23,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2
+            ]
+        },
+        "Memory_1": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 15)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s00', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM000",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory1.Health"
+        },
+        "MemorySilk_1": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 0
+        },
+        "Memory_2": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 14)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s01', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM001",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory2.Health"
+        },
+        "MemorySilk_2": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 1
+        },
+        "Memory_3": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 13)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s10', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s10', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s10', $1)",
+            "SilkText": "DIMM010",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory3.Health"
+        },
+        "MemorySilk_3": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s10', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 0
+        },
+        "Memory_4": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 12)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s11', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s11', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s11', $1)",
+            "SilkText": "DIMM011",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory4.Health"
+        },
+        "MemorySilk_4": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s11', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 1
+        },
+        "Memory_5": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 11)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s20', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM020",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory5.Health"
+        },
+        "MemorySilk_5": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 0
+        },
+        "Memory_6": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 10)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s21', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM021",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory6.Health"
+        },
+        "MemorySilk_6": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 1
+        },
+        "Memory_7": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 9)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s30', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s30', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s30', $1)",
+            "SilkText": "DIMM030",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory7.Health"
+        },
+        "MemorySilk_7": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s30', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 0
+        },
+        "Memory_8": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 8)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s31', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s31', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s31', $1)",
+            "SilkText": "DIMM031",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory8.Health"
+        },
+        "MemorySilk_8": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s31', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 1
+        },
+        "Memory_9": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 7)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s00', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM100",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory9.Health"
+        },
+        "MemorySilk_9": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 0
+        },
+        "Memory_10": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 6)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s01', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM101",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory10.Health"
+        },
+        "MemorySilk_10": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 3,
+            "DimmId": 1
+        },
+        "Memory_11": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 5)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s10', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s10', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s10', $1)",
+            "SilkText": "DIMM110",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory11.Health"
+        },
+        "MemorySilk_11": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s10', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 0
+        },
+        "Memory_12": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 4)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s11', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s11', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s11', $1)",
+            "SilkText": "DIMM111",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory12.Health"
+        },
+        "MemorySilk_12": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s11', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 1,
+            "LogicalChannelId": 2,
+            "DimmId": 1
+        },
+        "Memory_13": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 3)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s20', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM120",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory13.Health"
+        },
+        "MemorySilk_13": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 0
+        },
+        "Memory_14": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 2)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s21', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM121",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory14.Health"
+        },
+        "MemorySilk_14": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 1,
+            "DimmId": 1
+        },
+        "Memory_15": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16 - 1)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s30', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s30', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s30', $1)",
+            "SilkText": "DIMM130",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory15.Health"
+        },
+        "MemorySilk_15": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s30', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 0
+        },
+        "Memory_16": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 16)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s31', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s31', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s31', $1)",
+            "SilkText": "DIMM131",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory16.Health"
+        },
+        "MemorySilk_16": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s31', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 3,
+            "LogicalChannelId": 0,
+            "DimmId": 1
+        },
+        "Event_Mem000Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem000Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem001Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem001Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem010Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem010Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem011Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem011Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem020Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem020Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem021Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem021Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem030Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem030Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem031Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem031Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem100Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem100Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem101Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem101Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem110Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem110Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem111Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem111Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem120Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem120Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem121Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem121Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem130Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem130Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem131Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem131Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Accessor_ResetPmu": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 1,
+            "Offset": 201333248,
+            "Mask": 1,
+            "Type": 0,
+            "Value": 0
+        },
+        "Pmu_1": {
+            "SystemId": "${SystemId}",
+            "PmuType": 0,
+            "ResetPmu": "#/Accessor_ResetPmu.Value",
+            "SFPMaxTemperature": 0
+        },
+        "Accessor_CMOS": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 1,
+            "Offset": 671093248,
+            "Mask": 1,
+            "Type": 0,
+            "Value": 0
+        },
+        "Bios_1": {
+            "SystemId": "${SystemId}",
+            "Soc": "",
+            "ResetCmos": "#/Accessor_CMOS.Value",
+            "UpgradeFailed": 0,
+            "RecoverFailed": 0
+        },
+        "SystemFirmwareProgress_0": {
+            "KBCError": 0,
+            "VideoError": 0
+        },
+        "Event_VideoControlFault": {
+            "EventKeyId": "Mainboard.MainboardVideoControlFault",
+            "Condition": 1
+        },
+        "SystemRAS_0": {
+            "SystemId": "${SystemId}"
+        },
+        "Event_SecureBootFailed": {
+            "EventKeyId": "Bios.SecureBootFailed",
+            "Condition": 1
+        },
+        "MemoryChannel_1": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 0,
+            "LogicalChannelId": 3,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%sChannel0', $1)"
+        },
+        "MemoryChannel_2": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 0,
+            "LogicalChannelId": 3,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%sChannel0', $1)"
+        },
+        "Event_Cpu1Installed": {
+            "EventKeyId": "Cpu.CPUInstalled",
+            "Condition": 1
+        },
+        "Event_Cpu2Installed": {
+            "EventKeyId": "Cpu.CPUInstalled",
+            "Condition": 1
+        },
+        "Event_Cpu1Removed": {
+            "EventKeyId": "Cpu.CPURemoved",
+            "Condition": 0
+        },
+        "Event_Cpu2Removed": {
+            "EventKeyId": "Cpu.CPURemoved",
+            "Condition": 0
+        },
+        "Event_Cpu1ThermalTrip": {
+            "EventKeyId": "CPU.CPUOverTempCritical",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2ThermalTrip": {
+            "EventKeyId": "CPU.CPUOverTempCritical",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1ProcessorHot": {
+            "EventKeyId": "CPU.CPUOverTempMajor",
+            "Condition": 1,
+            "LedFaultCode": "A01"
+        },
+        "Event_Cpu2ProcessorHot": {
+            "EventKeyId": "CPU.CPUOverTempMajor",
+            "Condition": 1,
+            "LedFaultCode": "A02"
+        },
+        "Event_Cpu1CE": {
+            "EventKeyId": "CPU.CPUCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2CE": {
+            "EventKeyId": "CPU.CPUCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1UCE": {
+            "EventKeyId": "CPU.CPUUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2UCE": {
+            "EventKeyId": "CPU.CPUUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1Channel0UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2Channel0UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Memory000UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_Memory001UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_Memory010UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "010"
+        },
+        "Event_Memory011UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "011"
+        },
+        "Event_Memory020UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_Memory021UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_Memory030UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "030"
+        },
+        "Event_Memory031UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "031"
+        },
+        "Event_Memory100UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_Memory101UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_Memory110UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "110"
+        },
+        "Event_Memory111UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "111"
+        },
+        "Event_Memory120UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_Memory121UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_Memory130UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "130"
+        },
+        "Event_Memory131UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "131"
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Scanner_PowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469765888,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_JtagSwitch": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469776896,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LogicVerId": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 2816,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_CPUStatus": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201340160,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 1000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_SystemStatus": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201335552,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 1000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "MidAvg_Riser1Presence": {
+            "WindowSize": 4,
+            "DefaultValue": 255
+        },
+        "Scanner_Riser1Presence": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201346816,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 8000,
+            "Debounce": "#/MidAvg_Riser1Presence",
+            "Value": 0
+        },
+        "MidAvg_Riser2Presence": {
+            "WindowSize": 4,
+            "DefaultValue": 255
+        },
+        "Scanner_Riser2Presence": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201346816,
+            "Size": 1,
+            "Mask": 2,
+            "Type": 0,
+            "Period": 8000,
+            "Debounce": "#/MidAvg_Riser2Presence",
+            "Value": 0
+        },
+        "MidAvg_Riser3Presence": {
+            "WindowSize": 4,
+            "DefaultValue": 255
+        },
+        "Scanner_Riser3Presence": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201346816,
+            "Size": 1,
+            "Mask": 16,
+            "Type": 0,
+            "Period": 8000,
+            "Debounce": "#/MidAvg_Riser3Presence",
+            "Value": 0
+        },
+        "Event_RiserCard1InstalledMt": {
+            "EventKeyId": "Riser.PCIeRiserInstalled",
+            "Condition": 1
+        },
+        "Event_RiserCard1RemovedMntr": {
+            "EventKeyId": "Riser.PCIeRiserRemoved",
+            "Condition": 0
+        },
+        "Event_RiserCard2InstalledMt": {
+            "EventKeyId": "Riser.PCIeRiserInstalled",
+            "Condition": 1
+        },
+        "Event_RiserCard2RemovedMntr": {
+            "EventKeyId": "Riser.PCIeRiserRemoved",
+            "Condition": 0
+        },
+        "Event_RiserCard3InstalledMt": {
+            "EventKeyId": "Riser.PCIeRiserInstalled",
+            "Condition": 1
+        },
+        "Event_RiserCard3RemovedMntr": {
+            "EventKeyId": "Riser.PCIeRiserRemoved",
+            "Condition": 0
+        },
+        "Eeprom_LogChip": {
+            "OffsetWidth": 3,
+            "AddrWidth": 1,
+            "Address": 30,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 30,
+            "HealthStatus": 0
+        },
+        "Event_SystemNoticeInfo": {
+            "EventKeyId": "System.SystemNoticeInfo",
+            "Condition": 1
+        },
+        "Event_SystemErrorInfo": {
+            "EventKeyId": "System.SystemErrorInfo",
+            "Condition": 2
+        },
+        "Cpld_1": {
+            "HealthStatus": 0
+        },
+        "LogicFirmware_BCU_1": {
+            "UId": "00000001020302071127",
+            "Name": "BCU_CPLD1",
+            "Manufacturer": "Huawei",
+            "Version": "#/Accessor_LogicVerId.Value",
+            "Location": 6288,
+            "UpgradeChip": "#/Cpld_1",
+            "ChipInfo": "#/Cpld_1",
+            "Routes": "#/Accessor_JtagSwitch.Value",
+            "DefaultRoute": 0,
+            "FirmwareRoute": 1,
+            "ValidMode": 0,
+            "ValidAction": 0,
+            "SoftwareId": "CPLD-BC82AMDT"
+        },
+        "LogicFirmware_BCU_2": {
+            "Name": "BCU_CPLD2",
+            "Manufacturer": "Huawei",
+            "Version": "#/Accessor_Cpld2VersionID.Value",
+            "Location": 6293,
+            "UpgradeChip": "#/Cpld_1",
+            "ChipInfo": "#/Cpld_1",
+            "Routes": "#/Accessor_JtagSwitch.Value",
+            "DefaultRoute": 0,
+            "FirmwareRoute": 1,
+            "SoftwareId": "CPLD-BC82AMDT"
+		},
+        "CoolingRequirement_1_30": {
+            "RequirementId": 30,
+            "Description": "VRD1目标调速配置",
+            "MonitoringStatus": 0,
+            "MonitoringValue": 10,
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 120,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingArea_1_30": {
+            "AreaId": 30,
+            "RequirementIdx": 30,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_31": {
+            "RequirementId": 31,
+            "Description": "VDDQ1目标调速配置",
+            "MonitoringStatus": 0,
+            "MonitoringValue": 10,
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 120,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingArea_1_31": {
+            "AreaId": 31,
+            "RequirementIdx": 31,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                3,
+                4
+            ]
+        },
+        "CoolingRequirement_1_32": {
+            "RequirementId": 32,
+            "Description": "VRD2目标调速配置",
+            "MonitoringStatus": 0,
+            "MonitoringValue": 10,
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 120,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingArea_1_32": {
+            "AreaId": 32,
+            "RequirementIdx": 32,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2
+            ]
+        },
+        "CoolingRequirement_1_33": {
+            "RequirementId": 33,
+            "Description": "VDDQ2目标调速配置",
+            "MonitoringStatus": 0,
+            "MonitoringValue": 10,
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 120,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingArea_1_33": {
+            "AreaId": 33,
+            "RequirementIdx": 33,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2
+            ]
+        },
+        "Eeprom_BCU": {
+            "OffsetWidth": 2,
+            "AddrWidth": 1,
+            "Address": 174,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "RwBlockSize": 32,
+            "WriteInterval": 20,
+            "HealthStatus": 0
+        },
+        "Accessor_BCUWP": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 1,
+            "Offset": 11776,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "SRUpgrade_1": {
+            "UID": "00000001020302071127",
+            "Type": "BCU",
+            "Version": "${DataVersion}",
+            "StorageChip": "#/Eeprom_BCU",
+            "SoftwareId": "HWSR-BC82AMDT",
+            "WriteProtect": "#/Accessor_BCUWP.Value"
+        },
+        "BusinessConnector_1": {
+            "Name": "Down_1",
+            "Direction": "Downstream",
+            "Slot": 1,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 5.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+            ],
+            "RefMgmtConnector": "#/Connector_PCIE_SLOT_1",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_NIC_1"
+        },
+        "Connector_PCIE_SLOT_1": {
+            "Bom": "14140130",
+            "Slot": 1,
+            "Position": 1,
+            "Id": "",
+            "AuxId": "",
+            "Presence": 0,
+            "Buses": [
+                "Hisport_5"
+            ],
+            "SystemId": 1,
+            "SilkText": "BCU",
+            "IdentifyMode": 2,
+            "Container": "Component_Pcie",
+            "Type": "PCIe"
+        },
+        "PcieAddrInfo_NIC_1": {
+            "Segment": 0,
+            "GroupID": 1,
+            "SocketID": 1,
+            "SlotID": 1,
+            "PortID": 1,
+            "Location": "BCU",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001020302071127",
+            "ContainerUnitType": "BCU",
+            "GroupPosition": "PcieAddrInfo_NIC_1_${GroupPosition}"
+        },
+        "BusinessConnector_2": {
+            "Name": "Down_2",
+            "Direction": "Downstream",
+            "Slot": 2,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 5.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+            ],
+            "RefMgmtConnector": "#/Connector_PCIE_SLOT_2",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_NIC_2"
+        },
+        "Connector_PCIE_SLOT_2": {
+            "Bom": "14140130",
+            "Slot": 2,
+            "Position": 2,
+            "Id": "",
+            "AuxId": "",
+            "Presence": 0,
+            "Buses": [
+                "Hisport_6"
+            ],
+            "SystemId": 1,
+            "SilkText": "BCU",
+            "IdentifyMode": 2,
+            "Container": "Component_Pcie",
+            "Type": "PCIe"
+        },
+        "PcieAddrInfo_NIC_2": {
+            "Segment": 0,
+            "GroupID": 1,
+            "SocketID": 1,
+            "SlotID": 2,
+            "PortID": 2,
+            "Location": "BCU",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001020302071127",
+            "ContainerUnitType": "BCU",
+            "GroupPosition": "PcieAddrInfo_NIC_2_${GroupPosition}"
+        },
+        "BusinessConnector_3": {
+            "Name": "Down_3",
+            "Direction": "Downstream",
+            "Slot": 3,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 5.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+            ],
+            "RefMgmtConnector": "#/Connector_PCIE_SLOT_3",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_NIC_3"
+        },
+        "Connector_PCIE_SLOT_3": {
+            "Bom": "14140130",
+            "Slot": 3,
+            "Position": 3,
+            "Id": "",
+            "AuxId": "",
+            "Presence": 0,
+            "Buses": [
+                "Hisport_7"
+            ],
+            "SystemId": 1,
+            "SilkText": "BCU",
+            "IdentifyMode": 2,
+            "Container": "Component_Pcie",
+            "Type": "PCIe"
+        },
+        "PcieAddrInfo_NIC_3": {
+            "Segment": 0,
+            "GroupID": 1,
+            "SocketID": 1,
+            "SlotID": 3,
+            "PortID": 3,
+            "Location": "BCU",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001020302071127",
+            "ContainerUnitType": "BCU",
+            "GroupPosition": "PcieAddrInfo_NIC_3_${GroupPosition}"
+        },
+        "BusinessConnector_4": {
+            "Name": "Down_4",
+            "Direction": "Downstream",
+            "Slot": 4,
+            "LinkWidth": "X16",
+            "MaxLinkRate": "PCIe 5.0",
+            "ConnectorType": "PCIe CEM",
+            "UpstreamResources": [
+            ],
+            "RefMgmtConnector": "#/Connector_PCIE_SLOT_4",
+            "RefPCIeAddrInfo": "#/PcieAddrInfo_NIC_4"
+        },
+        "Connector_PCIE_SLOT_4": {
+            "Bom": "14140130",
+            "Slot": 4,
+            "Position": 4,
+            "Id": "",
+            "AuxId": "",
+            "Presence": 0,
+            "Buses": [
+                "Hisport_0"
+            ],
+            "SystemId": 1,
+            "SilkText": "BCU",
+            "IdentifyMode": 2,
+            "Container": "Component_Pcie",
+            "Type": "PCIe"
+        },
+        "PcieAddrInfo_NIC_4": {
+            "Segment": 0,
+            "GroupID": 1,
+            "SocketID": 1,
+            "SlotID": 3,
+            "PortID": 3,
+            "Location": "BCU",
+            "ComponentType": 8,
+            "ContainerSlot": "${Slot}",
+            "ContainerUID": "00000001020302071127",
+            "ContainerUnitType": "BCU",
+            "GroupPosition": "PcieAddrInfo_NIC_4_${GroupPosition}"
+        },
+        "Fru_CpuBoard": {
+            "PcbId": 1,
+            "FruId": 1,
+            "FruName": "CpuBoard${Slot}",
+            "ConnectorGroupId": "${GroupId}",
+            "BoardId": 65535,
+            "UniqueId": "00000001020302071127"
+        },
+        "Scanner_TPMPresence": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201344768,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 8000,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_CpuMosTempHigh": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201361664,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 1000,
+            "Debounce": "#/ContBin_CpuMosTempHigh",
+            "Value": 0
+        },
+        "ContBin_CpuMosTempHigh": {
+            "NumH": 3,
+            "NumL": 1,
+            "DefaultValue": 0
+        },
+        "Event_CpuMosTempHigh": {
+            "EventKeyId": "CpuBoard.CPUBoardStartUpOverTemp",
+            "Condition": 1
+        },
+        "Accessor_RtcUnitStatus": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 13056,
+            "Mask": 1,
+            "Type": 0,
+            "Value": 0
+        },
+        "Event_RTCUnitHealthMntr": {
+            "EventKeyId": "CPUBoard.CpuBoardAccessRTCTimeFailure",
+            "Condition": 1
+        },
+        "Connector_TrustedModule": {
+            "Bom": "140500029",
+            "Slot": 1,
+            "Position": 11,
+            "Presence": "<=/Scanner_TPMPresence.Value",
+            "Id": "ff",
+            "AuxId": "",
+            "Buses": [],
+            "SystemId": "${SystemId}",
+            "ManagerId": "${ManagerId}",
+            "ChassisId": "${ChassisId}",
+            "SilkText": "TPM",
+            "IdentifyMode": 2,
+            "Type": "SecurityModule"
+        },
+        "ThresholdSensor_SFPMaxTmp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_SFPTempFail": {
+            "EventKeyId": "NICCard.OMAccessTempFailure",
+            "Condition": 1
+        },
+        "CPUMetrics_1": {
+            "BandwidthPercent": 255,
+            "BandwidthThresholdPercent": 100
+        },
+        "MemoryMetrics_1": {
+            "BandwidthPercent": 255,
+            "BandwidthThresholdPercent": 100
+        },
+        "Accessor_PowerGd": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Size": 1,
+            "Offset": 469765888,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Dft12V0Vlot_1": {
+            "Type": 1,
+            "Id": 18,
+            "DeviceNum": 4,
+            "ItemName": "VCC 12.0V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc1VccVlot.Value",
+            "PowOnStandValue": 1780,
+            "PowOffStandValue": 0,
+            "HystValue": 71,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "Dft12V0Vlot_2": {
+            "Type": 1,
+            "Id": 18,
+            "DeviceNum": 5,
+            "ItemName": "VCC 12.0V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc2VccVlot.Value",
+            "PowOnStandValue": 1780,
+            "PowOffStandValue": 0,
+            "HystValue": 71,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "Dft12V0Vlot_3": {
+            "Type": 1,
+            "Id": 18,
+            "DeviceNum": 6,
+            "ItemName": "VCC 12.0V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc3VccVlot.Value",
+            "PowOnStandValue": 1780,
+            "PowOffStandValue": 0,
+            "HystValue": 71,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "Accessor_Adc1VccVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4866,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_Adc2VccVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4867,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_Adc3VccVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4868,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "Dft5V0Vlot_1": {
+            "Type": 1,
+            "Id": 19,
+            "DeviceNum": 3,
+            "ItemName": "VCC 5V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc6VccVlot.Value",
+            "PowOnStandValue": 1900,
+            "PowOffStandValue": 0,
+            "HystValue": 76,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "Accessor_Adc6VccVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4869,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "Dft3V3Vlot_1": {
+            "Type": 1,
+            "Id": 20,
+            "DeviceNum": 2,
+            "ItemName": "VCC 3.3V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc4STBVlot.Value",
+            "PowOnStandValue": 2700,
+            "PowOffStandValue": 0,
+            "HystValue": 108,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "Accessor_Adc4STBVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4870,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "Dft3V3Vlot_2": {
+            "Type": 1,
+            "Id": 20,
+            "DeviceNum": 3,
+            "ItemName": "VCC 3.3V Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_Adc4STBVlot.Value",
+            "PowOnStandValue": 2700,
+            "PowOffStandValue": 0,
+            "HystValue": 108,
+            "DevPowerStatus": "#/Accessor_PowerGd.Value"
+        },
+        "DftButtonCell_1": {
+            "Type": 1,
+            "Id": 7,
+            "DeviceNum": 4,
+            "ItemName": "RTC Button Cell Voltage Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "VoltValue": "#/Accessor_RtcVlot.Value",
+            "PowOnStandValue": 1638,
+            "PowOffStandValue": 1638,
+            "HystValue": 500,
+            "DevPowerStatus": 1
+        },
+        "Accessor_RtcVlot": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 2,
+            "Offset": 4872,
+            "Mask": 65535,
+            "Type": 0,
+            "Value": 0
+        },
+        "DftCpld_1": {
+            "Type": 1,
+            "Id": 15,
+            "DeviceNum": 1,
+            "ItemName": "CpuBrd CPLD Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "CpldStatus": "<=/CpuBoard_1.CpldStatus"
+        },
+        "Accessor_CpldTest": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Size": 1,
+            "Offset": 8704,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "Event_CpuBoardAccessFRULableFailure": {
+            "EventKeyId": "CPUBoard.CpuBoardAccessFRULableFailure",
+            "Condition": 1
+        },
+        "SecureBootOptions_1": {
+            "SystemId": "${SystemId}",
+            "CertificateExpired": 0
+        },
+        "Event_BiosCertOverDue": {
+            "EventKeyId": "Bios.BiosCertOverDue",
+            "Condition": 1
+        },
+        "Event_Cpu1BISTFailure": {
+            "EventKeyId": "CPU.CPUBISTFailure",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1CacheWayError": {
+            "EventKeyId": "CPU.CPUCacheWayError",
+            "Condition": 4,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1CoreIsolated": {
+            "EventKeyId": "CPU.CPUCoreIsolated",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_CpuFirmwareMismatched": {
+            "EventKeyId": "CPU.CPUFirmwareMismatched",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu1Hccs0LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu1Hccs1LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu1Hccs2LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu1Isolated": {
+            "EventKeyId": "CPU.CPUIsolated",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_CpuModelMismatched": {
+            "EventKeyId": "CPU.CPUModelMismatched",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_CPURAS1MemCfgErrorMntr": {
+            "EventKeyId": "Memory.MemoryConfigError",
+            "Condition": 2,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2BISTFailure": {
+            "EventKeyId": "CPU.CPUBISTFailure",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2CacheWayError": {
+            "EventKeyId": "CPU.CPUCacheWayError",
+            "Condition": 4,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Isolated": {
+            "EventKeyId": "CPU.CPUIsolated",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu2Hccs0LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu2Hccs1LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu2Hccs2LaneFault": {
+            "EventKeyId": "CPU.CPUHccsLaneFault",
+            "Condition": 1,
+            "LedFaultCode": "L01"
+        },
+        "Event_Cpu2CoreIsolated": {
+            "EventKeyId": "CPU.CPUCoreIsolated",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_CPURAS2MemCfgErrorMntr": {
+            "EventKeyId": "Memory.MemoryConfigError",
+            "Condition": 2,
+            "LedFaultCode": "C02"
+        },
+        "Event_MemoryRAS1InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS2InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS3InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS3CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS3InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS3MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS3CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS3ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "010"
+        },
+        "Event_MemoryRAS4InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS4CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS4InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS4MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS4CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS4ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "011"
+        },
+        "Event_MemoryRAS5InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS6InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS7InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS7CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS7InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS7MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS7CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS7ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "030"
+        },
+        "Event_MemoryRAS8InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS8CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS8InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS8MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS8CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS8ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "031"
+        },
+        "Event_MemoryRAS9InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS10InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS11InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS11CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS11InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS11MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS11CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS11ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "110"
+        },
+        "Event_MemoryRAS12InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS12CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS12InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS12MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS12CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS12ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "111"
+        },
+        "Event_MemoryRAS13InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS14InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS15InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS15CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS15InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS15MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS15CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS15ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "130"
+        },
+        "Event_MemoryRAS16InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS16CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS16InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS16MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS16CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "131"
+        },
+        "Event_MemoryRAS16ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "131"
+        },
+        "ThresholdSensor_CPU1CoreRem": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "ThresholdSensor_CPU2CoreRem": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_Cpu1CoreOverTemp": {
+            "EventKeyId": "Cpu.CpuCoreOverTemp",
+            "Condition": "<=/ThresholdSensor_CPU1CoreRem.UpperNoncritical",
+            "Hysteresis": 2
+        },
+        "Event_Cpu2CoreOverTemp": {
+            "EventKeyId": "Cpu.CpuCoreOverTemp",
+            "Condition": "<=/ThresholdSensor_CPU2CoreRem.UpperNoncritical",
+            "Hysteresis": 2
+        },
+        "Scanner_R100M0ClockFailMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201338624,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 1,
+            "Period": 400,
+            "Debounce": "#/ContBin_CPUBoardClockSignalLost",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 1,
+            "Value": 0,
+            "@Default": {
+                "ScanEnabled": 0
+            }
+        },
+        "ContBin_CPUBoardClockSignalLost": {
+            "NumH": 6,
+            "NumL": 6,
+            "DefaultValue": 1
+        },
+        "Event_100M0ClockFailMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardClockSignalLost",
+            "Condition": 0
+        },
+        "Scanner_R100M1ClockFailMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201338624,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 2,
+            "Period": 400,
+            "Debounce": "#/ContBin_CPUBoardClockSignalLost",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 1,
+            "Value": 0,
+            "@Default": {
+                "ScanEnabled": 0
+            }
+        },
+        "Event_100M1ClockFailMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardClockSignalLost",
+            "Condition": 0
+        },
+        "Scanner_R100M2ClockFailMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201338624,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 4,
+            "Period": 400,
+            "Debounce": "#/ContBin_CPUBoardClockSignalLost",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 1,
+            "Value": 0,
+            "@Default": {
+                "ScanEnabled": 0
+            }
+        },
+        "Event_100M2ClockFailMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardClockSignalLost",
+            "Condition": 0
+        },
+        "Scanner_R100M3ClockFailMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201338624,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 8,
+            "Period": 400,
+            "Debounce": "#/ContBin_CPUBoardClockSignalLost",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 1,
+            "Value": 0,
+            "@Default": {
+                "ScanEnabled": 0
+            }
+        },
+        "Event_100M3ClockFailMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardClockSignalLost",
+            "Condition": 0
+        },
+        "Scanner_R32kClockFailMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201337600,
+            "Size": 1,
+            "Type": 0,
+            "Mask": 1,
+            "Period": 400,
+            "Debounce": "#/ContBin_CPUBoardClockSignalLost",
+            "Value": 0
+        },
+        "Event_32kClockFailMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardClockSignalLost",
+            "Condition": 0
+        },
+        "Scanner_RTCBatteryMntr": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4872,
+            "Size": 2,
+            "Type": 0,
+            "Mask": 65535,
+            "Period": 10000,
+            "Debounce": "#/MidAvg_RTCBatteryMntr",
+            "Value": 1640
+        },
+        "MidAvg_RTCBatteryMntr": {
+            "WindowSize": 6,
+            "DefaultValue": 1640
+        },
+        "Event_RTCBatteryMntr": {
+            "EventKeyId": "CpuBoard.CPUBoardRTCVoltageBeyondThreshold",
+            "Condition": 825,
+            "LedFaultCode": "E01"
+        },
+        "Event_Cpu1PresentMntr": {
+            "EventKeyId": "CPU.Cpu1Present",
+            "Condition": 0
+        },
+        "DiscreteSensor_RTCBattery": {
+            "AssertMask": 1,
+            "DeassertMask": 1,
+            "DiscreteMask": 1
+        },
+        "DftIOTest_1": {
+            "Type": 2,
+            "Id": 89,
+            "DeviceNum": 0,
+            "ItemName": "CpuBoard LM75 SMC Test",
+            "PrompteReady": "",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535,
+            "Destination": "#/Accessor_CPUBLm75ACC.Value",
+            "Data": 0,
+            "ActionType": 2
+        },
+        "Accessor_CPUBLm75ACC": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4866,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Value": 0
+        },
+        "DftUidButton_1": {
+            "Id": 162,
+            "Type": 5,
+            "Slot": "${GroupId}",
+            "DeviceNum": 0,
+            "ItemName": "Uid Button Press Test",
+            "PrompteReady": "Please press UID button",
+            "PrompteFinish": "",
+            "ProcessPeriod": 65535
+        },
+        "MidAvg_CpuBoard_Temp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "Scanner_CpuBoard_Temp": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4866,
+            "Size": 1,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_CpuBoard_Temp",
+            "Value": 0
+        },
+        "ThresholdSensor_CPUBoardTemp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224
+        },
+        "Accessor_NmiInt": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201328640,
+            "Size": 1,
+            "Mask": 4,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_ForceRst": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201333248,
+            "Size": 1,
+            "Mask": 2,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_SysRstDetected": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201329152,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Period": 400,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_SysRstDetected": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201329152,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_IssueRecoredAcc": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201360896,
+            "Size": 1,
+            "Mask": 2,
+            "Type": 0,
+            "Value": 0
+        },
+        "Accessor_LatchRecoredAcc": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 201360896,
+            "Size": 1,
+            "Mask": 8,
+            "Type": 0,
+            "Value": 0
+        },
+        "DiscreteSensor_SystemNotice": {
+            "AssertMask": 256,
+            "DeassertMask": 256,
+            "DiscreteMask": 256
+        },
+        "DiscreteSensor_SystemError": {
+            "AssertMask": 4,
+            "DeassertMask": 4,
+            "DiscreteMask": 4
+        },
+        "MidAvg_6win": {
+            "WindowSize": 6,
+            "DefaultValue": 32767
+        },
+        "Scanner_R12v1": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4866,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "Scanner_R12v2": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4867,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "Scanner_R12v3": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4868,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "MidAvg_6win_3v": {
+            "WindowSize": 6,
+            "DefaultValue": 32767
+        },
+        "Scanner_R3v1": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4870,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win_3v",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "Scanner_R3v2": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4871,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win_3v",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "MidAvg_6win_5v": {
+            "WindowSize": 6,
+            "DefaultValue": 32767
+        },
+        "Scanner_R5v": {
+            "Chip": "#/Smc_CpuBrdSMC",
+            "Offset": 4869,
+            "Size": 2,
+            "Mask": 65535,
+            "Type": 0,
+            "Period": 3000,
+            "Debounce": "#/MidAvg_6win_5v",
+            "ScanEnabled": "<=/Scanner_PowerGood.Value",
+            "NominalValue": 32767,
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Status": 0,
+            "Value": 0
+        },
+        "Event_CpuBoard12V1_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 10.8,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V1_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 13.2,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V1_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_CpuBoard12V2_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 10.8,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V2_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 13.2,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V2_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_CpuBoard12V3_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 10.8,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V3_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 13.2,
+            "Hysteresis": 0.48,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard12V3_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_CpuBoard3V1_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 3.0,
+            "Hysteresis": 0.13,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard3V1_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 3.6,
+            "Hysteresis": 0.13,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard3V1_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_CpuBoard3V2_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 3.0,
+            "Hysteresis": 0.13,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard3V2_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 3.6,
+            "Hysteresis": 0.13,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard3V2_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_CpuBoard5V_LowerVoltage": {
+            "EventKeyId": "CpuBoard.LowerVoltage",
+            "Condition": 4.5,
+            "Hysteresis": 0.2,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard5V_OverVoltage": {
+            "EventKeyId": "CpuBoard.OverVoltage",
+            "Condition": 5.5,
+            "Hysteresis": 0.2,
+            "LedFaultCode": "b01"
+        },
+        "Event_CpuBoard5V_GetVoltageFailure": {
+            "EventKeyId": "CpuBoard.GetVoltageFailure",
+            "Condition": 0
+        },
+        "Event_MemUsageMntr": {
+            "EventKeyId": "System.SystemMemoryOverLoad",
+            "Condition": "<=/MemoryMetrics_1.BandwidthThresholdPercent"
+        },
+        "Event_CpuUsageHighMntr": {
+            "EventKeyId": "System.SystemCPUOverLoad",
+            "Condition": "<=/CPUMetrics_1.BandwidthThresholdPercent"
+        },
+        "Event_CpuBrdCardReplaceMntr": {
+            "EventKeyId": "CPU.CPUBoardReplace",
+            "Condition": 1
+        },
+        "Event_Memory000ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory001ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory010ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory011ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory020ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory021ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory030ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory031ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory100ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory101ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory110ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory111ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory120ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory121ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory130ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory131ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Mem1OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem2OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem3OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem4OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem5OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem6OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem7OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem8OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem9OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem10OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem11OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem12OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem13OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem14OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem15OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem16OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem1OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem2OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem3OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem4OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem5OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem6OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem7OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem8OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem9OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem10OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem11OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem12OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem13OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem14OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem15OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "Event_Mem16OverTempMajor": {
+            "EventKeyId": "CPU.MemoryOverTempMajor",
+            "Condition": 1
+        },
+        "DiscreteSensor_DIMM000": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM001": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM010": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM011": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM020": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM021": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM030": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM031": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM100": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM101": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM110": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM111": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM120": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM121": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM130": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM131": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "Event_CpldSelfcheck": {
+            "EventKeyId": "CpuBoard.CpuBoardCPLDSelfTestFailure",
+            "Condition": 1
+        },
+        "BTCChannelMode_BT": {
+            "BTCMode": 0
+        }
+    }
+}
