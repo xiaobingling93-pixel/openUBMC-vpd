@@ -69,7 +69,7 @@
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PSU.PSUSingleInputLost",
-            "SeverityId": 3,
+            "SeverityId": 2,
             "ActionId": 0,
             "EventName": "PSUSingleInputLost"
         },
@@ -105,7 +105,7 @@
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PSU.RelayFault",
-            "SeverityId": 3,
+            "SeverityId": 2,
             "ActionId": 0,
             "EventName": "RelayFault"
         },
