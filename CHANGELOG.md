@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.301] - 2025-9-5
+修复SP333网卡PartNumber显示错误问题
+
 ## [1.70.300] - 2025-9-4
 修改TPSU告警级别
 
