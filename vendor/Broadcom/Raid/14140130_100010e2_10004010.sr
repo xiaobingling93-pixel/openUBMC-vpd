@@ -60,7 +60,7 @@
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/Controller_1.FirmwareVersion",
-            "Manufacturer": "Broadcom/LSI",
+            "Manufacturer": "Broadcom",
             "PartNumber": "06030622",
             "SerialNumber": "<=/Controller_1.SerialNumber",
             "RefChip": "#/Chip_RaidChip",
