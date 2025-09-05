@@ -369,6 +369,7 @@ DiskBackplane.DiskBackplaneOverTempMajor
 System.PSUsOutputCurrentImbalance
 CpuBoard.VRPowerRedundancyFailure
 TPCM.BootMeasurement
+TPCM.DeviceMeasureAbnormal
 PCIeCard.PCIeCardLinkSpeedReduced
 OCPCard.OCPCardLinkSpeedReduced
 System.SystemCPUErrorRestart
