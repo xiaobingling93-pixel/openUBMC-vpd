@@ -158,7 +158,7 @@
             "Type": "PCIeCard",
             "Description": "SP686C-M-16i 2G",
             "PartNumber": "0302024984",
-            "PcbID": "#/Accessor_PcbID.Value",
+            "PcbVersion": "<=/Fru_PCIeCard.PcbVersion",
             "LogicVersion": "N/A",
             "SRVersion": "",
             "BoardID": 255,
