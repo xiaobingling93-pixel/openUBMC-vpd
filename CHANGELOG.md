@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.309] - 2025-9-5
+修复redfish查询SP333网卡FullDuplex属性显示错误问题
+
 ## [1.70.308] - 2025-9-6
 修改后置2小盘背板硬盘没被RAID卡管理到
 
