@@ -3470,6 +3470,18 @@
             "EventName": "CPUHCCSTopologyAbnormal"
         },
         {
+            "EventCode": "0x28000053",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.CableCabletrayIncorrectConnection",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "CableCabletrayIncorrectConnection"
+        },
+        {
             "EventCode": "0x28000049",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -3758,6 +3770,30 @@
             "EventName": "NPUCEHardFailure"
         },
         {
+            "EventCode": "0x56000023",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "NPU.NPUCommunicationFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NPUCommunicationFailure"
+        },
+        {
+            "EventCode": "0x56000025",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "NPU.NPUPowerFault",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NPUPowerFault"
+        },
+        {
             "EventCode": "0x56000003",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -4020,6 +4056,18 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "PHYPowerOff"
+        },
+        {
+            "EventCode": "0x2B000007",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PHY.PHYAccessFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PHYAccessFailure"
         },
         {
             "EventCode": "0x2A000031",
@@ -4380,6 +4428,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "LiquidCoolingPumpFault"
+        },
+        {
+            "EventCode": "0x120000B7",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.ChassisChipCommunication",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ChassisChipCommunication"
         },
         {
             "EventCode": "0x0500000D",
@@ -5114,6 +5174,18 @@
             "EventName": "NPUToSwitchModuleLinkAbnormal"
         },
         {
+            "EventCode": "0x14000013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "SwitchModule.SwitchModuleComponentOverTempMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "SwitchModuleComponentOverTempMajor"
+        },
+        {
             "EventCode": "0x62000001",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -5172,6 +5244,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "LCNAuthenticationFailure"
+        },
+        {
+            "EventCode": "0x6200000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "LCN.LCNLostHeartBeat",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "LCNLostHeartBeat"
         },
         {
             "EventCode": "0x1A00006D",
@@ -5292,6 +5376,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "BMCAccessBoardI2CDeviceFailure"
+        },
+        {
+            "EventCode": "0x1A000073",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "BMC.BMCTCMSelfTestFault",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "BMCTCMSelfTestFault"
         },
         {
             "EventCode": "0x5D000021",
@@ -5566,6 +5662,25 @@
             "Cause": {
                 "En": "The I2C link is faulty, or the I2C component is damaged.",
                 "Zh": "I2C链路故障或I2C器件损坏。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Reset the {BMC}.@#AB;2. Replace the faulty board.",
+                "Zh": "1、重启{BMC}。@#AB;2、更换故障单板。"
+            },
+            "EventKeyId": "BMC.BMCTCMSelfTestFault",
+            "Description": {
+                "En": "The self-check of the trusted module (%2) in %1 failed.",
+                "Zh": "%1可信赖平台模块（%2）自检失败。"
+            },
+            "Influence": {
+                "En": "The {BMC} may fail to start.",
+                "Zh": "可能导致{BMC}无法启动。"
+            },
+            "Cause": {
+                "En": "1. The trusted module failed.@#AB;2. The board failed.",
+                "Zh": "1、可信赖平台模块异常。@#AB;2、单板故障。"
             }
         },
         {
@@ -10909,6 +11024,25 @@
         },
         {
             "Suggestion": {
+                "En": "1. Check whether the cables are disconnected.@#AB;2. Check whether the connector is disconnected.@#AB;3. Replace the cables.@#AB;4. Replace the node.",
+                "Zh": "1、检查线缆是否未插或松动。@#AB;2、检查连接器是否插稳。@#AB;3、更换相应的线缆。@#AB;4、更换对应节点。"
+            },
+            "EventKeyId": "Cable.CableCabletrayIncorrectConnection",
+            "Description": {
+                "En": "The cabletray %2 on the %1 is abnormal.",
+                "Zh": "%1的cabletray %2异常。"
+            },
+            "Influence": {
+                "En": "The services on the node may fail to run properly.",
+                "Zh": "导致节点业务不能正常运行。"
+            },
+            "Cause": {
+                "En": "1. The cables are disconnected.@#AB;2. The connector is disconnected.@#AB;3. The cable are faulty.@#AB;4. The node is faulty.",
+                "Zh": "1、线缆未插或松动。@#AB;2、连接器没有插稳。@#AB;3、线缆故障。@#AB;4、节点故障。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "1. Check if the HCCS cable is loose and if the interface is damaged or poorly resolved.@#AB;2. Plug in and unplug the HCCS cable and observe if it is eliminated.@#AB;3. Replace the HCCS cable.",
                 "Zh": "1、检查HCCS线缆是否松动，接口是否出现损坏或解除不良。@#AB;2、插拔HCCS线缆，观察是否消除。@#AB;3、更换HCCS线缆。"
             },
@@ -11365,6 +11499,44 @@
         },
         {
             "Suggestion": {
+                "En": "1. Reset the BMC.@#AB;2. Remove and reconnect the power cable or remove and reinstall the board.@#AB;3. Replace the faulty NPU board.",
+                "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换故障NPU所在的模组。"
+            },
+            "EventKeyId": "NPU.NPUCommunicationFailure",
+            "Description": {
+                "En": "Communication between the {BMC} and %1 %2 failed.",
+                "Zh": "{BMC}与%1 %2通信故障。"
+            },
+            "Influence": {
+                "En": "The system is unresponsive, and the {BMC} failed to monitor the NPU status.",
+                "Zh": "可能导致系统停止响应，{BMC}不能正常监控NPU状态。"
+            },
+            "Cause": {
+                "En": "1. The NPU is faulty.@#AB;2. The Communication link between the {BMC} and NPU is faulty.@#AB;3. The expansion board is faulty.",
+                "Zh": "1、NPU功能异常。@#AB;2、{BMC}与NPU间通信链路异常。@#AB;3、扩展板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and reconnect the power cable or remove and reinstall the board.@#AB;2. Replace the faulty NPU board.",
+                "Zh": "1、拔插电源线缆或拔插单板。@#AB;2、更换故障NPU所在的模组。"
+            },
+            "EventKeyId": "NPU.NPUPowerFault",
+            "Description": {
+                "En": "The power supply %3 %4 of NPU Board %1 and NPU %2 is faulty.",
+                "Zh": "NPU Board%1 NPU%2的%3电源%4异常。"
+            },
+            "Influence": {
+                "En": "The system cannot start.",
+                "Zh": "导致系统无法正常启动。"
+            },
+            "Cause": {
+                "En": "1. NPU power supply failed.@#AB;2. The NPU board is faulty.",
+                "Zh": "1、NPU供电电源故障。@#AB;2、NPU所在模组故障。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "1. Check whether the chip temperature is in normal range and whether the chip heat dissipation is normal.@#AB;2. Restart the OS and check the black box log information.",
                 "Zh": "1、检查芯片温度温度是否过热、芯片散热是否正 常。@#AB;2、立即OS重启，检查黑匣子日志。"
             },
@@ -11779,6 +11951,25 @@
             "Cause": {
                 "En": "The PHY is powered off.",
                 "Zh": "PHY未上电。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Reset the {BMC}.@#AB;2. Remove and reconnect the power cable or remove and reinstall the board.@#AB;3. Replace the faulty board.",
+                "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换故障单板。"
+            },
+            "EventKeyId": "PHY.PHYAccessFailure",
+            "Description": {
+                "En": "Failed to access %1 PHY%2 %3.",
+                "Zh": "%1 PHY%2 %3访问异常。"
+            },
+            "Influence": {
+                "En": "System network may be faulty.",
+                "Zh": "可能导致网络系统异常。"
+            },
+            "Cause": {
+                "En": "1. The PHY chip is faulty.@#AB;2. The MDIO channel is faulty.@#AB;3. The board is faulty.",
+                "Zh": "1、PHY芯片故障。@#AB;2、MDIO通道故障。@#AB;3、单板故障。"
             }
         },
         {
@@ -12349,6 +12540,25 @@
             "Cause": {
                 "En": "1. The liquid cooling pump encounters an undervoltage.@#AB;2. The liquid cooling pump encounters an overvoltage.@#AB;3. The liquid cooling pump idles.@#AB;4. The liquid cooling pump encounters an overcurrent.@#AB;5. The liquid cooling pump is blocked.",
                 "Zh": "1、液冷泵电压欠压。@#AB;2、液冷泵电压过压。@#AB;3、液冷泵空转。@#AB;4、液冷泵电流过流。@#AB;5、液冷泵异物堵塞"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and reconnect power cables or remove and reinstall the board.@#AB;2. Alternately replace the board with communication exceptions specified in the alarm and observe whether the fault is cleared.",
+                "Zh": "1、拔插电源线缆或拔插单板。@#AB;2、交替更换告警中通信异常的单板，观察故障是否恢复。"
+            },
+            "EventKeyId": "Chassis.ChassisChipCommunication",
+            "Description": {
+                "En": "Communication failure between the %2 of %1 and the %4 of %3.",
+                "Zh": "%1的%2与%3的%4间通信异常。"
+            },
+            "Influence": {
+                "En": "It may lead to information synchronization failure between chips, affecting system functionality and stability.",
+                "Zh": "可能导致片间信息同步出现异常。"
+            },
+            "Cause": {
+                "En": "1. The inter-board cable is faulty.@#AB;2. The CPLD is faulty.@#AB;3. The FPGA is faulty.@#AB;4. The board is faulty.",
+                "Zh": "1、片间链路故障。@#AB;2、CPLD故障。@#AB;3、FPGA故障。@#AB;4、器件所在单板故障。"
             }
         },
         {
@@ -13512,6 +13722,25 @@
         },
         {
             "Suggestion": {
+                "En": "1. Check for fan alarms on the device.@#AB;2. Check whether the ambient temperature in the equipment room is higher than the recommended temperature for device operation.@#AB;3. Check whether the heat dissipation device is faulty. @#AB;4. Replace the component.",
+                "Zh": "1、检查设备是否存在风扇告警。@#AB;2、检查机房环境温度是否已超出设备运行环境要求。@#AB;3、检查设备散热装置是否故障。@#AB;4、更换该器件。"
+            },
+            "EventKeyId": "SwitchModule.SwitchModuleComponentOverTempMajor",
+            "Description": {
+                "En": "The %1%2 temperature (%3℃) of the switch module exceeds the overtemperature threshold (%4℃).",
+                "Zh": "交换系统的%1%2温度（%3℃）高于告警门限温度（%4℃）。"
+            },
+            "Influence": {
+                "En": "If a component in the switch module experiences abnormal temperatures, it may fail to function properly, affecting speed adjustment.",
+                "Zh": "交换系统器件温度异常，可能无法正常工作，影响调速。"
+            },
+            "Cause": {
+                "En": "1. A fan alarm is generated on the device.@#AB;2. The ambient temperature in the equipment room exceeds the required range.@#AB;3. The heat dissipation device is faulty.@#AB;4. The component is faulty.",
+                "Zh": "1、设备存在风扇告警。@#AB;2、机房环境温度已超出设备运行环境 要求。@#AB;3、设备散热装置故障。@#AB;4、该器件出现故障。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "Collect LCN logs via BMC or access the LCN management interface to review detailed alarm information and causes, then follow the recovery recommendations in the LCN user manual for resolution.",
                 "Zh": "请通过BMC收集LCN日志或登录LCN的管理界面查看告警详细信息及原因，并按照LCN用户手册的相关恢复建议处理。"
             },
@@ -13603,6 +13832,25 @@
             "Cause": {
                 "En": "1. The LCN is improperly configured.@#AB;2. The local password is abnormal.@#AB;3. The LCN firmware version is obsolete.@#AB;4. The LCN is inactive or functioning abnormally.",
                 "Zh": "1、LCN未正确配置用户信息，需检查用户配置信息。@#AB;2、BMC侧LCN的登录密码异常，应检查并更新BMC侧LCN的登录密码。@#AB;3、LCN固件版本过低，需要更新到最新版本。@#AB;4、LCN服务未启动或运行异常，应检查并重启LCN。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Restart the LCN.@#AB;2. Remove and reconnect the power cables or remove and reinstall the board.@#AB;3. Replace the board where the LCN is located.",
+                "Zh": "1、重启LCN。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换LCN所在的单板。"
+            },
+            "EventKeyId": "LCN.LCNLostHeartBeat",
+            "Description": {
+                "En": "Heartbeat signals between the BMC and the LCN(%1) are lost.",
+                "Zh": "BMC与LCN（%1）心跳丢失。"
+            },
+            "Influence": {
+                "En": "The LCN device is not functioning properly.",
+                "Zh": "LCN设备无法正常运行。"
+            },
+            "Cause": {
+                "En": "1. The LCN is not started or functioning properly.@#AB;2. Hardware failure exists.",
+                "Zh": "1、LCN服务未启动或运行异常，应检查并重启LCN。@#AB;2、存在硬件故障。"
             }
         },
         {
