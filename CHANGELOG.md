@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.305] - 2025-9-6
+修复Chassis的Board接口下无RAID卡信息
+
 ## [1.70.304] - 2025-9-6
 修复redfish获取板卡信息中SP686C-M-16i 2G RAID卡pcbversion显示错误
 
