@@ -108,7 +108,7 @@
                 "PCBVersion": ".A"
             },
             "FruId": "<=/Fru_PCIeCard.FruId",
-            "SupportedMctp": true,
+            "SupportedMctp": false,
             "SupportedLLDP": true,
             "HotPluggable": false,
             "ReadyToRemove": false,
