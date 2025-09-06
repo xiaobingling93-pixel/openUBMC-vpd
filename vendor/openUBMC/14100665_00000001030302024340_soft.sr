@@ -975,7 +975,7 @@
       "Component": "#/Component_Drive3"
     },
     "Event_HardDisk1EstimatedRemainingLifespanLow": {
-      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
       "Reading": "<=/Drive_1.EstimatedRemainingLifespanInsufficient",
       "Condition": 1,
       "OperatorId": 5,
@@ -986,7 +986,7 @@
       "Component": "#/Component_Drive0"
     },
     "Event_HardDisk2EstimatedRemainingLifespanLow": {
-      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
       "Reading": "<=/Drive_2.EstimatedRemainingLifespanInsufficient",
       "Condition": 1,
       "OperatorId": 5,
@@ -997,7 +997,7 @@
       "Component": "#/Component_Drive1"
     },
     "Event_HardDisk3EstimatedRemainingLifespanLow": {
-      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
       "Reading": "<=/Drive_3.EstimatedRemainingLifespanInsufficient",
       "Condition": 1,
       "OperatorId": 5,
@@ -1008,7 +1008,7 @@
       "Component": "#/Component_Drive2"
     },
     "Event_HardDisk4EstimatedRemainingLifespanLow": {
-      "EventKeyId": "Disk.HardDiskIOPerformanceDeterioration",
+      "EventKeyId": "Disk.DiskEstimatedRemainingLifespanLow",
       "Reading": "<=/Drive_4.EstimatedRemainingLifespanInsufficient",
       "Condition": 1,
       "OperatorId": 5,
