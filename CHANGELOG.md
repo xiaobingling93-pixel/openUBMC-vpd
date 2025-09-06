@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.306] - 2025-9-6
+修复博通raid卡厂商信息与V2不符问题
+
 ## [1.70.305] - 2025-9-6
 修复Chassis的Board接口下无RAID卡信息
 
