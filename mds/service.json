@@ -1,7 +1,7 @@
 {
     "name": "vpd",
     "type": "configuration",
-    "version": "1.70.315",
+    "version": "1.70.316",
     "author": "Huawei",
     "license": "Mulan PSL v2",
     "options": {
