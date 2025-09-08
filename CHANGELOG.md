@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.311] - 2025-9-8
+修复0x24000033告警处理建议序号重复问题
+
 ## [1.70.310] - 2025-9-8
 修正电源PhaseLossFault判定逻辑
 
