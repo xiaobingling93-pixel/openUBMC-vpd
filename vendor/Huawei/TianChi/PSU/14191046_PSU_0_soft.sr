@@ -292,7 +292,7 @@
             "Component": "#/Component_PowerSupply"
         },
         "Event_PhaseLossFault": {
-            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 8)",
+            "Reading": "<=/OnePower_0.OutputCurrentFault |> expr($1 & 8)",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1,2",
