@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.310] - 2025-9-8
+修正电源PhaseLossFault判定逻辑
+
 ## [1.70.309] - 2025-9-5
 修复redfish查询SP333网卡FullDuplex属性显示错误问题
 
