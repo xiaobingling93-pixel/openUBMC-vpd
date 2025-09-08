@@ -361,7 +361,7 @@
 			"GroupPosition": "PcieAddrInfo_OCP_1_${GroupPosition}",
 			"ContainerSlot": "${Slot}",
 			"ContainerUID": "00000001010302044491",
-			"ContainerUnitType": "EXU"
+			"ContainerUnitType": "FlexIO"
 		},
 		"PcieAddrInfo_OCP_2": {
 			"Segment": 0,
@@ -379,7 +379,7 @@
 			"GroupPosition": "PcieAddrInfo_OCP_2_${GroupPosition}",
 			"ContainerSlot": "${Slot}",
 			"ContainerUID": "00000001010302044491",
-			"ContainerUnitType": "EXU"
+			"ContainerUnitType": "FlexIO"
 		},
     "BusinessConnector_1": {
       "Name": "OCP_BizConnector_3",

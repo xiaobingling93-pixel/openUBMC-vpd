@@ -399,7 +399,7 @@
 			"ControllerIndex": 0,
 			"ControllerType": 0,
 			"GroupPosition": "PcieAddrInfo_OCP_1_${GroupPosition}",
-			"ContainerSlot": 1,
+			"ContainerSlot": "${Slot}",
 			"ContainerUID": "00000001010302044492",
 			"ContainerUnitType": "FlexIO"
 		},
@@ -417,7 +417,7 @@
 			"ControllerIndex": 0,
 			"ControllerType": 0,
 			"GroupPosition": "PcieAddrInfo_OCP_2_${GroupPosition}",
-			"ContainerSlot": 2,
+			"ContainerSlot": "${Slot}",
 			"ContainerUID": "00000001010302044492",
 			"ContainerUnitType": "FlexIO"
 		},

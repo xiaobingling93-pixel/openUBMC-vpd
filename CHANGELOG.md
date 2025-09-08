@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.314] - 2025-9-8
+修复OCP网卡不加载,同步修改44491.sr
+
 ## [1.70.313] - 2025-9-8
 修复OCP网卡不加载
 
