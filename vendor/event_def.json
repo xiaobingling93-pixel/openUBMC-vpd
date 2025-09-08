@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.37",
+    "Version": "1.0.38",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -13981,16 +13981,16 @@
             },
             "EventKeyId": "PSU.PSUCapacitorOvertemperature",
             "Description": {
-                "En": "The capacitor pack's operating temperature is too high and exceeds the threshold on PSU %1.",
-                "Zh": "电源%1电容包工作温度异常，超门限。"
+                "En": "The capacitor pack's operating temperature is too high on PSU %1.",
+                "Zh": "电源%1电容包工作温度过高。"
             },
             "Influence": {
                 "En": "The input power smoothing capability is affected.",
                 "Zh": "影响输入功率平滑能力。"
             },
             "Cause": {
-                "En": "1. The capacitor's temperature is too high.",
-                "Zh": "1.电容的温度过高。"
+                "En": "1. The capacitor pack's operating temperature is too high.",
+                "Zh": "1.电容包工作温度过高。"
             }
         },
         {
@@ -14000,16 +14000,16 @@
             },
             "EventKeyId": "PSU.PSUCapacitorModuleOvertemperature",
             "Description": {
-                "En": "The capacitance module's operating temperature is too high and exceeds the threshold on PSU %1.",
-                "Zh": "电源%1电容模块器件工作温度异常，超门限。"
+                "En": "The operating temperature of the capacitor's peripheral components is too high on PSU %1.",
+                "Zh": "电源%1电容的外围器件工作温度过高。"
             },
             "Influence": {
                 "En": "The input power smoothing capability is affected.",
                 "Zh": "影响输入功率平滑能力。"
             },
             "Cause": {
-                "En": "1.The temperature of the capacitance module is too high.",
-                "Zh": "1.电容模块器件温度过高。"
+                "En": "1. The operating temperature of the capacitor's peripheral components is too high.",
+                "Zh": "1.电容的外围器件工作温度过高。"
             }
         },
         {
