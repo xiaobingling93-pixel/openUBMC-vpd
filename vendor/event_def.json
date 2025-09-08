@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.36",
+    "Version": "1.0.37",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -12417,7 +12417,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Power off and then power on the node to check whether the fault is rectified.@#AB;2. Replace the peer component.@#AB;2. Contact technical support.",
+                "En": "1. Power off and then power on the node to check whether the fault is rectified.@#AB;2. Replace the peer component.@#AB;3. Contact technical support.",
                 "Zh": "1、节点重新上下电，确认故障是否消失。@#AB;2、更换对端器件。@#AB;3、联系运维技术人员支撑。"
             },
             "EventKeyId": "CpuBoard.CPULinkAbnormal",
