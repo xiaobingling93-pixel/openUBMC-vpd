@@ -90,6 +90,7 @@
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Name": "BI-V150",
+            "Model": "BI-V150",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Description": "BI-V150",
             "FunctionClass": 3,
@@ -316,7 +317,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(V150)",
+            "DescArg3": "(BI-V150)",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeLinkSpeed": {
@@ -327,7 +328,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(V150)",
+            "DescArg3": "(BI-V150)",
             "Component": "#/Component_PCIeCard"
         }
     }

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.317] - 2025-9-8
+修改天垓卡相关告警事件的描述信息
+
 ## [1.70.316] - 2025-9-8
 修复CX6网卡电子标签乱码停线问题
 
