@@ -370,6 +370,7 @@ System.PSUsOutputCurrentImbalance
 CpuBoard.VRPowerRedundancyFailure
 TPCM.BootMeasurement
 TPCM.DeviceMeasureAbnormal
+TPCM.CoprocessorHeartbeatLost
 PCIeCard.PCIeCardLinkSpeedReduced
 OCPCard.OCPCardLinkSpeedReduced
 System.SystemCPUErrorRestart

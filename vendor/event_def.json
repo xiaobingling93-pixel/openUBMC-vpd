@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.38",
+    "Version": "1.0.39",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4452,6 +4452,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "BootMeasurement"
+        },
+        {
+            "EventCode": "0x2C0000A5",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "TPCM.CoprocessorHeartbeatLost",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "CoprocessorHeartbeatLost"
         },
         {
             "EventCode": "0x080000F3",
@@ -12451,6 +12463,25 @@
             "Cause": {
                 "En": "The firmware content is tampered with, or the firmware base values are not updated.",
                 "Zh": "固件内容被篡改，或者固件基准值未刷新。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. If the host system is not powered on, power off and reset the chip.@#AB;2. If the host system is already powered on, power off and reset the chip.",
+                "Zh": "1. 如果主机系统未上电，建议下电复位整芯片。@#AB;2. 如果主机系统已经上电，推荐下电并整芯片复位。"
+            },
+            "EventKeyId": "TPCM.CoprocessorHeartbeatLost",
+            "Description": {
+                "En": "The security coprocessor heartbeat is lost, and the operational status is abnormal.",
+                "Zh": "安全协处理器心跳丢失，运行状态异常。"
+            },
+            "Influence": {
+                "En": "The security coprocessor-related services are unavailable (dynamic metrics hardware acceleration).",
+                "Zh": "安全协处理器相关业务无法正常运行（如：动态度量硬件加速）"
+            },
+            "Cause": {
+                "En": "The Security coprocessor is suspended unexpectedly, or an inter-core communication exception occurs.",
+                "Zh": "安全协处理器发生异常挂死，或核间通信异常。"
             }
         },
         {
