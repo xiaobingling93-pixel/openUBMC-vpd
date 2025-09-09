@@ -261,7 +261,6 @@
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
             "RefChip": "#/Chip_Hi1822",
-            "SpecialPcieCard": true,
             "LinkWidthCapability": "N/A",
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
