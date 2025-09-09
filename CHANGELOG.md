@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.318] - 2025-9-8
+修复E810CQDA2G2P5网卡速率配置与实际不符
+
 ## [1.70.317] - 2025-9-8
 修改天垓卡相关告警事件的描述信息
 
