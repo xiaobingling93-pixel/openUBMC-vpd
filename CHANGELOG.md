@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.318] - 2025-9-9
+修复网卡端口无法连接切状态显示有误的问题
+
 ## [1.70.318] - 2025-9-8
 修复E810CQDA2G2P5网卡速率配置与实际不符
 
