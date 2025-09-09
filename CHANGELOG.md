@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.320] - 2025-9-9
+修复MCX623106AN-CDAT SlotType配置错误
+
 ## [1.70.318] - 2025-9-9
 修复网卡端口无法连接切状态显示有误的问题
 

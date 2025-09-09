@@ -63,7 +63,7 @@
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 8,
             "PCIeDeviceType": "MultiFunction",
-            "SlotType": "FullLength",
+            "SlotType": "HalfLength",
             "FunctionProtocol": "PCIe",
             "FunctionType": "Physical"
         },
