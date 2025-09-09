@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.316] - 2025-9-8
+修复CX6网卡电子标签乱码停线问题
+
 ## [1.70.315] - 2025-9-8
 新增安全协处理器心跳丢失告警
 
