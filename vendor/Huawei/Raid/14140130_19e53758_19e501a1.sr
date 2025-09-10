@@ -54,6 +54,25 @@
             "Type": 0,
             "Value": 0
         },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "N/A",
+            "Name": "SP686C-M-40i 2G",
+            "Manufacturer": "Huawei",
+            "Type": "PCIeCard",
+            "Description": "SP686C-M-40i 2G",
+            "PartNumber": "0302024979",
+            "PcbVersion": "<=/Fru_PCIeCard.PcbVersion",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 255,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Fru_PCIeCard.FruId"
+        },
         "Fru_PCIeCard": {
             "PcbId": "#/Accessor_PcbID.Value",
             "FruId": 1,
