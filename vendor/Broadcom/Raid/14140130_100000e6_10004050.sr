@@ -130,7 +130,7 @@
 			"TemperatureCelsius": 0,
 			"BOMNumber": "NA",
 			"Model": "NA",
-			"ChipManufacturer": "NA"
+			"ChipManufacturer": "Broadcom"
 		}
 	}
 }

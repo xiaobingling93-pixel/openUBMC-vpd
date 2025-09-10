@@ -128,7 +128,7 @@
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "SP686C-M-16i",
+            "Name": "SP686C-M-16i 4G",
             "BoardName": "SP686C-M-16i 4G",
             "Description": "SP686C-M-16i 4G",
             "FunctionClass": 1,
@@ -144,7 +144,7 @@
             "SerialNumber": "<=/Controller_1.SerialNumber",
             "RefChip": "#/Chip_RaidChip",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "Hi1880",
+            "Model": "RAID_Aries B80121",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "LinkSpeed": "N/A",
             "LinkSpeedCapability": "N/A",
@@ -187,7 +187,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "0302024055",
             "Model": "B80121",
-            "ChipManufacturer": "HUAWEI"
+            "ChipManufacturer": "Huawei"
         },
         "SASPhy_0": {
             "@Parent": "Controller_1",

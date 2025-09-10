@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.321] - 2025-9-10
+修复RAID卡厂商、型号配置错误的问题
+
 ## [1.70.320] - 2025-9-9
 修复MCX623106AN-CDAT SlotType配置错误
 
