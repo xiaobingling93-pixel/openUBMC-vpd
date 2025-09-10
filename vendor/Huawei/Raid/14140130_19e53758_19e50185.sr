@@ -136,7 +136,7 @@
             "SerialNumber": "<=/Controller_1.SerialNumber",
             "RefChip": "#/Chip_RaidChip",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "Hi1880",
+            "Model": "RAID_Aries B80121",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "LinkSpeed": "N/A",
             "LinkSpeedCapability": "N/A",
@@ -206,7 +206,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "0302024984",
             "Model": "B80121",
-            "ChipManufacturer": "HUAWEI"
+            "ChipManufacturer": "Huawei"
         },
         "SASPhy_0": {
             "@Parent": "Controller_1",

@@ -107,7 +107,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030446",
             "Model": "SAS3508",
-            "ChipManufacturer": "BROADCOM"
+            "ChipManufacturer": "Broadcom"
         },
         "SASPhy_1": {
             "@Parent": "Controller_1",
