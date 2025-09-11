@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.326] - 2025-9-11
+修复GPU功耗显示与资源树不一致问题
+
 ## [1.70.324] - 2025-9-11
 修复背板offline无告警问题
 
