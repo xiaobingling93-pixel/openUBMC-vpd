@@ -183,6 +183,24 @@
       "Presence": 1,
       "Instance": 101
     },
+    "Event_Disk1StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Reading": "<=/Drive_1.FirmwareStatus;<=/Drive_1.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive0.Name",
+      "Component": "#/Component_Drive0"
+    },
+    "Event_Disk2StatErr": {
+      "EventKeyId": "Disk.DiskStateAbnormal",
+      "Reading": "<=/Drive_2.FirmwareStatus;<=/Drive_2.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+      "Condition": 1,
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_Drive1.Name",
+      "Component": "#/Component_Drive1"
+    },
     "DiscreteEvent_Disk0Presence": {
       "Property": "<=/Drive_1.Presence",
       "ListenType": 1,
