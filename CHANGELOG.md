@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.322] - 2025-9-11
+新增TCM自检异常等8个告警码
+
 ## [1.70.321] - 2025-9-10
 修复RAID卡厂商、型号配置错误的问题
 
