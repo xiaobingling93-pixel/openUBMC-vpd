@@ -274,7 +274,7 @@
             "Component": "#/Component_PowerSupply"
         },
         "Event_InnerCommFault": {
-            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 2)",
+            "Reading": "<=/Scanner_PsuIPOKStatus.Value;<=/OnePower_0.CMLStatus |> expr($1 == 1 ? ($2 & 2) : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1,2",
@@ -283,7 +283,7 @@
             "Component": "#/Component_PowerSupply"
         },
         "Event_RegisterFault": {
-            "Reading": "<=/OnePower_0.CMLStatus |> expr($1 & 16)",
+            "Reading": "<=/Scanner_PsuIPOKStatus.Value;<=/OnePower_0.CMLStatus |> expr($1 == 1 ? ($2 & 16) : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1,2",
@@ -292,7 +292,7 @@
             "Component": "#/Component_PowerSupply"
         },
         "Event_PhaseLossFault": {
-            "Reading": "<=/OnePower_0.OutputCurrentFault |> expr($1 & 8)",
+            "Reading": "<=/Scanner_PsuIPOKStatus.Value;<=/OnePower_0.OutputCurrentFault |> expr($1 == 1 ? ($2 & 8) : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1,2",
