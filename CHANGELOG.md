@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.327] - 2025-9-12
+1880RAID卡 新增BBU状态传感器&&补充PCIeCardUncorrectableErr告警bn号
+
 ## [1.70.326] - 2025-9-11
 修复GPU功耗显示与资源树不一致问题
 
