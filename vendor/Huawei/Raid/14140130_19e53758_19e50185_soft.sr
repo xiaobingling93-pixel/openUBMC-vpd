@@ -34,7 +34,57 @@
             "Presence": 1,
             "ReplaceFlag": 0,
             "PreviousSN": "N/A",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber",
+            "PartNumber": "<=/FruData_RaidCard.BoardPartNumber"
+        },
+        "DiscreteSensor_BBUStatus": {
+            "EntityId": "<=/Entity_RaidCard.Id",
+            "EntityInstance": "<=/Entity_RaidCard.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 41,
+            "ReadingType": 111,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s BBU',$1)",
+            "AssertMask": 7,
+            "DeassertMask": 7,
+            "DiscreteMask": 7,
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "DiscreteType": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_BBUStatus_0": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 1) == 0 ? 0 :1)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
+        },
+        "DiscreteEvent_BBUStatus_1": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 255) == 0 ? 0 :1)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
+        },
+        "DiscreteEvent_BBUStatus_2": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 2,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.State |> expr($1 == 1 ? 1 :0)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
         },
         "ThresholdSensor_RaidCardTemp": {
             "OwnerId": 32,
