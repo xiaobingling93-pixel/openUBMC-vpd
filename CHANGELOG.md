@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.329] - 2025-9-12
+根据评审结论调整安全协处理器心跳丢失告警级别
+
 ## [1.70.328] - 2025-9-12
 修复0x03000069不插电源线时可能触发告警
 

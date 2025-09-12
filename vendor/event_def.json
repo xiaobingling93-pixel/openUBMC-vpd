@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.39",
+    "Version": "1.0.40",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4521,7 +4521,7 @@
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "TPCM.CoprocessorHeartbeatLost",
-            "SeverityId": 2,
+            "SeverityId": 1,
             "ActionId": 0,
             "EventName": "CoprocessorHeartbeatLost"
         },
