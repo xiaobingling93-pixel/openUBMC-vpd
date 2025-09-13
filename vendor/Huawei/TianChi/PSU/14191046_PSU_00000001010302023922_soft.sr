@@ -253,7 +253,7 @@
             "PowerState": 1
         },
         "Event_PSUPoorContactMinor": {
-            "Reading": "<=/Scanner_PowerGood.Value;<=/OnePower_0.MfrSpecificStatus |> expr($1 == 1 ? (($2 & 128) == 0 ? 1 : 0) : 0)",
+            "Reading": "<=/Scanner_PowerGood.Value;<=/OnePower_0.MfrSpecificStatus;<=/OnePower_0.DeepSleepEnabled |> expr(($1 == 1 && $3 == 0) ? (($2 & 128) == 0 ? 1 : 0) : 0)",
             "OperatorId": 5,
             "@Default": {
                 "Reading": 255
