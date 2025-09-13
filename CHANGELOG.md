@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.330] - 2025-9-13
+修复12exp+后置盘phyid不正确问题
+
 ## [1.70.329] - 2025-9-12
 根据评审结论调整安全协处理器心跳丢失告警级别
 
