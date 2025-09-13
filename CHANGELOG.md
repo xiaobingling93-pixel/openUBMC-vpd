@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.333] - 2025-9-13
+修复网卡获取boardid扫描周期过短的问题
+
 ## [1.70.332] - 2025-9-13
 修复VG1000获取不到温度时没有失速调速
 
