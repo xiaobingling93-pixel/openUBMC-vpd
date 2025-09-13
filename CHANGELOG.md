@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.331] - 2025-9-13
+电源深度休眠状态下关闭电源接触不良告警
+
 ## [1.70.330] - 2025-9-13
 修复12exp+后置盘phyid不正确问题
 
