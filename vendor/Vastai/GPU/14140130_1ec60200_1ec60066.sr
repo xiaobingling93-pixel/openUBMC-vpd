@@ -177,7 +177,7 @@
         },
         "CoolingRequirement_1_58": {
             "RequirementId": "${Slot} |> expr((58 << 8) | $1)",
-            "MonitoringStatus": "<=/ThresholdSensor_VA1AGPUTemp.Reading |> expr($1 >= 255 ? 1 : 0)",
+            "MonitoringStatus": "<=/Scanner_GPUTemp.Status;<=/Scanner_GPUTemp.Value |> expr((($1 != 0) || ($2 // 256 == 32768) || ($2 // 256 == 16384) || ($2 // 256 == 0)) ? 1 : 0)",
             "MonitoringValue": "<=/ThresholdSensor_VA1AGPUTemp.Reading |> expr($1 >= 255 ? 30 : ($1 & 255))",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 70,
