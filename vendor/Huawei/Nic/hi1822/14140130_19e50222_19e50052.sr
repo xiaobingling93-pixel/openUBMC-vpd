@@ -199,8 +199,8 @@
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
             "Description": "SP680网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
-            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius; <=/OpticalModule_3.TemperatureCelsius |> expr($1 == 32768 || $2 == 32768 || $3 == 32768 || $4 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2)) |> expr($1 >= ($3 >= 255 ? 0 : $3) ? $1 : ($3 >= 255 ? 0 : $3)) |> expr($1 >= ($4 >= 255 ? 0 : $4) ? $1 : ($4 >= 255 ? 0 : $4))",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 55,
             "MaxAllowedTemperatureCelsius": 75,
@@ -283,7 +283,7 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
@@ -296,7 +296,7 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
@@ -309,7 +309,7 @@
         "OpticalModule_2": {
             "@Parent": "NetworkPort_2",
             "ChannelNum": 3,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
@@ -322,7 +322,7 @@
         "OpticalModule_3": {
             "@Parent": "NetworkPort_3",
             "ChannelNum": 4,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,

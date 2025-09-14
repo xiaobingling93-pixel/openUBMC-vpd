@@ -146,7 +146,7 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -158,7 +158,7 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
+            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
