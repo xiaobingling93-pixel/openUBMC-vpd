@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.334] - 2025-9-14
+提高M.2转接口的数据版本
+
 ## [1.70.333] - 2025-9-13
 修复网卡获取boardid扫描周期过短的问题
 
