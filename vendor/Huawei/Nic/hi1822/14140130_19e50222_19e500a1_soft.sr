@@ -162,7 +162,7 @@
             "DescArg5": "#/ThresholdSensor_Hi1822Temp.UpperNoncritical"
         },
         "Event_OM0OverTempInfo": {
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 40 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
@@ -172,7 +172,7 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_OM1OverTempInfo": {
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 40 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",

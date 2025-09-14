@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.335] - 2025-9-14
+修复光模块无法触发异常调速问题；修复光模块传感器显示为0问题
+
 ## [1.70.334] - 2025-9-14
 提高M.2转接口的数据版本
 
