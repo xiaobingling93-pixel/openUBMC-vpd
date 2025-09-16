@@ -67,7 +67,7 @@
         "DiscreteEvent_BBUStatus_0": {
             "Property": 0,
             "ListenType": 1,
-            "EventData1": 1,
+            "EventData1": 0,
             "EventData2": 255,
             "EventData3": 255,
             "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 1) == 0 ? 0 :1)",
@@ -77,7 +77,7 @@
         "DiscreteEvent_BBUStatus_1": {
             "Property": 0,
             "ListenType": 1,
-            "EventData1": 0,
+            "EventData1": 1,
             "EventData2": 255,
             "EventData3": 255,
             "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 254) == 0 ? 0 :1)",
