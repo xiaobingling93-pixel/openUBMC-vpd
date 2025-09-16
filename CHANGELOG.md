@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.70.337] - 2025-9-16
+修复bbu 状态传感器离散事件错误触发的问题
+
 ## [1.70.336] - 2025-9-16
 修复两小盘后置背板Position错误的问题
 
