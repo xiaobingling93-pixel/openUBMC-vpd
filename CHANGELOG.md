@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.4] - 2025-9-16
+修改MediumType支持nvme over smbus over i2c
+
 ## [1.80.3] - 2025-9-16
 修复bbu 状态传感器离散事件EventData1配置错误
 
