@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.2] - 2025-9-16
+修复redifsh查询SP670网卡MaxPCIeType和PCIeType为空问题
+
 ## [1.80.1] - 2025-9-16
 TPM自检告警新增默认值
 
