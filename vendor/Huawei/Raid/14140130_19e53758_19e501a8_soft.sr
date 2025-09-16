@@ -80,7 +80,7 @@
             "EventData1": 0,
             "EventData2": 255,
             "EventData3": 255,
-            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 255) == 0 ? 0 :1)",
+            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 254) == 0 ? 0 :1)",
             "Conversion": 0,
             "SensorObject": "#/DiscreteSensor_BBUStatus"
         },
