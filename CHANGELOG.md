@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.1] - 2025-9-16
+TPM自检告警新增默认值
+
 ## [1.70.337] - 2025-9-16
 修复bbu 状态传感器离散事件错误触发的问题
 
