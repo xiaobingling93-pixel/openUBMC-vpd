@@ -100,7 +100,7 @@
             "SubDeviceID": 1201,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
-            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "FirmwareVersion": "N/A",
             "Manufacturer": "Huawei",
             "PartNumber": "02315DBW",
             "RefChip": "#/Chip_Hi1822",
