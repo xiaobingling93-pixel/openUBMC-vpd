@@ -438,3 +438,4 @@ PSU.PSUCapacitorOvertemperature
 PSU.PSUCapacitorModuleOvertemperature
 PSU.PSUCapacitorFailure
 PSU.PSUCapacitanceAlert
+Chassis.ChassisOutletOverTempMajor

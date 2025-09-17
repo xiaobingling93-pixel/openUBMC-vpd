@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.5] - 2025-9-17
+增加机柜出风口过温告警
+
 ## [1.80.4] - 2025-9-16
 修改MediumType支持nvme over smbus over i2c
 
