@@ -99,7 +99,7 @@
             "SubDeviceID": 53558,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
-            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "FirmwareVersion": "N/A",
             "Manufacturer": "Huawei",
             "PartNumber": "03025WCN",
             "RefChip": "#/Chip_Hi1822",

@@ -5640,20 +5640,20 @@
         },
         {
             "Suggestion": {
-                "En": "1. Restart the {BMC}.@#AB;2. Remove and reinstall the cables of the disk backplane. @#AB;3. Replace the disk backplane.",
+                "En": "1. Restart the {BMC}.@#AB;2. Remove and reconnect power cables or remove and reinstall the board in the chassis. @#AB;3. Replace the disk backplane.",
                 "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换硬盘背板。"
             },
             "EventKeyId": "DiskBackplane.DiskBackplaneAccessVoltFailure",
             "Description": {
-                "En": "Failed to obtain the voltage at %1 detection point on the [%2] disk backplane %3.",
-                "Zh": "[%2]硬盘背板%3 %1电压监测点的电压读取失败。"
+                "En": "Failed to obtain the voltage at %1 detection point on the [%2] disk backplane.",
+                "Zh": "[%2]硬盘背板%1电压监测点的电压读取失败。"
             },
             "Influence": {
-                "En": "Cannot monitor voltage properly. If the voltage is abnormal, no alarm is generated in time.",
+                "En": "The voltage cannot be monitored. No alarm will be reported when the voltage is not in the normal range.",
                 "Zh": "无法正常监控电压，如果电压异常时无法及时告警。"
             },
             "Cause": {
-                "En": "The hard disk backplane voltage sensor fails or the access channel is abnormal.",
+                "En": "The voltage sensor of the disk backplane fails or the access channel is abnormal.",
                 "Zh": "硬盘背板电压传感器失效或者访问通道异常。"
             }
         },
