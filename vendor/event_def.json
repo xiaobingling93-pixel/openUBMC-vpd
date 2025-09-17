@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.40",
+    "Version": "1.0.41",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5604,6 +5604,18 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "PSUCapacitanceAlert"
+        },
+        {
+            "EventCode": "0x1200000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.ChassisOutletOverTempMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ChassisOutletOverTempMajor"
         }
     ],
     "EventDescription": [
@@ -14479,6 +14491,25 @@
             "Cause": {
                 "En": "Hardware devices are changed.",
                 "Zh": "当前硬件设备发生变更。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the equipment room temperature. @#AB;2. Check for air inlet or outlet blockage. @#AB;3. Check for vacant slots and missing air baffles. Install filler panels in vacant slots and air baffles.",
+                "Zh": "1.检查机房环境温度是否已超出服务器设备运行环境要求。@#AB;2.检查服务器进风口/出风口是否有异物堵塞。@#AB;3.检查服务器之间是否存在空槽位或间隔，若存在，请安装假面板或挡板。"
+            },
+            "EventKeyId": "Chassis.ChassisOutletOverTempMajor",
+            "Description": {
+                "En": "The air outlet %1 temperature (%2 degrees C) exceeds the overtemperature threshold (%3 degrees C).",
+                "Zh": "出风口%1当前温度（%2℃）高于告警门限温度（%3℃）。"
+            },
+            "Influence": {
+                "En": "The device performance and system stability are affected.",
+                "Zh": "出风口温度过高会影响器件性能，导致设备运行不稳定。"
+            },
+            "Cause": {
+                "En": "1. The ambient temperature is too high. @#AB;2. The air inlet or outlet  is blocked. @#AB;3. The server has empty slots or spaces. @#AB;4. The component holding the air outlet sensor is faulty.",
+                "Zh": "1.环境温度过高。@#AB;2.进风口/出风口被堵住。@#AB;3.存在空槽位或间隔。@#AB;4.出风口传感器所在部件故障。"
             }
         }
     ]
