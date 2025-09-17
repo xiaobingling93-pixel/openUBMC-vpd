@@ -79,7 +79,8 @@
             "FruName": "SP686C-MH-32i 4G",
             "ConnectorGroupId": "${GroupId}",
             "BoardId": 255,
-            "UniqueId": "N/A"
+            "UniqueId": "N/A",
+            "FruDataId" :"#/FruData_RaidCard"
         },
         "Scanner_Eeprom_Raid": {
             "Chip": "#/Eeprom_Raid",
