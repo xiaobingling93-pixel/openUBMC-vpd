@@ -11017,8 +11017,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check if the HCCS cable is loose and if the interface is damaged or poorly resolved.@#AB;2. Plug in and unplug the HCCS cable and observe if it is eliminated.@#AB;3. Replace the HCCS cable.",
-                "Zh": "1、检查HCCS线缆是否松动，接口是否出现损坏或解除不良。@#AB;2、插拔HCCS线缆，观察是否消除。@#AB;3、更换HCCS线缆。"
+                "En": "1. Power off the server and check whether there is damage or poor contact between the component and its slot.@#AB;2. Replace the HCCS cable.@#AB;3. Replace the mainboard.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换HCCS线缆。@#AB;3、更换主板。"
             },
             "EventKeyId": "CPU.CPUHCCSTopologyAbnormal",
             "Description": {
@@ -11026,12 +11026,12 @@
                 "Zh": "CPU板%1 CPU%2 %3 macro%4 HCCS链路拓扑异常。"
             },
             "Influence": {
-                "En": "CPU identification exception occurs.",
-                "Zh": "CPU的识别异常。"
+                "En": "The OS cannot be accessed.",
+                "Zh": "无法进入OS。"
             },
             "Cause": {
-                "En": "1. HCCS cable not securely plugged in.@#AB;2. HCCS cable malfunction.",
-                "Zh": "1、HCCS线缆未插稳。@#AB;2、HCCS线缆故障。"
+                "En": "1.  The HCCS bus is faulty.@#AB;2. The mainboard is faulty.",
+                "Zh": "1、HCCS故障。@#AB;2、主板故障。"
             }
         },
         {
@@ -11055,21 +11055,21 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check if the HCCS cable is loose and if the interface is damaged or poorly resolved.@#AB;2. Plug in and unplug the HCCS cable and observe if it is eliminated.@#AB;3. Replace the HCCS cable.",
-                "Zh": "1、检查HCCS线缆是否松动，接口是否出现损坏或解除不良。@#AB;2、插拔HCCS线缆，观察是否消除。@#AB;3、更换HCCS线缆。"
+                "En": "1.  Power off the server and check whether there is damage or poor contact between the component and its slot.@#AB;2. Replace the HCCS cable.@#AB;3. Replace the mainboard.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换HCCS线缆。@#AB;3、更换主板。"
             },
             "EventKeyId": "CPU.CPUHccsLaneErrDetected",
             "Description": {
                 "En": "HCCS link of CPU%2 %3 macro%4 on CPU board %1 bit errors.",
-                "Zh": "CPU板%1 CPU%2 %3 macro%4一致性系统总线链路误码。"
+                "Zh": "CPU板%1 CPU%2 %3 macro%4 HCCS链路误码。"
             },
             "Influence": {
                 "En": "CPU identification exception occurs.",
                 "Zh": "CPU的识别异常。"
             },
             "Cause": {
-                "En": "1. HCCS cable not securely plugged in.@#AB;2. HCCS cable malfunction.",
-                "Zh": "1、HCCS线缆未插稳。@#AB;2、HCCS线缆故障。"
+                "En": "1.  The HCCS bus is faulty.@#AB;2. The mainboard is faulty.",
+                "Zh": "1、HCCS故障。@#AB;2、主板故障。"
             }
         },
         {
