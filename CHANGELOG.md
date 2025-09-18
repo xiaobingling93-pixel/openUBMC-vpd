@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.9] - 2025-9-17
+修改HCCS告警描述
+
 ## [1.80.8] - 2025-9-18
 删除整机功耗传感器
 
