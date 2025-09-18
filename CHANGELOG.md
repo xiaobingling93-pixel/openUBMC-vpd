@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.13] - 2025-9-19
+添加thermal_mgmt.json文件
+
 ## [1.80.12] - 2025-9-19
 修改告警0x31000001为不产生消除码
 
