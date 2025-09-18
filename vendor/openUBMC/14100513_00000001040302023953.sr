@@ -153,13 +153,6 @@
       "DeassertMask": 2,
       "DiscreteMask": 2
     },
-    "ThresholdSensor_SysTotalPower": {
-      "AssertMask": 0,
-      "DeassertMask": 0,
-      "ReadingMask": 0,
-      "Linearization": 0,
-      "M": 11
-    },
     "DiscreteSensor_PwrCapStatus": {
       "AssertMask": 3,
       "DeassertMask": 3,

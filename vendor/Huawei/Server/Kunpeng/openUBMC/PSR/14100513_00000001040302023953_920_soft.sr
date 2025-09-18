@@ -125,27 +125,6 @@
             "Type": 26,
             "FruDataId": "#/FruData_BMCCard"
         },
-        "ThresholdSensor_SysTotalPower": {
-            "OwnerId": 32,
-            "OwnerLun": 0,
-            "EntityId": "<=/Entity_MainBoard.Id",
-            "EntityInstance": "<=/Entity_MainBoard.Instance",
-            "Initialization": 127,
-            "Capabilities": 104,
-            "SensorType": 11,
-            "ReadingType": 1,
-            "SensorName": "Power",
-            "Unit": 0,
-            "BaseUnit": 6,
-            "ModifierUnit": 0,
-            "Analog": 1,
-            "NominalReading": 0,
-            "NormalMaximum": 0,
-            "NormalMinimum": 0,
-            "MaximumReading": 255,
-            "MinimumReading": 0,
-            "Reading": "<=/EnergyMetric_1.SystemPower |> expr($1 / 3)"
-        },
         "ThresholdSensor_DisksTemp": {
             "OwnerId": 32,
             "OwnerLun": 0,

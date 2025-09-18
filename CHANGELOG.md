@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.8] - 2025-9-18
+删除整机功耗传感器
+
 ## [1.80.7] - 2025-9-16
 修改硬件背板电压检测点的电压读取失败告警码描述；Pcie_devivce error日志刷屏修改
 

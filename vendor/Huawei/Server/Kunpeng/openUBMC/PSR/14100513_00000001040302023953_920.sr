@@ -378,13 +378,6 @@
             "DeassertMask": 3,
             "DiscreteMask": 3
         },
-        "ThresholdSensor_SysTotalPower": {
-            "AssertMask": 0,
-            "DeassertMask": 0,
-            "ReadingMask": 0,
-            "Linearization": 0,
-            "M": 3
-        },
         "CoolingConfig_1": {
             "SmartCoolingState": "Enabled",
             "SmartCoolingMode": "EnergySaving",
