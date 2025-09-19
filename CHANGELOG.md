@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.11] - 2025-9-19
+更新告警配置文件版本号
+
 ## [1.80.10] - 2025-9-17
 修改社区包没有带上raid卡的soft.sr的问题
 
