@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.12] - 2025-9-19
+修改告警0x31000001为不产生消除码
+
 ## [1.80.11] - 2025-9-19
 更新告警配置文件版本号
 
