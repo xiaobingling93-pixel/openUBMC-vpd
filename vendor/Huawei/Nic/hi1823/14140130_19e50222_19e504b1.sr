@@ -62,7 +62,7 @@
             "Size": 1,
             "Mask": 255,
             "Type": 0,
-            "Period": 3000,
+            "Period": 5000,
             "Debounce": "#/Cont_BoardID",
             "Value": 0
         },

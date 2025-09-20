@@ -226,7 +226,7 @@
             "Size": 2,
             "Mask": "${Slot} |> expr(($1 == 1) ? 2 : 512)",
             "Type": 0,
-            "Period": 3000,
+            "Period": 100,
             "Debounce": "None",
             "Value": 0
         },
