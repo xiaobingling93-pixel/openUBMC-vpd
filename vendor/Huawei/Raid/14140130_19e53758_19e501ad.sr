@@ -65,7 +65,7 @@
             "PcbVersion": "<=/Fru_PCIeCard.PcbVersion",
             "LogicVersion": "N/A",
             "SRVersion": "",
-            "BoardID": 255,
+            "BoardID": 65535,
             "BoardType": "PCIeCard",
             "Number": 1,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
