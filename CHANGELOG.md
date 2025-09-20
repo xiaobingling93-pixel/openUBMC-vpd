@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.16] - 2025-9-20
+修复告警0x5D00001F告警级别
+
 ## [1.80.15] - 2025-9-20
 修复RAID卡csr配置错误的问题
 
