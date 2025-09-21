@@ -15,7 +15,7 @@
             "Manufacturer": "",
             "ReplaceFlag": 0,
             "PreviousSN": "",
-            "SerialNumber": "",
+            "SerialNumber": "<=/ReplicaDrive_1.SerialNumber",
             "GroupId": 1
         },
         "Component_PCIeCard1": {

@@ -27,18 +27,61 @@
             "MediumType": 49,
             "RefChip": "#/Chip_SSD"
         },
+        "PCIeDevice_1": {
+            "DeviceName": "Disk${Slot}",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "FunctionClass": 4,
+            "LinkSpeedReduced": 0,
+            "Position": "",
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": "#/Component_PCIeCard.Type"
+        },
+        "Event_DiskLinkSpeed": {
+            "EventKeyId": "Disk.DiskLinkSpeedReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "${Slot}",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_DiskUncorrectableErr": {
+            "EventKeyId": "Disk.DiskUncorrectableErr",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "NA",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_DiskCEHardFailure": {
+            "EventKeyId": "Disk.DiskCEHardFailure",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
+        },
         "Nvme_1": {
             "Slot": "${Slot}",
             "TemperatureCelsius": "<=/Scanner_Temp.Value",
             "MediaType": 1,
             "Protocol": 6,
-            "Revision": "<=/Scanner_SSD_Firmware.Value",
             "PredictedMediaLifeLeftPercent": "<=/Scanner_Remtime.Value",
             "RefComponent": "#/Component_PCIeCard1",
             "Failure": "<=/Scanner_SSD_Fault.Value",
             "PredictiveFailure": "<=/Scanner_SSD_Pre_Fault.Value",
             "VPDChip": "#/Chip_Virtual_SSD",
             "SSDChip": "#/Chip_SSD"
+        },
+        "ReplicaDrive_1": {
+            "Id": "${Slot}",
+            "SerialNumber": ""
         },
         "Chip_Virtual_SSD": {
             "Address": 166,
@@ -80,18 +123,6 @@
             "NominalValue": 1,
             "Value": 1,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
-        },
-        "Scanner_SSD_Firmware": {
-            "Chip": "#/Chip_SSD",
-            "Offset": 39,
-            "Size": 8,
-            "Mask": 255,
-            "Type": 1,
-            "Period": 60000,
-            "Debounce": "None",
-            "NominalValue": 0,
-            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
-            "Value": 0
         },
         "Scanner_Remtime": {
             "Chip": "#/Chip_SSD",
