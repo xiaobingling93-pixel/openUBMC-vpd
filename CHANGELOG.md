@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.17] - 2025-9-21
+修复pcie卡速率显示问题
+
 ## [1.80.16] - 2025-9-20
 修复告警0x5D00001F告警级别
 

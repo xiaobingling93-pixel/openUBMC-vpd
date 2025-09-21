@@ -211,8 +211,6 @@
             "MaxFrameLen": 64,
             "Model": "Hi1822",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "PcbID": "#/Accessor_PcbID.Value",
             "PcbVersion": ".A",
             "Health": "<=/Component_PCIeCard.Health",
