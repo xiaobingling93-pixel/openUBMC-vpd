@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.19] - 2025-9-22
+修复NVMe盘告警无SN的问题
+
 ## [1.80.18] - 2025-9-21
 修复pcie固件版本问题
 
