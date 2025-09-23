@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.20] - 2025-9-23
+修复cpu电源过温告警配置
+
 ## [1.80.19] - 2025-9-22
 修复NVMe盘告警无SN的问题
 
