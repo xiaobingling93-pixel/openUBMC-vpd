@@ -921,7 +921,7 @@
     },
     "Event_ExpanderAccessFRULableFailure": {
       "EventKeyId": "ExpandBoard.ExpBoardAccessFRULableFailure",
-      "Reading": "<=/Fru_Expander.Health",
+      "Reading": 0,
       "Condition": 1,
       "OperatorId": 5,
       "Enabled": true,
