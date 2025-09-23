@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.21] - 2025-9-23
+访问电子标签失败告警暂不支持
+
 ## [1.80.20] - 2025-9-23
 修复cpu电源过温告警配置
 

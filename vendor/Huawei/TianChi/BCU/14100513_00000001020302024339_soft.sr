@@ -3577,7 +3577,7 @@
             "Component": "#/Component_NICCard"
         },
         "Event_CpuBoardAccessFRULableFailure": {
-            "Reading": "<=/Fru_CpuBoard.Health",
+            "Reading": 0,
             "OperatorId": 5,
             "Enabled": true,
             "Component": "#/Component_CpuBoard"
