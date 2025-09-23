@@ -2206,7 +2206,7 @@
       "Component": "#/Component_ComCpu1"
     },
     "Event_Cpu1DDRVDDOverTempMinor": {
-      "Reading": "<=/VrdMgmt_1.CpuTACoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_1.CpuDDRVDDTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
       "DescArg2": "#/Event_Cpu1DDRVDDOverTempMinor.Reading",
@@ -2226,7 +2226,7 @@
       "Component": "#/Component_ComCpu1"
     },
     "Event_Cpu1UncoreOverTempMinor": {
-      "Reading": "<=/VrdMgmt_1.CpuTBCoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_1.CpuUncoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
       "DescArg2": "#/Event_Cpu1UncoreOverTempMinor.Reading",
@@ -2256,10 +2256,10 @@
       "Component": "#/Component_ComCpu1"
     },
     "Event_Cpu1VDDQOverTempMinor": {
-      "Reading": "<=/VrdMgmt_1.CpuTACoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 33 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_1.CpuDDRVddqTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 33 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_1.Id;<=/CPU_1.Position;<=/CPU_1.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
-      "DescArg2": "#/VrdMgmt_1.CpuTACoreTemp",
+      "DescArg2": "#/Event_Cpu1VDDQOverTempMinor.Reading",
       "DescArg3": "120",
       "Component": "#/Component_ComCpu1",
       "AdditionalInfo": "1"
@@ -2275,7 +2275,7 @@
       "Component": "#/Component_ComCpu2"
     },
     "Event_Cpu2DDRVDDOverTempMinor": {
-      "Reading": "<=/VrdMgmt_2.CpuTACoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_2.CpuDDRVDDTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
       "DescArg2": "#/Event_Cpu2DDRVDDOverTempMinor.Reading",
@@ -2295,7 +2295,7 @@
       "Component": "#/Component_ComCpu2"
     },
     "Event_Cpu2UncoreOverTempMinor": {
-      "Reading": "<=/VrdMgmt_2.CpuTBCoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_2.CpuUncoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 35 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
       "DescArg2": "#/Event_Cpu2UncoreOverTempMinor.Reading",
@@ -2325,10 +2325,10 @@
       "Component": "#/Component_ComCpu2"
     },
     "Event_Cpu2VDDQOverTempMinor": {
-      "Reading": "<=/VrdMgmt_2.CpuTACoreTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 33 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
+      "Reading": "<=/VrdMgmt_2.CpuDDRVddqTemp;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : (($1 > 255) ? 33 : ((($1 & 255) >= 128) ? (-(255 - ($1 & 255) + 1)) : ($1 & 255))))",
       "OperatorId": 4,
       "DescArg1": "<=/CPU_2.Id;<=/CPU_2.Position;<=/CPU_2.SilkText |> string.format('%u(%s %s)', $1, $2, $3)",
-      "DescArg2": "#/VrdMgmt_2.CpuTACoreTemp",
+      "DescArg2": "#/Event_Cpu2VDDQOverTempMinor.Reading",
       "DescArg3": "120",
       "Component": "#/Component_ComCpu2",
       "AdditionalInfo": "1"
