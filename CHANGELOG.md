@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.22] - 2025-9-25
+修复硬盘在位默认上报0
+
 ## [1.80.21] - 2025-9-23
 访问电子标签失败告警暂不支持
 
