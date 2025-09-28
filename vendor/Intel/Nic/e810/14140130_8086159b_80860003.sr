@@ -231,7 +231,7 @@
             "Capabilities": 232,
             "SensorType": 1,
             "ReadingType": 1,
-            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Chip Temp',$1)",
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
             "Unit": 128,
             "BaseUnit": 1,
             "ModifierUnit": 0,

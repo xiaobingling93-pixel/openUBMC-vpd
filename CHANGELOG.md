@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.24] - 2025-9-25
+修复E810CQDA2G2P5网卡model和PCIe NICx Temp传感器
+
 ## [1.80.23] - 2025-9-28
 删除仓库级别的Issue模板 -- .gitcode 目录，不影响源码，使用组织级别模板
 
