@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.23] - 2025-9-28
+删除仓库级别的Issue模板 -- .gitcode 目录，不影响源码，使用组织级别模板
+
 ## [1.80.22] - 2025-9-25
 修复硬盘在位默认上报0
 
