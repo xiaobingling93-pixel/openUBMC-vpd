@@ -107,7 +107,7 @@
 			"TypeId": 20,
 			"DeviceName": "<=/PCIeDevice_1.DeviceName",
 			"Position": "<=/PCIeDevice_1.Position",
-			"OOBSupport": 1,
+			"OOBSupport": 0,
 			"SystemId": 0,
 			"Segment": 0,
 			"SocketID": 0,
