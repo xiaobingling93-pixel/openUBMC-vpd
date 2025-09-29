@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.25] - 2025-9-26
+修复0x01000041告警码缺少CpuBoard槽位号的问题
+
 ## [1.80.24] - 2025-9-25
 修复E810CQDA2G2P5网卡model和PCIe NICx Temp传感器
 
