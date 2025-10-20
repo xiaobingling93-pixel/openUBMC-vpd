@@ -80,7 +80,7 @@
         },
         "Controller_1": {
             "ControllerName": "9500-8e",
-            "TypeId": 10,
+            "TypeId": 19,
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Position": "<=/PCIeDevice_1.Position",
             "OOBSupport": 0,
