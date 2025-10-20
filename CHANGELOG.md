@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.27] - 2025-10-20
+9500-8e的TypeId配置错误导致芯片类型显示错误
+
 ## [1.80.26] - 2025-9-29
 由于9500-16i目前带外管理会阻塞I2C，修改为不支持带外管理，需使用最新带外管理库再打开带外管理
 
