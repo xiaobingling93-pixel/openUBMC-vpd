@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.28] - 2025-10-21
+配置E810网卡的调速策略
+
 ## [1.80.27] - 2025-10-20
 9500-8e的TypeId配置错误导致芯片类型显示错误
 
