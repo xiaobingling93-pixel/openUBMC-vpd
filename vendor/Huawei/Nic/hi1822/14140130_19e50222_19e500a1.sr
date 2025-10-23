@@ -689,6 +689,9 @@
         "Event_0v75_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
             "Reading": "<=/Scanner_0v75.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 150 : ((($1 / 5)) & 255)) / 200)) : 0.75)",
+            "@Default": {
+                "Reading": 255
+            },
             "Condition": 0.675,
             "OperatorId": 2,
             "Component": "#/Component_PCIeCard",
@@ -723,6 +726,9 @@
         "Event_0v8_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
             "Reading": "<=/Scanner_0v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 160 : ((($1 / 5)) & 255)) / 200)) : 0.8)",
+            "@Default": {
+                "Reading": 255
+            },
             "Condition": 0.72,
             "OperatorId": 2,
             "Component": "#/Component_PCIeCard",
@@ -757,6 +763,9 @@
         "Event_1v2_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
             "Reading": "<=/Scanner_1v2.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 120 : ((($1 / 10)) & 255)) / 100)) : 1.2)",
+            "@Default": {
+                "Reading": 255
+            },
             "Condition": 1.08,
             "OperatorId": 2,
             "Component": "#/Component_PCIeCard",
@@ -791,6 +800,9 @@
         "Event_1v8_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
             "Reading": "<=/Scanner_1v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 180 : ((($1 / 10)) & 255)) / 100)) : 1.8)",
+            "@Default": {
+                "Reading": 255
+            },
             "Condition": 1.62,
             "OperatorId": 2,
             "Component": "#/Component_PCIeCard",
@@ -825,6 +837,9 @@
         "Event_3v3_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
             "Reading": "<=/Scanner_3v3.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 165 : ((($1 / 10)) & 255)) * 2 / 100)) : 3.3)",
+            "@Default": {
+                "Reading": 255
+            },
             "Condition": 2.96,
             "OperatorId": 2,
             "Component": "#/Component_PCIeCard",

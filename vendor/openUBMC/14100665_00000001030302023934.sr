@@ -3272,6 +3272,9 @@
     "Event_Drive1RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_1.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3292,6 +3295,9 @@
     "Event_Drive2RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_2.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3312,6 +3318,9 @@
     "Event_Drive3RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_3.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3332,6 +3341,9 @@
     "Event_Drive4RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_4.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3352,6 +3364,9 @@
     "Event_Drive5RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_5.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3372,6 +3387,9 @@
     "Event_Drive6RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_6.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3392,6 +3410,9 @@
     "Event_Drive7RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_7.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3412,6 +3433,9 @@
     "Event_Drive8RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_8.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3432,6 +3456,9 @@
     "Event_Drive9RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_9.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3452,6 +3479,9 @@
     "Event_Drive10RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_10.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3472,6 +3502,9 @@
     "Event_Drive11RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_11.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,
@@ -3492,6 +3525,9 @@
     "Event_Drive12RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",
       "Reading": "<=/Drive_12.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "Condition": 1,
       "OperatorId": 7,
       "Enabled": true,

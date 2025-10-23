@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.32] - 2025-10-28
+告警配置同步语法排查
+
 ## [1.80.31] 2025-10-27
 新增兼容性版卡计划
 
