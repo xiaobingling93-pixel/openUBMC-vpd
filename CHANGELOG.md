@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.29] - 2025-10-23
+修改告警描述信息
+
 ## [1.80.28] - 2025-10-21
 配置E810网卡的调速策略
 
