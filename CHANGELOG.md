@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.30] 2025-10-18
+获取NPU卡NPU芯片信息
+修改Atlas300IDuo的名称
+
 ## [1.80.29] - 2025-10-23
 修改告警描述信息
 
