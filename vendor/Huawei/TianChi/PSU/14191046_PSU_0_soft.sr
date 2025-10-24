@@ -279,7 +279,7 @@
             "Enabled": true,
             "AdditionalInfo": "1,2",
             "DescArg1": "${Slot}",
-            "DescArg2": "inner communication fault",
+            "DescArg2": "Inner Communication Error",
             "Component": "#/Component_PowerSupply"
         },
         "Event_RegisterFault": {
@@ -288,7 +288,7 @@
             "Enabled": true,
             "AdditionalInfo": "1,2",
             "DescArg1": "${Slot}",
-            "DescArg2": "register fault",
+            "DescArg2": "Relay Error",
             "Component": "#/Component_PowerSupply"
         },
         "Event_PhaseLossFault": {
@@ -297,7 +297,7 @@
             "Enabled": true,
             "AdditionalInfo": "1,2",
             "DescArg1": "${Slot}",
-            "DescArg2": "phase loss fault",
+            "DescArg2": "Parse Missing Error",
             "Component": "#/Component_PowerSupply"
         },
         "Event_VinUvFault": {
