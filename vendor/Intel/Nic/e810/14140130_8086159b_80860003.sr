@@ -279,7 +279,7 @@
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
             "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
-            "@default": {
+            "@Default": {
                 "Condition": 105
             },
             "OperatorId": 4,
@@ -289,11 +289,12 @@
             "DescArg2": "#/Component_PCIeCard.Name",
             "DescArg3": "PcieCard",
             "DescArg4": "#/Event_OverTemp.Reading",
-            "DescArg5": "#/ThresholdSensor_Temp.UpperNocritical"
+            "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
         "Event_OverOptModTemp": {
             "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
-            "@default": {
+            "Condition": "<=/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
+            "@Default": {
                 "Condition": 75
             },
             "OperatorId": 4,
@@ -303,7 +304,7 @@
             "DescArg2": "#/Component_PCIeCard.Name",
             "DescArg3": "PcieCard",
             "DescArg4": "#/Event_OverOptModTemp.Reading",
-            "DescArg5": "#/ThresholdSensor_OpticalModuleTemp.UpperNocritical"
+            "DescArg5": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical"
         },
         "Event_TempFail": {
             "EventKeyId": "PCIeCard.PCIeCardTempFail",
@@ -405,7 +406,7 @@
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
             "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
-            "@default": {
+            "@Default": {
                 "Condition": 100
             },
             "OperatorId": 4,
@@ -421,7 +422,7 @@
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
             "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
-            "@default": {
+            "@Default": {
                 "Condition": 100
             },
             "OperatorId": 4,

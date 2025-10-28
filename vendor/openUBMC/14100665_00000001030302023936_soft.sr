@@ -1737,6 +1737,9 @@
     },
     "Event_Drive1RebuildStart": {
       "Reading": "<=/Drive_1.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive0.Name",
@@ -1751,6 +1754,9 @@
     },
     "Event_Drive2RebuildStart": {
       "Reading": "<=/Drive_2.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive1.Name",
@@ -1765,6 +1771,9 @@
     },
     "Event_Drive3RebuildStart": {
       "Reading": "<=/Drive_3.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive2.Name",
@@ -1779,6 +1788,9 @@
     },
     "Event_Drive4RebuildStart": {
       "Reading": "<=/Drive_4.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive3.Name",
@@ -1793,6 +1805,9 @@
     },
     "Event_Drive5RebuildStart": {
       "Reading": "<=/Drive_5.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive4.Name",
@@ -1807,6 +1822,9 @@
     },
     "Event_Drive6RebuildStart": {
       "Reading": "<=/Drive_6.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive5.Name",
@@ -1821,6 +1839,9 @@
     },
     "Event_Drive7RebuildStart": {
       "Reading": "<=/Drive_7.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive6.Name",
@@ -1835,6 +1856,9 @@
     },
     "Event_Drive8RebuildStart": {
       "Reading": "<=/Drive_8.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive7.Name",
@@ -1849,6 +1873,9 @@
     },
     "Event_Drive9RebuildStart": {
       "Reading": "<=/Drive_9.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive8.Name",
@@ -1863,6 +1890,9 @@
     },
     "Event_Drive10RebuildStart": {
       "Reading": "<=/Drive_10.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive9.Name",
@@ -1877,6 +1907,9 @@
     },
     "Event_Drive11RebuildStart": {
       "Reading": "<=/Drive_11.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive10.Name",
@@ -1891,6 +1924,9 @@
     },
     "Event_Drive12RebuildStart": {
       "Reading": "<=/Drive_12.RebuildState",
+      "@Default": {
+          "Reading": 255
+      },
       "OperatorId": 7,
       "Enabled": true,
       "DescArg2": "#/Component_Drive11.Name",
