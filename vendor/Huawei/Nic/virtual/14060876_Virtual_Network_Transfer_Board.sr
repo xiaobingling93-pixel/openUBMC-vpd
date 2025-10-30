@@ -614,7 +614,7 @@
         "PowerOn": "<=/Scanner_NPU1Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU1Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU1Die0Link.Value"
       },
       "NetworkPort_02": {
         "@Parent": "NetworkAdapter_1",
@@ -624,7 +624,7 @@
         "PowerOn": "<=/Scanner_NPU1Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU1Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU1Die1Link.Value"
       },
       "NetworkPort_03": {
         "@Parent": "NetworkAdapter_1",
@@ -634,7 +634,7 @@
         "PowerOn": "<=/Scanner_NPU2Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU2Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU2Die0Link.Value"
       },
       "NetworkPort_04": {
         "@Parent": "NetworkAdapter_1",
@@ -644,7 +644,7 @@
         "PowerOn": "<=/Scanner_NPU2Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU2Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU2Die1Link.Value"
       },
       "NetworkPort_05": {
         "@Parent": "NetworkAdapter_1",
@@ -654,7 +654,7 @@
         "PowerOn": "<=/Scanner_NPU3Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU3Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU3Die0Link.Value"
       },
       "NetworkPort_06": {
         "@Parent": "NetworkAdapter_1",
@@ -664,7 +664,7 @@
         "PowerOn": "<=/Scanner_NPU3Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU3Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU3Die1Link.Value"
       },
       "NetworkPort_07": {
         "@Parent": "NetworkAdapter_1",
@@ -674,7 +674,7 @@
         "PowerOn": "<=/Scanner_NPU4Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU4Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU4Die0Link.Value"
       },
       "NetworkPort_08": {
         "@Parent": "NetworkAdapter_1",
@@ -684,7 +684,7 @@
         "PowerOn": "<=/Scanner_NPU4Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU4Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU4Die1Link.Value"
       },
       "NetworkPort_09": {
         "@Parent": "NetworkAdapter_1",
@@ -694,7 +694,7 @@
         "PowerOn": "<=/Scanner_NPU5Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU5Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU5Die0Link.Value"
       },
       "NetworkPort_10": {
         "@Parent": "NetworkAdapter_1",
@@ -704,7 +704,7 @@
         "PowerOn": "<=/Scanner_NPU5Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU5Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU5Die1Link.Value"
       },
       "NetworkPort_11": {
         "@Parent": "NetworkAdapter_1",
@@ -714,7 +714,7 @@
         "PowerOn": "<=/Scanner_NPU6Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU6Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU6Die0Link.Value"
       },
       "NetworkPort_12": {
         "@Parent": "NetworkAdapter_1",
@@ -724,7 +724,7 @@
         "PowerOn": "<=/Scanner_NPU6Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU6Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU6Die1Link.Value"
       },
       "NetworkPort_13": {
         "@Parent": "NetworkAdapter_1",
@@ -734,7 +734,7 @@
         "PowerOn": "<=/Scanner_NPU7Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU7Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU7Die0Link.Value"
       },
       "NetworkPort_14": {
         "@Parent": "NetworkAdapter_1",
@@ -744,7 +744,7 @@
         "PowerOn": "<=/Scanner_NPU7Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU7Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU7Die1Link.Value"
       },
       "NetworkPort_15": {
         "@Parent": "NetworkAdapter_1",
@@ -754,7 +754,7 @@
         "PowerOn": "<=/Scanner_NPU8Die0PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU8Die0Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU8Die0Link.Value"
       },
       "NetworkPort_16": {
         "@Parent": "NetworkAdapter_1",
@@ -764,7 +764,7 @@
         "PowerOn": "<=/Scanner_NPU8Die1PowerOn.Value",
         "MediumType": "FiberOptic",
         "SupportedLinkCapability": "200GE",
-        "LinkStatusNumeric": "<=/Scanner_NPU8Die1Link.Value"
+        "LinkStatusValue": "<=/Scanner_NPU8Die1Link.Value"
       },
       "OpticalModule_1_Die0": {
         "@Parent": "NetworkPort_01",

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.33] - 2025-10-30
+属性配置同步语法加固
+
 ## [1.80.32] - 2025-10-28
 告警配置同步语法排查
 
