@@ -151,7 +151,6 @@
     "NetworkAdapter_1": {
       "SystemID": 1,
       "SlotNumber": "<=/PCIeDevice_1.SlotID",
-      "NodeId": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
       "Name": "QT100",
       "Manufacturer": "HUAWEI",
       "Description": "2*200GE",
