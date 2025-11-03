@@ -283,6 +283,36 @@
         "Event_OCPLinkSpeed": {
             "EventKeyId": "OCPCard.OCPCardLinkSpeedReduced",
             "Condition": 1
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_OCPTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
+            "Reading": "<=/ThresholdSensor_OCPTemp.Reading |> expr(($1 >= 128) ? ($1 - 256) : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OCPTemp.UpperNoncritical"
+        },
+        "Event_OpticalModule_OverTemp": {
+            "EventKeyId": "OCPCard.OCPCardOMOverTemp",
+            "Condition": "<=/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
+            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 40 : $1) |> expr($1 & 255)",
+            "@Default": {
+                "Condition": 75
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "#/Event_OpticalModule_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical"
         }
     }
 }
