@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.35] - 2025-11-03
+修复帮助文档说明
+
 ## [1.80.34] - 2025-10-31
 支持SP670和SP681网卡光模块温度告警描述显示端口号
 
