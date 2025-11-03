@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.43",
+    "Version": "1.0.44",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6837,8 +6837,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the cables are disconnected or not properly connected.@#AB;2. Check whether the connector is not properly connected.@#AB;3. Replace the cables.@#AB;4. Replace the unit.",
-                "Zh": "1、检查线缆是否未插或松动。@#AB;2、检查连接器是否插稳。@#AB;3、更换相应的线缆。@#AB;4、更换组件。"
+                "En": "1. Check whether the cables are disconnected or not properly connected.@#AB;2. Check whether the connector is not properly connected.@#AB;3. Check whether the identification of the RAID controller card is abnormal.@#AB;4. Replace the cables.@#AB;5. Replace the unit.",
+                "Zh": "1、检查线缆是否未插或松动。@#AB;2、检查连接器是否插稳。@#AB;3、检查RAID卡是否识别异常。@#AB;4、更换相应的线缆。@#AB;5、更换组环。"
             },
             "EventKeyId": "Cable.UBNotPresent",
             "Description": {
