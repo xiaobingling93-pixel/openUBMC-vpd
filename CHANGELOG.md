@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.36] - 2025-11-04
+支持OCP网卡光模块高温告警
+
 ## [1.80.35] - 2025-11-03
 修复帮助文档说明
 
