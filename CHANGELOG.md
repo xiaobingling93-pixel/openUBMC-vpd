@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.38] - 2025-11-04
+修复消除告警误告警
+
 ## [1.80.37] - 2025-11-04
 新增NpuPowerReduceAlarm、NpuPowerBrakeAlarm
 

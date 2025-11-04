@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.44",
+    "Version": "1.0.45",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -451,7 +451,7 @@
             "OldEventCode": "",
             "EventType": 0,
             "LifeCycleId": 0,
-            "DeassertFlag": 1,
+            "DeassertFlag": 0,
             "EventKeyId": "Disk.DiskTemporarilyDisconnection",
             "SeverityId": 0,
             "ActionId": 0,
@@ -1315,7 +1315,7 @@
             "OldEventCode": "0x2982FFFF",
             "EventType": 0,
             "LifeCycleId": 0,
-            "DeassertFlag": 1,
+            "DeassertFlag": 0,
             "EventKeyId": "PCIeCard.PCIeCardBBUNotPresent",
             "SeverityId": 0,
             "ActionId": 0,
@@ -1327,7 +1327,7 @@
             "OldEventCode": "0x2902FFFF",
             "EventType": 0,
             "LifeCycleId": 0,
-            "DeassertFlag": 1,
+            "DeassertFlag": 0,
             "EventKeyId": "PCIeCard.PCIeCardBBUPresent",
             "SeverityId": 0,
             "ActionId": 0,
