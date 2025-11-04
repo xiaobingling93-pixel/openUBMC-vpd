@@ -5616,6 +5616,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "ChassisOutletOverTempMajor"
+        },
+        {
+            "EventCode": "0x2C0000A7",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "System.NpuPowerReduceAlarm",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "NpuPowerReduceAlarm"
+        },
+        {
+            "EventCode": "0x2C0000A9",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "System.NpuPowerBrakeAlarm",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NpuPowerBrakeAlarm"
         }
     ],
     "EventDescription": [
@@ -14510,6 +14534,44 @@
             "Cause": {
                 "En": "1. The ambient temperature is too high. @#AB;2. The air inlet or outlet  is blocked. @#AB;3. The server has empty slots or spaces. @#AB;4. The component holding the air outlet sensor is faulty.",
                 "Zh": "1.环境温度过高。@#AB;2.进风口/出风口被堵住。@#AB;3.存在空槽位或间隔。@#AB;4.出风口传感器所在部件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "System.NpuPowerReduceAlarm",
+            "Description": {
+                "En": "Insufficient TPSU Turbo power supply, triggering NPU throttling to level %1.",
+                "Zh": "TPSU Turbo供电不足，已触发NPU降频至档位%1。"
+            },
+            "Influence": {
+                "En": "The system performance may deteriorate.",
+                "Zh": "可能导致系统性能降低。"
+            },
+            "Cause": {
+                "En": "Insufficient power supply to the TPSU Turbo in the cabinet.",
+                "Zh": "机柜TPSU Turbo能力不足。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1.Check that the cabinet's power supply works properly. @#AB;2.Check that the cabinet is equipped with the correct number of power supply units. @#AB;3. Check the TPSU alarm via the cabinet's BMC and troubleshoot according to the alarm details.",
+                "Zh": "1、检查机柜电源的供电是否正常。@#AB;2、检查机柜配置的电源数量是否正常。@#AB;3、查看机柜BMC上的TPSU告警，并根据告警提示进行修复。"
+            },
+            "EventKeyId": "System.NpuPowerBrakeAlarm",
+            "Description": {
+                "En": "TPSU Turbo power exhaustion triggers NPU throttle.",
+                "Zh": "TPSU Turbo供电耗尽，已触发NPU降频保护。"
+            },
+            "Influence": {
+                "En": "Performance deterioration caused by NPU throttle.",
+                "Zh": "NPU降频性能下降。"
+            },
+            "Cause": {
+                "En": "The power supply of the cabinet or the number of configured power supply units is abnormal.",
+                "Zh": "机柜电源的供电或配置的电源数量异常。"
             }
         }
     ]
