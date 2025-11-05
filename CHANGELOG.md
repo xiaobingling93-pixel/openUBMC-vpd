@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.39] - 2025-11-05
+修复PCIe Raid卡名称显示不符合规范问题
+
 ## [1.80.38] - 2025-11-04
 修复消除告警误告警
 
