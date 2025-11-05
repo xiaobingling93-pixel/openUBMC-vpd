@@ -163,7 +163,7 @@
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "1",
+            "DescArg3": "#/OpticalModule_1.ChannelNum",
             "DescArg4": "#/Event_OM1OverTempInfo.Reading",
             "DescArg5": "75",
             "Hysteresis": 2,

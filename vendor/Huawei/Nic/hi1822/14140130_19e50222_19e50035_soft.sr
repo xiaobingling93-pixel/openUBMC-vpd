@@ -165,6 +165,7 @@
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_0.ChannelNum",
             "DescArg4": "#/OpticalModule_0.TemperatureCelsius",
             "DescArg5": "75",
             "Hysteresis": 2,
@@ -175,7 +176,8 @@
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
-            "DescArg4": "#/OpticalModule_0.TemperatureCelsius",
+            "DescArg3": "#/OpticalModule_1.ChannelNum",
+            "DescArg4": "#/OpticalModule_1.TemperatureCelsius",
             "DescArg5": "75",
             "Hysteresis": 2,
             "Component": "#/Component_PCIeCard"
