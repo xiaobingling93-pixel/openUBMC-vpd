@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.45",
+    "Version": "1.0.46",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5640,6 +5640,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "NpuPowerBrakeAlarm"
+        },
+        {
+            "EventCode": "0x28120001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.CableThrottleSignalLinkAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "CableThrottleSignalLinkAbnormal"
+        },
+        {
+            "EventCode": "0x1400000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "SwitchModule.SwitchModulePower",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "SwitchModulePower"
         }
     ],
     "EventDescription": [
@@ -14572,6 +14596,44 @@
             "Cause": {
                 "En": "The power supply of the cabinet or the number of configured power supply units is abnormal.",
                 "Zh": "机柜电源的供电或配置的电源数量异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check for exception between the I/O adapter board connector and the Venus connector. If exception exists, replace the I/O adapter board or cabletray. Then, check whether the alarm is cleared. @#AB;2. Check for exception between the BMC extension board connector and the Venus connector. If exception exists, replace the BMC expansion board or cabletray. Then, check whether the alarm is cleared. @#AB;3. Check for exception between the power adapter board and the I/O adapter board connector. If exception exists, replace the power adapter board or cabletray. Then, check whether the alarm is cleared. @#AB;4. Contact technical support.",
+                "Zh": "1.检查IO转接板的连接器与Venus连接器之间是否存在异常，若存在异常，则更换IO转接板或cabletray，观察告警是否消除。@#AB;2.检查BMC扩展板连接器与Venus连接器之间是否存在异常，若存在异常，则更换BMC扩展板或cabletray，观察告警是否消除。@#AB;3.检查电源转接板与IO转接板连接器之间是否存在异常，若存在异常，则更换电源转接板或cabletray，观察告警是否消除。@#AB;4.联系技术支持处理。"
+            },
+            "EventKeyId": "Cable.CableThrottleSignalLinkAbnormal",
+            "Description": {
+                "En": "NPU throttling signal transmission link (%1) failure.",
+                "Zh": "NPU降频信号传输链路（%1）故障。"
+            },
+            "Influence": {
+                "En": "The NPU throttling signal transmission link is abnormal, affecting services.",
+                "Zh": "NPU降频信号传输链路故障，影响业务功能。"
+            },
+            "Cause": {
+                "En": "1. Connction exception between the I/O adapter board connector and the Venus connector. @#AB;2. Connction exception between the BMC extension board connector and the Venus connector. @#AB;3. Connction exception between the power adapter board and the I/O adapter board connector.",
+                "Zh": "1.IO转接板的连接器与Venus连接器异常。@#AB;2.BMC扩展板连接器与Venus连接器异常。@#AB;3.电源转接板与IO转接板连接器异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the switch board.",
+                "Zh": "更换交换板。"
+            },
+            "EventKeyId": "SwitchModule.SwitchModulePower",
+            "Description": {
+                "En": "The power signal of the RSWA (%1) is abnormal.",
+                "Zh": "交换板电源%1信号异常。"
+            },
+            "Influence": {
+                "En": "The system may stop responding.",
+                "Zh": "可能导致系统停止响应。"
+            },
+            "Cause": {
+                "En": "The switch module is faulty.",
+                "Zh": "交换板故障。"
             }
         }
     ]

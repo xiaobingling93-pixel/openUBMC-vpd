@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.41] - 2025-11-05
+新增NPU降频信号链路故障告警、BMC支持交换板电源故障告警上报
+
 ## [1.80.40] - 2025-11-04
 修复SP625D、SP222D等网卡0x08000063的告警描述缺少光模块端口号问题
 
