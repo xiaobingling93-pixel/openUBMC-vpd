@@ -1,6 +1,6 @@
 {
     "FormatVersion": "3.00",
-    "DataVersion": "3.00",
+    "DataVersion": "3.01",
     "Unit": {
         "Type": "PCIeCard",
         "Name": "PCIeCard_1"
@@ -45,7 +45,7 @@
             "Capabilities": 192,
             "SensorType": 41,
             "ReadingType": 111,
-            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s BBU',$1)",
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s Card BBU',$1)",
             "AssertMask": 7,
             "DeassertMask": 7,
             "DiscreteMask": 7,
