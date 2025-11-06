@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.42] - 2025-11-06
+修复帮助文档说明
+
 ## [1.80.41] - 2025-11-05
 新增NPU降频信号链路故障告警、BMC支持交换板电源故障告警上报
 
