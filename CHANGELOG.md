@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.46] - 2025-11-11
+新增登录失败锁定次数告警
+
 ## [1.80.45] - 2025-11-11
 修复/redfish/v1/Chassis/1/PCIeDevices/PCIeCard2接口返回中CardManufacture和CardModel字段实际为null
 

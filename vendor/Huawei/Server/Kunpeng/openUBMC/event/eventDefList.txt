@@ -22,6 +22,7 @@ PCIeRAIDCard.PCIeCardBBULowerVoltage
 PCIeRAIDCard.PCIeCardBBUFault
 CPU.CPUMemoryChannelFault
 BMC.AccessCSRFailure
+BMC.UserLocked
 NIC.NetworkCardUncorrectableErr
 OCPCard.OCPCardUncorrectableErr
 Button.ButtonPowerButtonPressed
