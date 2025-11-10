@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.44] - 2025-11-10
+修复告警描述拼写错误
+
 ## [1.80.43] - 2025-11-10
 修改MediumType支持nvme over smbus over smc
 
