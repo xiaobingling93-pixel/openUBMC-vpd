@@ -14016,7 +14016,7 @@
             },
             "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
             "Description": {
-                "En": "Trusted platfrom module(%1) self-test failed.",
+                "En": "Trusted platform module(%1) self-test failed.",
                 "Zh": "可信赖平台模块(%1)自检失败。"
             },
             "Influence": {
