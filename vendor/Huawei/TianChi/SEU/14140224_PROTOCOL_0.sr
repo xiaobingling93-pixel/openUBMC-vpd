@@ -24,7 +24,7 @@
             "TargetEid": "${Slot} |> expr($1 + 8)",
             "TargetPhyAddr": 29,
             "MessageType": 4,
-            "MediumType": 49,
+            "MediumType": 129,
             "RefChip": "#/Chip_SSD"
         },
         "PCIeDevice_1": {
