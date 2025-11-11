@@ -104,7 +104,9 @@
             "Model": "Radeon Pro W6800",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "CardManufacturer": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "CardModel": "Radeon Pro W6800"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",

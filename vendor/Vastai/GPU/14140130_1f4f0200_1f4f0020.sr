@@ -94,7 +94,9 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "SerialNumber": "<=/GPU_1.SN"
+            "SerialNumber": "<=/GPU_1.SN",
+            "CardManufacturer": "Vastai Technologies",
+            "CardModel": "DC1000"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",

@@ -147,7 +147,9 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "CardManufacturer": "Nvidia",
+            "CardModel": "L40"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
