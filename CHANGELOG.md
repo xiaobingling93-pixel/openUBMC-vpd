@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.64] - 2025-11-24
+新增适配920L模组基础板
+
 ## [1.80.63] - 2025-11-24
 云豹智能卡适配
 
