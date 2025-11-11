@@ -197,7 +197,9 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "<=/GPU_1.SN",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "CardManufacturer": "Nvidia",
+            "CardModel": "RTX A6000"
         },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",

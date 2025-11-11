@@ -170,7 +170,9 @@
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "",
             "Model": "Atlas_300I_A2",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "CardManufacturer": "Huawei",
+            "CardModel": "IT22PDHB"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",

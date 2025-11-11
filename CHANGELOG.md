@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.45] - 2025-11-11
+修复/redfish/v1/Chassis/1/PCIeDevices/PCIeCard2接口返回中CardManufacture和CardModel字段实际为null
+
 ## [1.80.44] - 2025-11-10
 修复告警描述拼写错误
 

@@ -100,7 +100,9 @@
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
             "Model": "AWM M11P",
-            "SerialNumber": "<=/GPU_1.SN"
+            "SerialNumber": "<=/GPU_1.SN",
+            "CardManufacturer": "ALLWINMETA",
+            "CardModel": "AWM M11P"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
