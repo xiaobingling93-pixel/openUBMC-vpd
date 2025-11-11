@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.46",
+    "Version": "1.0.47",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -48,6 +48,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "AccessCSRFailure"
+        },
+        {
+            "EventCode": "0x1A000057",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "BMC.UserLocked",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "UserLocked"
         },
         {
             "EventCode": "0x0D000001",
@@ -6197,6 +6209,25 @@
             "Cause": {
                 "En": "The Self-description Record data is corrupted or the access channel is abnormal.",
                 "Zh": "Self-description Record数据损坏或访问通道异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Try again after a period of time. 2. If account is locked by the administrator, contact the administrator to unlock the account.",
+                "Zh": "1、等待一段时间再重试;2、如果是管理员锁定该用户，请联系管理员进行解锁。"
+            },
+            "EventKeyId": "BMC.UserLocked",
+            "Description": {
+                "En": "The user %1 has been locked.",
+                "Zh": "用户 %1 已被锁定。"
+            },
+            "Influence": {
+                "En": "The locked account cannot log in to the system.",
+                "Zh": "被锁定的用户短时间内无法登陆。"
+            },
+            "Cause": {
+                "En": "1. The account has consecutive login failures in a short period of time. 2. The administrator manually locks the account.",
+                "Zh": "1、用户在短时间内连续多次登录失败;2、管理员手动锁定该用户。"
             }
         },
         {
