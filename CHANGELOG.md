@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.48] - 2025-11-12
+修复NVMe盘I2C断路时无法告警的问题
+
 ## [1.80.47] - 2025-11-12
 V150 GPU对象关联PowerWatts值，用于计算总功率
 

@@ -61,6 +61,43 @@
       "SilkText": "",
       "IdentifyMode": 2,
       "Type": "NVMe"
+    },
+    "Component_PCIeCard": {
+      "FruId": 255,
+      "Name": "Disk${Slot}",
+      "Instance": "${Slot}",
+      "BoardId": 65535,
+      "Type": 8,
+      "Presence": 1,
+      "Health": 0,
+      "PowerState": 1,
+      "UniqueId": "N/A",
+      "Manufacturer": "",
+      "GroupId": 1
+    },
+    "Scanner_SSD_ReadVPDFail": {
+      "Chip": "#/Chip_Virtual_SSD",
+      "Offset": 0,
+      "Size": 1,
+      "Mask": 255,
+      "Type": 0,
+      "Period": 5000,
+      "FailureDebounceCount": 8,
+      "SuccessDebounceCount": 1,
+      "NominalValue": 1,
+      "Value": 1,
+      "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
+    },
+    "Event_VPDReadFail": {
+      "EventKeyId": "Disk.VPDReadFail",
+      "Condition": 1,
+      "Reading": "<=/Scanner_SSD_ReadVPDFail.Status;<=/Scanner_SSD_ReadVPDFail.Value |> expr(($1 == 1 || ($1 == 0 && $2 == 0)) ? 1 : 0)",
+      "OperatorId": 5,
+      "Enabled": true,
+      "DescArg2": "#/Component_PCIeCard.Name",
+      "Component": "#/Component_PCIeCard",
+      "InvalidReadingIgnore": 1,
+      "InvalidReading": 255
     }
   }
 }
