@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.47] - 2025-11-12
+V150 GPU对象关联PowerWatts值，用于计算总功率
+
 ## [1.80.46] - 2025-11-11
 新增登录失败锁定次数告警
 

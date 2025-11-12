@@ -68,7 +68,8 @@
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
             "RefChip": "#/Chip_Iluvatar_1",
-            "PrimaryGPUTemperatureCelsius": "<=/Scanner_GPUTemp.Value |> expr(($1 // 16777216) & 255)"
+            "PrimaryGPUTemperatureCelsius": "<=/Scanner_GPUTemp.Value |> expr(($1 // 16777216) & 255)",
+            "PowerWatts": "<=/Scanner_GPUPower.Value;<=/::FruCtrl_1_0.PowerState |> expr(($2 == 'OFF' || (($1 // 65535) & 65535) == 32768 || (($1 // 65535) & 65535) == 16384) ? 0 : (($1 // 65535) & 65535) / 1000)"
         },
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (BI-V150)",
@@ -213,7 +214,7 @@
             "RBExp": 0,
             "Analog": 1,
             "Reading": "<=/Scanner_GPUPower.Value |> expr((($1 // 65535) & 65535) / 1000)",
-            "ReadingStatus": "<=/Scanner_GPUPower.Value |> expr(((($1 // 65535) & 65535) == 32768 || (($1 // 65535) & 65535) == 16384) ? 3 : 0)",
+            "ReadingStatus": "<=/Scanner_GPUPower.Value;<=/::FruCtrl_1_0.PowerState |> expr(($2 == 'OFF' || (($1 // 65535) & 65535) == 32768 || (($1 // 65535) & 65535) == 16384) ? 3 : 0)",
             "SensorNumber": 255
         },
         "Component_PCIeCard": {
