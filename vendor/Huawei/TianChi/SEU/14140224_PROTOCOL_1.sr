@@ -111,19 +111,6 @@
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
         },
-        "Scanner_SSD_ReadVPDFail": {
-            "Chip": "#/Chip_Virtual_SSD",
-            "Offset": 0,
-            "Size": 1,
-            "Mask": 255,
-            "Type": 0,
-            "Period": 5000,
-            "FailureDebounceCount": 20,
-            "SuccessDebounceCount": 1,
-            "NominalValue": 1,
-            "Value": 1,
-            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)"
-        },
         "Scanner_Remtime": {
             "Chip": "#/Chip_SSD",
             "Offset": 4,
@@ -209,10 +196,6 @@
             "NominalValue": 0,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Value": 0
-        },
-        "Event_VPDReadFail": {
-            "EventKeyId": "Disk.VPDReadFail",
-            "Condition": 1
         },
         "SmcDfxInfo_NVMe": {
             "Chip": "#/Chip_SSD",
