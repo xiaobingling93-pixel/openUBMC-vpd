@@ -19,7 +19,34 @@
         }
     },
     "Objects": {
-        "DftMcu_1": {
+        "DftMcu_Self_Test": {
+            "Id": 172,
+            "Type": 2,
+            "Slot": "${Slot}",
+            "DeviceNum": 2,
+            "ItemName": "MCU Device Self Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_Button_Test": {
+            "Id": 172,
+            "Type": 5,
+            "Slot": "${Slot}",
+            "DeviceNum": 3,
+            "ItemName": "MCU Panel Button Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_Led_Test": {
+            "Id": 172,
+            "Type": 4,
+            "Slot": "${Slot}",
+            "DeviceNum": 4,
+            "ItemName": "MCU Panel LED Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_Log_Clear_Test": {
             "Id": 172,
             "Type": 2,
             "Slot": "${Slot}",
@@ -28,7 +55,16 @@
             "PrompteReady": "",
             "PrompteFinish": ""
         },
-        "DftMcu_2": {
+        "DftMcu_Self_Heal_Test": {
+            "Id": 172,
+            "Type": 5,
+            "Slot": "${Slot}",
+            "DeviceNum": 6,
+            "ItemName": "MCU self heal Test",
+            "PrompteReady": "",
+            "PrompteFinish": ""
+        },
+        "DftMcu_Interrupt_Test": {
             "Id": 172,
             "Type": 1,
             "Slot": "${Slot}",
@@ -84,7 +120,7 @@
             "FunctionType": "Physical"
         },
         "FruData_NPUCard": {
-            "FruId": 2,
+            "FruId": 1,
             "StorageType": "MCU",
             "FruDev": "#/Chip_Dmini_Elabel"
         },
@@ -92,34 +128,33 @@
             "PcbVersion": ".A",
             "FruId": 2,
             "PowerState": 1,
-            "FruName": "Atlas 300I-3000",
+            "FruName": "A300I-910B4-1",
             "Health": 0,
             "EepStatus": 1,
             "Type": 8,
             "FruDataId": "#/FruData_NPUCard"
         },
-        "NPUCard_1":{
+        "NPUCard_1": {
             "Name": "Atlas 300I A2 Inference Card",
             "CardDescription": "Atlas 300I A2 Inference Card PCI-E 1*16x(FHFL)",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "RefChip":"#/Chip_Dmini",
-            "LockChip":"#/Chip_Dmini",
-            "RefEeprom":"#/Chip_Dmini_Elabel",
+            "RefChip": "#/Chip_Dmini",
+            "RefEeprom": "#/Chip_Dmini_Elabel",
             "RefFrudata": "#/FruData_NPUCard",
             "Model": "Atlas_300I_A2",
             "SlotNumber": "${Slot}",
             "PcbVersion": ".A",
-            "BoardID": 170,
+            "BoardID": 165,
             "FirmwareVersion": "N/A",
             "CardPartNumber": "02314RAL"
         },
-        "NPU_1":{
+        "NPU_1": {
             "Name": "NPU${Slot}-1",
             "Id": "${Slot} |> expr($1 * 2 - 1)",
             "SystemId": 1,
             "Presence": 1,
             "Slot": "${Slot}",
-            "Position": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
             "ComputeCapability": "",
             "Architecture": "",
             "InstructionSet": "",
@@ -128,8 +163,8 @@
             "CapabilitySupportMask": 0,
             "TotalCores": 0,
             "Location": "",
-            "ECCAlarmState": 0,
-            "DiagnosticFaule": 0,
+            "ECCAlarmStatus": 0,
+            "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "PowerOn": 1,
             "ThermalTrip": 0,
@@ -146,18 +181,20 @@
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
             "Health": "<=/Component_PCIeCard.Health",
             "Name": "Atlas 300I A2 Inference Card",
-            "BoardName": "<=/FruData_NPUCard.BoardProductName |> expr($1 == '' ? 'IT22PDHB' : $1)",
+            "BoardName": "<=/FruData_NPUCard.BoardProductName;<=/FruData_NPUCard.BoardProductName |> string.cmp($1, '') |> expr($1 ? 'IT22PDHA' : $2)",
             "Description": "Atlas 300I A2 Inference Card PCI-E 1*16x(FHFL)",
             "FunctionClass": 9,
             "VendorID": 6629,
             "DeviceID": 55298,
             "SubVendorID": 6629,
-            "SubDeviceID": 16384,
+            "SubDeviceID": 16385,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "#/NPUCard_1.FirmwareVersion",
             "Manufacturer": "Huawei",
             "PartNumber": "02314RAL",
+            "RefChip": "",
+            "Protocol": "",
             "MaxFrameLen": 32,
             "LinkSpeed": "N/A",
             "LinkSpeedCapability": "N/A",
@@ -170,9 +207,7 @@
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "SerialNumber": "",
             "Model": "Atlas_300I_A2",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "CardManufacturer": "Huawei",
-            "CardModel": "IT22PDHB"
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
