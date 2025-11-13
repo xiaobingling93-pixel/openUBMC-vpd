@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.49] - 2025-11-13
+适配A300I A2 (32G/64G) PCIe标卡
+
 ## [1.80.48] - 2025-11-12
 修复NVMe盘I2C断路时无法告警的问题
 
