@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.50] - 2025-11-14
+修复两小盘不被raid纳管；优化cpld通讯异常告警提示；优化内存高温告警cpuid描述；
+修复网卡FRU ID为0xff的问题
+
 ## [1.80.49] - 2025-11-13
 适配A300I A2 (32G/64G) PCIe标卡
 

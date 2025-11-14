@@ -146,7 +146,7 @@
             "Enabled": true,
             "DescArg1": "Expand Board",
             "DescArg3": "CPU Board${Slot}",
-            "DescArg4": "0",
+            "DescArg4": "1",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
         },
@@ -156,7 +156,7 @@
             "Enabled": true,
             "DescArg1": "Expand Board",
             "DescArg3": "CPU Board${Slot}",
-            "DescArg4": "1",
+            "DescArg4": "2",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
         },
@@ -165,8 +165,8 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "CPU Board${Slot}",
-            "DescArg2": "0",
-            "DescArg4": "1",
+            "DescArg2": "1",
+            "DescArg4": "2",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
         },
@@ -175,8 +175,8 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "CPU Board${Slot}",
-            "DescArg2": "1",
-            "DescArg4": "0",
+            "DescArg2": "2",
+            "DescArg4": "1",
             "AdditionalInfo": "1,4",
             "Component": "#/Component_CpuBoard"
         },
