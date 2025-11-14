@@ -1,0 +1,431 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "SEU",
+        "Name": "HddBackplane_1"
+    },
+    "Objects": {
+        "Component_Drive0": {
+            "FruId": 255,
+            "Instance": 255,
+            "Type": 2,
+            "Name": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('Disk%s',$1)",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "NodeId": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('Disk%s',$1)",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/Drive_1.SerialNumber",
+            "Manufacturer": "<=/Drive_1.Manufacturer"
+        },
+        "Component_Drive1": {
+            "FruId": 255,
+            "Instance": 255,
+            "Type": 2,
+            "Name": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('Disk%s',$1)",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "NodeId": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('Disk%s',$1)",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/Drive_2.SerialNumber",
+            "Manufacturer": "<=/Drive_2.Manufacturer"
+        },
+        "Component_HddBackplane": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 5,
+            "Location": "<=/HddBackplane_1.Position",
+            "Name": "<=/HddBackplane_1.DeviceName",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "UniqueId": "00000001030302023930",
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "<=/HddBackplane_1.SerialNumber",
+            "NodeId": "<=/HddBackplane_1.Position;<=/HddBackplane_1.DeviceName |> string.format('%s%s',$1,$2)"
+        },
+        "ThresholdSensor_HddBpTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_InnerHddCard.Id",
+            "EntityInstance": "<=/Entity_InnerHddCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "Disk BP${Slot} Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "Analog": 1,
+            "NominalReading": 25,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/HddBackplane_1.Slot;<=/Scanner_HddBPTemp_1.Value;<=/Scanner_HddBPTemp_2.Value |> expr($1 == 3 ? $2 : $3)",
+            "ReadingStatus": "<=/HddBackplane_1.Slot;<=/Scanner_HddBPTemp_1.Status;<=/Scanner_HddBPTemp_2.Status |> expr($1 == 3 ? $2 : $3)"
+        },
+        "DiscreteSensor_Disk0": {
+            "EntityId": "<=/Entity_Disk0.Id",
+            "EntityInstance": "<=/Entity_Disk0.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 13,
+            "ReadingType": 111,
+            "SensorName": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('DISK%s',$1)",
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_Disk1": {
+            "EntityId": "<=/Entity_Disk1.Id",
+            "EntityInstance": "<=/Entity_Disk1.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 13,
+            "ReadingType": 111,
+            "SensorName": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('DISK%s',$1)",
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_Disk0Presence": {
+            "Property": "<=/Drive_1.Presence",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_1.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "SensorObject": "#/DiscreteSensor_Disk0"
+        },
+        "DiscreteEvent_Disk0Fault": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_1.CapacityError;<=/Drive_1.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_Disk0"
+        },
+        "DiscreteEvent_Disk0FaildedArray": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_1.InAFailedArray",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_Disk0"
+        },
+        "DiscreteEvent_Disk1Presence": {
+            "Property": "<=/Drive_2.Presence",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_2.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "SensorObject": "#/DiscreteSensor_Disk1"
+        },
+        "DiscreteEvent_Disk1Fault": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_2.CapacityError;<=/Drive_2.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_Disk1"
+        },
+        "DiscreteEvent_Disk1FaildedArray": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Drive_2.InAFailedArray",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_Disk1"
+        },
+        "Entity_Disk0": {
+            "Id": 4,
+            "Instance": 96,
+            "Name": "${Slot} |> expr($1 == 3 ? 40 : 42) |> string.format('Disk%s',$1)",
+            "PowerState": 1,
+            "Presence": 1
+        },
+        "Entity_Disk1": {
+            "Id": 4,
+            "Instance": 97,
+            "Name": "${Slot} |> expr($1 == 3 ? 41 : 43) |> string.format('Disk%s',$1)",
+            "PowerState": 1,
+            "Presence": 1
+        },
+        "Entity_InnerHddCard": {
+            "Id": 11,
+            "Name": "InnerHddCard${Slot}",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 112
+        },
+        "Event_Disk0Missing": {
+            "Reading": "<=/Drive_1.Missing",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk1Missing": {
+            "Reading": "<=/Drive_2.Missing",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Hdd1Insert": {
+            "Reading": "<=/Drive_1.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Hdd2Insert": {
+            "Reading": "<=/Drive_2.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Hdd1Removed": {
+            "Reading": "<=/Drive_1.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Hdd2Removed": {
+            "Reading": "<=/Drive_2.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Disk1LocatErr": {
+            "Reading": "<=/Drive_1.Missing",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk2LocatErr": {
+            "Reading": "<=/Drive_2.Missing",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Hdd1FailedArray": {
+            "Reading": "<=/Drive_1.InAFailedArray",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Hdd2FailedArray": {
+            "Reading": "<=/Drive_2.InAFailedArray",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Hdd1PredicFail": {
+            "Reading": "<=/Drive_1.PredictiveFailure",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Hdd2PredicFail": {
+            "Reading": "<=/Drive_2.PredictiveFailure",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Disk1Foreign": {
+            "Reading": "<=/Drive_1.FirmwareStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk2Foreign": {
+            "Reading": "<=/Drive_2.FirmwareStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Hdd1MdWroutLow": {
+            "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 1,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
+            "DescArg4": "5",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Hdd2MdWroutLow": {
+            "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 1,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
+            "DescArg4": "5",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Drive1RebuildStart": {
+            "Reading": "<=/Drive_1.RebuildState",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Drive1RebuildEnd": {
+            "Reading": "<=/Drive_1.RebuildState",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Drive2RebuildStart": {
+            "Reading": "<=/Drive_2.RebuildState",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Drive2RebuildEnd": {
+            "Reading": "<=/Drive_2.RebuildState",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Disk1StatErr": {
+            "Reading": "<=/Drive_1.FirmwareStatus;<=/Drive_1.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk2StatErr": {
+            "Reading": "<=/Drive_2.FirmwareStatus;<=/Drive_2.FirmwareStatusError |> expr($2 ? 1 : (($1 == 1 || $1 == 3 || $1 == 4 || $1 == 22) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Disk1Fail": {
+            "Reading": "<=/Drive_1.CapacityError;<=/Drive_1.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk2Fail": {
+            "Reading": "<=/Drive_2.CapacityError;<=/Drive_2.Failure |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) != 0 ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_Disk1ReplaceMntr": {
+            "Reading": "<=/Component_Drive0.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "DescArg3": "#/Component_Drive0.PreviousSN",
+            "DescArg4": "#/Component_Drive0.SerialNumber",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_Disk2ReplaceMntr": {
+            "Reading": "<=/Component_Drive1.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "DescArg3": "#/Component_Drive1.PreviousSN",
+            "DescArg4": "#/Component_Drive1.SerialNumber",
+            "Component": "#/Component_Drive1"
+        },
+        "Event_HddBkpReplaceMntr": {
+            "Reading": "<=/Component_HddBackplane.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Component_HddBackplane.Instance",
+            "DescArg2": "#/Component_HddBackplane.PreviousSN",
+            "DescArg3": "#/Component_HddBackplane.SerialNumber",
+            "Component": "#/Component_HddBackplane"
+        },
+        "Event_HardDisk1IOPerformanceDeterioration": {
+            "Reading": "<=/Drive_1.Presence;<=/Drive_1.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive0.Name",
+            "Component": "#/Component_Drive0"
+        },
+        "Event_HardDisk2IOPerformanceDeterioration": {
+            "Reading": "<=/Drive_2.Presence;<=/Drive_2.IODeteriorationHealthCode |> expr((($1 == 1) && ($2 == 1)) ? 1 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_Drive1.Name",
+            "Component": "#/Component_Drive1"
+        }
+    }
+}

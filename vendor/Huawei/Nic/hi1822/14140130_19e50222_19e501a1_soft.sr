@@ -30,7 +30,7 @@
             "NodeId": ""
         },
         "Component_PCIeCard": {
-            "FruId": 255,
+            "FruId": "<=/Fru_PCIeCard.FruId",
             "Instance": "<=/PCIeDevice_1.SlotID",
             "Type": 8,
             "BoardId": 255,

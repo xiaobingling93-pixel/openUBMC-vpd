@@ -116,7 +116,7 @@
             "Enabled": true,
             "DescArg1": "Expand Board",
             "DescArg3": "CPU Board",
-            "DescArg4": "0",
+            "DescArg4": "1",
             "Component": "#/Component_CpuBoard"
         },
         "Event_EXU2BCUHisport_1": {
@@ -125,7 +125,7 @@
             "Enabled": true,
             "DescArg1": "Expand Board",
             "DescArg3": "CPU Board",
-            "DescArg4": "1",
+            "DescArg4": "2",
             "Component": "#/Component_CpuBoard"
         },
         "Event_BCUHisport_0": {
@@ -133,8 +133,8 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "CPU Board",
-            "DescArg2": "0",
-            "DescArg4": "1",
+            "DescArg2": "1",
+            "DescArg4": "2",
             "Component": "#/Component_CpuBoard"
         },
         "Event_BCUHisport_1": {
@@ -142,8 +142,8 @@
             "OperatorId": 5,
             "Enabled": true,
             "DescArg1": "CPU Board",
-            "DescArg2": "1",
-            "DescArg4": "0",
+            "DescArg2": "2",
+            "DescArg4": "1",
             "Component": "#/Component_CpuBoard"
         },
         "Component_ComSystem": {

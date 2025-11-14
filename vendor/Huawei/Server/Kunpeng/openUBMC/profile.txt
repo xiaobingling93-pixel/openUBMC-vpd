@@ -36,6 +36,8 @@ Huawei/TianChi/SEU/14140224_PROTOCOL_1_soft.sr
 Huawei/TianChi/SEU/14140224_PROTOCOL_2_soft.sr
 Huawei/TianChi/SEU/14100665_51.sr
 Huawei/TianChi/SEU/14100665_68.sr
+Huawei/TianChi/SEU/14100665_51_BC83HBBJ.sr
+Huawei/TianChi/SEU/14100665_68_BC83HBBJ.sr
 Huawei/Nic/hi1822/14140130_19e51822_19e5d136.sr
 Huawei/Nic/hi1822/14140130_10000017_10009440.sr
 Huawei/Nic/hi1822/14140130_19e50222_19e500a1.sr
@@ -125,6 +127,8 @@ Huawei/TianChi/BCU/memory_2p16ch32_0_soft.sr
 Huawei/TianChi/BCU/UbcConfig_0_1_soft.sr
 Huawei/TianChi/SEU/14100665_51_soft.sr
 Huawei/TianChi/SEU/14100665_68_soft.sr
+Huawei/TianChi/SEU/14100665_51_BC83HBBJ_soft.sr
+Huawei/TianChi/SEU/14100665_68_BC83HBBJ_soft.sr
 Huawei/Raid/14140130_19e53758_19e501a4_soft.sr
 Huawei/Raid/14140130_19e53758_19e50185_soft.sr
 Huawei/Gpu/14140130_19e5d500_02000100_soft.sr
