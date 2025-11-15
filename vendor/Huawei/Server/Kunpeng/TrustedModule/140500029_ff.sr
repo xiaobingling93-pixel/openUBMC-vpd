@@ -1,6 +1,6 @@
 {
     "FormatVersion": "1.00",
-    "DataVersion": "1.00",
+    "DataVersion": "1.01",
     "ManagementTopology": {
         "Anchor": {
             "Buses": []
@@ -9,13 +9,17 @@
     "Objects": {
         "Component_SecurityMoudle": {
             "FruId": 255,
-            "Instance": 0,
+            "Instance": 1,
             "Type": 34,
             "Name": "SecurityMoudle",
+            "Location": "mainboard",
             "Presence": 1,
             "Health": 0,
             "PowerState": 1,
             "GroupId": 1,
+            "Manufacturer": "<=/SecurityModule_1.Manufacturer",
+            "Function": "SecurityMoudle",
+            "UniqueId": "N/A",
             "NodeId": ""
         },
         "SecurityModule_1": {
@@ -25,6 +29,25 @@
             "Manufacturer": "N/A",
             "ProtocolVersion": "N/A",
             "FirmwareVersion": "N/A"
+        },
+        "Event_SCYModuleSelfTest": {
+            "EventKeyId": "TPCM.TPMSelfTestFailed",
+            "Reading": "<=/SecurityModule_1.Health;<=/SecurityModule_1.Protocol |> expr(($2 == 'TPM' || $2 == 'TCM') ? $1 : 1)",
+            "Condition": 0,
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "DescArg1": "#/SecurityModule_1.Protocol",
+            "Component": "#/Component_SecurityMoudle"
+        },
+        "Event_SCYModuleHBRTSelfTest": {
+            "EventKeyId": "TPCM.HBRTSelfTestFailed",
+            "Reading": "<=/SecurityModule_1.Health;<=/SecurityModule_1.Protocol |> expr($2 == 'HBRT' ? $1 : 1)",
+            "Condition": 0,
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_SecurityMoudle"
         },
         "Event_TPMSelfTestFailed": {
             "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
