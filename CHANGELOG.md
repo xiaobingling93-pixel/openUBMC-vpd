@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.52] - 2025-11-15
+DUO卡定制
+
 ## [1.80.51] - 2025-11-15
 支持TPM扣卡自检结果新增告警0x22000003
 
