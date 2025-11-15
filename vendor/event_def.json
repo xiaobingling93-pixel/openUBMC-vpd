@@ -14489,8 +14489,8 @@
             },
             "EventKeyId": "PSU.PSUSingleInputLost",
             "Description": {
-                "En": "The input of PSU %1%2 is lost.",
-                "Zh": "电源%1%2输入丢失。"
+                "En": "The input of PSU %1 %2 is lost.",
+                "Zh": "电源%1 %2输入丢失。"
             },
             "Influence": {
                 "En": "The power supply to the system is affected, and the system may be powered off unexpectedly.",
