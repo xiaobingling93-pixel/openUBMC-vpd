@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.54] - 2025-11-15
+PSUSingleInputLost告警描述增加空格
+
 ## [1.80.53] - 2025-11-15
 支持自研网卡标卡PCIe卡电源故障告警
 
