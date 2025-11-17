@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.55] - 2025-11-17
+支持天成2.0系统相关告警
+
 ## [1.80.54] - 2025-11-15
 PSUSingleInputLost告警描述增加空格
 
