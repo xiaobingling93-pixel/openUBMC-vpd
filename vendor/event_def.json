@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.48",
+    "Version": "1.0.49",
     "EventDefinition": [
         {
             "EventCode": "0x22000001",
@@ -5700,6 +5700,54 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "SwitchModulePower"
+        },
+        {
+            "EventCode": "0x100000c9",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardAccessI2CDeviceFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MainboardAccessI2CDeviceFailure"
+        },
+        {
+            "EventCode": "0x25000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "RMC.RMCLowerVoltage",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RMCLowerVoltage"
+        },
+        {
+            "EventCode": "0x25000003",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "RMC.RMCSoftStartOverTemp",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RMCSoftStartOverTemp"
+        },
+        {
+            "EventCode": "0x25000005",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "RMC.RMCCPLDSelfTestFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RMCCPLDSelfTestFailure"
         }
     ],
     "EventDescription": [
@@ -14727,6 +14775,82 @@
             "Cause": {
                 "En": "The switch module is faulty.",
                 "Zh": "交换板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. If the component holding the I2C device needs to be connected to a power cable, check whether the power cable is connected improperly or is faulty. @#AB;2. Replace the component holding the I2C device.",
+                "Zh": "1、如果I2C器件所在部件需要连接电源线缆,则检查线缆是否连接或故障。@#AB;2、更换I2C器件所在的部件。"
+            },
+            "EventKeyId": "Mainboard.MainboardAccessI2CDeviceFailure",
+            "Description": {
+                "En": "Failed to access I2C %2 on %1.",
+                "Zh": "%1 I2C器件 %2 访问失败。"
+            },
+            "Influence": {
+                "En": "The iBMC cannot monitor component status.",
+                "Zh": "导致iBMC无法监控部件状态。"
+            },
+            "Cause": {
+                "En": "The I2C link is faulty, or the I2C component is damaged.",
+                "Zh": "I2C链路故障或I2C器件损坏。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the system module.",
+                "Zh": "1、更换对应模块。"
+            },
+            "EventKeyId": "RMC.RMCLowerVoltage",
+            "Description": {
+                "En": "%1 voltage %4 at %2 V detection point %3 exceeds the lowervoltage threshold %5.",
+                "Zh": "%1 %2V监测点%3当前电压%4低于低压门限电压%5"
+            },
+            "Influence": {
+                "En": "The component management functions may be affected.",
+                "Zh": "可能影响对应模块的管理功能。"
+            },
+            "Cause": {
+                "En": "1. The module is faulty.",
+                "Zh": "1、电源模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check for air intake/outtake overtemperature alarms. @#AB;2. Check for fan alarms. @#AB;3. Replace the component.",
+                "Zh": "1、检查系统是否同时存在进风口/出风口高温告警。@#AB;2、检查系统是否同时存在风扇告警。@#AB;3、更换该系统模块。"
+            },
+            "EventKeyId": "RMC.RMCSoftStartOverTemp",
+            "Description": {
+                "En": "Overtemperature of the soft-start circuit %2 of the %1 system.",
+                "Zh": "%1 %2缓起电路温度过高"
+            },
+            "Influence": {
+                "En": "Overtemperature of the soft-start circuit may cause system faults.",
+                "Zh": "缓起过温，长时间运行可能导致系统故障。"
+            },
+            "Cause": {
+                "En": "1. The ambient temperature is too high. @#AB;2. The air inlet or outlet is blocked. @#AB;3. The fan module is faulty. @#AB;4. The system module is faulty.",
+                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、该系统模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Upgrade the CPLD again. @#AB;2. Replace the component.",
+                "Zh": "1、重新升级模块CPLD加载包。 @#AB;2、更换模块。"
+            },
+            "EventKeyId": "RMC.RMCCPLDSelfTestFailure",
+            "Description": {
+                "En": "Self-check failure of CPLD %2 of the %1 system.",
+                "Zh": "%1 CPLD %2 自检失败。"
+            },
+            "Influence": {
+                "En": "The CPLD cannot function properly, affecting management functions.",
+                "Zh": "该模块CPLD无法正常工作，影响管理功能。"
+            },
+            "Cause": {
+                "En": "1. The CPLD contains no logical files. @#AB;2. The component is faulty.",
+                "Zh": "1、CPLD空片。@#AB;2、模块故障。"
             }
         }
     ]
