@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.56] - 2025-11-18
+支持适配RAID卡颗粒兼容性
+
 ## [1.80.55] - 2025-11-17
 支持天成2.0系统相关告警
 
