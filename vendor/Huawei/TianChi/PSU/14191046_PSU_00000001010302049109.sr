@@ -28,6 +28,7 @@
             "EnvTemperatureCelsius": 0,
             "SerialNumber": "",
             "OutputState": "<=/Scanner_PsuOPOKStatus.Value",
+            "InputState": "<=/Scanner_PsuIPOKStatus.Value",
             "DeepSleepEnabled": 0,
             "OutputPowerWatts": 0,
             "InputVoltageFault": 32768,
@@ -60,7 +61,7 @@
         },
         "ContBin_OPOK": {
             "NumH": 1,
-	        "NumL": 5,
+	        "NumL": 15,
             "DefaultValue": 1
         },
         "Scanner_PsuIPOKStatus": {
@@ -70,11 +71,11 @@
             "Mask": "${Slot} |> expr(8 << (8*($1 - 1)))", 
             "Type": 0,
             "Value": 0,
-            "Period": 10,
+            "Period": 1000,
             "Debounce": "#/ContBin_IPOK"
         },
         "ContBin_IPOK": {
-            "NumH": 500,
+            "NumH": 5,
 	        "NumL": 1,
             "DefaultValue": 0
         },
@@ -146,7 +147,7 @@
             "EventKeyId": "PSU.PoorContactMinor",
             "Condition": 1,
             "LedFaultCode": "P$$",
-            "Reading": "<=/Scanner_PowerGood.Value;<=/OnePower_0.MfrSpecificStatus;<=/OnePower_0.DeepSleepEnabled |> expr(($1 == 1 && $3 == 0) ? (($2 & 128) == 0 ? 1 : 0) : 0)",
+            "Reading": "<=/OnePower_0.DeepSleepEnabled;<=/OnePower_0.IsUpgrading;<=/OnePower_0.MfrSpecificStatus;<=/Scanner_PowerGood.Value;<=/Scanner_PsuOPOKStatus.Value |> expr(($1 == 1 || $2) ? 255 : ($3 == 255 ? 255 : ((($3 & 16) == 16 && $5 == 0) || (($3 & 192) != 192 && $4 == 1)) ? 1 : 0))",
             "OperatorId": 5,
             "@Default": {
                 "Reading": 255
@@ -209,7 +210,7 @@
         },
         "Event_VoutUvFault": {
             "EventKeyId": "PSU.PSUOutputLowerVoltage",
-            "Reading": "<=/OnePower_0.OutputVoltageFault;<=/Scanner_PsuIPOKStatus.Value;<=/Scanner_PsuOPOKStatus.Value;<=/OnePower_0.IsUpgrading;<=/OnePower_0.DeepSleepEnabled;<=/OnePower_0.OutputCurrentFault;<=/OnePower_0.InputVoltageFault;<=/OnePower_0.OverTemperature;<=/OnePower_0.Fan1Fault;<=/OnePower_0.Fan2Fault |> expr(($2 == 1 && $4 == false && $5 == 0) ? (($1 == 16 || $3 == 0 ) ? (($9 == 0 && $10 == 0 && $8 == 0 && $7 == 0 && $6 == 0 && ($1 == 16 || $1 == 0)) ? 16 : 0) : 0) : 0)",
+            "Reading": "<=/OnePower_0.OutputVoltageFault |> expr($1 & 16)",
             "Condition": 16,
             "OperatorId": 5,
             "Enabled": true,

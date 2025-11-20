@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.57] - 2025-11-20
+支持电源模块接触不良告警及输出欠压告警优化
+
 ## [1.80.56] - 2025-11-18
 支持适配RAID卡颗粒兼容性
 
