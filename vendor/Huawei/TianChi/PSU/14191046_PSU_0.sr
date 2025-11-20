@@ -28,6 +28,7 @@
             "EnvTemperatureCelsius": 0,
             "SerialNumber": "",
             "OutputState": "<=/Scanner_PsuOPOKStatus.Value",
+            "InputState": "<=/Scanner_PsuIPOKStatus.Value",
             "DeepSleepEnabled": 0,
             "OutputPowerWatts": 0,
             "InputVoltageFault": 32768,
@@ -58,7 +59,7 @@
         },
         "ContBin_OPOK": {
             "NumH": 1,
-	        "NumL": 5,
+	        "NumL": 15,
             "DefaultValue": 1
         },
         "Scanner_PsuIPOKStatus": {
@@ -68,11 +69,11 @@
             "Mask": "${Slot} |> expr(8 << (8*($1 - 1)))", 
             "Type": 0,
             "Value": 0,
-            "Period": 10,
+            "Period": 1000,
             "Debounce": "#/ContBin_IPOK"
         },
         "ContBin_IPOK": {
-            "NumH": 500,
+            "NumH": 5,
 	        "NumL": 1,
             "DefaultValue": 0
         },
