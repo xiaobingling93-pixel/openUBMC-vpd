@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.59] - 2025-11-21
+新增湿度传感器和液冷门温度传感器相关告警
+
 ## [1.80.58] - 2025-11-21
 修复redfish接口查询Boards资源下无NPU卡的PCIe信息的问题
 
