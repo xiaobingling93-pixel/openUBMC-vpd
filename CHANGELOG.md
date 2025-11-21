@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.58] - 2025-11-21
+修复redfish接口查询Boards资源下无NPU卡的PCIe信息的问题
+
 ## [1.80.57] - 2025-11-20
 支持电源模块接触不良告警及输出欠压告警优化
 

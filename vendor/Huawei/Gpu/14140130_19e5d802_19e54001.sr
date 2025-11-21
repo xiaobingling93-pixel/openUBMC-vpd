@@ -209,6 +209,25 @@
             "Model": "Atlas_300I_A2",
             "DevFunction": "<=/PCIeDevice_1.DevFunction"
         },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "Atlas 300I A2 Inference Card",
+            "Manufacturer": "Huawei",
+            "Type": "PCIeCard",
+            "Description": "Atlas 300I A2 Inference Card PCI-E 1*16x(FHFL)",
+            "PartNumber": "02314RAL",
+            "PcbVersion": "#/NPUCard_1.PcbVersion",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": "#/NPUCard_1.BoardID",
+            "BoardType": "PCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Fru_NPUCard.FruId"
+        },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
