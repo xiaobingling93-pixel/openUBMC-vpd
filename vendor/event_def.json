@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.50",
+    "Version": "1.0.51",
     "EventDefinition": [
         {
             "EventCode": "0x22000001",
@@ -36,6 +36,18 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "DiskCEHardFailure"
+        },
+        {
+            "EventCode": "0x51000023",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.EnvironmentMonitoringModuleNotDetected",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "EnvironmentMonitoringModuleNotDetected"
         },
         {
             "EventCode": "0x5300000B",
@@ -8559,6 +8571,25 @@
             "Cause": {
                 "En": "",
                 "Zh": ""
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the environment monitoring module is connected to the cable. If it is, replace the cable.@#AB;2. If issue 1 is not resolved, replace the environmental monitoring module.@#AB;3. If none of the above solutions work, unplug and replug or replace the main management node.",
+                "Zh": "1、确认环境监控模块是否插入线缆，如插入，请更换线缆。@#AB;2、修复建议1未解决，请更换环境监控模块。@#AB;3、上述都均未解决，插拔/更换主管理节点。"
+            },
+            "EventKeyId": "Rack.EnvironmentMonitoringModuleNotDetected",
+            "Description": {
+                "En": "Environment monitoring module %1 is not detected.",
+                "Zh": "环境监控模块%1不在位。"
+            },
+            "Influence": {
+                "En": "1. Environmental monitoring module failure.@#AB;2.Liquid cooling device cannot report an alarm after a leak occurs.",
+                "Zh": "1、环境监控模块故障。@#AB;2、液冷装置漏液后无法上报告警。"
+            },
+            "Cause": {
+                "En": "1. Connector cable not inserted/failure.@#AB;2. Environmental monitoring module not installed/failure.@#AB;3. Connector failure.@#AB;4. Main management module failure.",
+                "Zh": "1、连接器线缆未插入/故障。@#AB;2、环境监控模块未安装/故障。@#AB;3、连接器故障。@#AB;4、主管理模块故障。"
             }
         },
         {
