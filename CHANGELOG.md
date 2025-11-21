@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.60] - 2025-11-21
+新增环境监控模块在位告警
+
 ## [1.80.59] - 2025-11-21
 新增湿度传感器和液冷门温度传感器相关告警
 

@@ -313,6 +313,7 @@ Disk.DiskUncorrectableErr
 SASPHY.SASPHYErrIncreasedTooFast
 Riser.PCIeRiserAccessTempFailure
 Riser.PCIeRiserOverTempMinor
+Rack.EnvironmentMonitoringModuleNotDetected
 NPU.NPUCEHardFailure
 NPU.NpuHealthCriticalFault
 NPU.NpuHealthMajorFault
