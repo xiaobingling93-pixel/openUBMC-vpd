@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.49",
+    "Version": "1.0.50",
     "EventDefinition": [
         {
             "EventCode": "0x22000001",
@@ -4260,6 +4260,42 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "OverHumidityMajor"
+        },
+        {
+            "EventCode": "0x12000059",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.OverAnnualAvgHumi",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "OverAnnualAvgHumi"
+        },
+        {
+            "EventCode": "0x120000BB",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.RS485CommIntrptMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RS485CommIntrptMajor"
+        },
+        {
+            "EventCode": "0x51000021",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.LiquidOutletTempSensorAbnormal",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "LiquidOutletTempSensorAbnormal"
         },
         {
             "EventCode": "0x28000045",
@@ -14851,6 +14887,63 @@
             "Cause": {
                 "En": "1. The CPLD contains no logical files. @#AB;2. The component is faulty.",
                 "Zh": "1、CPLD空片。@#AB;2、模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Environmental dehumidification",
+                "Zh": "环境除湿"
+            },
+            "EventKeyId": "Chassis.OverAnnualAvgHumi",
+            "Description": {
+                "En": "The annual average humidity %1 (%2 %) exceeds the overhumidity threshold (%3 %).",
+                "Zh": "年均湿度 %1（%2 %）高于告警门限湿度（%3 %）"
+            },
+            "Influence": {
+                "En": "High humidity affects the service life of servers.",
+                "Zh": "高湿度影响服务器使用寿命。"
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and reconnect the RS485 cable. @#AB;2. Check whether the RS485 cable is securely connected to the device. @#AB;3. Check whether the peer device is working properly.",
+                "Zh": "1、重新拔插RS485网线。 @#AB;2、检查RS485网线是否连接到对端设备。 @#AB;3、检查对端设备工作是否正常。"
+            },
+            "EventKeyId": "Chassis.RS485CommIntrptMajor",
+            "Description": {
+                "En": "%1 communication interrupted.",
+                "Zh": "%1 通信中断。"
+            },
+            "Influence": {
+                "En": "The services over the RS485 port will be interrupted.",
+                "Zh": "导致此网口相关业务中断。"
+            },
+            "Cause": {
+                "En": "1. The RS485 cable is not connected or the port on the peer device is not connected. @#AB;2. The peer device is working abnormally.",
+                "Zh": "1、RS485网线未插或对端设备未连接上。@#AB;2、对端设备工作异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the liquid-cooled door temperature sensor is installed. @#AB;2. Replace the liquid-cooled door temperature sensor.",
+                "Zh": "1、 检查液冷门温度传感器是否安装。 @#AB;2、 更换液冷门温度传感器。"
+            },
+            "EventKeyId": "Rack.LiquidOutletTempSensorAbnormal",
+            "Description": {
+                "En": "The %1 liquid-cooled door outlet temperature sensor is abnormal.",
+                "Zh": "%1液冷门温度传感器读数异常。"
+            },
+            "Influence": {
+                "En": "The outlet temperature of the liquid-cooled door may cannot be sensed.",
+                "Zh": "可能无法检测液冷门出口温度。"
+            },
+            "Cause": {
+                "En": "1. The liquid-cooled door temperature sensor is absent. @#AB;2. The access channel of the liquid-cooled door temperature sensor is abnormal.",
+                "Zh": "1、 液冷门温度传感器不在位。@#AB;2、 液冷门温度传感器访问通道异常。"
             }
         }
     ]
