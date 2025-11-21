@@ -206,6 +206,25 @@
             "CardManufacturer": "Huawei",
             "CardModel": "IT21PD2E"
         },
+        "BoardPCIeCard_1": {
+            "Slot": "<=/PCIeDevice_1.SlotID",
+            "UID": "N/A",
+            "Name": "Atlas 300I Duo",
+            "Manufacturer": "Huawei",
+            "Type": "PCIeCard",
+            "Description": "Atlas 300I Duo Inference Card PCI-E 1*16x(FHFL)",
+            "PartNumber": "03029WRV",
+            "PcbVersion": "#/NPUCard_1.PcbVersion",
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": "#/NPUCard_1.BoardID",
+            "BoardType": "PCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
+            "FruID": "<=/Fru_NPUCard.FruId"
+        },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
