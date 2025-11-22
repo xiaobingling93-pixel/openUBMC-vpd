@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.51",
+    "Version": "1.0.52",
     "EventDefinition": [
         {
             "EventCode": "0x22000001",
@@ -878,6 +878,18 @@
             "EventName": "UnitNotSupported"
         },
         {
+            "EventCode": "0x28000039",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.NotPresent",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NotPresent"
+        },
+        {
             "EventCode": "0x2800003B",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -900,6 +912,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "UnitUBNotPresent"
+        },
+        {
+            "EventCode": "0x28000041",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.NodeIncorrectConnection",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "NodeIncorrectConnection"
         },
         {
             "EventCode": "0x0D000015",
@@ -7112,6 +7136,25 @@
         },
         {
             "Suggestion": {
+                "En": "1. Check whether the %1 cable is present.@#AB;2. Replace the %1 cable.",
+                "Zh": "1、检查%1信号线缆是否插好。@#AB;2、更换相应的%1信号线缆。"
+            },
+            "EventKeyId": "Cable.NotPresent",
+            "Description": {
+                "En": "The %3 cable to %1 on %2 is not present.",
+                "Zh": "%1 %2 %3线缆不在位。"
+            },
+            "Influence": {
+                "En": "The PCIe device cannot be identified by the system.",
+                "Zh": "导致PCIe设备无法被系统识别。"
+            },
+            "Cause": {
+                "En": "1. The cable is not properly connected or is in poor contact.@#AB;2. The cable is faulty.",
+                "Zh": "1、线缆可能没插好或者接触不良。@#AB;2、线缆故障。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "1. Check whether the NCSI cable is present.@#AB;2. Replace the NCSI cable.",
                 "Zh": "1、检查NCSI线缆是否插好。@#AB;2、更换NCSI线缆。"
             },
@@ -7146,6 +7189,25 @@
             "Cause": {
                 "En": "1. The cables are disconnected or not securely connected.@#AB;2. The connector is not properly connected.@#AB;3. The identification of the RAID controller card is abnormal.@#AB;4. The cables are faulty.@#AB;5. The unit is faulty.",
                 "Zh": "1、线缆未插或松动。@#AB;2、连接器没有插稳。@#AB;3、RAID卡识别异常。@#AB;4、线缆故障。@#AB;5、组件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the cables are connected in correct order and position.@#AB;2. Check whether the connector is connected correctly.@#AB;3. Replace the cables.@#AB;4. Replace the transfer card.",
+                "Zh": "1、检查线缆的连接顺序和位置是否正确。@#AB;2、检查连接器是否连接正确。@#AB;3、更换相应的线缆。@#AB;4、更换转接卡。"
+            },
+            "EventKeyId": "Cable.NodeIncorrectConnection",
+            "Description": {
+                "En": "The %3 cable on %2 of %1 is incorrectly connected. It is supposed to connect it to %6 on %5 of %4.",
+                "Zh": "本端%1 %2 %3线缆连接错误，应该连接到对端%4 %5 %6。"
+            },
+            "Influence": {
+                "En": "The MatrixServer node may cannot be identified correctly by the system.",
+                "Zh": "可能导致MatrixServer节点无法被系统正确识别。"
+            },
+            "Cause": {
+                "En": "1. The cables are not connected in correct order and position.@#AB;2. The connector is connected incorrectly.@#AB;3. The cables are faulty.@#AB;4. The transfer card is faulty.",
+                "Zh": "1、线缆的连接顺序或位置存在错误。@#AB;2、连接器连接错误。@#AB;3、线缆故障。@#AB;4、转接卡故障。"
             }
         },
         {
