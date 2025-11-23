@@ -1,0 +1,210 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "Component_CpuBoard": {
+            "FruId": 255,
+            "Instance": 255,
+            "Type": 36,
+            "Name": "CpuBoard",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "UniqueId": "N/A",
+            "BoardId": 65535,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "SerialNumber": "",
+            "NodeId": "BCU CpuBoard"
+        },
+        "BoardRAS_1": {
+            "ManageChip": "Mcu",
+            "Name": "CpuBoard${Slot}",
+            "GetLenthCmd": "#/Accessor_GetFlashSize.Value",
+            "SetStartPosCmd": "#/Accessor_SetFlashReadPos.Value",
+            "BoardLogChip": "#/Smc_CpuBrdSMC"
+        },
+        "Event_Cpld1Selfcheck": {
+            "Reading": "<=/Scanner_Cpld1Status.Value",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "1",
+            "DescArg2": "${Slot}",
+            "@Default":{
+                "Reading": 255
+              },
+              "InvalidReadingIgnore": 1,
+              "InvalidReading": 255,
+            "Component": "#/Component_CpuBoard",
+            "AdditionalInfo": "1,2"
+        },
+        "Event_MemoryAccessPowerFail": {
+            "Reading": "<=/Scanner_MemPwrSensorStatus.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "Memory",
+            "DescArg2": "${Slot}",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_MemoryAccessPowerInvalid": {
+            "Reading": "<=/Scanner_MemPower.Value;<=/Scanner_MemPwrSensorStatus.Value;<=/Scanner_PowerGood.Value |> expr(($2 == 1 || $3 == 0) ? 0 : $1 * 0.125)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "Memory",
+            "DescArg2": "${Slot}",
+            "AdditionalInfo": "1,2",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_0": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_0.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 0",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_1": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_1.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 1",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_3": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_3.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 3",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_4": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_4.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 4",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_5": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_5.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 5",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_100MClockFrequencyOffset_6": {
+            "Reading": "<=/Scanner_R100MClockFrequencyOffset_6.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "100M",
+            "DescArg3": "buffer 6",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_156M25ClockFrequencyOffset": {
+            "Reading": "<=/Scanner_R156M25ClockFrequencyOffset.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "156.25M",
+            "DescArg3": "buffer 1",
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_SyncSignalAbnormal": {
+            "Reading": "<=/Scanner_SyncSignalAbnormal.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_SystemClockOutputTimeOut": {
+            "Reading": "<=/Scanner_SystemClockOutputTimeOut.Value;<=/Scanner_PowerGood.Value |> expr($2 == 0 ? 0 : $1)",
+            "OperatorId": 5,
+            "DescArg1": "${Slot}",
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_EXU2BCUHisport_0": {
+            "Reading": "<=/Scanner_EXU2BCUHisport_0.Value",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "Expand Board",
+            "DescArg3": "CPU Board${Slot}",
+            "DescArg4": "0",
+            "AdditionalInfo": "1,4",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_EXU2BCUHisport_1": {
+            "Reading": "<=/Scanner_EXU2BCUHisport_1.Value",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "Expand Board",
+            "DescArg3": "CPU Board${Slot}",
+            "DescArg4": "1",
+            "AdditionalInfo": "1,4",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_BCUHisport_0": {
+            "Reading": "<=/Scanner_BCUHisport_0.Value",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "0",
+            "DescArg4": "1",
+            "AdditionalInfo": "1,4",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Event_BCUHisport_1": {
+            "Reading": "<=/Scanner_BCUHisport_1.Value",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "1",
+            "DescArg4": "0",
+            "AdditionalInfo": "1,4",
+            "Component": "#/Component_CpuBoard"
+        },
+        "Component_ComSystem": {
+            "FruId": 255,
+            "Instance": 0,
+            "Type": 44,
+            "Name": "System",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "NodeId": ""
+        },
+        "SecureBootOptions_1": {
+			"SystemId": 1,
+			"CertificateExpired": 0
+		},
+        "Event_BiosCertOverDue": {
+            "EventKeyId": "Bios.BiosCertOverDue",
+            "Reading": "<=/SecureBootOptions_1.CertificateExpired",
+            "Condition": 1,
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "BIOS",
+            "Component": "#/Component_ComSystem"
+        }
+    }
+}

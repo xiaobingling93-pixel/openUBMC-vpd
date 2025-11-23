@@ -256,3 +256,13 @@ Nvidia/Gpu/14140130_10de2230_10de1459.sr
 Iluvatar/GPU/14140130_1e3e0003_00000001.sr
 MooreThreads/GPU/14140130_1ed50222_1ed50222.sr
 Mellanox/CX-6/14220247_15b3101f_15b30007.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAT_0_soft.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAT_0.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAU_0_soft.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAU_0.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0_soft.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0_soft.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0.sr
+Huawei/TianChi/BCU/memory_2p8ch16_1_soft.sr
+Huawei/TianChi/BCU/memory_2p8ch16_1.sr

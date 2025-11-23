@@ -1,0 +1,3404 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "Component_Memory1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 1,
+            "Name": "<=/Memory_1.DimmName",
+            "Presence": "<=/Memory_1.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_1.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_1.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory2": {
+            "FruId": 255,
+            "Instance": 2,
+            "Type": 1,
+            "Name": "<=/Memory_2.DimmName",
+            "Presence": "<=/Memory_2.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_2.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_2.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory5": {
+            "FruId": 255,
+            "Instance": 5,
+            "Type": 1,
+            "Name": "<=/Memory_5.DimmName",
+            "Presence": "<=/Memory_5.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_5.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_5.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory6": {
+            "FruId": 255,
+            "Instance": 6,
+            "Type": 1,
+            "Name": "<=/Memory_6.DimmName",
+            "Presence": "<=/Memory_6.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_6.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_6.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory9": {
+            "FruId": 255,
+            "Instance": 9,
+            "Type": 1,
+            "Name": "<=/Memory_9.DimmName",
+            "Presence": "<=/Memory_9.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_9.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_9.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory10": {
+            "FruId": 255,
+            "Instance": 10,
+            "Type": 1,
+            "Name": "<=/Memory_10.DimmName",
+            "Presence": "<=/Memory_10.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_10.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_10.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory13": {
+            "FruId": 255,
+            "Instance": 13,
+            "Type": 1,
+            "Name": "<=/Memory_13.DimmName",
+            "Presence": "<=/Memory_13.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_13.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_13.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory14": {
+            "FruId": 255,
+            "Instance": 14,
+            "Type": 1,
+            "Name": "<=/Memory_14.DimmName",
+            "Presence": "<=/Memory_14.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_14.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_14.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory17": {
+            "FruId": 255,
+            "Instance": 17,
+            "Type": 1,
+            "Name": "<=/Memory_17.DimmName",
+            "Presence": "<=/Memory_17.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_17.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_17.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory18": {
+            "FruId": 255,
+            "Instance": 18,
+            "Type": 1,
+            "Name": "<=/Memory_18.DimmName",
+            "Presence": "<=/Memory_18.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_18.SerialNumber",
+            "GroupId": 1,
+            "Manufacturer": "<=/Memory_18.Manufacturer",
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory21": {
+            "FruId": 255,
+            "Instance": 21,
+            "Type": 1,
+            "Name": "<=/Memory_21.DimmName",
+            "Presence": "<=/Memory_21.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_21.SerialNumber",
+            "Manufacturer": "<=/Memory_21.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory22": {
+            "FruId": 255,
+            "Instance": 22,
+            "Type": 1,
+            "Name": "<=/Memory_22.DimmName",
+            "Presence": "<=/Memory_22.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_22.SerialNumber",
+            "Manufacturer": "<=/Memory_22.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory25": {
+            "FruId": 255,
+            "Instance": 25,
+            "Type": 1,
+            "Name": "<=/Memory_25.DimmName",
+            "Presence": "<=/Memory_25.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_25.SerialNumber",
+            "Manufacturer": "<=/Memory_25.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory26": {
+            "FruId": 255,
+            "Instance": 26,
+            "Type": 1,
+            "Name": "<=/Memory_26.DimmName",
+            "Presence": "<=/Memory_26.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_26.SerialNumber",
+            "Manufacturer": "<=/Memory_26.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory29": {
+            "FruId": 255,
+            "Instance": 29,
+            "Type": 1,
+            "Name": "<=/Memory_29.DimmName",
+            "Presence": "<=/Memory_29.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_29.SerialNumber",
+            "Manufacturer": "<=/Memory_29.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_Memory30": {
+            "FruId": 255,
+            "Instance": 30,
+            "Type": 1,
+            "Name": "<=/Memory_30.DimmName",
+            "Presence": "<=/Memory_30.Presence",
+            "Health": 0,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "N/A",
+            "SerialNumber": "<=/Memory_30.SerialNumber",
+            "Manufacturer": "<=/Memory_30.Manufacturer",
+            "GroupId": 1,
+            "Function": "memory",
+            "UniqueId": "N/A",
+            "Location": "${SilkText}"
+        },
+        "Component_ComCpu1": {
+            "FruId": 255,
+            "Instance": 255,
+            "Type": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%s', $1)",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "NodeId": "1"
+        },
+        "Component_ComCpu2": {
+            "FruId": 255,
+            "Instance": 255,
+            "Type": 0,
+            "Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%s', $1)",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "NodeId": "2"
+        },
+        "MemoryRAS_1": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_1.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_1.SerialNumber"
+        },
+        "MemoryRAS_2": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_2.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_2.SerialNumber"
+        },
+        "MemoryRAS_5": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_5.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_5.SerialNumber"
+        },
+        "MemoryRAS_6": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_6.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_6.SerialNumber"
+        },
+        "MemoryRAS_9": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_9.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_9.SerialNumber"
+        },
+        "MemoryRAS_10": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_10.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_10.SerialNumber"
+        },
+        "MemoryRAS_13": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_13.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_13.SerialNumber"
+        },
+        "MemoryRAS_14": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_14.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_14.SerialNumber"
+        },
+        "MemoryRAS_17": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_17.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_17.SerialNumber"
+        },
+        "MemoryRAS_18": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_18.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_18.SerialNumber"
+        },
+        "MemoryRAS_21": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_21.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_21.SerialNumber"
+        },
+        "MemoryRAS_22": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_22.DimmName",
+            "LogicalCpuId": "${Slot} |> expr(($1 - 1) * 2)",
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_22.SerialNumber"
+        },
+        "MemoryRAS_25": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_25.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_25.SerialNumber"
+        },
+        "MemoryRAS_26": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_26.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_26.SerialNumber"
+        },
+        "MemoryRAS_29": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_29.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_29.SerialNumber"
+        },
+        "MemoryRAS_30": {
+            "SystemId": "${SystemId}",
+            "Name": "#/Memory_30.DimmName",
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "PredictiveFault": 0,
+            "ConfigErrorType": 0,
+            "ConfigErrorCode": "",
+            "UncorrectableECCError": 0,
+            "CorrectableECCError": 0,
+            "CorrectableECC": 0,
+            "PoorContactFault": 0,
+            "CorrectableECCStorm": 0,
+            "CorrectableECCOverflow": 0,
+            "CorrectableECCOverfrequencyCount": 0,
+            "SerialNumber": "#/Memory_30.SerialNumber"
+        },
+        "DiscreteSensor_DIMM000": {
+            "EntityId": "<=/Entity_DIMM000.Id",
+            "EntityInstance": "<=/Entity_DIMM000.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM000",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM001": {
+            "EntityId": "<=/Entity_DIMM001.Id",
+            "EntityInstance": "<=/Entity_DIMM001.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM001",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM020": {
+            "EntityId": "<=/Entity_DIMM020.Id",
+            "EntityInstance": "<=/Entity_DIMM020.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM020",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM021": {
+            "EntityId": "<=/Entity_DIMM021.Id",
+            "EntityInstance": "<=/Entity_DIMM021.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM021",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM100": {
+            "EntityId": "<=/Entity_DIMM100.Id",
+            "EntityInstance": "<=/Entity_DIMM100.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM100",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM101": {
+            "EntityId": "<=/Entity_DIMM101.Id",
+            "EntityInstance": "<=/Entity_DIMM101.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM101",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM120": {
+            "EntityId": "<=/Entity_DIMM120.Id",
+            "EntityInstance": "<=/Entity_DIMM120.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM120",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM121": {
+            "EntityId": "<=/Entity_DIMM121.Id",
+            "EntityInstance": "<=/Entity_DIMM121.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM121",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM040": {
+            "EntityId": "<=/Entity_DIMM040.Id",
+            "EntityInstance": "<=/Entity_DIMM040.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM040",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM041": {
+            "EntityId": "<=/Entity_DIMM041.Id",
+            "EntityInstance": "<=/Entity_DIMM041.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM041",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM060": {
+            "EntityId": "<=/Entity_DIMM060.Id",
+            "EntityInstance": "<=/Entity_DIMM060.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM060",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM061": {
+            "EntityId": "<=/Entity_DIMM061.Id",
+            "EntityInstance": "<=/Entity_DIMM061.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM061",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM140": {
+            "EntityId": "<=/Entity_DIMM140.Id",
+            "EntityInstance": "<=/Entity_DIMM140.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM140",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM141": {
+            "EntityId": "<=/Entity_DIMM141.Id",
+            "EntityInstance": "<=/Entity_DIMM141.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM141",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM160": {
+            "EntityId": "<=/Entity_DIMM160.Id",
+            "EntityInstance": "<=/Entity_DIMM160.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM160",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteSensor_DIMM161": {
+            "EntityId": "<=/Entity_DIMM161.Id",
+            "EntityInstance": "<=/Entity_DIMM161.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 12,
+            "ReadingType": 111,
+            "SensorName": "DIMM161",
+            "Unit": 192,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_Dimm000Listen_0": {
+            "Property": "<=/MemoryRAS_1.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory1.Instance",
+            "EventDir": "<=/MemoryRAS_1.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM000"
+        },
+        "DiscreteEvent_Dimm000Listen_1": {
+            "Property": "<=/Memory_1.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory1.Instance",
+            "EventDir": "<=/Memory_1.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM000"
+        },
+        "DiscreteEvent_Dimm000Listen_5": {
+            "Property": "<=/MemoryRAS_1.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory1.Instance",
+            "EventDir": "<=/MemoryRAS_1.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM000"
+        },
+        "DiscreteEvent_Dimm000Listen_6": {
+            "Property": "<=/Memory_1.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory1.Instance",
+            "EventDir": "<=/Memory_1.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM000"
+        },
+        "DiscreteEvent_Dimm000Listen_7": {
+            "Property": "<=/MemoryRAS_1.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory1.Instance",
+            "EventDir": "<=/MemoryRAS_1.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM000"
+        },
+        "DiscreteEvent_Dimm001Listen_0": {
+            "Property": "<=/MemoryRAS_2.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory2.Instance",
+            "EventDir": "<=/MemoryRAS_2.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM001"
+        },
+        "DiscreteEvent_Dimm001Listen_1": {
+            "Property": "<=/Memory_2.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory2.Instance",
+            "EventDir": "<=/Memory_2.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM001"
+        },
+        "DiscreteEvent_Dimm001Listen_5": {
+            "Property": "<=/MemoryRAS_2.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory2.Instance",
+            "EventDir": "<=/MemoryRAS_2.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM001"
+        },
+        "DiscreteEvent_Dimm001Listen_6": {
+            "Property": "<=/Memory_2.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory2.Instance",
+            "EventDir": "<=/Memory_2.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM001"
+        },
+        "DiscreteEvent_Dimm001Listen_7": {
+            "Property": "<=/MemoryRAS_2.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory2.Instance",
+            "EventDir": "<=/MemoryRAS_2.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM001"
+        },
+        "DiscreteEvent_Dimm020Listen_0": {
+            "Property": "<=/MemoryRAS_5.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory5.Instance",
+            "EventDir": "<=/MemoryRAS_5.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM020"
+        },
+        "DiscreteEvent_Dimm020Listen_1": {
+            "Property": "<=/Memory_5.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory5.Instance",
+            "EventDir": "<=/Memory_5.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM020"
+        },
+        "DiscreteEvent_Dimm020Listen_5": {
+            "Property": "<=/MemoryRAS_5.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory5.Instance",
+            "EventDir": "<=/MemoryRAS_5.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM020"
+        },
+        "DiscreteEvent_Dimm020Listen_6": {
+            "Property": "<=/Memory_5.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory5.Instance",
+            "EventDir": "<=/Memory_5.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM020"
+        },
+        "DiscreteEvent_Dimm020Listen_7": {
+            "Property": "<=/MemoryRAS_5.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory5.Instance",
+            "EventDir": "<=/MemoryRAS_5.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM020"
+        },
+        "DiscreteEvent_Dimm021Listen_0": {
+            "Property": "<=/MemoryRAS_6.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory6.Instance",
+            "EventDir": "<=/MemoryRAS_6.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM021"
+        },
+        "DiscreteEvent_Dimm021Listen_1": {
+            "Property": "<=/Memory_6.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory6.Instance",
+            "EventDir": "<=/Memory_6.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM021"
+        },
+        "DiscreteEvent_Dimm021Listen_5": {
+            "Property": "<=/MemoryRAS_6.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory6.Instance",
+            "EventDir": "<=/MemoryRAS_6.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM021"
+        },
+        "DiscreteEvent_Dimm021Listen_6": {
+            "Property": "<=/Memory_6.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory6.Instance",
+            "EventDir": "<=/Memory_6.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM021"
+        },
+        "DiscreteEvent_Dimm021Listen_7": {
+            "Property": "<=/MemoryRAS_6.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory6.Instance",
+            "EventDir": "<=/MemoryRAS_6.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM021"
+        },
+        "DiscreteEvent_Dimm100Listen_0": {
+            "Property": "<=/MemoryRAS_9.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory9.Instance",
+            "EventDir": "<=/MemoryRAS_9.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM100"
+        },
+        "DiscreteEvent_Dimm100Listen_1": {
+            "Property": "<=/Memory_9.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory9.Instance",
+            "EventDir": "<=/Memory_9.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM100"
+        },
+        "DiscreteEvent_Dimm100Listen_5": {
+            "Property": "<=/MemoryRAS_9.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory9.Instance",
+            "EventDir": "<=/MemoryRAS_9.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM100"
+        },
+        "DiscreteEvent_Dimm100Listen_6": {
+            "Property": "<=/Memory_9.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory9.Instance",
+            "EventDir": "<=/Memory_9.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM100"
+        },
+        "DiscreteEvent_Dimm100Listen_7": {
+            "Property": "<=/MemoryRAS_9.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory9.Instance",
+            "EventDir": "<=/MemoryRAS_9.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM100"
+        },
+        "DiscreteEvent_Dimm101Listen_0": {
+            "Property": "<=/MemoryRAS_10.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory10.Instance",
+            "EventDir": "<=/MemoryRAS_10.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM101"
+        },
+        "DiscreteEvent_Dimm101Listen_1": {
+            "Property": "<=/Memory_10.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory10.Instance",
+            "EventDir": "<=/Memory_10.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM101"
+        },
+        "DiscreteEvent_Dimm101Listen_5": {
+            "Property": "<=/MemoryRAS_10.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory10.Instance",
+            "EventDir": "<=/MemoryRAS_10.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM101"
+        },
+        "DiscreteEvent_Dimm101Listen_6": {
+            "Property": "<=/Memory_10.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory10.Instance",
+            "EventDir": "<=/Memory_10.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM101"
+        },
+        "DiscreteEvent_Dimm101Listen_7": {
+            "Property": "<=/MemoryRAS_10.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory10.Instance",
+            "EventDir": "<=/MemoryRAS_10.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM101"
+        },
+        "DiscreteEvent_Dimm120Listen_0": {
+            "Property": "<=/MemoryRAS_13.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory13.Instance",
+            "EventDir": "<=/MemoryRAS_13.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM120"
+        },
+        "DiscreteEvent_Dimm120Listen_1": {
+            "Property": "<=/Memory_13.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory13.Instance",
+            "EventDir": "<=/Memory_13.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM120"
+        },
+        "DiscreteEvent_Dimm120Listen_5": {
+            "Property": "<=/MemoryRAS_13.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory13.Instance",
+            "EventDir": "<=/MemoryRAS_13.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM120"
+        },
+        "DiscreteEvent_Dimm120Listen_6": {
+            "Property": "<=/Memory_13.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory13.Instance",
+            "EventDir": "<=/Memory_13.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM120"
+        },
+        "DiscreteEvent_Dimm120Listen_7": {
+            "Property": "<=/MemoryRAS_13.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory13.Instance",
+            "EventDir": "<=/MemoryRAS_13.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM120"
+        },
+        "DiscreteEvent_Dimm121Listen_0": {
+            "Property": "<=/MemoryRAS_14.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory14.Instance",
+            "EventDir": "<=/MemoryRAS_14.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM121"
+        },
+        "DiscreteEvent_Dimm121Listen_1": {
+            "Property": "<=/Memory_14.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory14.Instance",
+            "EventDir": "<=/Memory_14.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM121"
+        },
+        "DiscreteEvent_Dimm121Listen_5": {
+            "Property": "<=/MemoryRAS_14.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory14.Instance",
+            "EventDir": "<=/MemoryRAS_14.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM121"
+        },
+        "DiscreteEvent_Dimm121Listen_6": {
+            "Property": "<=/Memory_14.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory14.Instance",
+            "EventDir": "<=/Memory_14.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {       
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM121"
+        },
+        "DiscreteEvent_Dimm121Listen_7": {
+            "Property": "<=/MemoryRAS_14.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory14.Instance",
+            "EventDir": "<=/MemoryRAS_14.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM121"
+        },
+        "DiscreteEvent_Dimm040Listen_0": {
+            "Property": "<=/MemoryRAS_17.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory17.Instance",
+            "EventDir": "<=/MemoryRAS_17.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM040"
+        },
+        "DiscreteEvent_Dimm040Listen_1": {
+            "Property": "<=/Memory_17.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory17.Instance",
+            "EventDir": "<=/Memory_17.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM040"
+        },
+        "DiscreteEvent_Dimm040Listen_5": {
+            "Property": "<=/MemoryRAS_17.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory17.Instance",
+            "EventDir": "<=/MemoryRAS_17.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM040"
+        },
+        "DiscreteEvent_Dimm040Listen_6": {
+            "Property": "<=/Memory_17.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory17.Instance",
+            "EventDir": "<=/Memory_17.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {               
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM040"
+        },
+        "DiscreteEvent_Dimm040Listen_7": {
+            "Property": "<=/MemoryRAS_17.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory17.Instance",
+            "EventDir": "<=/MemoryRAS_17.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM040"
+        },
+        "DiscreteEvent_Dimm041Listen_0": {
+            "Property": "<=/MemoryRAS_18.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory18.Instance",
+            "EventDir": "<=/MemoryRAS_18.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM041"
+        },
+        "DiscreteEvent_Dimm041Listen_1": {
+            "Property": "<=/Memory_18.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory18.Instance",
+            "EventDir": "<=/Memory_18.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM041"
+        },
+        "DiscreteEvent_Dimm041Listen_5": {
+            "Property": "<=/MemoryRAS_18.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory18.Instance",
+            "EventDir": "<=/MemoryRAS_18.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM041"
+        },
+        "DiscreteEvent_Dimm041Listen_6": {
+            "Property": "<=/Memory_18.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory18.Instance",
+            "EventDir": "<=/Memory_18.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {                
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM041"
+        },
+        "DiscreteEvent_Dimm041Listen_7": {
+            "Property": "<=/MemoryRAS_18.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory18.Instance",
+            "EventDir": "<=/MemoryRAS_18.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM041"
+        },
+        "DiscreteEvent_Dimm060Listen_0": {
+            "Property": "<=/MemoryRAS_21.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory21.Instance",
+            "EventDir": "<=/MemoryRAS_21.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM060"
+        },
+        "DiscreteEvent_Dimm060Listen_1": {
+            "Property": "<=/Memory_21.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory21.Instance",
+            "EventDir": "<=/Memory_21.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM060"
+        },
+        "DiscreteEvent_Dimm060Listen_5": {
+            "Property": "<=/MemoryRAS_21.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory21.Instance",
+            "EventDir": "<=/MemoryRAS_21.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM060"
+        },
+        "DiscreteEvent_Dimm060Listen_6": {
+            "Property": "<=/Memory_21.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory21.Instance",
+            "EventDir": "<=/Memory_21.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {              
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM060"
+        },
+        "DiscreteEvent_Dimm060Listen_7": {
+            "Property": "<=/MemoryRAS_21.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory21.Instance",
+            "EventDir": "<=/MemoryRAS_21.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM060"
+        },
+        "DiscreteEvent_Dimm061Listen_0": {
+            "Property": "<=/MemoryRAS_22.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory22.Instance",
+            "EventDir": "<=/MemoryRAS_22.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM061"
+        },
+        "DiscreteEvent_Dimm061Listen_1": {
+            "Property": "<=/Memory_22.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory22.Instance",
+            "EventDir": "<=/Memory_22.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM061"
+        },
+        "DiscreteEvent_Dimm061Listen_5": {
+            "Property": "<=/MemoryRAS_22.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory22.Instance",
+            "EventDir": "<=/MemoryRAS_22.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM061"
+        },
+        "DiscreteEvent_Dimm061Listen_6": {
+            "Property": "<=/Memory_22.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory22.Instance",
+            "EventDir": "<=/Memory_22.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {               
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM061"
+        },
+        "DiscreteEvent_Dimm061Listen_7": {
+            "Property": "<=/MemoryRAS_22.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory22.Instance",
+            "EventDir": "<=/MemoryRAS_22.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM061"
+        },
+        "DiscreteEvent_Dimm140Listen_0": {
+            "Property": "<=/MemoryRAS_25.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory25.Instance",
+            "EventDir": "<=/MemoryRAS_25.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM140"
+        },
+        "DiscreteEvent_Dimm140Listen_1": {
+            "Property": "<=/Memory_25.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory25.Instance",
+            "EventDir": "<=/Memory_25.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM140"
+        },
+        "DiscreteEvent_Dimm140Listen_5": {
+            "Property": "<=/MemoryRAS_25.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory25.Instance",
+            "EventDir": "<=/MemoryRAS_25.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM140"
+        },
+        "DiscreteEvent_Dimm140Listen_6": {
+            "Property": "<=/Memory_25.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory25.Instance",
+            "EventDir": "<=/Memory_25.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {               
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM140"
+        },
+        "DiscreteEvent_Dimm140Listen_7": {
+            "Property": "<=/MemoryRAS_25.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory25.Instance",
+            "EventDir": "<=/MemoryRAS_25.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM140"
+        },
+        "DiscreteEvent_Dimm141Listen_0": {
+            "Property": "<=/MemoryRAS_26.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory26.Instance",
+            "EventDir": "<=/MemoryRAS_26.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM141"
+        },
+        "DiscreteEvent_Dimm141Listen_1": {
+            "Property": "<=/Memory_26.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory26.Instance",
+            "EventDir": "<=/Memory_26.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM141"
+        },
+        "DiscreteEvent_Dimm141Listen_5": {
+            "Property": "<=/MemoryRAS_26.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory26.Instance",
+            "EventDir": "<=/MemoryRAS_26.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM141"
+        },
+        "DiscreteEvent_Dimm141Listen_6": {
+            "Property": "<=/Memory_26.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory26.Instance",
+            "EventDir": "<=/Memory_26.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {               
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM141"
+        },
+        "DiscreteEvent_Dimm141Listen_7": {
+            "Property": "<=/MemoryRAS_26.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory26.Instance",
+            "EventDir": "<=/MemoryRAS_26.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM141"
+        },
+        "DiscreteEvent_Dimm160Listen_0": {
+            "Property": "<=/MemoryRAS_29.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory29.Instance",
+            "EventDir": "<=/MemoryRAS_29.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM160"
+        },
+        "DiscreteEvent_Dimm160Listen_1": {
+            "Property": "<=/Memory_29.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory29.Instance",
+            "EventDir": "<=/Memory_29.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM160"
+        },
+        "DiscreteEvent_Dimm160Listen_5": {
+            "Property": "<=/MemoryRAS_29.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory29.Instance",
+            "EventDir": "<=/MemoryRAS_29.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM160"
+        },
+        "DiscreteEvent_Dimm160Listen_6": {
+            "Property": "<=/Memory_29.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory29.Instance",
+            "EventDir": "<=/Memory_29.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {              
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM160"
+        },
+        "DiscreteEvent_Dimm160Listen_7": {
+            "Property": "<=/MemoryRAS_29.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory29.Instance",
+            "EventDir": "<=/MemoryRAS_29.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM160"
+        },
+        "DiscreteEvent_Dimm161Listen_0": {
+            "Property": "<=/MemoryRAS_30.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory30.Instance",
+            "EventDir": "<=/MemoryRAS_30.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM161"
+        },
+        "DiscreteEvent_Dimm161Listen_1": {
+            "Property": "<=/Memory_30.DiagnosticFault",
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory30.Instance",
+            "EventDir": "<=/Memory_30.DiagnosticFault",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM161"
+        },
+        "DiscreteEvent_Dimm161Listen_5": {
+            "Property": "<=/MemoryRAS_30.CorrectableECCError",
+            "ListenType": 1,
+            "EventData1": 5,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory30.Instance",
+            "EventDir": "<=/MemoryRAS_30.CorrectableECCError",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM161"
+        },
+        "DiscreteEvent_Dimm161Listen_6": {
+            "Property": "<=/Memory_30.Presence",
+            "ListenType": 1,
+            "EventData1": 6,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory30.Instance",
+            "EventDir": "<=/Memory_30.Presence",
+            "Conversion": 0,
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255,
+            "@Default": {               
+                "EventDir": 255
+            },
+            "SensorObject": "#/DiscreteSensor_DIMM161"
+        },
+        "DiscreteEvent_Dimm161Listen_7": {
+            "Property": "<=/MemoryRAS_30.ConfigErrorType",
+            "ListenType": 1,
+            "EventData1": 7,
+            "EventData2": 255,
+            "EventData3": "<=/Component_Memory30.Instance",
+            "EventDir": "<=/MemoryRAS_30.ConfigErrorType",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_DIMM161"
+        },
+        "Entity_DIMM000": {
+            "Id": 32,
+            "Name": "DIMM000",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 96
+        },
+        "Entity_DIMM001": {
+            "Id": 32,
+            "Name": "DIMM001",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 97
+        },
+        "Entity_DIMM020": {
+            "Id": 32,
+            "Name": "DIMM020",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 100
+        },
+        "Entity_DIMM021": {
+            "Id": 32,
+            "Name": "DIMM021",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 101
+        },
+        "Entity_DIMM100": {
+            "Id": 32,
+            "Name": "DIMM100",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 104
+        },
+        "Entity_DIMM101": {
+            "Id": 32,
+            "Name": "DIMM101",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 105
+        },
+        "Entity_DIMM120": {
+            "Id": 32,
+            "Name": "DIMM120",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 108
+        },
+        "Entity_DIMM121": {
+            "Id": 32,
+            "Name": "DIMM121",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 109
+        },
+        "Entity_DIMM040": {
+            "Id": 32,
+            "Name": "DIMM040",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 112
+        },
+        "Entity_DIMM041": {
+            "Id": 32,
+            "Name": "DIMM041",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 113
+        },
+        "Entity_DIMM060": {
+            "Id": 32,
+            "Name": "DIMM060",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 116
+        },
+        "Entity_DIMM061": {
+            "Id": 32,
+            "Name": "DIMM061",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 117
+        },
+        "Entity_DIMM140": {
+            "Id": 32,
+            "Name": "DIMM140",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 120
+        },
+        "Entity_DIMM141": {
+            "Id": 32,
+            "Name": "DIMM141",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 121
+        },
+        "Entity_DIMM160": {
+            "Id": 32,
+            "Name": "DIMM160",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 124
+        },
+        "Entity_DIMM161": {
+            "Id": 32,
+            "Name": "DIMM161",
+            "PowerState": 1,
+            "Presence": 1,
+            "Instance": 125
+        },
+        "Event_Cpu1Channel0UCE": {
+            "Reading": "<=/MemoryChannel_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "1",
+            "DescArg2": "0",
+            "Component": "#/Component_ComCpu1"
+        },
+        "Event_Cpu2Channel0UCE": {
+            "Reading": "<=/MemoryChannel_2.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "2",
+            "DescArg2": "0",
+            "Component": "#/Component_ComCpu2"
+        },
+        "Event_Cpu1Channel2UCE": {
+            "Reading": "<=/MemoryChannel_5.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "1",
+            "DescArg2": "2",
+            "Component": "#/Component_ComCpu1"
+        },
+        "Event_Cpu2Channel2UCE": {
+            "Reading": "<=/MemoryChannel_6.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "2",
+            "DescArg2": "2",
+            "Component": "#/Component_ComCpu2"
+        },
+        "Event_Cpu1Channel4UCE": {
+            "Reading": "<=/MemoryChannel_9.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "1",
+            "DescArg2": "4",
+            "Component": "#/Component_ComCpu1"
+        },
+        "Event_Cpu2Channel4UCE": {
+            "Reading": "<=/MemoryChannel_10.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "2",
+            "DescArg2": "4",
+            "Component": "#/Component_ComCpu2"
+        },
+        "Event_Cpu1Channel6UCE": {
+            "Reading": "<=/MemoryChannel_13.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "1",
+            "DescArg2": "6",
+            "Component": "#/Component_ComCpu1"
+        },
+        "Event_Cpu2Channel6UCE": {
+            "Reading": "<=/MemoryChannel_14.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "2",
+            "DescArg2": "6",
+            "Component": "#/Component_ComCpu2"
+        },
+        "Event_Memory000UCE": {
+            "Reading": "<=/Memory_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_Memory001UCE": {
+            "Reading": "<=/Memory_2.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_Memory020UCE": {
+            "Reading": "<=/Memory_5.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_Memory021UCE": {
+            "Reading": "<=/Memory_6.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_Memory100UCE": {
+            "Reading": "<=/Memory_9.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_Memory101UCE": {
+            "Reading": "<=/Memory_10.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_Memory120UCE": {
+            "Reading": "<=/Memory_13.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_Memory121UCE": {
+            "Reading": "<=/Memory_14.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_Memory040UCE": {
+            "Reading": "<=/Memory_17.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_Memory041UCE": {
+            "Reading": "<=/Memory_18.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_Memory060UCE": {
+            "Reading": "<=/Memory_21.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_Memory061UCE": {
+            "Reading": "<=/Memory_22.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_Memory140UCE": {
+            "Reading": "<=/Memory_25.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_Memory141UCE": {
+            "Reading": "<=/Memory_26.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_Memory160UCE": {
+            "Reading": "<=/Memory_29.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_Memory161UCE": {
+            "Reading": "<=/Memory_30.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_Mem000Installed": {
+            "Reading": "<=/Memory_1.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory1.Name",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_Mem001Installed": {
+            "Reading": "<=/Memory_2.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory2.Name",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_Mem020Installed": {
+            "Reading": "<=/Memory_5.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory5.Name",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_Mem021Installed": {
+            "Reading": "<=/Memory_6.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory6.Name",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_Mem100Installed": {
+            "Reading": "<=/Memory_9.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory9.Name",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_Mem101Installed": {
+            "Reading": "<=/Memory_10.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory10.Name",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_Mem120Installed": {
+            "Reading": "<=/Memory_13.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory13.Name",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_Mem121Installed": {
+            "Reading": "<=/Memory_14.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory14.Name",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_Mem040Installed": {
+            "Reading": "<=/Memory_17.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory17.Name",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_Mem041Installed": {
+            "Reading": "<=/Memory_18.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory18.Name",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_Mem060Installed": {
+            "Reading": "<=/Memory_21.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory21.Name",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_Mem061Installed": {
+            "Reading": "<=/Memory_22.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory22.Name",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_Mem140Installed": {
+            "Reading": "<=/Memory_25.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory25.Name",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_Mem141Installed": {
+            "Reading": "<=/Memory_26.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory26.Name",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_Mem160Installed": {
+            "Reading": "<=/Memory_29.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory29.Name",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_Mem161Installed": {
+            "Reading": "<=/Memory_30.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 7,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory30.Name",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_Mem000Removed": {
+            "Reading": "<=/Memory_1.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory1.Name",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_Mem001Removed": {
+            "Reading": "<=/Memory_2.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory2.Name",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_Mem020Removed": {
+            "Reading": "<=/Memory_5.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory5.Name",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_Mem021Removed": {
+            "Reading": "<=/Memory_6.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory6.Name",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_Mem100Removed": {
+            "Reading": "<=/Memory_9.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory9.Name",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_Mem1010Removed": {
+            "Reading": "<=/Memory_10.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory10.Name",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_Mem120Removed": {
+            "Reading": "<=/Memory_13.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory13.Name",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_Mem121Removed": {
+            "Reading": "<=/Memory_14.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory14.Name",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_Mem040Removed": {
+            "Reading": "<=/Memory_17.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory17.Name",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_Mem041Removed": {
+            "Reading": "<=/Memory_18.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory18.Name",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_Mem060Removed": {
+            "Reading": "<=/Memory_21.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory21.Name",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_Mem061Removed": {
+            "Reading": "<=/Memory_22.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory22.Name",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_Mem140Removed": {
+            "Reading": "<=/Memory_25.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory25.Name",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_Mem1410Removed": {
+            "Reading": "<=/Memory_26.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory26.Name",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_Mem160Removed": {
+            "Reading": "<=/Memory_29.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory29.Name",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_Mem161Removed": {
+            "Reading": "<=/Memory_30.Presence",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg3": "#/Component_Memory30.Name",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS1InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_1.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS1CFGErr": {
+            "Reading": "<=/MemoryRAS_1.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS1InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_1.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_1.ConfigErrorCode",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS1MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_1.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_1.ConfigErrorCode",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS1CE": {
+            "Reading": "<=/MemoryRAS_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS1ECCMntr": {
+            "Reading": "<=/MemoryRAS_1.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS2InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_2.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS2CFGErr": {
+            "Reading": "<=/MemoryRAS_2.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS2InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_2.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_2.ConfigErrorCode",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS2MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_2.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_2.ConfigErrorCode",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS2CE": {
+            "Reading": "<=/MemoryRAS_2.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS2ECCMntr": {
+            "Reading": "<=/MemoryRAS_2.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS5InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_5.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS5CFGErr": {
+            "Reading": "<=/MemoryRAS_5.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS5InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_5.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_5.ConfigErrorCode",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS5MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_5.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_5.ConfigErrorCode",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS5CE": {
+            "Reading": "<=/MemoryRAS_5.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS5ECCMntr": {
+            "Reading": "<=/MemoryRAS_5.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS6InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_6.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS6CFGErr": {
+            "Reading": "<=/MemoryRAS_6.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS6InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_6.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_6.ConfigErrorCode",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS6MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_6.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_6.ConfigErrorCode",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS6CE": {
+            "Reading": "<=/MemoryRAS_6.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS6ECCMntr": {
+            "Reading": "<=/MemoryRAS_6.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS9InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_9.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS9CFGErr": {
+            "Reading": "<=/MemoryRAS_9.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS9InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_9.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_9.ConfigErrorCode",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS9MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_9.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_9.ConfigErrorCode",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS9CE": {
+            "Reading": "<=/MemoryRAS_9.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS9ECCMntr": {
+            "Reading": "<=/MemoryRAS_9.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS10InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_10.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS10CFGErr": {
+            "Reading": "<=/MemoryRAS_10.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS10InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_10.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_10.ConfigErrorCode",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS10MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_10.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_10.ConfigErrorCode",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS10CE": {
+            "Reading": "<=/MemoryRAS_10.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS10ECCMntr": {
+            "Reading": "<=/MemoryRAS_10.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS13InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_13.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS13CFGErr": {
+            "Reading": "<=/MemoryRAS_13.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS13InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_13.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_13.ConfigErrorCode",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS13MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_13.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_13.ConfigErrorCode",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS13CE": {
+            "Reading": "<=/MemoryRAS_13.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS13ECCMntr": {
+            "Reading": "<=/MemoryRAS_13.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS14InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_14.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS14CFGErr": {
+            "Reading": "<=/MemoryRAS_14.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS14InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_14.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_14.ConfigErrorCode",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS14MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_14.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_14.ConfigErrorCode",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS14CE": {
+            "Reading": "<=/MemoryRAS_14.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS14ECCMntr": {
+            "Reading": "<=/MemoryRAS_14.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS17InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_17.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS17CFGErr": {
+            "Reading": "<=/MemoryRAS_17.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS17InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_17.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_17.ConfigErrorCode",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS17MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_17.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_17.ConfigErrorCode",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS17CE": {
+            "Reading": "<=/MemoryRAS_17.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS17ECCMntr": {
+            "Reading": "<=/MemoryRAS_17.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS18InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_18.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS18CFGErr": {
+            "Reading": "<=/MemoryRAS_18.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS18InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_18.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_18.ConfigErrorCode",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS18MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_18.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_18.ConfigErrorCode",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS18CE": {
+            "Reading": "<=/MemoryRAS_18.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS18ECCMntr": {
+            "Reading": "<=/MemoryRAS_18.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS21InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_21.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS21CFGErr": {
+            "Reading": "<=/MemoryRAS_21.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS21InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_21.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_21.ConfigErrorCode",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS21MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_21.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_21.ConfigErrorCode",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS21CE": {
+            "Reading": "<=/MemoryRAS_21.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS21ECCMntr": {
+            "Reading": "<=/MemoryRAS_21.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS22InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_22.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS22CFGErr": {
+            "Reading": "<=/MemoryRAS_22.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS22InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_22.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_22.ConfigErrorCode",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS22MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_22.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_22.ConfigErrorCode",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS22CE": {
+            "Reading": "<=/MemoryRAS_22.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS22ECCMntr": {
+            "Reading": "<=/MemoryRAS_22.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS25InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_25.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS25CFGErr": {
+            "Reading": "<=/MemoryRAS_25.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS25InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_25.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_25.ConfigErrorCode",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS25MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_25.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_25.ConfigErrorCode",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS25CE": {
+            "Reading": "<=/MemoryRAS_25.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS25ECCMntr": {
+            "Reading": "<=/MemoryRAS_25.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS26InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_26.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS26CFGErr": {
+            "Reading": "<=/MemoryRAS_26.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS26InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_26.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_26.ConfigErrorCode",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS26MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_26.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_26.ConfigErrorCode",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS26CE": {
+            "Reading": "<=/MemoryRAS_26.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS26ECCMntr": {
+            "Reading": "<=/MemoryRAS_26.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS29InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_29.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS29CFGErr": {
+            "Reading": "<=/MemoryRAS_29.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS29InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_29.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_29.ConfigErrorCode",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS29MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_29.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_29.ConfigErrorCode",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS29CE": {
+            "Reading": "<=/MemoryRAS_29.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS29ECCMntr": {
+            "Reading": "<=/MemoryRAS_29.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS30InPoorContactErr": {
+            "Reading": "<=/MemoryRAS_30.PoorContactFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS30CFGErr": {
+            "Reading": "<=/MemoryRAS_30.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS30InitErrorLogMntr": {
+            "Reading": "<=/MemoryRAS_30.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_30.ConfigErrorCode",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS30MRCFatelErrMntr": {
+            "Reading": "<=/MemoryRAS_30.ConfigErrorType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg4": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "DescArg5": "#/MemoryRAS_30.ConfigErrorCode",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS30CE": {
+            "Reading": "<=/MemoryRAS_30.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS30ECCMntr": {
+            "Reading": "<=/MemoryRAS_30.CorrectableECCError",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg3": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_Memory000ReplaceMntr": {
+            "Reading": "<=/Component_Memory1.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory1.Name",
+            "DescArg3": "#/Component_Memory1.PreviousSN",
+            "DescArg4": "#/Component_Memory1.SerialNumber",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_Memory001ReplaceMntr": {
+            "Reading": "<=/Component_Memory2.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory2.Name",
+            "DescArg3": "#/Component_Memory2.PreviousSN",
+            "DescArg4": "#/Component_Memory2.SerialNumber",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_Memory020ReplaceMntr": {
+            "Reading": "<=/Component_Memory5.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory5.Name",
+            "DescArg3": "#/Component_Memory5.PreviousSN",
+            "DescArg4": "#/Component_Memory5.SerialNumber",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_Memory021ReplaceMntr": {
+            "Reading": "<=/Component_Memory6.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory6.Name",
+            "DescArg3": "#/Component_Memory6.PreviousSN",
+            "DescArg4": "#/Component_Memory6.SerialNumber",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_Memory100ReplaceMntr": {
+            "Reading": "<=/Component_Memory9.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory9.Name",
+            "DescArg3": "#/Component_Memory9.PreviousSN",
+            "DescArg4": "#/Component_Memory9.SerialNumber",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_Memory101ReplaceMntr": {
+            "Reading": "<=/Component_Memory10.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory10.Name",
+            "DescArg3": "#/Component_Memory10.PreviousSN",
+            "DescArg4": "#/Component_Memory10.SerialNumber",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_Memory120ReplaceMntr": {
+            "Reading": "<=/Component_Memory13.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory13.Name",
+            "DescArg3": "#/Component_Memory13.PreviousSN",
+            "DescArg4": "#/Component_Memory13.SerialNumber",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_Memory121ReplaceMntr": {
+            "Reading": "<=/Component_Memory14.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory14.Name",
+            "DescArg3": "#/Component_Memory14.PreviousSN",
+            "DescArg4": "#/Component_Memory14.SerialNumber",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_Memory040ReplaceMntr": {
+            "Reading": "<=/Component_Memory17.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory17.Name",
+            "DescArg3": "#/Component_Memory17.PreviousSN",
+            "DescArg4": "#/Component_Memory17.SerialNumber",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_Memory041ReplaceMntr": {
+            "Reading": "<=/Component_Memory18.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory18.Name",
+            "DescArg3": "#/Component_Memory18.PreviousSN",
+            "DescArg4": "#/Component_Memory18.SerialNumber",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_Memory060ReplaceMntr": {
+            "Reading": "<=/Component_Memory21.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory21.Name",
+            "DescArg3": "#/Component_Memory21.PreviousSN",
+            "DescArg4": "#/Component_Memory21.SerialNumber",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_Memory061ReplaceMntr": {
+            "Reading": "<=/Component_Memory22.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory22.Name",
+            "DescArg3": "#/Component_Memory22.PreviousSN",
+            "DescArg4": "#/Component_Memory22.SerialNumber",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_Memory140ReplaceMntr": {
+            "Reading": "<=/Component_Memory25.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory25.Name",
+            "DescArg3": "#/Component_Memory25.PreviousSN",
+            "DescArg4": "#/Component_Memory25.SerialNumber",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_Memory141ReplaceMntr": {
+            "Reading": "<=/Component_Memory26.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory26.Name",
+            "DescArg3": "#/Component_Memory26.PreviousSN",
+            "DescArg4": "#/Component_Memory26.SerialNumber",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_Memory160ReplaceMntr": {
+            "Reading": "<=/Component_Memory29.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory29.Name",
+            "DescArg3": "#/Component_Memory29.PreviousSN",
+            "DescArg4": "#/Component_Memory29.SerialNumber",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_Memory161ReplaceMntr": {
+            "Reading": "<=/Component_Memory30.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "CPU Board${Slot}",
+            "DescArg2": "#/Component_Memory30.Name",
+            "DescArg3": "#/Component_Memory30.PreviousSN",
+            "DescArg4": "#/Component_Memory30.SerialNumber",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_Mem1OverTempMinor": {
+            "Reading": "<=/Memory_1.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_1.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_1.DimmName",
+            "DescArg3": "#/Memory_1.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_Mem2OverTempMinor": {
+            "Reading": "<=/Memory_2.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_2.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_2.DimmName",
+            "DescArg3": "#/Memory_2.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_Mem5OverTempMinor": {
+            "Reading": "<=/Memory_5.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_5.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_5.DimmName",
+            "DescArg3": "#/Memory_5.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_Mem6OverTempMinor": {
+            "Reading": "<=/Memory_6.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_6.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_6.DimmName",
+            "DescArg3": "#/Memory_6.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_Mem9OverTempMinor": {
+            "Reading": "<=/Memory_9.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_9.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_9.DimmName",
+            "DescArg3": "#/Memory_9.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_Mem10OverTempMinor": {
+            "Reading": "<=/Memory_10.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_10.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_10.DimmName",
+            "DescArg3": "#/Memory_10.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_Mem13OverTempMinor": {
+            "Reading": "<=/Memory_13.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_13.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_13.DimmName",
+            "DescArg3": "#/Memory_13.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_Mem14OverTempMinor": {
+            "Reading": "<=/Memory_14.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_14.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_14.DimmName",
+            "DescArg3": "#/Memory_14.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_Mem17OverTempMinor": {
+            "Reading": "<=/Memory_17.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_17.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_17.DimmName",
+            "DescArg3": "#/Memory_17.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_Mem18OverTempMinor": {
+            "Reading": "<=/Memory_18.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_18.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_18.DimmName",
+            "DescArg3": "#/Memory_18.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_Mem21OverTempMinor": {
+            "Reading": "<=/Memory_21.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_21.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_21.DimmName",
+            "DescArg3": "#/Memory_21.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_Mem22OverTempMinor": {
+            "Reading": "<=/Memory_22.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_22.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_22.DimmName",
+            "DescArg3": "#/Memory_22.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_Mem25OverTempMinor": {
+            "Reading": "<=/Memory_25.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_25.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_25.DimmName",
+            "DescArg3": "#/Memory_25.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_Mem26OverTempMinor": {
+            "Reading": "<=/Memory_26.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_26.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_26.DimmName",
+            "DescArg3": "#/Memory_26.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_Mem29OverTempMinor": {
+            "Reading": "<=/Memory_29.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_29.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_29.DimmName",
+            "DescArg3": "#/Memory_29.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_Mem30OverTempMinor": {
+            "Reading": "<=/Memory_30.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "#/Memory_30.CpuId |> expr($1 + 1) |> string.format('CPU%s', $1)",
+            "DescArg2": "#/Memory_30.DimmName",
+            "DescArg3": "#/Memory_30.TemperatureCelsius",
+            "DescArg4": "95",
+            "Component": "#/Component_Memory30"
+        },
+        "Event_MemoryRAS1CEStormFault": {
+            "Reading": "<=/MemoryRAS_1.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_1.DimmName;<=/Memory_1.Position;<=/Memory_1.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory1"
+        },
+        "Event_MemoryRAS2CEStormFault": {
+            "Reading": "<=/MemoryRAS_2.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_2.DimmName;<=/Memory_2.Position;<=/Memory_2.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory2"
+        },
+        "Event_MemoryRAS5CEStormFault": {
+            "Reading": "<=/MemoryRAS_5.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_5.DimmName;<=/Memory_5.Position;<=/Memory_5.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory5"
+        },
+        "Event_MemoryRAS6CEStormFault": {
+            "Reading": "<=/MemoryRAS_6.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_6.DimmName;<=/Memory_6.Position;<=/Memory_6.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory6"
+        },
+        "Event_MemoryRAS9CEStormFault": {
+            "Reading": "<=/MemoryRAS_9.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_9.DimmName;<=/Memory_9.Position;<=/Memory_9.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory9"
+        },
+        "Event_MemoryRAS10CEStormFault": {
+            "Reading": "<=/MemoryRAS_10.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_10.DimmName;<=/Memory_10.Position;<=/Memory_10.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory10"
+        },
+        "Event_MemoryRAS13CEStormFault": {
+            "Reading": "<=/MemoryRAS_13.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_13.DimmName;<=/Memory_13.Position;<=/Memory_13.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory13"
+        },
+        "Event_MemoryRAS14CEStormFault": {
+            "Reading": "<=/MemoryRAS_14.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_14.DimmName;<=/Memory_14.Position;<=/Memory_14.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory14"
+        },
+        "Event_MemoryRAS17CEStormFault": {
+            "Reading": "<=/MemoryRAS_17.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_17.DimmName;<=/Memory_17.Position;<=/Memory_17.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory17"
+        },
+        "Event_MemoryRAS18CEStormFault": {
+            "Reading": "<=/MemoryRAS_18.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_18.DimmName;<=/Memory_18.Position;<=/Memory_18.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory18"
+        },
+        "Event_MemoryRAS21CEStormFault": {
+            "Reading": "<=/MemoryRAS_21.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_21.DimmName;<=/Memory_21.Position;<=/Memory_21.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory21"
+        },
+        "Event_MemoryRAS22CEStormFault": {
+            "Reading": "<=/MemoryRAS_22.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_22.DimmName;<=/Memory_22.Position;<=/Memory_22.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory22"
+        },
+        "Event_MemoryRAS25CEStormFault": {
+            "Reading": "<=/MemoryRAS_25.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_25.DimmName;<=/Memory_25.Position;<=/Memory_25.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory25"
+        },
+        "Event_MemoryRAS26CEStormFault": {
+            "Reading": "<=/MemoryRAS_26.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_26.DimmName;<=/Memory_26.Position;<=/Memory_26.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory26"
+        },
+        "Event_MemoryRAS29CEStormFault": {
+            "Reading": "<=/MemoryRAS_29.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_29.DimmName;<=/Memory_29.Position;<=/Memory_29.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory29"
+        },
+        "Event_MemoryRAS30CEStormFault": {
+            "Reading": "<=/MemoryRAS_30.CorrectableECCOverfrequencyCount",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg1": "<=/Memory_30.DimmName;<=/Memory_30.Position;<=/Memory_30.SilkText |> string.format('%s(%s %s)', $1, $2, $3)",
+            "Component": "#/Component_Memory30"
+        }
+    }
+}
