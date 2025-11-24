@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.63] - 2025-11-24
+云豹智能卡适配
+
 ## [1.80.62] - 2025-11-24
 支持磐石DPU兼容性
 
