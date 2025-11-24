@@ -1,0 +1,622 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_9545Chan3"
+            ]
+        },
+        "I2cMux_9545Chan3": {
+            "Chips": [
+                "Chip_NIC"
+            ]
+        }
+    },
+    "Objects": {
+        "Component_PCIeCard": {
+            "FruId": 255,
+            "Instance": "<=/PCIeDevice_1.SlotID",
+            "Type": 8,
+            "BoardId": 255,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "CMCC",
+            "PartNumber": "0302K1A1",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "ReplaceFlag": 0,
+            "PreviousSN": "",
+            "NodeId": "1"
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
+        },
+        "ThresholdSensor_NicTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 85,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "ReadingStatus": "<=/NetworkAdapter_1.TemperatureStatus"
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "UpperNoncritical": 75,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp', $1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? (($1 >= 255 ? 0 : $1) >= ($3 >= 255 ? 0 : $3) ? (($1 >= 255 ? 0 : $1) >= ($4 >= 255 ? 0 : $4) ? ($1 >= 255 ? 0 : $1) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))) : (($2 >= 255 ? 0 : $2) >= ($3 >= 255 ? 0 : $3) ? (($2 >= 255 ? 0 : $2) >= ($4 >= 255 ? 0 : $4) ? ($2 >= 255 ? 0 : $2) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))))",
+            "ReadingStatus": "<=/OpticalModule_0.ReadingCelsius;<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_2.ReadingCelsius;<=/OpticalModule_3.ReadingCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4))) |> expr($1 > 255 ? 3 : 0)"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port3": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port3",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port4": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port4",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_Port3LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 3",
+            "Component": "#/Component_Port3"
+        },
+        "Event_Port4LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_3.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 4",
+            "Component": "#/Component_Port4"
+        },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
+            "Reading": "<=/NetworkPort_0.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "<=/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/Event_Port0BWUsageMntr.Reading |> string.format('%.2f', $1)",
+            "DescArg5": "#/Event_Port0BWUsageMntr.Condition"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "<=/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 2",
+            "DescArg4": "#/Event_Port1BWUsageMntr.Reading |> string.format('%.2f', $1)",
+            "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
+        },
+        "Event_Port2BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
+            "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "<=/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 3",
+            "DescArg4": "#/Event_Port2BWUsageMntr.Reading |> string.format('%.2f', $1)",
+            "DescArg5": "#/Event_Port2BWUsageMntr.Condition"
+        },
+        "Event_Port3BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
+            "Reading": "<=/NetworkPort_3.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "<=/PCIeDevice_1.DeviceName",
+            "DescArg3": "Port 4",
+            "DescArg4": "#/Event_Port3BWUsageMntr.Reading |> string.format('%.2f', $1)",
+            "DescArg5": "#/Event_Port3BWUsageMntr.Condition"
+        },
+        "Event_PCIeBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LingYao0517)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(LingYao0517)",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardUCE": {
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeCardCE": {
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeSelfTestFail": {
+            "EventKeyId": "PCIeCard.PCIESelfTestFail",
+            "Condition": 2,
+            "Reading": "<=/NetworkAdapter_1.FaultState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "LingYao0517",
+            "DescArg4": "#/NetworkAdapter_1.FaultState",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardRecovError",
+            "Condition": 1,
+            "Reading": "<=/NetworkAdapter_1.FaultState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "LingYao0517",
+            "DescArg4": "#/NetworkAdapter_1.FaultState",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PCIeUnRecovError": {
+            "EventKeyId": "PCIeCard.PCIeCardUnRecovError",
+            "Condition": 3,
+            "Reading": "<=/NetworkAdapter_1.FaultState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "LingYao0517",
+            "DescArg4": "#/NetworkAdapter_1.FaultState",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_PcieCardReplaceMntr": {
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1,
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_NicOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_NicTemp.PositiveHysteresis",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 60 : $1)",
+            "@Default": {
+                "Condition": 85
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "Chip",
+            "DescArg4": "#/Event_NicOverTemp.Reading",
+            "DescArg5": "#/Event_NicOverTemp.Condition"
+        },
+        "Event_NicTempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "Chip"
+        },
+        "Event_OMTempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/OpticalModule_0.ReadingCelsius;<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_2.ReadingCelsius;<=/OpticalModule_3.ReadingCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4))) |> expr($1 > 255 ? 3 : 0)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "Optical Module"
+        },
+        "Event_OMOverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr($1 > 255 ? 40 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg4": "#/Event_OMOverTempInfo.Reading",
+            "DescArg5": "#/Event_OMOverTempInfo.Condition",
+            "Hysteresis": 2
+        },
+        "Chip_NIC": {
+            "OffsetWidth": 1,
+            "AddrWidth": 1,
+            "Address": 44,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "WriteRetryTimes": 2,
+            "ReadRetryTimes": 0
+        },
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (LingYao0517)",
+            "FunctionClass": 2,
+            "DeviceType": 13,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}"
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "LingYao0517",
+            "BoardName": "LingYao0517",
+            "BoardID": 32786,
+            "Description": "LingYao0517",
+            "FunctionClass": 2,
+            "VendorID": 8019,
+            "DeviceID": 11296,
+            "SubVendorID": 6461,
+            "SubDeviceID": 1303,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "CMCC",
+            "PartNumber": "0302K1A1",
+            "RefChip": "#/Chip_NIC",
+            "Protocol": "SmBus",
+            "MaxFrameLen": 64,
+            "Model": "JM800",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "PcbID": 0,
+            "PcbVersion": ".A",
+            "Health": "<=/NetworkAdapter_1.Health",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "<=/PCIeDevice_1.SlotID",
+            "Name": "LingYao0517",
+            "Manufacturer": "CMCC",
+            "Description": "4*25GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 3,
+            "Model": "JM800",
+            "ModelDescription": "4*25GE",
+            "ChipManufacturer": "JaguarMicro",
+            "NetworkPortCount": 4,
+            "BoardName": "YRS41CMSNIC",
+            "VendorID": "0x1f53",
+            "DeviceID": "0x2c20",
+            "SubsystemVendorID": "0x193d",
+            "SubsystemDeviceID": "0x0517",
+            "BoardID": 32786,
+            "ComponentUniqueID": "N/A",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "@Default": {
+                "PCBVersion": ".A"
+            },
+            "FruId": 255,
+            "SupportedMctp": false,
+            "SupportedLLDP": true,
+            "HotPluggable": false,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "RefChip": "#/Chip_NIC",
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+            "TemperatureStatus": 0,
+            "ParentCardSlotId": 255,
+            "FaultState": 0,
+            "Health": 0,
+            "BandwidthThresholdPercent": 100
+        },
+        "BoardPCIeCard_1": {
+            "Slot": 1,
+            "UID": "N/A",
+            "Name": "YRS41CMSNIC",
+            "Manufacturer": "CMCC",
+            "Type": "PCIeCard",
+            "Description": "LingYao0517",
+            "PartNumber": "0302K1A1",
+            "PcbID": 0,
+            "LogicVersion": "N/A",
+            "SRVersion": "",
+            "BoardID": 32786,
+            "BoardType": "BoardPCIeCard",
+            "Number": 1,
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "Position": "<=/PCIeDevice_1.Position",
+            "BoardNodeId": "<=/NetworkAdapter_1.NodeId",
+            "PcbVersion": "<=/PCIeCard_1.PcbVersion"
+        },
+        "NetworkPort_0": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "25GE"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "25GE"
+        },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 2,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "25GE"
+        },
+        "NetworkPort_3": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 3,
+            "NetDevFuncType": 1,
+            "MediumType": "FiberOptic",
+            "SupportedLinkCapability": "25GE"
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 2,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0
+        },
+        "OpticalModule_2": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 3,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0
+        },
+        "OpticalModule_3": {
+            "@Parent": "NetworkPort_3",
+            "ChannelNum": 4,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 70,
+            "MaxAllowedTemperatureCelsius": 80,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
+        },
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius |> expr(($1 == 32768 || $2 == 32768 || $3 == 32768 || $4 ==32768) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? (($1 >= 255 ? 0 : $1) >= ($3 >= 255 ? 0 : $3) ? (($1 >= 255 ? 0 : $1) >= ($4 >= 255 ? 0 : $4) ? ($1 >= 255 ? 0 : $1) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))) : (($2 >= 255 ? 0 : $2) >= ($3 >= 255 ? 0 : $3) ? (($2 >= 255 ? 0 : $2) >= ($4 >= 255 ? 0 : $4) ? ($2 >= 255 ? 0 : $2) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": true,
+            "CustomTargetTemperatureCelsius": 255
+        }
+    }
+}
