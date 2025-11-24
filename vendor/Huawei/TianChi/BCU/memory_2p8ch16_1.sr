@@ -1,0 +1,1523 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": []
+        }
+    },
+    "Objects": {
+        "Memory_1": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 31)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s00', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM000",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory1.Health"
+        },
+        "MemorySilk_1": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s00', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 0
+        },
+        "Memory_2": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 30)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s01', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM001",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory2.Health"
+        },
+        "MemorySilk_2": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s01', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 1
+        },
+        "Memory_5": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 27)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s20', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM020",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory5.Health"
+        },
+        "MemorySilk_5": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s20', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 0
+        },
+        "Memory_6": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 26)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s21', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM021",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory6.Health"
+        },
+        "MemorySilk_6": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s21', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 1
+        },
+        "Memory_9": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 23)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s00', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "SilkText": "DIMM100",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory9.Health"
+        },
+        "MemorySilk_9": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s00', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 0
+        },
+        "Memory_10": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 22)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s01', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "SilkText": "DIMM101",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory10.Health"
+        },
+        "MemorySilk_10": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s01', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 0,
+            "LogicalChannelId": 2,
+            "DimmId": 1
+        },
+        "Memory_13": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 19)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s20', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "SilkText": "DIMM120",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory13.Health"
+        },
+        "MemorySilk_13": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s20', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 0
+        },
+        "Memory_14": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 18)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s21', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "SilkText": "DIMM121",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory14.Health"
+        },
+        "MemorySilk_14": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s21', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 2,
+            "LogicalChannelId": 0,
+            "DimmId": 1
+        },
+        "Memory_17": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 15)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s40', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s40', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s40', $1)",
+            "SilkText": "DIMM040",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory17.Health"
+        },
+        "MemorySilk_17": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s40', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 0
+        },
+        "Memory_18": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 14)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s41', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s41', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s41', $1)",
+            "SilkText": "DIMM041",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory18.Health"
+        },
+        "MemorySilk_18": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s41', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 1
+        },
+        "Memory_21": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 11)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s60', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s60', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s60', $1)",
+            "SilkText": "DIMM060",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory21.Health"
+        },
+        "MemorySilk_21": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s60', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 0
+        },
+        "Memory_22": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 10)",
+            "Name": "${Slot} |> expr($1 * 2 - 2) |> string.format('Memory%s61', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s61', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s61', $1)",
+            "SilkText": "DIMM061",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory22.Health"
+        },
+        "MemorySilk_22": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 2) |> string.format('DIMM%s61', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 1
+        },
+        "Memory_25": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 7)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s40', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s40', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s40', $1)",
+            "SilkText": "DIMM140",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory25.Health"
+        },
+        "MemorySilk_25": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s40', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 0
+        },
+        "Memory_26": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 6)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s41', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s41', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s41', $1)",
+            "SilkText": "DIMM141",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory26.Health"
+        },
+        "MemorySilk_26": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s41', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 4,
+            "LogicalChannelId": 3,
+            "DimmId": 1
+        },
+        "Memory_29": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 3)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s60', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s60', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 0,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s60', $1)",
+            "SilkText": "DIMM160",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory29.Health"
+        },
+        "MemorySilk_29": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s60', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 0
+        },
+        "Memory_30": {
+            "SystemId": "${SystemId}",
+            "DimmNum": "${Slot} |> expr($1 * 32 - 2)",
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Memory%s61', $1)",
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s61', $1)",
+            "Presence": 255,
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "NodeId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 1,
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "OriginalPartNumber": "N/A",
+            "Position": "CpuBoard${Slot}",
+            "DeviceLocator": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s61', $1)",
+            "SilkText": "DIMM161",
+            "SerialNumber": "",
+            "Health": "<=/Component_Memory30.Health"
+        },
+        "MemorySilk_30": {
+            "DimmName": "${Slot} |> expr($1 * 2 - 1) |> string.format('DIMM%s61', $1)",
+            "CpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "ChannelId": 6,
+            "LogicalChannelId": 1,
+            "DimmId": 1
+        },
+        "MemoryChannel_1": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 0,
+            "LogicalChannelId": 2,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%sChannel0', $1)"
+        },
+        "MemoryChannel_2": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 0,
+            "LogicalChannelId": 2,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 ) |> string.format('Cpu%sChannel0', $1)"
+        },
+        "MemoryChannel_5": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 2,
+            "LogicalChannelId": 0,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%sChannel2', $1)"
+        },
+        "MemoryChannel_6": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 2,
+            "LogicalChannelId": 0,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%sChannel2', $1)"
+        },
+        "MemoryChannel_9": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 4,
+            "LogicalChannelId": 3,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%sChannel4', $1)"
+        },
+        "MemoryChannel_10": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 4,
+            "LogicalChannelId": 3,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%sChannel4', $1)"
+        },
+        "MemoryChannel_13": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 6,
+            "LogicalChannelId": 1,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 2)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2 - 1) |> string.format('Cpu%sChannel6', $1)"
+        },
+        "MemoryChannel_14": {
+            "SystemId": "${SystemId}",
+            "PhysicalChannelId": 6,
+            "LogicalChannelId": 1,
+            "LogicalCpuId": "${Slot} |> expr($1 * 2 - 1)",
+            "DiagnosticFault": 0,
+            "Name": "${Slot} |> expr($1 * 2) |> string.format('Cpu%sChannel6', $1)"
+        },
+        "Event_Cpu1Channel0UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2Channel0UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1Channel2UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2Channel2UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1Channel4UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2Channel4UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Cpu1Channel6UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C01"
+        },
+        "Event_Cpu2Channel6UCE": {
+            "EventKeyId": "CPU.CPUMemoryChannelFault",
+            "Condition": 1,
+            "LedFaultCode": "C02"
+        },
+        "Event_Memory000UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_Memory001UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_Memory020UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_Memory021UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_Memory100UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_Memory101UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_Memory120UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_Memory121UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_Memory040UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "040"
+        },
+        "Event_Memory041UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "041"
+        },
+        "Event_Memory060UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "060"
+        },
+        "Event_Memory061UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "061"
+        },
+        "Event_Memory140UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "140"
+        },
+        "Event_Memory141UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "141"
+        },
+        "Event_Memory160UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "160"
+        },
+        "Event_Memory161UCE": {
+            "EventKeyId": "Memory.MemoryUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "161"
+        },
+        "Event_Mem000Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem001Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem020Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem021Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem100Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem101Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem120Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem121Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem040Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem041Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem060Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem061Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem140Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem141Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem160Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem161Installed": {
+            "EventKeyId": "Memory.MemoryInstalled",
+            "Condition": 1
+        },
+        "Event_Mem000Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem001Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem020Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem021Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem100Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem1010Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem120Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem121Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem040Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem041Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem060Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem061Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem140Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem1410Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem160Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_Mem161Removed": {
+            "EventKeyId": "Memory.MemoryRemoved",
+            "Condition": 0
+        },
+        "Event_MemoryRAS1InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS1ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS2InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS2ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS5InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS5ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS6InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS6ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS9InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS9ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS10InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS10ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS13InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS13ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS14InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS14ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS17InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS17CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS17InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS17MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS17CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS17ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS18InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS18CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS18InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS18MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS18CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS18ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS21InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS21CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS21InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS21MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS21CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS21ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS22InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS22CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS22InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS22MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS22CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS22ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS25InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS25CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS25InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS25MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS25CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS25ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS26InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS26CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS26InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS26MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS26CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS26ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS29InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS29CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS29InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS29MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS29CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS29ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS30InPoorContactErr": {
+            "EventKeyId": "Memory.MemoryInPoorContact",
+            "Condition": 1,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS30CFGErr": {
+            "EventKeyId": "Memory.MemoryCFGErr",
+            "Condition": 1,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS30InitErrorLogMntr": {
+            "EventKeyId": "Memory.MemoryInitializationErrorMajor",
+            "Condition": 2,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS30MRCFatelErrMntr": {
+            "EventKeyId": "Memory.MemoryConfigErrorMajor",
+            "Condition": 3,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS30CE": {
+            "EventKeyId": "Memory.MemoryCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "161"
+        },
+        "Event_MemoryRAS30ECCMntr": {
+            "EventKeyId": "Memory.MemoryCorrectableECC",
+            "Condition": 1,
+            "LedFaultCode": "161"
+        },
+        "Event_Memory000ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory001ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory020ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory021ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory100ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory101ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory120ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory121ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory040ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory041ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory060ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory061ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory140ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory141ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory160ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Memory161ReplaceMntr": {
+            "EventKeyId": "Memory.MemoryReplaced",
+            "Condition": 1
+        },
+        "Event_Mem1OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem2OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem5OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem6OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem9OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem10OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem13OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem14OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem17OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem18OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem21OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem22OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem25OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem26OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem29OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "Event_Mem30OverTempMinor": {
+            "EventKeyId": "CPU.MemoryOverTempMinor",
+            "Condition": 1
+        },
+        "DiscreteSensor_DIMM000": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM001": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM020": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM021": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM100": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM101": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM120": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM121": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM040": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM041": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM060": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM061": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM140": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM141": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM160": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "DiscreteSensor_DIMM161": {
+            "AssertMask": 227,
+            "DeassertMask": 227,
+            "DiscreteMask": 227
+        },
+        "Event_MemoryRAS1CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "000"
+        },
+        "Event_MemoryRAS2CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "001"
+        },
+        "Event_MemoryRAS5CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "020"
+        },
+        "Event_MemoryRAS6CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "021"
+        },
+        "Event_MemoryRAS9CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "100"
+        },
+        "Event_MemoryRAS10CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "101"
+        },
+        "Event_MemoryRAS13CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "120"
+        },
+        "Event_MemoryRAS14CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "121"
+        },
+        "Event_MemoryRAS17CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "040"
+        },
+        "Event_MemoryRAS18CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "041"
+        },
+        "Event_MemoryRAS21CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "060"
+        },
+        "Event_MemoryRAS22CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "061"
+        },
+        "Event_MemoryRAS25CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "140"
+        },
+        "Event_MemoryRAS26CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "141"
+        },
+        "Event_MemoryRAS29CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "160"
+        },
+        "Event_MemoryRAS30CEStormFault": {
+            "EventKeyId": "Memory.MemoryCEStormFault",
+            "Condition": 3,
+            "LedFaultCode": "161"
+        }
+    }
+}

@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.61] - 2025-11-23
+新增BCU适配
+
 ## [1.80.60] - 2025-11-21
 新增环境监控模块在位告警
 

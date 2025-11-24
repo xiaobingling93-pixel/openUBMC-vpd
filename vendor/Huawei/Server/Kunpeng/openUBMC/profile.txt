@@ -307,3 +307,13 @@ Broadcom/Raid/14140130_100000e6_10004060_soft.sr
 Broadcom/Raid/14140130_100000e6_10004050.sr
 Broadcom/Raid/14140130_100000e6_10004050_soft.sr
 Mellanox/CX-6/14220247_15b3101f_15b30007.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAT_0_soft.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAT_0.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAU_0_soft.sr
+Huawei/TianChi/BCU/BCUExtend_BC83AMDAU_0.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0_soft.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0_soft.sr
+Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0.sr
+Huawei/TianChi/BCU/memory_2p8ch16_1_soft.sr
+Huawei/TianChi/BCU/memory_2p8ch16_1.sr
