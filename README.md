@@ -60,6 +60,10 @@
     │   └── bmc_soc
     │       ├── ast2500
     │       └── ast2600
+    │—— Customer
+    │   └── DPU
+    │       ├── 14140130_HyperCard_0.sr
+    │       └── 14140130_HyperCard_1.sr
     ├── Huawei
     │   ├── BMCSoC
     │   │   └── hi1711                  # 承载与BMC SoC相关的配置信息
