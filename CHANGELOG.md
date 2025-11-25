@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.66] - 2025-11-25
+删除社区组件不支持的告警、传感器
+
 ## [1.80.65] - 2025-11-25
 新增UB线缆检测告警
 

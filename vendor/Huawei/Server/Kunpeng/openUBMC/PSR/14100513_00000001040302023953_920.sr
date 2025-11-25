@@ -323,60 +323,10 @@
             "DeviceSerialNumber": "<=/FruData_Fru0.SystemSerialNumber",
             "DeviceName": "<=/FruData_Fru0.SystemProductName"
         },
-        "EnergyMetric_1": {
-            "SystemPower": 0,
-            "SystemOutputPower": 0,
-            "HighPowerThresholdWatts": 65535
-        },
-        "PowerStrategy_1": {
-            "PowerWorkingMode": "LoadBalancing",
-            "PowerLimitValue": 9999,
-            "PowerLimitEnabled": false,
-            "PowerLimitFailed": false,
-            "PSUsOutputVoltageLow": false,
-            "RedundancyFailure": false,
-            "PowerLimitActivated": false,
-            "PowerCappingSupported": true,
-            "PowerLimitExceptionSupported": true,
-            "DeepSleepSupported": true,
-            "ActiveStandbySupported": true,
-            "NormalAndRedundancySupported": false
-        },
-        "Event_SystemPowerCapTriggered": {
-            "EventKeyId": "System.SystemPowerCapTriggered",
-            "Condition": 1,
-            "Hysteresis": 0
-        },
-        "Event_SystemPowerCapFailure": {
-            "EventKeyId": "System.SystemPowerCapFailure",
-            "Condition": 1,
-            "Hysteresis": 0
-        },
-        "Event_SystemPowerHigh": {
-            "EventKeyId": "System.SystemPowerHigh",
-            "Condition": "<=/EnergyMetric_1.HighPowerThresholdWatts",
-            "Hysteresis": 30
-        },
         "Event_NormalAndRedundancyVoltageError": {
             "EventKeyId": "PSU.NormalAndRedundancyVoltageError",
             "Condition": 1,
             "Hysteresis": 0
-        },
-        "Event_PSURedundancyLost": {
-            "EventKeyId": "PSU.PSURedundancyLost",
-            "Condition": 1,
-            "Hysteresis": 0,
-            "LedFaultCode": "P$$"
-        },
-        "Event_PSUsOutputCurrentImbalance": {
-            "EventKeyId": "System.PSUsOutputCurrentImbalance",
-            "Condition": 1,
-            "Hysteresis": 0
-        },
-        "DiscreteSensor_PwrCapStatus": {
-            "AssertMask": 3,
-            "DeassertMask": 3,
-            "DiscreteMask": 3
         },
         "CoolingConfig_1": {
             "SmartCoolingState": "Enabled",

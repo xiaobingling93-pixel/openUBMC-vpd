@@ -129,32 +129,6 @@
       "PowerState": "<=/Scanner_PowerGood.Value",
       "Presence": 1
     },
-    "DiscreteSensor_PSRedundancy": {
-      "OwnerId": 32,
-      "OwnerLun": 0,
-      "EntityId": "<=/Entity_PSBoard.Id",
-      "EntityInstance": "<=/Entity_PSBoard.Instance",
-      "Initialization": 99,
-      "Capabilities": 64,
-      "SensorType": 8,
-      "ReadingType": 11,
-      "SensorName": "PS Redundant",
-      "Unit": 192,
-      "BaseUnit": 0,
-      "ModifierUnit": 0,
-      "RecordSharing": 1,
-      "Reading": 0
-    },
-    "DiscreteEvent_PSRedundancy": {
-      "Property": 0,
-      "ListenType": 1,
-      "EventData1": 1,
-      "EventData2": 255,
-      "EventData3": 255,
-      "EventDir": "<=/PowerStrategy_1.RedundancyFailure |> expr($1 ? 1 : 0)",
-      "Conversion": 0,
-      "SensorObject": "#/DiscreteSensor_PSRedundancy"
-    },
     "ThresholdSensor_SSDMaxTemp": {
       "OwnerId": 32,
       "OwnerLun": 0,
@@ -189,38 +163,11 @@
       "ReadingStatus": "<=/CoolingConfig_1.SysHDDsMaxTemperature |> expr($1 == 0 ? 2 : 0)",
       "SensorNumber": 255
     },
-    "DiscreteSensor_PwrCapStatus": {
-      "OwnerId": 32,
-      "OwnerLun": 0,
-      "EntityId": "<=/Entity_MainBoard.Id",
-      "EntityInstance": "<=/Entity_MainBoard.Instance",
-      "Initialization": 99,
-      "Capabilities": 192,
-      "SensorType": 18,
-      "ReadingType": 3,
-      "SensorName": "PwrCap Status",
-      "Unit": 192,
-      "BaseUnit": 0,
-      "ModifierUnit": 0,
-      "RecordSharing": 1,
-      "Reading": 0,
-      "SensorNumber": 255
-    },
     "Entity_MainBoard": {
       "Id": 7,
       "Name": "MainBoard",
       "PowerState": 1,
       "Presence": 1
-    },
-    "DiscreteEvent_PwrCapFailed": {
-      "Property": "<=/PowerStrategy_1.PowerLimitExceptionLogEvent;<=/PowerStrategy_1.PowerLimitFailed |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) == 2 ? 1 : 0)",
-      "ListenType": 1,
-      "EventData1": 1,
-      "EventData2": 255,
-      "EventData3": 255,
-      "EventDir": "<=/PowerStrategy_1.PowerLimitExceptionLogEvent;<=/PowerStrategy_1.PowerLimitFailed |> expr((($1 ? 1 : 0) + ($2 ? 1 : 0)) == 2 ? 1 : 0)",
-      "Conversion": 0,
-      "SensorObject": "#/DiscreteSensor_PwrCapStatus"
     },
     "Event_HDDBpPresenceMntr": {
       "Reading": "<=/Scanner_HddBPPresent.Value",
@@ -230,41 +177,6 @@
       "OperatorId": 5,
       "Enabled": true,
       "Component": "#/Component_Chassis"
-    },
-    "Event_SystemPowerHigh": {
-      "Reading": "<=/EnergyMetric_1.SystemPower",
-      "@Default": {
-        "Condition": 65535
-      },
-      "OperatorId": 3,
-      "Enabled": true,
-      "DescArg1": "#/Event_SystemPowerHigh.Reading",
-      "DescArg2": "#/Event_SystemPowerHigh.Condition",
-      "Component": "#/Component_ComSystem"
-    },
-    "Event_SystemPowerCapTriggered": {
-      "Reading": "<=/PowerStrategy_1.PowerLimitActivated",
-      "OperatorId": 5,
-      "Enabled": true,
-      "Component": "#/Component_ComSystem"
-    },
-    "Event_SystemPowerCapFailure": {
-      "Reading": "<=/PowerStrategy_1.PowerLimitFailed",
-      "OperatorId": 5,
-      "Enabled": true,
-      "Component": "#/Component_ComSystem"
-    },
-    "Event_PSURedundancyLost": {
-      "Reading": "<=/PowerStrategy_1.RedundancyFailure",
-      "OperatorId": 5,
-      "Enabled": true,
-      "Component": "#/Component_ComPS"
-    },
-    "Event_PSUsOutputCurrentImbalance": {
-      "Reading": "<=/PowerStrategy_1.PSUsOutputCurrentImbalance",
-      "OperatorId": 5,
-      "Enabled": true,
-      "Component": "#/Component_ComPS"
     },
     "Event_EXU_UBNotPresent": {
       "Reading": "<=/UnitConfiguration_EXU.Port1Status",
@@ -382,11 +294,6 @@
       "DescArg1": "#/UnitConfiguration_FlexIO2_1.Port1LinkInfo",
       "Component": "#/Component_Cable",
       "AdditionalInfo": "1"
-    },
-    "MPCPowerFeature_1": {
-      "MaxPowerLimitInWatts": "#/PowerStrategy_1.MaxPowerLimitInWatts",
-      "SystemPower": "#/EnergyMetric_1.SystemPower",
-      "FanTotalPowerWatts": "#/EnergyMetric_1.FanTotalPowerWatts"
     },
     "EnergySavingScene_1": {
       "CurrentScene": "Default",
