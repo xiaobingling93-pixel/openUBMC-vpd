@@ -95,68 +95,11 @@
       "Period": 1000,
       "Value": 0
     },
-    "EnergyMetric_1": {
-      "SystemPower": 0,
-      "SystemOutputPower": 0,
-      "HighPowerThresholdWatts": 65535,
-      "FanTotalPowerWatts": "<=/Scanner_Fan_Pwr.Value |> expr(-0.000000000000000000000001392242 * $1 * $1 * $1 * $1 * $1 * $1 + 0.000000000000000000163618116237 * $1 * $1 * $1 * $1 * $1 - 0.00000000000000714729233014839 * $1 * $1 * $1 * $1 + 0.000000000141146266763049 * $1 * $1 * $1 - 0.00000124480707999752 * $1 * $1 + 0.0196497990638136 * $1)"
-    },
-    "PowerStrategy_1": {
-      "PowerWorkingMode": "LoadBalancing",
-      "PowerLimitValue": 9999,
-      "PowerLimitEnabled": false,
-      "PowerLimitFailed": false,
-      "PSUsOutputVoltageLow": false,
-      "RedundancyFailure": false,
-      "PowerLimitActivated": false,
-      "PowerCappingSupported": true,
-      "PowerLimitExceptionSupported": true,
-      "DeepSleepSupported": true,
-      "ActiveStandbySupported": true,
-      "NormalAndRedundancySupported": false,
-      "PowerPredictSupported": true
-    },
-    "Event_SystemPowerHigh": {
-      "EventKeyId": "System.SystemPowerHigh",
-      "Condition": "<=/EnergyMetric_1.HighPowerThresholdWatts",
-      "Hysteresis": 30
-    },
-    "Event_SystemPowerCapTriggered": {
-      "EventKeyId": "System.SystemPowerCapTriggered",
-      "Condition": 1,
-      "Hysteresis": 0
-    },
-    "Event_SystemPowerCapFailure": {
-      "EventKeyId": "System.SystemPowerCapFailure",
-      "Condition": 1,
-      "Hysteresis": 0
-    },
-    "Event_PSURedundancyLost": {
-      "EventKeyId": "PSU.PSURedundancyLost",
-      "Condition": 1,
-      "Hysteresis": 0,
-      "LedFaultCode": "P01"
-    },
-    "Event_PSUsOutputCurrentImbalance": {
-      "EventKeyId": "System.PSUsOutputCurrentImbalance",
-      "Condition": 1,
-      "Hysteresis": 0
-    },
     "Event_EXU_UBNotPresent": {
       "EventKeyId": "Cable.UBNotPresent",
       "InvalidReadingIgnore": 1,
       "InvalidReading": 255,
       "Condition": 4
-    },
-    "DiscreteSensor_PSRedundancy": {
-      "AssertMask": 2,
-      "DeassertMask": 2,
-      "DiscreteMask": 2
-    },
-    "DiscreteSensor_PwrCapStatus": {
-      "AssertMask": 3,
-      "DeassertMask": 3,
-      "DiscreteMask": 3
     },
     "Event_IEU1_UBNotPresent": {
       "EventKeyId": "Cable.UBNotPresent",
