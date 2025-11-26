@@ -1,0 +1,221 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Objects": {
+        "FruData_Fru0": {
+            "FruId": 1,
+            "FruDev": "#/Eeprom_NIC",
+            "EepromWp": 0,
+            "BoardPartNumber": "N/A",
+            "BoardSerialNumber": "N/A",
+            "StorageType": "EepromStandard"
+        },
+        "Fru_OCP": {
+            "PcbVersion": ".A",
+            "PowerState": 0,
+            "Health": 0,
+            "EepStatus": "<=/Eeprom_NIC.HealthStatus",
+            "Type": 83,
+            "FruDataId": "#/FruData_Fru0"
+        },
+        "Component_OCPCard": {
+            "FruId": 255,
+            "Instance": "${Slot}",
+            "Type": 83,
+            "BoardId": 65535,
+            "Name": "<=/PCIeDevice_1.DeviceName",
+            "Location": "<=/PCIeDevice_1.Position",
+            "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
+            "PartNumber": "",
+            "UniqueId": "N/A",
+            "Presence": 1,
+            "Health": 0,
+            "Function": "PCIe device",
+            "GroupId": 1,
+            "PowerState": 1,
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber |> expr(string.gsub($1, '%s+$','') )"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "Component_Port2": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port2",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
+        },
+        "ThresholdSensor_OCPTemp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_OCPCard.Id",
+            "EntityInstance": "<=/Entity_OCPCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 104,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "OCP${Slot} Temp",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_NIC_Lm75.Value |> expr(($1 & 3840 == 0) ? $1 : ($1 & 255))",
+            "ReadingStatus": "<=/Scanner_NIC_Lm75.Status"
+        },
+        "Entity_OCPCard": {
+            "Id": 11,
+            "Instance": 101,
+            "Name": "Pcie Card",
+            "Presence": 1,
+            "PowerState": 1
+        },
+        "Event_Port1LinkDown": {
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "<=/Component_OCPCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port1BWUsageMntr": {
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "${Slot}",
+            "DescArg3": "Port 0",
+            "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
+        },
+        "Event_OM0VAMntr": {
+            "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 0",
+            "DescArg4": "#/OpticalModule_0.SupplyVoltage",
+            "Component": "#/Component_Port1"
+        },
+        "Event_OM0PowerAlarm": {
+            "Reading": "<=/OpticalModule_0.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 0",
+            "Component": "#/Component_Port1"
+        },
+        "Event_OM0SpeedMatch": {
+            "Reading": "<=/OpticalModule_0.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 0",
+            "Component": "#/Component_Port1"
+        },
+        "Event_Port2LinkDown": {
+            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "DescArg1": "<=/Component_OCPCard.Name",
+            "DescArg3": "Port 2",
+            "Component": "#/Component_Port2"
+        },
+        "Event_Port2BWUsageMntr": {
+            "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "${Slot}",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/Event_Port2BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port2BWUsageMntr.Condition"
+        },
+        "Event_OM1VAMntr": {
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/OpticalModule_1.SupplyVoltage",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OM1PowerAlarm": {
+            "Reading": "<=/OpticalModule_1.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OM1SpeedMatch": {
+            "Reading": "<=/OpticalModule_1.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port2"
+        },
+        "Event_OCPCardUCE": {
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPCardCE": {
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPBandWidth": {
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OCPLinkSpeed": {
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg2": "#/Component_OCPCard.Name",
+            "Component": "#/Component_OCPCard"
+        }
+    }
+}

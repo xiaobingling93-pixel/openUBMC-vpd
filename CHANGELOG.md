@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.67] - 2025-11-22
+支持MCX623430MS-CDAB网卡
+
 ## [1.80.66] - 2025-11-25
 删除社区组件不支持的告警、传感器
 
