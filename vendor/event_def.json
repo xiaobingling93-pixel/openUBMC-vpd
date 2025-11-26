@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.52",
+    "Version": "1.0.53",
     "EventDefinition": [
         {
             "EventCode": "0x22000001",
@@ -192,6 +192,54 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "PSUOutputOvercurrentWarning"
+        },
+        {
+            "EventCode": "0x08000103",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PCIeCard.DPUMainChipFaultWarning",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DPUMainChipFaultWarning"
+        },
+        {
+            "EventCode": "0x08000105",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PCIeCard.DPUMainChipFaultCritical",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "DPUMainChipFaultCritical"
+        },
+        {
+            "EventCode": "0x08000107",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PCIeCard.DPUFaultWarning",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DPUFaultWarning"
+        },
+        {
+            "EventCode": "0x08000109",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PCIeCard.DPUFaultCritical",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "DPUFaultCritical"
         },
         {
             "EventCode": "0x000000BB",
@@ -6125,6 +6173,82 @@
             "Cause": {
                 "En": "A hardware fault exists.",
                 "Zh": "硬件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Shut down and restart the OS, and check whether the alarm is cleared.@#AB;2. Replace the DPU card.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、更换DPU卡并进一步观察。"
+            },
+            "EventKeyId": "PCIeCard.DPUMainChipFaultWarning",
+            "Description": {
+                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+            },
+            "Influence": {
+                "En": "Service performance of the DPU card is affected.",
+                "Zh": "可能导致DPU卡相关业务性能下降。"
+            },
+            "Cause": {
+                "En": "The hardware component on the DPU card has failed.",
+                "Zh": "DPU卡硬件器件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the DPU card.",
+                "Zh": "更换DPU卡。"
+            },
+            "EventKeyId": "PCIeCard.DPUMainChipFaultCritical",
+            "Description": {
+                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+            },
+            "Influence": {
+                "En": "The services related to the DPU card cannot be processed normally.",
+                "Zh": "可能导致DPU卡相关业务无法正常运行。"
+            },
+            "Cause": {
+                "En": "The hardware component on thd DPU card has failed.",
+                "Zh": "DPU卡硬件器件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Shut down and restart the OS, and check whether the alarm is cleared.@#AB;2. Replace the DPU card.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。@#AB;2、更换DPU卡并进一步观察。"
+            },
+            "EventKeyId": "PCIeCard.DPUFaultWarning",
+            "Description": {
+                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+            },
+            "Influence": {
+                "En": "Service performance of the DPU card is affected.",
+                "Zh": "可能导致DPU卡相关业务性能下降。"
+            },
+            "Cause": {
+                "En": "The hardware component on the DPU card has failed.",
+                "Zh": "DPU卡硬件器件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the DPU card.",
+                "Zh": "更换DPU卡。"
+            },
+            "EventKeyId": "PCIeCard.DPUFaultCritical",
+            "Description": {
+                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+            },
+            "Influence": {
+                "En": "The services related to the DPU card cannot be processed normally.",
+                "Zh": "可能导致DPU卡相关业务无法正常运行。"
+            },
+            "Cause": {
+                "En": "The hardware component on thd DPU card has failed.",
+                "Zh": "DPU卡硬件器件故障。"
             }
         },
         {

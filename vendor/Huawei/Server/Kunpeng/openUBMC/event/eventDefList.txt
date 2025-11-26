@@ -444,3 +444,7 @@ Chassis.ChassisOutletOverTempMajor
 Chassis.OverAnnualAvgHumi
 Chassis.RS485CommIntrptMajor
 Rack.LiquidOutletTempSensorAbnormal
+PCIeCard.DPUMainChipFaultWarning
+PCIeCard.DPUMainChipFaultCritical
+PCIeCard.DPUFaultWarning
+PCIeCard.DPUFaultCritical
