@@ -1,0 +1,470 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2c_2",
+                "I2cMux_pca9545_chan1",
+                "Hisport_0"
+              ]
+        },
+        "I2c_2": {
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
+        },
+        "I2cMux_pca9545_chan1": {
+            "Chips": [
+                "Chip_NICTempChip",
+                "Eeprom_NIC"
+            ]
+        },
+        "Hisport_0": {
+            "Chips": [
+                "Smc_RiserSMC"
+            ]
+        }
+    },
+    "Objects": {
+        "Chip_NICTempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus":0
+        },
+        "Eeprom_NIC": {
+            "Address": "${Slot} |> expr($1 == 1 ? 160 : ($1 == 2 ? 164 : 168))",
+            "AddrWidth": 1,
+            "OffsetWidth": 2,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0,
+            "RwBlockSize": 32
+        },
+        "Fru_OCP": {
+            "PcbId": 255,
+            "FruId": 1,
+            "FruName": "MCX623430MS-CDAB",
+            "ConnectorGroupId": "${GroupId}"
+        },
+        "Scanner_NIC_Lm75": {
+            "Chip": "#/Chip_NICTempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 255,
+            "Period": 1000,
+            "Debounce": "#/MidAvg_NICTemp"
+        },
+        "MidAvg_NICTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "PCIeDevice_1": {
+            "SlotID": "${Slot}",
+            "DeviceName": "OCP Card ${Slot} (MCX623430MS-CDAB)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "BandwidthReduction": 0,
+            "LinkSpeedReduced":0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "PCIeDeviceType": "MultiFunction",
+            "SlotType": "HalfLength",
+            "DeviceType": 83
+        },
+        "Scanner_CardPowerGood": {
+            "Chip": "#/Smc_RiserSMC",
+            "Offset": 738201856,
+            "Size": 1,
+            "Mask": 1,
+            "Type": 0,
+            "Value": 0
+        },
+        "Scanner_PowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469765888,
+            "Size": 2,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Accessor_ReadyToRemove": {
+            "Chip": "#/Smc_RiserSMC",
+            "Offset": 738203136,
+            "Size": 1,
+            "Mask": 2,
+            "Type": 0,
+            "Value": 0
+        },
+        "OCPCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/NetworkAdapter_1.SlotNumber |> string.format('OCPCard%s',$1)",
+            "Name": "MCX623430MS-CDAB",
+            "BoardName": "MCX623430MS-CDAB",
+            "Description": "MT2892 Family [ConnectX-6 Dx]",
+            "FunctionClass": 2,
+            "VendorID": 5555,
+            "DeviceID": 4125,
+            "SubVendorID": 5555,
+            "SubDeviceID": 276,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "Manufacturer": "Mellanox",
+            "PartNumber": "0257Y439",
+            "Health": "<=/Component_OCPCard.Health",
+            "Model": "CX6-DX",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "PcbVersion": ".A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/Component_OCPCard.SerialNumber"
+        },
+        "NetworkAdapter_1": {
+            "SystemID": 1,
+            "SlotNumber": "${Slot}",
+            "Name": "MCX623430MS-CDAB",
+            "Manufacturer": "Mellanox",
+            "Description": "2*100GE",
+            "Position": "<=/PCIeDevice_1.Position",
+            "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
+            "Type": 10,
+            "Model": "CX6-DX",
+            "ModelDescription": "2*100GE",
+            "ChipVendor": "Mellanox",
+			"SupportedMctp": true,
+            "SupportedLLDP": true,
+            "HotPluggable": true,
+            "ReadyToRemove": false,
+            "AttentionHotPlugState": 255,
+            "SocketId": "<=/PCIeDevice_1.SocketID",
+            "ParentCardSlotId": 255,
+            "ReadyToRemoveValue": "#/Accessor_ReadyToRemove.Value",
+            "CardPowerGood": "<=/Scanner_CardPowerGood.Value",
+            "BoardID": 65535,
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
+			"Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+			"ChipManufacturer": "Mellanox",
+			"NetworkPortCount": 2,
+			"BoardName": "MCX623430MS-CDAB",
+			"VendorID": "0x15b3",
+            "DeviceID": "0x101d",
+            "SubsystemVendorID": "0x15b3",
+            "SubsystemDeviceID": "0x0114",
+			"PCBVersion": "<=/Fru_OCP.PcbVersion",
+            "FruId": "<=/Fru_OCP.FruId",
+            "RootBDFs": "<=/PCIeDevice_1.BDFs",
+            "SerialNumber": "<=/Component_OCPCard.SerialNumber"
+        },
+        "NetworkPort_1": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 0,
+            "Type": 5,
+            "LinkStatus": "N/A",
+            "LinkStatusNumeric": 255,
+            "SupportedFuncType": 1,
+            "BandwidthUsagePercent": 0,
+            "NetDevFuncType": 1,
+            "SupportedLinkCapability": "100GE",
+            "MediumType": "FiberOptic",
+            "MACAddress": "00:00:00:00:00:00"
+        },
+        "NetworkPort_2": {
+            "@Parent": "NetworkAdapter_1",
+            "SystemID": 1,
+            "PortID": 1,
+            "Type": 5,
+            "LinkStatus": "N/A",
+            "LinkStatusNumeric": 255,
+            "SupportedFuncType": 1,
+            "BandwidthUsagePercent": 0,
+            "NetDevFuncType": 1,
+            "SupportedLinkCapability": "100GE",
+            "MediumType": "FiberOptic",
+            "MACAddress": "00:00:00:00:00:00"
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_2",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 75,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "Smc_ExpBoardSMC": {
+            "Name": "ExpBoardSMC",
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Smc_RiserSMC": {
+            "Name": "RiserSMC",
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "ThresholdSensor_OCPTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperCritical": 0,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 1,
+            "RBExp": 0,
+            "UpperCritical": 0,
+            "UpperNoncritical": 70,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_OCPCard.Id",
+            "EntityInstance": "<=/Entity_OCPCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('OCP%s_Opt_Temp', $1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr($1 > $2 ? $1 : $2)",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) ? 32768 : ($1 > $2 ? $1 : $2)) |> expr($1 > 255 ? 3 : 0)"
+        },
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "Description": "CX6网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.Presence; <=/OpticalModule_1.Presence; <=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($3 >= 255 && $1 == 1) || ($4 >= 255 && $2 == 1) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? $2 : $1) : ($2 >= 255 ? $1 : $2))",
+            "FailedValue": 0,
+            "TargetTemperatureCelsius": 62,
+            "MaxAllowedTemperatureCelsius": 70,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": true,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/OpticalModule_0.Presence; <=/OpticalModule_1.Presence |> expr(($1 == 1 || $2 == 1) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
+        },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 70,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/OCPCard_1.DeviceName",
+            "DescArg4": "#/Event_OM0OverTempInfo.Reading",
+            "DescArg5": "70",
+            "DescArg6": "0",
+            "AdditionalInfo": "6",
+            "Hysteresis": 2,
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 70,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/OCPCard_1.DeviceName",
+            "DescArg4": "#/Event_OM1OverTempInfo.Reading",
+            "DescArg5": "70",
+            "DescArg6": "1",
+            "AdditionalInfo": "6",
+            "Hysteresis": 2,
+            "Component": "#/Component_OCPCard"
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Hysteresis": 0
+        },
+        "Event_Port2LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Hysteresis": 0
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_Port2BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OCPCardUCE": {
+            "EventKeyId": "OCPCard.OCPCardUncorrectableErr",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "Event_OCPCardCE": {
+            "EventKeyId": "OCPCard.OCPCardCEHardFailure",
+            "Condition": 1,
+            "Hysteresis": 0
+        },
+        "Event_OCPLinkSpeed": {
+            "EventKeyId": "OCPCard.OCPCardLinkSpeedReduced",
+            "Condition": 1
+        },
+        "Event_OCPBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
+        },
+        "Event_OCPOverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_OCPTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
+            "Reading": "<=/Scanner_NIC_Lm75.Value |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg3": "OCP",
+            "DescArg4": "#/Event_OCPOverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_OCPTemp.UpperNoncritical"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_OCPCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_OCPCard.Name",
+            "DescArg3": "NICCard Chip"
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "Description": "MCX623430MS-CDAB网卡调速",
+            "MonitoringStatus": "<=/Scanner_NIC_Lm75.Status",
+            "MonitoringValue": "<=/Scanner_NIC_Lm75.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 100,
+            "ActiveInStandby": false,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)"
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "MCX623430MS-CDAB网卡standby调速",
+            "MonitoringStatus": "<=/Scanner_NIC_Lm75.Status",
+            "MonitoringValue": "<=/Scanner_NIC_Lm75.Value",
+            "FailedValue": 70,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 100,
+            "ActiveInStandby": true,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)"
+        }
+    }
+}
