@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.68] - 2025-11-22
+DPU告警源获取与配置
+
 ## [1.80.67] - 2025-11-22
 支持MCX623430MS-CDAB网卡
 
