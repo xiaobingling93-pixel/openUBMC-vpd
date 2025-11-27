@@ -412,7 +412,7 @@
         "PCIeDevice_1": {
             "DeviceName": "PCIe Card $ (LingYao0517)",
             "FunctionClass": 2,
-            "DeviceType": 13,
+            "DeviceType": 8,
             "Position": "",
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
