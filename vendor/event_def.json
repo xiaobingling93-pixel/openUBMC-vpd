@@ -2,30 +2,6 @@
     "Version": "1.0.53",
     "EventDefinition": [
         {
-            "EventCode": "0x22000001",
-            "ReportChannel": 65535,
-            "OldEventCode": "",
-            "EventType": 0,
-            "LifeCycleId": 1,
-            "DeassertFlag": 1,
-            "EventKeyId": "TPCM.TPMSelfTestFailed",
-            "SeverityId": 1,
-            "ActionId": 0,
-            "EventName": "TPMSelfTestFailed"
-        },
-        {
-            "EventCode": "0x22000003",
-            "ReportChannel": 65535,
-            "OldEventCode": "",
-            "EventType": 0,
-            "LifeCycleId": 1,
-            "DeassertFlag": 1,
-            "EventKeyId": "TPCM.HBRTSelfTestFailed",
-            "SeverityId": 1,
-            "ActionId": 0,
-            "EventName": "HBRTSelfTestFailed"
-        },
-        {
             "EventCode": "0x0200001F",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -5871,44 +5847,6 @@
         }
     ],
     "EventDescription": [
-        {
-            "Suggestion": {
-                "En": "1.Replace the HBRT.",
-                "Zh": "更换可信赖根。"
-            },
-            "EventKeyId": "TPCM.HBRTSelfTestFailed",
-            "Description": {
-                "En": "HBRT self-test failed.",
-                "Zh": "HBRT自检失败。"
-            },
-            "Influence": {
-                "En": "The trusted boot function may be unavailable.",
-                "Zh": "可能影响可信启动功能不可用。"
-            },
-            "Cause": {
-                "En": "An internal exception occurs in the HBRT.",
-                "Zh": "HBRT内部异常。"
-            }
-        },
-        {
-            "Suggestion": {
-                "En": "1.Replace the TPM or TCM module.",
-                "Zh": "更换可信赖平台模块。"
-            },
-            "EventKeyId": "TPCM.TPMSelfTestFailed",
-            "Description": {
-                "En": "Trusted platfrom module(%1) self-test failed.",
-                "Zh": "可信赖平台模块(%1)自检失败。"
-            },
-            "Influence": {
-                "En": "The trusted boot function may be unavailable.",
-                "Zh": "可能影响功能的使用。"
-            },
-            "Cause": {
-                "En": "An internal exception occurs in the TPM.",
-                "Zh": "TPM内部异常。"
-            }
-        },
         {
             "Suggestion": {
                 "En": "1. Remove and reinstall the cables of the disk backplane.@#AB;2. Replace the disk backplane.",
