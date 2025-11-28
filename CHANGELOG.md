@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.70] - 2025-11-27
+修复TPM告警码重复的问题
+
 ## [1.80.69] - 2025-11-27
 智能网卡的deviceType修改为8
 
