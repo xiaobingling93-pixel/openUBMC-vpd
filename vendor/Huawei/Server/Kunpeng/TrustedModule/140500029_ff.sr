@@ -30,25 +30,6 @@
             "ProtocolVersion": "N/A",
             "FirmwareVersion": "N/A"
         },
-        "Event_SCYModuleSelfTest": {
-            "EventKeyId": "TPCM.TPMSelfTestFailed",
-            "Reading": "<=/SecurityModule_1.Health;<=/SecurityModule_1.Protocol |> expr(($2 == 'TPM' || $2 == 'TCM') ? $1 : 1)",
-            "Condition": 0,
-            "OperatorId": 5,
-            "Hysteresis": 0,
-            "Enabled": true,
-            "DescArg1": "#/SecurityModule_1.Protocol",
-            "Component": "#/Component_SecurityMoudle"
-        },
-        "Event_SCYModuleHBRTSelfTest": {
-            "EventKeyId": "TPCM.HBRTSelfTestFailed",
-            "Reading": "<=/SecurityModule_1.Health;<=/SecurityModule_1.Protocol |> expr($2 == 'HBRT' ? $1 : 1)",
-            "Condition": 0,
-            "OperatorId": 5,
-            "Hysteresis": 0,
-            "Enabled": true,
-            "Component": "#/Component_SecurityMoudle"
-        },
         "Event_TPMSelfTestFailed": {
             "EventKeyId": "SecurityMoudle.TPMSelfTestFailed",
             "Reading": "<=/SecurityModule_1.Protocol;<=/SecurityModule_1.Health |> expr((($1 != 'HBRT') && ($2 != 1) && ($2 != 255)) ? 1 : 0)",
