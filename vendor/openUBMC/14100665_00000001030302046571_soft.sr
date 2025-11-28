@@ -360,7 +360,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive0.Name",
       "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd1MdWroutLow.Condition",
       "Component": "#/Component_Drive0"
     },
     "Event_Hdd2MdWroutLow": {
@@ -372,7 +372,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive1.Name",
       "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd2MdWroutLow.Condition",
       "Component": "#/Component_Drive1"
     },
     "Event_Drive1RebuildStart": {

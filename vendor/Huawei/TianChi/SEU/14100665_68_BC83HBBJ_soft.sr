@@ -303,20 +303,21 @@
             "Enabled": true,
             "DescArg2": "#/Component_Drive0.Name",
             "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
-            "DescArg4": "5",
+            "DescArg4": "#/Event_Hdd1MdWroutLow.Condition",
             "Component": "#/Component_Drive0"
         },
         "Event_Hdd2MdWroutLow": {
-            "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
-            "@Default": {
-                "Reading": 255
-            },
+            "Reading": 255,
             "OperatorId": 1,
             "Enabled": true,
             "DescArg2": "#/Component_Drive1.Name",
             "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
-            "DescArg4": "5",
-            "Component": "#/Component_Drive1"
+            "DescArg4": "#/Event_Hdd2MdWroutLow.Condition",
+            "Component": "#/Component_Drive1",
+            "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+            "@Default": {
+                "Condition": 5
+            }
         },
         "Event_Drive1RebuildStart": {
             "Reading": "<=/Drive_1.RebuildState",

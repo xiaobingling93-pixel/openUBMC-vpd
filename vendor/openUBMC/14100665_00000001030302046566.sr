@@ -1471,43 +1471,73 @@
     },
     "Event_Hdd1MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd2MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd3MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd4MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd5MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd6MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd7MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd8MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd9MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Hdd10MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "Condition": 5
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
+      "@Default": {
+          "Condition": 5
+      }
     },
     "Event_Drive1RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",

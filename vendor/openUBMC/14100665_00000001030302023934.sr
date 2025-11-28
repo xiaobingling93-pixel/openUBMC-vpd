@@ -3103,171 +3103,183 @@
     },
     "Event_Hdd1MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive0.Name",
       "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive0"
+      "DescArg4": "#/Event_Hdd1MdWroutLow.Condition",
+      "Component": "#/Component_Drive0",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd2MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive1.Name",
       "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive1"
+      "DescArg4": "#/Event_Hdd2MdWroutLow.Condition",
+      "Component": "#/Component_Drive1",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd3MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_3.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive2.Name",
       "DescArg3": "#/Event_Hdd3MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive2"
+      "DescArg4": "#/Event_Hdd3MdWroutLow.Condition",
+      "Component": "#/Component_Drive2",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd4MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_4.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive3.Name",
       "DescArg3": "#/Event_Hdd4MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive3"
+      "DescArg4": "#/Event_Hdd4MdWroutLow.Condition",
+      "Component": "#/Component_Drive3",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd5MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_5.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive4.Name",
       "DescArg3": "#/Event_Hdd5MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive4"
+      "DescArg4": "#/Event_Hdd5MdWroutLow.Condition",
+      "Component": "#/Component_Drive4",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd6MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_6.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive5.Name",
       "DescArg3": "#/Event_Hdd6MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive5"
+      "DescArg4": "#/Event_Hdd6MdWroutLow.Condition",
+      "Component": "#/Component_Drive5",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd7MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_7.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive6.Name",
       "DescArg3": "#/Event_Hdd7MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive6"
+      "DescArg4": "#/Event_Hdd7MdWroutLow.Condition",
+      "Component": "#/Component_Drive6",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd8MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_8.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive7.Name",
       "DescArg3": "#/Event_Hdd8MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive7"
+      "DescArg4": "#/Event_Hdd8MdWroutLow.Condition",
+      "Component": "#/Component_Drive7",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd9MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_9.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive8.Name",
       "DescArg3": "#/Event_Hdd9MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive8"
+      "DescArg4": "#/Event_Hdd9MdWroutLow.Condition",
+      "Component": "#/Component_Drive8",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd10MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_10.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive9.Name",
       "DescArg3": "#/Event_Hdd10MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive9"
+      "DescArg4": "#/Event_Hdd10MdWroutLow.Condition",
+      "Component": "#/Component_Drive9",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd11MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_11.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive10.Name",
       "DescArg3": "#/Event_Hdd11MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive10"
+      "DescArg4": "#/Event_Hdd11MdWroutLow.Condition",
+      "Component": "#/Component_Drive10",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Hdd12MdWroutLow": {
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_12.PredictedMediaLifeLeftPercent",
-      "Condition": 5,
+      "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "OperatorId": 1,
       "Enabled": true,
       "DescArg2": "#/Component_Drive11.Name",
       "DescArg3": "#/Event_Hdd12MdWroutLow.Reading",
-      "DescArg4": "5",
-      "Component": "#/Component_Drive11"
+      "DescArg4": "#/Event_Hdd12MdWroutLow.Condition",
+      "Component": "#/Component_Drive11",
+      "@Default": {
+          "Reading": 255,
+          "Condition": 5
+      }
     },
     "Event_Drive1RebuildStart": {
       "EventKeyId": "Disk.DiskRAIDRebuildStart",

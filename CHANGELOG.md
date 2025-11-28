@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.72] - 2025-11-29
+硬盘寿命过低告警阈值修改为可配置的属性
+
 ## [1.80.71] - 2025-11-27
 修复0x28000049、0x08000001、0x08000017告警描述
 
