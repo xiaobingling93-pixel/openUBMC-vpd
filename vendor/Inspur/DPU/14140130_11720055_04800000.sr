@@ -1,0 +1,60 @@
+{
+    "FormatVersion": "3.00",
+    "DataVersion": "3.00",
+    "Unit": {
+        "Type": "PCIeCard",
+        "Name": "PCIeCard_1"
+    },
+    "ManagementTopology": {
+        "Anchor": {
+            "Buses": [
+                "I2cMux_Chan"
+            ]
+        },
+        "I2cMux_Chan": {
+            "Chips": []
+        }
+    },
+    "Objects": {
+        "PCIeDevice_1": {
+            "DeviceName": "PCIe Card $ (Zijin-Switch)",
+            "FunctionClass": 2,
+            "Position": "",
+            "DiagnosticFault": 0,
+            "PredictiveFault": 0,
+            "LinkSpeedReduced": 0,
+            "Container": "${Container}",
+            "GroupPosition": "PCIeDevice_${GroupPosition}",
+            "DeviceType": 0
+        },
+        "PCIeCard_1": {
+            "SlotID": "<=/PCIeDevice_1.SlotID",
+            "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
+            "Name": "Zijin-Switch",
+            "BoardName": "Zijin-Switch",
+            "Description": "Zijin-Switch",
+            "FunctionClass": 2,
+            "VendorID": 4466,
+            "DeviceID": 85,
+            "SubVendorID": 0,
+            "SubDeviceID": 0,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "N/A",
+            "Manufacturer": "Altera Corporation",
+            "PartNumber": "06310422",
+            "Model": "Zijin-DPU",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "LinkSpeed": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "PcbVersion": "N/A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": ""
+        }
+    }
+}

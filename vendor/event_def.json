@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.54",
+    "Version": "1.0.55",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5832,6 +5832,294 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "RMCSoftStartOverTemp"
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUIerr",
+            "EventName": "PCIeCardCPUIerr",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFF",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUThermalTrip",
+            "EventName": "PCIeCardCPUThermalTrip",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFD",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUFRB2PostFail",
+            "EventName": "PCIeCardCPUFRB2PostFail",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFB",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUPresent",
+            "EventName": "PCIeCardCPUPresent",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFF9",
+            "ActionId": 0,
+            "SeverityId": 0,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUDisabled",
+            "EventName": "PCIeCardCPUDisabled",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFF7",
+            "ActionId": 0,
+            "SeverityId": 0,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUThrottled",
+            "EventName": "PCIeCardCPUThrottled",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFF5",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUUncorMachineCheckException",
+            "EventName": "PCIeCardCPUUncorMachineCheckException",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFF3",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUCorrMachineCheckError",
+            "EventName": "PCIeCardCPUCorrMachineCheckError",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFF1",
+            "ActionId": 0,
+            "SeverityId": 1,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMEMGHot",
+            "EventName": "PCIeCardMEMGHot",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFEF",
+            "ActionId": 0,
+            "SeverityId": 2,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemCorrECC",
+            "EventName": "PCIeCardMemCorrECC",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFED",
+            "ActionId": 0,
+            "SeverityId": 0,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemUncorrECC",
+            "EventName": "PCIeCardMemUncorrECC",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFEB",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemDisabled",
+            "EventName": "PCIeCardMemDisabled",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFE9",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPCIPERR",
+            "EventName": "PCIeCardPCIPERR",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFE7",
+            "ActionId": 0,
+            "SeverityId": 2,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPCISERR",
+            "EventName": "PCIeCardPCISERR",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFE5",
+            "ActionId": 0,
+            "SeverityId": 2,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusUncorrErr",
+            "EventName": "PCIeCardBusUncorrErr",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFE3",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusFatalErr",
+            "EventName": "PCIeCardBusFatalErr",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFE1",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusDegraded",
+            "EventName": "PCIeCardBusDegraded",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFDF",
+            "ActionId": 0,
+            "SeverityId": 2,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMETransToOK",
+            "EventName": "PCIeCardMETransToOK",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFDD",
+            "ActionId": 0,
+            "SeverityId": 0,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMETransNonCritFromOk",
+            "EventName": "PCIeCardMETransNonCritFromOk",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFD8",
+            "ActionId": 0,
+            "SeverityId": 1,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPowerOnSupplyFailure",
+            "EventName": "PCIeCardPowerOnSupplyFailure",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFD3",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPowerDropSupplyFailure",
+            "EventName": "PCIeCardPowerDropSupplyFailure",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFFD1",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardFPGAInitFail",
+            "EventName": "PCIeCardFPGAInitFail",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFD9",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+         {
+            "EventKeyId": "PCIeCard.PCIeCardFPGAConfigErr",
+            "EventName": "PCIeCardFPGAConfigErr",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFD7",
+            "ActionId": 0,
+            "SeverityId": 3,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
+        },
+         {
+            "EventKeyId": "PCIeCard.PCIeCardSocBootDDeviceNotSpec",
+            "EventName": "PCIeCardSocBootDDeviceNotSpec",
+            "ReportChannel": 65535,
+            "DeassertFlag": 1,
+            "EventCode": "0x0800FFD5",
+            "ActionId": 0,
+            "SeverityId": 0,
+            "EventType": 0,
+            "OldEventCode": "",
+            "LifeCycleId": 0
         },
         {
             "EventCode": "0x25000005",
@@ -15080,6 +15368,462 @@
             "Cause": {
                 "En": "1. The RS485 cable is not connected or the port on the peer device is not connected. @#AB;2. The peer device is working abnormally.",
                 "Zh": "1、RS485网线未插或对端设备未连接上。@#AB;2、对端设备工作异常。"
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUIerr",
+            "Suggestion": {
+                "En": "1. Collect logs, restart the system, and check whether the fault persists. @#AB;2. If the fault persists after the restart, contact technical support engineers of the vendor.",
+                "Zh": "1、收集日志后重启系统，观测异常是否继续 。 @#AB;2、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) CPU IERR.",
+                "Zh": "PCIe 卡 %1 (%2) CPU IERR。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemDisabled",
+            "Suggestion": {
+                "En": "1. Restrart the system to confirm. @#AB;2. Contact the technical support engineers of the vendor.",
+                "Zh": "1、重新启动系统以确认 。 @#AB;2、请联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) memory device has been disabled, Host Sensor name is %3.",
+                "Zh": "PCIe 卡 %1 (%2) 内存设备已被禁用，Host对应Sensor名称为 %3。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUThermalTrip",
+            "Suggestion": {
+                "En": "1. Check the CPU heart sink and fan to ensure proper ventilation. @#AB; 2. Coantact technical support engineers of the manufacturer.",
+                "Zh": "1、检查CPU散热器和风扇， 确保通风良好。@#AB; 2、请联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) temperature is too high, triggering the thermal protection mechanism.",
+                "Zh": "PCIe 卡 %1 (%2) CPU温度过高，触发热保护机制。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUFRB2PostFail",
+            "Suggestion": {
+                "En": "1. Check the connection between the cpu and memeory to ensure that the power supply is stable. @#AB; 2. Restart or replace the faulty  component. @#AB; 3. Contact the technical support engineers of the vendor.",
+                "Zh": "1、检查CPU和内存连接，确保电源稳定 。 @#AB;2、重新启动或更换故障部件。@#AB;3、请联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) CPU FRB2/hang in post failure.",
+                "Zh": "PCIe 卡 %1 (%2) CPU FRB2/hang in post failure。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUPresent",
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) CPU presnect detected.",
+                "Zh": "PCIe 卡 %1 (%2) CPU在位。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUDisabled",
+            "Suggestion": {
+                "En": "1. Check the PCIe card's connections and configuration, ensure the device is not disabled. @#AB; 2. Reboot the system to confirm. @#AB; 3. Contact technical support engineers of the vendor.",
+                "Zh": "1、检查PCIe卡的连接和配置，确保设备未被禁用。 @#AB;2、如果重启系统以确认，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "CPU on the PCIe card %1 (%2) is disabled.",
+                "Zh": "PCIe 卡 %1 (%2) 上的CPU已被禁用。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUThrottled",
+            "Suggestion": {
+                "En": "1. Check CPU temperature and cooling settings, reduce workload or adjust frequency to prevent further performance throttling due to overheating.",
+                "Zh": "1、检查CPU温度和散热设置，降低工作负载或调整频率，防止过热进一步限制性能。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) CPU Throttled.",
+                "Zh": "PCIe 卡 %1 (%2) CPU Throttled。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardCPUUncorMachineCheckException",
+            "Suggestion": {
+                "En": "1. Restart th server to resolve th issue. @#AB;2. Ensure the PCIe card is securely installed.@#AB;3. Check server temperature and cooling systems. @#AB;4. Update PCIe card's drivers and firmware to the latest vesion.@#AB;5. Contact technical support if the problem persists.",
+                "Zh": "1、检查PCie卡是否安装稳固 。 @#AB;2、确保服务器温度正常，检查散热系统。@#AB3、更新PCIe卡的驱动和固件至最新版本。@#AB4、重启服务器以解决问题。@#AB;5、如果问题持续，联系技术支持。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "CPU on the PCIe card %1 (%2) occurs an Uncorrectable machine check exception.",
+                "Zh": "PCIe 卡 %1 (%2) 上的CPU发生不可纠正的机器检查异常。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+         {
+            "EventKeyId": "PCIeCard.PCIeCardCPUCorrMachineCheckError",
+            "Suggestion": {
+                "En": "1. Check whether the PCIe card is securely installed.@#AB;2. Update the dirver and firmware of the PCIe card to the latest version.@#AB;3. Restart the server to rectify the fault.@#AB;4. If the problem persists, contact technical support",
+                "Zh": "1、检查PCie卡是否安装稳固 。 @#AB;2、确保服务器温度正常，检查散热系统。@#AB3、更新PCIe卡的驱动和固件至最新版本。@#AB;4、如果问题持续，联系技术支持"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "CPU on the PCIe card %1 (%2) occurs an correctable machine check exception.",
+                "Zh": "PCIe 卡 %1 (%2) CPU温度过高，触发热保护机制。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMEMGHot",
+            "Suggestion": {
+                "En": "1. Check whether the cooling system and fans are working properly to ensure good ventilation in the chassis.@#AB;2. If the problem persists, contact technical support.",
+                "Zh": "1、检查散热系统和风扇是否正常工作，确保机箱通风良好。@#AB;2、如果问题持续，联系技术支持。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "CPU on the PCIe card %1 (%2) occurs an Uncorrectable machine check exception.",
+                "Zh": "PCIe 卡 %1 (%2) 上的内存设备已进入严重超温状态，超过指定的工作条件。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemCorrECC",
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) memory Correctable ECC, HOST Sensor name is %3.",
+                "Zh": "PCIe 卡 %1 (%2) 内存可纠正的ECC，Host对应Sensor名称为 %3。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMemUncorrECC",
+            "Suggestion": {
+                "En": "1. Power off the server and check whether there is damage or poor contact between the component and its slot.@#AB;2. Replace the component and check for alarms.#AB;3 Contacting support to restore functionality.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换该部件并进一步观察。@#AB;3、联系技术以恢复功能。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) memory UnCorrectable ECC, HOST Sensor name is %3.",
+                "Zh": "PCIe 卡 %1 (%2) 内存不可纠正的ECC，Host对应Sensor名称为 %3。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+         {
+            "EventKeyId": "PCIeCard.PCIeCardPCIPERR",
+            "Suggestion": {
+                "En": "Check the PCI devices, contacting support, or rebooting the system.",
+                "Zh": "检查PCI设备重启系统，联系技术支持或重启系统。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) PCI PERR.",
+                "Zh": "PCIe 卡 %1 (%2) PCI PERR。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPCISERR",
+            "Suggestion": {
+                "En": "1. Check the PCI device and restart the system. @#AB; 2. Contact technical support to restore the function.",
+                "Zh": "1、检查PCI设备重启系统。@#AB;2、联系技术支持以恢复功能。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) PCI SERR.",
+                "Zh": "PCIe 卡 %1 (%2) PCI SERR。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusUncorrErr",
+            "Suggestion": {
+                "En": "Recommend checking bus device connections, contacting support, or rebooting the system to resolve the issue.",
+                "Zh": "建议检查相关总线设备连接，联系技术支持或重启系统以缓解问题。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) bus Uncorrectbale Error detected.",
+                "Zh": "PCIe 卡 %1 (%2) 总线不可纠正错误。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusFatalErr",
+            "Suggestion": {
+                "En": "1. Recommend immediately stopping operations,@#AB;2. Checking hardware connections.@#AB;3. Contacting support to restore funcionality.",
+                "Zh": "1、建议立即停止操作。@#AB;2、检查硬件连接。@#AB;3、联系技术支持以恢复功能。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) bus fatal Error detected.",
+                "Zh": "PCIe 卡 %1 (%2) 总线致命错误。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardBusDegraded",
+            "Suggestion": {
+                "En": "Recommend checking bus connections, contacting support.",
+                "Zh": "建议检查相关总线设备连接，联系技术支持。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) bus degraded error detected.",
+                "Zh": "PCIe 卡 %1 (%2) 检测到总线降级错误。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMETransToOK",
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) ME transiton to OK.",
+                "Zh": "PCIe 卡 %1 (%2) ME转换为OK。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardMETransNonCritFromOk",
+            "Suggestion": {
+                "En": "1. Collect logs, restart the system, and check whether the fault persists. @#AB;2. If the fault persists after the restart, contact technical support engineers of the vendor.",
+                "Zh": "1、收集日志后重启系统，观测异常是否继续 。 @#AB;2、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) ME transiton to Non-critical from OK.",
+                "Zh": "PCIe 卡 %1 (%2) ME转换为OK。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPowerOnSupplyFailure",
+            "Suggestion": {
+                "En": "1. Check whether the component and its slot are damaged or in poor contact. @#AB;2. Replace the component and observe it. @#AB;3. If the problem persists, contact technical support engineers.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换部件并进一步观察。@#AB;3、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "The %1 PCIe card %2 (%3) Power Supply Failure. %4 %5.",
+                "Zh": "%1 PCIe卡 %2 (%3) 电源故障。%4 %5。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardPowerDropSupplyFailure",
+            "Suggestion": {
+                "En": "1. Check whether the component and its slot are damaged or in poor contact. @#AB;2. Replace the component and observe it. @#AB3. If the problem persists, contact technical support engineers.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换部件并进一步观察。@#AB;3、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "The %1 PCIe card %2 (%3) Power Supply Failure. %4 %5.",
+                "Zh": "%1 PCIe卡 %2 (%3) 电源故障。%4 %5。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardFPGAInitFail",
+            "Suggestion": {
+                "En": "1. Collect logs, restart the system, and check whether the fault persists.@#AB;2. If the fault persists after the restart, contact technical support engineers of the vendor.",
+                "Zh": "1、收集日志后重启系统，观测异常是否继续 。 @#AB;2、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) FPGA initialization failure.",
+                "Zh": "PCIe 卡 %1 (%2) FPGA初始化失败。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardFPGAConfigErr",
+            "Suggestion": {
+                "En": "1. Collect logs, restart the system, and check whether the fault persists.@#AB;2. If the fault persists after the restart, contact technical support engineers of the vendor.",
+                "Zh": "1、收集日志后重启系统，观测异常是否继续 。 @#AB;2、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) FPGA configuration error.",
+                "Zh": "PCIe 卡 %1 (%2) FPGA配置错误。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
+            }
+        },
+        {
+            "EventKeyId": "PCIeCard.PCIeCardSocBootDDeviceNotSpec",
+            "Suggestion": {
+                "En": "1. Collect logs, restart the system, and check whether the fault persists.@#AB;2. If the fault persists after the restart, contact technical support engineers of the vendor.",
+                "Zh": "1、收集日志后重启系统，观测异常是否继续 。 @#AB;2、如果重启后异常仍然存在，请同步联系厂商技术支持工程师。"
+            },
+            "Cause": {
+                "En":"",
+                "Zh":""
+            },
+            "Description": {
+                "En": "PCIe card %1 (%2) Soc-Ready boot completed-device not specified.",
+                "Zh": "PCIe 卡 %1 (%2) Soc_Ready 启动完成-未指定设备。"
+            },
+            "Influence": {
+                "En":"",
+                "Zh":""
             }
         },
         {
