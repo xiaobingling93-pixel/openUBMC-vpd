@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.73] - 2025-11-29
+支持DPU卡适配
+添加DPU卡告警信息
+
 ## [1.80.72] - 2025-11-29
 硬盘寿命过低告警阈值修改为可配置的属性
 
