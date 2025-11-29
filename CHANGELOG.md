@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.74] - 2025-11-29
+配置风扇转速Scanner对象的读值精度
+
 ## [1.80.73] - 2025-11-29
 支持DPU卡适配
 添加DPU卡告警信息
