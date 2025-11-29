@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.71] - 2025-11-27
+修复0x28000049、0x08000001、0x08000017告警描述
+
 ## [1.80.70] - 2025-11-27
 修复TPM告警码重复的问题
 
