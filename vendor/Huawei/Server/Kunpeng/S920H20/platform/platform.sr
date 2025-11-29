@@ -231,6 +231,9 @@
         "StorageConfig_0": {
             "VolumesStateAbnormal": 0
         },
+        "StorageSetting_0": {
+            "SSDMediaLifeLeftPercentThreshold": 5
+        },
         "Event_RAIDArrayFailed": {
             "EventKeyId": "System.FailedRAIDArrayDetected",
             "Reading": "<=/StorageConfig_0.VolumesStateAbnormal",

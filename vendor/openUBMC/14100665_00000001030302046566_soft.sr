@@ -1342,7 +1342,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive0.Name",
       "DescArg3": "#/Event_Hdd1MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd1MdWroutLow.Condition",
       "Component": "#/Component_Drive0"
     },
     "Event_Hdd2MdWroutLow": {
@@ -1354,7 +1354,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive1.Name",
       "DescArg3": "#/Event_Hdd2MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd2MdWroutLow.Condition",
       "Component": "#/Component_Drive1"
     },
     "Event_Hdd3MdWroutLow": {
@@ -1366,7 +1366,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive2.Name",
       "DescArg3": "#/Event_Hdd3MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd3MdWroutLow.Condition",
       "Component": "#/Component_Drive2"
     },
     "Event_Hdd4MdWroutLow": {
@@ -1378,7 +1378,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive3.Name",
       "DescArg3": "#/Event_Hdd4MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd4MdWroutLow.Condition",
       "Component": "#/Component_Drive3"
     },
     "Event_Hdd5MdWroutLow": {
@@ -1390,7 +1390,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive4.Name",
       "DescArg3": "#/Event_Hdd5MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd5MdWroutLow.Condition",
       "Component": "#/Component_Drive4"
     },
     "Event_Hdd6MdWroutLow": {
@@ -1402,7 +1402,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive5.Name",
       "DescArg3": "#/Event_Hdd6MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd6MdWroutLow.Condition",
       "Component": "#/Component_Drive5"
     },
     "Event_Hdd7MdWroutLow": {
@@ -1414,7 +1414,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive6.Name",
       "DescArg3": "#/Event_Hdd7MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd7MdWroutLow.Condition",
       "Component": "#/Component_Drive6"
     },
     "Event_Hdd8MdWroutLow": {
@@ -1426,7 +1426,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive7.Name",
       "DescArg3": "#/Event_Hdd8MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd8MdWroutLow.Condition",
       "Component": "#/Component_Drive7"
     },
     "Event_Hdd9MdWroutLow": {
@@ -1438,7 +1438,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive8.Name",
       "DescArg3": "#/Event_Hdd9MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd9MdWroutLow.Condition",
       "Component": "#/Component_Drive8"
     },
     "Event_Hdd10MdWroutLow": {
@@ -1450,7 +1450,7 @@
       "Enabled": true,
       "DescArg2": "#/Component_Drive9.Name",
       "DescArg3": "#/Event_Hdd10MdWroutLow.Reading",
-      "DescArg4": "5",
+      "DescArg4": "#/Event_Hdd10MdWroutLow.Condition",
       "Component": "#/Component_Drive9"
     },
     "Event_Drive1RebuildStart": {
