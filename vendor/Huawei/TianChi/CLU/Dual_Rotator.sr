@@ -75,7 +75,10 @@
             "Type": 0,
             "Period": 3000,
             "Debounce": "None",
-            "Value": 0
+            "Value": 0,
+            "@Precision": {
+                "Value": 256
+            }
         },
         "ThresholdSensor_FanRspeed": {
             "AssertMask": 0,
@@ -92,7 +95,10 @@
             "Type": 0,
             "Period": 3000,
             "Debounce": "None",
-            "Value": 0
+            "Value": 0,
+            "@Precision": {
+                "Value": 256
+            }
         },
         "ThresholdSensor_FanFspeed": {
             "AssertMask": 0,
