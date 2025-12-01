@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.77] - 2025-12-1
+修改HCCS断链告警信息
+
 ## [1.80.76] - 2025-12-1
 新增光模块拔出告警，扩展板RTC电池电压低告警，单板腐蚀告警，电源转接板温度读取失败告警，电源转接板功率读取失败告警，电源转接板cpld自检异常告警
 
