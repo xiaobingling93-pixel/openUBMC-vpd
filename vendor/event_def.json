@@ -2318,6 +2318,42 @@
             "EventName": "PEUOutLowerVoltage"
         },
         {
+            "EventCode": "0x19000011",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PEU.PEUAccessTemperatureFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PEUAccessTemperatureFailure"
+        },
+        {
+            "EventCode": "0x19000013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PEU.PEUAccessPowerFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PEUAccessPowerFailure"
+        },
+        {
+            "EventCode": "0x19000017",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PEU.PEUCPLDSelfTestFailureMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PEUCPLDSelfTestFailureMajor"
+        },
+        {
             "EventCode": "0x1900000B",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -5162,6 +5198,18 @@
             "EventName": "MainboardVideoControlFault"
         },
         {
+            "EventCode": "0x100F0001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardCorrosion",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "MainboardCorrosion"
+        },
+        {
             "EventCode": "0x1A000067",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -5184,6 +5232,18 @@
             "SeverityId": 3,
             "ActionId": 0,
             "EventName": "BMCUncorrectableErr"
+        },
+        {
+            "EventCode": "0x5F000003",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "OpticalModule.OpticalModuleRemoved",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "OpticalModuleRemoved"
         },
         {
             "EventCode": "0x5F000005",
@@ -5532,6 +5592,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "ExpBoardPowerFailure"
+        },
+        {
+            "EventCode": "0x5D000023",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "ExpandBoard.ExpBoardRTCLowerVoltage",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ExpBoardRTCLowerVoltage"
         },
         {
             "EventCode": "0x0500001D",
@@ -9439,6 +9511,63 @@
             "Cause": {
                 "En": "The power adapter board is faulty.",
                 "Zh": "电源转接板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Restart the {BMC}. @#AB;2. Remove and reconnect the power cable or remove and reinstall the board. @#AB;3.Replace the component and observe further.",
+                "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PEU.PEUAccessTemperatureFailure",
+            "Description": {
+                "En": "Failed to read the %2 temperature of the power adapter board %1.",
+                "Zh": "电源转接板%1 %2温度读取失败。"
+            },
+            "Influence": {
+                "En": "The system cannot monitor temperatures property or report alarms upon temperature exceptions.",
+                "Zh": "无法正常监控温度，如果温度异常无法及时告警。"
+            },
+            "Cause": {
+                "En": "1. The link between the power adapter board sensor and the {BMC} is abnormal.@#AB;2. Failure of the temperature sensor on the power adapter board.",
+                "Zh": "1、电源转接板上的传感器与{BMC}间链路异常。@#AB;2、电源转接板上的温度传感器失效。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and power on the system and check whether the fault is resolved. @#AB;2.If the fault persists, replace the component and observer further.",
+                "Zh": "1、执行整机先下电后上电，观察故障是否恢复。@#AB;2、如无法恢复，更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PEU.PEUAccessPowerFailure",
+            "Description": {
+                "En": "Failed to read the power of the power adapter board %1.",
+                "Zh": "电源转接板%1功率读取失败。"
+            },
+            "Influence": {
+                "En": "The power cannot be monitored properly.",
+                "Zh": "无法正常监控功率。"
+            },
+            "Cause": {
+                "En": "The power sensor on the power adapter board is faulty.",
+                "Zh": "电源转接板上的设备功率传感器故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check the connection of the power adapter board. @#AB;2.Replace the power adapter board.",
+                "Zh": "1、检查电源转接板连接状态。@#AB;2、更换电源转接板。"
+            },
+            "EventKeyId": "PEU.PEUCPLDSelfTestFailureMajor",
+            "Description": {
+                "En": "The self-check result of CPLD %2 of the power adapter board %1 is abnormal.",
+                "Zh": "电源转接板%1CPLD%2自检结果异常。"
+            },
+            "Influence": {
+                "En": "It may lead to system shutdown.",
+                "Zh": "可能导致整机业务下电。"
+            },
+            "Cause": {
+                "En": "1. The power supply is abnormal.@#AB;2. The power adapter board is faulty.",
+                "Zh": "1、电源供电异常。@#AB;2、电源转接板器件异常。"
             }
         },
         {
@@ -14174,6 +14303,25 @@
         },
         {
             "Suggestion": {
+                "En": "Collect related event information and contact technical support engineers ro replace the node.",
+                "Zh": "请收集相关事件信息和日志，然后联系技术支持工程师更换节点。"
+            },
+            "EventKeyId": "Mainboard.MainboardCorrosion",
+            "Description": {
+                "En": "%1 occurs in system circuits.",
+                "Zh": "系统电路发生%1故障。"
+            },
+            "Influence": {
+                "En": "Affecting system Performance or reliability.",
+                "Zh": "影响系统可靠性和可用性。"
+            },
+            "Cause": {
+                "En": "1. Short circuit caused by sulfidation.@#AB;2. Short circuit caused by wet dust.@#AB;3. Open circuit caused by corrosion.",
+                "Zh": "1. 硫化导致电路短路。@#AB;2. 集尘导致电路短路。.@#AB;3. 腐蚀导致电路断路。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "Log in to the {BMC} WebUI and clear the system events data on the System Events page",
                 "Zh": "请登录{BMC} WebUI，在“系统事件”页面清除系统事件"
             },
@@ -14208,6 +14356,25 @@
             "Cause": {
                 "En": "1. The BMC card is faulty.@#AB;2. The mainboard is faulty.",
                 "Zh": "1、BMC卡故障。@#AB;2、主板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "OpticalModule.OpticalModuleRemoved",
+            "Description": {
+                "En": "Optical module %1 removed.",
+                "Zh": "光模块 %1 拔出。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
             }
         },
         {
@@ -14722,6 +14889,25 @@
             "Cause": {
                 "En": "1. Monitoring signal failure.@#AB;2. Power supply is abnormal.",
                 "Zh": "1、监测信号故障。@#AB;2、电源异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the RTC battery.@#AB;2. Replace the expand board.Then check whether the alarm is cleared.",
+                "Zh": "1、更换RTC电池。@#AB;2、更换扩展板，检查时钟告警是否消除。"
+            },
+            "EventKeyId": "ExpandBoard.ExpBoardRTCLowerVoltage",
+            "Description": {
+                "En": "Lower voltage of RTC battery on the expand board %1.",
+                "Zh": "扩展板%1RTC电池电压低。"
+            },
+            "Influence": {
+                "En": "The server clock is affected.",
+                "Zh": "可能影响服务器时钟。"
+            },
+            "Cause": {
+                "En": "1. The RTC battery is faulty or the battery level is low.@#AB;2. The voltage detection link is abnormal.",
+                "Zh": "1、RTC电池故障或者电量低。@#AB;2、电压检测链路故障。"
             }
         },
         {
