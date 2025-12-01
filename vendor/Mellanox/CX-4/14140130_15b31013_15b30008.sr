@@ -13,6 +13,7 @@
         },
         "I2cMux_Chan": {
             "Chips": [
+                "Chip_TempChip",
                 "Pca9555_PCIe"
             ]
         }
@@ -33,6 +34,75 @@
             "Mask": 7,
             "Type": 0,
             "Value": 0
+        },
+        "Chip_TempChip": {
+            "Address": 62,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 100,
+            "ReadTmout": 100,
+            "HealthStatus": 0
+        },
+        "Scanner_NICTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 65535,
+            "Period": 1000,
+            "Type": 0,
+            "Debounce": "#/MidAvg_NICTemp"
+        },
+        "MidAvg_NICTemp": {
+            "WindowSize": 4,
+            "DefaultValue": 20,
+            "IsSigned": true
+        },
+        "ThresholdSensor_Temp": {
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_NICTemp.Value",
+            "ReadingStatus": "<=/Scanner_NICTemp.Status",
+            "AssertMask": 128,
+            "DeassertMask": 28800,
+            "ReadingMask": 2056,
+            "Linearization": 0,
+            "M": 100,
+            "RBExp": 224,
+            "UpperNoncritical": 105,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
+            "Reading": "<=/Scanner_NICTemp.Value |> expr(($1 >= 128) ? ($1 - 256) : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
         "ThresholdSensor_OpticalModuleTemp": {
             "AssertMask": 128,
@@ -264,13 +334,34 @@
         },
         "Event_TempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/Scanner_NICTemp.Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name"
         },
         "Event_OMOverTempInfo": {
             "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
             "Condition": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
             "Hysteresis": "#/ThresholdSensor_OpticalModuleTemp.PositiveHysteresis",
             "LedFaultCode": "q$$"
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "MCX416A-CCAT网卡调速",
+            "MonitoringStatus": "<=/Scanner_NICTemp.Status",
+            "MonitoringValue": "<=/Scanner_NICTemp.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 90,
+            "MaxAllowedTemperatureCelsius": 100,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255
         },
         "CoolingRequirement_1_66": {
             "RequirementId": "${Slot} |> expr((66 << 8) | $1)",

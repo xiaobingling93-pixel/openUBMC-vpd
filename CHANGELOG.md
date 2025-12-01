@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.75] - 2025-12-1
+支持MCX416A-CCAT带外获取温度
+
 ## [1.80.74] - 2025-11-29
 配置风扇转速Scanner对象的读值精度
 
