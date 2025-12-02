@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.56",
+    "Version": "1.0.57",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4392,6 +4392,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "LiquidOutletTempSensorAbnormal"
+        },
+        {
+            "EventCode": "0x5100001D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.ObtainLiquidOutletTempFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "ObtainLiquidOutletTempFailure"
         },
         {
             "EventCode": "0x28000045",
@@ -16029,6 +16041,25 @@
             "Cause": {
                 "En": "1. The liquid-cooled door temperature sensor is absent. @#AB;2. The access channel of the liquid-cooled door temperature sensor is abnormal.",
                 "Zh": "1、 液冷门温度传感器不在位。@#AB;2、 液冷门温度传感器访问通道异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the liquid-cooled door temperature sensor is installed. @#AB;2. Replace the liquid-cooled door temperature sensor.",
+                "Zh": "1. 检查液冷门温度传感器是否安装。 @#AB;2. 更换液冷门温度传感器。"
+            },
+            "EventKeyId": "Rack.ObtainLiquidOutletTempFailure",
+            "Description": { 
+                "En": "Failed to obtain liquid-cooled door outlet temperature.",
+                "Zh": "液冷门出口温度读取失败。"
+            },
+            "Influence": {
+                "En": "The outlet temperature of the liquid-cooled door cannot be sensed.",
+                "Zh": "无法检测液冷门出口温度。"
+            },
+            "Cause": {
+                "En": "1. The liquid-cooled door temperature sensor is absent. @#AB;2. The access channel of the liquid-cooled door temperature sensor is abnormal.",
+                "Zh": "1. 液冷门温度传感器不在位。@#AB;2. 液冷门温度传感器访问通道异常。"
             }
         }
     ]

@@ -448,3 +448,4 @@ PCIeCard.DPUMainChipFaultWarning
 PCIeCard.DPUMainChipFaultCritical
 PCIeCard.DPUFaultWarning
 PCIeCard.DPUFaultCritical
+Rack.ObtainLiquidOutletTempFailure
