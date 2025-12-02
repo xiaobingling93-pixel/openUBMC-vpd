@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.78] - 2025-12-2
+修复SP681网卡光模块负温告警问题
+
 ## [1.80.77] - 2025-12-1
 修改HCCS断链告警信息
 
