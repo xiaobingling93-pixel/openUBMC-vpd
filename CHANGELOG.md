@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.81] - 2025-12-02
+修复0x100000C9、0x1A000043告警
+
 ## [1.80.80] - 2025-12-02
 新增液冷门传感器告警
 

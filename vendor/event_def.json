@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.57",
+    "Version": "1.0.58",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5882,7 +5882,7 @@
             "EventName": "SwitchModulePower"
         },
         {
-            "EventCode": "0x100000c9",
+            "EventCode": "0x100000C9",
             "ReportChannel": 65535,
             "OldEventCode": "",
             "EventType": 0,
@@ -7234,7 +7234,7 @@
             "EventKeyId": "BMC.BMCNandFlashOverWrite",
             "Description": {
                 "En": "The data written to the NAND flash in last 15 days exceeds %1G.",
-                "Zh": "过去的15天内Nand Flash的写入量超过 %1。"
+                "Zh": "过去的15天内Nand Flash的写入量超过%1G。"
             },
             "Influence": {
                 "En": "The service life of the NAND flash memory is affected.",
