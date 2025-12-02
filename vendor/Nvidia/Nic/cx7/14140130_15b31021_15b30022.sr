@@ -221,7 +221,6 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -233,7 +232,6 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -333,8 +331,8 @@
         "CoolingRequirement_1_66": {
             "RequirementId": "${Slot} |> expr((66 << 8) | $1)",
             "Description": "MCX755106AS-HEAT网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? 1 : 0) : ($2 >= 255 ? 1 : 0))",
-            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 == 32768 || $2 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 55,
             "MaxAllowedTemperatureCelsius": 75,

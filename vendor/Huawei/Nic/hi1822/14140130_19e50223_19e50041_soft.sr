@@ -115,8 +115,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr($1 > $2 ? $1 : $2)",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) ? 32768 : ($1 > $2 ? $1 : $2)) |> expr($1 > 255 ? 3 : 0)"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255) ? 3 : 0)"
         },
         "Entity_PCIeCard": {
             "Id": 11,
@@ -162,23 +162,23 @@
             "DescArg5": "#/ThresholdSensor_Hi1822Temp.UpperNoncritical"
         },
         "Event_OM0OverTempInfo": {
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
             "DescArg3": "#/OpticalModule_0.ChannelNum",
-            "DescArg4": "#/OpticalModule_0.TemperatureCelsius",
+            "DescArg4": "#/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "DescArg5": "75",
             "Hysteresis": 2,
             "Component": "#/Component_PCIeCard"
         },
         "Event_OM1OverTempInfo": {
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",
             "DescArg3": "#/OpticalModule_1.ChannelNum",
-            "DescArg4": "#/OpticalModule_1.TemperatureCelsius",
+            "DescArg4": "#/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "DescArg5": "75",
             "Hysteresis": 2,
             "Component": "#/Component_PCIeCard"

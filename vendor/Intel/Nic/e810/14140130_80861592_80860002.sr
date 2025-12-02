@@ -190,7 +190,6 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -202,7 +201,6 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
@@ -333,8 +331,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr($1 > $2 ? $1 : $2)",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) ? 32768 : ($1 > $2 ? $1 : $2)) |> expr($1 > 255 ? 3 : 0)"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255) ? 3 : 0)"
         },
         "CoolingRequirement_1_55": {
             "RequirementId": "${Slot} |> expr((55 << 8) | $1)",

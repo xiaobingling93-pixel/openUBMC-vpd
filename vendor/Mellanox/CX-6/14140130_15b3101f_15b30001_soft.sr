@@ -101,7 +101,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 >= 255 ? 0 : $1)",
             "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_1.Presence |> expr($2 == 0 ? 3 : ($1 > 255 ? 3 : 0))"
         },
         "ThresholdSensor_OpticalModuleTemp2": {
@@ -123,7 +123,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_2.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr($1 >= 255 ? 0 : $1)",
             "ReadingStatus": "<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_2.Presence |> expr($2 == 0 ? 3 : ($1 > 255 ? 3 : 0))"
         },
         "Entity_PCIeCard": {

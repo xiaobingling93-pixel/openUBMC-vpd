@@ -206,7 +206,6 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
@@ -219,7 +218,6 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_2",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,

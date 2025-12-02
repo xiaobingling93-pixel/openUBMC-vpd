@@ -106,8 +106,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2)",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) ? 32768 : ($1 > $2 ? $1 : $2)) |> expr($1 > 255 ? 3 : 0)"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255) ? 3 : 0)"
         },
         "Fru_PCIeCard": {
             "PcbVersion": ".A",
@@ -269,7 +269,7 @@
             "DescArg2": "#/Component_PCIeCard.Name"
         },
         "Event_OMOverTempInfo": {
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? $1 : $2) |> expr($1 > 255 ? 30 : $1)",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
             "@Default": {
                 "Condition": 75
             },
