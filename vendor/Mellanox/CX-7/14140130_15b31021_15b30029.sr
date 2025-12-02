@@ -221,7 +221,6 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
@@ -290,8 +289,8 @@
         "CoolingRequirement_1_95": {
             "RequirementId": "${Slot} |> expr((95 << 8) | $1)",
             "Description": "CX7网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_1.Presence; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 1 && $2 >= 255) ? 1 : 0)",
-            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius",
+            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 >= 255 ? 0 : $1)",
             "TargetTemperatureCelsius": 55,
             "MaxAllowedTemperatureCelsius": 75,
             "TargetTemperatureRangeCelsius": [],

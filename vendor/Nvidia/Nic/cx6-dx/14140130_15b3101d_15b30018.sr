@@ -221,7 +221,7 @@
             "RequirementId": "${Slot} |> expr((78 << 8) | $1)",
             "Description": "MCX623105AN-VDAT光模块调速",
             "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 >= 255 ? 1 : 0)",
-            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 0 : $1)",
             "TargetTemperatureCelsius": 60,
             "MaxAllowedTemperatureCelsius": 75,
             "TargetTemperatureRangeCelsius": [],
@@ -291,7 +291,6 @@
         "OpticalModule_0": {
             "@Parent": "NetworkPort_0",
             "ChannelNum": 1,
-            "TemperatureCelsius": 65535,
             "PowerState": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,

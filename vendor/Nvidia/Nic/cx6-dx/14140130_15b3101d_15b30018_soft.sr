@@ -91,8 +91,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_0.Presence |> expr($2 == 0 ? 32768 : (($1 > 255 ? 3 : $1)))"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 0 : $1)",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_0.Presence |> expr($2 == 0 ? 32768 : (($1 >= 255 ? 3 : $1)))"
         },
         "Entity_PCIeCard": {
             "Id": 11,
@@ -116,7 +116,7 @@
             "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
         "Event_OM0OverTempInfo": {
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/PCIeCard_1.DeviceName",

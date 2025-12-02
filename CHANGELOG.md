@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.79] - 2025-12-02
+修复部分网卡光模块下电时还有数值问题
+
 ## [1.80.78] - 2025-12-2
 修复SP681网卡光模块负温告警问题
 

@@ -133,8 +133,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4)))",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.Presence |> expr($5 == 0 && $6 == 0 && $7 == 0 && $8 == 0 ? 32768 : ($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4)))) |> expr($1 > 255 ? 3 : 0)"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? (($1 >= 255 ? 0 : $1) >= ($3 >= 255 ? 0 : $3) ? (($1 >= 255 ? 0 : $1) >= ($4 >= 255 ? 0 : $4) ? ($1 >= 255 ? 0 : $1) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))) : (($2 >= 255 ? 0 : $2) >= ($3 >= 255 ? 0 : $3) ? (($2 >= 255 ? 0 : $2) >= ($4 >= 255 ? 0 : $4) ? ($2 >= 255 ? 0 : $2) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))))",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence;<=/OpticalModule_2.Presence;<=/OpticalModule_3.Presence |> expr(($5 == 0 && $6 == 0 && $7 == 0 && $8 == 0) || ($1 >= 255 && $2 >= 255 && $3 >= 255 && $4 >= 255) ? 3 : 0)"
         },
         "Entity_PCIeCard": {
             "Id": 11,

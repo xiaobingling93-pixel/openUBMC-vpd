@@ -115,7 +115,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 >= 255 ? 0 : $1)",
             "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_1.Presence |> expr(($2 == 0) ? 32768 : $1) |> expr($1 > 255 ? 3 : 0)"
         },
         "Entity_PCIeCard": {
