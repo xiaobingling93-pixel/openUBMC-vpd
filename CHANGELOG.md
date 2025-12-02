@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.80] - 2025-12-02
+新增液冷门传感器告警
+
 ## [1.80.79] - 2025-12-02
 修复部分网卡光模块下电时还有数值问题
 
