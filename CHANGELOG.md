@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.88] - 2025-12-3
+部分四网口网卡，将描述信息从Dual port card改成Quad port card
+
 ## [1.80.87] - 2025-12-3
 修复0x0D000015、0x12000005告警，以及MCX623106AN-CDAT带外获取信息失败
 
