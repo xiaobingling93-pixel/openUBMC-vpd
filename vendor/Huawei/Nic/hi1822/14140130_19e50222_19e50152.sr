@@ -115,7 +115,7 @@
             "Name": "SP623Q",
             "BoardName": "SP623Q",
             "BoardID": 255,
-            "Description": "25Gb/s Dual port card",
+            "Description": "25Gb/s Quad port card",
             "FunctionClass": 2,
             "VendorID": 6629,
             "DeviceID": 546,
