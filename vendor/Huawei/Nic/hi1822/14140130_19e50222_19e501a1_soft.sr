@@ -15,7 +15,7 @@
             "StorageType": "EepromV2"
         },
         "Component_ComBMC": {
-            "FruId": 255,
+            "FruId": "<=/Fru_PCIeCard.FruId",
             "Instance": 1,
             "Type": 26,
             "Name": "BMC",

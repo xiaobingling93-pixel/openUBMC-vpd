@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.84] - 2025-12-03
+修复SP625D网卡查询FruId为0xff的问题
+
 ## [1.80.83] - 2025-12-03
 修复NPU卡传感器温度不显示问题
 
