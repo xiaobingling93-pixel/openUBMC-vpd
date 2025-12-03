@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.82] - 2025-12-03
+适配网卡E810XXVDA4G2P5
+
 ## [1.80.81] - 2025-12-02
 修复0x100000C9、0x1A000043告警
 

@@ -269,3 +269,4 @@ Huawei/TianChi/BCU/memory_2p8ch16_1_soft.sr
 Huawei/TianChi/BCU/memory_2p8ch16_1.sr
 Customer/DPU/14140130_HyperCard_0.sr
 Customer/DPU/14140130_HyperCard_1.sr
+Intel/Nic/e810/14140130_80861593_80860005.sr
