@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.87] - 2025-12-3
+修复0x0D000015、0x12000005告警，以及MCX623106AN-CDAT带外获取信息失败
+
 ## [1.80.86] - 2025-12-3
 修改0x1A000055修复建议
 
