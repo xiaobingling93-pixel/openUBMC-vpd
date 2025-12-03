@@ -365,7 +365,7 @@
             "Condition": 253
         },
         "Event_InspectFail": {
-            "EventKeyId": "PCieCard.PCIeCardInspectionFailure",
+            "EventKeyId": "PcieCard.PCIeCardInspectionFailure",
             "Reading": "<=/DPUCard_1.Health",
             "Condition": 1,
             "OperatorId": 5,

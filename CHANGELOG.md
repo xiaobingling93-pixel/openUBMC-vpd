@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.85] - 2025-12-03
+修复pcie卡告警无法产生
+
 ## [1.80.84] - 2025-12-03
 修复SP625D网卡查询FruId为0xff的问题
 
