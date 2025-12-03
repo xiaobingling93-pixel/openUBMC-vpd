@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.86] - 2025-12-3
+修改0x1A000055修复建议
+
 ## [1.80.85] - 2025-12-03
 修复pcie卡告警无法产生
 
