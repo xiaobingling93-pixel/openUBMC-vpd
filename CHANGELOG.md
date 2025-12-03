@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.83] - 2025-12-03
+修复NPU卡传感器温度不显示问题
+
 ## [1.80.82] - 2025-12-03
 适配网卡E810XXVDA4G2P5
 
