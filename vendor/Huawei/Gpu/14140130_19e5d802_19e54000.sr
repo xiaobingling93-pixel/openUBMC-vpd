@@ -394,6 +394,39 @@
             "MaxAllowedTemperatureCelsius": 110,
             "SensorName": "#/ThresholdSensor_GPUVRDTemp.SensorName"
         },
+        "CoolingArea_1_97": {
+            "AreaId": 97,
+            "RequirementIdx": 97,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_98": {
+            "AreaId": 98,
+            "RequirementIdx": 98,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "CoolingArea_1_99": {
+            "AreaId": 99,
+            "RequirementIdx": 99,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
             "Condition": 1
