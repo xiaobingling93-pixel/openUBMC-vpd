@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.91] - 2025-12-4
+新增主板电压过高和过低告警
+
 ## [1.80.90] - 2025-12-4
 新增告警码
 
