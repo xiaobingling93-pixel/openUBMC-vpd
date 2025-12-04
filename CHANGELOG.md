@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.89] - 2025-12-4
+修复0x000000BB告警描述问题
+
 ## [1.80.88] - 2025-12-3
 部分四网口网卡，将描述信息从Dual port card改成Quad port card
 
