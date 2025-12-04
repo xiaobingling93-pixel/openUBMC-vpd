@@ -378,7 +378,7 @@
         "Event_OMTempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1,
-            "Reading": "<=/OpticalModule_0.ReadingCelsius;<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_2.ReadingCelsius;<=/OpticalModule_3.ReadingCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4))) |> expr($1 > 255 ? 3 : 0)",
+            "Reading": "<=/OpticalModule_0.ReadingCelsius;<=/OpticalModule_1.ReadingCelsius;<=/OpticalModule_2.ReadingCelsius;<=/OpticalModule_3.ReadingCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4))) |> expr($1 > 255 ? 1 : 0)",
             "OperatorId": 5,
             "Enabled": true,
             "Component": "#/Component_PCIeCard",
