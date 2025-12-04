@@ -2524,7 +2524,7 @@
             "Reading": "<=/MemoryChannel_1.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "0",
             "Component": "#/Component_ComCpu1"
         },
@@ -2532,7 +2532,7 @@
             "Reading": "<=/MemoryChannel_2.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "1",
             "Component": "#/Component_ComCpu1"
         },
@@ -2540,7 +2540,7 @@
             "Reading": "<=/MemoryChannel_3.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "2",
             "Component": "#/Component_ComCpu1"
         },
@@ -2548,7 +2548,7 @@
             "Reading": "<=/MemoryChannel_4.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "3",
             "Component": "#/Component_ComCpu1"
         },
@@ -2556,7 +2556,7 @@
             "Reading": "<=/MemoryChannel_5.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "4",
             "Component": "#/Component_ComCpu1"
         },
@@ -2564,7 +2564,7 @@
             "Reading": "<=/MemoryChannel_6.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "5",
             "Component": "#/Component_ComCpu1"
         },
@@ -2572,7 +2572,7 @@
             "Reading": "<=/MemoryChannel_7.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "6",
             "Component": "#/Component_ComCpu1"
         },
@@ -2580,7 +2580,7 @@
             "Reading": "<=/MemoryChannel_8.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "7",
             "Component": "#/Component_ComCpu1"
         },
@@ -2588,7 +2588,7 @@
             "Reading": "<=/MemoryChannel_9.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "8",
             "Component": "#/Component_ComCpu1"
         },
@@ -2596,7 +2596,7 @@
             "Reading": "<=/MemoryChannel_10.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "9",
             "Component": "#/Component_ComCpu1"
         },
@@ -2604,7 +2604,7 @@
             "Reading": "<=/MemoryChannel_11.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "A",
             "Component": "#/Component_ComCpu1"
         },
@@ -2612,7 +2612,7 @@
             "Reading": "<=/MemoryChannel_12.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "1",
+            "DescArg1": "0",
             "DescArg2": "B",
             "Component": "#/Component_ComCpu1"
         },
@@ -2620,7 +2620,7 @@
             "Reading": "<=/MemoryChannel_13.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "0",
             "Component": "#/Component_ComCpu2"
         },
@@ -2628,7 +2628,7 @@
             "Reading": "<=/MemoryChannel_14.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "1",
             "Component": "#/Component_ComCpu2"
         },
@@ -2636,7 +2636,7 @@
             "Reading": "<=/MemoryChannel_15.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "2",
             "Component": "#/Component_ComCpu2"
         },
@@ -2644,7 +2644,7 @@
             "Reading": "<=/MemoryChannel_16.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "3",
             "Component": "#/Component_ComCpu2"
         },
@@ -2652,7 +2652,7 @@
             "Reading": "<=/MemoryChannel_17.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "4",
             "Component": "#/Component_ComCpu2"
         },
@@ -2660,7 +2660,7 @@
             "Reading": "<=/MemoryChannel_18.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "5",
             "Component": "#/Component_ComCpu2"
         },
@@ -2668,7 +2668,7 @@
             "Reading": "<=/MemoryChannel_19.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "6",
             "Component": "#/Component_ComCpu2"
         },
@@ -2676,7 +2676,7 @@
             "Reading": "<=/MemoryChannel_20.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "7",
             "Component": "#/Component_ComCpu2"
         },
@@ -2684,7 +2684,7 @@
             "Reading": "<=/MemoryChannel_21.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "8",
             "Component": "#/Component_ComCpu2"
         },
@@ -2692,7 +2692,7 @@
             "Reading": "<=/MemoryChannel_22.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "9",
             "Component": "#/Component_ComCpu2"
         },
@@ -2700,7 +2700,7 @@
             "Reading": "<=/MemoryChannel_23.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "A",
             "Component": "#/Component_ComCpu2"
         },
@@ -2708,7 +2708,7 @@
             "Reading": "<=/MemoryChannel_24.DiagnosticFault",
             "OperatorId": 5,
             "Enabled": true,
-            "DescArg1": "2",
+            "DescArg1": "1",
             "DescArg2": "B",
             "Component": "#/Component_ComCpu2"
         },
