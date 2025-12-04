@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.90] - 2025-12-4
+新增告警码
+
 ## [1.80.89] - 2025-12-4
 修复0x000000BB告警描述问题
 

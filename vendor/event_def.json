@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.58",
+    "Version": "1.0.59",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -24,6 +24,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "EnvironmentMonitoringModuleNotDetected"
+        },
+        {
+            "EventCode": "0x4D120001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Node.NodeRequestRestart",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "NodeRequestRestart"
         },
         {
             "EventCode": "0x5300000B",
@@ -9087,6 +9099,25 @@
             "Cause": {
                 "En": "1. Connector cable not inserted/failure.@#AB;2. Environmental monitoring module not installed/failure.@#AB;3. Connector failure.@#AB;4. Main management module failure.",
                 "Zh": "1、连接器线缆未插入/故障。@#AB;2、环境监控模块未安装/故障。@#AB;3、连接器故障。@#AB;4、主管理模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "None.",
+                "Zh": "无。"
+            },
+            "EventKeyId": "Node.NodeRequestRestart",
+            "Description": {
+                "En": "Request for %2 restarting of %1.",
+                "Zh": "请求%1 %2重启。"
+            },
+            "Influence": {
+                "En": "None.",
+                "Zh": "无。"
+            },
+            "Cause": {
+                "En": "The Node requests a restart.",
+                "Zh": "节点请求复位。"
             }
         },
         {
