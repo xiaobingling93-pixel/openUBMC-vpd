@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.59",
+    "Version": "1.0.60",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6228,6 +6228,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "RMCCPLDSelfTestFailure"
+        },
+        {
+            "EventCode": "0x100F0073",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardLowerVoltageMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MainboardLowerVoltageMajor"
+        },
+        {
+            "EventCode": "0x100F0075",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardOverVoltageMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MainboardOverVoltageMajor"
         }
     ],
     "EventDescription": [
@@ -16092,6 +16116,44 @@
             "Cause": {
                 "En": "1. The liquid-cooled door temperature sensor is absent. @#AB;2. The access channel of the liquid-cooled door temperature sensor is abnormal.",
                 "Zh": "1. 液冷门温度传感器不在位。@#AB;2. 液冷门温度传感器访问通道异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1.Collect related event information and contact technical support engineers to replace the %1.",
+                "Zh": "1、请收集相关事件信息，然后联系技术支持工程师更换%1。"
+            },
+            "EventKeyId": "Mainboard.MainboardLowerVoltageMajor",
+            "Description": {
+                "En": "The current voltage (%2 V) of monitoring point %1 is lower than the low-voltage threshold (%3 V).",
+                "Zh": "%1监测点当前电压（%2V）低于低压门限电压（%3V）。"
+            },
+            "Influence": {
+                "En": "The power supply to the node is affected, and the system may be powered off unexpectedly.",
+                "Zh": "影响主板供电，可能导致系统异常下电。"
+            },
+            "Cause": {
+                "En": "The node is faulty.",
+                "Zh": "主板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1.Collect related event information and contact technical support engineers to replace the %1.",
+                "Zh": "1、请收集相关事件信息，然后联系技术支持工程师更换%1。"
+            },
+            "EventKeyId": "Mainboard.MainboardOverVoltageMajor",
+            "Description": {
+                "En": "The current voltage (%2 V) of monitoring point %1 is higher than the high-voltage threshold (%3 V).",
+                "Zh": "%1监测点当前电压（%2V）高于高压门限电压（%3V）。"
+            },
+            "Influence": {
+                "En": "The power supply to the node is affected, and the system may be powered off unexpectedly.",
+                "Zh": "影响主板供电，可能导致系统异常下电。"
+            },
+            "Cause": {
+                "En": "The node is faulty.",
+                "Zh": "主板故障。"
             }
         }
     ]

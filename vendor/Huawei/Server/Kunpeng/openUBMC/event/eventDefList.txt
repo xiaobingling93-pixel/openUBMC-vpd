@@ -449,3 +449,5 @@ PCIeCard.DPUMainChipFaultCritical
 PCIeCard.DPUFaultWarning
 PCIeCard.DPUFaultCritical
 Rack.ObtainLiquidOutletTempFailure
+Mainboard.MainboardLowerVoltageMajor
+Mainboard.MainboardOverVoltageMajor
