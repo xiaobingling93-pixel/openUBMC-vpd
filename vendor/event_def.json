@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.60",
+    "Version": "1.0.61",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -18,7 +18,7 @@
             "ReportChannel": 65535,
             "OldEventCode": "",
             "EventType": 0,
-            "LifeCycleId": 1,
+            "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "Rack.EnvironmentMonitoringModuleNotDetected",
             "SeverityId": 2,
@@ -6846,9 +6846,8 @@
         },
         {
             "Suggestion": {
-                "En": "1. Restart the {BMC}.@#AB;2. If the alarm persists after the restart, upgrade the Self-description Record firmware.@#AB;3. If the alarm persists after the firmware upgraded,check for cable connection exceptions if components are connected by cables.@#AB;4. If cable connection is normal or does not apply here, replace the faulty component.",
-
-                "Zh": "1、重启{BMC}。@#AB;2、若重启后未恢复，升级Self-description Record固件。@#AB;3、若升级后仍未恢复，如果组件存在连接线缆，则排查线缆是否接触异常或故障。@AB;4、如果组件不存在线缆，或排查线缆无异常，则更换故障组件。"
+                "En": "1. Restart the {BMC}.@#AB;2. If the alarm persists after the restart, upgrade the Self-description Record firmware.@#AB;3. If the alarm persists after the firmware is upgraded, check for cable connection exceptions if components are connected by cables.@#AB;4. If cable connection is normal or does not apply here, replace the faulty component.",
+                "Zh": "1、重启{BMC}。@#AB;2、若重启{BMC}未恢复，升级Self-description Record固件。@#AB;3、若升级固件未恢复，如果组件存在连接线缆，则排查线缆是否接触异常或故障。@AB;4、如果组件不存在线缆，或排查线缆无异常，则更换故障组件。"
             },
             "EventKeyId": "BMC.AccessCSRFailure",
             "Description": {

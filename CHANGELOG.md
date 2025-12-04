@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.93] - 2025-12-4
+修复0x1A000055告警描述问题
+
 ## [1.80.92] - 2025-12-4
 修复网卡光模块获取温度失败告警无法产生
 
