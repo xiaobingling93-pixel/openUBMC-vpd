@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.94] - 2025-12-4
+新增0x1A000077,0x0500001F,0x05000021,0x0200003F告警
+
 ## [1.80.93] - 2025-12-4
 修复0x1A000055告警描述问题
 
