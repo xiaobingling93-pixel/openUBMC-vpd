@@ -67,6 +67,16 @@
             "DescArg2": "#/Component_PCIeCard.Name",
             "Component": "#/Component_PCIeCard"
         },
+        "Event_DiskLinkSpeed": {
+            "EventKeyId": "Disk.DiskBandWidthReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "${Slot}",
+            "Component": "#/Component_PCIeCard"
+        },
         "Nvme_1": {
             "Slot": "${Slot}",
             "TemperatureCelsius": "<=/Scanner_Temp.Value",

@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.61",
+    "Version": "1.0.62",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -2654,6 +2654,18 @@
             "EventName": "BMCAccessI2CDeviceFailure"
         },
         {
+            "EventCode": "0x1A000077",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "BMC.BMCUSBportOvercurrent",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "BMCUSBportOvercurrent"
+        },
+        {
             "EventCode": "0x29000001",
             "ReportChannel": 65535,
             "OldEventCode": "0x2108FFFF",
@@ -3852,6 +3864,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "DiskAccessTempFailure"
+        },
+        {
+            "EventCode": "0x0200003F",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Disk.DiskBandWidthReduced",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DiskBandWidthReduced"
         },
         {
             "EventCode": "0x02000013",
@@ -5654,6 +5678,30 @@
             "EventName": "DiskBackplaneAccessVoltFailure"
         },
         {
+            "EventCode": "0x05000021",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "DiskBackplane.DiskBackplaneAccessPowerFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "DiskBackplaneAccessPowerFailure"
+        },
+        {
+            "EventCode": "0x0500001F",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "DiskBackplane.DiskBackplaneCorroded",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "DiskBackplaneCorroded"
+        },
+        {
             "EventCode": "0x01000083",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -6291,6 +6339,44 @@
             "Cause": {
                 "En": "The voltage sensor of the disk backplane fails or the access channel is abnormal.",
                 "Zh": "硬盘背板电压传感器失效或者访问通道异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off and then power on the system, and check whether the fault is rectified. @#AB;2.If the fault persists, replace the component and check whether the alarm is cleared.",
+                "Zh": "1、执行整机先下电后上电，观察故障是否恢复。@#AB;2、如无法恢复，更换该部件并进一步观察。"
+            },
+            "EventKeyId": "DiskBackplane.DiskBackplaneAccessPowerFailure",
+            "Description": {
+                "En": "Failed to read the power of the drive backplane %2 in %1.",
+                "Zh": "硬盘背板 %1 %2 功率读取失败。"
+            },
+            "Influence": {
+                "En": "The power cannot be monitored properly, affecting the power management of the entire system.",
+                "Zh": "无法正常监控功率，影响整机功率管理。"
+            },
+            "Cause": {
+                "En": "The power sensor of the device is faulty.",
+                "Zh": "设备功率传感器故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Replace the component and check the performance.",
+                "Zh": "1、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "DiskBackplane.DiskBackplaneCorroded",
+            "Description": {
+                "En": "Abnormal corrosion of drive backplane %2 in %1.",
+                "Zh": "硬盘背板 %1 %2 异常腐蚀。"
+            },
+            "Influence": {
+                "En": "The drive backplane cannot work properly.",
+                "Zh": "硬盘背板无法工作。"
+            },
+            "Cause": {
+                "En": "The drive backplane is corroded and disconnected.",
+                "Zh": "硬盘背板已腐蚀断线。"
             }
         },
         {
@@ -10247,6 +10333,25 @@
         },
         {
             "Suggestion": {
+                "En": "1. Replace the peer USB Type-C device.@#AB;2. Replace the BMC card.",
+                "Zh": "1、更换对端type-c设备。@#AB;2、更换bmc插卡。"
+            },
+            "EventKeyId": "BMC.BMCUSBportOvercurrent",
+            "Description": {
+                "En": "Overcurrent at the USB Type-C port on the BMC card.",
+                "Zh": "BMC插卡USB Type-C接口过流。"
+            },
+            "Influence": {
+                "En": "Prolonged overcurrent can damage the eFuse chip, which causes the USB Type-C port to malfunction, affecting local O&M.",
+                "Zh": "长期过流会导致efuse芯片损坏，从而导致TYPE_C接口功能异常，影响近端运维。"
+            },
+            "Cause": {
+                "En": "1. The peer device is damaged.@#AB;2. The USB Type-C port is damaged.",
+                "Zh": "1、对端设备损坏。@#AB;2、USB Type-c接口损坏。"
+            }
+        },
+        {
+            "Suggestion": {
                 "En": "1. Remove and reconnect the network cable.@#AB;2. Check whether the network cable is securely connected to the network switch.@#AB;3. Check whether the network switch is working properly.",
                 "Zh": "1、重新拔插网线。@#AB;2、检查网线是否连接到交换机。@#AB;3、检查交换机工作是否正常。"
             },
@@ -12276,6 +12381,25 @@
             "Cause": {
                 "En": "1.The channel in which the {BMC} accesses the drive is abnormal.@#AB;2.The drive is faulty.@#AB;3.The drive backplane is faulty.",
                 "Zh": "1、{BMC}访问硬盘的通道异常。@#AB;2、硬盘故障。@#AB;3、硬盘背板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Perform maintenance according to the maintenance plan as soon as possible. Power off the server, and check whether the component and its slot are damaged or of poor contact.@#AB;2. Replace the component and check whether the fault is rectified.",
+                "Zh": "1、尽快安排计划性维护，下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换该部件并进一步观察。"
+            },
+            "EventKeyId": "Disk.DiskBandWidthReduced",
+            "Description": {
+                "En": "The %1 disk %2 %3 bandwidth decreased.",
+                "Zh": "%1 硬盘 %2 %3 带宽降低。"
+            },
+            "Influence": {
+                "En": "The system can still run properly, but the performance deteriorates.",
+                "Zh": "系统仍能正常运行，但性能有所降低。"
+            },
+            "Cause": {
+                "En": "The disk and the slot may be damaged or in poor contact.",
+                "Zh": "硬盘与插槽可能存在损坏或接触不良现象。"
             }
         },
         {
