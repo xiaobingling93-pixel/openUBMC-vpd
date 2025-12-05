@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.95] - 2025-12-5
+修复BMC复位场景BBU故障告警会恢复问题
+
 ## [1.80.94] - 2025-12-4
 新增0x1A000077,0x0500001F,0x05000021,0x0200003F告警
 

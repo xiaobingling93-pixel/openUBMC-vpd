@@ -97,7 +97,7 @@
             "CtrlOption2": 65671,
             "CtrlOption3": 32512,
             "BatteryPresence": 255,
-            "BatteryFault": 0,
+            "BatteryFault": 255,
             "BatteryHealth": "<=/Component_Battery.Health",
             "FaultCode": 0,
             "Health": "<=/Component_PCIeCard.Health",

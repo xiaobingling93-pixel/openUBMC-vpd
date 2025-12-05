@@ -87,7 +87,7 @@
             "CtrlOption2": 65536,
             "CtrlOption3": 130879,
             "BatteryPresence": 255,
-            "BatteryFault": 0,
+            "BatteryFault": 255,
             "BatteryHealth": "<=/Component_Battery.Health",
             "FaultCode": 0,
             "Health": "<=/Component_PCIeCard.Health",
@@ -161,7 +161,9 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SAS 3152",
-            "Component": "#/Component_Battery"
+            "Component": "#/Component_Battery",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",

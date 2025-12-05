@@ -96,7 +96,7 @@
             "CtrlOption2": 0,
             "CtrlOption3": 0,
             "BatteryPresence": 0,
-            "BatteryFault": 0,
+            "BatteryFault": 255,
             "BatteryHealth": 0,
             "FaultCode": 0,
             "Health": "<=/Component_PCIeCard.Health",

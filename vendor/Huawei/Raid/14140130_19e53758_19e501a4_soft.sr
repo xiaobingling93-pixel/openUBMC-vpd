@@ -171,7 +171,9 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SP686C-M-16i 4G",
-            "Component": "#/Component_Battery"
+            "Component": "#/Component_Battery",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255
         },
         "Event_PCIeBandWidth": {
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",

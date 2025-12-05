@@ -104,7 +104,9 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "9440-8i",
-            "Component": "#/Component_Battery"
+            "Component": "#/Component_Battery",
+            "InvalidReadingIgnore": 1,
+            "InvalidReading": 255
         },
         "Event_PCIeBandWidth": {
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
