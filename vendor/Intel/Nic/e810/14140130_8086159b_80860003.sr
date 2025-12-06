@@ -1,6 +1,6 @@
 {
     "FormatVersion": "3.00",
-    "DataVersion": "3.00",
+    "DataVersion": "3.01",
     "Unit": {
         "Type": "PCIeCard",
         "Name": "PCIeCard_1" 
@@ -47,8 +47,6 @@
             "Health": "<=/Component_PCIeCard.Health",
             "Model": "E810",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
-            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "PcbVersion": "N/A",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
@@ -83,7 +81,7 @@
         },
         "Component_PCIeCard": {
             "FruId": 255,
-            "Instance": "PCIeDevice_1.SlotID",
+            "Instance": "<=/PCIeDevice_1.SlotID",
             "Type": 8,
             "BoardId": 65535,
             "Name": "<=/PCIeDevice_1.DeviceName",
@@ -93,6 +91,7 @@
             "UniqueId": "N/A",
             "Presence": 1,
             "Health": 0,
+            "Function": "PCIe device",
             "GroupId": 1,
             "PowerState": 1,
             "ReplaceFlag": 0,
@@ -148,11 +147,11 @@
             "@Default": {
                 "PCBVersion": ".A"
             },
-            "FruId": 225,
+            "FruId": 255,
             "SupportedMctp": true,
             "HotPluggable": false,
             "ReadyToRemove": false,
-            "AttentionHotPlugState": 225,
+            "AttentionHotPlugState": 255,
             "SocketId": "<=/PCIeDevice_1.SocketID",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
@@ -164,10 +163,8 @@
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
-            "TemperatureCelsius": 0,
-            "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
-            "ParentCardSlotId": 225,
+            "ParentCardSlotId": 255,
             "Health": "<=/Component_PCIeCard.Health"
         },
         "NetworkPort_1": {
@@ -189,28 +186,20 @@
         "OpticalModule_1": {
             "@Parent": "NetworkPort_1",
             "ChannelNum": 1,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "OpticalModule_2": {
             "@Parent": "NetworkPort_2",
             "ChannelNum": 2,
-            "TemperatureCelsius": 0,
             "PowerState": 0,
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "ThresholdSensor_Temp": {
             "AssertMask": 640,
@@ -237,8 +226,6 @@
             "ModifierUnit": 0,
             "Analog": 1,
             "NominalReading": 25,
-            "NominalMaximum": 0,
-            "NominalMinimun": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
@@ -261,24 +248,22 @@
             "Capabilities": 232,
             "SensorType": 1,
             "ReadingType": 1,
-            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s OptMod Temp',$1)",
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp',$1)",
             "Unit": 128,
             "BaseUnit": 1,
             "ModifierUnit": 0,
             "Analog": 1,
             "NominalReading": 25,
-            "NominalMaximum": 0,
-            "NominalMinimun": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 > $2 ? $1 : $2 )",
-            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr($1 > $2 ? $1 : $2) |> expr($1 > 0 ? 0 : 2)"
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_1.Presence;<=/OpticalModule_2.Presence |> expr((($3 == 0 && $4 == 0) && ($1 >= 255 && $2 >= 255)) ? 3 : 0)"
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "@Default": {
                 "Condition": 105
             },
@@ -421,7 +406,7 @@
         "Event_Port2BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
-            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100
             },
@@ -450,16 +435,22 @@
             "CustomTargetTemperatureCelsius": 255,
             "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
-        "CoolingArea_1_52": {
-            "AreaId": 52,
-            "RequirementIdx": 52,
-            "PolicyIdxGroup": [],
-            "FanIdxGroup": [
-                1,
-                2,
-                3,
-                4
-            ]
+        "CoolingRequirement_1_53": {
+            "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
+            "Description": "E810网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr(($1 == 32768 || $2 == 32768) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 55,
+            "MaxAllowedTemperatureCelsius": 75,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [60, 55, 65],
+            "CustomSupported": false,
+            "ActiveInStandby": true,
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
         }
     }
 }
