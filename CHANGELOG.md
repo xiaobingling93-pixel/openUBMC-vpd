@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.98] - 2025-12-6
+修复0x24000025告警与接口查询返回不一致的问题
+
 ## [1.80.97] - 2025-12-6
 QLE2690, QLE2692网卡适配
 

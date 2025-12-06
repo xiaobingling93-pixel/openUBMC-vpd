@@ -6,7 +6,7 @@
             "FruId": 255,
             "Instance": 255,
             "Type": 36,
-            "Name": "CpuBoard",
+            "Name": "CpuBoard${Slot}",
             "Presence": 1,
             "Health": 0,
             "PowerState": 1,
@@ -16,7 +16,8 @@
             "ReplaceFlag": 0,
             "PreviousSN": "",
             "SerialNumber": "",
-            "NodeId": "BCU CpuBoard"
+            "NodeId": "BCU CpuBoard",
+            "Location": "BCU${Slot}"
         },
         "BoardRAS_1": {
             "ManageChip": "Mcu",
