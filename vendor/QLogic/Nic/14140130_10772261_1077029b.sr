@@ -57,15 +57,6 @@
             "Health": 0,
             "PowerState": 1
         },
-        "Component_Port2": {
-            "FruId": 255,
-            "Instance": 1,
-            "Type": 41,
-            "Name": "Port2",
-            "Presence": 1,
-            "Health": 0,
-            "PowerState": 1
-        },
         "Entity_PCIeCard": {
             "Id": 11,
             "Name": "PCIeCard",
@@ -74,7 +65,7 @@
             "Presence": 1
         },
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (QLE2692-HUA-SP)",
+            "DeviceName": "PCIe Card $ (QLE2690)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
@@ -91,21 +82,21 @@
         "PCIeCard_1": {
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "QLE2692-HUA-SP",
-            "BoardName": "QLE2692-HUA-SP",
-            "Description": "QLE2692 Dual Port 16Gb Fibre Channel to PCIe Adapter",
+            "Name": "QLE2690",
+            "BoardName": "QLE2690",
+            "Description": "QLE2690  Single Port 16Gb Fibre Channel to PCIe Adapter",
             "FunctionClass": 2,
             "VendorID": 4215,
             "DeviceID": 8801,
             "SubVendorID": 4215,
-            "SubDeviceID": 668,
+            "SubDeviceID": 667,
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "N/A",
             "Manufacturer": "QLogic",
-            "PartNumber": "06030392",
+            "PartNumber": "",
             "Health": "<=/Component_PCIeCard.Health",
-            "Model": "QLE2692",
+            "Model": "QLE2690",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
@@ -118,22 +109,22 @@
         "NetworkAdapter_1": {
             "SystemID": 1,
             "SlotNumber": "<=/PCIeDevice_1.SlotID",
-            "Name": "QLE2692-HUA-SP",
+            "Name": "QLE2690",
             "Manufacturer": "QLogic",
-            "Description": "2*16Gb",
+            "Description": "1*16Gb",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
-            "Model": "QLE2692",
-            "ModelDescription": "2*16Gb",
+            "Model": "QLE2690",
+            "ModelDescription": "1*16Gb",
             "ChipVendor": "QLogic",
             "ChipManufacturer": "QLogic",
-            "NetworkPortCount": 2,
-            "BoardName": "QLE2692-HUA-SP",
+            "NetworkPortCount": 1,
+            "BoardName": "QLE2690",
             "VendorID": "0x1077",
             "DeviceID": "0x2261",
             "SubsystemVendorID": "0x1077",
-            "SubsystemDeviceID": "0x029c",
+            "SubsystemDeviceID": "0x029b",
             "ComponentUniqueID": "N/A",
             "FruId": 255,
             "SupportedMctp": true,
@@ -159,11 +150,11 @@
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
             "UID": "N/A",
-            "Name": "QLE2692-HUA-SP",
+            "Name": "QLE2690",
             "Manufacturer": "QLogic",
             "Type": "PCIeCard",
-            "Description": "2*16Gb",
-            "PartNumber": "06030382",
+            "Description": "1*16Gb",
+            "PartNumber": "",
             "LogicVersion": "N/A",
             "SRVersion": "",
             "BoardID": 65535,
@@ -233,8 +224,8 @@
             "NominalReading": 25,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr((($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255)) ? 3 : 0)"
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius",
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_0.Presence |> expr((($2 == 0) || ($1 >= 255)) ? 3 : 0)"
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -249,7 +240,7 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "1",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "(QLE2692-HUA-SP)",
+            "DescArg3": "(QLE2690)",
             "DescArg4": "#/Event_OverTemp.Reading",
             "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
@@ -262,20 +253,12 @@
             "Component": "#/Component_PCIeCard",
             "AdditionalInfo": "2",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "(QLE2692-HUA-SP)"
+            "DescArg3": "(QLE2690)"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 0,
-            "NetDevFuncType": 2,
-            "MediumType": "FiberOptic",
-            "SupportedLinkCapability": "16Gb"
-        },
-        "NetworkPort_1": {
-            "@Parent": "NetworkAdapter_1",
-            "SystemID": 1,
-            "PortID": 1,
             "NetDevFuncType": 2,
             "MediumType": "FiberOptic",
             "SupportedLinkCapability": "16Gb"
@@ -288,65 +271,31 @@
             "Temp_UpperThresholdCritical": 125,
             "FaultState": 0
         },
-        "OpticalModule_1": {
-            "@Parent": "NetworkPort_1",
-            "ChannelNum": 2,
-            "PowerState": 0,
-            "IsSupportedType": 0,
-            "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0
-        },
         "Event_OM0PowerAlarm": {
-            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
-            "Condition": 1,
-            "LedFaultCode": "q$$",
             "Reading": "<=/OpticalModule_0.PowerState",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
             "DescArg1": "#/Component_PCIeCard.Name",
             "DescArg3": "Port 1",
-            "Component": "#/Component_Port1"
-        },
-        "Event_OM1PowerAlarm": {
+            "Component": "#/Component_Port1",
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
-            "LedFaultCode": "q$$",
-            "Reading": "<=/OpticalModule_1.PowerState",
-            "OperatorId": 5,
-            "Enabled": true,
-            "AdditionalInfo": "1",
-            "DescArg1": "#/Component_PCIeCard.Name",
-            "DescArg3": "Port 2",
-            "Component": "#/Component_Port2"
+            "LedFaultCode": "q$$"
         },
         "Event_OM0SpeedMatch": {
-            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
-            "Condition": 1,
-            "LedFaultCode": "q$$",
             "Reading": "<=/OpticalModule_0.IsSupportedType",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
             "DescArg1": "#/Component_PCIeCard.Name",
             "DescArg3": "Port 1",
-            "Component": "#/Component_Port1"
-        },
-        "Event_OM1SpeedMatch": {
+            "Component": "#/Component_Port1",
             "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
             "Condition": 1,
-            "LedFaultCode": "q$$",
-            "Reading": "<=/OpticalModule_1.IsSupportedType",
-            "OperatorId": 5,
-            "Enabled": true,
-            "AdditionalInfo": "1",
-            "DescArg1": "#/Component_PCIeCard.Name",
-            "DescArg3": "Port 2",
-            "Component": "#/Component_Port2"
+            "LedFaultCode": "q$$"
         },
         "Event_OM0VAMntr": {
-            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1,
             "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
@@ -354,23 +303,11 @@
             "DescArg1": "#/Component_PCIeCard.Name",
             "DescArg3": "Port 1",
             "DescArg4": "#/OpticalModule_0.SupplyVoltage",
-            "Component": "#/Component_Port1"
-        },
-        "Event_OM1VAMntr": {
+            "Component": "#/Component_Port1",
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1,
-            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
-            "OperatorId": 5,
-            "Enabled": true,
-            "AdditionalInfo": "1",
-            "DescArg1": "#/Component_PCIeCard.Name",
-            "DescArg3": "Port 2",
-            "DescArg4": "#/OpticalModule_1.SupplyVoltage",
-            "Component": "#/Component_Port2"
+            "Condition": 1
         },
         "Event_Port1LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
             "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
             "@Default": {
                 "Reading": 255
@@ -379,31 +316,20 @@
             "Enabled": true,
             "DescArg1": "#/PCIeCard_1.DeviceName",
             "DescArg3": "Port 1",
-            "Component": "#/Component_Port1"
-        },
-        "Event_Port2LinkDown": {
+            "Component": "#/Component_Port1",
             "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
-            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 2",
-            "Component": "#/Component_Port2"
+            "Condition": 0
         },
         "Event_PCIeBandWidth": {
-            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
-            "Condition": 1,
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(QLE2692-HUA-SP)",
-            "Component": "#/Component_PCIeCard"
+            "DescArg3": "(QLE2690)",
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
         },
         "Event_PCIeLinkSpeed": {
             "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
@@ -413,35 +339,33 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "(QLE2692-HUA-SP)",
+            "DescArg3": "(QLE2690)",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
-            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
-            "Condition": 1,
-            "LedFaultCode": "q$$",
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/Component_PCIeCard.Name",
             "DescArg4": "NA",
-            "Component": "#/Component_PCIeCard"
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
         },
         "Event_PCIeCardCE": {
-            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
-            "Condition": 1,
-            "LedFaultCode": "q$$",
             "Reading": "<=/PCIeDevice_1.PredictiveFault",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "Component": "#/Component_PCIeCard"
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
         },
         "Event_PcieCardReplaceMntr": {
-            "EventKeyId": "PcieCard.PcieCardReplace",
-            "Condition": 1,
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",
             "OperatorId": 5,
             "Enabled": true,
@@ -449,11 +373,13 @@
             "DescArg1": "#/Component_PCIeCard.Name",
             "DescArg2": "#/Component_PCIeCard.PreviousSN",
             "DescArg3": "#/Component_PCIeCard.SerialNumber",
-            "Component": "#/Component_PCIeCard"
+            "Component": "#/Component_PCIeCard",
+            "EventKeyId": "PcieCard.PcieCardReplace",
+            "Condition": 1
         },
         "CoolingRequirement_1_50": {
             "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
-            "Description": "QLE2692网卡芯片调速",
+            "Description": "QLE2690网卡芯片调速",
             "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
             "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
             "FailedValue": 80,
@@ -470,9 +396,9 @@
         },
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
-            "Description": "QLE2692网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 32768 || $2 == 32768) ? 1 : 0)",
-            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
+            "Description": "QLE2690网卡光模块温度调速",
+            "MonitoringStatus": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 == 32768 ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 >= 255 ? 0 : $1)",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 55,
             "MaxAllowedTemperatureCelsius": 75,
