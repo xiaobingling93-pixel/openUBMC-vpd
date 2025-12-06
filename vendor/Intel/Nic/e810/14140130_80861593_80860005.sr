@@ -165,12 +165,12 @@
             "@Default": {
                 "PCBVersion": ".A"
             },
-            "FruId": 225,
+            "FruId": 255,
             "SupportedMctp": true,
             "SupportedLLDP": false,
             "HotPluggable": false,
             "ReadyToRemove": false,
-            "AttentionHotPlugState": 225,
+            "AttentionHotPlugState": 255,
             "SocketId": "<=/PCIeDevice_1.SocketID",
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
@@ -183,7 +183,7 @@
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
             "BandwidthThresholdPercent": 100,
-            "ParentCardSlotId": 225,
+            "ParentCardSlotId": 255,
             "Health": "<=/Component_PCIeCard.Health"
         },
         "NetworkPort_1": {
@@ -225,10 +225,7 @@
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "OpticalModule_2": {
             "@Parent": "NetworkPort_2",
@@ -237,10 +234,7 @@
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "OpticalModule_3": {
             "@Parent": "NetworkPort_3",
@@ -249,10 +243,7 @@
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "OpticalModule_4": {
             "@Parent": "NetworkPort_4",
@@ -261,10 +252,7 @@
             "Presence": 0,
             "IsSupportedType": 0,
             "Temp_UpperThresholdCritical": 125,
-            "FaultState": 0,
-            "SupplyVoltage": 0,
-            "LowerThresholdCritical": 0,
-            "UpperThresholdCritical": 0
+            "FaultState": 0
         },
         "ThresholdSensor_Temp": {
             "AssertMask": 640,
@@ -291,8 +279,6 @@
             "ModifierUnit": 0,
             "Analog": 1,
             "NominalReading": 25,
-            "NominalMaximum": 0,
-            "NominalMinimun": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
@@ -321,12 +307,10 @@
             "ModifierUnit": 0,
             "Analog": 1,
             "NominalReading": 25,
-            "NormalMaximum": 0,
-            "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.TemperatureCelsius |> expr($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4)))",
-            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.TemperatureCelsius;<=/OpticalModule_1.Presence;<=/OpticalModule_2.Presence;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.Presence |> expr($5 == 0 && $6 == 0 && $7 == 0 && $8 == 0 ? 32768 : ($1 > $2 ? ($1 > $3 ? ($1 > $4 ? $1 : $4) : ($3 > $4 ? $3 : $4)) : ($2 > $3 ? ($2 > $4 ? $2 : $4) : ($3 > $4 ? $3 : $4)))) |> expr($1 > 255 ? 3 : 0)"
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? (($1 >= 255 ? 0 : $1) >= ($3 >= 255 ? 0 : $3) ? (($1 >= 255 ? 0 : $1) >= ($4 >= 255 ? 0 : $4) ? ($1 >= 255 ? 0 : $1) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))) : (($2 >= 255 ? 0 : $2) >= ($3 >= 255 ? 0 : $3) ? (($2 >= 255 ? 0 : $2) >= ($4 >= 255 ? 0 : $4) ? ($2 >= 255 ? 0 : $2) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))))",
+            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.TemperatureCelsius;<=/OpticalModule_1.Presence;<=/OpticalModule_2.Presence;<=/OpticalModule_3.TemperatureCelsius;<=/OpticalModule_4.Presence |> expr((($5 == 0 && $6 == 0 && $7 == 0 && $8 == 0) || ($1 >= 255 && $2 >= 255 && $3 >= 255 && $4 >= 255)) ? 3 : 0)"
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -632,7 +616,7 @@
         "Event_OM1VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
             "Condition": 1,
-            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -644,7 +628,7 @@
         "Event_OM2VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
             "Condition": 1,
-            "Reading": "<=/OpticalModule_2.FaultState;<=/OpticalModule_2.SupplyVoltage;<=/OpticalModule_2.VoltageLowerThresholdCritical;<=/OpticalModule_2.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_2.FaultState;<=/OpticalModule_2.SupplyVoltage;<=/OpticalModule_2.VoltageLowerThresholdCritical;<=/OpticalModule_2.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -656,7 +640,7 @@
         "Event_OM3VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
             "Condition": 1,
-            "Reading": "<=/OpticalModule_3.FaultState;<=/OpticalModule_3.SupplyVoltage;<=/OpticalModule_3.VoltageLowerThresholdCritical;<=/OpticalModule_3.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_3.FaultState;<=/OpticalModule_3.SupplyVoltage;<=/OpticalModule_3.VoltageLowerThresholdCritical;<=/OpticalModule_3.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -668,7 +652,7 @@
         "Event_OM4VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
             "Condition": 1,
-            "Reading": "<=/OpticalModule_4.FaultState;<=/OpticalModule_4.SupplyVoltage;<=/OpticalModule_4.VoltageLowerThresholdCritical;<=/OpticalModule_4.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_4.FaultState;<=/OpticalModule_4.SupplyVoltage;<=/OpticalModule_4.VoltageLowerThresholdCritical;<=/OpticalModule_4.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -696,8 +680,8 @@
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
             "Description": "E810网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius; <=/OpticalModule_3.TemperatureCelsius |> expr($1 == 32768 || $2 == 32768 || $3 == 32768 || $4 == 32768 ? 1 : 0)",
-            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2)) |> expr($1 >= ($3 >= 255 ? 0 : $3) ? $1 : ($3 >= 255 ? 0 : $3)) |> expr($1 >= ($4 >= 255 ? 0 : $4) ? $1 : ($4 >= 255 ? 0 : $4))",
+            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius; <=/OpticalModule_3.TemperatureCelsius; <=/OpticalModule_4.TemperatureCelsius |> expr(($1 == 32768 || $2 == 32768 || $3 == 32768 || $4 == 32768) ? 1 : 0)",
+            "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius; <=/OpticalModule_2.TemperatureCelsius; <=/OpticalModule_3.TemperatureCelsius; <=/OpticalModule_4.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? (($1 >= 255 ? 0 : $1) >= ($3 >= 255 ? 0 : $3) ? (($1 >= 255 ? 0 : $1) >= ($4 >= 255 ? 0 : $4) ? ($1 >= 255 ? 0 : $1) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))) : (($2 >= 255 ? 0 : $2) >= ($3 >= 255 ? 0 : $3) ? (($2 >= 255 ? 0 : $2) >= ($4 >= 255 ? 0 : $4) ? ($2 >= 255 ? 0 : $2) : ($4 >= 255 ? 0 : $4)) : (($3 >= 255 ? 0 : $3) >= ($4 >= 255 ? 0 : $4) ? ($3 >= 255 ? 0 : $3) : ($4 >= 255 ? 0 : $4))))",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 55,
             "MaxAllowedTemperatureCelsius": 75,

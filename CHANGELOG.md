@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.96] - 2025-12-6
+E810网卡错误配置修改
+
 ## [1.80.95] - 2025-12-5
 修复BMC复位场景BBU故障告警会恢复问题
 
