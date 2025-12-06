@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.97] - 2025-12-6
+QLE2690, QLE2692网卡适配
+
 ## [1.80.96] - 2025-12-6
 E810网卡错误配置修改
 
