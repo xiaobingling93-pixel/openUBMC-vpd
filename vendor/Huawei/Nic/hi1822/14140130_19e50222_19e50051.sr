@@ -100,7 +100,7 @@
             "Size": 2,
             "Mask": 65535,
             "Type": 0,
-            "Value": 0,
+            "Value": 750,
             "Period": 3000,
             "NominalValue": 750,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
@@ -116,7 +116,7 @@
             "Size": 2,
             "Mask": 65535,
             "Type": 0,
-            "Value": 0,
+            "Value": 800,
             "Period": 3000,
             "NominalValue": 800,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
@@ -132,7 +132,7 @@
             "Size": 2,
             "Mask": 65535,
             "Type": 0,
-            "Value": 0,
+            "Value": 1200,
             "Period": 3000,
             "NominalValue": 1200,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
@@ -148,7 +148,7 @@
             "Size": 2,
             "Mask": 65535,
             "Type": 0,
-            "Value": 0,
+            "Value": 1800,
             "Period": 3000,
             "NominalValue": 1800,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
@@ -164,7 +164,7 @@
             "Size": 2,
             "Mask": 65535,
             "Type": 0,
-            "Value": 0,
+            "Value": 1600,
             "Period": 3000,
             "NominalValue": 1600,
             "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
@@ -693,9 +693,9 @@
         },
         "Event_0v75_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
-            "Reading": "<=/Scanner_0v75.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 150 : ((($1 / 5)) & 255)) / 200)) : 0.75)",
+            "Reading": "<=/Scanner_0v75.Status;<=/Scanner_0v75.Value |> expr($1 == 0 ? ((((($2 / 5)) > 255 ? 150 : ((($2 / 5)) & 255)) / 200)) : 0.75)",
             "@Default": {
-                "Reading": 255
+                "Reading": 0.75
             },
             "Condition": 0.675,
             "OperatorId": 2,
@@ -708,7 +708,10 @@
         },
         "Event_0v75_High": {
             "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
-            "Reading": "<=/Scanner_0v75.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 150 : ((($1 / 5)) & 255)) / 200)) : 0.75)",
+            "Reading": "<=/Scanner_0v75.Status;<=/Scanner_0v75.Value |> expr($1 == 0 ? ((((($2 / 5)) > 255 ? 150 : ((($2 / 5)) & 255)) / 200)) : 0.75)",
+            "@Default": {
+                "Reading": 0.75
+            },
             "Condition": 0.825,
             "OperatorId": 4,
             "Component": "#/Component_PCIeCard",
@@ -730,9 +733,9 @@
         },
         "Event_0v8_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
-            "Reading": "<=/Scanner_0v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 160 : ((($1 / 5)) & 255)) / 200)) : 0.8)",
+            "Reading": "<=/Scanner_0v8.Status;<=/Scanner_0v8.Value |> expr($1 == 0 ? ((((($2 / 5)) > 255 ? 160 : ((($2 / 5)) & 255)) / 200)) : 0.8)",
             "@Default": {
-                "Reading": 255
+                "Reading": 0.8
             },
             "Condition": 0.72,
             "OperatorId": 2,
@@ -745,7 +748,10 @@
         },
         "Event_0v8_High": {
             "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
-            "Reading": "<=/Scanner_0v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 5)) > 255 ? 160 : ((($1 / 5)) & 255)) / 200)) : 0.8)",
+            "Reading": "<=/Scanner_0v8.Status;<=/Scanner_0v8.Value |> expr($1 == 0 ? ((((($2 / 5)) > 255 ? 160 : ((($2 / 5)) & 255)) / 200)) : 0.8)",
+            "@Default": {
+                "Reading": 0.8
+            },
             "Condition": 0.88,
             "OperatorId": 4,
             "Component": "#/Component_PCIeCard",
@@ -767,9 +773,9 @@
         },
         "Event_1v2_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
-            "Reading": "<=/Scanner_1v2.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 120 : ((($1 / 10)) & 255)) / 100)) : 1.2)",
+            "Reading": "<=/Scanner_1v2.Status;<=/Scanner_1v2.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 120 : ((($2 / 10)) & 255)) / 100)) : 1.2)",
             "@Default": {
-                "Reading": 255
+                "Reading": 1.2
             },
             "Condition": 1.08,
             "OperatorId": 2,
@@ -782,7 +788,10 @@
         },
         "Event_1v2_High": {
             "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
-            "Reading": "<=/Scanner_1v2.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 120 : ((($1 / 10)) & 255)) / 100)) : 1.2)",
+            "Reading": "<=/Scanner_1v2.Status;<=/Scanner_1v2.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 120 : ((($2 / 10)) & 255)) / 100)) : 1.2)",
+            "@Default": {
+                "Reading": 1.2
+            },
             "Condition": 1.32,
             "OperatorId": 4,
             "Component": "#/Component_PCIeCard",
@@ -804,9 +813,9 @@
         },
         "Event_1v8_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
-            "Reading": "<=/Scanner_1v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 180 : ((($1 / 10)) & 255)) / 100)) : 1.8)",
+            "Reading": "<=/Scanner_1v8.Status;<=/Scanner_1v8.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 180 : ((($2 / 10)) & 255)) / 100)) : 1.8)",
             "@Default": {
-                "Reading": 255
+                "Reading": 1.8
             },
             "Condition": 1.62,
             "OperatorId": 2,
@@ -819,7 +828,10 @@
         },
         "Event_1v8_High": {
             "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
-            "Reading": "<=/Scanner_1v8.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 180 : ((($1 / 10)) & 255)) / 100)) : 1.8)",
+            "Reading": "<=/Scanner_1v8.Status;<=/Scanner_1v8.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 180 : ((($2 / 10)) & 255)) / 100)) : 1.8)",
+            "@Default": {
+                "Reading": 1.8
+            },
             "Condition": 1.98,
             "OperatorId": 4,
             "Component": "#/Component_PCIeCard",
@@ -841,9 +853,9 @@
         },
         "Event_3v3_Low": {
             "EventKeyId": "PcieCard.PCIeCardLowerVoltMajor",
-            "Reading": "<=/Scanner_3v3.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 165 : ((($1 / 10)) & 255)) * 2 / 100)) : 3.3)",
+            "Reading": "<=/Scanner_3v3.Status;<=/Scanner_3v3.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 165 : ((($2 / 10)) & 255)) * 2 / 100)) : 3.3)",
             "@Default": {
-                "Reading": 255
+                "Reading": 3.3
             },
             "Condition": 2.96,
             "OperatorId": 2,
@@ -856,7 +868,10 @@
         },
         "Event_3v3_High": {
             "EventKeyId": "PcieCard.PCIeCardOverVoltMajor",
-            "Reading": "<=/Scanner_3v3.Value;<=/::FruCtrl_1_0.PowerState |> expr($2 == 'ON' ? ((((($1 / 10)) > 255 ? 165 : ((($1 / 10)) & 255)) * 2 / 100)) : 3.3)",
+            "Reading": "<=/Scanner_3v3.Status;<=/Scanner_3v3.Value |> expr($1 == 0 ? ((((($2 / 10)) > 255 ? 165 : ((($2 / 10)) & 255)) * 2 / 100)) : 3.3)",
+            "@Default": {
+                "Reading": 3.3
+            },
             "Condition": 3.62,
             "OperatorId": 4,
             "Component": "#/Component_PCIeCard",
