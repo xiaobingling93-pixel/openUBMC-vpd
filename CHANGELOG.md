@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.99] - 2025-12-7
+修复SP681网卡误告警
+
 ## [1.80.98] - 2025-12-6
 修复0x24000025告警与接口查询返回不一致的问题
 
