@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.116] - 2025-12-10
+修复网卡传感器配置错误导致的MngmntHealth误告警
+
 ## [1.80.115] - 2025-12-10
 修改24内存通道高温告警门限与迟滞量
 
