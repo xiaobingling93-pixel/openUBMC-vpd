@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.62",
+    "Version": "1.0.63",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -185,7 +185,7 @@
             "EventCode": "0x08000103",
             "ReportChannel": 65535,
             "OldEventCode": "",
-            "EventType": 1,
+            "EventType": 0,
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PCIeCard.DPUMainChipFaultWarning",
@@ -197,7 +197,7 @@
             "EventCode": "0x08000105",
             "ReportChannel": 65535,
             "OldEventCode": "",
-            "EventType": 1,
+            "EventType": 0,
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PCIeCard.DPUMainChipFaultCritical",
@@ -209,7 +209,7 @@
             "EventCode": "0x08000107",
             "ReportChannel": 65535,
             "OldEventCode": "",
-            "EventType": 1,
+            "EventType": 0,
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PCIeCard.DPUFaultWarning",
@@ -221,7 +221,7 @@
             "EventCode": "0x08000109",
             "ReportChannel": 65535,
             "OldEventCode": "",
-            "EventType": 1,
+            "EventType": 0,
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "PCIeCard.DPUFaultCritical",
