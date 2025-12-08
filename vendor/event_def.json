@@ -6614,8 +6614,8 @@
             },
             "EventKeyId": "PCIeCard.DPUMainChipFaultWarning",
             "Description": {
-                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
-                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+                "En": "The DPU main chip %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡主芯片 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
                 "En": "Service performance of the DPU card is affected.",
@@ -6633,8 +6633,8 @@
             },
             "EventKeyId": "PCIeCard.DPUMainChipFaultCritical",
             "Description": {
-                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
-                "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
+                "En": "The DPU main chip %1 (%2) is faulty, Error message: %s.",
+                "Zh": "DPU卡主芯片 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
                 "En": "The services related to the DPU card cannot be processed normally.",
