@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.102] - 2025-12-8
+修复电子标签读取失败告警0x08000007关联错误问题
+
 ## [1.80.101] - 2025-12-8
 修复DPU事件未配置为系统事件问题
 
