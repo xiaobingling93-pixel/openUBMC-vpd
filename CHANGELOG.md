@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.100] - 2025-12-8
+修复Atlas 300I A2卡温度达到门限值未触发告警的问题
+
 ## [1.80.99] - 2025-12-7
 修复SP681网卡误告警
 
