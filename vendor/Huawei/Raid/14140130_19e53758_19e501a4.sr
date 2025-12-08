@@ -170,7 +170,7 @@
             "LinkSpeedCapability": "N/A",
             "PcbID": "#/Accessor_PcbID.Value",
             "PcbVersion": "N/A",
-            "BoardID": 0,
+            "BoardID": 65535,
             "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",

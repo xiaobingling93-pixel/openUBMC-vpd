@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.103] - 2025-12-7
+修复redfish查询boardid不为null问题
+
 ## [1.80.102] - 2025-12-8
 修复电子标签读取失败告警0x08000007关联错误问题
 
