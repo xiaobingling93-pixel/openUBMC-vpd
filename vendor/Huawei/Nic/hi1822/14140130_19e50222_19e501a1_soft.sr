@@ -305,7 +305,7 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_FRUReadFailMntr": {
-            "Reading": "<=/Fru_PCIeCard.Health",
+            "Reading": "<=/FruData_Fru0.Health",
             "OperatorId": 5,
             "Enabled": true,
             "DescArg2": "#/Component_PCIeCard.Instance",
