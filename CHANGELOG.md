@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.104] - 2025-12-8
+修复300I Duo卡ipmi(子命令=0x3b)查询fruid返回0xff问题
+
 ## [1.80.103] - 2025-12-7
 修复redfish查询boardid不为null问题
 

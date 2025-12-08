@@ -9,7 +9,7 @@
         "Component_PCIeCard": {
             "Instance": "<=/PCIeDevice_1.SlotID",
             "UniqueId": "N/A",
-            "FruId": 255,
+            "FruId": "<=/Fru_NPUCard.FruId",
             "BoardId": 65535,
             "Manufacturer": "Huawei",
             "Type": 8,
