@@ -97,7 +97,7 @@
 			"LinkSpeed": "N/A",
 			"LinkSpeedCapability": "N/A",
 			"PcbVersion": "N/A",
-			"BoardID": 0,
+			"BoardID": 65535,
 			"DevBus": "<=/PCIeDevice_1.DevBus",
 			"DevDevice": "<=/PCIeDevice_1.DevDevice",
 			"DevFunction": "<=/PCIeDevice_1.DevFunction"
