@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.107] - 2025-12-9
+QLogic网卡ThresholdSensor_Temp配置缺少ReadingStatus
+
 ## [1.80.106] - 2025-12-9
 修复event_def文件版本号没有更新问题
 
