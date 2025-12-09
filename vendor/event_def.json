@@ -6903,7 +6903,7 @@
                 "Zh": "%1 PCIe卡%2(%3) BBU故障。"
             },
             "Influence": {
-                "En": "The system may stop responding.",
+                "En": "The system performance is affected.",
                 "Zh": "可能导致系统性能降低。"
             },
             "Cause": {
