@@ -65,7 +65,7 @@
         },
         "PCIeDevice_1": {
             "SlotID": "${Slot}",
-            "DeviceName": "OCP Card ${Slot} (MCX623430MS-CDAB)",
+            "DeviceName": "OCP Card $ (MCX623430MS-CDAB)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
