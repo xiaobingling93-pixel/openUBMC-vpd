@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.111] - 2025-12-9
+修复DPU部分告警Description的参数占位符配置错误
+
 ## [1.80.110] - 2025-12-9
 修复电源Component的Instance配置错误
 

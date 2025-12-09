@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.64",
+    "Version": "1.0.65",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6614,7 +6614,7 @@
             },
             "EventKeyId": "PCIeCard.DPUMainChipFaultWarning",
             "Description": {
-                "En": "The DPU main chip %1 (%2) is faulty, Error message: %s.",
+                "En": "The DPU main chip %1 (%2) is faulty, Error message: %3.",
                 "Zh": "DPU卡主芯片 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
@@ -6633,7 +6633,7 @@
             },
             "EventKeyId": "PCIeCard.DPUMainChipFaultCritical",
             "Description": {
-                "En": "The DPU main chip %1 (%2) is faulty, Error message: %s.",
+                "En": "The DPU main chip %1 (%2) is faulty, Error message: %3.",
                 "Zh": "DPU卡主芯片 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
@@ -6652,7 +6652,7 @@
             },
             "EventKeyId": "PCIeCard.DPUFaultWarning",
             "Description": {
-                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "En": "The DPU card %1 (%2) is faulty, Error message: %3.",
                 "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
@@ -6671,7 +6671,7 @@
             },
             "EventKeyId": "PCIeCard.DPUFaultCritical",
             "Description": {
-                "En": "The DPU card %1 (%2) is faulty, Error message: %s.",
+                "En": "The DPU card %1 (%2) is faulty, Error message: %3.",
                 "Zh": "DPU卡 %1 (%2) 故障，故障信息：%3。"
             },
             "Influence": {
