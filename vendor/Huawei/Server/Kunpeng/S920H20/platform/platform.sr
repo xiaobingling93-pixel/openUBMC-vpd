@@ -204,7 +204,7 @@
         },
         "Component_PowerSupply": {
             "FruId": 255,
-            "Instance": 1,
+            "Instance": 254,
             "Type": 3,
             "Location": "chassis",
             "Name": "PowerSupply",

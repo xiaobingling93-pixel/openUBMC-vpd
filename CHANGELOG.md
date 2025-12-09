@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.110] - 2025-12-9
+修复电源Component的Instance配置错误
+
 ## [1.80.109] - 2025-12-9
 修复MCX623430MS-CDAB卡DeviceName配置不正确问题
 

@@ -223,7 +223,7 @@
         },
         "Component_PowerSupply1": {
             "FruId": 255,
-            "Instance": 1,
+            "Instance": 255,
             "Type": 3,
             "Location": "chassis",
             "Name": "PowerSupply1",
@@ -238,7 +238,7 @@
         },
         "Component_PowerSupply2": {
             "FruId": 255,
-            "Instance": 2,
+            "Instance": 255,
             "Type": 3,
             "Location": "chassis",
             "Name": "PowerSupply2",
