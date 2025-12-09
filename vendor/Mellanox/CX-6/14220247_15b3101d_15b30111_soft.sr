@@ -79,7 +79,7 @@
             "MaximumReading": 127,
             "MinimumReading": 128,
             "Reading": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
-            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr(($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255) ? 3 : 0)"
+            "ReadingStatus": "<=/OpticalModule_0.TemperatureCelsius;<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_0.Presence;<=/OpticalModule_1.Presence |> expr((($3 == 0 && $4 == 0) || ($1 >= 255 && $2 >= 255)) ? 3 : 0)"
         },
         "Entity_OCPCard": {
             "Id": 11,
