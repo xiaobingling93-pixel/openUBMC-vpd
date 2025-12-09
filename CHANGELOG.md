@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.112] - 2025-12-9
+0x05000021告警质量加固
+
 ## [1.80.111] - 2025-12-9
 修复DPU部分告警Description的参数占位符配置错误
 
