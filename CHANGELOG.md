@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.109] - 2025-12-9
+修复MCX623430MS-CDAB卡DeviceName配置不正确问题
+
 ## [1.80.108] - 2025-12-9
 修复0x0800003B定义描述与资料不一致问题
 
