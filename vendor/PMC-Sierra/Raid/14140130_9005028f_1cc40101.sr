@@ -119,6 +119,61 @@
             "PreviousSN": "N/A",
             "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
+        "Entity_RaidCard": {
+			"Id": 11,
+			"Instance": 96,
+			"Name": "<=/PCIeDevice_1.SlotID |> string.format('PCIe Card%s (RAID)',$1)",
+			"Presence": 1,
+			"PowerState": 1
+		},
+        "DiscreteSensor_BBUStatus": {
+            "EntityId": "<=/Entity_RaidCard.Id",
+            "EntityInstance": "<=/Entity_RaidCard.Instance",
+            "Initialization": 99,
+            "Capabilities": 192,
+            "SensorType": 41,
+            "ReadingType": 111,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s Card BBU',$1)",
+            "AssertMask": 7,
+            "DeassertMask": 7,
+            "DiscreteMask": 7,
+            "DiscreteType": 0,
+            "Unit": 192,
+            "BaseUnit": 0,
+            "ModifierUnit": 0,
+            "RecordSharing": 1,
+            "Reading": 0
+        },
+        "DiscreteEvent_BBUStatus_0": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 0,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 1) == 0 ? 0 :1)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
+        },
+        "DiscreteEvent_BBUStatus_1": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 1,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.HealthStatus |> expr(($1 & 254) == 0 ? 0 :1)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
+        },
+        "DiscreteEvent_BBUStatus_2": {
+            "Property": 0,
+            "ListenType": 1,
+            "EventData1": 2,
+            "EventData2": 255,
+            "EventData3": 255,
+            "EventDir": "<=/Battery_1.State |> expr($1 == 1 ? 1 :0)",
+            "Conversion": 0,
+            "SensorObject": "#/DiscreteSensor_BBUStatus"
+        },
         "Component_Battery": {
             "FruId": 255,
             "Instance": "<=/PCIeDevice_1.SlotID",

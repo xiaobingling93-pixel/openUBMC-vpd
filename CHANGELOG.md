@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.119] - 2025-12-11
+增加博通和pmc型号raid卡bbu传感器配置
+
 ## [1.80.118] - 2025-12-11
 修复NetworkAdapter_1的TemperatureCelsius有符号数的问题
 
