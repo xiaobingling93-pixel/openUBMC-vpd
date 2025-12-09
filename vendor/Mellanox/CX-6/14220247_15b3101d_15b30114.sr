@@ -295,7 +295,7 @@
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
             "Description": "CX6网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_0.Presence; <=/OpticalModule_1.Presence; <=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($3 >= 255 && $1 == 1) || ($4 >= 255 && $2 == 1) ? 1 : 0)",
+            "MonitoringStatus": "<=/OpticalModule_0.Presence; <=/OpticalModule_1.Presence; <=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr((($3 >= 255 && $1 == 1) || ($4 >= 255 && $2 == 1)) ? 1 : 0)",
             "MonitoringValue": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr($1 >= $2 ? ($1 >= 255 ? $2 : $1) : ($2 >= 255 ? $1 : $2))",
             "FailedValue": 0,
             "TargetTemperatureCelsius": 62,
