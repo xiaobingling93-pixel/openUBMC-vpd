@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.106] - 2025-12-9
+修复event_def文件版本号没有更新问题
+
 ## [1.80.105] - 2025-12-8
 修复DPU主芯片告警显示问题
 
