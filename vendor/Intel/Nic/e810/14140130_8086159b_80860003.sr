@@ -277,7 +277,7 @@
             "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
         "Event_OverOptModTemp": {
-            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_2.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
             "Condition": "<=/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
             "@Default": {
                 "Condition": 75

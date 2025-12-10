@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.117] - 2025-12-10
+排查修复光模块过温告警，读值错误的问题
+
 ## [1.80.116] - 2025-12-10
 修复网卡传感器配置错误导致的MngmntHealth误告警
 
