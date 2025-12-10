@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.115] - 2025-12-10
+修改24内存通道高温告警门限与迟滞量
+
 ## [1.80.114] - 2025-12-9
 修复HyperCard4.0告警配置错误问题
 
