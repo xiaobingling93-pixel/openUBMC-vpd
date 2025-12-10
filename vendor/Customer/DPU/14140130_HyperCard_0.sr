@@ -305,7 +305,7 @@
             "Hysteresis": 2
         },
         "Event_NetworkAdapterTempFail": {
-            "EventKeyId": "PCIeCard.PCIeCardTempFail",
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius",
             "Condition": 253,
             "OperatorId": 5,
@@ -317,7 +317,7 @@
             "DescArg2": "#/Component_DPUCard.Name"
         },
         "Event_OM1OverTempInfo": {
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : ($1 & 255))",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/Component_DPUCard.Name",
@@ -331,7 +331,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM2OverTempInfo": {
-            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : ($1 & 255))",
+            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "DescArg2": "#/Component_DPUCard.Name",
