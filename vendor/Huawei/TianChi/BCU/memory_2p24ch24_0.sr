@@ -2097,99 +2097,123 @@
         },
         "Event_Mem1OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem2OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem3OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem4OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem5OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem6OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem7OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem8OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem9OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem10OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem11OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem12OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem13OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem14OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem15OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem16OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem17OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem18OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem19OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem20OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem21OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem22OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem23OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem24OverTempMinor": {
             "EventKeyId": "CPU.MemoryOverTempMinor",
-            "Condition": 1
+            "Hysteresis": 4,
+            "Condition": 95
         },
         "Event_Mem1OverTempMajor": {
             "EventKeyId": "CPU.MemoryOverTempMajor",

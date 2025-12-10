@@ -4657,8 +4657,8 @@
             "Component": "#/Component_Memory24"
         },
         "Event_Mem1OverTempMinor": {
-            "Reading": "<=/Memory_1.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_1.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_1.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_1.DimmName",
@@ -4667,8 +4667,8 @@
             "Component": "#/Component_Memory1"
         },
         "Event_Mem2OverTempMinor": {
-            "Reading": "<=/Memory_2.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_2.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_2.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_2.DimmName",
@@ -4677,8 +4677,8 @@
             "Component": "#/Component_Memory2"
         },
         "Event_Mem3OverTempMinor": {
-            "Reading": "<=/Memory_3.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_3.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_3.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_3.DimmName",
@@ -4687,8 +4687,8 @@
             "Component": "#/Component_Memory3"
         },
         "Event_Mem4OverTempMinor": {
-            "Reading": "<=/Memory_4.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_4.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_4.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_4.DimmName",
@@ -4697,8 +4697,8 @@
             "Component": "#/Component_Memory4"
         },
         "Event_Mem5OverTempMinor": {
-            "Reading": "<=/Memory_5.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_5.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_5.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_5.DimmName",
@@ -4707,8 +4707,8 @@
             "Component": "#/Component_Memory5"
         },
         "Event_Mem6OverTempMinor": {
-            "Reading": "<=/Memory_6.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_6.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_6.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_6.DimmName",
@@ -4717,8 +4717,8 @@
             "Component": "#/Component_Memory6"
         },
         "Event_Mem7OverTempMinor": {
-            "Reading": "<=/Memory_7.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_7.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_7.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_7.DimmName",
@@ -4727,8 +4727,8 @@
             "Component": "#/Component_Memory7"
         },
         "Event_Mem8OverTempMinor": {
-            "Reading": "<=/Memory_8.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_8.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_8.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_8.DimmName",
@@ -4737,8 +4737,8 @@
             "Component": "#/Component_Memory8"
         },
         "Event_Mem9OverTempMinor": {
-            "Reading": "<=/Memory_9.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_9.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_9.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_9.DimmName",
@@ -4747,8 +4747,8 @@
             "Component": "#/Component_Memory9"
         },
         "Event_Mem10OverTempMinor": {
-            "Reading": "<=/Memory_10.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_10.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_10.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_10.DimmName",
@@ -4757,8 +4757,8 @@
             "Component": "#/Component_Memory10"
         },
         "Event_Mem11OverTempMinor": {
-            "Reading": "<=/Memory_11.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_11.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_11.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_11.DimmName",
@@ -4767,8 +4767,8 @@
             "Component": "#/Component_Memory11"
         },
         "Event_Mem12OverTempMinor": {
-            "Reading": "<=/Memory_12.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_12.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_12.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_12.DimmName",
@@ -4777,8 +4777,8 @@
             "Component": "#/Component_Memory12"
         },
         "Event_Mem13OverTempMinor": {
-            "Reading": "<=/Memory_13.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_13.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_13.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_13.DimmName",
@@ -4787,8 +4787,8 @@
             "Component": "#/Component_Memory13"
         },
         "Event_Mem14OverTempMinor": {
-            "Reading": "<=/Memory_14.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_14.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_14.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_14.DimmName",
@@ -4797,8 +4797,8 @@
             "Component": "#/Component_Memory14"
         },
         "Event_Mem15OverTempMinor": {
-            "Reading": "<=/Memory_15.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_15.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_15.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_15.DimmName",
@@ -4807,8 +4807,8 @@
             "Component": "#/Component_Memory15"
         },
         "Event_Mem16OverTempMinor": {
-            "Reading": "<=/Memory_16.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_16.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_16.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_16.DimmName",
@@ -4817,8 +4817,8 @@
             "Component": "#/Component_Memory16"
         },
         "Event_Mem17OverTempMinor": {
-            "Reading": "<=/Memory_17.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_17.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_17.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_17.DimmName",
@@ -4827,8 +4827,8 @@
             "Component": "#/Component_Memory17"
         },
         "Event_Mem18OverTempMinor": {
-            "Reading": "<=/Memory_18.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_18.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_18.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_18.DimmName",
@@ -4837,8 +4837,8 @@
             "Component": "#/Component_Memory18"
         },
         "Event_Mem19OverTempMinor": {
-            "Reading": "<=/Memory_19.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_19.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_19.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_19.DimmName",
@@ -4847,8 +4847,8 @@
             "Component": "#/Component_Memory19"
         },
         "Event_Mem20OverTempMinor": {
-            "Reading": "<=/Memory_20.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_20.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_20.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_20.DimmName",
@@ -4857,8 +4857,8 @@
             "Component": "#/Component_Memory20"
         },
         "Event_Mem21OverTempMinor": {
-            "Reading": "<=/Memory_21.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_21.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_21.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_21.DimmName",
@@ -4867,8 +4867,8 @@
             "Component": "#/Component_Memory21"
         },
         "Event_Mem22OverTempMinor": {
-            "Reading": "<=/Memory_22.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_22.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_22.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_22.DimmName",
@@ -4877,8 +4877,8 @@
             "Component": "#/Component_Memory22"
         },
         "Event_Mem23OverTempMinor": {
-            "Reading": "<=/Memory_23.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_23.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_23.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_23.DimmName",
@@ -4887,8 +4887,8 @@
             "Component": "#/Component_Memory23"
         },
         "Event_Mem24OverTempMinor": {
-            "Reading": "<=/Memory_24.TemperatureCelsius |> expr($1 == 32768 ? 0 : (($1 >= 95 && $1 < 127) ? 1 : 0))",
-            "OperatorId": 5,
+            "Reading": "<=/Memory_24.TemperatureCelsius |> expr($1 == 32768 ? 30 : (($1 > 127) ? ($1 - 256) : $1 ))",
+            "OperatorId": 4,
             "Enabled": true,
             "DescArg1": "#/Memory_24.CpuId |> string.format('CPU%s', $1)",
             "DescArg2": "#/Memory_24.DimmName",
