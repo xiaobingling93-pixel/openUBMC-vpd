@@ -63,8 +63,8 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 0,
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
-            "ReadingStatus": "<=/NetworkAdapter_1.TemperatureStatus"
+            "Reading": "<=/Scanner_NICTemp.Value",
+            "ReadingStatus": "<=/Scanner_NICTemp.Status"
         },
         "ThresholdSensor_OpticalModuleTemp": {
             "OwnerId": 32,

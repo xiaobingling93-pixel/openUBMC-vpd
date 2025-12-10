@@ -26,6 +26,19 @@
             "ReadTmout": 100,
             "HealthStatus": 0
         },
+        "Scanner_NICTemp": {
+            "Chip": "#/Chip_TempChip",
+            "Size": 1,
+            "Offset": 1,
+            "Mask": 65535,
+            "Period": 1000,
+            "Type": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "@Default": {
+                "ScanEnabled": 0
+            },
+            "Debounce": "#/MidAvg_CX6Temp"
+        },
         "MidAvg_CX6Temp": {
             "WindowSize": 4,
             "DefaultValue": 20,
