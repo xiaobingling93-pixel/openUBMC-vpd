@@ -261,7 +261,7 @@
             "Condition": 1
         },
         "Event_OMOverTempInfo": {
-            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "@Default": {
                 "Condition": 75
             },

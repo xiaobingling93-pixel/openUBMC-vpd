@@ -390,7 +390,7 @@
             "EventKeyId": "OCPCard.OCPCardOMOverTemp",
             "Condition": "<=/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
-            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr(($1 >= 255) ? 40 : $1) |> expr($1 & 255)",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius; <=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255 ? 0 : $1) >= ($2 >= 255 ? 0 : $2) ? ($1 >= 255 ? 0 : $1) : ($2 >= 255 ? 0 : $2))",
             "@Default": {
                 "Condition": 75
             },
