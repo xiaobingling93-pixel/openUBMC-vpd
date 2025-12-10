@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.114] - 2025-12-9
+修复HyperCard4.0告警配置错误问题
+
 ## [1.80.113] - 2025-12-9
 修复光模块传感器MngmntHealth误告警
 
