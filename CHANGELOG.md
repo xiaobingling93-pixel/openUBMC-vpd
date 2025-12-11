@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.124] - 2025-12-11
+修复RAID卡BBU温度传感器无法显示0℃的问题
+
 ## [1.80.123] - 2025-12-11
 修复硬件sr和软件sr配置冲突
 

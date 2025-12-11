@@ -178,7 +178,7 @@
             "RefControllerDeviceName": "<=/PCIeDevice_1.DeviceName",
             "RefControllerSlotId": "<=/PCIeDevice_1.SlotID",
             "RefControllerTypeId": "<=/Controller_1.TypeId",
-            "TemperatureCelsius": 0
+            "TemperatureCelsius": 32766
         },
         "ThresholdSensor_PCIeBBUTemp": {
             "AssertMask": 128,
