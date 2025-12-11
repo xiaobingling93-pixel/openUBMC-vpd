@@ -27,7 +27,7 @@
 			"PowerState": 1
 		},
 		"Event_PCIeRAIDCardFault": {
-			"Reading": "<=/Controller_1.FaultCode",
+			"Reading": "<=/Controller_1.FaultCode |> expr(($1 != 65535 && ($1 & 14) != 0) ? 1 : 0)",
 			"OperatorId": 5,
 			"Enabled": true,
 			"DescArg2": "#/PCIeDevice_1.SlotID",

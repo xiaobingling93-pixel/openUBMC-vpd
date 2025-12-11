@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.125] - 2025-12-11
+修复部分RAID卡0x0800004B告警配置错误
+
 ## [1.80.124] - 2025-12-11
 修复RAID卡BBU温度传感器无法显示0℃的问题
 
