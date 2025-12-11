@@ -248,7 +248,7 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_OverTemp": {
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : ($1 & 255))",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
             "@Default": {
                 "Condition": 105
             },

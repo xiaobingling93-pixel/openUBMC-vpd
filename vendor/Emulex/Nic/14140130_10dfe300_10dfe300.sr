@@ -354,7 +354,7 @@
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_NicTemp.PositiveHysteresis",
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 65 : $1) |> expr($1 & 255)",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 65 : $1)",
             "@Default": {
                 "Condition": 105
             },

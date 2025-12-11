@@ -253,7 +253,7 @@
         },
         "Event_NicOverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
-            "Reading": "<=/Scanner_NicTemp.Value |> expr(($1 >= 255) ? 65 : $1) |> expr($1 & 255)",
+            "Reading": "<=/Scanner_NicTemp.Value |> expr(($1 >= 128) ? ($1 - 256) : $1)",
             "Condition": "<=/ThresholdSensor_NicTemp.UpperNoncritical",
             "@Default": {
                 "Condition": 105
