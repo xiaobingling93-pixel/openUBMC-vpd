@@ -205,7 +205,7 @@
             "TemperatureAbnormal": 0,
             "TemperatureCelsius": 0,
             "BOMNumber": "<=/FruData_RaidCard.BoardPartNumber",
-            "Model": "B80121",
+            "Model": "RAID_B80121",
             "ChipManufacturer": "Huawei"
         },
         "SASPhy_0": {
