@@ -326,7 +326,7 @@
             "DescArg5": "75",
             "Hysteresis": 2,
             "Component": "#/Component_DPUCard",
-            "EventKeyId": "PCIeCard.PCIeCardOMOverTemp",
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
             "Condition": 75,
             "LedFaultCode": "q$$"
         },
@@ -340,7 +340,7 @@
             "DescArg5": "75",
             "Hysteresis": 2,
             "Component": "#/Component_DPUCard",
-            "EventKeyId": "PCIeCard.PCIeCardOMOverTemp",
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
             "Condition": 75,
             "LedFaultCode": "q$$"
         },
