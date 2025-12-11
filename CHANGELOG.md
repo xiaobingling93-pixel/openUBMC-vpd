@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.118] - 2025-12-11
+修复NetworkAdapter_1的TemperatureCelsius有符号数的问题
+
 ## [1.80.117] - 2025-12-10
 排查修复光模块过温告警，读值错误的问题
 补充版本号修改
