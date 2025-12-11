@@ -21,23 +21,6 @@
         }
     },
     "Objects": {
-        "Component_OCPCard": {
-            "FruId": 255,
-            "Instance": "${Slot}",
-            "Type": 83,
-            "BoardId": 65535,
-            "Name": "<=/PCIeDevice_1.DeviceName",
-            "Location": "<=/PCIeDevice_1.Position",
-            "Manufacturer": "<=/NetworkAdapter_1.Manufacturer",
-            "PartNumber": "",
-            "UniqueId": "N/A",
-            "Presence": 1,
-            "Health": 0,
-            "Function": "PCIe device",
-            "GroupId": 1,
-            "PowerState": 1,
-            "SerialNumber": ""
-        },
         "Chip_NICTempChip": {
             "Address": 62,
             "AddrWidth": 1,

@@ -3056,9 +3056,6 @@
       "Component": "#/Component_Drive23"
     },
     "Event_Hdd1MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3068,9 +3065,6 @@
       "Component": "#/Component_Drive0"
     },
     "Event_Hdd2MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3080,9 +3074,6 @@
       "Component": "#/Component_Drive1"
     },
     "Event_Hdd3MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_3.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3092,9 +3083,6 @@
       "Component": "#/Component_Drive2"
     },
     "Event_Hdd4MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_4.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3104,9 +3092,6 @@
       "Component": "#/Component_Drive3"
     },
     "Event_Hdd5MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_5.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3116,9 +3101,6 @@
       "Component": "#/Component_Drive4"
     },
     "Event_Hdd6MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_6.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3128,9 +3110,6 @@
       "Component": "#/Component_Drive5"
     },
     "Event_Hdd7MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_7.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3140,9 +3119,6 @@
       "Component": "#/Component_Drive6"
     },
     "Event_Hdd8MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_8.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3152,9 +3128,6 @@
       "Component": "#/Component_Drive7"
     },
     "Event_Hdd9MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_9.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3164,9 +3137,6 @@
       "Component": "#/Component_Drive8"
     },
     "Event_Hdd10MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_10.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3176,9 +3146,6 @@
       "Component": "#/Component_Drive9"
     },
     "Event_Hdd11MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_11.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3188,9 +3155,6 @@
       "Component": "#/Component_Drive10"
     },
     "Event_Hdd12MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_12.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3200,9 +3164,6 @@
       "Component": "#/Component_Drive11"
     },
     "Event_Hdd13MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_13.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3212,9 +3173,6 @@
       "Component": "#/Component_Drive12"
     },
     "Event_Hdd14MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_14.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3224,9 +3182,6 @@
       "Component": "#/Component_Drive13"
     },
     "Event_Hdd15MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_15.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3236,9 +3191,6 @@
       "Component": "#/Component_Drive14"
     },
     "Event_Hdd16MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_16.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3248,9 +3200,6 @@
       "Component": "#/Component_Drive15"
     },
     "Event_Hdd17MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_17.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3260,9 +3209,6 @@
       "Component": "#/Component_Drive16"
     },
     "Event_Hdd18MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_18.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3272,9 +3218,6 @@
       "Component": "#/Component_Drive17"
     },
     "Event_Hdd19MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_19.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3284,9 +3227,6 @@
       "Component": "#/Component_Drive18"
     },
     "Event_Hdd20MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_20.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3296,9 +3236,6 @@
       "Component": "#/Component_Drive19"
     },
     "Event_Hdd21MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_21.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3308,9 +3245,6 @@
       "Component": "#/Component_Drive20"
     },
     "Event_Hdd22MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_22.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3320,9 +3254,6 @@
       "Component": "#/Component_Drive21"
     },
     "Event_Hdd23MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_23.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
@@ -3332,9 +3263,6 @@
       "Component": "#/Component_Drive22"
     },
     "Event_Hdd24MdWroutLow": {
-      "@Default": {
-          "Reading": 255
-      },
       "Reading": "<=/Drive_24.PredictedMediaLifeLeftPercent",
       "OperatorId": 1,
       "Enabled": true,
