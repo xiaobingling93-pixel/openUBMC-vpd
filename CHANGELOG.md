@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.121] - 2025-12-11
+修复HyperCard4.0光模块过温告警EventKeyId大小写配置错误问题
+
 ## [1.80.120] - 2025-12-10
 修复模拟0x0200003D告警未产生问题
 
