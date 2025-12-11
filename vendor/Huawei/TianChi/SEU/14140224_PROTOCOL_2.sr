@@ -67,7 +67,7 @@
             "DescArg2": "#/Component_PCIeCard.Name",
             "Component": "#/Component_PCIeCard"
         },
-        "Event_DiskLinkSpeed": {
+        "Event_NVMeBandWidth": {
             "EventKeyId": "Disk.DiskBandWidthReduced",
             "Condition": 1,
             "Reading": "<=/PCIeDevice_1.BandwidthReduction",
