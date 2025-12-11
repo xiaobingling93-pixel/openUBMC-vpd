@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.123] - 2025-12-11
+修复硬件sr和软件sr配置冲突
+
 ## [1.80.122] - 2025-12-11
 增加PMC的raid卡的告警和调速策略
 

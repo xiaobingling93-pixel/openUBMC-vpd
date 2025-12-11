@@ -552,6 +552,7 @@
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
       "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "@Default": {
+          "Reading": 255,
           "Condition": 5
       }
     },
@@ -559,6 +560,7 @@
       "EventKeyId": "Disk.DiskRemMediaWearoutLow",
       "Condition": "<=/::StorageSetting_0.SSDMediaLifeLeftPercentThreshold",
       "@Default": {
+          "Reading": 255,
           "Condition": 5
       }
     },

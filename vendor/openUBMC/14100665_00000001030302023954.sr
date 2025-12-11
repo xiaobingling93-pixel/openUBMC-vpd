@@ -561,9 +561,6 @@
     },
     "Event_Hdd1MdWroutLow": {
         "Reading": "<=/Drive_1.PredictedMediaLifeLeftPercent",
-        "@Default": {
-            "Reading": 255
-        },
         "OperatorId": 1,
         "Enabled": true,
         "DescArg2": "#/Component_Drive0.Name",
@@ -573,9 +570,6 @@
     },
     "Event_Hdd2MdWroutLow": {
         "Reading": "<=/Drive_2.PredictedMediaLifeLeftPercent",
-        "@Default": {
-            "Reading": 255
-        },
         "OperatorId": 1,
         "Enabled": true,
         "DescArg2": "#/Component_Drive1.Name",
