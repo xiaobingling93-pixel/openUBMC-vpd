@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.120] - 2025-12-10
+修复模拟0x0200003D告警未产生问题
+
 ## [1.80.119] - 2025-12-11
 增加博通和pmc型号raid卡bbu传感器配置
 
