@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.127] - 2025-12-12
+修复部分告警配置错误
+
 ## [1.80.126] - 2025-12-11
 修复NetworkAdapter的TemperatureCelsius多余的处理导致的负温告警问题
 
