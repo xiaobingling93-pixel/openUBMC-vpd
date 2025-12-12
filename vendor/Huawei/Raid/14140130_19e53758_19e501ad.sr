@@ -206,6 +206,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "<=/FruData_RaidCard.BoardPartNumber",
             "Model": "RAID_B80121",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Huawei"
         },
         "SASPhy_0": {

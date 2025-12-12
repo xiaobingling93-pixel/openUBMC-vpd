@@ -107,6 +107,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030694",
             "Model": "SAS3916",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Broadcom"
         },
         "SASPhy_0": {

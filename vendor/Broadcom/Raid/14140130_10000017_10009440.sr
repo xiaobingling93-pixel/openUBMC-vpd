@@ -107,6 +107,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030447",
             "Model": "SAS3408iMR",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Broadcom"
         },
         "SASPhy_1": {

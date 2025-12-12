@@ -97,6 +97,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030413",
             "Model": "PM3152",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Microchip"
         },
         "Battery_1": {
