@@ -451,3 +451,9 @@ PCIeCard.DPUFaultCritical
 Rack.ObtainLiquidOutletTempFailure
 Mainboard.MainboardLowerVoltageMajor
 Mainboard.MainboardOverVoltageMajor
+ExpansionModule.ExpansionModuleLowerVlotageMajor
+ExpansionModule.ExpansionModuleSoftStartOverTemp
+Cable.CableOrConnectorAbnormal
+Chassis.LowerHumidity
+Rack.RackPowerChassisModelAbnormal
+Rack.RackPowerChassisCountAbnormal
