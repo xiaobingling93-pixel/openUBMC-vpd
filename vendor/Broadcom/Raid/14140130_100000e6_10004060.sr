@@ -19,7 +19,7 @@
     },
     "Objects": {
         "Chip_RaidChip": {
-            "Address": 2,
+            "Address": 10,
             "AddrWidth": 1,
             "OffsetWidth": 0,
             "WriteTmout": 100,
