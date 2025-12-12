@@ -6489,7 +6489,7 @@
                 "Zh": "可能导致系统停止响应或数据丢失。"
             },
             "Cause": {
-                "En": "1. A hard disk in the RAID array is not installed.@#AB;2. A hard drive is faulty.",
+                "En": "1. Some member disks of the RAID controller card are not detected.@#AB;2. The member disks are faulty.",
                 "Zh": "1、RAID组中有硬盘不在位。@#AB;2、硬盘故障。"
             }
         },
@@ -6770,12 +6770,12 @@
                 "Zh": "%1 %2 %3健康状态降级。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The system can still run properly, but the reliability is reduced.",
+                "Zh": "系统仍能正常运行，但可靠性有所降低。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "The PCIe card and its slot may be damaged or in poor contact.",
+                "Zh": "PCIe卡与插槽可能存在损坏或接触不良现象。"
             }
         },
         {
@@ -6846,12 +6846,12 @@
                 "Zh": "The %1 %2 %3 temperature (%4 degrees C) exceeds the overtemperature threshold (%5 degrees C)."
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The PCIe device runs unstably due to high temperature. If the alarm persists, services related to the PCIe card will fail.",
+                "Zh": "温度过高会导致PCIe设备运行不稳定。如果告警一直存在，可能导致PCIe卡相关业务无法正常运行。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1. The fan is faulty.@#AB;2. The ambient temperature is too high.@#AB;3. The air intake or exhaust vent of the server is blocked.@#AB;4. The PCIe card is faulty.",
+                "Zh": "1. 风扇故障。@#AB;2. 环境温度过高。@#AB;3 .服务器进风口/出风口堵塞。@#AB;4 .PCIe卡故障。"
             }
         },
         {
@@ -6876,7 +6876,7 @@
         {
             "Suggestion": {
                 "En": "Replace BBU.",
-                "Zh": "更换该部 件的BBU。"
+                "Zh": "更换该部件的BBU。"
             },
             "EventKeyId": "PCIeRAIDCard.PCIeCardBBULowerVoltage",
             "Description": {
@@ -7135,8 +7135,8 @@
                 "Zh": ""
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1. The drive is replaced.",
+                "Zh": "1. 更换硬盘"
             }
         },
         {
@@ -7154,8 +7154,8 @@
                 "Zh": "可能导致系统停止响应或数据丢失。"
             },
             "Cause": {
-                "En": "The SLIM cable is incorrectly connected.",
-                "Zh": "SLIM线缆连接错误。"
+                "En": "1.The SLIM cable is incorrectly connected.@#AB;2.The alarm threshold for the SSD remaining wear level is manually set to a high value.",
+                "Zh": "1、SLIM线缆连接错误。@#AB;2、人工设置SSD硬盘剩余磨损率告警阈值较高。"
             }
         },
         {
@@ -7169,12 +7169,12 @@
                 "Zh": "%1硬盘 %2 有外部配置。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The hard disk fault affects related service or causes data loss.",
+                "Zh": "硬盘故障，可能导致相关业务无法正常运行或数据丢失。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "The hard disk has existing logical relationships.",
+                "Zh": "外来硬盘已有逻辑关系。"
             }
         },
         {
@@ -8408,8 +8408,8 @@
                 "Zh": ""
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "Drive insertion",
+                "Zh": "硬盘插入"
             }
         },
         {
@@ -8423,12 +8423,12 @@
                 "Zh": "%1 PCIe卡%2(%3) BBU不在位。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The cache function of the PCIe card becomes unavailable",
+                "Zh": "PCIe卡cache功能失效"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "No BBU is installed",
+                "Zh": "没有安装BBU"
             }
         },
         {
@@ -8548,7 +8548,7 @@
         {
             "Suggestion": {
                 "En": "1. Restart the {BMC}.@#AB;2. Shut down and restart the OS. Then, check whether the alarm is cleared.@#AB;3. Remove and reconnect power cables or remove and reinstall the board in the chassis.@#AB;4. Replace the component and check for alarms.",
-                "Zh": "1. 重启{BMC}。@#AB;2. 执行OS先下电后上电，观察故障是否恢复。@#AB;3. 拔插电源线缆或拔插单板。@#AB;4. 更换该部件并进 一步观察。"
+                "Zh": "1. 重启{BMC}。@#AB;2. 执行OS先下电后上电，观察故障是否恢复。@#AB;3. 拔插电源线缆或拔插单板。@#AB;4. 更换该部件并进一步观察。"
             },
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Description": {
@@ -8556,8 +8556,8 @@
                 "Zh": "%1 PCIe卡%2(%3) 温度读取失败。%4 %5"
             },
             "Influence": {
-                "En": "The temperature cannot be monitored. No alarm will be reported when the temperature is not in the normal range. The fan adjustment is also affected.",
-                "Zh": "无法正常监控温度，如果温度异常时无法及时告警，影响风扇调速。"
+                "En": "The temperature cannot be monitored. No alarm will be reported when the temperature is not in the normal range. The fan adjustment is also affected.@#AB;Full Liquid Cooling Model EventImpact:The temperature cannot be monitored,and the corresponding hardware temperature monitoring fails.",
+                "Zh": "无法正常监控温度，如果温度异常时无法及时告警，影响风扇调速。@#AB;全液冷散热机型告警事件影响：无法正常监控温度，对应硬件温度监控失效。"
             },
             "Cause": {
                 "En": "The sensor access channel is abnormal, or the sensor chip has failed.",
@@ -10039,11 +10039,11 @@
             },
             "Influence": {
                 "En": "",
-                "Zh": "更换PCIe卡。"
+                "Zh": ""
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1.The PCIe card is replaced.",
+                "Zh": "1.更换PCIe卡。"
             }
         },
         {
@@ -10114,12 +10114,12 @@
                 "Zh": "%1硬盘 %2 链路异常。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The hard disk fault affects related service or causes data loss.",
+                "Zh": "硬盘故障，可能导致相关业务无法正常运行或数据丢失。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1.The SAS or NVME cable is incorrectly connected or the cable is faulty.@#AB;2.The hard disk is faulty.@#AB;3.The hard disk backplane converter is faulty.@#AB;4.The RAID controller card is faulty.",
+                "Zh": "1、SAS或者NVME线缆差错或线缆故障;@#AB;2、硬盘故障;@#AB;3、硬盘背板或转接卡故障;@#AB;4、RAID卡故障;"
             }
         },
         {
@@ -10152,12 +10152,12 @@
                 "Zh": "%1硬盘 %2 预故障。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The drive fault affects related service or causes data loss.",
+                "Zh": "硬盘故障，可能导致相关业务无法正常运行或数据丢失。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "The drive is faulty.",
+                "Zh": "硬盘故障"
             }
         },
         {
@@ -10171,12 +10171,12 @@
                 "Zh": "%1硬盘 %2 状态异常。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The hard disk fault affects related service or causes data loss.",
+                "Zh": "硬盘故障，可能导致相关业务无法正常运行或数据丢失。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1.The hard disk or RAID controller card is not properly operated.@AB;2.The hard disk is faulty.",
+                "Zh": "1、对硬盘或RAID卡操作不当;@AB;2、硬盘故障。"
             }
         },
         {
@@ -10213,8 +10213,8 @@
                 "Zh": ""
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "Drive removal",
+                "Zh": "拔出硬盘"
             }
         },
         {
@@ -10532,12 +10532,12 @@
                 "Zh": "%1 PCIe卡%2 %3 带宽降低。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The system can still run properly, but the reliability is reduced.",
+                "Zh": "系统仍能正常运行，但可靠性有所降低。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "The PCIe card and its slot may be damaged or in poor contact.",
+                "Zh": "PCIe卡与插槽可能存在损坏或接触不良现象。"
             }
         },
         {
@@ -13706,7 +13706,7 @@
             },
             "Influence": {
                 "En": "The system can still run properly, but the performance deteriorates.",
-                "Zh": "系统仍能正常运行 ，但性能有所降低。"
+                "Zh": "系统仍能正常运行，但性能有所降低。"
             },
             "Cause": {
                 "En": "The PCIe card and the slot may be damaged or in poor contact.",
