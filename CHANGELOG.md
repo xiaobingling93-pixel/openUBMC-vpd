@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.126] - 2025-12-11
+修复NetworkAdapter的TemperatureCelsius多余的处理导致的负温告警问题
+
 ## [1.80.125] - 2025-12-11
 修复部分RAID卡0x0800004B告警配置错误
 

@@ -275,7 +275,7 @@
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "<=/ThresholdSensor_OCPTemp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis",
-            "Reading": "<=/Scanner_NIC_Lm75.Value |> expr(($1 >= 255) ? 30 : $1) |> expr($1 & 255)",
+            "Reading": "<=/Scanner_NIC_Lm75.Value |> expr(($1 >= 128) ? ($1 - 256) : $1)",
             "@Default": {
                 "Condition": 105
             },
