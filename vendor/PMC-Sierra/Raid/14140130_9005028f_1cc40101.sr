@@ -97,6 +97,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030623",
             "Model": "PM8204",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Adaptec"
         },
         "Battery_1": {

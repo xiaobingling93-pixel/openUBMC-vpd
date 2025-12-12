@@ -104,6 +104,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "N/A",
             "Model": "9540-8i",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Broadcom"
         },
         "SASPhy_1": {

@@ -106,6 +106,7 @@
             "TemperatureCelsius": 0,
             "BOMNumber": "06030718",
             "Model": "9500-8e",
+            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Broadcom"
         },
         "Event_PCIeRAIDCardFault": {
