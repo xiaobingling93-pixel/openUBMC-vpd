@@ -242,6 +242,17 @@
             "AdditionalInfo": "2",
             "DescArg2": "#/Component_PCIeCard.Name"
         },
+        "Event_PCIeLinkSpeed": {
+            "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(FBGF-RAD-R1-S1)",
+            "Component": "#/Component_PCIeCard"
+        },
         "CoolingRequirement_1_10": {
             "RequirementId": "${Slot} |> expr((10 << 8) | $1)",
             "MonitoringStatus": "<=/Controller_1.TemperatureAbnormal",
