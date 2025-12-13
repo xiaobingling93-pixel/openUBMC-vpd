@@ -223,22 +223,6 @@
             "Condition": 75,
             "LedFaultCode": "q$$"
         },
-        "Event_FRUReadFailMntr": {
-            "EventKeyId": "PCIeCard.PCIeCardAccessFRULableFailure",
-            "Condition": 1
-        },
-        "Event_PCIeRecovError": {
-            "EventKeyId": "PCIeCard.PCIeCardRecovError",
-            "Condition": 1
-        },
-        "Event_PCIeUnRecovError": {
-            "EventKeyId": "PCIeCard.PCIeCardUnRecovError",
-            "Condition": 3
-        },
-        "Event_PCIeSelfTestFail": {
-            "EventKeyId": "PCIeCard.PCIESelfTestFail",
-            "Condition": 2
-        },
         "Event_TempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1

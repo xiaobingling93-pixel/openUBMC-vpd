@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.129] - 2025-12-13
+优化网卡告警配置
+
 ## [1.80.128] - 2025-12-12
 优化raid卡pcbversion属性获取逻辑
 

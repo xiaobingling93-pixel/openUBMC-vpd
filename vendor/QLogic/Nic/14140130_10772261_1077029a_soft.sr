@@ -162,41 +162,6 @@
             "Hysteresis": 2,
             "Component": "#/Component_PCIeCard"
         },
-        "Event_FRUReadFailMntr": {
-            "Reading": "<=/FruData_Fru0.Health",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg2": "#/Component_PCIeCard.Instance",
-            "DescArg3": "QLE2742-HUA-SP",
-            "Component": "#/Component_PCIeCard"
-        },
-        "Event_PCIeRecovError": {
-            "Reading": "<=/NetworkAdapter_1.FaultState",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "QLE2742-HUA-SP",
-            "DescArg4": "#/NetworkAdapter_1.FaultState",
-            "Component": "#/Component_PCIeCard"
-        },
-        "Event_PCIeUnRecovError": {
-            "Reading": "<=/NetworkAdapter_1.FaultState",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "QLE2742-HUA-SP",
-            "DescArg4": "#/NetworkAdapter_1.FaultState",
-            "Component": "#/Component_PCIeCard"
-        },
-        "Event_PCIeSelfTestFail": {
-            "Reading": "<=/NetworkAdapter_1.FaultState",
-            "OperatorId": 5,
-            "Enabled": true,
-            "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "QLE2742-HUA-SP",
-            "DescArg4": "#/NetworkAdapter_1.FaultState",
-            "Component": "#/Component_PCIeCard"
-        },
         "Event_TempFail": {
             "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
             "OperatorId": 5,
@@ -240,7 +205,7 @@
             "AdditionalInfo": "1",
             "DescArg1": "#/Component_PCIeCard.Name",
             "DescArg3": "Port 1",
-            "Component": "#/Component_Port2"
+            "Component": "#/Component_Port1"
         },
         "Event_OM1PowerAlarm": {
             "Reading": "<=/OpticalModule_1.PowerState",
