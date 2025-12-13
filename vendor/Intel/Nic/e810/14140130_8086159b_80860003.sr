@@ -165,7 +165,8 @@
             "LinkSpeed": "N/A",
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health"
+            "Health": "<=/Component_PCIeCard.Health",
+            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
