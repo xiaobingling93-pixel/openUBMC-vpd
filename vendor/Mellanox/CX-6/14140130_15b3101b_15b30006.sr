@@ -67,6 +67,10 @@
             "Mask": 65535,
             "Period": 1000,
             "Type": 0,
+            "ScanEnabled": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
+            "@Default": {
+                "ScanEnabled": 0
+            },
             "Debounce": "#/MidAvg_IBTemp"
         },
         "MidAvg_IBTemp": {

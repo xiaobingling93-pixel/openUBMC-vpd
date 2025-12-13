@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.138] - 2025-12-12
+修复完善网卡温度Scanner的配置
+
 ## [1.80.137] - 2025-12-13
 修复部分网卡0x2900000F告警配置条件错误
 
