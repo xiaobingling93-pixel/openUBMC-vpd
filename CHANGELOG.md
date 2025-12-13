@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.134] - 2025-12-13
+E810-XXVDA2网卡新增光模块告警
+
 ## [1.80.133] - 2025-12-13
 修复告警reading关联错属性
 
