@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.136] - 2025-12-13
+增加级联模块电压过低和缓起电路温度过高告警、线缆或连接器异常告警、湿度过低告警、电源框配置异常告警
+
 ## [1.80.135] - 2025-12-12
 配置SerialNumber同步语法
 

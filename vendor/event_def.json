@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.66",
+    "Version": "1.0.67",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6312,6 +6312,78 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "MainboardOverVoltageMajor"
+        },
+        {
+            "EventCode": "0x580F0013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "ExpansionModule.ExpansionModuleLowerVoltageMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ExpansionModuleLowerVoltageMajor"
+        },
+        {
+            "EventCode": "0x580F0015",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "ExpansionModule.ExpansionModuleSoftStartOverTemp",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "ExpansionModuleSoftStartOverTemp"
+        },
+        {
+            "EventCode": "0x28000055",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.CableOrConnectorAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "CableOrConnectorAbnormal"
+        },
+        {
+            "EventCode": "0x120F0013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.LowerHumidity",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "LowerHumidity"
+        },
+        {
+            "EventCode": "0x51000025",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.RackPowerChassisModelAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RackPowerChassisModelAbnormal"
+        },
+        {
+            "EventCode": "0x51000027",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.RackPowerChassisCountAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RackPowerChassisCountAbnormal"
         }
     ],
     "EventDescription": [
@@ -16308,6 +16380,120 @@
             "Cause": {
                 "En": "The node is faulty.",
                 "Zh": "主板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the system module.",
+                "Zh": "更换对应模块。"
+            },
+            "EventKeyId": "ExpansionModule.ExpansionModuleLowerVoltageMajor",
+            "Description": { 
+                "En": "The Expansion Module %1 voltage %4 at %2 V detection point %3 exceeds the lowervoltage threshold %5.",
+                "Zh": "扩展模块 %1 %2V监测点%3当前电压%4低于低压门限电压%5。"
+            },
+            "Influence": {
+                "En": "The component management functions may be affected.",
+                "Zh": "可能影响对应模块的管理功能。"
+            },
+            "Cause": {
+                "En": "The module is faulty.",
+                "Zh": "电源模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check for air intake/outtake overtemperature alarms. @#AB;2. Check for fan alarms. @#AB;3. Replace the component.",
+                "Zh": "1、检查系统是否同时存在进风口/出风口高温告警。 @#AB;2、检查系统是否同时存在风扇告警。@#AB;3、更换该系统模块。"
+            },
+            "EventKeyId": "ExpansionModule.ExpansionModuleSoftStartOverTemp",
+            "Description": { 
+                "En": "The Expansion Module Overtemperature of the soft-start circuit %2 of the %1 system.",
+                "Zh": "扩展模块 %1 %2缓起电路温度过高。"
+            },
+            "Influence": {
+                "En": "Overtemperature of the soft-start circuit may cause system faults.",
+                "Zh": "缓起过温，长时间运行可能导致系统故障。"
+            },
+            "Cause": {
+                "En": "1. The ambient temperature is too high. @#AB;2. The air inlet or outlet is blocked. @#AB;3. The fan module is faulty. @#AB;4. The system module is faulty.",
+                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、该系统模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the cascade cable is properly connected. @#AB;2. Replace the cascade cable. @#AB;3. Replace the module to which the cable belongs.",
+                "Zh": "1、检查级联线缆是否插入。 @#AB;2、更换级联线缆。 @#AB;3、更换线缆所属模块。"
+            },
+            "EventKeyId": "Cable.CableOrConnectorAbnormal",
+            "Description": { 
+                "En": "%1 %2 Cable or connector is abnormal.",
+                "Zh": "%1 %2 线缆或连接器异常。"
+            },
+            "Influence": {
+                "En": "May cause abnormal module communication.",
+                "Zh": "可能导致模块通信异常。"
+            },
+            "Cause": {
+                "En": "1. The cable is not plugged in or is faulty. @#AB;2. Connector failure.",
+                "Zh": "1、线缆未插入或者线缆故障。 @#AB;2、连接器故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Adjust the environmental humidity to meet the product's environmental specifications.",
+                "Zh": "调整环境湿度到产品环境规格要求。"
+            },
+            "EventKeyId": "Chassis.LowerHumidity",
+            "Description": { 
+                "En": "Current humidity %1 (%2%) is below the alarm threshold humidity (%3%).",
+                "Zh": "当前湿度 %1（%2 %）低于告警门限湿度（%3 %）。"
+            },
+            "Influence": {
+                "En": "Excessively low humidity affects the service life of servers.",
+                "Zh": "湿度过低影响服务器使用寿命。"
+            },
+            "Cause": {
+                "En": "Insufficient environmental humidity.",
+                "Zh": "环境湿度不足。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check and configure the correct expected model information. @#AB;2. Try reseating the management module or cascading cables. @#AB;3. Replace the management module. @#AB;4. Replace the power chassis.",
+                "Zh": "1、检查并配置正确的预期型号信息。 @#AB;2、尝试插拔管理模块或级联线缆。 @#AB;3、更换管理模块。 @#AB;4、更换电源框。"
+            },
+            "EventKeyId": "Rack.RackPowerChassisModelAbnormal",
+            "Description": { 
+                "En": "The power chassis model of %1 is %2, which does not meet the configuration requirement, the expected model configured is %3.",
+                "Zh": "%1电源框型号%2不满足配置，预期配置型号为%3。"
+            },
+            "Influence": {
+                "En": "May cause CAN communication abnormalities.",
+                "Zh": "可能导致CAN通信异常。"
+            },
+            "Cause": {
+                "En": "1. The actual power chassis model is incorrect, or the expected model information is configured incorrectly. @#AB;2. Hardware failure of the management module. @#AB;3. Hardware failure of the power chassis.",
+                "Zh": "1、实际电源框型号错误或预期型号信息配置错误。 @#AB;2、管理模块硬件故障。 @#AB;3、电源框硬件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check and configure the correct expected quantity information. @#AB;2. Try reseating the management module or cascading cables. @#AB;3. Replace the cascading cables. @#AB;4. Replace the management module.",
+                "Zh": "1、检查并配置正确的预期数量信息。 @#AB;2、尝试插拔管理模块或级联线缆。 @#AB;3、更换级联线缆。 @#AB;4、更换管理模块。"
+            },
+            "EventKeyId": "Rack.RackPowerChassisCountAbnormal",
+            "Description": { 
+                "En": "The number of power chassis is %1, which does not meet the configuration requirement, the expected number configured is %2.",
+                "Zh": "电源框数量%1不满足配置，预期配置数量为%2。"
+            },
+            "Influence": {
+                "En": "May result in the inability to monitor and manage all power modules.",
+                "Zh": "可能导致无法对所有电源模块进行监控与管理。"
+            },
+            "Cause": {
+                "En": "1. The actual number of power chassis is incorrect, or the expected quantity information is configured incorrectly. @#AB;2. The cascading cable is not connected. @#AB;3. The management module is faulty.",
+                "Zh": "1、实际电源框数量错误或预期数量信息配置错误。 @#AB;2、级联线缆未连接。 @#AB;3、管理模块故障。"
             }
         }
     ]
