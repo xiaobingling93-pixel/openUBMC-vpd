@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.139] - 2025-12-13
+修复PMC RAID卡漏配PCIeCardLinkSpeedReduced告警的问题
+
 ## [1.80.138] - 2025-12-12
 修复完善网卡温度Scanner的配置
 
