@@ -10674,15 +10674,15 @@
             "EventKeyId": "PCIeCard.PCIeCardAccessFRULableFailure",
             "Description": {
                 "En": "Failed to obtain electronic label data of the %1 PCIe card %2 (%3).",
-                "Zh": "%1 PCIe卡%2(%3) 电子标签数据读取失 败。"
+                "Zh": "%1 PCIe卡%2(%3) 电子标签数据读取失败。"
             },
             "Influence": {
-                "En": "",
-                "Zh": ""
+                "En": "The system cannot read PCIe card asset information.",
+                "Zh": "影响系统读取PCIe卡资产信息。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "The EEPROM or access channel is faulty.",
+                "Zh": "EEPROM或访问通道故障。"
             }
         },
         {

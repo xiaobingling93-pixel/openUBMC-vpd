@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.80.131] - 2025-12-13
+补充0x08000007告警描述信息
+
+## [1.80.131] - 2025-12-13
 新增光模块插入事件定义
 
 ## [1.80.130] - 2025-12-13
