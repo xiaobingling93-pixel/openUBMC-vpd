@@ -483,7 +483,7 @@
         },
         "Event_Port1BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100
@@ -499,7 +499,7 @@
         },
         "Event_Port2BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100
@@ -515,7 +515,7 @@
         },
         "Event_Port3BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_3.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100
@@ -531,7 +531,7 @@
         },
         "Event_Port4BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwithThresholdPercent",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_4.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100
