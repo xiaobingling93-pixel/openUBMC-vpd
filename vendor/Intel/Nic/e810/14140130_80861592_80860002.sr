@@ -244,7 +244,58 @@
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
-            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "PcieCard",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/Event_OverTemp.Condition"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PCIeCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "E810 Chip"
+        },
+        "Event_OM0OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_0.ChannelNum",
+            "DescArg4": "#/Event_OM0OverTempInfo.Reading",
+            "DescArg5": "75",
+            "Hysteresis": 2,
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 75,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_1.ChannelNum",
+            "DescArg4": "#/Event_OM1OverTempInfo.Reading",
+            "DescArg5": "75",
+            "Hysteresis": 2,
+            "Component": "#/Component_PCIeCard"
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",

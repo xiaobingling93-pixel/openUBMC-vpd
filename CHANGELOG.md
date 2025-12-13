@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.132] - 2025-12-13
+优化网卡的过温告警相关配置
+
 ## [1.80.131] - 2025-12-13
 新增光模块插入事件定义
 
