@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.137] - 2025-12-13
+修复部分网卡0x2900000F告警配置条件错误
+
 ## [1.80.136] - 2025-12-13
 增加级联模块电压过低和缓起电路温度过高告警、线缆或连接器异常告警、湿度过低告警、电源框配置异常告警
 

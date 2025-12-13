@@ -192,7 +192,7 @@
             "Component": "#/Component_Port1"
         },
         "Event_OM1VAMntr": {
-            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1,3",

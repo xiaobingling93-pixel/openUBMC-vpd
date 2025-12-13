@@ -301,7 +301,7 @@
             "Component": "#/Component_Port4"
         },
         "Event_OM0VAMntr": {
-            "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_0.FaultState;<=/OpticalModule_0.SupplyVoltage;<=/OpticalModule_0.VoltageLowerThresholdCritical;<=/OpticalModule_0.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -311,7 +311,7 @@
             "Component": "#/Component_Port1"
         },
         "Event_OM1VAMntr": {
-            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -321,7 +321,7 @@
             "Component": "#/Component_Port2"
         },
         "Event_OM2VAMntr": {
-            "Reading": "<=/OpticalModule_2.FaultState;<=/OpticalModule_2.SupplyVoltage;<=/OpticalModule_2.VoltageLowerThresholdCritical;<=/OpticalModule_2.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_2.FaultState;<=/OpticalModule_2.SupplyVoltage;<=/OpticalModule_2.VoltageLowerThresholdCritical;<=/OpticalModule_2.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
@@ -331,7 +331,7 @@
             "Component": "#/Component_Port3"
         },
         "Event_OM3VAMntr": {
-            "Reading": "<=/OpticalModule_3.FaultState;<=/OpticalModule_3.SupplyVoltage;<=/OpticalModule_3.VoltageLowerThresholdCritical;<=/OpticalModule_3.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "Reading": "<=/OpticalModule_3.FaultState;<=/OpticalModule_3.SupplyVoltage;<=/OpticalModule_3.VoltageLowerThresholdCritical;<=/OpticalModule_3.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65535) && ($3 != 65535) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65535) && ($4 != 65535) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
             "AdditionalInfo": "1",
