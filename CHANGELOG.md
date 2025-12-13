@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.131] - 2025-12-13
+新增光模块插入事件定义
+
 ## [1.80.130] - 2025-12-13
 修复14100665_00000001030302023936硬盘背板中硬盘在位状态配置错误
 

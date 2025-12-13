@@ -5282,6 +5282,18 @@
             "EventName": "BMCUncorrectableErr"
         },
         {
+            "EventCode": "0x5F000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "OpticalModule.OpticalModuleInstalled",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "OpticalModuleInstalled"
+        },
+        {
             "EventCode": "0x5F000003",
             "ReportChannel": 65535,
             "OldEventCode": "",
@@ -14547,6 +14559,25 @@
             "Cause": {
                 "En": "1. The BMC card is faulty.@#AB;2. The mainboard is faulty.",
                 "Zh": "1、BMC卡故障。@#AB;2、主板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "OpticalModule.OpticalModuleInstalled",
+            "Description": {
+                "En": "Optical module %1 installed.",
+                "Zh": "光模块 %1 插入。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
             }
         },
         {
