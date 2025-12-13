@@ -291,7 +291,7 @@
       "Bom": "14140224",
       "Slot": 8,
       "Position": 1,
-      "Presence": "<=/Scanner_Drive0PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive8PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -308,7 +308,7 @@
       "Bom": "14140224",
       "Slot": 9,
       "Position": 2,
-      "Presence": "<=/Scanner_Drive1PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive9PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -325,7 +325,7 @@
       "Bom": "14140224",
       "Slot": 10,
       "Position": 3,
-      "Presence": "<=/Scanner_Drive2PresentAccessor.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive10PresentAccessor.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -342,7 +342,7 @@
       "Bom": "14140224",
       "Slot": 11,
       "Position": 4,
-      "Presence": "<=/Scanner_Drive3PresentAccessor.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "Presence": "<=/Scanner_Drive11PresentAccessor.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "Id": "VPD",
       "AuxId": "0",
       "Buses": [
@@ -1084,7 +1084,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive0PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive8PresentAccessor.Value;<=/Scanner_Drive1PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "IODeteriorationHealthCode": 0
     },
@@ -1155,7 +1155,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive1PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive9PresentAccessor.Value;<=/Scanner_Drive2PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "IODeteriorationHealthCode": 0
     },
@@ -1226,7 +1226,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive2PresentAccessor.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive10PresentAccessor.Value;<=/Scanner_Drive3PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "IODeteriorationHealthCode": 0
     },
@@ -1297,7 +1297,7 @@
       "@Default": {
         "PredictedMediaLifeLeftPercent": 255
       },
-      "PassThrough": "<=/Scanner_Drive3PresentAccessor.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
+      "PassThrough": "<=/Scanner_Drive11PresentAccessor.Value;<=/Scanner_Drive4PCIeType.Value|> expr(($1 == 1) && ($2 == 1))",
       "SerialNumber": "",
       "IODeteriorationHealthCode": 0
     },
@@ -2759,13 +2759,9 @@
         "Scanner_Drive11LocateAccessor": {"Value": "expr($disk_locate_11)"},
         "Scanner_Drive11FalutAccessor": {"Value": "expr($disk_fault_11)"},
         "Scanner_Drive11ActivationAccessor": {"Value": "expr($disk_active_11)"},
-        "Scanner_Drive0PresentAccessor": {"Value": "expr($disk_prsnt_8)"},
         "Scanner_Drive1PCIeType": {"Value": "expr($disk_type_8)"},
-        "Scanner_Drive1PresentAccessor": {"Value": "expr($disk_prsnt_9)"},
         "Scanner_Drive2PCIeType": {"Value": "expr($disk_type_9)"},
-        "Scanner_Drive2PresentAccessor": {"Value": "expr($disk_prsnt_10)"},
         "Scanner_Drive3PCIeType": {"Value": "expr($disk_type_10)"},
-        "Scanner_Drive3PresentAccessor": {"Value": "expr($disk_prsnt_11)"},
         "Scanner_Drive4PCIeType": {"Value": "expr($disk_type_11)"},
         "Scanner_SEU_Inner_1": {"Value": "expr($affi_bp0_prsnt)"},
         "Scanner_SEU_Inner_2": {"Value": "expr($affi_bp1_prsnt)"},

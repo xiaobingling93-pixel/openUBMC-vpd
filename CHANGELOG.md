@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.130] - 2025-12-13
+修复14100665_00000001030302023936硬盘背板中硬盘在位状态配置错误
+
 ## [1.80.129] - 2025-12-13
 优化网卡告警配置
 
