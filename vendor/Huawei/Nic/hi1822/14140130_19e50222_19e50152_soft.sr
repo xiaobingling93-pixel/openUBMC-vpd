@@ -201,16 +201,6 @@
             "DescArg4": "#/Event_Hi1822OverTemp.Reading",
             "DescArg5": "#/ThresholdSensor_Hi1822Temp.UpperNoncritical"
         },
-        "Event_OMOverTempInfo": {
-            "Reading": "<=/ThresholdSensor_OpticalModuleTemp.Reading |> expr($1 > 255 ? 40 : $1)",
-            "OperatorId": 4,
-            "Enabled": true,
-            "DescArg2": "#/PCIeCard_1.DeviceName",
-            "DescArg4": "#/Event_OMOverTempInfo.Reading",
-            "DescArg5": "75",
-            "Hysteresis": 2,
-            "Component": "#/Component_PCIeCard"
-        },
         "Event_PCIeCardUCE": {
             "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
             "OperatorId": 5,

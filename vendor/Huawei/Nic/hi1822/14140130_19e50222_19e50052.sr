@@ -386,10 +386,57 @@
             "Condition": "<=/ThresholdSensor_Hi1822Temp.UpperNoncritical",
             "Hysteresis": "<=/ThresholdSensor_Hi1822Temp.PositiveHysteresis"
         },
-        "Event_OMOverTempInfo": {
+        "Event_OM0OverTempInfo": {
             "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
-            "Condition": 75,
-            "LedFaultCode": "q$$"
+            "Condition": 125,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_0.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_0.ChannelNum",
+            "DescArg4": "#/Event_OM0OverTempInfo.Reading",
+            "DescArg5": "125",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_OM1OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 125,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_1.ChannelNum",
+            "DescArg4": "#/Event_OM1OverTempInfo.Reading",
+            "DescArg5": "125",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_OM2OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 125,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_2.ChannelNum",
+            "DescArg4": "#/Event_OM2OverTempInfo.Reading",
+            "DescArg5": "125",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Event_OM3OverTempInfo": {
+            "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
+            "Condition": 125,
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_3.TemperatureCelsius |> expr($1 > 255 ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "#/OpticalModule_3.ChannelNum",
+            "DescArg4": "#/Event_OM3OverTempInfo.Reading",
+            "DescArg5": "125",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
