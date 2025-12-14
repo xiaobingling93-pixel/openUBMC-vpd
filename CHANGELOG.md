@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.141] - 2025-12-14
+网卡TemperatureCelsius配置合理范围和默认值修改
+
 ## [1.80.140] - 2025-12-14
 删除JM800冗余告警配置
 

@@ -112,7 +112,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 127,
             "MinimumReading": 128,
-            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius",
+            "Reading": "<=/NetworkAdapter_1.TemperatureCelsius |> expr(($1 >= 128) ? ($1 - 256) : $1)",
             "ReadingStatus": "<=/NetworkAdapter_1.TemperatureStatus"
         },
         "ThresholdSensor_OpticalModuleTemp": {
