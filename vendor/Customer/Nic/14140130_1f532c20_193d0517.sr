@@ -141,58 +141,6 @@
             "Health": 0,
             "PowerState": 1
         },
-        "Event_Port1LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
-            "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 1",
-            "Component": "#/Component_Port1"
-        },
-        "Event_Port2LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
-            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 2",
-            "Component": "#/Component_Port2"
-        },
-        "Event_Port3LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
-            "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 3",
-            "Component": "#/Component_Port3"
-        },
-        "Event_Port4LinkDown": {
-            "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,
-            "Reading": "<=/NetworkPort_3.LinkStatusNumeric",
-            "@Default": {
-                "Reading": 255
-            },
-            "OperatorId": 8,
-            "Enabled": true,
-            "DescArg1": "#/PCIeCard_1.DeviceName",
-            "DescArg3": "Port 4",
-            "Component": "#/Component_Port4"
-        },
         "Event_Port0BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
