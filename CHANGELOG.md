@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.140] - 2025-12-14
+删除JM800冗余告警配置
+
 ## [1.80.139] - 2025-12-13
 修复PMC RAID卡漏配PCIeCardLinkSpeedReduced告警的问题
 
