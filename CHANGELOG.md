@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.147] - 2025-12-15
+修复SP580网卡温度传感器未配置ReadingStatus问题
+
 ## [1.80.146] - 2025-12-15
 增加风扇拔出事件和rtc时间读取失败告警
 
