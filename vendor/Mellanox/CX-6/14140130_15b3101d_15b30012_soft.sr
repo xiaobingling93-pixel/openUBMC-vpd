@@ -176,7 +176,7 @@
         "Event_Port1LinkDown": {
             "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
             "@Default": {
-                "Reading": 0
+                "Reading": 255
             },
             "OperatorId": 8,
             "Enabled": true,
@@ -239,7 +239,7 @@
         "Event_Port2LinkDown": {
             "Reading": "<=/NetworkPort_2.LinkStatusNumeric",
             "@Default": {
-                "Reading": 0
+                "Reading": 255
             },
             "OperatorId": 8,
             "Enabled": true,
