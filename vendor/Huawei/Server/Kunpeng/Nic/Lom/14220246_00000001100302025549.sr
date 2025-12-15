@@ -290,7 +290,7 @@
       "EventKeyId": "Port.PortDisconnected",
       "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
       "@Default": {
-        "Reading": 1
+        "Reading": 255
       },
       "Condition": 0,
       "OperatorId": 5,

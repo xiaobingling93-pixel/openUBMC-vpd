@@ -239,7 +239,7 @@
             "Condition": 0,
             "Reading": "<=/NetworkPort_0.LinkStatusNumeric",
             "@Default": {
-                "Reading": 0
+                "Reading": 255
             },
             "OperatorId": 8,
             "Enabled": true,
@@ -252,7 +252,7 @@
             "Condition": 0,
             "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
             "@Default": {
-                "Reading": 0
+                "Reading": 255
             },
             "OperatorId": 8,
             "Enabled": true,
