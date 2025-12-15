@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.143] - 2025-12-15
+硬盘、板卡兼容性说明删除已终止支持的板卡
+
 ## [1.80.142] - 2025-12-14
 补充网卡4个光模块过温告警
 
