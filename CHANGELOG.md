@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.146] - 2025-12-15
+增加风扇拔出事件和rtc时间读取失败告警
+
 ## [1.80.145] - 2025-12-15
 修复部分网卡默认值配置错误
 

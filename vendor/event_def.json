@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.67",
+    "Version": "1.0.68",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6384,6 +6384,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "RackPowerChassisCountAbnormal"
+        },
+        {
+            "EventCode": "0x04000015",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Fan.ModuleFanRemoved",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "ModuleFanRemoved"
+        },
+        {
+            "EventCode": "0x100000C5",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Mainboard.MainboardAccessRTCClockFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "MainboardAccessRTCClockFailure"
         }
     ],
     "EventDescription": [
@@ -10346,8 +10370,8 @@
             },
             "EventKeyId": "Fan.FanRemoved",
             "Description": {
-                "En": "Fan %1 %2 removed.",
-                "Zh": "风扇%1%2移除。"
+                "En": "Fan %1 %2 removed on %3.",
+                "Zh": "%3 风扇%1%2移除。"
             },
             "Influence": {
                 "En": "",
@@ -16494,6 +16518,44 @@
             "Cause": {
                 "En": "1. The actual number of power chassis is incorrect, or the expected quantity information is configured incorrectly. @#AB;2. The cascading cable is not connected. @#AB;3. The management module is faulty.",
                 "Zh": "1、实际电源框数量错误或预期数量信息配置错误。 @#AB;2、级联线缆未连接。 @#AB;3、管理模块故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Fan.ModuleFanRemoved",
+            "Description": { 
+                "En": "%3 fan numbered %2 on the %1 is removed.",
+                "Zh": "%1风扇%2 %3移除。"
+            },
+            "Influence": {
+                "En": "Affects server fan redundancy.",
+                "Zh": "影响服务器风扇冗余性。"
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Restart the iBMC. @#AB;2. Replace the RTC battery. @#AB;3.If the problem persists, replace the mainboard.",
+                "Zh": "1、重启iBMC。 @#AB;2、更换RTC时钟电池。 @#AB;3、如果以上两步仍然不能解决问题，更换主板。"
+            },
+            "EventKeyId": "Mainboard.MainboardAccessRTCClockFailure",
+            "Description": { 
+                "En": "Failed to obtain the RTC Clock on the mainboard.",
+                "Zh": "主板RTC时钟获取失败。"
+            },
+            "Influence": {
+                "En": "The iBMC time is inaccurate.",
+                "Zh": "可能导致iBMC时间不准。"
+            },
+            "Cause": {
+                "En": "1. The RTC battery is faulty or the battery level is low. @#AB;2.the mainboard is faulty.",
+                "Zh": "1、RTC电池故障或者电量低。 @#AB;2、主板故障。"
             }
         }
     ]
