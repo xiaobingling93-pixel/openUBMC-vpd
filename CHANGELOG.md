@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.144] - 2025-12-15
+南向适配CSR2.0部分板卡，去掉CSR1.0的相关打包逻辑
+
 ## [1.80.143] - 2025-12-15
 硬盘、板卡兼容性说明删除已终止支持的板卡
 
