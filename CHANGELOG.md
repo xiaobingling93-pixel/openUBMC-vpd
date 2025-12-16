@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.150] - 2025-12-16
+新增0x0F000023、0x0F000025告警
+
 ## [1.80.149] - 2025-12-16
 新增适配联瑞OCP网卡LRES3019PT-OCP
 
