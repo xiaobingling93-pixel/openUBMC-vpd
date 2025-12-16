@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.148] - 2025-12-16
+新增适配沐曦GPU MetaX C500
+
 ## [1.80.147] - 2025-12-15
 修复SP580网卡温度传感器未配置ReadingStatus问题
 
