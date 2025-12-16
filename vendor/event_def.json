@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.68",
+    "Version": "1.0.69",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -2460,6 +2460,30 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "RiserCardReplace"
+        },
+        {
+            "EventCode": "0x0F000023",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Riser.AccesPowerFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "RiserAccesPowerFailure"
+        },
+        {
+            "EventCode": "0x0F000025",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Riser.RiserCardCPLDSelfTestFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RiserCardCPLDSelfTestFailure"
         },
         {
             "EventCode": "0x080000BD",
@@ -10133,6 +10157,44 @@
             "Cause": {
                 "En": "",
                 "Zh": ""
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1.Power off and then power on the device, and check whether the fault is rectified.@#AB;2.If the fault persists, replace the Riser Card and check whether the alarm is cleared.",
+                "Zh": "1、执行整机先下电后上电，观察故障是否恢复。@#AB;2、如无法恢复，更换该Riser卡并进一步观察。"
+            },
+            "EventKeyId": "Riser.AccesPowerFailure",
+            "Description": {
+                "En": "The power of %1 on %2 is abnormal.",
+                "Zh": "%1在%2上功率获取异常。"
+            },
+            "Influence": {
+                "En": "The power cannot be monitored properly.",
+                "Zh": "无法正常监控功率。"
+            },
+            "Cause": {
+                "En": "The power sensor of the device is faulty.",
+                "Zh": "设备功率传感器故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Power off the server, then remove and re-insert the cable of the Riser card.@#AB;2. Replace the Riser Card.",
+                "Zh": "1、整机下电后插拔Riser卡线缆，上电后观察故障是否恢复；@#AB;2、如果故障仍未恢复，更换该Riser卡。"
+            },
+            "EventKeyId": "Riser.RiserCardCPLDSelfTestFailure",
+            "Description": {
+                "En": "Riser Card%1 CPLD %2 self-check result is abnormal.",
+                "Zh": "Riser卡%1CPLD%2自检结果异常。"
+            },
+            "Influence": {
+                "En": "The Riser Card cannot work properly.",
+                "Zh": "Riser卡无法正常工作"
+            },
+            "Cause": {
+                "En": "1. The cable of the Riser Card is in poor contact.@#AB;2.The Riser Card is faulty.",
+                "Zh": "1、Riser卡线缆接触不良；@#AB;2、Riser卡故障。"
             }
         },
         {
