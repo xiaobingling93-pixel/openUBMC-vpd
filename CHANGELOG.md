@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.151] - 2025-12-16
+修复redfish查询SP226D网卡UID显示错误问题
+
 ## [1.80.150] - 2025-12-16
 新增0x0F000023、0x0F000025告警
 
