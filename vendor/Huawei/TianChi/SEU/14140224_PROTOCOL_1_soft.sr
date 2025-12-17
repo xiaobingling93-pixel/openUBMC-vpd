@@ -72,7 +72,7 @@
             "Enabled": true,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "#/ThresholdSensor_NvmeTemp.Reading",
+            "DescArg3": "#/Event_NVMeTempHighMinor.Reading",
             "DescArg4": "#/ThresholdSensor_NvmeTemp.UpperNoncritical"
         },
         "Event_NVMeTempHighMajor": {
@@ -84,7 +84,7 @@
             "Enabled": true,
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/Component_PCIeCard.Name",
-            "DescArg3": "#/ThresholdSensor_NvmeTemp.Reading",
+            "DescArg3": "#/Event_NVMeTempHighMajor.Reading",
             "DescArg4": "#/ThresholdSensor_NvmeTemp.UpperCritical"
         },
         "Event_NVMeTempFail": {
