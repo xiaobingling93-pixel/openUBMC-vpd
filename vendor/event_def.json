@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.69",
+    "Version": "1.0.70",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -7799,8 +7799,8 @@
                 "Zh": "可能导致存储组件的部分硬盘、IO组件的部分标卡或灵活IO卡无法被系统识别到。"
             },
             "Cause": {
-                "En": "1. The cables are disconnected or not securely connected.@#AB;2. The connector is not properly connected.@#AB;3. The cables are faulty.@#AB;4. The unit is faulty.",
-                "Zh": "1、线缆未插或松动。@#AB;2、连接器没有插稳。@#AB;3、线缆故障。@#AB;4、组件故障。"
+                "En": "1. The cables are disconnected or not securely connected.@#AB;2. The connector is not properly connected.@#AB;3. The identification of the RAID controller card is abnormal.@#AB;4. The cables are faulty.@#AB;5. The unit is faulty.",
+                "Zh": "1、线缆未插或松动。@#AB;2、连接器没有插稳。@#AB;3、RAID卡识别异常。@#AB;4、线缆故障。@#AB;5、组件故障。"
             }
         },
         {
