@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.155] - 2025-12-18
+网口速率1GE改为GE
+
 ## [1.80.154] - 2025-12-17
 修复告警描述模板和文档不一致的问题
 

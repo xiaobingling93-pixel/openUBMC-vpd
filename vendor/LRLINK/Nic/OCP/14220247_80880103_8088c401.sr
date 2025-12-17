@@ -135,7 +135,7 @@
             "PortID": 0,
             "NetDevFuncType": 1,
             "MediumType": "Copper",
-            "SupportedLinkCapability": "1GE"
+            "SupportedLinkCapability": "GE"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
@@ -143,7 +143,7 @@
             "PortID": 1,
             "NetDevFuncType": 1,
             "MediumType": "Copper",
-            "SupportedLinkCapability": "1GE"
+            "SupportedLinkCapability": "GE"
         },
         "NetworkPort_2": {
             "@Parent": "NetworkAdapter_1",
@@ -151,7 +151,7 @@
             "PortID": 2,
             "NetDevFuncType": 1,
             "MediumType": "Copper",
-            "SupportedLinkCapability": "1GE"
+            "SupportedLinkCapability": "GE"
         },
         "NetworkPort_3": {
             "@Parent": "NetworkAdapter_1",
@@ -159,7 +159,7 @@
             "PortID": 3,
             "NetDevFuncType": 1,
             "MediumType": "Copper",
-            "SupportedLinkCapability": "1GE"
+            "SupportedLinkCapability": "GE"
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
