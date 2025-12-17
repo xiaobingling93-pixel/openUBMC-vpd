@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.70",
+    "Version": "1.0.71",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -7938,7 +7938,7 @@
         },
         {
             "Suggestion": {
-                "En": "1.Replace the alarmed CPU.@#AB;2. Replace the mainboard",
+                "En": "1. Replace the alarmed CPU.@#AB;2. Replace the mainboard.",
                 "Zh": "1、更换告警的CPU。@#AB;2、更换主板。"
             },
             "EventKeyId": "CPU.CPUCacheWayError",
@@ -7957,7 +7957,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Replace the mainboard",
+                "En": "1. Replace the mainboard.",
                 "Zh": "1、更换主板"
             },
             "EventKeyId": "CPU.CPUCoreIsolated",
@@ -13885,7 +13885,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Arrange scheduled maintenance as soon as possible. Power off the server and check whether the OCP card has poor contact with its slot or the disk or slot is damaged.@#AB;2. Replace the component and check for alarms.",
+                "En": "1. Arrange scheduled maintenance as soon as possible. Power off the server and check whether the OCP card has poor contact with its slot or the card or slot is damaged.@#AB;2. Replace the component and check for alarms.",
                 "Zh": "1、尽快安排计划性维护， 下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换该部件并进一步观察。"
             },
             "EventKeyId": "OCPCard.OCPCardLinkSpeedReduced",
@@ -14018,7 +14018,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Power off the server and check whether there is damage or poor contact between the component and its slot.@#AB;2. Replace the HCCS bus.@#AB;3. Replace the NPU board.",
+                "En": "1. Power off the server and check whether there is damage or poor contact between the component and its slot.@#AB;2. Replace the HCCS cable.@#AB;3. Replace the NPU board.",
                 "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换一致性系统总线。@#AB;3、更换NPU板。"
             },
             "EventKeyId": "NPU.HCCSLinkFail",
@@ -14759,7 +14759,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the optical module or optical fiber interface at the local or peer end is dirty.@#AB;2. Clear the optical modules and optical fiber ports on the local and peer ends.@#AB;3. Replace the optical fiber.@#AB;4. Replace the local and peer optical modules.",
+                "En": "1. Check whether the optical modules and optical fiber connectors at the local and peer end is dirty.@#AB;2. Clear the optical modules and optical fiber ports on the local and peer ends.@#AB;3. Replace the optical fiber.@#AB;4. Replace the local and peer optical modules.",
                 "Zh": "1、检查本 端/对端的光模块/光纤接口是否有脏物。@#AB;2、清理本端和对端的光模块和光纤接口。@#AB;3、更换光纤。@#AB;4、更换本端和对端光模块。"
             },
             "EventKeyId": "OpticalModule.OpticalModuleDirtyAlarm",
@@ -14778,7 +14778,7 @@
         },
         {
             "Suggestion": {
-                "En": "1. Check whether the optical module or optical fiber connector at the local or peer end is loose.@#AB;2. Clear the optical modules and optical fiber ports on the local and peer ends.@#AB;3. Replace the optical fiber.@#AB;4. Replace the local and peer optical modules.",
+                "En": "1. Check whether the optical modules and optical fiber connectors at the local and peer end is loose.@#AB;2. Clear the optical modules and optical fiber ports on the local and peer ends.@#AB;3. Replace the optical fiber.@#AB;4. Replace the local and peer optical modules.",
                 "Zh": "1、检查本端/对端的光模块/光纤接口是否松动。@#AB;2、清理本端和对端的光模块和光纤接口。@#AB;3、更换光纤。@#AB;4、更换本端和对端光模块。"
             },
             "EventKeyId": "OpticalModule.OpticalModuleLooseAlarm",
