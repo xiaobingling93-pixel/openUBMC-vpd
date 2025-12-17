@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.152] - 2025-12-17
+MCX623436AN-CDAB、BCM957508-N2100G 兼容性适配
+
 ## [1.80.151] - 2025-12-16
 修复redfish查询SP226D网卡UID显示错误问题
 
