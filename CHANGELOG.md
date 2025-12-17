@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.153] - 2025-12-17
+补充0x28000033告警可能原因
+
 ## [1.80.152] - 2025-12-17
 MCX623436AN-CDAB、BCM957508-N2100G 兼容性适配
 
