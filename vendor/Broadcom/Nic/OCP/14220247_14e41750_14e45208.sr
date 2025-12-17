@@ -9,7 +9,9 @@
             ]
         },
         "I2c_2": {
-            "Chips": []
+            "Chips": [
+                "Smc_ExpBoardSMC"
+            ]
         },
         "I2cMux_pca9545_chan1": {
             "Chips": [
@@ -33,7 +35,8 @@
             "OffsetWidth": 2,
             "WriteTmout": 100,
             "ReadTmout": 100,
-            "HealthStatus": 0
+            "HealthStatus": 0,
+            "RwBlockSize": 32
         },
         "Scanner_NIC_Lm75": {
             "Chip": "#/Chip_NICTempChip",
@@ -49,10 +52,19 @@
             "DefaultValue": 20,
             "IsSigned": true
         },
+        "Accessor_ReadyToRemove": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": "${Slot} |> expr(($1 == 1) ? 469772801 : 469772802)",
+            "Size": 1,
+            "Mask": 2,
+            "Type": 0,
+            "Value": 0
+        },
         "PCIeDevice_1": {
-            "DeviceName": "OCP Card $ (BCM957508)",
+            "SlotID": "${Slot}",
+            "DeviceName": "OCP Card $ (BCM957508-N2100G)",
             "FunctionClass": 2,
-            "Position": "",
+            "Position": "EXU",
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
@@ -61,15 +73,47 @@
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 83
         },
+        "OCPCard_1": {
+            "SlotID": "${Slot}",
+            "NodeID": "<=/NetworkAdapter_1.SlotNumber |> string.format('OCPCard%s',$1)",
+            "Name": "BCM957508-N2100G",
+            "BoardName": "BCM957508-N2100G",
+            "Description": "BCM957508-N2100G",
+            "FunctionClass": 2,
+            "VendorID": 5348,
+            "DeviceID": 5968,
+            "SubVendorID": 5348,
+            "SubDeviceID": 21000,
+            "Position": "<=/PCIeDevice_1.Position",
+            "LaneOwner": "<=/PCIeDevice_1.SocketID",
+            "FirmwareVersion": "N/A",
+            "Manufacturer": "BroadCom",
+            "PartNumber": "0631Y043",
+            "Health": "<=/Component_OCPCard.Health",
+            "Model": "BroadCom",
+            "DeviceName": "<=/PCIeDevice_1.DeviceName",
+            "PcbVersion": ".A",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/Component_OCPCard.SerialNumber"
+        },
         "NetworkAdapter_1": {
             "SystemID": 1,
-            "SlotNumber": 1,
+            "SlotNumber": "${Slot}",
+            "SocketId": "<=/PCIeDevice_1.SocketID",
             "Name": "BCM957508-N2100G",
-            "Manufacturer": "Broadcom",
+            "Manufacturer": "BroadCom",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 10,
-            "Model": "BCM957508",
+            "Model": "BroadCom",
+            "ChipVendor": "BroadCom",
+            "ChipManufacturer": "BroadCom",
+            "BoardName": "BCM957508-N2100G",
             "Description": "2*100GE",
             "ModelDescription": "2*100GE",
             "NetworkPortCount": 2,
@@ -85,28 +129,105 @@
             "HotPluggable": true,
             "ReadyToRemove": false,
             "AttentionHotPlugState": 1,
+            "ReadyToRemoveValue": "#/Accessor_ReadyToRemove.Value",
             "FruId": "<=/Fru_OCP.FruId",
-            "ParentCardSlotId": 255
+            "Slot": "${Slot}",
+            "ParentCardSlotId": 255,
+            "CardPowerGood": "<=/Scanner_CardPowerGood.Value",
+            "Bus": "<=/PCIeDevice_1.Bus",
+            "Device": "<=/PCIeDevice_1.Device",
+            "Function": "<=/PCIeDevice_1.Function",
+            "DevBus": "<=/PCIeDevice_1.DevBus",
+            "DevDevice": "<=/PCIeDevice_1.DevDevice",
+            "DevFunction": "<=/PCIeDevice_1.DevFunction",
+            "SerialNumber": "<=/Component_OCPCard.SerialNumber"
         },
         "NetworkPort_0": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 0,
             "SupportedFuncType": 1,
-            "LinkStatus": "NoLink"
+            "MediumType": "FiberOptic"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
             "SystemID": 1,
             "PortID": 1,
             "SupportedFuncType": 1,
-            "LinkStatus": "NoLink"
+            "MediumType": "FiberOptic"
+        },
+        "OpticalModule_0": {
+            "@Parent": "NetworkPort_0",
+            "ChannelNum": 1,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
+        },
+        "OpticalModule_1": {
+            "@Parent": "NetworkPort_1",
+            "ChannelNum": 2,
+            "TemperatureCelsius": 0,
+            "PowerState": 0,
+            "Presence": 0,
+            "IsSupportedType": 0,
+            "Temp_UpperThresholdCritical": 125,
+            "FaultState": 0,
+            "SupplyVoltage": 0,
+            "LowerThresholdCritical": 0,
+            "UpperThresholdCritical": 0
         },
         "Fru_OCP": {
             "PcbId": 255,
-            "FruId": 0,
-            "FruName": "BCM957508",
+            "FruId": 1,
+            "FruName": "BCM957508-N2100G",
             "ConnectorGroupId": "${GroupId}"
+        },
+        "Scanner_PowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469765888,
+            "Size": 2,
+            "Mask": 255,
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Scanner_CardPowerGood": {
+            "Chip": "#/Smc_ExpBoardSMC",
+            "Offset": 469771520,
+            "Size": 2,
+            "Mask": "${Slot} |> expr(($1 == 1) ? 2 : 512)",
+            "Type": 0,
+            "Period": 100,
+            "Debounce": "None",
+            "Value": 0
+        },
+        "Smc_ExpBoardSMC": {
+            "Address": 96,
+            "AddrWidth": 1,
+            "OffsetWidth": 1,
+            "WriteTmout": 0,
+            "ReadTmout": 0
+        },
+        "Event_Port0LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Hysteresis": 0
+        },
+        "Event_Port1LinkDown": {
+            "EventKeyId": "Port.PortDisconnected",
+            "Condition": 0,
+            "Hysteresis": 0
+        },
+        "Event_OCPBandWidth": {
+            "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
+            "Condition": 1
         },
         "Event_OCPCardUCE": {
             "EventKeyId": "OCPCard.OCPCardUncorrectableErr",
@@ -120,6 +241,57 @@
             "EventKeyId": "OCPCard.OCPCardLinkSpeedReduced",
             "Condition": 1
         },
+        "Event_Port0BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_Port1BWUsageMntr": {
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+        },
+        "Event_OverTemp": {
+            "EventKeyId": "PCIeCard.PCIeCardOverTemp",
+            "Condition": "<=/ThresholdSensor_OCPTemp.UpperNoncritical",
+            "Hysteresis": "<=/ThresholdSensor_OCPTemp.PositiveHysteresis"
+        },
+        "Event_OMOverTempInfo": {
+            "EventKeyId": "OCPCard.OCPCardOMOverTemp",
+            "Condition": "#/ThresholdSensor_OpticalModuleTemp.UpperNoncritical",
+            "Hysteresis": "#/ThresholdSensor_OpticalModuleTemp.PositiveHysteresis",
+            "LedFaultCode": "q$$"
+        },
+        "Event_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1
+        },
+         "Event_OM0PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1PowerAlarm": {
+            "EventKeyId": "Port.PortOpticalModulePowerAlarm",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM1SpeedMatch": {
+            "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
+            "Condition": 1,
+            "LedFaultCode": "q$$"
+        },
+        "Event_OM0VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
+        "Event_OM1VAMntr": {
+            "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
+            "Condition": 1
+        },
         "ThresholdSensor_OCPTemp": {
             "AssertMask": 128,
             "DeassertMask": 28800,
@@ -130,6 +302,52 @@
             "UpperNoncritical": 105,
             "PositiveHysteresis": 2,
             "NegativeHysteresis": 2
+        },
+        "ThresholdSensor_OpticalModuleTemp": {
+            "AssertMask": 0,
+            "DeassertMask": 0,
+            "ReadingMask": 0,
+            "Linearization": 0,
+            "M": 1,
+            "RBExp": 0,
+            "UpperCritical": 0,
+            "UpperNoncritical": 70,
+            "PositiveHysteresis": 2,
+            "NegativeHysteresis": 2
+        },
+        "CoolingRequirement_1_50": {
+            "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
+            "Description": "BCM957508-N2100G网卡调速",
+            "MonitoringStatus": "<=/Scanner_NIC_Lm75.Status",
+            "MonitoringValue": "<=/Scanner_NIC_Lm75.Value",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 100,
+            "ActiveInStandby": false,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)"
+        },
+        "CoolingRequirement_1_52": {
+            "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
+            "Description": "BCM957508-N2100G网卡standby调速",
+            "MonitoringStatus": "<=/Scanner_NIC_Lm75.Status",
+            "MonitoringValue": "<=/Scanner_NIC_Lm75.Value",
+            "FailedValue": 60,
+            "TargetTemperatureCelsius": 80,
+            "MaxAllowedTemperatureCelsius": 100,
+            "ActiveInStandby": true,
+            "TargetTemperatureRangeCelsius": [],
+            "ThresholdValue": [],
+            "AlarmSpeed": [],
+            "SmartCoolingTargetTemperature": [],
+            "CustomSupported": false,
+            "CustomTargetTemperatureCelsius": 255,
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)"
         }
     }
 }
