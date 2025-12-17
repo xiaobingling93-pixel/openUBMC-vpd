@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.71",
+    "Version": "1.0.72",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6417,7 +6417,7 @@
             "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "Fan.ModuleFanRemoved",
-            "SeverityId": 0,
+            "SeverityId": 2,
             "ActionId": 0,
             "EventName": "ModuleFanRemoved"
         },
@@ -10432,8 +10432,8 @@
             },
             "EventKeyId": "Fan.FanRemoved",
             "Description": {
-                "En": "Fan %1 %2 removed on %3.",
-                "Zh": "%3 风扇%1%2移除。"
+                "En": "Fan %1 %2 removed.",
+                "Zh": "风扇%1%2移除。"
             },
             "Influence": {
                 "En": "",
@@ -16584,8 +16584,8 @@
         },
         {
             "Suggestion": {
-                "En": "",
-                "Zh": ""
+                "En": "1. Check if the fan is in place. @#AB;2. Replace the module where the fan is located.",
+                "Zh": "1、检查风扇是否在位。 @#AB;2、更换风扇所在模块。"
             },
             "EventKeyId": "Fan.ModuleFanRemoved",
             "Description": { 
@@ -16597,8 +16597,8 @@
                 "Zh": "影响服务器风扇冗余性。"
             },
             "Cause": {
-                "En": "",
-                "Zh": ""
+                "En": "1. The fan is not plugged in. @#AB;2. The fan connector is faulty.",
+                "Zh": "1、风扇未插入。 @#AB;2、风扇连接器故障。"
             }
         },
         {

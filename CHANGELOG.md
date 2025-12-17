@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.156] - 2025-12-17
+修改风扇不在位告警修复建议和可能原因
+
 ## [1.80.155] - 2025-12-18
 网口速率1GE改为GE
 
