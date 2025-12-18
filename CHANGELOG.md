@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.159] - 2025-12-18
+刷新网卡兼容性说明
+
 ## [1.80.158] - 2025-12-17
 修改告警描述参数和Reading值保持一致
 
