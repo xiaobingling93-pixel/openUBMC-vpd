@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.162] - 2025-12-19
+新增适配网卡FF5025
+
 ## [1.80.161] - 2025-12-19
 修复Atlas 300I A2卡风扇调速失败的问题
 
