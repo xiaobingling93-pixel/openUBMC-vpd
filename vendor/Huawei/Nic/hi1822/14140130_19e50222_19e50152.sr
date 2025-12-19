@@ -195,7 +195,7 @@
         "CoolingRequirement_1_50": {
             "RequirementId": "${Slot} |> expr((50 << 8) | $1)",
             "Description": "sp623Q网卡芯片调速",
-            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus |> expr(($1 == 1) ? 1 : 0)",
             "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 90,
@@ -212,7 +212,7 @@
         "CoolingRequirement_1_150": {
             "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
             "Description": "sp623Q网卡芯片调速（光模块异常）",
-            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus",
+            "MonitoringStatus": "<=/NetworkAdapter_1.TemperatureStatus |> expr(($1 == 1) ? 1 : 0)",
             "MonitoringValue": "<=/NetworkAdapter_1.TemperatureCelsius",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 80,
