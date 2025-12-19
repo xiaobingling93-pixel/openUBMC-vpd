@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.161] - 2025-12-19
+修复Atlas 300I A2卡风扇调速失败的问题
+
 ## [1.80.160] - 2025-12-18
 排查修复OS下电后部分网卡温度状态触发异常调速问题
 
