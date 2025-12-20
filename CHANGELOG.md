@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.164] - 2025-12-18
+修复网卡告警描述参数引用方式错误问题
+
 ## [1.80.163] - 2025-12-18
 修复网卡告警描述参数配置错误问题
 

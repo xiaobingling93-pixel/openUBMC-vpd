@@ -317,7 +317,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SP222D",
-            "DescArg4": "<=/NetworkAdapter_1.FaultCode",
+            "DescArg4": "#/NetworkAdapter_1.FaultCode",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeUnRecovError": {
@@ -326,7 +326,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SP222D",
-            "DescArg4": "<=/NetworkAdapter_1.FaultCode",
+            "DescArg4": "#/NetworkAdapter_1.FaultCode",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeSelfTestFail": {
@@ -335,7 +335,7 @@
             "Enabled": true,
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "SP222D",
-            "DescArg4": "<=/NetworkAdapter_1.FaultCode",
+            "DescArg4": "#/NetworkAdapter_1.FaultCode",
             "Component": "#/Component_PCIeCard"
         },
         "Event_Port0BWUsageMntr": {
