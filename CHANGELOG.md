@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.167] - 2025-12-22
+修复告警定义和描述错误
+
 ## [1.80.166] - 2025-12-22
 合并soft与sr
 
