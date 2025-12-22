@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.169] - 2025-12-22
+DPU卡通信丢失告警修改
+DPU卡温度点增加温度获取失败告警
+
 ## [1.80.168] - 2025-12-22
 修复网卡温度误告警
 

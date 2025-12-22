@@ -385,6 +385,21 @@
             "Reading": "<=/Scanner_DPU_Inlet_CPU_temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_Inlet_CPU_temp.Status;<=/Scanner_DPU_Inlet_CPU_temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_CPU_Inlet_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_Inlet_CPU_temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s CPU_Inlet',$1)",
+            "LedFaultCode": "b02"
+        },
         "Scanner_DPU_Outlet_CPU_temp": {
             "Chip": "#/Eeprom_Zijin_DPU",
             "Offset": 1,
@@ -508,6 +523,21 @@
             "Reading": "<=/Scanner_DPU_Inlet_FPGA_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_Inlet_FPGA_Temp.Status;<=/Scanner_DPU_Inlet_FPGA_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_FPGA_Inlet_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_Inlet_FPGA_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s FPGA_Inlet',$1)",
+            "LedFaultCode": "b02"
+        },
         "Scanner_DPU_Outlet_FPGA_Temp": {
             "Chip": "#/Eeprom_Zijin_DPU",
             "Offset": 4,
@@ -593,6 +623,21 @@
             "Reading": "<=/Scanner_DPU_FPGA_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_FPGA_Temp.Status;<=/Scanner_DPU_FPGA_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_FPGA_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_FPGA_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s FPGA',$1)",
+            "LedFaultCode": "b02"
+        },
         "Event_FPGA_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "#/ThresholdSensor_DPU_FPGA_Temp.UpperNoncritical",
@@ -654,6 +699,21 @@
             "NegativeHysteresis": 2,
             "Reading": "<=/Scanner_DPU_FPGA_VR_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_FPGA_VR_Temp.Status;<=/Scanner_DPU_FPGA_VR_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
+        },
+        "Event_FPGA_VR_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_FPGA_VR_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s FPGA_VR',$1)",
+            "LedFaultCode": "b02"
         },
         "Event_FPGA_VR_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -717,6 +777,21 @@
             "Reading": "<=/Scanner_DPU_OPT0_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_OPT0_Temp.Status;<=/Scanner_DPU_OPT0_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_OPT0_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_OPT0_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s OPT0',$1)",
+            "LedFaultCode": "b02"
+        },
         "Event_NIC_OPT0_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "#/ThresholdSensor_DPU_OPT0_Temp.UpperNoncritical",
@@ -778,6 +853,21 @@
             "NegativeHysteresis": 2,
             "Reading": "<=/Scanner_DPU_OPT1_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_OPT1_Temp.Status;<=/Scanner_DPU_OPT1_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
+        },
+        "Event_OPT1_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_OPT1_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s OPT1',$1)",
+            "LedFaultCode": "b02"
         },
         "Event_NIC_OPT1_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -841,6 +931,21 @@
             "Reading": "<=/Scanner_DPU_OPT2_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_OPT2_Temp.Status;<=/Scanner_DPU_OPT2_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_OPT2_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_OPT2_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s OPT2',$1)",
+            "LedFaultCode": "b02"
+        },
         "Event_NIC_OPT2_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "#/ThresholdSensor_DPU_OPT2_Temp.UpperNoncritical",
@@ -903,6 +1008,21 @@
             "Reading": "<=/Scanner_DPU_OPT3_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_OPT3_Temp.Status;<=/Scanner_DPU_OPT3_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_OPT3_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_OPT3_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s OPT3',$1)",
+            "LedFaultCode": "b02"
+        },
         "Event_NIC_OPT3_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "#/ThresholdSensor_DPU_OPT3_Temp.UpperNoncritical",
@@ -964,6 +1084,21 @@
             "NegativeHysteresis": 2,
             "Reading": "<=/Scanner_DPU_CPU_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_CPU_Temp.Status;<=/Scanner_DPU_CPU_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
+        },
+        "Event_CPU_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_CPU_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s CPU',$1)",
+            "LedFaultCode": "b02"
         },
         "Event_CPU_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -1068,6 +1203,21 @@
             "Reading": "<=/Scanner_DPU_MEM_VR_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_MEM_VR_Temp.Status;<=/Scanner_DPU_MEM_VR_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
+        "Event_MEM_VR_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_MEM_VR_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s MEM_VR',$1)",
+            "LedFaultCode": "b02"
+        },
         "Event_MEM_VR_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "#/ThresholdSensor_DPU_MEM_VRTemp.UpperNoncritical",
@@ -1129,6 +1279,21 @@
             "NegativeHysteresis": 2,
             "Reading": "<=/Scanner_DPU_CPU_VR_Temp.Value |> expr(($1 >= 255) ? 30 : ($1 & 255))",
             "ReadingStatus": "<=/Scanner_DPU_CPU_VR_Temp.Status;<=/Scanner_DPU_CPU_VR_Temp.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
+        },
+        "Event_CPU_VR_TempFail": {
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
+            "Condition": 1,
+            "Reading": "<=/Scanner_DPU_CPU_VR_Temp.Status",
+            "@Default": {
+                "Reading": 0
+            },
+            "OperatorId": 5,
+            "Hysteresis": 0,
+            "Enabled": true,
+            "Component": "#/Component_DPUCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_DPUCard.Name |> string.format('%s CPU_VR',$1)",
+            "LedFaultCode": "b02"
         },
         "Event_CPU_VR_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
@@ -1313,7 +1478,7 @@
             "ReadingStatus": "<=/Scanner_DPU_Total_Power.Status;<=/Scanner_DPU_Total_Power.Value |> expr($2 == 255 ? 3 : ($1 == 2 ? 0 : $1))"
         },
         "Event_PCIeDPUComLossMntr": {
-            "Reading": "<=/Scanner_DPU_OS_State.Status |> expr($1 == 1 ? 1 : 0)",
+            "Reading": 0,
             "@Default": {
                 "Reading": 0
             },
@@ -1324,6 +1489,22 @@
             "Component": "#/Component_DPUCard",
             "EventKeyId": "PCIeCard.PCIeCardCommunicationLoss",
             "Condition": 1
+        },
+        "Event_PCIeHeartBeatAbnormal": {
+            "EventKeyId": "PCIeCard.PCIeCardHeartBeatAbnormal",
+            "Reading": "<=/Scanner_DPU_OS_State.Status |> expr($1 == 1 ? 1 : 0)",
+            "@Default": {
+                "Reading": 0
+            },
+            "Condition": 1,
+            "OperatorId": 5,
+            "Enabled": true,
+            "DescArg1": "<=/Component_DPUCard.Name",
+            "DescArg2": "",
+            "DescArg3": "",
+            "DescArg4": "",
+            "Component": "#/Component_DPUCard",
+            "LedFaultCode": "q$$"
         },
         "Scanner_DPU_CPU0_Status": {
             "Chip": "#/Eeprom_Zijin_DPU",
