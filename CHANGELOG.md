@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.166] - 2025-12-22
+合并soft与sr
+
 ## [1.80.165] - 2025-12-20
 修改0x5D000001告警恢复策略
 
