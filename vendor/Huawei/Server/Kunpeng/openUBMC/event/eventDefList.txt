@@ -401,9 +401,9 @@ PcieCard.PCIeCardPowerFail
 PcieCard.PCIeCardHardwareFail
 PcieCard.PCIeCardPwrFail
 PcieCard.PCIeCardOverCurrent
-CPU.CPUAccessHBMTempFailure
-CPU.CPUHBMOverTempMajor
-CPU.CPUHBMOverTempMinor
+CPU.CPUAccessMOCTempFailure
+CPU.CPUMOCOverTempMajor
+CPU.CPUMOCOverTempMinor
 PSU.PSUFaultTriggersUnderclocking
 PSU.PSUMCUSelfTestAbnormal
 Disk.HardDiskIOPerformanceDeterioration

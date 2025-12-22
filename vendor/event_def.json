@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.73",
+    "Version": "1.0.74",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5120,10 +5120,10 @@
             "EventType": 0,
             "LifeCycleId": 1,
             "DeassertFlag": 1,
-            "EventKeyId": "CPU.CPUAccessHBMTempFailure",
+            "EventKeyId": "CPU.CPUAccessMOCTempFailure",
             "SeverityId": 1,
             "ActionId": 0,
-            "EventName": "CPUAccessHBMTempFailure"
+            "EventName": "CPUAccessMOCTempFailure"
         },
         {
             "EventCode": "0x000000EB",
@@ -5132,10 +5132,10 @@
             "EventType": 0,
             "LifeCycleId": 1,
             "DeassertFlag": 1,
-            "EventKeyId": "CPU.CPUHBMOverTempMajor",
+            "EventKeyId": "CPU.CPUMOCOverTempMajor",
             "SeverityId": 2,
             "ActionId": 0,
-            "EventName": "CPUHBMOverTempMajor"
+            "EventName": "CPUMOCOverTempMajor"
         },
         {
             "EventCode": "0x000000E9",
@@ -5144,10 +5144,10 @@
             "EventType": 0,
             "LifeCycleId": 1,
             "DeassertFlag": 1,
-            "EventKeyId": "CPU.CPUHBMOverTempMinor",
+            "EventKeyId": "CPU.CPUMOCOverTempMinor",
             "SeverityId": 1,
             "ActionId": 0,
-            "EventName": "CPUHBMOverTempMinor"
+            "EventName": "CPUMOCOverTempMinor"
         },
         {
             "EventCode": "0x03000055",
@@ -14420,10 +14420,10 @@
                 "En": "1. Restart the {BMC}.@#AB;2. Remove and reconnect power cables or remove and reinstall the board in the chassis.",
                 "Zh": "1、重启{BMC}。@#AB;2、拔插电源线缆或拔插单板。"
             },
-            "EventKeyId": "CPU.CPUAccessHBMTempFailure",
+            "EventKeyId": "CPU.CPUAccessMOCTempFailure",
             "Description": {
-                "En": "Failed to obtain data of the CPU %1 HBM %2 temperature.",
-                "Zh": "CPU%1 HBM %2 温度读取失败。"
+                "En": "Failed to obtain data of the CPU %1 Memory on Chip %2 Die temperature.",
+                "Zh": "CPU%1 片上内存 %2 区域温度读取失败。"
             },
             "Influence": {
                 "En": "The temperature cannot be monitored. No alarm will be reported when the temperature is not in the normal range.",
@@ -14439,18 +14439,18 @@
                 "En": "1. Check the equipment room temperature.@#AB;2. Check for fan alarms.@#AB;3. Check for air inlet or outlet blockage.@#AB;4. Replace the board where the CPU is located.",
                 "Zh": "1、检查机房环境温度是否已超出服务器设备运行环境要求。@#AB;2、检查服务 器是否同时存在风扇告警。@#AB;3、检查服务器进风口/出风口是否有异物堵塞。@#AB;4、更换CPU所在的板卡。"
             },
-            "EventKeyId": "CPU.CPUHBMOverTempMajor",
+            "EventKeyId": "CPU.CPUMOCOverTempMajor",
             "Description": {
-                "En": "The CPU %1 HBM %2 temperature (%3 degrees C) exceeds the overtemperature threshold (%4 degrees C).",
-                "Zh": "CPU%1 HBM %2 的当前温度（%3℃）高于高温门限温度（%4℃）。"
+                "En": "The CPU %1 Memory on Chip %2 Die temperature (%3 degrees C) exceeds the overtemperature threshold (%4 degrees C).",
+                "Zh": "CPU%1 片上内存 %2 区域的当前温度（%3℃）高于高温门限温度（%4℃）。"
             },
             "Influence": {
-                "En": "The HBM stability and system performance are affected.",
-                "Zh": "温度过高会影响HBM稳定性，导致服务器性能降低。"
+                "En": "The Memory on Chip stability and system performance are affected.",
+                "Zh": "温度过高会影响片上内存稳定性，导致服务器性能降低。"
             },
             "Cause": {
-                "En": "1. The ambient temperature is too high.@#AB;2. The air inlet or outlet is blocked.@#AB;3. The fan module is faulty.@#AB;4. The HBM is faulty.",
-                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、HBM故障。"
+                "En": "1. The ambient temperature is too high.@#AB;2. The air inlet or outlet is blocked.@#AB;3. The fan module is faulty.@#AB;4. The Memory on Chip is faulty.",
+                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、片上内存故障。"
             }
         },
         {
@@ -14458,18 +14458,18 @@
                 "En": "1. Check the equipment room temperature.@#AB;2. Check for fan alarms.@#AB;3. Check for air inlet or outlet blockage.@#AB;4. Replace the board where the CPU is located.",
                 "Zh": "1、检查机房环境温度是否已超出服务器设备运行环境要求。@#AB;2、检查服务器是否同时存在风扇告警。@#AB;3、检查服务器进风口/出风口是否有异物堵塞。@#AB;4、更换CPU所在的板卡。"
             },
-            "EventKeyId": "CPU.CPUHBMOverTempMinor",
+            "EventKeyId": "CPU.CPUMOCOverTempMinor",
             "Description": {
-                "En": "The CPU %1 HBM %2 temperature (%3 degrees C) exceeds the overtemperature threshold (%4 degrees C).",
-                "Zh": "CPU%1 HBM %2 的当前温度（%3℃）高于高温门限温度（%4℃）。"
+                "En": "The CPU %1 Memory on Chip %2 Die temperature (%3 degrees C) exceeds the overtemperature threshold (%4 degrees C).",
+                "Zh": "CPU%1 片上内存 %2 区域的当前温度（%3℃）高于高温门限温度（%4℃）。"
             },
             "Influence": {
-                "En": "The HBM stability and system performance are affected.",
-                "Zh": "温度过高会影响HBM稳定性，导致服务器性能降低。"
+                "En": "The Memory on Chip stability and system performance are affected.",
+                "Zh": "温度过高会影响片上内存稳定性，导致服务器性能降低。"
             },
             "Cause": {
-                "En": "1. The ambient temperature is too high.@#AB;2. The air inlet or outlet is blocked.@#AB;3. The fan module is faulty.@#AB;4. The HBM is faulty.",
-                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、HBM故障。"
+                "En": "1. The ambient temperature is too high.@#AB;2. The air inlet or outlet is blocked.@#AB;3. The fan module is faulty.@#AB;4. The Memory on Chip is faulty.",
+                "Zh": "1、环境温度过高。@#AB;2、进风口/出风口堵塞。@#AB;3、风扇模块故障。@#AB;4、片上内存故障。"
             }
         },
         {
