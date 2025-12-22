@@ -128,7 +128,6 @@ Huawei/TianChi/BCU/UbcConfig_0_0_soft.sr
 Huawei/TianChi/BCU/BCUExtend_BC83AMDB_0_soft.sr
 Huawei/TianChi/BCU/PsEvent_BC83AMDA_0_soft.sr
 Huawei/TianChi/BCU/BCUExtend_BC83AMDA_0_soft.sr
-Huawei/TianChi/BCU/memory_2p16ch32_0_soft.sr
 Huawei/TianChi/BCU/UbcConfig_0_1_soft.sr
 Huawei/TianChi/SEU/14100665_51_soft.sr
 Huawei/TianChi/SEU/14100665_68_soft.sr
@@ -202,7 +201,6 @@ Vastai/GPU/14140130_1ec60200_1ec60063_soft.sr
 YUSUR/Nic/14140130_1f472018_1f472018_soft.sr
 YUSUR/Nic/14140130_1f472018_1f472018.sr
 Huawei/TianChi/BCU/memory_2p32ch32_0.sr
-Huawei/TianChi/BCU/memory_2p32ch32_0_soft.sr
 Broadcom/Nic/OCP/14140130_14e416d7_14e41402.sr
 Broadcom/Nic/OCP/14140130_14e416d7_14e41402_soft.sr
 Broadcom/Nic/OCP/14140130_14e416ec_14e41402.sr
@@ -268,7 +266,6 @@ Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0_soft.sr
 Huawei/TianChi/BCU/PsEvent_BC83AMDAT_0.sr
 Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0_soft.sr
 Huawei/TianChi/BCU/PsEvent_BC83AMDAU_0.sr
-Huawei/TianChi/BCU/memory_2p8ch16_1_soft.sr
 Huawei/TianChi/BCU/memory_2p8ch16_1.sr
 Customer/DPU/14140130_HyperCard_0.sr
 Customer/DPU/14140130_HyperCard_1.sr
