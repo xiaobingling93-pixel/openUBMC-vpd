@@ -232,8 +232,7 @@
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
-            "Condition": 1,
-            "LedFaultCode": "q$$"
+            "Condition": 1
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
@@ -471,7 +470,8 @@
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "NPU",
             "DescArg5": "(SPI Flash)",
-            "DescArg6": "#/NPUCard_1.FaultCode"
+            "DescArg6": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_InspectFail": {
             "EventKeyId": "PcieCard.PCIeCardInspectionFailure",
@@ -481,7 +481,8 @@
             "AdditionalInfo": "2",
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "#/PCIeCard_1.BoardName"
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "LedFaultCode": "q$$"
         },
         "Event_VoltFail": {
             "EventKeyId": "PcieCard.PCIeCardAccessVoltFailure",
@@ -501,7 +502,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_VoltLower": {
             "EventKeyId": "PcieCard.PCIeCardVoltageLower",
@@ -511,7 +513,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_HealthFail": {
             "EventKeyId": "PcieCard.PCIeCardHealthFail",
@@ -531,7 +534,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_PowerUpDown": {
             "EventKeyId": "PcieCard.PCIeCardPowerUpDown",
@@ -541,7 +545,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_PowerFail": {
             "EventKeyId": "PcieCard.PCIeCardPowerFail",
@@ -561,7 +566,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg1": "#/NPUCard_1.FaultCode",
             "DescArg2": "#/PCIeDevice_1.SlotID",
-            "DescArg3": "#/PCIeCard_1.BoardName"
+            "DescArg3": "#/PCIeCard_1.BoardName",
+            "LedFaultCode": "q$$"
         },
         "Event_PwrFail": {
             "EventKeyId": "PcieCard.PCIeCardPwrFail",
@@ -571,7 +577,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_OverCurrent": {
             "EventKeyId": "PcieCard.PCIeCardOverCurrent",
@@ -581,7 +588,8 @@
             "Component": "#/Component_PCIeCard",
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
-            "DescArg4": "#/NPUCard_1.FaultCode"
+            "DescArg4": "#/NPUCard_1.FaultCode",
+            "LedFaultCode": "q$$"
         },
         "Event_MiniModuleCriticalFault": { 
             "EventKeyId": "PcieCard.MiniModuleCriticalFault",
@@ -593,7 +601,8 @@
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
             "DescArg4": "#/NPUCard_1.ChipFaultDescription",
-            "AdditionalInfo": "1,2"
+            "AdditionalInfo": "1,2",
+            "LedFaultCode": "q$$"
         },
         "Event_MiniModuleMajorFault": {
             "EventKeyId": "PcieCard.MiniModuleMajorFault",
@@ -605,7 +614,8 @@
             "DescArg2": "#/PCIeDevice_1.SlotID",
             "DescArg3": "#/PCIeCard_1.BoardName",
             "DescArg4": "#/NPUCard_1.ChipFaultDescription",
-            "AdditionalInfo": "1,2"
+            "AdditionalInfo": "1,2",
+            "LedFaultCode": "q$$"
         },
         "Event_MiniModuleMinorFault": {
             "EventKeyId": "PcieCard.MiniModuleMinorFault",
