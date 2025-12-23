@@ -306,7 +306,7 @@
             "Component": "#/Component_PCIeCard"
         },
         "Event_TempFail": {
-            "EventKeyId": "PCIeCard.PCIeCardTempFail",
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1,
             "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
             "OperatorId": 5,
@@ -317,7 +317,7 @@
             "DescArg3": "E810 Chip"
         },
         "Event_PcieCardReplaceMntr": {
-            "EventKeyId": "PCIeCard.PCIeCardReplace",
+            "EventKeyId": "PcieCard.PcieCardReplace",
             "Condition": 1,
             "Reading": "<=/Component_PCIeCard.ReplaceFlag",
             "OperatorId": 5,
@@ -402,7 +402,7 @@
             "Component": "#/Component_Port2"
         },
         "Event_Port1BWUsageMntr": {
-            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
             "@Default": {
@@ -418,7 +418,7 @@
             "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
         },
         "Event_Port2BWUsageMntr": {
-            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
             "@Default": {
