@@ -259,7 +259,7 @@
             "DescArg5": "#/Event_OverTemp.Condition"
         },
         "Event_TempFail": {
-            "EventKeyId": "PCIeCard.PCIeCardTempFail",
+            "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1,
             "Reading": "<=/NetworkAdapter_1.TemperatureStatus",
             "OperatorId": 5,
@@ -306,7 +306,7 @@
             "Condition": 0
         },
         "Event_Port0BWUsageMntr": {
-            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_0.BandwidthUsagePercent",
             "@Default": {
@@ -322,7 +322,7 @@
             "DescArg5": "#/Event_Port0BWUsageMntr.Condition"
         },
         "Event_Port1BWUsageMntr": {
-            "EventKeyId": "NICCard.SystemNetWorkBandwidthUsageHigh",
+            "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
             "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_1.BandwidthUsagePercent", 
             "@Default": {
