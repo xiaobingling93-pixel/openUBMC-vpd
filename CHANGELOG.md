@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.171] - 2025-12-23
+修改300I Duo卡告警数码管显示
+
 ## [1.80.170] - 2025-12-23
 修复E810和QLE网卡中部分事件EventKeyId与event_def.json不一致的问题
 
