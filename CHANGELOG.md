@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.173] - 2025-12-24
+刷新GPU兼容性说明
+
 ## [1.80.171] - 2025-12-23
 修改300I Duo卡告警数码管显示
 
