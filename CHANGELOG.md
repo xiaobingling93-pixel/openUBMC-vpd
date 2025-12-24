@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.174] - 2025-12-24
+刷新网卡兼容性表格
+
 ## [1.80.173] - 2025-12-24
 刷新GPU兼容性说明
 
