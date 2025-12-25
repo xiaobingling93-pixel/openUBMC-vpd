@@ -474,7 +474,40 @@
         "PowerOutputEfficiencyCurve_11": {
             "Position": "",
             "PartNumber": "02314XDX",
-            "PowerLevel": "80PLUS Titanium"
+            "PowerLevel": "80PLUS Titanium",
+            "InputVoltage": 220,
+            "LoadPercentRange": [
+                5, 
+                10,
+                15,
+                20,
+                25,
+                30,
+                40,
+                45,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100
+            ],
+            "EfficiencyCurve": [
+                0.86543,
+                0.92026,
+                0.94192,
+                0.95294,
+                0.95803,
+                0.96058,
+                0.96020,
+                0.96256,
+                0.96244,
+                0.95433,
+                0.95507,
+                0.95268,
+                0.94901,
+                0.94621
+            ]
         }
     }
 }
