@@ -46,9 +46,11 @@
             "SensorIdentifier": "Power${Slot}",
             "Unit": 0,
             "BaseUnit": 6,
+            "Linearization" : 112,
             "Analog": 1,
             "MaximumReading": 255,
-            "Reading": "<=/OnePower_0.InputPowerWatts |> expr(($1 % 12) > 5 ? ($1 // 12 + 1) : ($1 // 12))",
+            "Reading": 170,
+            "OriginalReading": "<=/OnePower_0.InputPowerWatts",
             "ReadingStatus": "<=/OnePower_0.DeepSleepEnabled;<=/Scanner_PowerGood.Value |> expr(($1 == 1 && $2 == 0) ? 2 : 0)"
         },
         "ThresholdSensor_PsuOutputPower": {
@@ -64,9 +66,11 @@
             "SensorIdentifier": "PS${Slot} POut",
             "Unit": 0,
             "BaseUnit": 6,
+            "Linearization" : 112,
             "Analog": 1,
             "MaximumReading": 255,
-            "Reading": "<=/OnePower_0.OutputPowerWatts |> expr(($1 % 12) > 5 ? ($1 // 12 + 1) : ($1 // 12))"
+            "Reading": 170,
+            "OriginalReading": "<=/OnePower_0.OutputPowerWatts"
         },
         "ThresholdSensor_PsuInletTemp": {
             "OwnerId": 32,

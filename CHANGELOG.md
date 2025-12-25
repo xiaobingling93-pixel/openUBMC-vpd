@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.176] - 2025-12-20
+电源输入输出功率修改为1w
+
 ## [1.80.175] - 2025-12-25
 钛金3000w电源适配效率曲线
 
