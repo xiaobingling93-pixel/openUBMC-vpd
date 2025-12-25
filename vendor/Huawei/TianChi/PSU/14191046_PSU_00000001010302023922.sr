@@ -208,10 +208,10 @@
             "Condition": 1
         },
         "ThresholdSensor_PsuInputPower": {
-            "M": 12
+            "M": 0
         },
         "ThresholdSensor_PsuOutputPower": {
-            "M": 12
+            "M": 0
         },
         "ThresholdSensor_PsuInletTemp": {
             "M": 1
