@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 ## [1.80.177] - 2025-12-26
+南向部件驱动回退部分网卡的打包逻辑
+
+## [1.80.177] - 2025-12-26
 南向部件驱动回退OCP卡的打包逻辑
 
 ## [1.80.176] - 2025-12-20
