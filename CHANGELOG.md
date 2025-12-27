@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.180] - 2025-12-27
+南向部件驱动回退部分GPU卡的打包逻辑
+
 ## [1.80.179] - 2025-12-27
 网卡调速配置SensorName
 
