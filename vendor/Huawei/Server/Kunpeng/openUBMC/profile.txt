@@ -319,3 +319,11 @@ Mellanox/CX-5/Optical/14140130_15b31017_19e5d135.sr
 Mellanox/CX-5/Optical/14140130_15b31017_19e5d135_soft.sr
 Mellanox/CX4-Lx/14140130_15b31015_15b30003.sr
 Mellanox/CX4-Lx/14140130_15b31015_15b30003_soft.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010.sr
+Innosilicon/GPU/14140130_1fe01010_1fe01010_soft.sr
+Nvidia/Gpu/14140130_10de1eb8_10de12a2.sr
+Nvidia/Gpu/14140130_10de1eb8_10de12a2_soft.sr
+Vastai/GPU/14140130_1ec60200_1ec60063.sr
+Vastai/GPU/14140130_1ec60200_1ec60063_soft.sr
+Vastai/GPU/14140130_1f4f0200_1f4f0020.sr
+Vastai/GPU/14140130_1f4f0200_1f4f0020_soft.sr
