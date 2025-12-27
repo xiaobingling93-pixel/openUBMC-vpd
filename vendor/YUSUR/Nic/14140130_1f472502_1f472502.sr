@@ -13,7 +13,7 @@
         },
         "I2cMux_9545Chan": {
             "Chips": [
-            "Chip_TempChip"
+                "Chip_TempChip"
             ]
         }
     },
@@ -456,7 +456,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_NicTemp.SensorName"
         }
     }
 }

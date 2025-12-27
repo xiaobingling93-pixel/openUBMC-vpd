@@ -68,7 +68,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
-            "LinkSpeedReduced":0,
+            "LinkSpeedReduced": 0,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "DeviceType": 83
@@ -264,7 +264,7 @@
             "EventKeyId": "PcieCard.PCIeCardTempFail",
             "Condition": 1
         },
-         "Event_OM0PowerAlarm": {
+        "Event_OM0PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
             "LedFaultCode": "q$$"
@@ -330,7 +330,8 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)"
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         },
         "CoolingRequirement_1_52": {
             "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
@@ -347,7 +348,8 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)"
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         }
     }
 }

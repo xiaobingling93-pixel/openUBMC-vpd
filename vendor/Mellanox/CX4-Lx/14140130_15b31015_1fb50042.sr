@@ -267,7 +267,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_NicTemp.SensorName"
         },
         "CoolingRequirement_1_49": {
             "RequirementId": "${Slot} |> expr((49 << 8) | $1)",
@@ -283,7 +284,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_NicTemp.SensorName"
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",

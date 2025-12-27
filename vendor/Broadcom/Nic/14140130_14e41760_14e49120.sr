@@ -254,7 +254,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
         "CoolingRequirement_1_155": {
             "RequirementId": "${Slot} |> expr((155 << 8) | $1)",
@@ -329,7 +330,7 @@
         },
         "Event_PCIeLinkSpeed": {
             "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
-            "Condition": 1,            
+            "Condition": 1,
             "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
             "OperatorId": 5,
             "Enabled": true,
@@ -353,7 +354,7 @@
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
-            "LedFaultCode": "q$$",            
+            "LedFaultCode": "q$$",
             "Reading": "<=/PCIeDevice_1.PredictiveFault",
             "OperatorId": 5,
             "Enabled": true,
@@ -433,7 +434,7 @@
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0,            
+            "Condition": 0,
             "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
             "@Default": {
                 "Reading": 255
@@ -447,7 +448,7 @@
         },
         "Event_OM1VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1,            
+            "Condition": 1,
             "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
@@ -522,7 +523,7 @@
         },
         "Event_OM2VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1,            
+            "Condition": 1,
             "Reading": "<=/OpticalModule_2.FaultState;<=/OpticalModule_2.SupplyVoltage;<=/OpticalModule_2.VoltageLowerThresholdCritical;<=/OpticalModule_2.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
             "OperatorId": 5,
             "Enabled": true,
@@ -535,7 +536,7 @@
         "Event_OM2PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
-            "LedFaultCode": "q$$",            
+            "LedFaultCode": "q$$",
             "Reading": "<=/OpticalModule_2.PowerState",
             "OperatorId": 5,
             "Enabled": true,
@@ -547,7 +548,7 @@
         "Event_OM2SpeedMatch": {
             "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
             "Condition": 1,
-            "LedFaultCode": "q$$",            
+            "LedFaultCode": "q$$",
             "Reading": "<=/OpticalModule_2.IsSupportedType",
             "OperatorId": 5,
             "Enabled": true,
@@ -558,7 +559,7 @@
         },
         "Event_Port2BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",            
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
             "Reading": "<=/NetworkPort_2.BandwidthUsagePercent",
             "@Default": {
                 "Condition": 100

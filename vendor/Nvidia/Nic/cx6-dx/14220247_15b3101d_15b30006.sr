@@ -6,7 +6,7 @@
             "Buses": [
                 "I2c_2",
                 "I2cMux_pca9545_chan1"
-              ]
+            ]
         },
         "I2c_2": {
             "Chips": [
@@ -27,7 +27,7 @@
             "OffsetWidth": 1,
             "WriteTmout": 100,
             "ReadTmout": 100,
-            "HealthStatus":0
+            "HealthStatus": 0
         },
         "Eeprom_NIC": {
             "Address": "${Slot} |> expr($1 == 1 ? 160 : 164)",
@@ -59,7 +59,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
-            "LinkSpeedReduced":0,
+            "LinkSpeedReduced": 0,
             "DeviceType": 83,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
@@ -156,7 +156,7 @@
             "Model": "CX6-DX",
             "ModelDescription": "2*100GE",
             "ChipVendor": "Mellanox",
-			"SupportedMctp": true,
+            "SupportedMctp": true,
             "SupportedLLDP": true,
             "HotPluggable": true,
             "ReadyToRemove": false,
@@ -170,20 +170,20 @@
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
-			"Bus": "<=/PCIeDevice_1.Bus",
+            "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-			"ChipManufacturer": "Mellanox",
-			"NetworkPortCount": 2,
-			"BoardName": "",
-			"VendorID": "0x15b3",
+            "ChipManufacturer": "Mellanox",
+            "NetworkPortCount": 2,
+            "BoardName": "",
+            "VendorID": "0x15b3",
             "DeviceID": "0x101d",
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0006",
-			"PCBVersion": ".A",
+            "PCBVersion": ".A",
             "FruId": "<=/Fru_OCP.FruId",
             "SerialNumber": "<=/Component_OCPCard.SerialNumber"
         },
@@ -435,7 +435,8 @@
             "ThresholdValue": [],
             "AlarmSpeed": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
         }
     }
 }
