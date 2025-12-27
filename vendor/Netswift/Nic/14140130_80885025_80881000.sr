@@ -503,7 +503,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         }
     }
 }

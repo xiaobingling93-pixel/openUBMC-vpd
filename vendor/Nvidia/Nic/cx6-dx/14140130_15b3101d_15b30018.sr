@@ -188,7 +188,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
         "ThresholdSensor_OpticalModuleTemp": {
             "AssertMask": 128,

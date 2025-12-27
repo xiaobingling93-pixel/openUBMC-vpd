@@ -435,7 +435,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
         "CoolingRequirement_1_66": {
             "RequirementId": "${Slot} |> expr((66 << 8) | $1)",
@@ -454,7 +455,8 @@
                 65
             ],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
         }
     }
 }

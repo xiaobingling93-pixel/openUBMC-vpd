@@ -207,7 +207,8 @@
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
             "ActiveInStandby": true,
-            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 == 0 ? true : false)"
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 == 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Hi1822Temp.SensorName"
         },
         "CoolingRequirement_1_150": {
             "RequirementId": "${Slot} |> expr((150 << 8) | $1)",
@@ -224,7 +225,8 @@
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
             "ActiveInStandby": true,
-            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)"
+            "Enabled": "<=/CoolingRequirement_1_53.MonitoringStatus |> expr($1 ~= 0 ? true : false)",
+            "SensorName": "#/ThresholdSensor_Hi1822Temp.SensorName"
         },
         "CoolingRequirement_1_53": {
             "RequirementId": "${Slot} |> expr((53 << 8) | $1)",
@@ -240,7 +242,8 @@
             "SmartCoolingTargetTemperature": [60, 55, 65],
             "CustomSupported": false,
             "ActiveInStandby": true,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OpticalModuleTemp.SensorName"
         },
         "BoardPCIeCard_1": {
             "Slot": 1,

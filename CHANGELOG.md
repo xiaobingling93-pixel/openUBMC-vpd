@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.179] - 2025-12-27
+网卡调速配置SensorName
+
 ## [1.80.177] - 2025-12-26
 南向部件驱动回退部分网卡的打包逻辑
 

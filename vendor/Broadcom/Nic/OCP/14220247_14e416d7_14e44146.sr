@@ -258,7 +258,8 @@
             "AlarmSpeed": [],
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         },
         "CoolingArea_1_35": {
             "AreaId": 35,

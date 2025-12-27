@@ -7,7 +7,7 @@
                 "I2c_2",
                 "I2cMux_pca9545_chan1",
                 "Hisport_0"
-              ]
+            ]
         },
         "I2c_2": {
             "Chips": [
@@ -33,7 +33,7 @@
             "OffsetWidth": 1,
             "WriteTmout": 100,
             "ReadTmout": 100,
-            "HealthStatus":0
+            "HealthStatus": 0
         },
         "Eeprom_NIC": {
             "Address": "${Slot} |> expr($1 == 1 ? 160 : ($1 == 2 ? 164 : 168))",
@@ -71,7 +71,7 @@
             "DiagnosticFault": 0,
             "PredictiveFault": 0,
             "BandwidthReduction": 0,
-            "LinkSpeedReduced":0,
+            "LinkSpeedReduced": 0,
             "Container": "${Container}",
             "GroupPosition": "PCIeDevice_${GroupPosition}",
             "PCIeDeviceType": "MultiFunction",
@@ -146,7 +146,7 @@
             "Model": "CX6-DX",
             "ModelDescription": "2*100GE",
             "ChipVendor": "Mellanox",
-			"SupportedMctp": true,
+            "SupportedMctp": true,
             "SupportedLLDP": true,
             "HotPluggable": true,
             "ReadyToRemove": false,
@@ -160,20 +160,20 @@
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
-			"Bus": "<=/PCIeDevice_1.Bus",
+            "Bus": "<=/PCIeDevice_1.Bus",
             "Device": "<=/PCIeDevice_1.Device",
             "Function": "<=/PCIeDevice_1.Function",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-			"ChipManufacturer": "Mellanox",
-			"NetworkPortCount": 2,
-			"BoardName": "MCX623430MS-CDAB",
-			"VendorID": "0x15b3",
+            "ChipManufacturer": "Mellanox",
+            "NetworkPortCount": 2,
+            "BoardName": "MCX623430MS-CDAB",
+            "VendorID": "0x15b3",
             "DeviceID": "0x101d",
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0114",
-			"PCBVersion": "<=/Fru_OCP.PcbVersion",
+            "PCBVersion": "<=/Fru_OCP.PcbVersion",
             "FruId": "<=/Fru_OCP.FruId",
             "RootBDFs": "<=/PCIeDevice_1.BDFs",
             "SerialNumber": "<=/Component_OCPCard.SerialNumber"
@@ -447,7 +447,8 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)"
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 1) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         },
         "CoolingRequirement_1_52": {
             "RequirementId": "${Slot} |> expr((52 << 8) | $1)",
@@ -464,7 +465,8 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "CustomTargetTemperatureCelsius": 255,
-            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)"
+            "Enabled": "<=/Scanner_PowerGood.Value |> expr(($1 == 0) ? true : false)",
+            "SensorName": "#/ThresholdSensor_OCPTemp.SensorName"
         }
     }
 }

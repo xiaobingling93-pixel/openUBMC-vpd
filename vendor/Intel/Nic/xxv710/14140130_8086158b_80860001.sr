@@ -557,7 +557,8 @@
             "SmartCoolingTargetTemperature": [],
             "CustomSupported": false,
             "ActiveInStandby": true,
-            "CustomTargetTemperatureCelsius": 255
+            "CustomTargetTemperatureCelsius": 255,
+            "SensorName": "#/ThresholdSensor_Temp.SensorName"
         },
         "CoolingRequirement_1_89": {
             "RequirementId": "${Slot} |> expr((89 << 8) | $1)",
