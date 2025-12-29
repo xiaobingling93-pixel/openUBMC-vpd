@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.183] - 2025-12-29
+修复SP680网卡光模块过温告警描述错误问题
+
 ## [1.80.182] - 2025-12-29
 修复SP680网卡光模块过温告警阈值错误问题
 
