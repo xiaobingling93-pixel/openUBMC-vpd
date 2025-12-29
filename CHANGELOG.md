@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.181] - 2025-12-29
+修复SP680网卡光模块过温告警阈值错误和BoradId显示错误的问题
+
 ## [1.80.180] - 2025-12-27
 南向部件驱动回退部分GPU卡的打包逻辑
 
