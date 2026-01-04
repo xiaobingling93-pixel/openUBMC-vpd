@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.184] - 2025-12-31
+修复内存Event_MemoryRAS6CE多配置了导致格式错误
+
 ## [1.80.183] - 2025-12-29
 修复SP680网卡光模块过温告警描述错误问题
 
