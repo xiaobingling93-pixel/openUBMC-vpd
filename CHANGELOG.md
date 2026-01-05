@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.186] - 2026-1-5
+修复单板腐蚀告警告警描述
+
 ## [1.80.185] - 2026-1-5
 修复网卡兼容性表格错误内容
 
