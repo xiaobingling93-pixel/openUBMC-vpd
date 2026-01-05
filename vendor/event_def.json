@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.74",
+    "Version": "1.0.75",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -14664,7 +14664,7 @@
         },
         {
             "Suggestion": {
-                "En": "Collect related event information and contact technical support engineers ro replace the node.",
+                "En": "Collect related event information and contact technical support engineers to replace the node.",
                 "Zh": "请收集相关事件信息和日志，然后联系技术支持工程师更换节点。"
             },
             "EventKeyId": "Mainboard.MainboardCorrosion",
