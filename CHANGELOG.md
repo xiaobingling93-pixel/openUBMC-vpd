@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.185] - 2026-1-5
+修复网卡兼容性表格错误内容
+
 ## [1.80.184] - 2025-12-31
 修复内存Event_MemoryRAS6CE多配置了导致格式错误
 
