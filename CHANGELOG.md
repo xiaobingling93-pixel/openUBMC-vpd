@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.187] - 2026-1-7
+部分网卡走南向设备树机制加载
+
 ## [1.80.186] - 2026-1-5
 修复单板腐蚀告警告警描述
 
