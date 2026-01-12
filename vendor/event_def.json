@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.75",
+    "Version": "1.0.76",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -5628,6 +5628,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "MemoryCEStormFault"
+        },
+        {
+            "EventCode": "0x01000089",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Memory.MemoryCEStorm",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "MemoryCEStorm"
         },
         {
             "EventCode": "0x0300004D",
@@ -15239,6 +15251,25 @@
                 "Zh": "1、请尽快进行计划性维护，下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、如果问题依然存在，联系厂商技术支持工程师。"
             },
             "EventKeyId": "Memory.MemoryCEStormFault",
+            "Description": {
+                "En": "The memory (%1) is in Memory CE Storm.",
+                "Zh": "内存条（%1）处于CE风暴中。"
+            },
+            "Influence": {
+                "En": "The system can still run properly, but the system performance and reliability may deteriorate.",
+                "Zh": "系统仍能正常运行，但系统性能和可靠性可能有所降低。"
+            },
+            "Cause": {
+                "En": "1. The DIMM has poor contact with its slot.@#AB;2. The solder joints between the DIMM chip and the DIMM PCB are aged.@#AB;3. The DRAM chip has physical faults.",
+                "Zh": "1、内存与其插槽接触不良。@#AB;2、内存芯片与内存条PCB板的焊点老化。@#AB;3、内存颗粒故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Arrange planned maintenance as soon as possible. Power off the server and check whether the DIMM has poor contact with its slot or the DIMM or slot is damaged.@#AB;2. If the fault persists, contact technical support engineers.",
+                "Zh": "1、请尽快进行计划性维护，下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、如果问题依然存在，联系厂商技术支持工程师。"
+            },
+            "EventKeyId": "Memory.MemoryCEStorm",
             "Description": {
                 "En": "The memory (%1) is in Memory CE Storm.",
                 "Zh": "内存条（%1）处于CE风暴中。"

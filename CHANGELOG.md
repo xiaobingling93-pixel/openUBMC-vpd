@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.188] - 2026-1-12
+增加内存硬件预故障事件模板
+
 ## [1.80.187] - 2026-1-7
 部分网卡走南向设备树机制加载
 
