@@ -1,6 +1,6 @@
 {
     "FormatVersion": "3.00",
-    "DataVersion": "3.02",
+    "DataVersion": "3.03",
     "Unit": {
         "Type": "PCIeCard",
         "Name": "PCIeCard_1"
@@ -113,33 +113,38 @@
             "FunctionType": "Physical",
             "PCIeDeviceType": "MultiFunction"
         },
-        "PCIeCard_1": {
+        "DPUCard_1": {
+            "Model": "BF2",
+            "BoardID": 65535,
+            "BoardName": "MT42822 BlueField-2",
+            "Name": "BlueField-2",
+            "Description": "MT42822 BlueField-2 integrated ConnectX-7 network controller",
+            "FunctionClass": 11,
+            "Architecture": "BlueField_DPU",
+            "TotalCores": 16,
+            "PcbVersion": "",
             "SlotID": "<=/PCIeDevice_1.SlotID",
             "NodeID": "<=/PCIeDevice_1.SlotID |> string.format('PCIeCard%s',$1)",
-            "Name": "MBF2H332A-AENOT",
-            "BoardName": "MT42822 BlueField-2",
-            "Description": "MT42822 BlueField-2 integrated ConnectX-7 network controller",
-            "FunctionClass": 2,
+            "Manufacturer": "Mellanox",
+            "HeartBeatLoss": 0,
+            "RefFrudata": "#/FruData_BF2",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkWidthAbility": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
             "VendorID": 5555,
             "DeviceID": 41686,
             "SubVendorID": 5555,
             "SubDeviceID": 96,
-            "PartNumber": "MBF2H332A-AENOT",
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
-            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
-            "Manufacturer": "Mellanox",
-            "Health": "<=/Component_PCIeCard.Health",
-            "Model": "BF2",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
-            "PcbVersion": "",
-            "Bus": "<=/PCIeDevice_1.Bus",
-            "Device": "<=/PCIeDevice_1.Device",
-            "Function": "<=/PCIeDevice_1.Function",
-            "DevBus": "<=/PCIeDevice_1.DevBus",
-            "DevDevice": "<=/PCIeDevice_1.DevDevice",
-            "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "SerialNumber": "<=/FruData_BF2.BoardSerialNumber |> expr(string.gsub($1, '%s+$','') )"
+            "PartNumber": "<=/FruData_BF2.BoardPartNumber",
+            "SerialNumber": "<=/FruData_BF2.BoardSerialNumber",
+            "RefComponent": "#/Component_DPUCard",
+            "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
+            "ManagerType": "BMC",
+            "SRVersion": "${DataVersion}"
         },
         "NetworkAdapter_1": {
             "SystemID": 1,
@@ -153,7 +158,7 @@
             "Model": "BF2",
             "ModelDescription": "2*25GE",
             "ChipVendor": "Mellanox",
-            "ChipManufacturer": "<=/PCIeCard_1.Manufacturer",
+            "ChipManufacturer": "<=/DPUCard_1.Manufacturer",
             "NetworkPortCount": 2,
             "BoardName": "MT42822 BlueField-2",
             "VendorID": "0x15b3",
@@ -161,7 +166,7 @@
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0060",
             "ComponentUniqueID": "",
-            "PCBVersion": "<=/PCIeCard_1.PcbVersion",
+            "PCBVersion": "<=/DPUCard_1.PcbVersion",
             "FruId": 255,
             "SupportedMctp": true,
             "HotPluggable": false,
@@ -181,9 +186,9 @@
             "TemperatureCelsius": 0,
             "TemperatureStatus": 0,
             "BandwidthThresholdPercent": 100,
-            "ParentCardSlotId": 255,
-            "Health": "<=/Component_PCIeCard.Health",
-            "SerialNumber": "<=/PCIeCard_1.SerialNumber"
+            "ParentCardSlotId": "<=/PCIeDevice_1.SlotID",
+            "Health": "<=/Component_DPUCard.Health",
+            "SerialNumber": "<=/DPUCard_1.SerialNumber"
         },
         "BoardPCIeCard_1": {
             "Slot": "<=/PCIeDevice_1.SlotID",
@@ -206,8 +211,8 @@
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
             "NodeId": "<=/PCIeDevice_1.DeviceName",
-            "FruID": "<=/Component_PCIeCard.FruId",
-            "PcbVersion": "<=/PCIeCard_1.PcbVersion"
+            "FruID": "<=/Component_DPUCard.FruId",
+            "PcbVersion": "<=/DPUCard_1.PcbVersion"
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
