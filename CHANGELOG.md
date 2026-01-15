@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.192] - 2026-1-19
+修复Atlas 300i A2卡对应的CSR文件配置错误
+
 ## [1.80.191] - 2026-1-16
 内存CE风暴不上报告警事件
 
