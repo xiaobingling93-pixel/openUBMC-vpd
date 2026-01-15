@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.190] - 2026-1-14
+BF卡增加DPU对象、删除PCIe卡对象
+
 ## [1.80.189] - 2026-1-14
 部分GPU走南向设备树机制加载
 
