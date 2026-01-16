@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.80.191] - 2026-1-16
+内存CE风暴不上报告警事件
+
 ## [1.80.190] - 2026-1-14
 BF卡增加DPU对象、删除PCIe卡对象
 
