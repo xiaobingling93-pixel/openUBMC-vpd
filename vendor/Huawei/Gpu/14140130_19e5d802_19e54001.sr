@@ -154,7 +154,7 @@
             "SystemId": 1,
             "Presence": 1,
             "Slot": "${Slot}",
-            "Position": "<=/PCIeDevice_1.DeviceName",
+            "Position": "PCIe Card ${Slot} (NPU)",
             "ComputeCapability": "",
             "Architecture": "",
             "InstructionSet": "",
@@ -393,7 +393,7 @@
             "MaximumReading": 255,
             "MinimumReading": 0,
             "Reading": "<=/NPU_1.Power |> expr($1 // 15)",
-            "ReadingStatus": "<=/NPU_1.Power |> expr($1 >= 16384 ? 1 : 0)"
+            "ReadingStatus": "<=/NPU_1.Power |> expr($1 >= 16384 ? ($1 == 16384? 3 : 1) : 0)"
         },
         "CoolingRequirement_1_97": {
             "RequirementId": "${Slot} |> expr((97 << 8) | $1)",
