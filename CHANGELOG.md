@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.1] - 2026-1-22
+更新网卡、RAID卡、硬盘、安全模块的兼容性列表
+
 ## [1.80.192] - 2026-1-19
 修复Atlas 300i A2卡对应的CSR文件配置错误
 
