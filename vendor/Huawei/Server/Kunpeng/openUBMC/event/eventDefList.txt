@@ -459,3 +459,5 @@ Rack.RackPowerChassisModelAbnormal
 Rack.RackPowerChassisCountAbnormal
 Fan.ModuleFanRemoved
 Mainboard.MainboardAccessRTCClockFailure
+PcieCard.PCIeCardFlashVerificationFailure
+PcieCard.PCIeCardChipStatusAbnormal

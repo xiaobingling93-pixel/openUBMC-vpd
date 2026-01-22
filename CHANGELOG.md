@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.3] - 2026-1-24
+新增0x080000BB、0x080000A3告警事件
+
 ## [1.90.2] - 2026-1-25
 修复BCM957414N4140C网卡的Type配置错误问题
 
