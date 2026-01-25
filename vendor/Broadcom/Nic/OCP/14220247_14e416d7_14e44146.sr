@@ -99,7 +99,7 @@
             "Manufacturer": "Broadcom",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
-            "Type": 3,
+            "Type": 10,
             "Model": "BCM57414",
             "Description": "2*25GE",
             "ModelDescription": "2*25GE",

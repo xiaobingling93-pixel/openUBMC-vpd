@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.2] - 2026-1-25
+修复BCM957414N4140C网卡的Type配置错误问题
+
 ## [1.90.1] - 2026-1-22
 更新网卡、RAID卡、硬盘、安全模块的兼容性列表
 
