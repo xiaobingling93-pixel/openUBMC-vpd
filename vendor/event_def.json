@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.76",
+    "Version": "1.0.77",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6444,6 +6444,30 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "MainboardAccessRTCClockFailure"
+        },
+        {
+            "EventCode": "0x080000BB",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.PCIeCardFlashVerificationFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PCIeCardFlashVerificationFailure"
+        },
+        {
+            "EventCode": "0x080000A3",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "PcieCard.PCIeCardChipStatusAbnormal",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PCIeCardChipStatusAbnormal"
         }
     ],
     "EventDescription": [
@@ -16649,6 +16673,44 @@
             "Cause": {
                 "En": "1. The RTC battery is faulty or the battery level is low. @#AB;2.the mainboard is faulty.",
                 "Zh": "1、RTC电池故障或者电量低。 @#AB;2、主板故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Shut down and restart the OS, and check whether the alarm is cleared. @#AB;2. If the alarm is not cleared, replace the component.",
+                "Zh": "1、执行OS先下电后上电，观察故障是否恢复。 @#AB;2、如无法恢复，更换该部件并进一步观察。"
+            },
+            "EventKeyId": "PcieCard.PCIeCardFlashVerificationFailure",
+            "Description": {
+                "En": "The %1 PCIe card %2 (%3) flash verification failed.%4 %5",
+                "Zh": "%1PCIe卡 %2 (%3) flash校验失败。%4%5"
+            },
+            "Influence": {
+                "En": "The temperature, voltage, and power of the PCIe card cannot be obtained.",
+                "Zh": "可能导致无法获取PCIe卡的温度、电压、功率等信息。"
+            },
+            "Cause": {
+                "En": "The flash memory has bit changes or is damaged.",
+                "Zh": "flash内部bit跳变或者损坏。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the PCIe card.",
+                "Zh": "更换PCIe卡。"
+            },
+            "EventKeyId": "PcieCard.PCIeCardChipStatusAbnormal",
+            "Description": {
+                "En": "The %4 chip of the [%1] PCIe card %2 (%3) is abnormal.",
+                "Zh": "[%1] PCIe卡 %2 (%3) %4 芯片状态异常。"
+            },
+            "Influence": {
+                "En": "The services related to the PCIe card cannot be processed normally.",
+                "Zh": "可能导致PCIe卡相关业务无法正常运行。"
+            },
+            "Cause": {
+                "En": "The PCIe card has a hardware fault.",
+                "Zh": "PCIe卡硬件故障。"
             }
         }
     ]
