@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.5] - 2026-1-26
+新增raid卡升级对象配置
+
 ## [1.90.4] - 2026-1-26
 修复MCX653105A-HDAT以支持MCTP
 

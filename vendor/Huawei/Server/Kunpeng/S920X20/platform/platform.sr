@@ -1286,6 +1286,18 @@
             "Name": "NPUCardMcu",
             "RevisionNumber": 0
         },
+        "FirmwareComponentInfo_Raid": {
+            "ComponentID": 13,
+            "ComponentIDEx": 218103809,
+            "Name": "Raid",
+            "RevisionNumber": 0
+        },
+        "FirmwareComponentInfo_Drive": {
+            "ComponentID": 34,
+            "ComponentIDEx": 4294967295,
+            "Name": "Drive",
+            "RevisionNumber": 0
+        },
         "EthMac_Eth0": {
             "EthId": 0,
             "EthName": "eth0",

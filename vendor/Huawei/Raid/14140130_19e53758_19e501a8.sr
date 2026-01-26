@@ -209,6 +209,11 @@
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "ChipManufacturer": "Huawei"
         },
+        "ControllerFirmware_1": {
+            "ComponentID": 13,
+            "ComponentIDEx": 218103809,
+            "RefController": "#/Controller_1"
+        },
         "SASPhy_0": {
             "@Parent": "Controller_1",
             "PhyId": 255,
