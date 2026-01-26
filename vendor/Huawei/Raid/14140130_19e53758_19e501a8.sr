@@ -200,7 +200,7 @@
             "BatteryHealth": "<=/Component_Battery.Health",
             "FaultCode": 0,
             "Health": "<=/Component_PCIeCard.Health",
-            "SerialNumber": "",
+            "SerialNumber": "<=/FruData_RaidCard.BoardSerialNumber",
             "CommunicationLoss": 0,
             "TemperatureAbnormal": 0,
             "TemperatureCelsius": 0,
