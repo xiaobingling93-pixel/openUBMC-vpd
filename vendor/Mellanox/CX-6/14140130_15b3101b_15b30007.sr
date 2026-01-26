@@ -192,7 +192,7 @@
             "ComponentUniqueID": "N/A",
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
             "FruId": 255,
-            "SupportedMctp": false,
+            "SupportedMctp": true,
             "HotPluggable": false,
             "ReadyToRemove": false,
             "AttentionHotPlugState": 255,

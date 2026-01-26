@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.4] - 2026-1-26
+修复MCX653105A-HDAT以支持MCTP
+
 ## [1.90.3] - 2026-1-24
 新增0x080000BB、0x080000A3告警事件
 
