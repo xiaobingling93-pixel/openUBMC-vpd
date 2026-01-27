@@ -321,7 +321,7 @@
             "Enabled": true,
             "AdditionalInfo": "2",
             "DescArg2": "#/PCIeDevice_1.DeviceName",
-            "DescArg4": "#/Controller_1.FaultCode",
+            "DescArg4": "NA",
             "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
