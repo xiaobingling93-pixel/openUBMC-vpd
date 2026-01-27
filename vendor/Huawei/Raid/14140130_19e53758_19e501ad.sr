@@ -211,8 +211,7 @@
         },
         "ControllerFirmware_1": {
             "ComponentID": 13,
-            "ComponentIDEx": 218103809,
-            "RefController": "#/Controller_1"
+            "ComponentIDEx": 218103809
         },
         "SASPhy_0": {
             "@Parent": "Controller_1",

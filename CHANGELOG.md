@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.14] - 2026-1-30
+不支持引用同组件对象bugfix
+
 ## [1.90.13] - 2026-1-29
 新增JBOG电源0x120000D1告警事件
 
