@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.7] - 2026-1-27
+添加告警定义
+
 ## [1.90.6] - 2026-1-22
 支持网卡和raid卡的SerialNumber和PartNumber从电子标签获取
 
