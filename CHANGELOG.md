@@ -1,5 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+
+## [1.90.8] - 2026-1-27
+修复SAS 3152卡告警描述ErrorCode错误问题
+
 ## [1.90.7] - 2026-1-27
 添加告警定义
 
