@@ -89,7 +89,7 @@
             "Position": "<=/PCIeDevice_1.Position",
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "Manufacturer": "Vastai Technologies",
-            "PartNumber": "",
+            "PartNumber": "06320221",
             "PcbVersion": "N/A",
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
