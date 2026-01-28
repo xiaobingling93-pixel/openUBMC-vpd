@@ -1,5 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.9] - 2026-1-27
+适配MCX75310AAS-NEAT网卡
 
 ## [1.90.8] - 2026-1-27
 修复SAS 3152卡告警描述ErrorCode错误问题
