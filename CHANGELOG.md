@@ -1,5 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.11] - 2026-1-29
+新增UB断链0x28000057告警事件
+
+## [1.90.10] - 2026-1-27
+DC1000增加partnumber
+
 ## [1.90.9] - 2026-1-27
 适配MCX75310AAS-NEAT网卡
 

@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.78",
+    "Version": "1.0.79",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6504,6 +6504,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "PCIeCardChipStatusAbnormal"
+        },
+        {
+            "EventCode": "0x28000057",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Cable.UBLinkFailed",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "UBLinkFailed"
         }
     ],
     "EventDescription": [
@@ -16804,6 +16816,25 @@
             "Cause": {
                 "En": "The PCIe card has a hardware fault.",
                 "Zh": "PCIe卡硬件故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether there is damage or poor contact between the component and its slot after power-off.@#AB;2. Replace the corresponding cable.@#AB;3. Replace the device.",
+                "Zh": "1、下电后检查该部件与其插槽是否存在损坏或接触不良现象。@#AB;2、更换相应的线缆。@#AB;3、更换设备。"
+            },
+            "EventKeyId": "Cable.UBLinkFailed",
+            "Description": {
+                "En": "%1 link failed.",
+                "Zh": "%1 链路链接失败。"
+            },
+            "Influence": {
+                "En": "The device fails to be identified. As a result, the system stops responding or data is lost.",
+                "Zh": "设备识别异常，导致系统停止响应或数据丢失。"
+            },
+            "Cause": {
+                "En": "1. The cable is faulty.@#AB;2. The device is faulty.",
+                "Zh": "1、线缆故障。@#AB;2、设备故障。"
             }
         }
     ]
