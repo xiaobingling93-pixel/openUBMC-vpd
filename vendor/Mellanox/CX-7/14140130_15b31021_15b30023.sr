@@ -498,7 +498,7 @@
         "CoolingRequirement_1_95": {
             "RequirementId": "${Slot} |> expr((95 << 8) | $1)",
             "Description": "CX7网卡光模块温度调速",
-            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 32768) ? 1 : 0)",
+            "MonitoringStatus": "<=/OpticalModule_1.TemperatureCelsius |> expr($1 >= 255) ? 0 : $1)",
             "MonitoringValue": "<=/OpticalModule_1.TemperatureCelsius",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 55,
