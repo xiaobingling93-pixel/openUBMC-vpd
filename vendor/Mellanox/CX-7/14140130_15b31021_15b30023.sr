@@ -282,6 +282,8 @@
             "LinkSpeedCapability": "N/A",
             "LinkWidth": "N/A",
             "LinkSpeed": "N/A",
+            TemperatureStatus: 0,
+            TemperatureCelsius: 0,
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
             "Health": "<=/Component_PCIeCard.Health",
