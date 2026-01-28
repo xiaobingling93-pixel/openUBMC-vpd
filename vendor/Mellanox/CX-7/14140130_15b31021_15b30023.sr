@@ -89,21 +89,79 @@
             "RBExp": 224,
             "UpperNoncritical": 105,
             "PositiveHysteresis": 2,
-            "NegativeHysteresis": 2
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe NIC%s Temp',$1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/Scanner_IBTemp.Value",
+            "ReadingStatus": "<=/Scanner_IBTemp.Status"
         },
         "Event_OverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
             "Condition": "<=/ThresholdSensor_Temp.UpperNoncritical",
-            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis"
+            "Hysteresis": "<=/ThresholdSensor_Temp.PositiveHysteresis",
+            "Reading": "<=/ThresholdSensor_Temp.Reading |> expr(($1 >= 128) ? ($1 - 256) : $1)",
+            "@Default": {
+                "Condition": 105
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "IBCard",
+            "DescArg4": "#/Event_OverTemp.Reading",
+            "DescArg5": "#/ThresholdSensor_Temp.UpperNoncritical"
         },
         "Event_TempFail": {
             "EventKeyId": "PcieCard.PCIeCardTempFail",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/Scanner_IBTemp.Status",
+            "OperatorId": 5,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg3": "IBCard Chip"
         },
         "Event_OM1OverTempInfo": {
             "EventKeyId": "PcieCard.PCIeCardOMOverTemp",
             "Condition": 75,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 >= 255) ? 30 : $1)",
+            "OperatorId": 4,
+            "Enabled": true,
+            "DescArg2": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "1",
+            "DescArg4": "#/Event_OM1OverTempInfo.Reading",
+            "DescArg5": "75",
+            "Hysteresis": 2,
+            "AdditionalInfo": "2,3",
+            "Component": "#/Component_PCIeCard"
+        },
+        "Component_Port1": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 41,
+            "Name": "Port1",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1
         },
         "ThresholdSensor_OpticalModuleTemp": {
             "AssertMask": 128,
@@ -113,10 +171,37 @@
             "M": 1,
             "UpperNoncritical": 70,
             "PositiveHysteresis": 2,
-            "NegativeHysteresis": 2
+            "NegativeHysteresis": 2,
+            "OwnerId": 32,
+            "OwnerLun": 0,
+            "EntityId": "<=/Entity_PCIeCard.Id",
+            "EntityInstance": "<=/Entity_PCIeCard.Instance",
+            "Initialization": 127,
+            "Capabilities": 232,
+            "SensorType": 1,
+            "ReadingType": 1,
+            "SensorName": "<=/PCIeDevice_1.SlotID |> string.format('PCIe%s OP Temp', $1)",
+            "Unit": 128,
+            "BaseUnit": 1,
+            "ModifierUnit": 0,
+            "Analog": 1,
+            "NominalReading": 25,
+            "NormalMaximum": 0,
+            "NormalMinimum": 0,
+            "MaximumReading": 127,
+            "MinimumReading": 128,
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius",
+            "ReadingStatus": "<=/OpticalModule_1.TemperatureCelsius;<=/OpticalModule_1.Presence |> expr(($2 == 0) ? 32768 : $1) |> expr($1 >= 255 ? 3 : 0)"
+        },
+        "Entity_PCIeCard": {
+            "Id": 11,
+            "Name": "PCIeCard",
+            "Instance": 101,
+            "PowerState": 1,
+            "Presence": 1
         },
         "PCIeDevice_1": {
-            "DeviceName": "PCIe Card $ (MCX75310AAS-NEAT)",
+            "DeviceName": "PCIe Card ${Slot} (MCX75310AAS-NEAT)",
             "FunctionClass": 2,
             "Position": "",
             "DiagnosticFault": 0,
@@ -148,7 +233,7 @@
             "LaneOwner": "<=/PCIeDevice_1.SocketID",
             "FirmwareVersion": "<=/NetworkAdapter_1.FirmwareVersion",
             "Manufacturer": "Mellanox",
-            "PartNumber": "",
+            "PartNumber": "N/A",
             "Health": "<=/Component_PCIeCard.Health",
             "Model": "CX7",
             "DeviceName": "<=/PCIeDevice_1.DeviceName",
@@ -181,7 +266,7 @@
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0023",
             "PCBVersion": "<=/PCIeCard_1.PcbVersion",
-            "FruId": 255,
+            "FruId": "<=/Fru_CX7.FruId",
             "SupportedMctp": true,
             "HotPluggable": false,
             "ReadyToRemove": false,
@@ -193,12 +278,10 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "LinkWidthCapability": "",
-            "LinkSpeedCapability": "",
-            "LinkWidth": "",
-            "LinkSpeed": "",
-            "TemperatureCelsius": 0,
-            "TemperatureStatus": 0,
+            "LinkWidthCapability": "N/A",
+            "LinkSpeedCapability": "N/A",
+            "LinkWidth": "N/A",
+            "LinkSpeed": "N/A",
             "BandwidthThresholdPercent": 100,
             "ParentCardSlotId": 255,
             "Health": "<=/Component_PCIeCard.Health",
@@ -216,14 +299,11 @@
         },
         "BoardPCIeCard_1": {
             "Slot": 1,
-            "UID": "",
-            "Name": "",
+            "UID": "N/A",
+            "Name": "MCX75310AAS-NEAT",
             "Manufacturer": "Mellanox",
             "Type": "PCIeCard",
             "Description": "1*400GE",
-            "PartNumber": "",
-            "LogicVersion": "",
-            "SRVersion": "",
             "BoardID": 65535,
             "BoardType": "BoardPCIeCard",
             "Number": 1,
@@ -240,25 +320,60 @@
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/Component_PCIeCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg2": "#/Component_PCIeCard.PreviousSN",
+            "DescArg3": "#/Component_PCIeCard.SerialNumber",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeBandWidth": {
             "EventKeyId": "PCIeCard.PCIeCardBandWidthDecreased",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.BandwidthReduction",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(MCX75310AAS-NEAT)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeLinkSpeed": {
             "EventKeyId": "PCIeCard.PCIeCardLinkSpeedReduced",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/PCIeDevice_1.LinkSpeedReduced",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/PCIeDevice_1.SlotID",
+            "DescArg3": "(MCX75310AAS-NEAT)",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardUCE": {
             "EventKeyId": "PCIeCard.PCIeCardUncorrectableErr",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.DiagnosticFault;<=/PCIeDevice_1.UCEByBIOS |> expr(($1 + $2) == 0 ? 0 : 1)",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "DescArg4": "NA",
+            "Component": "#/Component_PCIeCard"
         },
         "Event_PCIeCardCE": {
             "EventKeyId": "PCIeCard.PCIeCardCEHardFailure",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/PCIeDevice_1.PredictiveFault",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "2",
+            "DescArg2": "#/Component_PCIeCard.Name",
+            "Component": "#/Component_PCIeCard"
         },
         "NetworkPort_1": {
             "@Parent": "NetworkAdapter_1",
@@ -283,25 +398,69 @@
         },
         "Event_Port1LinkDown": {
             "EventKeyId": "Port.PortDisconnected",
-            "Condition": 0
+            "Condition": 0,
+            "Reading": "<=/NetworkPort_1.LinkStatusNumeric",
+            "@Default": {
+                "Reading": 255
+            },
+            "OperatorId": 8,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/PCIeCard_1.DeviceName",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1VAMntr": {
             "EventKeyId": "Port.PortOpticalModuleVoltageAlarm",
-            "Condition": 1
+            "Condition": 1,
+            "Reading": "<=/OpticalModule_1.FaultState;<=/OpticalModule_1.SupplyVoltage;<=/OpticalModule_1.VoltageLowerThresholdCritical;<=/OpticalModule_1.VoltageUpperThresholdCritical |> expr((($1 & 16 != 0) && ($2 != 65536) && ($3 != 65536) && ($2 < $3)) || (($1 & 32 != 0) && ($2 != 65536) && ($4 != 65536) && ($2 > $4)))",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/OpticalModule_1.SupplyVoltage",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1PowerAlarm": {
             "EventKeyId": "Port.PortOpticalModulePowerAlarm",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.PowerState",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_OM1SpeedMatch": {
             "EventKeyId": "Port.PortOpticalModuleSpeedMismatch",
             "Condition": 1,
-            "LedFaultCode": "q$$"
+            "LedFaultCode": "q$$",
+            "Reading": "<=/OpticalModule_1.IsSupportedType",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/Component_PCIeCard.Name",
+            "DescArg3": "Port 1",
+            "Component": "#/Component_Port1"
         },
         "Event_Port1BWUsageMntr": {
             "EventKeyId": "NICCard.SystemNetworkBandwidthUsageHigh",
-            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent"
+            "Condition": "<=/NetworkAdapter_1.BandwidthThresholdPercent",
+            "Reading": "<=/NetworkPort_1.BandwidthUsagePercent",
+            "@Default": {
+                "Condition": 100
+            },
+            "OperatorId": 4,
+            "Enabled": true,
+            "Component": "#/Component_PCIeCard",
+            "AdditionalInfo": "1,3",
+            "DescArg1": "#/NetworkAdapter_1.SlotNumber",
+            "DescArg3": "Port 1",
+            "DescArg4": "#/Event_Port1BWUsageMntr.Reading",
+            "DescArg5": "#/Event_Port1BWUsageMntr.Condition"
         },
         "CoolingRequirement_1_93": {
             "RequirementId": "${Slot} |> expr((93 << 8) | $1)",
