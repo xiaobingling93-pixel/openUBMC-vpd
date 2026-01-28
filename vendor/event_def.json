@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.77",
+    "Version": "1.0.78",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -3948,6 +3948,42 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "PCIeRiserOverTempMinor"
+        },
+        {
+            "EventCode": "0x0F000009",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "Riser.LowerVoltage",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RiserLowerVoltage"
+        },
+        {
+            "EventCode": "0x0F00000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "Riser.OverVoltage",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "RiserOverVoltage"
+        },
+        {
+            "EventCode": "0x0F00000D",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 1,
+            "DeassertFlag": 1,
+            "EventKeyId": "Riser.GetVoltageFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "RiserGetVoltageFailure"
         },
         {
             "EventCode": "0x5600001D",
@@ -12682,6 +12718,63 @@
             "Cause": {
                 "En": "",
                 "Zh": "风扇模块故障或环境温度过高或进风口堵塞或出风口堵塞导致"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the PCIe riser card.",
+                "Zh": "更换PCIe Riser卡。"
+            },
+            "EventKeyId": "Riser.LowerVoltage",
+            "Description": {
+                "En": "PCIe riser card %4 voltage (%1 V) at %3 detection point is lower than the undervoltage threshold (%2 V).",
+                "Zh": "PCIe Riser卡%4 %3监测点当前电压（%1 V）低于低压门限电压（%2 V）。"
+            },
+            "Influence": {
+                "En": "The PCIe devices on the riser card are affected, which further affects the system operation.",
+                "Zh": "可能导致Riser卡上的PCIe设备运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "The riser card is faulty.",
+                "Zh": "Riser卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Replace the PCIe riser card.",
+                "Zh": "更换PCIe Riser卡。"
+            },
+            "EventKeyId": "Riser.OverVoltage",
+            "Description": {
+                "En": "PCIe riser card %4 voltage (%1 V) at %3 detection point exceeds the overvoltage threshold (%2 V).",
+                "Zh": "PCIe Riser卡%4 %3监测点当前电压（%1 V）高于高压门限电压（%2 V）。"
+            },
+            "Influence": {
+                "En": "The PCIe devices on the riser card are affected, which further affects the system operation.",
+                "Zh": "可能导致Riser卡上的PCIe设备运行不稳定，系统运行异常。"
+            },
+            "Cause": {
+                "En": "The riser card is faulty.",
+                "Zh": "Riser卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Restart the iBMC.@#AB;2. Remove and reconnect power cables or remove and reinstall the board in the chassis.@#AB;3. Replace the PCIe riser card.",
+                "Zh": "1、重启iBMC。@#AB;2、拔插电源线缆或拔插单板。@#AB;3、更换PCIe Riser卡。"
+            },
+            "EventKeyId": "Riser.GetVoltageFailure",
+            "Description": {
+                "En": "Failed to obtain the voltage at %1 detection point on the PCIe riser card %2.",
+                "Zh": "PCIe Riser卡%2 %1监测点电压读取失败。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "",
+                "Zh": ""
             }
         },
         {
