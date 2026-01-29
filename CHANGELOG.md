@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.13] - 2026-1-29
+新增JBOG电源0x120000D1告警事件
+
 ## [1.90.12] - 2026-1-29
 修复DPU NodeId获取
 
