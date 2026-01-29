@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.12] - 2025-03-13
+修复DPU NodeId获取
+
 ## [1.81.11] - 2025-03-12
 修复RAID卡0x08000001告警描述中缺少BN号的问题
 
