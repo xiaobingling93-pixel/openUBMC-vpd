@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.15] - 2026-1-30
+修复RTC Battery误告警问题
+
 ## [1.90.14] - 2026-1-30
 不支持引用同组件对象bugfix
 
