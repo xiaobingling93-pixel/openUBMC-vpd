@@ -210,7 +210,7 @@
             "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
             "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed",
             "AssociatedResource": "<=/NetworkAdapter_1.AssociatedResource",
-            "NodeId": "<=/PCIeDevice_1.DeviceName",
+            "BoardNodeId": "<=/PCIeDevice_1.DeviceName",
             "FruID": "<=/Component_DPUCard.FruId"
         },
         "Event_PcieCardReplaceMntr": {

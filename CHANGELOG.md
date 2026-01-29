@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.12] - 2026-1-29
+修复DPU NodeId获取
+
 ## [1.90.11] - 2026-1-29
 新增UB断链0x28000057告警事件
 
