@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.79",
+    "Version": "1.0.80",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6516,6 +6516,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "UBLinkFailed"
+        },
+        {
+            "EventCode": "0x120000D1",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 4,
+            "DeassertFlag": 1,
+            "EventKeyId": "Chassis.BoxPowerSupplyFailure",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "BoxPowerSupplyFailure"
         }
     ],
     "EventDescription": [
@@ -16835,6 +16847,25 @@
             "Cause": {
                 "En": "1. The cable is faulty.@#AB;2. The device is faulty.",
                 "Zh": "1、线缆故障。@#AB;2、设备故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Remove and insert the power cable of the BOX. @#AB;2. Check the health indicator of the BOX. @#AB;3. Remove and insert the CDFP cable. @#AB;4. Contact technical support.",
+                "Zh": "1、插拔BOX电源线；@#AB;2、插拔CDFP线缆；@#AB;3、检查BOX的健康灯是否异常；@#AB; 4、请联系技术工程师处理。"
+            },
+            "EventKeyId": "Chassis.BoxPowerSupplyFailure",
+            "Description": {
+                "En": "Power supply fault on %1-%2 %3.",
+                "Zh": "%1-%2 %3电源故障。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "1. The power supply of the BOX switch is abnormal. @#AB;2. The power supply of the switch component is abnormal.",
+                "Zh": "1、BOX switch供电异常；@#AB;2、switch上的器件供电异常。"
             }
         }
     ]
