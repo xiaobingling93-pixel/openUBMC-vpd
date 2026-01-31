@@ -1442,7 +1442,7 @@
             "EventData2": 255,
             "EventData3": 255,
             "EventDir": "<=/Scanner_RTCBatteryMntr.Value |> expr(($1 < 1396) ? 1 : 0)",
-            "Conversion": 1,
+            "Conversion": 0,
             "SensorObject": "#/DiscreteSensor_RTCBattery"
         },
         "DiscreteEvent_SystemNotice": {
