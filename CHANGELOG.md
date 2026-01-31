@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.16] - 2026-1-31
+修复NPU卡上的NPU部分信息获取不到的问题
+
 ## [1.90.15] - 2026-1-30
 修复RTC Battery误告警问题
 
