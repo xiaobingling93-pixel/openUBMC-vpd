@@ -1290,13 +1290,15 @@
             "ComponentID": 13,
             "ComponentIDEx": 218103809,
             "Name": "Raid",
-            "RevisionNumber": 0
+            "RevisionNumber": 0,
+            "UpgradeResumeSupported": false
         },
         "FirmwareComponentInfo_Drive": {
             "ComponentID": 34,
             "ComponentIDEx": 4294967295,
             "Name": "Drive",
-            "RevisionNumber": 0
+            "RevisionNumber": 0,
+            "UpgradeResumeSupported": false
         },
         "EthMac_Eth0": {
             "EthId": 0,
