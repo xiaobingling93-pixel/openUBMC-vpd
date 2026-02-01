@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.17] - 2026-2-1
+Raid卡硬盘升级不支持升级过程BMC复位后重新拉起升级
+
 ## [1.90.16] - 2026-1-31
 修复NPU卡上的NPU部分信息获取不到的问题
 
