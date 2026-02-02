@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.20] - 2026-1-31
+支持OCP网卡以事件记录SerialNumber变化
+
 ## [1.90.19] - 2026-2-2
 异构部件兼容性列表优化
 

@@ -135,6 +135,18 @@
             "UpperNoncritical": 105,
             "PositiveHysteresis": 2,
             "NegativeHysteresis": 2
+        },
+        "Event_OCPCardReplaceMntr": {
+            "EventKeyId": "OCPCard.OCPCardReplace",
+            "Condition": 1,
+            "Reading": "<=/Component_OCPCard.ReplaceFlag",
+            "OperatorId": 5,
+            "Enabled": true,
+            "AdditionalInfo": "1",
+            "DescArg1": "#/Component_OCPCard.Name",
+            "DescArg2": "#/Component_OCPCard.PreviousSN",
+            "DescArg3": "#/Component_OCPCard.SerialNumber",
+            "Component": "#/Component_OCPCard"
         }
     }
 }

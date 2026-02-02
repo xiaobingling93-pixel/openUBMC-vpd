@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.81",
+    "Version": "1.0.82",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6528,6 +6528,18 @@
             "SeverityId": 2,
             "ActionId": 0,
             "EventName": "BoxPowerSupplyFailure"
+        },
+        {
+            "EventCode": "0x53000013",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "OCPCard.OCPCardReplace",
+            "SeverityId": 0 ,
+            "ActionId": 0,
+            "EventName": "OCPCardReplace"
         }
     ],
     "EventDescription": [
@@ -10291,6 +10303,25 @@
             "Cause": {
                 "En": "1. The cable of the Riser Card is in poor contact.@#AB;2.The Riser Card is faulty.",
                 "Zh": "1、Riser卡线缆接触不良；@#AB;2、Riser卡故障。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "OCPCard.OCPCardReplace",
+            "Description": {
+                "En": "%1 is replaced from SN(%2) to SN(%3).",
+                "Zh": "%1 发生了更换，由SN(%2)更换为了SN(%3)。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "1.The OCP card is replaced.",
+                "Zh": "1.更换OCP卡。"
             }
         },
         {
