@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.80",
+    "Version": "1.0.81",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -15939,7 +15939,7 @@
         },
         {
             "Suggestion": {
-                "En": "1.Check that the cabinet's power supply works properly. @#AB;2.Check that the cabinet is equipped with the correct number of power supply units. @#AB;3. Check the TPSU alarm via the cabinet's BMC and troubleshoot according to the alarm details.",
+                "En": "1.Check that the cabinet's power supply works properly.@#AB;2.Check that the cabinet is equipped with the correct number of power supply units.@#AB;3.Check the TPSU alarm via the cabinet's BMC and troubleshoot according to the alarm details.",
                 "Zh": "1、检查机柜电源的供电是否正常。@#AB;2、检查机柜配置的电源数量是否正常。@#AB;3、查看机柜BMC上的TPSU告警，并根据告警提示进行修复。"
             },
             "EventKeyId": "System.NpuPowerBrakeAlarm",
