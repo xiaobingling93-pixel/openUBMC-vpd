@@ -25,7 +25,9 @@
             "Function": "PCIe device",
             "GroupId": 1,
             "PowerState": 1,
-            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber",
+            "ReplaceFlag": 0,
+            "PreviousSN": ""
         },
         "Fru_OCP": {
             "PcbVersion": ".A",

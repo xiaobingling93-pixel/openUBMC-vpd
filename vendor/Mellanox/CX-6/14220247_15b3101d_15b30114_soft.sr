@@ -33,7 +33,9 @@
             "Function": "PCIe device",
             "GroupId": 1,
             "PowerState": 1,
-            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber |> expr(string.gsub($1, '%s+$','') )"
+            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber |> expr(string.gsub($1, '%s+$','') )",
+            "ReplaceFlag": 0,
+            "PreviousSN": ""
         },
         "Component_Port1": {
             "FruId": 255,
