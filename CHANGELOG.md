@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.19] - 2026-2-2
+异构部件兼容性列表优化
+
 ## [1.90.18] - 2026-2-1
 移除NpuPowerBrakeAlarm的Suggestion中多余的空格
 
