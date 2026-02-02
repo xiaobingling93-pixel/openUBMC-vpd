@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.18] - 2026-2-1
+移除NpuPowerBrakeAlarm的Suggestion中多余的空格
+
 ## [1.90.17] - 2026-2-1
 Raid卡硬盘升级不支持升级过程BMC复位后重新拉起升级
 
