@@ -472,3 +472,7 @@ Rack.PowerCappingFailureCritical
 Rack.PowerCappingFailureMajor
 Rack.PowerCappingHighLoadWarning
 Rack.PowerCappingStrategyNotTakenEffect
+OCPCard.OCPCardReplace
+OCPCard.OCPCardOverTemp
+OCPCard.OCPCardTempFail
+OCPCard.OCPCardBandWidthDecreased
