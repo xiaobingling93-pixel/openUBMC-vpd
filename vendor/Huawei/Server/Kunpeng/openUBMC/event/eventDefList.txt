@@ -461,3 +461,14 @@ Fan.ModuleFanRemoved
 Mainboard.MainboardAccessRTCClockFailure
 PcieCard.PCIeCardFlashVerificationFailure
 PcieCard.PCIeCardChipStatusAbnormal
+Unit.HeightExceedLimit
+Unit.SNDuplicated
+Unit.DeviceInstalled
+Unit.DeviceRemoved
+Unit.DeviceOffine
+Unit.DeviceOnline
+RMM.FailToCommWithBMCOfDevice
+Rack.PowerCappingFailureCritical
+Rack.PowerCappingFailureMajor
+Rack.PowerCappingHighLoadWarning
+Rack.PowerCappingStrategyNotTakenEffect

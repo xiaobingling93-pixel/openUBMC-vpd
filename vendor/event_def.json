@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.82",
+    "Version": "1.0.83",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -6540,6 +6540,138 @@
             "SeverityId": 0 ,
             "ActionId": 0,
             "EventName": "OCPCardReplace"
+        },
+        {
+            "EventCode": "0x4F000009",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Unit.HeightExceedLimit",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "HeightExceedLimit"
+        },
+        {
+            "EventCode": "0x4F00000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Unit.SNDuplicated",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "SNDuplicated"
+        },
+        {
+            "EventCode": "0x4F000005",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Unit.DeviceInstalled",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "DeviceInstalled"
+        },
+        {
+            "EventCode": "0x4F000007",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Unit.DeviceRemoved",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "DeviceRemoved"
+        },
+        {
+            "EventCode": "0x4F000003",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Unit.DeviceOffine",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "DeviceOffine"
+        },
+        {
+            "EventCode": "0x4F000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "Unit.DeviceOnline",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "DeviceOnline"
+        },
+        {
+            "EventCode": "0x50000001",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 0,
+            "EventKeyId": "RMM.FailToCommWithBMCOfDevice",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "FailToCommWithBMCOfDevice"
+        },
+        {
+            "EventCode": "0x5100000B",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.PowerCappingFailureCritical",
+            "SeverityId": 3,
+            "ActionId": 0,
+            "EventName": "PowerCappingFailureCritical"
+        },
+        {
+            "EventCode": "0x51000007",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.PowerCappingFailureMajor",
+            "SeverityId": 2,
+            "ActionId": 0,
+            "EventName": "PowerCappingFailureMajor"
+        },
+        {
+            "EventCode": "0x51000011",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.PowerCappingHighLoadWarning",
+            "SeverityId": 0,
+            "ActionId": 0,
+            "EventName": "PowerCappingHighLoadWarning"
+        },
+        {
+            "EventCode": "0x51000009",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "Rack.PowerCappingStrategyNotTakenEffect",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PowerCappingStrategyNotTakenEffect"
         }
     ],
     "EventDescription": [
@@ -16897,6 +17029,215 @@
             "Cause": {
                 "En": "1. The power supply of the BOX switch is abnormal. @#AB;2. The power supply of the switch component is abnormal.",
                 "Zh": "1、BOX switch供电异常；@#AB;2、switch上的器件供电异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1、Re-modify and set the power capping value of the rack. @#AB;2、Connected the asset locator. @#AB;3、Try remove the asset locator connection cable and install it again after 1 minute. @#AB;4、Replace the asset locator.",
+                "Zh": "1、重新修改并下发机柜功耗封顶值 @#AB;2、正常连接资产管理条。 @#AB;3、尝试拔出资产条连接线缆并在1分钟后重新插上。 @#AB;4、更换资产条。"
+            },
+            "EventKeyId": "Rack.PowerCappingStrategyNotTakenEffect",
+            "Description": {
+                "En": "The intelligent power capping strategy has not taken effect.",
+                "Zh": "智能功耗封顶策略未生效。"
+            },
+            "Influence": {
+                "En": "The intelligent power capping strategy has not taken effect,and power  capping cannot be performed.",
+                "Zh": "机柜功耗封策略未生效，无法进行功耗封顶"
+            },
+            "Cause": {
+                "En": "1、The power cap value of rack cannot meet the distribution needs. @#AB;2、The asset  locator communicates abnormally with iRM.",
+                "Zh": "1、机柜功耗封顶值无法满足分配需求 @#AB;2、资产管理板与iRM通信异常"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "Adjust the service distribution of the cabinet to reduce the power consumption of the entire cabinet.",
+                "Zh": "调整机柜业务分配比例，降低整柜功耗"
+            },
+            "EventKeyId": "Rack.PowerCappingHighLoadWarning",
+            "Description": {
+                "En": "The cabinet power consumption is higher than 90% of the power cap (%1 W) for three consecutive days.",
+                "Zh": "机柜功耗持续三天高于封顶值（%1w）的90%以上"
+            },
+            "Influence": {
+                "En": "Power capping may be triggered, which affects performance.",
+                "Zh": "机柜内服务器承载的业务长时间处于高负荷运行状态，可能触发功耗封顶管理，影响业务性能"
+            },
+            "Cause": {
+                "En": "The servers in the cabinet are under heavy load for a long time.",
+                "Zh": "机柜内服务器承载的业务长时间处于高负荷运行状态"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Modify the power cap value for the rack. @#AB;2. Power off or migrate some of the devices involved in power capping in the rack.",
+                "Zh": "1、修改机柜功耗封顶值。 @#AB;2、对机柜内参与功耗封顶的部分设备进行下电或迁移。"
+            },
+            "EventKeyId": "Rack.PowerCappingFailureCritical",
+            "Description": {
+                "En": "Rack power capping failed. The current rack power consumption %1W is higher than the rack power cap %2W, exceeded the critical alarm threshold.",
+                "Zh": "当前机柜功耗为%1W，高于当前机柜封顶功耗%2W，超过紧急告警阈值，机柜封顶失败。"
+            },
+            "Influence": {
+                "En": "The rack is powered off unexpectedly.",
+                "Zh": "导致整柜异常下电。"
+            },
+            "Cause": {
+                "En": "1. The power cap value is not properly set for the rack. @#AB;2. Too many devices in the rack participate in power capping, or the power is too high.",
+                "Zh": "1、机柜功耗封顶值设置不合理。 @#AB;2、机柜内参与功耗封顶的设备过多或功率过大。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "RMM.FailToCommWithBMCOfDevice",
+            "Description": {
+                "En": "Failed to communicate with the BMC of device (SN: %1).",
+                "Zh": "与设备（序列号：%1）的BMC通信失败。"
+            },
+            "Influence": {
+                "En": "The iRM fails to communicate with devices in the cabinet, affecting device management.",
+                "Zh": "iRM与柜内设备通信失败，会影响设备代管。"
+            },
+            "Cause": {
+                "En": "The token provided by the upper-layer software is invalid or has expired due to prolonged inactivity.",
+                "Zh": "1、上层软件下发的Token无效或长时间未使用已过期"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Unit.DeviceOnline",
+            "Description": {
+                "En": "Device (SN: %2, U Mark: %1) is online.",
+                "Zh": "设备（序列号：%2，U位：%1）上线。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "A device in the cabinet has gone online.",
+                "Zh": "发现机柜内设备上线"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Unit.DeviceOffine",
+            "Description": {
+                "En": "Device (SN: %2, U Mark: %1) is offline.",
+                "Zh": "设备（序列号：%2，U位：%1）下线。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "A device in the cabinet has gone offline.",
+                "Zh": "发现机柜内设备下线"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Unit.DeviceRemoved",
+            "Description": {
+                "En": "Device (SN: %2, U Mark: %1) removed.",
+                "Zh": "设备（序列号：%2，U位：%1）下架。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "A device is removed from the rack unit.",
+                "Zh": "U位上设备拔出"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "",
+                "Zh": ""
+            },
+            "EventKeyId": "Unit.DeviceInstalled",
+            "Description": {
+                "En": "Device (SN: %2, U Mark: %1) installed.",
+                "Zh": "设备（序列号：%2，U位：%1）上架。"
+            },
+            "Influence": {
+                "En": "",
+                "Zh": ""
+            },
+            "Cause": {
+                "En": "A device is installed in the rack unit.",
+                "Zh": "U位上设备插入"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Check whether the SN in the tag matches the actual SN of the device. @#AB;2. Modify the device tag according to the actual SN of the device.",
+                "Zh": "1、检查标签中的序列号与设备实际序列号是否一致。 @#AB;2、按设备实际序列号修改设备标签。"
+            },
+            "EventKeyId": "Unit.SNDuplicated",
+            "Description": {
+                "En": "The device SN configured in the tag of the device (SN: %2, U Mark: %1) is duplicated with another device in the rack.",
+                "Zh": "设备（序列号：%2，U位：%1）标签中配置的设备序列号与机柜内其他设备重复。"
+            },
+            "Influence": {
+                "En": "Affects the identification of device location information.",
+                "Zh": "影响设备位置信息的识别。"
+            },
+            "Cause": {
+                "En": "The device SN configured in the tag of the device is duplicated with another device in the rack.",
+                "Zh": "1.资产标签中的设备序列号与柜内其他设备的序列号相同"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Modify the device tag according to the actual height of the device.",
+                "Zh": "1、按设备实际U位高度修改设备标签。"
+            },
+            "EventKeyId": "Unit.HeightExceedLimit",
+            "Description": {
+                "En": "The device height configured in the tag of the device (SN: %2, U Mark: %1) exceeds the maximum available rack space for the device.",
+                "Zh": "设备（序列号：%2，U位：%1）标签中配置的设备高度超出设备最大可用的机柜空间大小。"
+            },
+            "Influence": {
+                "En": "Affects the presentation of device information on the web interface.",
+                "Zh": "影响Web界面上的设备信息呈现。"
+            },
+            "Cause": {
+                "En": "The device height configured in the tag of the device exceeds the maximum available rack space for the device.",
+                "Zh": "1.资产标签中的设备高度字段值过大，超出设备所允许占用的最大机柜空间"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Modify the rack power cap value.@#AB;2. Power off or migrate some of the devices involved in power capping in the rack.",
+                "Zh": "1、修改机柜功耗封顶值。@#AB;2、对机柜内参与功耗封顶的部分设备进行下电或迁移。"
+            },
+            "EventKeyId": "Rack.PowerCappingFailureMajor",
+            "Description": {
+                "En": "Rack power capping failed. The current rack power consumption %1W is higher than the rack power cap %2W, exceeded the major alarm threshold.",
+                "Zh": "当前机柜功耗为%1W，高于当前机柜封顶功耗%2W，超过严重告警阈值，机柜封顶失败。"
+            },
+            "Influence": {
+                "En": "The rack is powered off.",
+                "Zh": "存在整柜下电风险。"
+            },
+            "Cause": {
+                "En": "1. The power cap value is not properly set for the rack. @#AB;2. Too many devices in the rack participate in power capping, or the power is too high.",
+                "Zh": "1、机柜功耗封顶值设置不合理。 @#AB;2、机柜内参与功耗封顶的设备过多或功率过大。"
             }
         }
     ]

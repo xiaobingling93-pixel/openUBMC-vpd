@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.21] - 2026-2-6
+支持功耗封顶和资产管理相关告警
+
 ## [1.90.20] - 2026-1-31
 支持OCP网卡以事件记录SerialNumber变化
 
