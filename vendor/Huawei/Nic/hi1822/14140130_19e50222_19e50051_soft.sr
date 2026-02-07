@@ -122,7 +122,7 @@
             "Id": 11,
             "Name": "PCIeCard",
             "Instance": 101,
-            "PowerState": 1,
+            "PowerState": "<=/::FruCtrl_1_0.PowerState |> string.cmp($1, 'ON') |> expr($1 ? 1 : 0)",
             "Presence": 1
         },
         "Event_Port1LinkDown": {
