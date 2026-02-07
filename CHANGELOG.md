@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.1] - 2025-02-07
+修复网卡失速调速失效
+
 ## [1.81.0] - 2025-02-07
 清除CE告警
 
