@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.22] - 2026-2-7
+支持ocp卡告警增强
+
 ## [1.90.21] - 2026-2-6
 支持功耗封顶和资产管理相关告警
 
