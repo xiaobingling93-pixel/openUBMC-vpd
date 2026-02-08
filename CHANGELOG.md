@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.3] - 2026-02-07
+修复HiAMCpldSelfTestFault告警下电后丢失问题
+
 ## [1.81.2] - 2025-02-07
 修复下电后网卡仍能获取温度问题
 

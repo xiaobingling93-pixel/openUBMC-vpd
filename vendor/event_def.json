@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.74",
+    "Version": "1.1.1",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4182,7 +4182,7 @@
             "ReportChannel": 65535,
             "OldEventCode": "",
             "EventType": 0,
-            "LifeCycleId": 1,
+            "LifeCycleId": 0,
             "DeassertFlag": 1,
             "EventKeyId": "NpuBoard.HiAMCpldSelfTestFault",
             "SeverityId": 2,
