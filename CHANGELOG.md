@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.90.23] - 2026-2-9
+新增电源维护事件
+
 ## [1.90.22] - 2026-2-7
 支持ocp卡告警增强
 
