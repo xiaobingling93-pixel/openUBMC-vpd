@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.84",
+    "Version": "1.0.85",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -180,6 +180,30 @@
             "SeverityId": 0,
             "ActionId": 0,
             "EventName": "PSUOutputOvercurrentWarning"
+        },
+        {
+            "EventCode": "0x03000091",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.InternalPSUFault",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "InternalPSUFault"
+        },
+        {
+            "EventCode": "0x03000093",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 1,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "PSU.PSUSwitchoverNotificationChannelFailure",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "PSUSwitchoverNotificationChannelFailure"
         },
         {
             "EventCode": "0x08000103",
@@ -16077,6 +16101,44 @@
             "Cause": {
                 "En": "1. The load is too heavy.",
                 "Zh": "1.负载过重。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Collect related events and logs and contact technical support.",
+                "Zh": "1.请收集相关事件信息和日志，联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.InternalPSUFault",
+            "Description": {
+                "En": "The PSU %1 has an internal fault (%2).",
+                "Zh": "电源%1内部故障（%2）。"
+            },
+            "Influence": {
+                "En": "An internal component of PSU is abnormal, which does not affect power supply.",
+                "Zh": "电源内部器件工作异常，不影响电源供电。"
+            },
+            "Cause": {
+                "En": "An internal component of PSU is abnormal.",
+                "Zh": "电源内部存在工作异常器件。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Collect related events and logs and contact technical support.",
+                "Zh": "1.请收集相关事件信息和日志，联系技术支持工程师进行处理。"
+            },
+            "EventKeyId": "PSU.PSUSwitchoverNotificationChannelFailure",
+            "Description": {
+                "En": "The notification channel %2 for reporting the switchover of PSU %1 failed.",
+                "Zh": "电源%1切换输出信息上报通道%2失败。"
+            },
+            "Influence": {
+                "En": "The PSU switchover information fails to be reported.",
+                "Zh": "对应切换失败通道的输出信息无法上报。"
+            },
+            "Cause": {
+                "En": "The communication between the BMC and MCU is abnormal.",
+                "Zh": "BMC与电源MCU之间通信异常。"
             }
         },
         {
