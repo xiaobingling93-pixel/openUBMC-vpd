@@ -95,7 +95,7 @@
             "NormalMinimum": 0,
             "MaximumReading": 255,
             "MinimumReading": 0,
-            "Reading": "<=/Battery_1.TemperatureCelsius",
+            "Reading": "<=/Battery_1.TemperatureCelsius |> expr($1 >= 255 ? 20 : $1)",
             "ReadingStatus": "<=/Battery_1.TemperatureCelsius |> expr($1 == 32767 ? 1 : ($1 == 32766 ? 3 : ($1 == 255 ? 2 : 0)))"
         },
         "ThresholdSensor_RaidCardTemp": {

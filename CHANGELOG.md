@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.4] - 2026-02-10
+修复Raid卡上BBU初始温度过高告警
+
 ## [1.81.3] - 2026-02-07
 修复HiAMCpldSelfTestFault告警下电后丢失问题
 
