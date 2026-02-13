@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.7] - 2026-02-13
+修复内存Event_MemoryRAS6CE多配置了导致格式错误
+
 ## [1.81.6] - 2026-02-10
 修复NPU卡上的NPU部分信息获取不到的问题
 
