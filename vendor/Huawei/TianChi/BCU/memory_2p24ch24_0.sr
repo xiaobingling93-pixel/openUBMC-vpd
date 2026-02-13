@@ -3094,7 +3094,6 @@
             "Component": "#/Component_Memory6"
         },
         "Event_MemoryRAS6CE": {
-        "Event_MemoryRAS6CE": {
             "EventKeyId": "Memory.MemoryCEHardFailure",
             "Condition": 1,
             "LedFaultCode": "050",
@@ -6943,5 +6942,4 @@
             "Instance": 123
         }
     }
-}
 }
