@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.8] - 2025-03-03
+新增DPU卡进风温感调速策略，主芯片调速策略更新
+
 ## [1.81.7] - 2026-02-13
 修复内存Event_MemoryRAS6CE多配置了导致格式错误
 
