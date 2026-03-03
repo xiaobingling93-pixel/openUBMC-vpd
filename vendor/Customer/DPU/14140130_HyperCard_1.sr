@@ -112,6 +112,18 @@
             "GroupId": 1,
             "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber"
         },
+        "Component_Cable": {
+            "FruId": 255,
+            "Instance": 1,
+            "Type": 40,
+            "Name": "PCIe Card $ (HyperCard4.0)",
+            "Presence": 1,
+            "Health": 0,
+            "PowerState": 1,
+            "GroupId": 1,
+            "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber",
+            "PartNumber": "<=/FruData_DPUCard.BoardPartNumber"
+        },
         "DPUCard_1": {
             "Model": "HyperCard4.0",
             "BoardID": "<=/Scanner_BoardId.Value",

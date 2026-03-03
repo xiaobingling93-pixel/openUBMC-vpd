@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.9] - 2026-3-3
+新增FlashAbnormal告警；支持DPU串口线缆告警
+
 ## [1.81.8] - 2025-03-03
 新增DPU卡进风温感调速策略，主芯片调速策略更新
 
