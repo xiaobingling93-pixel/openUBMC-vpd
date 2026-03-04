@@ -158,12 +158,10 @@
             "NodeId": "<=/PCIeDevice_1.SlotID |> string.format('HyperCard4.0_%s',$1)",
             "Name": "HyperCard4.0",
             "Manufacturer": "CMSoft",
-            "Description": "2*200GE",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
             "Type": 3,
             "Model": "HyperCard4.0",
-            "ModelDescription": "2*200GE",
             "NetworkPortCount": 2,
             "BoardID": "<=/Scanner_BoardId.Value",
             "VendorID": "0x1af4",
@@ -293,15 +291,15 @@
         },
         "Event_NetworkAdapterOverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
-            "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : ($1 & 255))",
+            "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : ($1 & 255))",
             "OperatorId": 4,
             "Enabled": true,
             "Component": "#/Component_DPUCard",
             "AdditionalInfo": "2",
             "DescArg2": "#/Component_DPUCard.Name",
             "DescArg4": "#/Event_NetworkAdapterOverTemp.Reading",
-            "DescArg5": "95",
-            "Condition": 95,
+            "DescArg5": "100",
+            "Condition": 100,
             "Hysteresis": 2
         },
         "Event_NetworkAdapterTempFail": {
@@ -531,11 +529,11 @@
         "CoolingRequirement_1_1": {
             "RequirementId": 1,
             "Description": "主芯片调速",
-            "MonitoringStatus": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 254 || $1 == 253) ? 1 : 0)",
+            "MonitoringStatus": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
             "MonitoringValue": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius",
             "FailedValue": 80,
-            "TargetTemperatureCelsius": 80,
-            "MaxAllowedTemperatureCelsius": 92
+            "TargetTemperatureCelsius": 85,
+            "MaxAllowedTemperatureCelsius": 97
         },
         "CoolingArea_1_1": {
             "AreaId": 1,
@@ -548,10 +546,30 @@
                 4
             ]
         },
+        "CoolingRequirement_1_2": {
+            "RequirementId": "${Slot} |> expr((2 << 8) | $1)",
+            "MonitoringStatus": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
+            "MonitoringValue": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr($1 & 255)",
+            "FailedValue": 80,
+            "TargetTemperatureCelsius": 70,
+            "MaxAllowedTemperatureCelsius": 80,
+            "ActiveInStandby": true
+        },
+        "CoolingArea_1_2": {
+            "AreaId": 2,
+            "RequirementIdx": 2,
+            "PolicyIdxGroup": [],
+            "FanIdxGroup": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
         "CoolingRequirement_1_4": {
             "RequirementId": 4,
             "Description": "光模块最大温度调速",
-            "MonitoringStatus": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius |> expr(($1 == 254 || $1 == 253) ? 1 : 0)",
+            "MonitoringStatus": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
             "MonitoringValue": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 60,
