@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.10] - 2025-03-06
+支持Sp681获取PartNum;支持DPUStandby调速
+
 ## [1.81.9] - 2026-3-3
 新增FlashAbnormal告警；支持DPU串口线缆告警
 
