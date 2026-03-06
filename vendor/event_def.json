@@ -1,5 +1,5 @@
 {
-    "Version": "1.1.1",
+    "Version": "1.1.2",
     "EventDefinition": [
         {
             "EventCode": "0x0200001F",
@@ -4740,6 +4740,18 @@
             "SeverityId": 1,
             "ActionId": 0,
             "EventName": "CPULinkAbnormal"
+        },
+        {
+            "EventCode": "0x24000037",
+            "ReportChannel": 65535,
+            "OldEventCode": "",
+            "EventType": 0,
+            "LifeCycleId": 0,
+            "DeassertFlag": 1,
+            "EventKeyId": "CPUBoard.FlashAbnormal",
+            "SeverityId": 1,
+            "ActionId": 0,
+            "EventName": "FlashAbnormal"
         },
         {
             "EventCode": "0x2C000093",
@@ -13805,6 +13817,25 @@
             "Cause": {
                 "En": "The VR power supply (single-phase) is abnormal.",
                 "Zh": "VR电源(单相)工作异常。"
+            }
+        },
+        {
+            "Suggestion": {
+                "En": "1. Perform an AC power cycle on the system supply. Once the system powers on, confirm whether the fault has been resolved.@#AB;2. If the fault persists, replace the component and then check again.",
+                "Zh": "1、执行系统电源AC操作后恢复上电，观察故障是否恢复。@#AB;2、如故障无法恢复，更换该部件并进一步观察。"
+            },
+            "EventKeyId": "CPUBoard.FlashAbnormal",
+            "Description": {
+                "En": "CPU board%1 %2 Flash%3 fault, Fault information: %4",
+                "Zh": "CPU板%1 %2 Flash%3 故障，故障信息：%4"
+            },
+            "Influence": {
+                "En": "Unable to perform the storage function.",
+                "Zh": "无法进行存储功能。"
+            },
+            "Cause": {
+                "En": "The Nor Flash or SPI is faulty.",
+                "Zh": "Nor Flash故障，SPI故障。"
             }
         },
         {

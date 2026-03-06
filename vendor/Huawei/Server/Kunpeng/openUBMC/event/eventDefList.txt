@@ -459,3 +459,4 @@ Rack.RackPowerChassisModelAbnormal
 Rack.RackPowerChassisCountAbnormal
 Fan.ModuleFanRemoved
 Mainboard.MainboardAccessRTCClockFailure
+CPUBoard.FlashAbnormal
