@@ -10,7 +10,6 @@
             "FruId": 1,
             "FruDev": "#/Eeprom_NetCard",
             "EepromWp": "#/Accessor_WP.Value",
-            "BoardPartNumber": "N/A",
             "BoardSerialNumber": "N/A",
             "StorageType": "EepromV2"
         },
@@ -37,7 +36,7 @@
             "Name": "<=/PCIeDevice_1.DeviceName",
             "Location": "<=/PCIeDevice_1.Position",
             "Manufacturer": "Huawei",
-            "PartNumber": "<=/FruData_Fru0.BoardPartNumber",
+            "PartNumber": "<=/FruData_Fru0.BoardPartNumber |> expr(($1 == '') ? '02314CRQ' : $1)",
             "UniqueId": "N/A",
             "Presence": 1,
             "Health": 0,

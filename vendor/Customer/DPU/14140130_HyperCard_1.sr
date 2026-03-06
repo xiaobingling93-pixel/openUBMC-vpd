@@ -150,7 +150,6 @@
                 }
             ],
             "RefFrudata": "#/FruData_DPUCard",
-            "LinkWidth": "<=/PCIeDevice_1.LinkWidth",
             "VendorID": "#/NetworkAdapter_1.VendorID",
             "DeviceID": "#/NetworkAdapter_1.DeviceID",
             "SubVendorID": "#/NetworkAdapter_1.SubsystemVendorID",
@@ -162,7 +161,11 @@
             "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber",
             "RefComponent": "#/Component_DPUCard",
             "ManagerType": "BMC",
-            "SRVersion": "${DataVersion}"
+            "SRVersion": "${DataVersion}",
+            "LinkWidthAbility": "<=/NetworkAdapter_1.LinkWidthCapability",
+            "LinkSpeedCapability": "<=/NetworkAdapter_1.LinkSpeedCapability",
+            "LinkWidth": "<=/NetworkAdapter_1.LinkWidth",
+            "LinkSpeed": "<=/NetworkAdapter_1.LinkSpeed"
         },
         "NetworkAdapter_1": {
             "SystemID": 1,
@@ -170,6 +173,8 @@
             "NodeId": "<=/PCIeDevice_1.SlotID |> string.format('HyperCard4.0_%s',$1)",
             "Name": "HyperCard4.0",
             "Manufacturer": "CMSoft",
+            "PartNumber": "<=/FruData_DPUCard.BoardPartNumber",
+            "SerialNumber": "<=/FruData_DPUCard.BoardSerialNumber",
             "Description": "4*25GE+2*10GE",
             "Position": "<=/PCIeDevice_1.Position",
             "DeviceLocator": "<=/PCIeDevice_1.DeviceName",
@@ -353,7 +358,7 @@
         },
         "Event_NetworkAdapterOverTemp": {
             "EventKeyId": "PCIeCard.PCIeCardOverTemp",
-            "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : ($1 & 255))",
+            "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,
             "Component": "#/Component_DPUCard",
@@ -377,7 +382,7 @@
             "DescArg2": "#/Component_DPUCard.Name"
         },
         "Event_OM1OverTempInfo": {
-            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_1.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -391,7 +396,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM2OverTempInfo": {
-            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_2.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -405,7 +410,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM3OverTempInfo": {
-            "Reading": "<=/OpticalModule_3.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_3.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -419,7 +424,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM4OverTempInfo": {
-            "Reading": "<=/OpticalModule_4.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_4.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -433,7 +438,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM5OverTempInfo": {
-            "Reading": "<=/OpticalModule_5.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_5.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -447,7 +452,7 @@
             "LedFaultCode": "q$$"
         },
         "Event_OM6OverTempInfo": {
-            "Reading": "<=/OpticalModule_6.TemperatureCelsius |> expr(($1 == 253 || $1 == 254) ? 0 : $1)",
+            "Reading": "<=/OpticalModule_6.TemperatureCelsius |> expr(($1 == 253 || $1 == 254 || $1 == 255) ? 0 : $1)",
             "OperatorId": 4,
             "Enabled": true,      
             "DescArg2": "#/Component_DPUCard.Name",
@@ -575,7 +580,7 @@
             "PositiveHysteresis": 0,
             "NegativeHysteresis": 0,
             "Reading": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius",
-            "ReadingStatus": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 254) ? 3 : (($1 == 253) ? 1 : 0))"
+            "ReadingStatus": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 254 || $1 == 255) ? 3 : (($1 == 253) ? 1 : 0))"
         },
         "ThresholdSensor_DPUAmbientTemp": {
             "OwnerId": 32,
@@ -615,7 +620,7 @@
             "PositiveHysteresis": 0,
             "NegativeHysteresis": 0,
             "Reading": "<=/DPUCard_1.Inlet1TemperatureCelsius",
-            "ReadingStatus": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr(($1 == 254) ? 3 : (($1 == 253) ? 1 : 0))"
+            "ReadingStatus": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr(($1 == 254 || $1 == 255) ? 3 : (($1 == 253) ? 1 : 0))"
         },
         "ThresholdSensor_DPUSfpTemp": {
             "OwnerId": 32,
@@ -655,7 +660,7 @@
             "PositiveHysteresis": 0,
             "NegativeHysteresis": 0,
             "Reading": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius",
-            "ReadingStatus": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius |> expr(($1 == 254) ? 3 : (($1 == 253) ? 1 : 0))"
+            "ReadingStatus": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius |> expr(($1 == 254 || $1 == 255) ? 3 : (($1 == 253) ? 1 : 0))"
         },
         "ThresholdSensor_DPUBoardPower": {
             "OwnerId": 32,
@@ -690,6 +695,7 @@
             "MonitoringStatus": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
             "MonitoringValue": "<=/DPUCard_1.NetworkAdapterChipTemperatureCelsius",
             "FailedValue": 80,
+            "ActiveInStandby": true,
             "TargetTemperatureCelsius": 85,
             "MaxAllowedTemperatureCelsius": 97
         },
@@ -707,7 +713,7 @@
         "CoolingRequirement_1_2": {
             "RequirementId": "${Slot} |> expr((2 << 8) | $1)",
             "MonitoringStatus": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
-            "MonitoringValue": "<=/DPUCard_1.Inlet1TemperatureCelsius |> expr($1 & 255)",
+            "MonitoringValue": "<=/DPUCard_1.Inlet1TemperatureCelsius",
             "FailedValue": 80,
             "TargetTemperatureCelsius": 70,
             "MaxAllowedTemperatureCelsius": 80,
@@ -730,6 +736,7 @@
             "MonitoringStatus": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius |> expr(($1 == 253) ? 1 : 0)",
             "MonitoringValue": "<=/DPUCard_1.NICSFPMaxTemperatureCelsius",
             "FailedValue": 80,
+            "ActiveInStandby": true,
             "TargetTemperatureCelsius": 60,
             "MaxAllowedTemperatureCelsius": 75,
             "SmartCoolingTargetTemperature": [60, 55, 65]
