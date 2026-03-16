@@ -1,5 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.81.13] - 2025-03-16
+MCX623105AN-VDAT不支持电子标签
+
 ## [1.81.12] - 2025-03-13
 修复DPU NodeId获取
 
