@@ -12,9 +12,7 @@
             ]
         },
         "I2cMux_Chan": {
-            "Chips": [
-                "Eeprom_NetCard"
-            ]
+            "Chips": []
         }
     },
     "Objects": {
@@ -123,7 +121,7 @@
             "DevBus": "<=/PCIeDevice_1.DevBus",
             "DevDevice": "<=/PCIeDevice_1.DevDevice",
             "DevFunction": "<=/PCIeDevice_1.DevFunction",
-            "SerialNumber": "<=/FruData_Fru0.BoardSerialNumber"
+            "SerialNumber": "N/A"
         },
         "NetworkAdapter_1": {
             "SystemID": 1,
@@ -162,7 +160,7 @@
             "SubsystemVendorID": "0x15b3",
             "SubsystemDeviceID": "0x0018",
             "ComponentUniqueID": "N/A",
-            "FruId": "<=/Fru_PCIeCard.FruId",
+            "FruId": "<=/Component_PCIeCard.FruId",
             "SupportedMctp": true,
             "SupportedLLDP": false,
             "HotPluggable": false,
@@ -267,23 +265,6 @@
             "NetDevFuncType": 1,
             "MediumType": "FiberOptic",
             "SupportedLinkCapability": "200GE"
-        },
-        "Fru_PCIeCard": {
-            "PcbId": 0,
-            "FruId": 1,
-            "FruName": "MCX623105AN-VDAT",
-            "BoardId": 0,
-            "UniqueId": "N/A"
-        },
-        "Eeprom_NetCard": {
-            "OffsetWidth": 2,
-            "AddrWidth": 1,
-            "Address": 160,
-            "WriteTmout": 100,
-            "ReadTmout": 100,
-            "RwBlockSize": 32,
-            "WriteInterval": 20,
-            "HealthStatus": 0
         },
         "Event_PcieCardReplaceMntr": {
             "EventKeyId": "PcieCard.PcieCardReplace",
